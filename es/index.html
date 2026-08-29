@@ -1,0 +1,2750 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Felipe Quiroz — Producto, Growth & Business</title>
+
+  <meta
+    name="description"
+    content="Portfolio de Felipe Quiroz. Producto, growth, negocios y construcción de sistemas desde Santiago, Chile."
+  >
+
+  <!-- =====================================================
+       SEO / LANGUAGES
+  ====================================================== -->
+
+  <link
+    rel="canonical"
+    href="https://felipequirozp.github.io/es/"
+  >
+
+  <link
+    rel="alternate"
+    hreflang="en"
+    href="https://felipequirozp.github.io/"
+  >
+
+  <link
+    rel="alternate"
+    hreflang="es"
+    href="https://felipequirozp.github.io/es/"
+  >
+
+  <link
+    rel="alternate"
+    hreflang="x-default"
+    href="https://felipequirozp.github.io/"
+  >
+
+
+  <!-- FAVICON -->
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="../favicon.png"
+  >
+
+
+  <!-- FONTS -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <style>
+
+    /* =====================================================
+       COLORS
+    ===================================================== */
+
+    :root {
+
+      --navy: #182536;
+      --navy-deep: #0d1724;
+
+      --steel: #324963;
+      --steel-light: #71869c;
+
+      --slate: #9aa9ba;
+      --slate-light: #c7d0d9;
+
+      --ice: #eef1f4;
+      --paper: #f5f6f7;
+
+      --white: #ffffff;
+
+      --ink: #10161d;
+      --muted: #66717d;
+
+      --line: #d4d9de;
+
+    }
+
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      margin: 0;
+
+      background: var(--paper);
+      color: var(--ink);
+
+      font-family: "Inter", sans-serif;
+
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+
+    ::selection {
+      background: var(--steel);
+      color: white;
+    }
+
+
+    /* =====================================================
+       NAV
+    ===================================================== */
+
+    .nav {
+
+      min-height: 84px;
+
+      padding:
+        0 5vw;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+
+      background: var(--navy);
+
+      color: white;
+
+      border-bottom:
+        1px solid rgba(255,255,255,.12);
+
+    }
+
+
+    .brand {
+
+      flex-shrink: 0;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 17px;
+      font-weight: 600;
+
+      letter-spacing: -.04em;
+
+    }
+
+
+    .nav-links {
+
+      display: flex;
+      align-items: center;
+
+      gap: 28px;
+
+      font-size: 10px;
+      font-weight: 500;
+
+      letter-spacing: .07em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .nav-links > a:not(.contact-nav) {
+
+      position: relative;
+
+      color: var(--slate-light);
+
+      transition:
+        color .2s ease;
+
+    }
+
+
+    .nav-links > a:not(.contact-nav)::after {
+
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: -7px;
+
+      width: 0;
+      height: 1px;
+
+      background: white;
+
+      transition:
+        width .22s ease;
+
+    }
+
+
+    .nav-links > a:not(.contact-nav):hover {
+
+      color: white;
+
+    }
+
+
+    .nav-links > a:not(.contact-nav):hover::after {
+
+      width: 100%;
+
+    }
+
+
+    .lang-switch {
+
+      color: white !important;
+
+    }
+
+
+    .contact-nav {
+
+      padding:
+        9px 15px;
+
+      border:
+        1px solid rgba(255,255,255,.28);
+
+      border-radius: 999px;
+
+      color: white;
+
+      transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+
+    }
+
+
+    .contact-nav:hover {
+
+      background: white;
+
+      color: var(--navy);
+
+      border-color: white;
+
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+
+      min-height:
+        calc(100vh - 84px);
+
+      padding:
+        90px 5vw 75px;
+
+      background: var(--navy);
+
+      color: white;
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1.45fr)
+        minmax(300px, .55fr);
+
+      gap: 7vw;
+
+      align-items: end;
+
+    }
+
+
+    .hero-copy {
+
+      max-width: 1000px;
+
+    }
+
+
+    .hero-label {
+
+      margin-bottom: 36px;
+
+      color: var(--slate-light);
+
+      font-size: 9px;
+      font-weight: 500;
+
+      letter-spacing: .09em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .hero h1 {
+
+      margin: 0;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(62px, 9vw, 142px);
+
+      line-height: .94;
+
+      letter-spacing: -.075em;
+
+      font-weight: 500;
+
+    }
+
+
+    .hero h1 span {
+
+      display: block;
+
+      margin:
+        18px 0;
+
+      color: var(--slate);
+
+    }
+
+
+    .hero-description {
+
+      max-width: 650px;
+
+      margin:
+        50px 0 0;
+
+      color: var(--slate-light);
+
+      font-size: 14px;
+
+      line-height: 1.8;
+
+    }
+
+
+    /* =====================================================
+       HERO SIDE
+    ===================================================== */
+
+    .hero-side {
+
+      align-self: stretch;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      gap: 30px;
+
+    }
+
+
+    .profile-wrap {
+
+      width: 100%;
+
+      max-width: 360px;
+
+      margin-left: auto;
+
+      overflow: hidden;
+
+      border-radius: 24px;
+
+      background: var(--steel);
+
+    }
+
+
+    .profile-wrap img {
+
+      width: 100%;
+      aspect-ratio: 4 / 5;
+
+      object-fit: cover;
+
+    }
+
+
+    .hero-roles {
+
+      width: 100%;
+
+      max-width: 360px;
+
+      margin-left: auto;
+
+      border-top:
+        1px solid rgba(255,255,255,.18);
+
+    }
+
+
+    .hero-role {
+
+      padding:
+        18px 0;
+
+      display: grid;
+
+      grid-template-columns:
+        100px 1fr;
+
+      gap: 20px;
+
+      border-bottom:
+        1px solid rgba(255,255,255,.18);
+
+    }
+
+
+    .hero-role span {
+
+      color: white;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 12px;
+      font-weight: 500;
+
+      text-transform: none;
+
+    }
+
+
+    .hero-role strong {
+
+      color: var(--slate-light);
+
+      font-size: 10px;
+      font-weight: 400;
+
+      line-height: 1.55;
+
+    }
+
+
+    /* =====================================================
+       SELECTED WORK
+    ===================================================== */
+
+    .work {
+
+      padding:
+        130px 7vw 145px;
+
+      background: var(--paper);
+
+    }
+
+
+    .section-head {
+
+      max-width: 1400px;
+
+      margin:
+        0 auto 75px;
+
+      display: grid;
+
+      grid-template-columns:
+        150px minmax(0, 1fr);
+
+      gap: 55px;
+
+      align-items: start;
+
+    }
+
+
+    .section-label {
+
+      padding-top: 8px;
+
+      color: var(--muted);
+
+      font-size: 9px;
+      font-weight: 600;
+
+      letter-spacing: .09em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .section-head h2 {
+
+      max-width: 920px;
+
+      margin: 0;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(46px, 6vw, 88px);
+
+      line-height: 1.10;
+
+      letter-spacing: -.06em;
+
+      font-weight: 500;
+
+      color: var(--navy);
+
+    }
+
+
+    /* =====================================================
+       PROJECTS
+    ===================================================== */
+
+    .projects {
+
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+      border-top:
+        1px solid var(--line);
+
+    }
+
+
+    .project {
+
+      min-height: 250px;
+
+      padding:
+        38px 0;
+
+      display: grid;
+
+      grid-template-columns:
+        70px
+        minmax(180px, .55fr)
+        minmax(300px, 1fr);
+
+      gap: 35px;
+
+      align-items: center;
+
+      border-bottom:
+        1px solid var(--line);
+
+      transition:
+        padding .25s ease,
+        background .25s ease;
+
+    }
+
+
+    .project:hover {
+
+      padding-left: 20px;
+      padding-right: 20px;
+
+      background: var(--ice);
+
+    }
+
+
+    .project-number {
+
+      align-self: start;
+
+      padding-top: 4px;
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+    }
+
+
+    .project-name {
+
+      align-self: start;
+
+    }
+
+
+    .project-name strong {
+
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(25px, 3vw, 38px);
+
+      font-weight: 500;
+
+      letter-spacing: -.045em;
+
+      color: var(--navy);
+
+    }
+
+
+    .project-name span {
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      line-height: 1.5;
+
+    }
+
+
+    .project-content {
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(200px, 1fr)
+        minmax(230px, .85fr);
+
+      gap: 45px;
+
+      align-items: center;
+
+    }
+
+
+    .project-visual {
+
+      min-height: 150px;
+
+      padding:
+        28px;
+
+      border-radius: 18px;
+
+      background: var(--navy);
+
+      color: white;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      overflow: hidden;
+
+    }
+
+
+    /* GEO VISUAL */
+
+    .mini-bars {
+
+      display: flex;
+      align-items: flex-end;
+
+      gap: 8px;
+
+      height: 65px;
+
+    }
+
+
+    .mini-bar {
+
+      flex: 1;
+
+      border-radius:
+        5px 5px 2px 2px;
+
+      background:
+        rgba(255,255,255,.18);
+
+    }
+
+
+    .mini-bar:nth-child(1) {
+      height: 34%;
+    }
+
+    .mini-bar:nth-child(2) {
+      height: 64%;
+    }
+
+    .mini-bar:nth-child(3) {
+      height: 47%;
+    }
+
+    .mini-bar:nth-child(4) {
+      height: 82%;
+    }
+
+    .mini-bar:nth-child(5) {
+      height: 68%;
+    }
+
+    .mini-bar:nth-child(6) {
+      height: 100%;
+    }
+
+
+    .visual-meta {
+
+      display: flex;
+      justify-content: space-between;
+
+      gap: 15px;
+
+      color: var(--slate-light);
+
+      font-size: 8px;
+
+      letter-spacing: .06em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* LOW VISUAL */
+
+    .system-line {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 22px 1fr 22px 1fr;
+
+      align-items: center;
+
+      gap: 5px;
+
+    }
+
+
+    .system-node {
+
+      min-height: 54px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border:
+        1px solid rgba(255,255,255,.18);
+
+      border-radius: 10px;
+
+      color: var(--slate-light);
+
+      font-size: 9px;
+
+      text-align: center;
+
+    }
+
+
+    .system-node.center {
+
+      color: white;
+
+      background:
+        rgba(255,255,255,.10);
+
+    }
+
+
+    .system-connector {
+
+      height: 1px;
+
+      background:
+        rgba(255,255,255,.20);
+
+    }
+
+
+    /* TETHER VISUAL */
+
+    .education-line {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 20px 1fr 20px 1fr;
+
+      align-items: center;
+
+    }
+
+
+    .education-node {
+
+      min-height: 52px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border:
+        1px solid rgba(255,255,255,.18);
+
+      border-radius: 10px;
+
+      color: var(--slate-light);
+
+      font-size: 8px;
+
+      text-align: center;
+
+    }
+
+
+    .education-node.middle {
+
+      color: white;
+
+      background:
+        rgba(255,255,255,.10);
+
+    }
+
+
+    .education-connector {
+
+      height: 1px;
+
+      background:
+        rgba(255,255,255,.20);
+
+    }
+
+
+    .project-statement {
+
+      max-width: 370px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(22px, 2.2vw, 31px);
+
+      line-height: 1.24;
+
+      letter-spacing: -.04em;
+
+      font-weight: 500;
+
+      color: var(--navy);
+
+    }
+
+
+    /* =====================================================
+       ABOUT
+    ===================================================== */
+
+    .about {
+
+      padding:
+        130px 7vw;
+
+      background: var(--ice);
+
+    }
+
+
+    .about-inner {
+
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns:
+        150px minmax(0, 1fr);
+
+      gap: 55px;
+
+    }
+
+
+    .about-content {
+
+      max-width: 950px;
+
+    }
+
+
+    .about-content h2 {
+
+      margin: 0;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(48px, 6.4vw, 94px);
+
+      line-height: 1.08;
+
+      letter-spacing: -.065em;
+
+      font-weight: 500;
+
+      color: var(--navy);
+
+    }
+
+
+    .about-content h2 span {
+
+      display: block;
+
+      margin:
+        16px 0 14px;
+
+      color: var(--slate);
+
+    }
+
+
+    .about-copy {
+
+      max-width: 650px;
+
+      margin-top: 42px;
+
+      color: #4a5560;
+
+      font-size: 14px;
+
+      line-height: 1.85;
+
+    }
+
+
+    .text-link {
+
+      width: fit-content;
+
+      margin-top: 30px;
+
+      padding-bottom: 5px;
+
+      display: inline-block;
+
+      border-bottom:
+        1px solid rgba(24,37,54,.35);
+
+      color: var(--navy);
+
+      font-size: 10px;
+      font-weight: 600;
+
+      letter-spacing: .06em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .text-link:hover {
+
+      opacity: .55;
+
+    }
+
+
+    /* =====================================================
+       NOW
+    ===================================================== */
+
+    .now {
+
+      padding:
+        125px 7vw 135px;
+
+      background: var(--paper);
+
+    }
+
+
+    .now-inner {
+
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+    }
+
+
+    .now-head {
+
+      margin-bottom: 65px;
+
+      display: grid;
+
+      grid-template-columns:
+        150px 1fr;
+
+      gap: 55px;
+
+    }
+
+
+    .now-head h2 {
+
+      margin: 0;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(46px, 5.5vw, 80px);
+
+      line-height: 1.08;
+
+      letter-spacing: -.06em;
+
+      font-weight: 500;
+
+      color: var(--navy);
+
+    }
+
+
+    .now-list {
+
+      margin-left: 205px;
+
+      border-top:
+        1px solid var(--line);
+
+    }
+
+
+    .now-item {
+
+      padding:
+        25px 0;
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(160px, .5fr)
+        1fr;
+
+      gap: 30px;
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .now-item strong {
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 17px;
+      font-weight: 500;
+
+      color: var(--navy);
+
+    }
+
+
+    .now-item span {
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.6;
+
+    }
+
+
+    .now-link-wrap {
+
+      margin-left: 205px;
+
+    }
+
+
+    /* =====================================================
+       FINAL STATEMENT
+    ===================================================== */
+
+    .statement {
+
+      min-height: 520px;
+
+      padding:
+        100px 7vw;
+
+      background: var(--navy-deep);
+
+      color: white;
+
+      display: flex;
+      align-items: center;
+
+    }
+
+
+    .statement-inner {
+
+      width: 100%;
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+    }
+
+
+    .statement-label {
+
+      margin-bottom: 48px;
+
+      color: var(--slate);
+
+      font-size: 9px;
+      font-weight: 500;
+
+      letter-spacing: .09em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .statement h2 {
+
+      margin: 0;
+
+      max-width: 1000px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(58px, 8vw, 120px);
+
+      line-height: 1.02;
+
+      letter-spacing: -.07em;
+
+      font-weight: 500;
+
+    }
+
+
+    .statement h2 span {
+
+      display: block;
+
+      margin-top: 28px;
+
+      color: var(--slate);
+
+    }
+
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+
+    .bottom {
+
+      padding:
+        85px 7vw 42px;
+
+      background: var(--ice);
+
+    }
+
+
+    .contact-block {
+
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+      padding-bottom: 70px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      gap: 50px;
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .contact-copy .section-label {
+
+      margin-bottom: 18px;
+
+    }
+
+
+    .contact-copy h3 {
+
+      margin: 0;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(40px, 5vw, 72px);
+
+      line-height: 1;
+
+      letter-spacing: -.055em;
+
+      font-weight: 500;
+
+      color: var(--navy);
+
+    }
+
+
+    .contact-links {
+
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+    }
+
+
+    .contact-link {
+
+      padding:
+        11px 16px;
+
+      border:
+        1px solid rgba(24,37,54,.20);
+
+      border-radius: 999px;
+
+      color: var(--navy);
+
+      font-size: 10px;
+      font-weight: 500;
+
+      text-transform: uppercase;
+
+      letter-spacing: .05em;
+
+      transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+
+    }
+
+
+    .contact-link:hover {
+
+      background: var(--navy);
+
+      color: white;
+
+      border-color: var(--navy);
+
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer {
+
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+      padding-top: 32px;
+
+      display: grid;
+
+      grid-template-columns:
+        1fr auto 1fr;
+
+      align-items: center;
+
+      color: var(--muted);
+
+      font-size: 9px;
+      font-weight: 500;
+
+      letter-spacing: .07em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .footer-location {
+
+      text-align: right;
+
+    }
+
+
+    .footer-socials {
+
+      display: flex;
+      align-items: center;
+
+      gap: 10px;
+
+    }
+
+
+    .social-icon {
+
+      width: 36px;
+      height: 36px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border:
+        1px solid rgba(24,37,54,.18);
+
+      border-radius: 50%;
+
+      color: var(--navy);
+
+      transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease,
+        border-color .2s ease;
+
+    }
+
+
+    .social-icon svg {
+
+      width: 15px;
+      height: 15px;
+
+      fill: none;
+
+      stroke: currentColor;
+
+      stroke-width: 1.5;
+
+      stroke-linecap: round;
+      stroke-linejoin: round;
+
+    }
+
+
+    .social-icon svg .filled {
+
+      fill: currentColor;
+      stroke: none;
+
+    }
+
+
+    .linkedin-mark {
+
+      font-family: "Inter", sans-serif;
+
+      font-size: 14px;
+      font-weight: 600;
+
+      line-height: 1;
+
+      letter-spacing: -.06em;
+
+      text-transform: lowercase;
+
+    }
+
+
+    .social-icon:hover {
+
+      background: var(--navy);
+
+      color: white;
+
+      border-color: var(--navy);
+
+      transform:
+        translateY(-2px);
+
+    }
+
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media(max-width: 1000px) {
+
+      .hero {
+
+        grid-template-columns:
+          1fr;
+
+        gap: 70px;
+
+      }
+
+
+      .hero-side {
+
+        display: grid;
+
+        grid-template-columns:
+          minmax(250px, 360px)
+          minmax(250px, 1fr);
+
+        align-items: end;
+
+      }
+
+
+      .profile-wrap,
+      .hero-roles {
+
+        margin-left: 0;
+
+      }
+
+
+      .project {
+
+        grid-template-columns:
+          55px 1fr;
+
+      }
+
+
+      .project-content {
+
+        grid-column: 2;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE NAV / TABLET
+    ===================================================== */
+
+    @media(max-width: 900px) {
+
+      .nav {
+
+        min-height: 78px;
+
+        padding:
+          16px 20px;
+
+        gap: 16px;
+
+      }
+
+
+      .brand {
+
+        font-size: 15px;
+
+        white-space: nowrap;
+
+      }
+
+
+      .nav-links {
+
+        gap: 13px;
+
+        font-size: 9px;
+
+        letter-spacing: .035em;
+
+        white-space: nowrap;
+
+      }
+
+
+      .contact-nav {
+
+        padding:
+          8px 11px;
+
+      }
+
+
+      .hero {
+
+        padding:
+          75px 22px;
+
+      }
+
+
+      .work,
+      .about,
+      .now {
+
+        padding-left: 22px;
+        padding-right: 22px;
+
+      }
+
+
+      .section-head,
+      .about-inner,
+      .now-head {
+
+        grid-template-columns:
+          1fr;
+
+        gap: 25px;
+
+      }
+
+
+      .now-list,
+      .now-link-wrap {
+
+        margin-left: 0;
+
+      }
+
+
+      .statement {
+
+        padding-left: 22px;
+        padding-right: 22px;
+
+      }
+
+
+      .bottom {
+
+        padding-left: 22px;
+        padding-right: 22px;
+
+      }
+
+
+      .footer {
+
+        grid-template-columns:
+          1fr;
+
+        gap: 22px;
+
+        align-items: flex-start;
+
+      }
+
+
+      .footer-location {
+
+        text-align: left;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media(max-width: 650px) {
+
+      .nav {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 14px;
+
+        padding:
+          18px 20px;
+
+      }
+
+
+      .nav-links {
+
+        width: 100%;
+
+        justify-content: space-between;
+
+        gap: 7px;
+
+        font-size: 8px;
+
+      }
+
+
+      .contact-nav {
+
+        padding:
+          7px 9px;
+
+      }
+
+
+      .hero {
+
+        min-height: auto;
+
+        padding:
+          65px 20px 70px;
+
+      }
+
+
+      .hero h1 {
+
+        font-size:
+          clamp(56px, 18vw, 84px);
+
+        line-height: .98;
+
+      }
+
+
+      .hero h1 span {
+
+        margin:
+          14px 0;
+
+      }
+
+
+      .hero-description {
+
+        margin-top: 38px;
+
+      }
+
+
+      .hero-side {
+
+        display: flex;
+
+      }
+
+
+      .profile-wrap {
+
+        max-width: 100%;
+
+      }
+
+
+      .hero-roles {
+
+        max-width: 100%;
+
+      }
+
+
+      .hero-role {
+
+        grid-template-columns:
+          90px 1fr;
+
+      }
+
+
+      .work {
+
+        padding:
+          95px 20px 105px;
+
+      }
+
+
+      .section-head {
+
+        margin-bottom: 50px;
+
+      }
+
+
+      .section-head h2 {
+
+        font-size:
+          clamp(42px, 12vw, 60px);
+
+        line-height: 1.12;
+
+      }
+
+
+      .project {
+
+        min-height: auto;
+
+        padding:
+          30px 0;
+
+        grid-template-columns:
+          34px 1fr;
+
+        gap: 18px;
+
+      }
+
+
+      .project:hover {
+
+        padding-left: 0;
+        padding-right: 0;
+
+        background: transparent;
+
+      }
+
+
+      .project-content {
+
+        grid-column:
+          1 / -1;
+
+        grid-template-columns:
+          1fr;
+
+        gap: 25px;
+
+        padding-top: 18px;
+
+      }
+
+
+      .project-visual {
+
+        min-height: 140px;
+
+      }
+
+
+      .project-statement {
+
+        font-size: 25px;
+
+      }
+
+
+      .about {
+
+        padding:
+          95px 20px;
+
+      }
+
+
+      .about-content h2 {
+
+        font-size:
+          clamp(44px, 13vw, 64px);
+
+        line-height: 1.10;
+
+      }
+
+
+      .about-content h2 span {
+
+        margin:
+          16px 0;
+
+      }
+
+
+      .now {
+
+        padding:
+          95px 20px;
+
+      }
+
+
+      .now-head h2 {
+
+        font-size:
+          clamp(42px, 12vw, 60px);
+
+      }
+
+
+      .now-item {
+
+        grid-template-columns:
+          1fr;
+
+        gap: 8px;
+
+      }
+
+
+      .statement {
+
+        min-height: 450px;
+
+        padding:
+          80px 20px;
+
+      }
+
+
+      .statement h2 {
+
+        font-size:
+          clamp(55px, 16vw, 78px);
+
+        line-height: 1.05;
+
+      }
+
+
+      .statement h2 span {
+
+        margin-top: 22px;
+
+      }
+
+
+      .contact-block {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 35px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+  <!-- =====================================================
+       NAV
+  ====================================================== -->
+
+  <header class="nav">
+
+
+    <a
+      href="index.html"
+      class="brand"
+    >
+      Felipe Quiroz
+    </a>
+
+
+    <nav class="nav-links">
+
+
+      <a href="#work">
+        Trabajo
+      </a>
+
+
+      <a href="about.html">
+        Sobre mí
+      </a>
+
+
+      <a href="now.html">
+        Ahora
+      </a>
+
+
+      <a
+        href="../index.html"
+        class="lang-switch"
+        aria-label="Ver sitio en inglés"
+      >
+        EN
+      </a>
+
+
+      <a
+        href="#contact"
+        class="contact-nav"
+      >
+        Contacto
+      </a>
+
+
+    </nav>
+
+
+  </header>
+
+
+
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
+
+  <section class="hero">
+
+
+    <div class="hero-copy">
+
+
+      <div class="hero-label">
+        Felipe Quiroz / Santiago
+      </div>
+
+
+      <h1>
+
+        Producto,
+
+        <span>
+          crecimiento
+        </span>
+
+        y negocio.
+
+      </h1>
+
+
+      <p class="hero-description">
+
+        Construyo productos, empresas y sistemas que
+        convierten ideas en soluciones que funcionan
+        en el mundo real.
+
+      </p>
+
+
+    </div>
+
+
+
+    <div class="hero-side">
+
+
+      <div class="profile-wrap">
+
+        <img
+          src="../profile.jpg"
+          alt="Felipe Quiroz"
+        >
+
+      </div>
+
+
+
+      <div class="hero-roles">
+
+
+        <div class="hero-role">
+
+          <span>
+            GeoVictoria
+          </span>
+
+          <strong>
+            Product Manager · Workforce Management
+          </strong>
+
+        </div>
+
+
+
+        <div class="hero-role">
+
+          <span>
+            lowsignal
+          </span>
+
+          <strong>
+            Co-Founder & COO · Growth Systems
+          </strong>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =====================================================
+       SELECTED WORK
+  ====================================================== -->
+
+  <section
+    class="work"
+    id="work"
+  >
+
+
+    <div class="section-head">
+
+
+      <div class="section-label">
+        Trabajo / 01
+      </div>
+
+
+      <h2>
+        Productos, empresas y sistemas que he ayudado a construir.
+      </h2>
+
+
+    </div>
+
+
+
+    <div class="projects">
+
+
+      <!-- =================================================
+           GEOVICTORIA
+      ================================================== -->
+
+      <a
+        href="geovictoria.html"
+        class="project"
+      >
+
+
+        <div class="project-number">
+          01
+        </div>
+
+
+        <div class="project-name">
+
+          <strong>
+            GeoVictoria
+          </strong>
+
+          <span>
+            Workforce Management · Product
+          </span>
+
+        </div>
+
+
+
+        <div class="project-content">
+
+
+          <div class="project-visual">
+
+
+            <div class="visual-meta">
+
+              <span>
+                Workforce
+              </span>
+
+              <span>
+                SaaS
+              </span>
+
+            </div>
+
+
+
+            <div class="mini-bars">
+
+              <div class="mini-bar"></div>
+              <div class="mini-bar"></div>
+              <div class="mini-bar"></div>
+              <div class="mini-bar"></div>
+              <div class="mini-bar"></div>
+              <div class="mini-bar"></div>
+
+            </div>
+
+
+          </div>
+
+
+
+          <div class="project-statement">
+
+            Construyendo sistemas de producto para operaciones reales de workforce management.
+
+          </div>
+
+
+        </div>
+
+
+      </a>
+
+
+
+      <!-- =================================================
+           LOWSIGNAL
+      ================================================== -->
+
+      <a
+        href="lowsignal.html"
+        class="project"
+      >
+
+
+        <div class="project-number">
+          02
+        </div>
+
+
+        <div class="project-name">
+
+          <strong>
+            lowsignal
+          </strong>
+
+          <span>
+            Growth Systems · Company Building
+          </span>
+
+        </div>
+
+
+
+        <div class="project-content">
+
+
+          <div class="project-visual">
+
+
+            <div class="visual-meta">
+
+              <span>
+                Growth Systems
+              </span>
+
+              <span>
+                2025 —
+              </span>
+
+            </div>
+
+
+
+            <div class="system-line">
+
+
+              <div class="system-node">
+                Strategy
+              </div>
+
+
+              <div class="system-connector"></div>
+
+
+              <div class="system-node center">
+                Systems
+              </div>
+
+
+              <div class="system-connector"></div>
+
+
+              <div class="system-node">
+                Growth
+              </div>
+
+
+            </div>
+
+
+          </div>
+
+
+
+          <div class="project-statement">
+
+            Construyendo el sistema detrás del crecimiento.
+
+          </div>
+
+
+        </div>
+
+
+      </a>
+
+
+
+      <!-- =================================================
+           TETHERED
+      ================================================== -->
+
+      <a
+        href="tethereducation.html"
+        class="project"
+      >
+
+
+        <div class="project-number">
+          03
+        </div>
+
+
+        <div class="project-name">
+
+          <strong>
+            TetherEd
+          </strong>
+
+          <span>
+            EdTech · Partnerships
+          </span>
+
+        </div>
+
+
+
+        <div class="project-content">
+
+
+          <div class="project-visual">
+
+
+            <div class="visual-meta">
+
+              <span>
+                Education
+              </span>
+
+              <span>
+                Partnerships
+              </span>
+
+            </div>
+
+
+
+            <div class="education-line">
+
+
+              <div class="education-node">
+                Schools
+              </div>
+
+
+              <div class="education-connector"></div>
+
+
+              <div class="education-node middle">
+                Communities
+              </div>
+
+
+              <div class="education-connector"></div>
+
+
+              <div class="education-node">
+                Institutions
+              </div>
+
+
+            </div>
+
+
+          </div>
+
+
+
+          <div class="project-statement">
+
+            Ampliando el acceso a la educación a través de productos y alianzas.
+
+          </div>
+
+
+        </div>
+
+
+      </a>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =====================================================
+       ABOUT
+  ====================================================== -->
+
+  <section class="about">
+
+
+    <div class="about-inner">
+
+
+      <div class="section-label">
+        Sobre mí / 02
+      </div>
+
+
+
+      <div class="about-content">
+
+
+        <h2>
+
+          Construyo donde se cruzan
+
+          <span>
+            producto, growth
+          </span>
+
+          y negocio.
+
+        </h2>
+
+
+        <p class="about-copy">
+
+          Me interesa transformar ideas en sistemas que
+          puedan operar, aprender y crecer: desde nuevos
+          productos y experiencias digitales hasta
+          compañías, procesos y modelos de crecimiento.
+
+        </p>
+
+
+        <a
+          href="about.html"
+          class="text-link"
+        >
+          Conocer más
+        </a>
+
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =====================================================
+       NOW
+  ====================================================== -->
+
+  <section class="now">
+
+
+    <div class="now-inner">
+
+
+      <div class="now-head">
+
+
+        <div class="section-label">
+          Ahora / 03
+        </div>
+
+
+        <h2>
+          Lo que estoy construyendo ahora.
+        </h2>
+
+
+      </div>
+
+
+
+      <div class="now-list">
+
+
+        <div class="now-item">
+
+          <strong>
+            GeoVictoria
+          </strong>
+
+          <span>
+            Productos y nuevos sistemas para workforce management.
+          </span>
+
+        </div>
+
+
+
+        <div class="now-item">
+
+          <strong>
+            lowsignal
+          </strong>
+
+          <span>
+            Una growth company construida alrededor de sistemas, tecnología y ejecución.
+          </span>
+
+        </div>
+
+
+
+        <div class="now-item">
+
+          <strong>
+            Explorando
+          </strong>
+
+          <span>
+            Productos AI-native, nuevos modelos de negocio y formas de crear leverage.
+          </span>
+
+        </div>
+
+
+      </div>
+
+
+
+      <div class="now-link-wrap">
+
+        <a
+          href="now.html"
+          class="text-link"
+        >
+          Ver ahora
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =====================================================
+       STATEMENT
+  ====================================================== -->
+
+  <section class="statement">
+
+
+    <div class="statement-inner">
+
+
+      <div class="statement-label">
+        Siguiente
+      </div>
+
+
+      <h2>
+
+        Construyendo
+
+        <span>
+          lo que viene.
+        </span>
+
+      </h2>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =====================================================
+       CONTACT
+  ====================================================== -->
+
+  <section
+    class="bottom"
+    id="contact"
+  >
+
+
+    <div class="contact-block">
+
+
+      <div class="contact-copy">
+
+
+        <div class="section-label">
+          Contacto
+        </div>
+
+
+        <h3>
+          Conversemos.
+        </h3>
+
+
+      </div>
+
+
+
+      <div class="contact-links">
+
+
+        <a
+          href="https://www.linkedin.com/in/felipequirozp"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-link"
+        >
+          LinkedIn
+        </a>
+
+
+        <a
+          href="https://www.instagram.com/felipe_quirozp/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-link"
+        >
+          Instagram
+        </a>
+
+
+        <a
+          href="mailto:felipe@lowsignal.cl"
+          class="contact-link"
+        >
+          Email
+        </a>
+
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- ===================================================
+         FOOTER
+    ==================================================== -->
+
+    <footer class="footer">
+
+
+      <div>
+        © 2026 Felipe Quiroz
+      </div>
+
+
+
+      <div class="footer-socials">
+
+
+        <!-- LINKEDIN -->
+
+        <a
+          href="https://www.linkedin.com/in/felipequirozp"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          class="social-icon"
+        >
+
+          <span class="linkedin-mark">
+            in
+          </span>
+
+        </a>
+
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+          href="https://www.instagram.com/felipe_quirozp/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+          class="social-icon"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+
+            <rect
+              x="4"
+              y="4"
+              width="16"
+              height="16"
+              rx="5"
+            />
+
+            <circle
+              cx="12"
+              cy="12"
+              r="3.5"
+            />
+
+            <circle
+              cx="17.3"
+              cy="6.8"
+              r=".7"
+              class="filled"
+            />
+
+          </svg>
+
+        </a>
+
+
+
+        <!-- EMAIL -->
+
+        <a
+          href="mailto:felipe@lowsignal.cl"
+          aria-label="Email"
+          class="social-icon"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+
+            <rect
+              x="3"
+              y="5"
+              width="18"
+              height="14"
+              rx="2"
+            />
+
+            <path
+              d="M4 7L12 13L20 7"
+            />
+
+          </svg>
+
+        </a>
+
+
+      </div>
+
+
+
+      <div class="footer-location">
+        Santiago / CL
+      </div>
+
+
+    </footer>
+
+
+  </section>
+
+
+</body>
+
+</html>
