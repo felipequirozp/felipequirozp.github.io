@@ -904,6 +904,119 @@
 
 
     /* =====================================================
+       PRODUCT COLLABORATION
+    ===================================================== */
+
+    .product-collaboration {
+
+      margin:
+        34px 0 42px;
+
+      padding:
+        20px 0;
+
+      border-top:
+        1px solid var(--line);
+
+      border-bottom:
+        1px solid var(--line);
+
+      display:
+        grid;
+
+      grid-template-columns:
+        150px minmax(0, 1fr);
+
+      gap:
+        28px;
+
+      align-items:
+        start;
+
+    }
+
+
+    .product-collaboration-label {
+
+      color:
+        var(--steel-light);
+
+      font-size:
+        9px;
+
+      font-weight:
+        600;
+
+      letter-spacing:
+        .12em;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+    .product-collaboration-copy {
+
+      max-width:
+        690px;
+
+      margin:
+        0;
+
+      color:
+        #45505b;
+
+      font-size:
+        13px;
+
+      line-height:
+        1.75;
+
+    }
+
+
+    .product-collaboration-copy strong {
+
+      color:
+        var(--navy);
+
+      font-weight:
+        650;
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .product-collaboration {
+
+        grid-template-columns:
+          1fr;
+
+        gap:
+          10px;
+
+        margin:
+          28px 0 34px;
+
+        padding:
+          18px 0;
+
+      }
+
+
+      .product-collaboration-copy {
+
+        font-size:
+          12px;
+
+      }
+
+    }
+
+
+    /* =====================================================
        SCALE
     ===================================================== */
 
@@ -2326,6 +2439,367 @@
     }
 
   
+
+    /* =====================================================
+       PARTNERSHIPS IN THE FIELD
+    ===================================================== */
+
+    .field-block {
+
+      margin-top:
+        72px;
+
+      padding-top:
+        44px;
+
+      border-top:
+        1px solid var(--line);
+
+    }
+
+
+    .field-kicker {
+
+      margin-bottom:
+        18px;
+
+      color:
+        var(--steel-light);
+
+      font-size:
+        10px;
+
+      font-weight:
+        600;
+
+      letter-spacing:
+        .14em;
+
+      text-transform:
+        none;
+
+    }
+
+
+    .field-heading {
+
+      max-width:
+        720px;
+
+      margin:
+        0 0 18px;
+
+      color:
+        var(--ink);
+
+      font-family:
+        "Manrope", sans-serif;
+
+      font-size:
+        clamp(28px, 3.4vw, 48px);
+
+      font-weight:
+        500;
+
+      letter-spacing:
+        -.045em;
+
+      line-height:
+        1.08;
+
+    }
+
+
+    .field-copy {
+
+      max-width:
+        690px;
+
+      margin:
+        0 0 34px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        14px;
+
+      line-height:
+        1.8;
+
+    }
+
+
+    .field-gallery {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        minmax(0, 1.45fr)
+        minmax(260px, .9fr);
+
+      grid-template-rows:
+        repeat(3, 180px);
+
+      gap:
+        12px;
+
+    }
+
+
+    .field-photo {
+
+      position:
+        relative;
+
+      min-width:
+        0;
+
+      overflow:
+        hidden;
+
+      border-radius:
+        2px;
+
+      background:
+        var(--ice);
+
+    }
+
+
+    .field-photo.featured {
+
+      grid-row:
+        1 / 4;
+
+    }
+
+
+    .field-photo img {
+
+      width:
+        100%;
+
+      height:
+        100%;
+
+      display:
+        block;
+
+      object-fit:
+        cover;
+
+      transition:
+        transform .55s cubic-bezier(.2,.7,.2,1);
+
+    }
+
+
+    .field-photo:hover img {
+
+      transform:
+        scale(1.018);
+
+    }
+
+
+    .field-photo::after {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      inset:
+        0;
+
+      pointer-events:
+        none;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(13,23,36,.42) 0%,
+          rgba(13,23,36,0) 34%
+        );
+
+    }
+
+
+    .field-caption {
+
+      position:
+        absolute;
+
+      left:
+        16px;
+
+      right:
+        16px;
+
+      bottom:
+        14px;
+
+      z-index:
+        2;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        space-between;
+
+      gap:
+        12px;
+
+      color:
+        rgba(255,255,255,.92);
+
+      font-size:
+        9px;
+
+      font-weight:
+        600;
+
+      letter-spacing:
+        .04em;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+    .field-caption span:last-child {
+
+      color:
+        rgba(255,255,255,.66);
+
+      white-space:
+        nowrap;
+
+    }
+
+
+    @media (max-width: 860px) {
+
+      .field-gallery {
+
+        grid-template-columns:
+          1fr 1fr;
+
+        grid-template-rows:
+          420px 220px 220px;
+
+      }
+
+
+      .field-photo.featured {
+
+        grid-column:
+          1 / 3;
+
+        grid-row:
+          auto;
+
+      }
+
+
+      .field-photo:last-child {
+
+        grid-column:
+          1 / 3;
+
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .field-block {
+
+        margin-top:
+          54px;
+
+        padding-top:
+          32px;
+
+      }
+
+
+      .field-copy {
+
+        margin-bottom:
+          26px;
+
+        font-size:
+          13px;
+
+      }
+
+
+      .field-gallery {
+
+        display:
+          flex;
+
+        flex-direction:
+          column;
+
+        gap:
+          10px;
+
+      }
+
+
+      .field-photo,
+      .field-photo.featured {
+
+        width:
+          100%;
+
+        height:
+          auto;
+
+        aspect-ratio:
+          4 / 3;
+
+      }
+
+
+      .field-photo.featured {
+
+        aspect-ratio:
+          1 / 1;
+
+      }
+
+
+      .field-caption {
+
+        left:
+          13px;
+
+        right:
+          13px;
+
+        bottom:
+          12px;
+
+        font-size:
+          8px;
+
+      }
+
+    }
+
+
     /* =====================================================
        FOUNDER / LEADERSHIP CARD
     ===================================================== */
@@ -2333,7 +2807,7 @@
     .leadership-card {
 
       margin-top: 42px;
-      padding-top: 28px;
+      padding-top: 30px;
 
       border-top:
         1px solid var(--line);
@@ -2342,10 +2816,10 @@
         grid;
 
       grid-template-columns:
-        72px minmax(0,1fr);
+        78px minmax(0,1fr);
 
       gap:
-        20px;
+        24px;
 
       align-items:
         center;
@@ -2353,27 +2827,68 @@
     }
 
 
+    .leadership-photo-wrap {
+
+      position: relative;
+
+      width: 78px;
+      height: 78px;
+
+      border-radius: 20px;
+
+      overflow: hidden;
+
+      background:
+        var(--ice);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+
+    .leadership-photo-fallback {
+
+      color:
+        var(--steel-light);
+
+      font-family:
+        "Manrope", sans-serif;
+
+      font-size:
+        18px;
+
+      font-weight:
+        650;
+
+      letter-spacing:
+        -.03em;
+
+    }
+
+
     .leadership-photo {
 
-      width: 72px;
-      height: 72px;
+      position: absolute;
+      inset: 0;
 
-      border-radius: 18px;
+      width: 100%;
+      height: 100%;
+
+      border-radius: inherit;
 
       object-fit: cover;
       object-position: center;
 
       display: block;
 
-      background:
-        var(--ice);
-
     }
 
 
     .leadership-eyebrow {
 
-      margin-bottom: 7px;
+      margin-bottom: 8px;
 
       color:
         var(--steel-light);
@@ -2389,7 +2904,7 @@
 
     .leadership-name {
 
-      margin: 0 0 5px;
+      margin: 0 0 6px;
 
       color:
         var(--ink);
@@ -2411,7 +2926,7 @@
 
     .leadership-meta {
 
-      margin: 0 0 10px;
+      margin: 0 0 12px;
 
       color:
         var(--muted);
@@ -2429,7 +2944,7 @@
 
       margin: 0;
 
-      max-width: 580px;
+      max-width: 650px;
 
       color:
         var(--muted);
@@ -2440,11 +2955,83 @@
       line-height:
         1.75;
 
-    
+    }
+
+
+    .leadership-links {
+
+      margin-top: 15px;
+
+      display: flex;
+      align-items: center;
+
+      gap: 9px;
+
+    }
+
+
+    .leadership-links a {
+
+      width: 36px;
+      height: 36px;
+
+      border:
+        1px solid var(--line);
+
+      border-radius:
+        50%;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      color:
+        var(--steel);
+
+      text-decoration: none;
+
+      transition:
+        color .2s ease,
+        border-color .2s ease,
+        transform .2s ease,
+        background .2s ease;
+
+    }
+
+
+    .leadership-links a:hover {
+
+      color:
+        var(--navy);
+
+      border-color:
+        var(--steel-light);
+
+      background:
+        var(--white);
+
+      transform:
+        translateY(-2px);
+
+    }
+
+
+    .leadership-links svg {
+
+      width: 15px;
+      height: 15px;
+
+      display: block;
+
+    }
+
+
+    @media (max-width: 600px) {
+
       .leadership-card {
 
         grid-template-columns:
-          60px minmax(0,1fr);
+          64px minmax(0,1fr);
 
         gap:
           16px;
@@ -2452,24 +3039,56 @@
         margin-top:
           34px;
 
+        padding-top:
+          24px;
+
+        align-items:
+          start;
+
       }
 
 
-      .leadership-photo {
+      .leadership-photo-wrap {
 
         width:
-          60px;
+          64px;
 
         height:
-          60px;
+          64px;
 
         border-radius:
-          15px;
+          16px;
 
       }
 
 
-}
+      .leadership-meta {
+
+        font-size:
+          11px;
+
+      }
+
+
+      .leadership-copy {
+
+        font-size:
+          12px;
+
+      }
+
+
+      .leadership-links a {
+
+        width:
+          34px;
+
+        height:
+          34px;
+
+      }
+
+    }
 
 
   </style>
@@ -2828,11 +3447,24 @@
 
           <div class="leadership-card">
 
-            <img
-              src="../christopher-neilson.jpg"
-              alt="Christopher Neilson"
-              class="leadership-photo"
-            >
+            <div class="leadership-photo-wrap">
+
+              <span
+                class="leadership-photo-fallback"
+                aria-hidden="true"
+              >
+                CN
+              </span>
+
+              <img
+                src="../christopher-neilson.jpg"
+                alt="Christopher Neilson"
+                class="leadership-photo"
+                loading="lazy"
+                onerror="this.style.display='none'"
+              >
+
+            </div>
 
             <div>
 
@@ -2861,16 +3493,39 @@
                   href="https://www.christopher-neilson.com/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Sitio web de Christopher Neilson"
+                  title="Sitio web"
                 >
-                  Sitio web
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="M3 12h18"></path>
+                    <path d="M12 3c2.5 2.5 3.8 5.5 3.8 9S14.5 18.5 12 21"></path>
+                    <path d="M12 3C9.5 5.5 8.2 8.5 8.2 12S9.5 18.5 12 21"></path>
+                  </svg>
                 </a>
 
                 <a
                   href="https://www.linkedin.com/in/christopher-a-neilson/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="LinkedIn de Christopher Neilson"
+                  title="LinkedIn"
                 >
-                  LinkedIn
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
+                  </svg>
                 </a>
 
               </div>
@@ -2975,7 +3630,7 @@
 
 
           <div class="section-label">
-            03 / Productoo
+            03 / Producto
           </div>
 
 
@@ -2998,6 +3653,21 @@
 
             </p>
 
+
+          </div>
+
+
+          <div class="product-collaboration">
+
+            <div class="product-collaboration-label">
+              Colaboración
+            </div>
+
+            <p class="product-collaboration-copy">
+              <strong>Tether Education colaboró con OpenAI</strong>
+              en iniciativas vinculadas al uso de IA aplicada
+              a educación y acceso.
+            </p>
 
           </div>
 
@@ -3292,7 +3962,7 @@
               <div class="project-main">
 
                 <strong>
-                  New Haven Public Colegios
+                  New Haven Public Schools
                 </strong>
 
                 <span>
@@ -3308,6 +3978,109 @@
 
 
             </a>
+
+
+          </div>
+
+
+        
+
+          <div class="field-block">
+
+
+            <div class="field-kicker">
+              Partnerships en terreno
+            </div>
+
+
+            <h3 class="field-heading">
+              Relaciones que se construyen
+              fuera de la plataforma.
+            </h3>
+
+
+            <p class="field-copy">
+
+              Parte del trabajo implicó estar cerca de instituciones,
+              equipos educativos y comunidades: entendiendo contextos,
+              construyendo confianza y llevando partnerships desde
+              la conversación hasta implementaciones reales.
+
+            </p>
+
+
+
+            <div class="field-gallery">
+
+
+              <figure class="field-photo featured">
+
+                <img
+                  src="../tether-partnerships-crecer.jpg"
+                  alt="Visita y trabajo con una organización educativa en Santiago"
+                  loading="lazy"
+                >
+
+                <figcaption class="field-caption">
+                  <span>Crecer con Todos</span>
+                  <span>Santiago</span>
+                </figcaption>
+
+              </figure>
+
+
+
+              <figure class="field-photo">
+
+                <img
+                  src="../tether-partnerships-kiri.jpg"
+                  alt="Encuentro de trabajo con una comunidad educativa"
+                  loading="lazy"
+                >
+
+                <figcaption class="field-caption">
+                  <span>Kiri</span>
+                  <span>Partnership</span>
+                </figcaption>
+
+              </figure>
+
+
+
+              <figure class="field-photo">
+
+                <img
+                  src="../tether-team-meeting.jpg"
+                  alt="Sesión de trabajo del equipo de TetherEd"
+                  loading="lazy"
+                >
+
+                <figcaption class="field-caption">
+                  <span>TetherEd</span>
+                  <span>Sesión de trabajo</span>
+                </figcaption>
+
+              </figure>
+
+
+
+              <figure class="field-photo">
+
+                <img
+                  src="../tether-team-santiago.jpg"
+                  alt="Equipo de TetherEd reunido en Santiago"
+                  loading="lazy"
+                >
+
+                <figcaption class="field-caption">
+                  <span>TetherEd</span>
+                  <span>Equipo</span>
+                </figcaption>
+
+              </figure>
+
+
+            </div>
 
 
           </div>
