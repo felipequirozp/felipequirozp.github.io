@@ -327,8 +327,6 @@
     }
 
 
-
-
     /* =====================================================
        HERO
     ===================================================== */
@@ -906,6 +904,122 @@
 
 
     /* =====================================================
+       PRODUCT COLLABORATION
+    ===================================================== */
+
+    .product-collaboration {
+
+      margin:
+        30px 0 38px;
+
+      padding:
+        20px 22px;
+
+      display:
+        grid;
+
+      grid-template-columns:
+        150px minmax(0, 1fr);
+
+      gap:
+        28px;
+
+      align-items:
+        start;
+
+      background:
+        var(--ice);
+
+      border-radius:
+        14px;
+
+    }
+
+
+    .product-collaboration-label {
+
+      color:
+        var(--steel-light);
+
+      font-size:
+        9px;
+
+      font-weight:
+        600;
+
+      letter-spacing:
+        .12em;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+    .product-collaboration-copy {
+
+      max-width:
+        690px;
+
+      margin:
+        0;
+
+      color:
+        #45505b;
+
+      font-size:
+        13px;
+
+      line-height:
+        1.75;
+
+    }
+
+
+    .product-collaboration-copy strong {
+
+      color:
+        var(--navy);
+
+      font-weight:
+        650;
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .product-collaboration {
+
+        grid-template-columns:
+          1fr;
+
+        gap:
+          10px;
+
+        margin:
+          26px 0 32px;
+
+        padding:
+          18px;
+
+        border-radius:
+          12px;
+
+      }
+
+
+      .product-collaboration-copy {
+
+        font-size:
+          12px;
+
+      }
+
+    }
+
+
+    /* =====================================================
        SCALE
     ===================================================== */
 
@@ -1412,7 +1526,7 @@
 
       display: block;
 
-      margin-top: 22px;
+      margin-top: 14px;
 
       color: var(--slate);
 
@@ -1445,7 +1559,7 @@
 
     .focus-dark .focus-title span {
 
-      margin-top: 30px;
+      margin-top: 16px;
 
     }
 
@@ -2039,8 +2153,6 @@
       }
 
 
-
-
       .hero-visual {
 
         padding:
@@ -2267,7 +2379,7 @@
 
       .focus-title span {
 
-        margin-top: 20px;
+        margin-top: 14px;
 
       }
 
@@ -2286,7 +2398,7 @@
 
       .focus-dark .focus-title span {
 
-        margin-top: 24px;
+        margin-top: 16px;
 
       }
 
@@ -2328,6 +2440,633 @@
       }
 
     }
+
+  
+
+    /* =====================================================
+       PARTNERSHIPS IN THE FIELD
+    ===================================================== */
+
+    .field-block {
+
+      margin-top:
+        82px;
+
+      padding-top:
+        34px;
+
+    }
+
+
+    .field-kicker {
+
+      margin-bottom:
+        18px;
+
+      color:
+        var(--steel-light);
+
+      font-size:
+        10px;
+
+      font-weight:
+        600;
+
+      letter-spacing:
+        .14em;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+    .field-heading {
+
+      max-width:
+        760px;
+
+      margin:
+        0 0 18px;
+
+      color:
+        var(--ink);
+
+      font-family:
+        "Manrope", sans-serif;
+
+      font-size:
+        clamp(30px, 3.6vw, 50px);
+
+      font-weight:
+        500;
+
+      letter-spacing:
+        -.045em;
+
+      line-height:
+        1.08;
+
+    }
+
+
+    .field-copy {
+
+      max-width:
+        710px;
+
+      margin:
+        0 0 48px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        14px;
+
+      line-height:
+        1.8;
+
+    }
+
+
+    .field-gallery {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap:
+        52px 24px;
+
+    }
+
+
+    .field-photo {
+
+      margin:
+        0;
+
+      min-width:
+        0;
+
+    }
+
+
+    .field-photo.featured,
+    .field-photo.wide {
+
+      grid-column:
+        1 / -1;
+
+    }
+
+
+    .field-photo-media {
+
+      width:
+        100%;
+
+      overflow:
+        hidden;
+
+      border-radius:
+        18px;
+
+      background:
+        var(--ice);
+
+    }
+
+
+    .field-photo.featured .field-photo-media,
+    .field-photo.wide .field-photo-media {
+
+      aspect-ratio:
+        16 / 8.7;
+
+    }
+
+
+    .field-photo:not(.featured):not(.wide) .field-photo-media {
+
+      aspect-ratio:
+        4 / 3;
+
+    }
+
+
+    .field-photo img {
+
+      width:
+        100%;
+
+      height:
+        100%;
+
+      display:
+        block;
+
+      object-fit:
+        cover;
+
+      transition:
+        transform .6s cubic-bezier(.2,.7,.2,1);
+
+    }
+
+
+    .field-photo.featured img {
+
+      object-position:
+        center 45%;
+
+    }
+
+
+    .field-photo.wide img {
+
+      object-position:
+        center 48%;
+
+    }
+
+
+    .field-photo:hover img {
+
+      transform:
+        scale(1.012);
+
+    }
+
+
+    .field-caption {
+
+      margin-top:
+        12px;
+
+      display:
+        flex;
+
+      align-items:
+        baseline;
+
+      justify-content:
+        space-between;
+
+      gap:
+        16px;
+
+      color:
+        var(--ink);
+
+      font-size:
+        11px;
+
+      font-weight:
+        550;
+
+      letter-spacing:
+        0;
+
+      text-transform:
+        none;
+
+    }
+
+
+    .field-caption span:last-child {
+
+      color:
+        var(--steel-light);
+
+      font-size:
+        10px;
+
+      font-weight:
+        500;
+
+      white-space:
+        nowrap;
+
+    }
+
+
+    @media (max-width: 760px) {
+
+      .field-photo-media {
+
+        border-radius:
+          14px;
+
+      }
+
+
+      .field-block {
+
+        margin-top:
+          60px;
+
+        padding-top:
+          36px;
+
+      }
+
+
+      .field-copy {
+
+        margin-bottom:
+          34px;
+
+        font-size:
+          13px;
+
+      }
+
+
+      .field-gallery {
+
+        grid-template-columns:
+          1fr;
+
+        gap:
+          34px;
+
+      }
+
+
+      .field-photo.featured,
+      .field-photo.wide {
+
+        grid-column:
+          auto;
+
+      }
+
+
+      .field-photo.featured .field-photo-media,
+      .field-photo.wide .field-photo-media,
+      .field-photo:not(.featured):not(.wide) .field-photo-media {
+
+        aspect-ratio:
+          4 / 3;
+
+      }
+
+
+      .field-caption {
+
+        margin-top:
+          9px;
+
+        font-size:
+          10px;
+
+      }
+
+
+      .field-caption span:last-child {
+
+        font-size:
+          9px;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       FOUNDER / LEADERSHIP CARD
+    ===================================================== */
+
+    .leadership-card {
+
+      margin-top: 42px;
+      padding-top: 30px;
+
+      border-top:
+        1px solid var(--line);
+
+      display:
+        grid;
+
+      grid-template-columns:
+        78px minmax(0,1fr);
+
+      gap:
+        24px;
+
+      align-items:
+        center;
+
+    }
+
+
+    .leadership-photo-wrap {
+
+      position: relative;
+
+      width: 78px;
+      height: 78px;
+
+      border-radius: 20px;
+
+      overflow: hidden;
+
+      background:
+        var(--ice);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+
+    .leadership-photo-fallback {
+
+      color:
+        var(--steel-light);
+
+      font-family:
+        "Manrope", sans-serif;
+
+      font-size:
+        18px;
+
+      font-weight:
+        650;
+
+      letter-spacing:
+        -.03em;
+
+    }
+
+
+    .leadership-photo {
+
+      position: absolute;
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      border-radius: inherit;
+
+      object-fit: cover;
+      object-position: center;
+
+      display: block;
+
+    }
+
+
+    .leadership-eyebrow {
+
+      margin-bottom: 8px;
+
+      color:
+        var(--steel-light);
+
+      font-size: 10px;
+      font-weight: 600;
+
+      letter-spacing: .14em;
+      text-transform: uppercase;
+
+    }
+
+
+    .leadership-name {
+
+      margin: 0 0 6px;
+
+      color:
+        var(--ink);
+
+      font-family:
+        "Manrope", sans-serif;
+
+      font-size:
+        18px;
+
+      font-weight:
+        650;
+
+      letter-spacing:
+        -.02em;
+
+    }
+
+
+    .leadership-meta {
+
+      margin: 0 0 12px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        12px;
+
+      line-height:
+        1.55;
+
+    }
+
+
+    .leadership-copy {
+
+      margin: 0;
+
+      max-width: 650px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        13px;
+
+      line-height:
+        1.75;
+
+    }
+
+
+    .leadership-links {
+
+      margin-top: 15px;
+
+      display: flex;
+      align-items: center;
+
+      gap: 9px;
+
+    }
+
+
+    .leadership-links a {
+
+      width: 36px;
+      height: 36px;
+
+      border:
+        1px solid var(--line);
+
+      border-radius:
+        50%;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      color:
+        var(--steel);
+
+      text-decoration: none;
+
+      transition:
+        color .2s ease,
+        border-color .2s ease,
+        transform .2s ease,
+        background .2s ease;
+
+    }
+
+
+    .leadership-links a:hover {
+
+      color:
+        var(--navy);
+
+      border-color:
+        var(--steel-light);
+
+      background:
+        var(--white);
+
+      transform:
+        translateY(-2px);
+
+    }
+
+
+    .leadership-links svg {
+
+      width: 15px;
+      height: 15px;
+
+      display: block;
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .leadership-card {
+
+        grid-template-columns:
+          64px minmax(0,1fr);
+
+        gap:
+          16px;
+
+        margin-top:
+          34px;
+
+        padding-top:
+          24px;
+
+        align-items:
+          start;
+
+      }
+
+
+      .leadership-photo-wrap {
+
+        width:
+          64px;
+
+        height:
+          64px;
+
+        border-radius:
+          16px;
+
+      }
+
+
+      .leadership-meta {
+
+        font-size:
+          11px;
+
+      }
+
+
+      .leadership-copy {
+
+        font-size:
+          12px;
+
+      }
+
+
+      .leadership-links a {
+
+        width:
+          34px;
+
+        height:
+          34px;
+
+      }
+
+    }
+
 
   </style>
 
@@ -2378,10 +3117,11 @@
         Contact
       </a>
 
+
       <a
         href="es/tethereducation.html"
         class="lang-switch"
-        aria-label="Ver sitio en español"
+        aria-label="View site in Spanish"
       >
         ES
       </a>
@@ -2409,7 +3149,7 @@
       <div class="visual-top">
 
         <span>
-          EdTech / Education Access
+          EdTech / Education access
         </span>
 
         <span>
@@ -2524,10 +3264,10 @@
 
         <h2 class="visual-title">
 
-          Empowering communities
+          Connecting communities
 
           <span>
-            with seamless access to education options.
+            with better ways to access education.
           </span>
 
         </h2>
@@ -2553,7 +3293,7 @@
           target="_blank"
           rel="noopener noreferrer"
           class="company-logo"
-          aria-label="Visit TetherEd"
+          aria-label="Visitar TetherEd"
         >
 
           <img
@@ -2565,12 +3305,12 @@
 
 
         <div class="case-label">
-          Selected Work / 03
+          Selected work / 03
         </div>
 
 
         <div class="case-period">
-          Former Role · 2024 — 2026
+          Previous role · 2024 — 2026
         </div>
 
 
@@ -2586,10 +3326,7 @@
 
         <p class="hero-description">
 
-          Building partnerships around user-centered
-          education products — connecting schools,
-          public institutions and communities across
-          Latin America and international markets.
+          Building partnerships around human-centered education products — connecting schools, public institutions and communities across Latin America and international markets.
 
         </p>
 
@@ -2609,7 +3346,7 @@
           </div>
 
           <div class="tag">
-            Public Sector
+            Public sector
           </div>
 
         </div>
@@ -2649,8 +3386,7 @@
 
 
           <h2>
-            Partnerships around
-            a complex product problem.
+            Partnerships around a complex product challenge.
           </h2>
 
 
@@ -2659,25 +3395,124 @@
 
             <p>
 
-              TetherEd builds user-centered guidance
-              products for school choice and admissions —
-              helping families navigate complex education
-              systems and make better-informed decisions.
+              TetherEd builds human-centered guidance products for school choice and admissions — helping families navigate complex education systems and make better-informed decisions.
 
             </p>
 
 
             <p>
 
-              As Head of Partnerships, my role was to
-              connect that product with education systems,
-              public institutions and partners across
-              different markets, turning institutional
-              relationships into real deployments
-              and adoption.
+              As Head of Partnerships, I connected the product with education systems, public institutions and partners across different markets, turning institutional relationships into real implementations and adoption.
 
             </p>
 
+
+          </div>
+
+
+          <div class="leadership-card">
+
+            <div class="leadership-photo-wrap">
+
+              <span
+                class="leadership-photo-fallback"
+                aria-hidden="true"
+              >
+                CN
+              </span>
+
+              <img
+                src="/christopher-neilson.jpg"
+                alt="Christopher Neilson"
+                class="leadership-photo"
+                loading="lazy"
+                data-chris-source="0"
+                onerror="
+                  const sources = [
+                    'christopher-neilson.jpg',
+                    'christopher-neilson.jpeg',
+                    'christopher-neilson.JPG',
+                    'christopher-neilson.png',
+                    'christopher-neilson.jpg',
+                    'christopher-neilson.jpeg',
+                    'christopher-neilson.JPG',
+                    'christopher-neilson.png'
+                  ];
+                  const current = Number(this.dataset.chrisSource || 0) + 1;
+                  if (current < sources.length) {
+                    this.dataset.chrisSource = String(current);
+                    this.src = sources[current];
+                  } else {
+                    this.style.display = 'none';
+                  }
+                "
+              >
+
+            </div>
+
+            <div>
+
+              <div class="leadership-eyebrow">
+                Leadership
+              </div>
+
+              <h3 class="leadership-name">
+                Christopher Neilson
+              </h3>
+
+              <p class="leadership-meta">
+                Founder &amp; CEO, Tether Education<br>
+                Professor of Economics and Global Affairs · Yale University
+              </p>
+
+              <p class="leadership-copy">
+                I worked closely and directly with Christopher across partnerships, institutional relationships and Tether Education’s expansion initiatives.
+              </p>
+
+              <div class="leadership-links">
+
+                <a
+                  href="https://www.christopher-neilson.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Website de Christopher Neilson"
+                  title="Website"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="M3 12h18"></path>
+                    <path d="M12 3c2.5 2.5 3.8 5.5 3.8 9S14.5 18.5 12 21"></path>
+                    <path d="M12 3C9.5 5.5 8.2 8.5 8.2 12S9.5 18.5 12 21"></path>
+                  </svg>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/christopher-a-neilson/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn de Christopher Neilson"
+                  title="LinkedIn"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
+                  </svg>
+                </a>
+
+              </div>
+
+            </div>
 
           </div>
 
@@ -2697,8 +3532,7 @@
 
 
           <h2>
-            Building reach
-            across education.
+            Expanding access across education.
           </h2>
 
 
@@ -2707,11 +3541,7 @@
 
             <p>
 
-              The platform connected education options,
-              families and institutions across Latin America,
-              the United States, Denmark and Spain — combining
-              school discovery, admissions guidance and
-              institutional partnerships.
+              The platform connected education options, families and institutions across Latin America, the United States, Denmark and Spain — combining school discovery, admissions guidance and institutional partnerships.
 
             </p>
 
@@ -2730,7 +3560,7 @@
               </strong>
 
               <span>
-                Schools with platform profiles
+                Schools with profiles on the platform
               </span>
 
             </div>
@@ -2782,8 +3612,7 @@
 
 
           <h2>
-            Making complex education
-            systems easier to navigate.
+            Making complex education systems easier to navigate.
           </h2>
 
 
@@ -2792,14 +3621,24 @@
 
             <p>
 
-              The product combined technology, data
-              and research to simplify school choice
-              and admissions — while creating the
-              measurement infrastructure needed to
-              learn, evaluate and improve.
+              The product combined technology, data and research to simplify school choice and admissions — while building the measurement infrastructure needed to learn, evaluate and improve.
 
             </p>
 
+
+          </div>
+
+
+          <div class="product-collaboration">
+
+            <div class="product-collaboration-label">
+              Collaboration
+            </div>
+
+            <p class="product-collaboration-copy">
+              <strong>Tether Education collaborated with OpenAI</strong>
+              on initiatives related to the use of AI in education and access.
+            </p>
 
           </div>
 
@@ -2828,9 +3667,7 @@
 
               <p>
 
-                Clear, mobile-friendly explanations
-                of education rules, admissions processes
-                and available choices.
+                Clear, mobile-friendly explanations of education rules, admissions processes and available options.
 
               </p>
 
@@ -2848,7 +3685,7 @@
 
 
               <h3>
-                Guided search
+                Guided discovery
               </h3>
 
 
@@ -2859,9 +3696,7 @@
 
               <p>
 
-                Helping families discover education
-                options based on preferences,
-                constraints and local context.
+                Helping families discover education options based on their preferences, constraints and local context.
 
               </p>
 
@@ -2884,15 +3719,13 @@
 
 
               <div class="product-type">
-                Decision Support
+                Decision support
               </div>
 
 
               <p>
 
-                Making information easier to interpret
-                so families can compare options and
-                make more informed decisions.
+                Making information easier to interpret so families can compare options and make better-informed decisions.
 
               </p>
 
@@ -2910,7 +3743,7 @@
 
 
               <h3>
-                Built to learn
+                Designed to learn
               </h3>
 
 
@@ -2921,9 +3754,7 @@
 
               <p>
 
-                Product and measurement infrastructure
-                designed for evaluation, iteration
-                and continuous improvement.
+                Product and measurement infrastructure designed for evaluation, iteration and continuous improvement.
 
               </p>
 
@@ -2944,13 +3775,12 @@
 
 
           <div class="section-label">
-            04 / Selected Projects
+            04 / Selected projects
           </div>
 
 
           <h2>
-            Partnerships
-            across markets.
+            Partnerships across different markets.
           </h2>
 
 
@@ -2973,7 +3803,7 @@
                 </strong>
 
                 <span>
-                  Public Education
+                  Public education
                 </span>
 
               </div>
@@ -3003,7 +3833,7 @@
                 </strong>
 
                 <span>
-                  Municipal Education
+                  Municipal education
                 </span>
 
               </div>
@@ -3033,7 +3863,7 @@
                 </strong>
 
                 <span>
-                  Early Education
+                  Early childhood education
                 </span>
 
               </div>
@@ -3098,7 +3928,7 @@
                 </strong>
 
                 <span>
-                  Public Education
+                  Public education
                 </span>
 
               </div>
@@ -3115,6 +3945,120 @@
           </div>
 
 
+        
+
+          <div class="field-block">
+
+
+            <div class="field-kicker">
+              Team &amp; partnerships
+            </div>
+
+
+            <h3 class="field-heading">
+              Building alongside teams and institutions.
+            </h3>
+
+
+            <p class="field-copy">
+
+              Part of the work meant collaborating directly with teams, institutions and education communities — understanding context, building relationships and taking ideas and partnerships through to real implementation.
+
+            </p>
+
+
+
+            <div class="field-gallery">
+
+
+              <figure class="field-photo featured">
+
+                <div class="field-photo-media">
+
+                  <img
+                    src="tether-team-meeting.jpg"
+                    alt="Working session del equipo de TetherEd"
+                    loading="lazy"
+                  >
+
+                </div>
+
+                <figcaption class="field-caption">
+                  <span>TetherEd</span>
+                  <span>Working session</span>
+                </figcaption>
+
+              </figure>
+
+
+
+              <figure class="field-photo">
+
+                <div class="field-photo-media">
+
+                  <img
+                    src="tether-partnerships-crecer.jpg"
+                    alt="Work con Crecer con Todos en Santiago"
+                    loading="lazy"
+                  >
+
+                </div>
+
+                <figcaption class="field-caption">
+                  <span>Crecer con Todos</span>
+                  <span>Partnership</span>
+                </figcaption>
+
+              </figure>
+
+
+
+              <figure class="field-photo">
+
+                <div class="field-photo-media">
+
+                  <img
+                    src="tether-partnerships-kiri.jpg"
+                    alt="Encuentro de trabajo con Kiri"
+                    loading="lazy"
+                  >
+
+                </div>
+
+                <figcaption class="field-caption">
+                  <span>Kiri</span>
+                  <span>Partnership</span>
+                </figcaption>
+
+              </figure>
+
+
+
+              <figure class="field-photo wide">
+
+                <div class="field-photo-media">
+
+                  <img
+                    src="tether-team-santiago.jpg"
+                    alt="Equipo de TetherEd reunido en Santiago"
+                    loading="lazy"
+                  >
+
+                </div>
+
+                <figcaption class="field-caption">
+                  <span>TetherEd</span>
+                  <span>Team · Santiago</span>
+                </figcaption>
+
+              </figure>
+
+
+            </div>
+
+          </div>
+
+
         </section>
 
 
@@ -3125,13 +4069,12 @@
 
 
           <div class="section-label">
-            05 / How I Worked
+            05 / How I worked
           </div>
 
 
           <h2>
-            From partnership
-            to adoption.
+            From partnership to adoption.
           </h2>
 
 
@@ -3140,11 +4083,7 @@
 
             <p>
 
-              The work required connecting institutional
-              relationships with product adoption —
-              understanding how education organizations
-              operate, what they need and how a product
-              can become part of those systems.
+              The work required connecting institutional relationships with product adoption — understanding how education organizations operate, what they need and how a product can fit into those systems.
 
             </p>
 
@@ -3176,7 +4115,7 @@
               </div>
 
               <strong>
-                Public-sector and institutional relationship management
+                Institutional and public-sector relationship management
               </strong>
 
             </div>
@@ -3368,7 +4307,7 @@
 
 
       <div class="focus-label">
-        Partnership Focus
+        Partnerships focus
       </div>
 
 
@@ -3390,7 +4329,7 @@
         </div>
 
         <div class="focus-step">
-          Deploy
+          Implement
         </div>
 
         <div class="focus-step">
@@ -3408,16 +4347,16 @@
 
 
       <div class="focus-label">
-        Product Principle
+        Product principle
       </div>
 
 
       <h2 class="focus-title">
 
-        Make complexity
+        Simplify complexity.
 
         <span>
-          easier to navigate.
+          Make decisions easier.
         </span>
 
       </h2>
@@ -3463,7 +4402,7 @@
       >
 
         <div class="project-link-label">
-          Previous Project
+          Previous project
         </div>
 
         <strong>
@@ -3480,7 +4419,7 @@
       >
 
         <div class="project-link-label">
-          Next Project
+          Next project
         </div>
 
         <strong>
@@ -3519,7 +4458,7 @@
 
 
         <h3>
-          Let's connect.
+          Let’s talk.
         </h3>
 
 
