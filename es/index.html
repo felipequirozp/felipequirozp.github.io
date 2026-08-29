@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
@@ -10,30 +10,28 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Felipe Quiroz | Product, Growth & Business</title>
+  <title>Felipe Quiroz | Producto, Growth & Negocio</title>
 
   <meta
     name="description"
-    content="Felipe Quiroz — Product Manager, Co-Founder and operator working across product, growth and business."
+    content="Felipe Quiroz — Product Manager, Co-Founder y operador trabajando entre producto, growth y negocio."
   >
 
-
-  <!-- SEO / LANGUAGES -->
   <link
     rel="canonical"
-    href="https://felipequirozp.github.io/"
-  >
-
-  <link
-    rel="alternate"
-    hreflang="en"
-    href="https://felipequirozp.github.io/"
+    href="https://felipequirozp.github.io/es/"
   >
 
   <link
     rel="alternate"
     hreflang="es"
     href="https://felipequirozp.github.io/es/"
+  >
+
+  <link
+    rel="alternate"
+    hreflang="en"
+    href="https://felipequirozp.github.io/"
   >
 
   <link
@@ -46,7 +44,7 @@
   <link
     rel="icon"
     type="image/png"
-    href="favicon.png"
+    href="../favicon.png"
   >
 
   <!-- FONTS -->
@@ -199,7 +197,7 @@
     }
 
 
-    .nav-links > a:not(.contact-nav) {
+    .nav-links > a:not(.contact-nav):not(.lang-switch) {
 
       position: relative;
 
@@ -211,7 +209,7 @@
     }
 
 
-    .nav-links > a:not(.contact-nav)::after {
+    .nav-links > a:not(.contact-nav):not(.lang-switch)::after {
 
       content: "";
 
@@ -231,16 +229,60 @@
     }
 
 
-    .nav-links > a:not(.contact-nav):hover {
+    .nav-links > a:not(.contact-nav):not(.lang-switch):hover {
 
       color: white;
 
     }
 
 
-    .nav-links > a:not(.contact-nav):hover::after {
+    .nav-links > a:not(.contact-nav):not(.lang-switch):hover::after {
 
       width: 100%;
+
+    }
+
+
+    .lang-switch {
+
+      width: 38px;
+      height: 38px;
+
+      flex-shrink: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border:
+        1px solid rgba(255,255,255,.22);
+
+      border-radius: 50%;
+
+      color: var(--slate-light);
+
+      font-size: 9px;
+      font-weight: 600;
+
+      letter-spacing: .06em;
+
+      transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+
+    }
+
+
+    .lang-switch:hover {
+
+      background:
+        rgba(255,255,255,.10);
+
+      color: white;
+
+      border-color:
+        rgba(255,255,255,.45);
 
     }
 
@@ -274,63 +316,6 @@
       border-color: white;
 
     }
-
-
-    /* =====================================================
-       LANGUAGE SWITCH
-    ===================================================== */
-
-    .lang-switch {
-
-      width: 38px;
-      height: 38px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      flex-shrink: 0;
-
-      border:
-        1px solid rgba(255,255,255,.22);
-
-      border-radius: 50%;
-
-      color: var(--slate-light) !important;
-
-      font-size: 9px;
-      font-weight: 600;
-
-      letter-spacing: .06em;
-
-      transition:
-        background .2s ease,
-        color .2s ease,
-        border-color .2s ease;
-
-    }
-
-
-    .lang-switch:hover {
-
-      background:
-        rgba(255,255,255,.10);
-
-      color: white !important;
-
-      border-color:
-        rgba(255,255,255,.45);
-
-    }
-
-
-    .nav-links > a.lang-switch::after {
-
-      display: none !important;
-
-    }
-
-
 
 
     /* =====================================================
@@ -1650,18 +1635,6 @@
       }
 
 
-      .lang-switch {
-
-        width: 34px;
-        height: 34px;
-
-        font-size: 8px;
-
-      }
-
-
-
-
       .hero {
 
         padding:
@@ -1867,17 +1840,17 @@
 
 
       <a href="#work">
-        Work
+        Trabajo
       </a>
 
 
       <a href="about.html">
-        About
+        Sobre mí
       </a>
 
 
       <a href="now.html">
-        Now
+        Ahora
       </a>
 
 
@@ -1885,15 +1858,16 @@
         href="#contact"
         class="contact-nav"
       >
-        Contact
+        Contacto
       </a>
 
+
       <a
-        href="es/index.html"
+        href="../index.html"
         class="lang-switch"
-        aria-label="Ver sitio en español"
+        aria-label="Ver sitio en inglés"
       >
-        ES
+        EN
       </a>
 
 
@@ -1926,21 +1900,21 @@
 
         <h1>
 
-          Product,
+          Producto,
 
           <span>
             growth
           </span>
 
-          and business.
+          y negocio.
 
         </h1>
 
 
         <p class="hero-description">
 
-          Building products, companies and systems
-          that move ideas into the real world.
+          Construyendo productos, empresas y sistemas
+          que llevan ideas al mundo real.
 
         </p>
 
@@ -1991,7 +1965,7 @@
         <div class="hero-photo">
 
           <img
-            src="profile.jpg"
+            src="../profile.jpg"
             alt="Felipe Quiroz"
           >
 
@@ -2001,7 +1975,7 @@
         <div class="photo-meta">
 
           <span>
-            Product / Growth / Business
+            Producto / Growth / Negocio
           </span>
 
           <span>
@@ -2035,13 +2009,13 @@
 
 
       <div class="section-label">
-        01 / Selected Work
+        01 / Trabajo seleccionado
       </div>
 
 
       <h2>
-        Products, companies
-        and systems I've helped build.
+        Productos, empresas
+        y sistemas que he ayudado a construir.
       </h2>
 
 
@@ -2101,8 +2075,8 @@
 
           <div class="project-statement">
 
-            Building product systems for real
-            workforce operations.
+            Construyendo sistemas de producto para
+            operaciones reales de workforce management.
 
           </div>
 
@@ -2110,7 +2084,7 @@
           <div class="project-meta">
 
             <span>
-              Product / SaaS
+              Producto / SaaS
             </span>
 
             <span>
@@ -2159,13 +2133,13 @@
           <div class="system-visual">
 
             <div class="system-dot">
-              Strategy
+              Estrategia
             </div>
 
             <div class="system-line"></div>
 
             <div class="system-dot">
-              Systems
+              Sistemas
             </div>
 
             <div class="system-line"></div>
@@ -2186,7 +2160,7 @@
 
           <div class="project-statement">
 
-            Building the system behind growth.
+            Construyendo el sistema detrás del crecimiento.
 
           </div>
 
@@ -2243,19 +2217,19 @@
           <div class="network-visual">
 
             <div class="network-node">
-              Schools
+              Colegios
             </div>
 
             <div class="network-line"></div>
 
             <div class="network-node">
-              Communities
+              Comunidades
             </div>
 
             <div class="network-line"></div>
 
             <div class="network-node">
-              Institutions
+              Instituciones
             </div>
 
           </div>
@@ -2270,8 +2244,8 @@
 
           <div class="project-statement">
 
-            Expanding education access
-            through products and partnerships.
+            Ampliando el acceso a la educación
+            a través de productos y alianzas.
 
           </div>
 
@@ -2279,7 +2253,7 @@
           <div class="project-meta">
 
             <span>
-              EdTech / Partnerships
+              EdTech / Alianzas
             </span>
 
             <span>
@@ -2313,7 +2287,7 @@
 
 
       <div class="section-label">
-        02 / About
+        02 / Sobre mí
       </div>
 
 
@@ -2323,23 +2297,23 @@
 
         <h2>
 
-          I build where
+          Construyo donde
 
           <span>
-            product, growth
+            producto, growth
           </span>
 
-          and business meet.
+          y negocio se cruzan.
 
         </h2>
 
 
         <p class="about-copy">
 
-          My work has moved across product management,
-          company building and partnerships — but the
-          common thread is turning ideas into systems
-          that people actually use.
+          Mi trabajo ha pasado por producto,
+          construcción de empresas y alianzas — pero el
+          hilo común es convertir ideas en sistemas
+          que las personas realmente usan.
 
         </p>
 
@@ -2348,7 +2322,7 @@
           href="about.html"
           class="text-link"
         >
-          About me
+          Sobre mí
         </a>
 
 
@@ -2373,7 +2347,7 @@
 
 
       <div class="section-label">
-        03 / Now
+        03 / Ahora
       </div>
 
 
@@ -2382,7 +2356,7 @@
 
 
         <h2>
-          Currently building.
+          Construyendo ahora.
         </h2>
 
 
@@ -2433,11 +2407,11 @@
             </div>
 
             <strong>
-              Exploring
+              Explorando
             </strong>
 
             <span>
-              AI-native products
+              Productos AI-native
             </span>
 
           </div>
@@ -2451,7 +2425,7 @@
           href="now.html"
           class="text-link"
         >
-          See what I'm working on
+          Ver en qué estoy trabajando
         </a>
 
 
@@ -2476,16 +2450,16 @@
 
 
       <div class="section-label">
-        04 / Next
+        04 / Siguiente
       </div>
 
 
       <h2>
 
-        Building
+        Construyendo
 
         <span>
-          what's next.
+          lo que viene.
         </span>
 
       </h2>
@@ -2515,12 +2489,12 @@
 
 
         <div class="section-label">
-          Contact
+          Contacto
         </div>
 
 
         <h3>
-          Let's connect.
+          Conversemos.
         </h3>
 
 
