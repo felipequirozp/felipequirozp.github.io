@@ -120,7 +120,7 @@
 
     .nav {
 
-      height: 84px;
+      min-height: 84px;
 
       padding: 0 5vw;
 
@@ -128,6 +128,8 @@
 
       align-items: center;
       justify-content: space-between;
+
+      gap: 30px;
 
       background: var(--navy);
       color: white;
@@ -139,6 +141,8 @@
 
 
     .brand {
+
+      flex-shrink: 0;
 
       font-family: "Manrope", sans-serif;
 
@@ -1341,8 +1345,8 @@
 
     .social-icon {
 
-      width: 38px;
-      height: 38px;
+      width: 36px;
+      height: 36px;
 
       display: flex;
 
@@ -1367,8 +1371,8 @@
 
     .social-icon svg {
 
-      width: 16px;
-      height: 16px;
+      width: 15px;
+      height: 15px;
 
       fill: none;
 
@@ -1390,6 +1394,22 @@
     }
 
 
+    .linkedin-mark {
+
+      font-family: "Inter", sans-serif;
+
+      font-size: 14px;
+      font-weight: 600;
+
+      line-height: 1;
+
+      letter-spacing: -.06em;
+
+      text-transform: lowercase;
+
+    }
+
+
     .social-icon:hover {
 
       background: var(--navy);
@@ -1405,7 +1425,7 @@
 
 
     /* =====================================================
-       MOBILE
+       TABLET / MOBILE
     ===================================================== */
 
     @media(max-width: 900px) {
@@ -1413,24 +1433,56 @@
 
       .nav {
 
-        height: 78px;
+        min-height: 78px;
+
+        height: auto;
 
         padding:
-          0 22px;
+          16px 20px;
+
+        gap: 16px;
+
+      }
+
+
+      .brand {
+
+        font-size: 15px;
+
+        white-space: nowrap;
 
       }
 
 
       .nav-links {
 
-        gap: 15px;
+        display: flex;
+
+        align-items: center;
+        justify-content: flex-end;
+
+        gap: 14px;
+
+        font-size: 9px;
+
+        letter-spacing: .04em;
+
+        white-space: nowrap;
 
       }
 
 
       .nav-links > a:not(.contact-nav) {
 
-        display: none;
+        display: inline-block;
+
+      }
+
+
+      .contact-nav {
+
+        padding:
+          8px 11px;
 
       }
 
@@ -1577,6 +1629,102 @@
         order: 3;
 
         text-align: left;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       SMALL MOBILE
+    ===================================================== */
+
+    @media(max-width: 600px) {
+
+
+      .nav {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 14px;
+
+        padding:
+          18px 20px;
+
+      }
+
+
+      .nav-links {
+
+        width: 100%;
+
+        justify-content: space-between;
+
+        gap: 8px;
+
+      }
+
+
+      .contact-nav {
+
+        padding:
+          7px 10px;
+
+      }
+
+
+      .hero-visual {
+
+        min-height: 540px;
+
+      }
+
+
+      .visual-code {
+
+        display: none;
+
+      }
+
+
+      .visual-title strong {
+
+        font-size:
+          clamp(48px, 15vw, 70px);
+
+      }
+
+
+      .hero-content h1 {
+
+        font-size:
+          clamp(54px, 16vw, 80px);
+
+      }
+
+
+      .hero-tags {
+
+        gap: 7px;
+
+      }
+
+
+      .tag {
+
+        font-size: 8px;
+
+        padding:
+          8px 10px;
+
+      }
+
+
+      .next {
+
+        padding-top: 80px;
 
       }
 
@@ -2443,7 +2591,9 @@
 
 
 
-    <!-- FOOTER -->
+    <!-- ===================================================
+         FOOTER
+    ==================================================== -->
 
     <footer class="footer">
 
@@ -2469,18 +2619,9 @@
           class="social-icon"
         >
 
-
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-
-            <path
-              d="M6.5 8.5V18M6.5 5.75V5.8M10.5 18V12.5C10.5 10.8 11.7 9.5 13.5 9.5C15.3 9.5 16.5 10.8 16.5 12.5V18M10.5 13V9.75M4 4H20V20H4V4Z"
-            />
-
-          </svg>
-
+          <span class="linkedin-mark">
+            in
+          </span>
 
         </a>
 
@@ -2502,7 +2643,6 @@
             aria-hidden="true"
           >
 
-
             <rect
               x="4"
               y="4"
@@ -2511,13 +2651,11 @@
               rx="5"
             />
 
-
             <circle
               cx="12"
               cy="12"
               r="3.5"
             />
-
 
             <circle
               cx="17.3"
@@ -2525,7 +2663,6 @@
               r=".7"
               class="filled"
             />
-
 
           </svg>
 
@@ -2548,7 +2685,6 @@
             aria-hidden="true"
           >
 
-
             <rect
               x="3"
               y="5"
@@ -2557,11 +2693,9 @@
               rx="2"
             />
 
-
             <path
               d="M4 7L12 13L20 7"
             />
-
 
           </svg>
 
