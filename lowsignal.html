@@ -14,7 +14,7 @@
 
   <meta
     name="description"
-    content="Selected work at lowsignal — building growth systems, digital products and the operating infrastructure behind growth."
+    content="Selected work at lowsignal — building growth systems, digital products and operational infrastructure for scale."
   >
 
 
@@ -327,8 +327,6 @@
       display: none !important;
 
     }
-
-
 
 
     /* =====================================================
@@ -682,7 +680,7 @@
 
     .case-label {
 
-      margin-bottom: 13px;
+      margin-bottom: 18px;
 
       color: var(--muted);
 
@@ -698,7 +696,7 @@
 
     .case-period {
 
-      margin-bottom: 35px;
+      margin-bottom: 44px;
 
       color: var(--steel-light);
 
@@ -715,7 +713,7 @@
     .hero-content h1 {
 
       margin:
-        0 0 12px;
+        0 0 24px;
 
       font-family: "Manrope", sans-serif;
 
@@ -1315,6 +1313,31 @@
     }
 
 
+    /* =====================================================
+       LOWSIGNAL LEFT FOCUS SPACING
+    ===================================================== */
+
+    .focus-dark .focus-title {
+
+      max-width: 760px;
+
+      font-size:
+        clamp(42px, 4.35vw, 74px);
+
+      line-height: 1.12;
+
+    }
+
+
+    .focus-dark .focus-title span {
+
+      margin-top: 44px;
+
+      line-height: 1.12;
+
+    }
+
+
     .focus-steps {
 
       display: flex;
@@ -1683,6 +1706,374 @@
        TABLET
     ===================================================== */
 
+
+    /* =====================================================
+       CO-FOUNDER
+    ===================================================== */
+
+    .cofounder-card {
+
+      margin-top:
+        34px;
+
+      padding-top:
+        0;
+
+      display:
+        grid;
+
+      grid-template-columns:
+        92px minmax(0,1fr);
+
+      gap:
+        24px;
+
+      align-items:
+        center;
+
+    }
+
+
+    .cofounder-photo {
+
+      width:
+        92px;
+
+      height:
+        112px;
+
+      display:
+        block;
+
+      object-fit:
+        cover;
+
+      object-position:
+        center 32%;
+
+      border-radius:
+        18px;
+
+      background:
+        var(--ice);
+
+    }
+
+
+    .cofounder-eyebrow {
+
+      margin-bottom:
+        8px;
+
+      color:
+        var(--steel-light);
+
+      font-size:
+        10px;
+
+      font-weight:
+        600;
+
+      letter-spacing:
+        .12em;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+    .cofounder-name {
+
+      margin:
+        0 0 6px;
+
+      color:
+        var(--navy);
+
+      font-family:
+        "Manrope", sans-serif;
+
+      font-size:
+        20px;
+
+      font-weight:
+        600;
+
+      letter-spacing:
+        -.025em;
+
+    }
+
+
+    .cofounder-meta {
+
+      margin:
+        0 0 11px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        12px;
+
+      line-height:
+        1.55;
+
+    }
+
+
+    .cofounder-copy {
+
+      max-width:
+        620px;
+
+      margin:
+        0;
+
+      color:
+        #45505b;
+
+      font-size:
+        13px;
+
+      line-height:
+        1.75;
+
+    }
+
+    .cofounder-links {
+
+      margin-top:
+        14px;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      gap:
+        8px;
+
+    }
+
+
+    .cofounder-links a {
+
+      width:
+        36px;
+
+      height:
+        36px;
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      border:
+        1px solid var(--line);
+
+      border-radius:
+        50%;
+
+      color:
+        var(--steel);
+
+      text-decoration:
+        none;
+
+      transition:
+        transform .2s ease,
+        color .2s ease,
+        border-color .2s ease,
+        background .2s ease;
+
+    }
+
+
+    .cofounder-links a:hover {
+
+      transform:
+        translateY(-2px);
+
+      color:
+        var(--navy);
+
+      border-color:
+        var(--steel-light);
+
+      background:
+        var(--white);
+
+    }
+
+
+    .cofounder-links svg {
+
+      width:
+        15px;
+
+      height:
+        15px;
+
+      display:
+        block;
+
+    }
+
+
+    /* =====================================================
+       CLIENT WORK
+    ===================================================== */
+
+    .client-work {
+
+      padding-bottom:
+        105px;
+
+    }
+
+
+    .client-work-copy {
+
+      max-width:
+        720px;
+
+      margin-bottom:
+        38px;
+
+    }
+
+
+    .client-work-copy p {
+
+      margin:
+        0;
+
+      color:
+        #45505b;
+
+      font-size:
+        14px;
+
+      line-height:
+        1.85;
+
+    }
+
+
+    .client-work-figure {
+
+      margin:
+        0;
+
+    }
+
+
+    .client-work-media {
+
+      width:
+        100%;
+
+      aspect-ratio:
+        16 / 10;
+
+      overflow:
+        hidden;
+
+      border-radius:
+        18px;
+
+      background:
+        var(--ice);
+
+    }
+
+
+    .client-work-media img {
+
+      width:
+        100%;
+
+      height:
+        100%;
+
+      display:
+        block;
+
+      object-fit:
+        cover;
+
+      object-position:
+        center 46%;
+
+      transition:
+        transform .6s cubic-bezier(.2,.7,.2,1);
+
+    }
+
+
+    .client-work-media:hover img {
+
+      transform:
+        scale(1.012);
+
+    }
+
+
+    .client-work-caption {
+
+      margin-top:
+        12px;
+
+      display:
+        flex;
+
+      align-items:
+        baseline;
+
+      justify-content:
+        space-between;
+
+      gap:
+        16px;
+
+      color:
+        var(--navy);
+
+      font-size:
+        11px;
+
+      font-weight:
+        550;
+
+    }
+
+
+    .client-work-caption span:last-child {
+
+      color:
+        var(--steel-light);
+
+      font-size:
+        10px;
+
+      font-weight:
+        500;
+
+      white-space:
+        nowrap;
+
+    }
+
+
+
     @media(max-width: 900px) {
 
       .nav {
@@ -1854,6 +2245,112 @@
 
     @media(max-width: 600px) {
 
+      .cofounder-card {
+
+        grid-template-columns:
+          72px minmax(0,1fr);
+
+        gap:
+          16px;
+
+        margin-top:
+          28px;
+
+        padding-top:
+          0;
+
+        align-items:
+          start;
+
+      }
+
+
+      .cofounder-photo {
+
+        width:
+          72px;
+
+        height:
+          88px;
+
+        border-radius:
+          14px;
+
+      }
+
+
+      .cofounder-name {
+
+        font-size:
+          18px;
+
+      }
+
+
+      .cofounder-copy {
+
+        font-size:
+          12px;
+
+      }
+
+
+      .client-work {
+
+        padding-bottom:
+          78px;
+
+      }
+
+
+      .client-work-copy {
+
+        margin-bottom:
+          26px;
+
+      }
+
+
+      .client-work-copy p {
+
+        font-size:
+          13px;
+
+      }
+
+
+      .client-work-media {
+
+        aspect-ratio:
+          4 / 3;
+
+        border-radius:
+          14px;
+
+      }
+
+
+      .client-work-caption {
+
+        margin-top:
+          9px;
+
+        font-size:
+          10px;
+
+      }
+
+
+      .client-work-caption span:last-child {
+
+        font-size:
+          9px;
+
+      }
+
+
+
+
       .nav {
 
         flex-direction: column;
@@ -1895,8 +2392,6 @@
         font-size: 8px;
 
       }
-
-
 
 
       .hero-visual {
@@ -2089,6 +2584,22 @@
       }
 
 
+      .focus-dark .focus-title {
+
+        line-height: 1.12;
+
+      }
+
+
+      .focus-dark .focus-title span {
+
+        margin-top: 30px;
+
+        line-height: 1.12;
+
+      }
+
+
       .project-nav-inner {
 
         grid-template-columns:
@@ -2176,10 +2687,11 @@
         Contact
       </a>
 
+
       <a
         href="es/lowsignal.html"
         class="lang-switch"
-        aria-label="Ver sitio en español"
+        aria-label="View site in Spanish"
       >
         ES
       </a>
@@ -2363,7 +2875,7 @@
 
 
         <div class="case-label">
-          Selected Work / 02
+          Selected work / 02
         </div>
 
 
@@ -2386,8 +2898,8 @@
 
           Building a growth company around systems,
           digital products and execution — connecting
-          strategy, technology, operations and creative
-          work into repeatable growth infrastructure.
+          strategy, technology, operations and creativity
+          into repeatable growth infrastructure.
 
         </p>
 
@@ -2403,11 +2915,11 @@
           </div>
 
           <div class="tag">
-            Company Building
+            Company building
           </div>
 
           <div class="tag">
-            Digital Products
+            Digital products
           </div>
 
         </div>
@@ -2459,8 +2971,8 @@
 
               lowsignal started from a simple idea:
               growth works better when strategy,
-              technology, creative work and operations
-              are connected instead of managed as
+              technology, creativity and operations are
+              connected instead of managed as
               isolated pieces.
 
             </p>
@@ -2468,9 +2980,9 @@
 
             <p>
 
-              Rather than treating marketing as a set
+              Instead of treating marketing as a collection
               of disconnected campaigns, we build systems
-              designed to connect acquisition, content,
+              that connect acquisition, content,
               digital products, automation and execution.
 
             </p>
@@ -2489,7 +3001,7 @@
 
 
           <div class="section-label">
-            02 / My Role
+            02 / My role
           </div>
 
 
@@ -2504,9 +3016,9 @@
 
             <p>
 
-              As Co-Founder & COO, my work sits across
+              As Co-Founder & COO, my work spans
               company operations, products, team execution
-              and business development — helping turn
+              and business development — turning
               ideas and opportunities into repeatable
               operating systems.
 
@@ -2588,6 +3100,60 @@
           </div>
 
 
+          <div class="cofounder-card">
+
+            <img
+              src="damian-aldunate.jpg"
+              alt="Damián Aldunate"
+              class="cofounder-photo"
+              loading="lazy"
+            >
+
+            <div>
+
+              <div class="cofounder-eyebrow">
+                Leadership
+              </div>
+
+              <h3 class="cofounder-name">
+                Damián Aldunate
+              </h3>
+
+              <p class="cofounder-meta">
+                Co-Founder &amp; CMO, lowsignal
+              </p>
+
+              <p class="cofounder-copy">
+                Together with Damián, we build lowsignal through
+                complementary roles across brand, growth,
+                operations and business development.
+              </p>
+
+              <div class="cofounder-links">
+
+                <a
+                  href="https://www.linkedin.com/in/damianaldunate/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Damián Aldunate on LinkedIn"
+                  title="LinkedIn"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
+                  </svg>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
         </section>
 
 
@@ -2598,13 +3164,13 @@
 
 
           <div class="section-label">
-            03 / What We Build
+            03 / What we build
           </div>
 
 
           <h2>
             One system.
-            Multiple growth layers.
+            Multiple layers of growth.
           </h2>
 
 
@@ -2633,7 +3199,7 @@
               <p>
 
                 Social media and content systems
-                designed around brand consistency,
+                designed to maintain brand consistency,
                 distribution and repeatable execution.
 
               </p>
@@ -2663,8 +3229,8 @@
 
               <p>
 
-                Paid acquisition and performance
-                systems focused on measurable growth
+                Paid acquisition and performance systems
+                focused on measurable growth
                 and continuous optimization.
 
               </p>
@@ -2695,8 +3261,8 @@
               <p>
 
                 Websites and digital experiences
-                built as part of the broader growth
-                system rather than isolated assets.
+                built as part of a growth system,
+                not as isolated assets.
 
               </p>
 
@@ -2757,8 +3323,8 @@
               <p>
 
                 Digital products, apps and tools
-                designed around specific operational
-                or growth problems.
+                designed around specific
+                operations or growth problems.
 
               </p>
 
@@ -2810,12 +3376,12 @@
 
 
           <div class="section-label">
-            04 / Operating Model
+            04 / Operating model
           </div>
 
 
           <h2>
-            Strategy is only useful
+            Strategy only works
             when it becomes a system.
           </h2>
 
@@ -2827,7 +3393,7 @@
 
               The operating idea behind lowsignal is
               simple: connect strategy with the systems
-              and execution required to make it repeatable.
+              and execution needed to make it repeatable.
 
             </p>
 
@@ -2901,6 +3467,59 @@
 
 
           </div>
+
+
+        </section>
+
+
+
+        <!-- CLIENT WORK -->
+
+        <section class="section client-work">
+
+
+          <div class="section-label">
+            05 / Client work
+          </div>
+
+
+          <h2>
+            Building close
+            to the problem.
+          </h2>
+
+
+          <div class="client-work-copy">
+
+            <p>
+              Client work starts with understanding
+              how teams operate, where time gets lost and what
+              needs to connect. From there, we turn
+              strategy into systems teams can
+              use, measure and improve.
+            </p>
+
+          </div>
+
+
+          <figure class="client-work-figure">
+
+            <div class="client-work-media">
+
+              <img
+                src="lowsignal-client-work.jpg"
+                alt="lowsignal working session with clients"
+                loading="lazy"
+              >
+
+            </div>
+
+            <figcaption class="client-work-caption">
+              <span>lowsignal</span>
+              <span>Client working session</span>
+            </figcaption>
+
+          </figure>
 
 
         </section>
@@ -2984,7 +3603,7 @@
         <div class="sidebar-card">
 
           <div class="sidebar-label">
-            Based
+            Base
           </div>
 
           <div class="sidebar-value">
@@ -3048,16 +3667,16 @@
 
 
       <div class="focus-label">
-        Operating System
+        Operating system
       </div>
 
 
       <h2 class="focus-title">
 
-        Build the system.
+        System first.
 
         <span>
-          Then scale it.
+          Then, scale.
         </span>
 
       </h2>
@@ -3088,7 +3707,7 @@
 
 
       <div class="focus-label">
-        Growth Principle
+        Growth principle
       </div>
 
 
@@ -3143,7 +3762,7 @@
       >
 
         <div class="project-link-label">
-          Previous Project
+          Previous project
         </div>
 
         <strong>
@@ -3160,7 +3779,7 @@
       >
 
         <div class="project-link-label">
-          Next Project
+          Next project
         </div>
 
         <strong>
@@ -3199,7 +3818,7 @@
 
 
         <h3>
-          Let's connect.
+          Let’s talk.
         </h3>
 
 
