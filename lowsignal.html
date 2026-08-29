@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -30,7 +29,6 @@
     rel="stylesheet"
   >
 
-
   <style>
 
     /* =====================================================
@@ -38,7 +36,6 @@
     ===================================================== */
 
     :root {
-
       --navy: #182536;
       --navy-deep: #0d1724;
 
@@ -57,7 +54,6 @@
       --muted: #66717d;
 
       --line: #d4d9de;
-
     }
 
 
@@ -69,14 +65,11 @@
       box-sizing: border-box;
     }
 
-
     html {
       scroll-behavior: smooth;
     }
 
-
     body {
-
       margin: 0;
 
       background: var(--paper);
@@ -86,31 +79,21 @@
 
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
-
     }
-
 
     a {
-
       color: inherit;
       text-decoration: none;
-
     }
-
 
     img {
-
       display: block;
       max-width: 100%;
-
     }
 
-
     ::selection {
-
       background: var(--navy);
       color: white;
-
     }
 
 
@@ -119,13 +102,11 @@
     ===================================================== */
 
     .nav {
-
       min-height: 84px;
 
       padding: 0 5vw;
 
       display: flex;
-
       align-items: center;
       justify-content: space-between;
 
@@ -136,12 +117,9 @@
 
       border-bottom:
         1px solid rgba(255,255,255,.12);
-
     }
 
-
     .brand {
-
       flex-shrink: 0;
 
       font-family: "Manrope", sans-serif;
@@ -150,14 +128,10 @@
       font-weight: 600;
 
       letter-spacing: -.04em;
-
     }
 
-
     .nav-links {
-
       display: flex;
-
       align-items: center;
 
       gap: 30px;
@@ -166,26 +140,19 @@
       font-weight: 500;
 
       letter-spacing: .07em;
-
       text-transform: uppercase;
-
     }
 
-
     .nav-links > a:not(.contact-nav) {
-
       position: relative;
 
       color: var(--slate-light);
 
       transition:
         color .2s ease;
-
     }
 
-
     .nav-links > a:not(.contact-nav)::after {
-
       content: "";
 
       position: absolute;
@@ -200,28 +167,18 @@
 
       transition:
         width .22s ease;
-
     }
-
 
     .nav-links > a:not(.contact-nav):hover {
-
       color: white;
-
     }
-
 
     .nav-links > a:not(.contact-nav):hover::after {
-
       width: 100%;
-
     }
 
-
     .contact-nav {
-
-      padding:
-        9px 15px;
+      padding: 9px 15px;
 
       border:
         1px solid rgba(255,255,255,.28);
@@ -234,18 +191,14 @@
         background .2s ease,
         color .2s ease,
         border-color .2s ease;
-
     }
 
-
     .contact-nav:hover {
-
       background: white;
 
       color: var(--navy);
 
       border-color: white;
-
     }
 
 
@@ -254,7 +207,6 @@
     ===================================================== */
 
     .hero {
-
       min-height:
         calc(100vh - 84px);
 
@@ -264,16 +216,14 @@
         44% 56%;
 
       background: var(--ice);
-
     }
 
 
     /* =====================================================
-       LEFT VISUAL
+       LEFT HERO
     ===================================================== */
 
     .hero-visual {
-
       position: relative;
 
       min-height: 700px;
@@ -288,14 +238,10 @@
       color: white;
 
       display: flex;
-
       flex-direction: column;
-
     }
 
-
     .hero-visual::before {
-
       content: "";
 
       position: absolute;
@@ -303,12 +249,10 @@
       inset: 0;
 
       background-image:
-
         linear-gradient(
           rgba(255,255,255,.045) 1px,
           transparent 1px
         ),
-
         linear-gradient(
           90deg,
           rgba(255,255,255,.045) 1px,
@@ -319,42 +263,31 @@
         160px 160px;
 
       pointer-events: none;
-
     }
 
-
     .visual-top {
-
       position: relative;
 
       z-index: 2;
 
       display: flex;
-
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
 
       gap: 20px;
-
     }
 
-
     .visual-label {
-
       color: var(--slate-light);
 
       font-size: 10px;
       font-weight: 500;
 
       letter-spacing: .1em;
-
       text-transform: uppercase;
-
     }
 
-
     .visual-code {
-
       color:
         rgba(255,255,255,.38);
 
@@ -362,9 +295,7 @@
       font-weight: 500;
 
       letter-spacing: .08em;
-
       text-transform: uppercase;
-
     }
 
 
@@ -373,7 +304,6 @@
     ===================================================== */
 
     .system-map {
-
       position: relative;
 
       z-index: 2;
@@ -389,12 +319,9 @@
 
       border-bottom:
         1px solid rgba(255,255,255,.12);
-
     }
 
-
     .system-main {
-
       display: grid;
 
       grid-template-columns:
@@ -403,12 +330,9 @@
       align-items: center;
 
       gap: 8px;
-
     }
 
-
     .system-node {
-
       min-height: 92px;
 
       padding:
@@ -423,16 +347,11 @@
         rgba(255,255,255,.035);
 
       display: flex;
-
       flex-direction: column;
-
       justify-content: space-between;
-
     }
 
-
     .system-node span {
-
       color:
         rgba(255,255,255,.45);
 
@@ -440,36 +359,26 @@
       font-weight: 500;
 
       letter-spacing: .08em;
-
       text-transform: uppercase;
-
     }
 
-
     .system-node strong {
-
       color: white;
 
       font-size: 12px;
       font-weight: 500;
-
     }
 
-
     .system-arrow {
+      position: relative;
 
       height: 1px;
 
       background:
         rgba(255,255,255,.24);
-
-      position: relative;
-
     }
 
-
     .system-arrow::after {
-
       content: "";
 
       position: absolute;
@@ -488,12 +397,9 @@
 
       transform:
         rotate(45deg);
-
     }
 
-
     .system-services {
-
       display: grid;
 
       grid-template-columns:
@@ -502,12 +408,9 @@
       gap: 10px;
 
       margin-top: 18px;
-
     }
 
-
     .system-service {
-
       padding-top: 11px;
 
       border-top:
@@ -521,9 +424,7 @@
       line-height: 1.6;
 
       text-transform: uppercase;
-
       letter-spacing: .05em;
-
     }
 
 
@@ -532,18 +433,14 @@
     ===================================================== */
 
     .visual-title {
-
       position: relative;
 
       z-index: 2;
 
       margin-top: auto;
-
     }
 
-
     .visual-title span {
-
       display: block;
 
       margin-bottom: 14px;
@@ -555,14 +452,10 @@
       font-weight: 500;
 
       letter-spacing: .1em;
-
       text-transform: uppercase;
-
     }
 
-
     .visual-title strong {
-
       display: block;
 
       max-width: 540px;
@@ -577,7 +470,6 @@
       letter-spacing: -.055em;
 
       font-weight: 500;
-
     }
 
 
@@ -586,16 +478,12 @@
     ===================================================== */
 
     .hero-content {
-
       padding:
         65px 7vw 65px 5vw;
 
       display: flex;
-
       flex-direction: column;
-
       justify-content: center;
-
     }
 
 
@@ -604,14 +492,10 @@
     ===================================================== */
 
     .company-logo {
-
       margin-bottom: 32px;
-
     }
 
-
     .company-logo-box {
-
       display: inline-flex;
 
       align-items: center;
@@ -628,16 +512,25 @@
         0 10px 30px
         rgba(24,37,54,.10);
 
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
     }
 
+    .company-logo-box:hover {
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 14px 36px
+        rgba(24,37,54,.16);
+    }
 
     .company-logo-box img {
-
       width: 145px;
       height: 38px;
 
       object-fit: contain;
-
     }
 
 
@@ -646,7 +539,6 @@
     ===================================================== */
 
     .hero-breadcrumb {
-
       margin-bottom: 15px;
 
       color: var(--muted);
@@ -655,14 +547,10 @@
       font-weight: 500;
 
       letter-spacing: .1em;
-
       text-transform: uppercase;
-
     }
 
-
     .kicker {
-
       margin-bottom: 24px;
 
       color: var(--steel-light);
@@ -671,14 +559,10 @@
       font-weight: 600;
 
       letter-spacing: .11em;
-
       text-transform: uppercase;
-
     }
 
-
     .hero-content h1 {
-
       margin: 0;
 
       font-family: "Manrope", sans-serif;
@@ -693,12 +577,9 @@
       font-weight: 500;
 
       color: var(--navy);
-
     }
 
-
     .hero-role {
-
       margin-top: 25px;
 
       color: #576473;
@@ -706,12 +587,9 @@
       font-size: 16px;
 
       line-height: 1.55;
-
     }
 
-
     .hero-description {
-
       margin-top: 40px;
 
       max-width: 690px;
@@ -721,12 +599,9 @@
       font-size: 15px;
 
       line-height: 1.85;
-
     }
 
-
     .hero-tags {
-
       display: flex;
 
       flex-wrap: wrap;
@@ -734,12 +609,9 @@
       gap: 9px;
 
       margin-top: 36px;
-
     }
 
-
     .tag {
-
       padding:
         9px 13px;
 
@@ -757,9 +629,7 @@
       font-weight: 500;
 
       letter-spacing: .05em;
-
       text-transform: uppercase;
-
     }
 
 
@@ -768,17 +638,13 @@
     ===================================================== */
 
     .case {
-
       padding:
         125px 7vw 145px;
 
       background: var(--paper);
-
     }
 
-
     .case-grid {
-
       display: grid;
 
       grid-template-columns:
@@ -789,26 +655,17 @@
       max-width: 1400px;
 
       margin: 0 auto;
-
     }
-
 
     .case-main {
-
       max-width: 850px;
-
     }
-
 
     .case-section {
-
       margin-bottom: 95px;
-
     }
 
-
     .section-label {
-
       margin-bottom: 20px;
 
       color: var(--muted);
@@ -817,14 +674,10 @@
       font-weight: 600;
 
       letter-spacing: .1em;
-
       text-transform: uppercase;
-
     }
 
-
     .case-section h2 {
-
       margin:
         0 0 30px;
 
@@ -838,12 +691,9 @@
       letter-spacing: -.045em;
 
       font-weight: 500;
-
     }
 
-
     .case-section p {
-
       margin:
         0 0 22px;
 
@@ -852,7 +702,6 @@
       font-size: 15px;
 
       line-height: 1.85;
-
     }
 
 
@@ -861,7 +710,6 @@
     ===================================================== */
 
     .solutions {
-
       margin-top: 38px;
 
       display: grid;
@@ -871,12 +719,9 @@
 
       border-top:
         1px solid var(--line);
-
     }
 
-
     .solution {
-
       padding:
         24px 20px 24px 0;
 
@@ -884,56 +729,40 @@
 
       border-bottom:
         1px solid var(--line);
-
     }
 
-
     .solution:nth-child(odd) {
-
       border-right:
         1px solid var(--line);
 
       padding-right: 30px;
-
     }
-
 
     .solution:nth-child(even) {
-
       padding-left: 30px;
-
     }
 
-
     .solution-code {
-
       margin-bottom: 18px;
 
       color: var(--muted);
 
       font-size: 9px;
 
-      text-transform: uppercase;
-
       letter-spacing: .08em;
-
+      text-transform: uppercase;
     }
 
-
     .solution-name {
-
       font-family: "Manrope", sans-serif;
 
       font-size: 22px;
       font-weight: 500;
 
       letter-spacing: -.03em;
-
     }
 
-
     .solution-description {
-
       margin-top: 8px;
 
       color: var(--muted);
@@ -941,16 +770,14 @@
       font-size: 12px;
 
       line-height: 1.55;
-
     }
 
 
     /* =====================================================
-       OPERATING LIST
+       LIST
     ===================================================== */
 
     .clean-list {
-
       margin:
         28px 0 0;
 
@@ -960,12 +787,9 @@
 
       border-top:
         1px solid var(--line);
-
     }
 
-
     .clean-list li {
-
       padding:
         18px 0;
 
@@ -984,16 +808,12 @@
       font-size: 14px;
 
       line-height: 1.7;
-
     }
 
-
     .clean-list li::before {
-
       content: "•";
 
       color: var(--steel-light);
-
     }
 
 
@@ -1002,18 +822,14 @@
     ===================================================== */
 
     .sidebar {
-
       position: sticky;
 
       top: 110px;
 
       align-self: start;
-
     }
 
-
     .sidebar-box {
-
       padding:
         28px 26px;
 
@@ -1023,34 +839,25 @@
         1px solid var(--line);
 
       border-radius: 22px;
-
     }
 
-
     .sidebar-row {
-
       padding-bottom: 20px;
 
       margin-bottom: 20px;
 
       border-bottom:
         1px solid rgba(24,37,54,.10);
-
     }
 
-
     .sidebar-row:last-child {
-
       margin-bottom: 0;
       padding-bottom: 0;
 
       border-bottom: 0;
-
     }
 
-
     .sidebar-row span {
-
       display: block;
 
       margin-bottom: 7px;
@@ -1061,14 +868,10 @@
       font-weight: 600;
 
       letter-spacing: .08em;
-
       text-transform: uppercase;
-
     }
 
-
     .sidebar-row strong {
-
       color: var(--navy);
 
       font-size: 13px;
@@ -1076,7 +879,25 @@
       line-height: 1.55;
 
       font-weight: 500;
+    }
 
+    .company-website {
+      display: inline-block;
+
+      padding-bottom: 2px;
+
+      border-bottom:
+        1px solid rgba(24,37,54,.25);
+
+      transition:
+        opacity .2s ease,
+        border-color .2s ease;
+    }
+
+    .company-website:hover {
+      opacity: .55;
+
+      border-color: transparent;
     }
 
 
@@ -1085,19 +906,15 @@
     ===================================================== */
 
     .focus {
-
       padding:
         125px 7vw;
 
       background: var(--navy);
 
       color: white;
-
     }
 
-
     .focus-grid {
-
       display: grid;
 
       grid-template-columns:
@@ -1108,19 +925,13 @@
       max-width: 1400px;
 
       margin: 0 auto;
-
     }
-
 
     .focus .section-label {
-
       color: var(--slate);
-
     }
 
-
     .focus-title {
-
       margin: 0;
 
       font-family: "Manrope", sans-serif;
@@ -1128,26 +939,22 @@
       font-size:
         clamp(50px, 7vw, 105px);
 
-      line-height: .92;
+      line-height: 1.02;
 
       letter-spacing: -.065em;
 
       font-weight: 500;
-
     }
-
 
     .focus-title span {
-
       display: block;
 
-      color: var(--slate);
+      margin-top: 10px;
 
+      color: var(--slate);
     }
 
-
     .focus-items {
-
       margin-top: 75px;
 
       display: grid;
@@ -1156,34 +963,25 @@
         repeat(3, 1fr);
 
       gap: 28px;
-
     }
 
-
     .focus-item {
-
       padding-top: 22px;
 
       border-top:
         1px solid rgba(255,255,255,.20);
-
     }
 
-
     .focus-item strong {
-
       display: block;
 
       margin-bottom: 12px;
 
       font-size: 15px;
       font-weight: 500;
-
     }
 
-
     .focus-item p {
-
       margin: 0;
 
       color: #bbc5d0;
@@ -1191,7 +989,6 @@
       font-size: 13px;
 
       line-height: 1.7;
-
     }
 
 
@@ -1200,17 +997,13 @@
     ===================================================== */
 
     .project-nav {
-
       padding:
         110px 7vw 45px;
 
       background: var(--ice);
-
     }
 
-
     .project-nav-grid {
-
       display: grid;
 
       grid-template-columns:
@@ -1223,52 +1016,36 @@
 
       border-bottom:
         1px solid var(--line);
-
     }
-
 
     .project-link {
-
       padding:
         42px 0 46px;
-
     }
 
-
     .project-link:first-child {
-
       padding-right: 50px;
 
       border-right:
         1px solid var(--line);
-
     }
 
-
     .project-link:last-child {
-
       padding-left: 10px;
 
       text-align: right;
-
     }
 
-
     .project-small {
-
       color: var(--muted);
 
       font-size: 9px;
 
-      text-transform: uppercase;
-
       letter-spacing: .08em;
-
+      text-transform: uppercase;
     }
 
-
     .project-name {
-
       margin-top: 16px;
 
       font-family: "Manrope", sans-serif;
@@ -1281,7 +1058,6 @@
       letter-spacing: -.055em;
 
       font-weight: 500;
-
     }
 
 
@@ -1290,7 +1066,6 @@
     ===================================================== */
 
     .footer {
-
       padding-top: 32px;
 
       display: grid;
@@ -1306,32 +1081,22 @@
       font-weight: 500;
 
       letter-spacing: .07em;
-
       text-transform: uppercase;
-
     }
-
 
     .footer-location {
-
       text-align: right;
-
     }
 
-
     .footer-socials {
-
       display: flex;
 
       align-items: center;
 
       gap: 10px;
-
     }
 
-
     .social-icon {
-
       width: 36px;
       height: 36px;
 
@@ -1350,13 +1115,11 @@
       transition:
         background .2s ease,
         color .2s ease,
-        transform .2s ease;
-
+        transform .2s ease,
+        border-color .2s ease;
     }
 
-
     .social-icon svg {
-
       width: 15px;
       height: 15px;
 
@@ -1368,19 +1131,15 @@
 
       stroke-linecap: round;
       stroke-linejoin: round;
-
     }
-
 
     .social-icon svg .filled {
-
       fill: currentColor;
       stroke: none;
-
     }
 
-
     .linkedin-mark {
+      font-family: "Inter", sans-serif;
 
       font-size: 14px;
       font-weight: 600;
@@ -1390,19 +1149,17 @@
       letter-spacing: -.06em;
 
       text-transform: lowercase;
-
     }
 
-
     .social-icon:hover {
-
       background: var(--navy);
 
       color: white;
 
+      border-color: var(--navy);
+
       transform:
         translateY(-2px);
-
     }
 
 
@@ -1412,134 +1169,97 @@
 
     @media(max-width: 900px) {
 
-
       .nav {
-
         min-height: 78px;
 
         padding:
           16px 20px;
 
         gap: 16px;
-
       }
 
-
       .brand {
-
         font-size: 15px;
 
         white-space: nowrap;
-
       }
 
-
       .nav-links {
-
         gap: 14px;
 
         font-size: 9px;
 
         letter-spacing: .04em;
 
+        white-space: nowrap;
       }
-
 
       .contact-nav {
-
         padding:
           8px 11px;
-
       }
-
 
       .hero {
-
         grid-template-columns:
           1fr;
-
       }
 
-
       .hero-visual {
-
         min-height: 570px;
 
         padding:
           48px 22px;
-
       }
-
 
       .hero-content {
-
         padding:
           65px 22px;
-
       }
 
+      .company-logo-box img {
+        width: 130px;
+      }
 
       .case,
       .focus,
       .project-nav {
-
         padding-left: 22px;
         padding-right: 22px;
-
       }
-
 
       .case-grid {
-
         grid-template-columns:
           1fr;
-
       }
-
 
       .sidebar {
-
         position: static;
-
       }
 
-
       .focus-grid {
-
         grid-template-columns:
           1fr;
 
         gap: 35px;
-
       }
-
 
       .focus-items {
-
         grid-template-columns:
           1fr;
-
       }
 
-
       .footer {
-
         grid-template-columns:
           1fr;
 
         gap: 22px;
 
         align-items: flex-start;
-
       }
-
 
       .footer-location {
-
         text-align: left;
-
       }
-
     }
 
 
@@ -1549,9 +1269,7 @@
 
     @media(max-width: 600px) {
 
-
       .nav {
-
         flex-direction: column;
 
         align-items: flex-start;
@@ -1560,137 +1278,105 @@
 
         padding:
           18px 20px;
-
       }
 
-
       .nav-links {
-
         width: 100%;
 
         justify-content: space-between;
 
         gap: 8px;
-
       }
-
 
       .contact-nav {
-
         padding:
           7px 10px;
-
       }
-
 
       .visual-code {
-
         display: none;
-
       }
 
+      .hero-visual {
+        min-height: 550px;
+      }
 
       .system-main {
-
         grid-template-columns:
           1fr 18px 1fr 18px 1fr;
-
       }
 
-
       .system-node {
-
         min-height: 82px;
 
         padding:
           12px 9px;
-
       }
-
 
       .system-node strong {
-
         font-size: 10px;
-
       }
-
 
       .system-services {
-
         grid-template-columns:
           1fr;
 
+        gap: 6px;
       }
-
 
       .visual-title strong {
-
         font-size:
           clamp(46px, 14vw, 68px);
-
       }
-
 
       .hero-content h1 {
-
         font-size:
           clamp(54px, 16vw, 80px);
-
       }
-
 
       .solutions {
-
         grid-template-columns:
           1fr;
-
       }
 
-
       .solution:nth-child(odd) {
-
         border-right: 0;
 
         padding-right: 0;
-
       }
-
 
       .solution:nth-child(even) {
-
         padding-left: 0;
-
       }
 
+      .focus-title {
+        line-height: 1.04;
+      }
+
+      .focus-title span {
+        margin-top: 12px;
+      }
 
       .project-nav-grid {
-
         grid-template-columns:
           1fr;
 
         gap: 0;
-
       }
 
-
       .project-link:first-child {
-
         border-right: 0;
 
         border-bottom:
           1px solid var(--line);
 
         padding-right: 0;
-
       }
 
-
       .project-link:last-child {
-
         padding-left: 0;
 
         text-align: left;
-
       }
 
     }
@@ -1710,7 +1396,6 @@
 
   <header class="nav">
 
-
     <a
       href="index.html"
       class="brand"
@@ -1721,21 +1406,17 @@
 
     <nav class="nav-links">
 
-
       <a href="index.html#work">
         Work
       </a>
-
 
       <a href="index.html#about">
         About
       </a>
 
-
       <a href="index.html#now">
         Now
       </a>
-
 
       <a
         href="index.html#contact"
@@ -1744,9 +1425,7 @@
         Contact
       </a>
 
-
     </nav>
-
 
   </header>
 
@@ -1766,16 +1445,13 @@
 
       <div class="visual-top">
 
-
         <div class="visual-label">
           Growth Systems
         </div>
 
-
         <div class="visual-code">
           Company / 02
         </div>
-
 
       </div>
 
@@ -1842,29 +1518,23 @@
 
 
           <div class="system-service">
-
             Positioning<br>
             GTM<br>
             Brand
-
           </div>
 
 
           <div class="system-service">
-
             Web<br>
             AI<br>
             Automation
-
           </div>
 
 
           <div class="system-service">
-
             Ads<br>
             Content<br>
             Product
-
           </div>
 
 
@@ -1877,22 +1547,15 @@
 
       <div class="visual-title">
 
-
         <span>
           Less noise. More growth.
         </span>
 
-
         <strong>
-
           Building the<br>
-
           system behind<br>
-
           growth.
-
         </strong>
-
 
       </div>
 
@@ -1908,53 +1571,43 @@
 
       <div class="company-logo">
 
-
-        <div class="company-logo-box">
-
+        <a
+          class="company-logo-box"
+          href="https://www.lowsignal.cl/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit lowsignal website"
+        >
 
           <img
             src="lowsignal-logo.png"
             alt="lowsignal logo"
           >
 
-
-        </div>
-
+        </a>
 
       </div>
 
 
 
       <div class="hero-breadcrumb">
-
         Selected Work / 02
-
       </div>
-
 
 
       <div class="kicker">
-
         Co-Founder · 2025 — Present
-
       </div>
-
 
 
       <h1>
-
         lowsignal
-
       </h1>
 
 
-
       <div class="hero-role">
-
         Co-Founder & COO · Growth Systems
-
       </div>
-
 
 
       <p class="hero-description">
@@ -1967,29 +1620,23 @@
       </p>
 
 
-
       <div class="hero-tags">
-
 
         <span class="tag">
           Growth
         </span>
 
-
         <span class="tag">
           Operations
         </span>
-
 
         <span class="tag">
           Company Building
         </span>
 
-
         <span class="tag">
           Digital Products
         </span>
-
 
       </div>
 
@@ -2020,17 +1667,13 @@
 
 
           <div class="section-label">
-
             01 / Company
-
           </div>
 
 
           <h2>
-
             Building a company,
             not just campaigns.
-
           </h2>
 
 
@@ -2065,17 +1708,13 @@
 
 
           <div class="section-label">
-
             02 / My role
-
           </div>
 
 
           <h2>
-
             Operating the system
             behind the company.
-
           </h2>
 
 
@@ -2091,41 +1730,25 @@
 
           <ul class="clean-list">
 
-
             <li>
-
               Company operations and internal systems.
-
             </li>
 
-
             <li>
-
               Product and service development.
-
             </li>
 
-
             <li>
-
               Team structure and execution.
-
             </li>
 
-
             <li>
-
               Growth infrastructure and automation.
-
             </li>
-
 
             <li>
-
               New products, partnerships and business opportunities.
-
             </li>
-
 
           </ul>
 
@@ -2140,17 +1763,13 @@
 
 
           <div class="section-label">
-
             03 / What we build
-
           </div>
 
 
           <h2>
-
             One system.
             Multiple growth layers.
-
           </h2>
 
 
@@ -2174,7 +1793,6 @@
             </div>
 
 
-
             <div class="solution">
 
               <div class="solution-code">
@@ -2190,7 +1808,6 @@
               </div>
 
             </div>
-
 
 
             <div class="solution">
@@ -2210,7 +1827,6 @@
             </div>
 
 
-
             <div class="solution">
 
               <div class="solution-code">
@@ -2228,7 +1844,6 @@
             </div>
 
 
-
             <div class="solution">
 
               <div class="solution-code">
@@ -2244,7 +1859,6 @@
               </div>
 
             </div>
-
 
 
             <div class="solution">
@@ -2271,23 +1885,19 @@
 
 
 
-        <!-- MODEL -->
+        <!-- OPERATING MODEL -->
 
         <section class="case-section">
 
 
           <div class="section-label">
-
             04 / Operating model
-
           </div>
 
 
           <h2>
-
             Strategy is only useful
             when it becomes a system.
-
           </h2>
 
 
@@ -2316,7 +1926,9 @@
 
 
 
-      <!-- SIDEBAR -->
+      <!-- =================================================
+           SIDEBAR
+      ================================================== -->
 
       <aside class="sidebar">
 
@@ -2332,6 +1944,29 @@
 
             <strong>
               lowsignal
+            </strong>
+
+          </div>
+
+
+
+          <div class="sidebar-row">
+
+            <span>
+              Website
+            </span>
+
+            <strong>
+
+              <a
+                href="https://www.lowsignal.cl/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="company-website"
+              >
+                lowsignal.cl
+              </a>
+
             </strong>
 
           </div>
@@ -2403,11 +2038,8 @@
             <strong>
 
               Operations<br>
-
               Growth systems<br>
-
               Digital products<br>
-
               Company building
 
             </strong>
@@ -2439,9 +2071,7 @@
 
 
       <div class="section-label">
-
         05 / Focus
-
       </div>
 
 
@@ -2465,11 +2095,9 @@
 
           <div class="focus-item">
 
-
             <strong>
               Build
             </strong>
-
 
             <p>
 
@@ -2478,18 +2106,14 @@
 
             </p>
 
-
           </div>
-
 
 
           <div class="focus-item">
 
-
             <strong>
               Operate
             </strong>
-
 
             <p>
 
@@ -2498,18 +2122,14 @@
 
             </p>
 
-
           </div>
-
 
 
           <div class="focus-item">
 
-
             <strong>
               Scale
             </strong>
-
 
             <p>
 
@@ -2517,7 +2137,6 @@
               actions and more dependent on systems.
 
             </p>
-
 
           </div>
 
@@ -2550,20 +2169,13 @@
         class="project-link"
       >
 
-
         <div class="project-small">
-
           Previous / Selected Work
-
         </div>
-
 
         <div class="project-name">
-
           GeoVictoria
-
         </div>
-
 
       </a>
 
@@ -2574,20 +2186,13 @@
         class="project-link"
       >
 
-
         <div class="project-small">
-
           Next / Selected Work
-
         </div>
-
 
         <div class="project-name">
-
           TetherEd
-
         </div>
-
 
       </a>
 
@@ -2596,15 +2201,15 @@
 
 
 
-    <!-- FOOTER -->
+    <!-- ===================================================
+         FOOTER
+    ==================================================== -->
 
     <footer class="footer">
 
 
       <div>
-
         © 2026 Felipe Quiroz
-
       </div>
 
 
@@ -2640,7 +2245,6 @@
           class="social-icon"
         >
 
-
           <svg
             viewBox="0 0 24 24"
             aria-hidden="true"
@@ -2669,7 +2273,6 @@
 
           </svg>
 
-
         </a>
 
 
@@ -2681,7 +2284,6 @@
           aria-label="Email"
           class="social-icon"
         >
-
 
           <svg
             viewBox="0 0 24 24"
@@ -2702,7 +2304,6 @@
 
           </svg>
 
-
         </a>
 
 
@@ -2711,9 +2312,7 @@
 
 
       <div class="footer-location">
-
         Santiago / CL
-
       </div>
 
 
