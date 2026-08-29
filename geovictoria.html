@@ -10,7 +10,7 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>GeoVictoria | Felipe Quiroz</title>
+  <title>GeoVictoria — Felipe Quiroz</title>
 
   <meta
     name="description"
@@ -323,7 +323,6 @@
     .visual-bottom {
 
       position: relative;
-
       z-index: 1;
 
     }
@@ -331,8 +330,10 @@
 
     .visual-top {
 
-      display: flex;
+      width: 100%;
 
+      display: flex;
+      align-items: center;
       justify-content: space-between;
 
       gap: 20px;
@@ -345,6 +346,13 @@
       letter-spacing: .08em;
 
       text-transform: uppercase;
+
+    }
+
+
+    .visual-top span {
+
+      white-space: nowrap;
 
     }
 
@@ -523,14 +531,25 @@
     }
 
 
+    /* =====================================================
+       COMPANY LOGO FIX
+    ===================================================== */
+
     .company-logo {
 
-      width: fit-content;
+      width: 220px;
+      height: 74px;
 
       margin-bottom: 42px;
 
       padding:
         18px 22px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      overflow: hidden;
 
       border-radius: 16px;
 
@@ -541,8 +560,10 @@
 
     .company-logo img {
 
-      width: 165px;
-      max-height: 46px;
+      display: block;
+
+      width: 100%;
+      height: 100%;
 
       object-fit: contain;
 
@@ -633,7 +654,6 @@
     .tags {
 
       display: flex;
-
       flex-wrap: wrap;
 
       gap: 8px;
@@ -697,9 +717,7 @@
 
 
     .main-column {
-
       min-width: 0;
-
     }
 
 
@@ -712,9 +730,7 @@
 
 
     .section:last-child {
-
       padding-bottom: 0;
-
     }
 
 
@@ -990,9 +1006,7 @@
 
 
     .sidebar-value a:hover {
-
       opacity: .55;
-
     }
 
 
@@ -1057,20 +1071,24 @@
     }
 
 
+    /* =====================================================
+       FOCUS TITLE FIX
+    ===================================================== */
+
     .focus-title {
 
       margin: 0;
 
-      max-width: 600px;
+      max-width: 680px;
 
       font-family: "Manrope", sans-serif;
 
       font-size:
-        clamp(48px, 6vw, 92px);
+        clamp(44px, 4.7vw, 78px);
 
-      line-height: 1.04;
+      line-height: 1.06;
 
-      letter-spacing: -.065em;
+      letter-spacing: -.06em;
 
       font-weight: 500;
 
@@ -1081,7 +1099,7 @@
 
       display: block;
 
-      margin-top: 24px;
+      margin-top: 22px;
 
       color: var(--slate);
 
@@ -1099,7 +1117,6 @@
     .focus-steps {
 
       display: flex;
-
       flex-wrap: wrap;
 
       gap: 10px;
@@ -1249,6 +1266,7 @@
       padding-bottom: 70px;
 
       display: flex;
+
       justify-content: space-between;
       align-items: flex-end;
 
@@ -1365,9 +1383,7 @@
 
 
     .footer-location {
-
       text-align: right;
-
     }
 
 
@@ -1541,6 +1557,14 @@
       }
 
 
+      .company-logo {
+
+        width: 210px;
+        height: 70px;
+
+      }
+
+
       .content {
 
         padding:
@@ -1669,6 +1693,15 @@
       }
 
 
+      .visual-top {
+
+        font-size: 8px;
+
+        gap: 12px;
+
+      }
+
+
       .schedule {
 
         margin:
@@ -1729,6 +1762,9 @@
 
 
       .company-logo {
+
+        width: 200px;
+        height: 68px;
 
         margin-bottom: 34px;
 
@@ -1791,10 +1827,12 @@
 
       .focus-title {
 
-        font-size:
-          clamp(48px, 14vw, 70px);
+        max-width: 100%;
 
-        line-height: 1.06;
+        font-size:
+          clamp(44px, 13vw, 64px);
+
+        line-height: 1.08;
 
       }
 
@@ -1908,7 +1946,9 @@
   <section class="hero">
 
 
-    <!-- LEFT / VISUAL -->
+    <!-- ===================================================
+         LEFT
+    ==================================================== -->
 
     <div class="hero-visual">
 
@@ -2042,7 +2082,9 @@
 
 
 
-    <!-- RIGHT / CONTENT -->
+    <!-- ===================================================
+         RIGHT
+    ==================================================== -->
 
     <div class="hero-content">
 
@@ -2192,7 +2234,7 @@
 
 
 
-        <!-- SELECTED INITIATIVES -->
+        <!-- INITIATIVES -->
 
         <section class="section">
 
@@ -2869,8 +2911,6 @@
       <div class="footer-socials">
 
 
-        <!-- LINKEDIN -->
-
         <a
           href="https://www.linkedin.com/in/felipequirozp"
           target="_blank"
@@ -2886,8 +2926,6 @@
         </a>
 
 
-
-        <!-- INSTAGRAM -->
 
         <a
           href="https://www.instagram.com/felipe_quirozp/"
@@ -2928,8 +2966,6 @@
         </a>
 
 
-
-        <!-- EMAIL -->
 
         <a
           href="mailto:felipe@lowsignal.cl"
