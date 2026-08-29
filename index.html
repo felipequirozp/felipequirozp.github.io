@@ -1,298 +1,627 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Felipe Quiroz</title>
+<title>Felipe Quiroz</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<meta
+  name="description"
+  content="Felipe Quiroz — Product, Growth & Company Building."
+>
 
-    html {
-      scroll-behavior: smooth;
-    }
+<style>
 
-    body {
-      margin: 0;
-      background: #f3f2ed;
-      color: #111;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+:root {
+  --navy: #172235;
+  --navy-dark: #0b1424;
+  --blue-grey: #9baabd;
+  --white: #f7f8fa;
+  --black: #101318;
+  --line: rgba(255,255,255,.18);
+}
 
-    .page {
-      width: 100%;
-      max-width: 1500px;
-      margin: auto;
-      padding: 32px 50px;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 14px;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    nav strong {
-      font-weight: 600;
-    }
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: var(--white);
+  color: var(--black);
+}
 
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-    .tag {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 35px;
-    }
 
-    h1 {
-      font-size: clamp(60px, 9vw, 140px);
-      line-height: .9;
-      letter-spacing: -0.065em;
-      font-weight: 500;
-      margin: 0;
-      max-width: 1250px;
-    }
+/* NAV */
 
-    .hero-bottom {
-      margin-top: 70px;
-      margin-left: auto;
-      width: 50%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      line-height: 1.5;
-      font-size: 15px;
-    }
+nav {
+  height: 88px;
+  padding: 0 6vw;
 
-    .section {
-      padding: 130px 0;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    .section-label {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: .12em;
-      margin-bottom: 40px;
-    }
+  background: white;
+}
 
-    .project {
-      display: grid;
-      grid-template-columns: 70px 1fr 30px;
-      align-items: center;
-      border-top: 1px solid #aaa;
-      padding: 30px 0;
-      transition: .25s;
-    }
+.logo {
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
 
-    .project:last-child {
-      border-bottom: 1px solid #aaa;
-    }
+.nav-links {
+  display: flex;
+  gap: 38px;
+  font-size: 14px;
+}
 
-    .project:hover {
-      padding-left: 15px;
-    }
+.nav-links a {
+  transition: opacity .2s ease;
+}
 
-    .project-number {
-      font-size: 13px;
-      color: #777;
-    }
+.nav-links a:hover {
+  opacity: .45;
+}
 
-    .project h2 {
-      font-size: 36px;
-      margin: 0 0 7px;
-      font-weight: 500;
-      letter-spacing: -0.03em;
-    }
 
-    .project p {
-      margin: 0;
-      color: #666;
-      font-size: 14px;
-    }
+/* HERO */
 
-    .big-text {
-      font-size: clamp(50px, 7vw, 100px);
-      line-height: .98;
-      letter-spacing: -0.055em;
-      font-weight: 500;
-      max-width: 1100px;
-      margin: 0;
-    }
+.hero {
+  background: var(--navy);
+  min-height: calc(100vh - 88px);
 
-    footer {
-      border-top: 1px solid #aaa;
-      padding: 30px 0;
-      display: flex;
-      justify-content: space-between;
-      font-size: 14px;
-    }
+  padding: 8vh 11vw 8vh;
 
-    .links {
-      display: flex;
-      gap: 25px;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 
-    .links a:hover {
-      opacity: .5;
-    }
+.hero-small {
+  color: var(--blue-grey);
+  font-size: clamp(28px, 4vw, 60px);
+  letter-spacing: -0.05em;
+  margin-bottom: 10px;
+}
 
-    @media (max-width: 700px) {
+.hero h1 {
+  margin: 0;
 
-      .page {
-        padding: 25px;
-      }
+  color: white;
 
-      .hero {
-        min-height: 85vh;
-      }
+  font-size: clamp(70px, 9.4vw, 160px);
+  line-height: .88;
+  letter-spacing: -0.07em;
+  font-weight: 400;
 
-      .hero-bottom {
-        width: 100%;
-        grid-template-columns: 1fr;
-        margin-top: 50px;
-        gap: 10px;
-      }
+  max-width: 1400px;
+}
 
-      .project {
-        grid-template-columns: 40px 1fr 20px;
-      }
+.hero-bottom {
+  margin-top: 60px;
 
-      .project h2 {
-        font-size: 26px;
-      }
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 
-      footer {
-        flex-direction: column;
-        gap: 20px;
-      }
-    }
-  </style>
+  color: white;
+}
+
+.hero-description {
+  max-width: 520px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #dce1e9;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px 26px;
+
+  border: 1px solid rgba(255,255,255,.8);
+  border-radius: 100px;
+
+  font-size: 14px;
+
+  transition: all .25s ease;
+}
+
+.button:hover {
+  background: white;
+  color: var(--navy);
+}
+
+
+/* INTRO */
+
+.intro {
+  background: var(--navy-dark);
+  color: white;
+
+  padding: 90px 11vw;
+}
+
+.intro h2 {
+  max-width: 1200px;
+
+  margin: 0 0 25px;
+
+  font-size: clamp(32px, 4vw, 58px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.intro p {
+  max-width: 900px;
+
+  margin: 0;
+
+  color: #cad1dd;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* WORK */
+
+.work {
+  padding: 100px 11vw 130px;
+  background: #f5f7fa;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-bottom: 60px;
+}
+
+.section-label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: #687386;
+}
+
+.section-header h2 {
+  margin: 0;
+
+  font-weight: 400;
+
+  font-size: clamp(48px, 7vw, 105px);
+  letter-spacing: -0.065em;
+  line-height: .92;
+}
+
+
+/* CARDS */
+
+.projects {
+  border-top: 1px solid #c7cdd6;
+}
+
+.project {
+  min-height: 180px;
+
+  display: grid;
+  grid-template-columns: 70px 1fr 1fr 40px;
+  align-items: center;
+
+  border-bottom: 1px solid #c7cdd6;
+
+  transition: all .3s ease;
+}
+
+.project:hover {
+  background: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.number {
+  font-size: 13px;
+  color: #8c96a4;
+}
+
+.project h3 {
+  margin: 0;
+
+  font-size: clamp(32px, 4vw, 60px);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+}
+
+.project-info {
+  color: #596474;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.arrow {
+  font-size: 28px;
+  text-align: right;
+}
+
+
+/* CURRENTLY */
+
+.currently {
+  background: var(--navy);
+  color: white;
+
+  padding: 120px 11vw;
+}
+
+.currently-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+}
+
+.currently h2 {
+  margin: 0;
+
+  font-size: clamp(50px, 7vw, 110px);
+  line-height: .95;
+  font-weight: 400;
+  letter-spacing: -0.06em;
+}
+
+.currently-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  color: #c7cfda;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* FOOTER */
+
+footer {
+  background: var(--navy-dark);
+  color: white;
+
+  padding: 70px 6vw 35px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 80px;
+
+  padding-bottom: 80px;
+}
+
+.footer-title {
+  font-size: clamp(45px, 7vw, 100px);
+  line-height: .95;
+  letter-spacing: -0.06em;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+
+  font-size: 17px;
+}
+
+.footer-links a:hover {
+  opacity: .5;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--line);
+  padding-top: 25px;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: #8e99aa;
+
+  font-size: 12px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  nav {
+    padding: 0 24px;
+  }
+
+  .nav-links a:not(:last-child) {
+    display: none;
+  }
+
+  .hero {
+    padding: 70px 24px 50px;
+  }
+
+  .hero-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .intro,
+  .work,
+  .currently {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .project {
+    grid-template-columns: 40px 1fr 25px;
+    gap: 10px;
+    min-height: 140px;
+  }
+
+  .project-info {
+    display: none;
+  }
+
+  .currently-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-<div class="page">
 
-  <nav>
-    <strong>Felipe Quiroz</strong>
-    <span>Santiago, Chile</span>
-  </nav>
+<nav>
+
+  <a class="logo" href="#">
+    Felipe Quiroz
+  </a>
+
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#currently">Currently</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+</nav>
 
 
-  <section class="hero">
 
-    <div class="tag">
-      Product · Growth · Business
+<section class="hero">
+
+  <div class="hero-small">
+    Product · Growth · Business
+  </div>
+
+  <h1>
+    Building products,<br>
+    systems & companies.
+  </h1>
+
+  <div class="hero-bottom">
+
+    <div class="hero-description">
+      Working at the intersection of product,
+      growth, technology and business.
     </div>
 
-    <h1>
-      Building products,<br>
-      growth systems<br>
-      & companies.
-    </h1>
+    <a href="#work" class="button">
+      Explore work ↓
+    </a>
 
-    <div class="hero-bottom">
+  </div>
 
-      <p>
-        Product Owner @ GeoVictoria<br>
-        Co-Founder & COO @ LowSignal
-      </p>
-
-      <p>
-        Working at the intersection of product,
-        growth, business and technology.
-      </p>
-
-    </div>
-
-  </section>
+</section>
 
 
-  <section class="section">
+
+<section class="intro" id="about">
+
+  <h2>
+    From ideas to products.<br>
+    From products to growth.
+  </h2>
+
+  <p>
+    I work across product, business and growth — building,
+    launching and scaling digital products and companies.
+  </p>
+
+</section>
+
+
+
+<section class="work" id="work">
+
+  <div class="section-header">
 
     <div class="section-label">
-      Selected Work
+      Selected work / 2026
     </div>
 
-    <a class="project" href="#">
-      <span class="project-number">01</span>
+    <h2>
+      Work
+    </h2>
 
-      <div>
-        <h2>GeoVictoria</h2>
-        <p>Product · Workforce Management</p>
+  </div>
+
+
+  <div class="projects">
+
+
+    <a href="#" class="project">
+
+      <div class="number">01</div>
+
+      <h3>GeoVictoria</h3>
+
+      <div class="project-info">
+        Product<br>
+        Workforce Management
       </div>
 
-      <span>↗</span>
+      <div class="arrow">↗</div>
+
     </a>
 
 
-    <a class="project" href="#">
-      <span class="project-number">02</span>
+    <a href="#" class="project">
 
-      <div>
-        <h2>LowSignal</h2>
-        <p>Growth Systems · Company Building</p>
+      <div class="number">02</div>
+
+      <h3>LowSignal</h3>
+
+      <div class="project-info">
+        Growth Systems<br>
+        Company Building
       </div>
 
-      <span>↗</span>
+      <div class="arrow">↗</div>
+
     </a>
 
 
-    <a class="project" href="#">
-      <span class="project-number">03</span>
+    <a href="#" class="project">
 
-      <div>
-        <h2>Tether</h2>
-        <p>EdTech · Partnerships</p>
+      <div class="number">03</div>
+
+      <h3>Tether</h3>
+
+      <div class="project-info">
+        Education Technology<br>
+        Partnerships
       </div>
 
-      <span>↗</span>
+      <div class="arrow">↗</div>
+
     </a>
 
-  </section>
+
+  </div>
+
+</section>
 
 
-  <section class="section">
+
+<section class="currently" id="currently">
+
+  <div class="currently-grid">
 
     <div class="section-label">
       Currently
     </div>
 
-    <p class="big-text">
-      Building things that move businesses forward.
-    </p>
+    <div>
 
-  </section>
+      <h2>
+        Building what’s next.
+      </h2>
 
+      <div class="currently-copy">
 
-  <footer>
+        <p>
+          Product Owner at GeoVictoria.<br>
+          Co-Founder & COO at LowSignal.
+        </p>
 
-    <span>© 2026 Felipe Quiroz</span>
+        <p>
+          Santiago, Chile.
+        </p>
 
-    <div class="links">
-      <a href="#">LinkedIn</a>
-      <a href="#">Instagram</a>
-      <a href="mailto:tuemail@email.com">Email</a>
+      </div>
+
     </div>
 
-  </footer>
+  </div>
 
-</div>
+</section>
+
+
+
+<footer id="contact">
+
+  <div class="footer-top">
+
+    <div class="footer-title">
+      Let’s build<br>
+      something.
+    </div>
+
+    <div class="footer-links">
+
+      <a href="#">
+        LinkedIn ↗
+      </a>
+
+      <a href="#">
+        Instagram ↗
+      </a>
+
+      <a href="mailto:email@email.com">
+        Email ↗
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <span>
+      © 2026 Felipe Quiroz
+    </span>
+
+    <span>
+      Santiago, Chile
+    </span>
+
+  </div>
+
+</footer>
+
 
 </body>
 </html>
