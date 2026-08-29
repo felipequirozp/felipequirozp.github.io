@@ -17,7 +17,13 @@
     content="Felipe Quiroz — Product Manager at GeoVictoria. Workforce Management, product development and pilots across LATAM."
   >
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- FONTS -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
 
   <link
     rel="preconnect"
@@ -41,17 +47,16 @@
 
       --navy: #182536;
       --navy-deep: #0d1724;
-      --navy-soft: #223247;
 
       --steel: #324963;
-      --steel-light: #6f8298;
+      --steel-2: #3d5570;
+      --steel-light: #71869c;
 
       --slate: #9aa9ba;
       --slate-light: #c7d0d9;
 
       --ice: #eef1f4;
       --paper: #f5f6f7;
-
       --white: #ffffff;
 
       --ink: #10161d;
@@ -92,26 +97,20 @@
 
 
     a {
-
       color: inherit;
       text-decoration: none;
-
     }
 
 
     img {
-
       display: block;
       max-width: 100%;
-
     }
 
 
     ::selection {
-
       background: var(--navy);
       color: white;
-
     }
 
 
@@ -126,11 +125,14 @@
       padding: 0 5vw;
 
       display: grid;
-      grid-template-columns: 1fr auto 1fr;
+
+      grid-template-columns:
+        1fr auto 1fr;
 
       align-items: center;
 
       background: var(--navy);
+
       color: white;
 
       border-bottom:
@@ -159,6 +161,7 @@
       font-weight: 500;
 
       letter-spacing: .08em;
+
       text-transform: uppercase;
 
     }
@@ -179,6 +182,7 @@
       font-weight: 500;
 
       letter-spacing: .06em;
+
       text-transform: uppercase;
 
       transition:
@@ -192,6 +196,7 @@
     .back:hover {
 
       background: white;
+
       color: var(--navy);
 
       border-color: white;
@@ -219,135 +224,248 @@
 
 
     /* =====================================================
-       HERO VISUAL
+       LEFT — WORKFORCE VISUAL
     ===================================================== */
 
     .hero-visual {
 
       position: relative;
 
-      min-height: 680px;
+      min-height: 720px;
 
       overflow: hidden;
+
+      padding:
+        70px 6vw 65px;
 
       background: var(--steel);
 
       color: white;
 
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+
     }
 
 
-    .grid-lines {
+    /* subtle background grid */
+
+    .hero-visual::before {
+
+      content: "";
 
       position: absolute;
+
       inset: 0;
 
       background-image:
 
         linear-gradient(
-          rgba(255,255,255,.12) 1px,
+          rgba(255,255,255,.08) 1px,
           transparent 1px
         ),
 
         linear-gradient(
           90deg,
-          rgba(255,255,255,.12) 1px,
+          rgba(255,255,255,.08) 1px,
           transparent 1px
         );
 
       background-size:
-        170px 170px;
+        160px 160px;
+
+      pointer-events: none;
 
     }
 
 
-    .visual-circle {
+    .visual-top {
 
-      position: absolute;
+      position: relative;
 
-      width: 620px;
-      height: 620px;
+      z-index: 2;
 
-      border-radius: 50%;
+      display: flex;
 
-      right: -340px;
-      top: 50%;
+      justify-content: space-between;
 
-      transform:
-        translateY(-50%);
+      align-items: center;
 
-      background: var(--ice);
+      gap: 20px;
 
     }
 
 
-    .visual-marker {
+    .visual-label {
 
-      position: absolute;
+      color: var(--slate-light);
 
-      width: 90px;
-      height: 90px;
+      font-size: 10px;
+      font-weight: 500;
 
-      top: 115px;
-      left: 17vw;
+      letter-spacing: .1em;
 
-      border-radius: 20px;
+      text-transform: uppercase;
 
-      background:
-        rgba(255,255,255,.09);
+    }
 
-      border:
+
+    .visual-code {
+
+      color:
+        rgba(255,255,255,.45);
+
+      font-size: 9px;
+      font-weight: 500;
+
+      letter-spacing: .08em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =====================================================
+       ABSTRACT SCHEDULE
+    ===================================================== */
+
+    .schedule {
+
+      position: relative;
+
+      z-index: 2;
+
+      margin:
+        55px 0 60px;
+
+      padding:
+        24px 0;
+
+      border-top:
+        1px solid rgba(255,255,255,.14);
+
+      border-bottom:
+        1px solid rgba(255,255,255,.14);
+
+    }
+
+
+    .schedule-header {
+
+      display: grid;
+
+      grid-template-columns:
+        70px repeat(5, 1fr);
+
+      gap: 8px;
+
+      margin-bottom: 18px;
+
+      color:
+        rgba(255,255,255,.48);
+
+      font-size: 8px;
+
+      letter-spacing: .08em;
+
+      text-transform: uppercase;
+
+      text-align: center;
+
+    }
+
+
+    .schedule-header span:first-child {
+      text-align: left;
+    }
+
+
+    .schedule-row {
+
+      display: grid;
+
+      grid-template-columns:
+        70px repeat(5, 1fr);
+
+      gap: 8px;
+
+      align-items: center;
+
+      min-height: 42px;
+
+      border-top:
         1px solid rgba(255,255,255,.08);
 
     }
 
 
-    .visual-dot {
+    .schedule-time {
 
-      position: absolute;
+      color:
+        rgba(255,255,255,.5);
 
-      width: 7px;
-      height: 7px;
+      font-size: 8px;
 
-      border-radius: 50%;
-
-      background: var(--slate-light);
+      letter-spacing: .06em;
 
     }
 
 
-    .visual-dot.one {
+    .shift {
 
-      top: 13%;
-      right: 18%;
+      height: 12px;
 
-    }
+      border-radius: 999px;
 
-
-    .visual-dot.two {
-
-      bottom: 18%;
-      left: 14%;
+      background:
+        rgba(255,255,255,.12);
 
     }
 
 
-    .visual-dot.three {
+    .shift.medium {
 
-      top: 42%;
-      left: 31%;
+      background:
+        rgba(199,208,217,.38);
 
     }
 
+
+    .shift.active {
+
+      background:
+        rgba(255,255,255,.82);
+
+    }
+
+
+    .shift.short {
+      width: 54%;
+    }
+
+
+    .shift.long {
+      width: 88%;
+    }
+
+
+    .shift.mid {
+      width: 70%;
+    }
+
+
+    /* =====================================================
+       LEFT TITLE
+    ===================================================== */
 
     .visual-title {
 
-      position: absolute;
+      position: relative;
 
       z-index: 2;
-
-      left: 6vw;
-      bottom: 7vw;
 
     }
 
@@ -356,15 +474,16 @@
 
       display: block;
 
-      margin-bottom: 16px;
+      margin-bottom: 17px;
 
       color:
-        rgba(255,255,255,.62);
+        rgba(255,255,255,.60);
 
       font-size: 10px;
       font-weight: 500;
 
       letter-spacing: .1em;
+
       text-transform: uppercase;
 
     }
@@ -374,16 +493,20 @@
 
       display: block;
 
-      max-width: 500px;
+      max-width: 520px;
 
       font-family: "Manrope", sans-serif;
 
       font-size:
-        clamp(55px, 6vw, 98px);
+        clamp(52px, 5.6vw, 88px);
 
-      line-height: .86;
+      /*
+        More breathing room than previous version
+      */
 
-      letter-spacing: -.065em;
+      line-height: 1.02;
+
+      letter-spacing: -.06em;
 
       font-weight: 500;
 
@@ -391,13 +514,13 @@
 
 
     /* =====================================================
-       HERO CONTENT
+       RIGHT HERO CONTENT
     ===================================================== */
 
     .hero-content {
 
       padding:
-        65px 7vw 65px 6vw;
+        70px 7vw 70px 6vw;
 
       display: flex;
 
@@ -408,66 +531,60 @@
     }
 
 
-    /* LOGO */
+    /* =====================================================
+       LOGO
+    ===================================================== */
 
     .company-logo {
 
-      margin-bottom: 35px;
+      margin-bottom: 36px;
 
     }
 
 
-    .company-logo-box {
+    .company-logo-link {
 
-      display: inline-flex;
-
-      align-items: center;
-      justify-content: center;
-
-      background: white;
-
-      padding:
-        13px 17px;
-
-      border:
-        1px solid rgba(24,37,54,.10);
-
-      border-radius: 14px;
-
-      box-shadow:
-        0 8px 28px rgba(24,37,54,.06);
+      display: inline-block;
 
       transition:
-        transform .22s ease,
-        box-shadow .22s ease;
+        opacity .2s ease,
+        transform .2s ease;
 
     }
 
 
-    .company-logo-box:hover {
+    .company-logo-link:hover {
+
+      opacity: .65;
 
       transform:
         translateY(-2px);
 
-      box-shadow:
-        0 12px 34px rgba(24,37,54,.10);
-
     }
 
 
-    .company-logo-box img {
+    .company-logo-link img {
 
-      width: 135px;
-      height: 42px;
+      width: 145px;
+
+      height: auto;
+
+      max-height: 52px;
 
       object-fit: contain;
 
+      object-position: left center;
+
     }
 
 
+    /* =====================================================
+       HERO TEXT
+    ===================================================== */
+
     .kicker {
 
-      margin-bottom: 24px;
+      margin-bottom: 25px;
 
       color: var(--steel-light);
 
@@ -475,6 +592,7 @@
       font-weight: 600;
 
       letter-spacing: .11em;
+
       text-transform: uppercase;
 
     }
@@ -487,9 +605,9 @@
       font-family: "Manrope", sans-serif;
 
       font-size:
-        clamp(55px, 6vw, 96px);
+        clamp(58px, 6vw, 98px);
 
-      line-height: .9;
+      line-height: .92;
 
       letter-spacing: -.065em;
 
@@ -502,20 +620,20 @@
 
     .hero-role {
 
-      margin-top: 24px;
+      margin-top: 25px;
 
       color: #576473;
 
       font-size: 16px;
 
-      line-height: 1.5;
+      line-height: 1.55;
 
     }
 
 
     .hero-description {
 
-      margin-top: 40px;
+      margin-top: 42px;
 
       max-width: 690px;
 
@@ -523,7 +641,7 @@
 
       font-size: 15px;
 
-      line-height: 1.8;
+      line-height: 1.85;
 
     }
 
@@ -536,7 +654,7 @@
 
       gap: 9px;
 
-      margin-top: 36px;
+      margin-top: 38px;
 
     }
 
@@ -544,7 +662,7 @@
     .tag {
 
       padding:
-        9px 12px;
+        9px 13px;
 
       border:
         1px solid rgba(24,37,54,.18);
@@ -552,7 +670,7 @@
       border-radius: 999px;
 
       background:
-        rgba(255,255,255,.48);
+        rgba(255,255,255,.42);
 
       color: var(--navy);
 
@@ -567,7 +685,7 @@
 
 
     /* =====================================================
-       CASE BODY
+       CASE
     ===================================================== */
 
     .case {
@@ -629,14 +747,14 @@
     .case-section h2 {
 
       margin:
-        0 0 28px;
+        0 0 30px;
 
       font-family: "Manrope", sans-serif;
 
       font-size:
-        clamp(32px, 4vw, 54px);
+        clamp(34px, 4vw, 56px);
 
-      line-height: 1;
+      line-height: 1.03;
 
       letter-spacing: -.045em;
 
@@ -654,7 +772,7 @@
 
       font-size: 15px;
 
-      line-height: 1.8;
+      line-height: 1.85;
 
     }
 
@@ -777,7 +895,7 @@
 
       font-size: 14px;
 
-      line-height: 1.65;
+      line-height: 1.7;
 
     }
 
@@ -874,8 +992,6 @@
     }
 
 
-    /* WEBSITE */
-
     .company-website {
 
       display: inline-block;
@@ -949,7 +1065,7 @@
       font-size:
         clamp(50px, 7vw, 105px);
 
-      line-height: .88;
+      line-height: .92;
 
       letter-spacing: -.065em;
 
@@ -1034,7 +1150,9 @@
 
       display: flex;
 
-      justify-content: space-between;
+      justify-content:
+        space-between;
+
       align-items: end;
 
       padding:
@@ -1072,7 +1190,7 @@
       font-size:
         clamp(50px, 7vw, 100px);
 
-      line-height: .9;
+      line-height: .95;
 
       letter-spacing: -.06em;
 
@@ -1157,9 +1275,7 @@
 
 
       .nav-center {
-
         display: none;
-
       }
 
 
@@ -1173,7 +1289,26 @@
 
       .hero-visual {
 
-        min-height: 500px;
+        min-height: 620px;
+
+        padding:
+          55px 22px;
+
+      }
+
+
+      .schedule-header {
+
+        grid-template-columns:
+          50px repeat(5, 1fr);
+
+      }
+
+
+      .schedule-row {
+
+        grid-template-columns:
+          50px repeat(5, 1fr);
 
       }
 
@@ -1181,14 +1316,14 @@
       .hero-content {
 
         padding:
-          60px 22px;
+          65px 22px;
 
       }
 
 
-      .company-logo-box img {
+      .company-logo-link img {
 
-        width: 120px;
+        width: 130px;
 
       }
 
@@ -1322,29 +1457,165 @@
   <section class="hero">
 
 
-    <!-- LEFT VISUAL -->
+    <!-- LEFT -->
 
     <div class="hero-visual">
 
 
-      <div class="grid-lines"></div>
+      <div class="visual-top">
 
-      <div class="visual-marker"></div>
 
-      <div class="visual-circle"></div>
+        <div class="visual-label">
 
-      <div class="visual-dot one"></div>
+          Workforce Management
 
-      <div class="visual-dot two"></div>
+        </div>
 
-      <div class="visual-dot three"></div>
+
+        <div class="visual-code">
+
+          Product / 01
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- ABSTRACT WORKFORCE SCHEDULE -->
+
+      <div class="schedule">
+
+
+        <div class="schedule-header">
+
+          <span>Time</span>
+
+          <span>Mon</span>
+
+          <span>Tue</span>
+
+          <span>Wed</span>
+
+          <span>Thu</span>
+
+          <span>Fri</span>
+
+        </div>
+
+
+
+        <div class="schedule-row">
+
+          <div class="schedule-time">
+            08:00
+          </div>
+
+          <div class="shift active long"></div>
+
+          <div class="shift medium mid"></div>
+
+          <div class="shift short"></div>
+
+          <div class="shift active mid"></div>
+
+          <div class="shift medium long"></div>
+
+        </div>
+
+
+
+        <div class="schedule-row">
+
+          <div class="schedule-time">
+            10:00
+          </div>
+
+          <div class="shift medium short"></div>
+
+          <div class="shift active long"></div>
+
+          <div class="shift medium long"></div>
+
+          <div class="shift short"></div>
+
+          <div class="shift active mid"></div>
+
+        </div>
+
+
+
+        <div class="schedule-row">
+
+          <div class="schedule-time">
+            12:00
+          </div>
+
+          <div class="shift short"></div>
+
+          <div class="shift medium mid"></div>
+
+          <div class="shift active long"></div>
+
+          <div class="shift medium mid"></div>
+
+          <div class="shift short"></div>
+
+        </div>
+
+
+
+        <div class="schedule-row">
+
+          <div class="schedule-time">
+            14:00
+          </div>
+
+          <div class="shift active mid"></div>
+
+          <div class="shift short"></div>
+
+          <div class="shift medium long"></div>
+
+          <div class="shift active long"></div>
+
+          <div class="shift medium mid"></div>
+
+        </div>
+
+
+
+        <div class="schedule-row">
+
+          <div class="schedule-time">
+            16:00
+          </div>
+
+          <div class="shift medium long"></div>
+
+          <div class="shift active mid"></div>
+
+          <div class="shift short"></div>
+
+          <div class="shift medium long"></div>
+
+          <div class="shift active short"></div>
+
+        </div>
+
+
+      </div>
+
 
 
       <div class="visual-title">
 
 
         <span>
-          Workforce Management
+
+          Built for real operations
+
         </span>
 
 
@@ -1371,13 +1642,13 @@
     <div class="hero-content">
 
 
-      <!-- LOGO + OFFICIAL WEBSITE -->
+      <!-- LOGO -->
 
       <div class="company-logo">
 
 
         <a
-          class="company-logo-box"
+          class="company-logo-link"
           href="https://www.geovictoria.com/"
           target="_blank"
           rel="noopener noreferrer"
@@ -1386,7 +1657,7 @@
 
 
           <img
-            src="geovictoria-logo.jpg"
+            src="geovictoria-logo.png"
             alt="GeoVictoria logo"
           >
 
@@ -1526,7 +1797,7 @@
 
 
 
-        <!-- PRODUCTS -->
+        <!-- INITIATIVES -->
 
         <section class="case-section">
 
@@ -1765,6 +2036,7 @@
           </div>
 
 
+
           <div class="sidebar-row">
 
             <span>
@@ -1787,6 +2059,7 @@
           </div>
 
 
+
           <div class="sidebar-row">
 
             <span>
@@ -1798,6 +2071,7 @@
             </strong>
 
           </div>
+
 
 
           <div class="sidebar-row">
@@ -1813,6 +2087,7 @@
           </div>
 
 
+
           <div class="sidebar-row">
 
             <span>
@@ -1826,6 +2101,7 @@
           </div>
 
 
+
           <div class="sidebar-row">
 
             <span>
@@ -1837,6 +2113,7 @@
             </strong>
 
           </div>
+
 
 
           <div class="sidebar-row">
@@ -1898,7 +2175,9 @@
           From product idea
 
           <span>
+
             to real adoption.
+
           </span>
 
         </h2>
@@ -2028,17 +2307,16 @@
 
 
       <span>
+
         © 2026 Felipe Quiroz
+
       </span>
 
 
       <span>
-        Product · Growth · Business
-      </span>
 
-
-      <span>
         Santiago / CL
+
       </span>
 
 
