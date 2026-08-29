@@ -33,10 +33,6 @@
 
   <style>
 
-    /* =====================================================
-       COLORS
-    ===================================================== */
-
     :root {
 
       --navy: #182536;
@@ -61,19 +57,18 @@
     }
 
 
-    /* =====================================================
-       RESET
-    ===================================================== */
-
     * {
       box-sizing: border-box;
     }
+
 
     html {
       scroll-behavior: smooth;
     }
 
+
     body {
+
       margin: 0;
 
       background: var(--paper);
@@ -83,12 +78,21 @@
 
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
+
     }
+
 
     a {
       color: inherit;
       text-decoration: none;
     }
+
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
 
     ::selection {
       background: var(--navy);
@@ -101,6 +105,7 @@
     ===================================================== */
 
     .nav {
+
       min-height: 84px;
 
       padding: 0 5vw;
@@ -116,9 +121,12 @@
 
       border-bottom:
         1px solid rgba(255,255,255,.12);
+
     }
 
+
     .brand {
+
       flex-shrink: 0;
 
       font-family: "Manrope", sans-serif;
@@ -127,9 +135,12 @@
       font-weight: 600;
 
       letter-spacing: -.04em;
+
     }
 
+
     .nav-links {
+
       display: flex;
       align-items: center;
 
@@ -141,17 +152,24 @@
       letter-spacing: .07em;
 
       text-transform: uppercase;
+
     }
 
+
     .nav-links > a:not(.contact-nav) {
+
       position: relative;
 
       color: var(--slate-light);
 
-      transition: color .2s ease;
+      transition:
+        color .2s ease;
+
     }
 
+
     .nav-links > a:not(.contact-nav)::after {
+
       content: "";
 
       position: absolute;
@@ -164,23 +182,30 @@
 
       background: white;
 
-      transition: width .22s ease;
+      transition:
+        width .22s ease;
+
     }
+
 
     .nav-links > a:not(.contact-nav):hover,
     .nav-links > a.active {
+
       color: white;
+
     }
 
+
+    .nav-links > a:not(.contact-nav):hover::after,
     .nav-links > a.active::after {
+
       width: 100%;
+
     }
 
-    .nav-links > a:not(.contact-nav):hover::after {
-      width: 100%;
-    }
 
     .contact-nav {
+
       padding:
         9px 15px;
 
@@ -195,12 +220,18 @@
         background .2s ease,
         color .2s ease,
         border-color .2s ease;
+
     }
 
+
     .contact-nav:hover {
+
       background: white;
+
       color: var(--navy);
+
       border-color: white;
+
     }
 
 
@@ -209,19 +240,24 @@
     ===================================================== */
 
     .hero {
+
       min-height:
         calc(100vh - 84px);
 
       padding:
-        90px 7vw 100px;
+        70px 7vw 80px;
 
       display: flex;
+
       align-items: center;
 
       background: var(--ice);
+
     }
 
+
     .hero-grid {
+
       width: 100%;
       max-width: 1500px;
 
@@ -232,12 +268,15 @@
       grid-template-columns:
         1.3fr .7fr;
 
-      gap: 8vw;
+      gap: 7vw;
 
-      align-items: end;
+      align-items: center;
+
     }
 
+
     .hero-label {
+
       margin-bottom: 28px;
 
       color: var(--muted);
@@ -248,60 +287,92 @@
       letter-spacing: .1em;
 
       text-transform: uppercase;
+
     }
 
+
     .hero h1 {
-      max-width: 900px;
+
+      max-width: 940px;
 
       margin: 0;
 
       font-family: "Manrope", sans-serif;
 
       font-size:
-        clamp(62px, 7.8vw, 126px);
+        clamp(62px, 7.4vw, 118px);
 
-      line-height: .93;
+      line-height: .94;
 
       letter-spacing: -.07em;
 
       font-weight: 500;
 
       color: var(--navy);
+
     }
 
+
     .hero h1 span {
+
       display: block;
 
       color: var(--steel-light);
+
     }
 
-    .hero-side {
-      padding-bottom: 7px;
+
+    /* =====================================================
+       HERO PHOTO
+    ===================================================== */
+
+    .hero-photo-wrap {
+
+      width: 100%;
+
+      max-width: 420px;
+
+      justify-self: end;
+
     }
 
-    .hero-side p {
-      margin:
-        0 0 22px;
 
-      color: #3f4a55;
+    .hero-photo {
 
-      font-size: 15px;
+      overflow: hidden;
 
-      line-height: 1.85;
+      border-radius: 30px;
+
+      background: var(--slate-light);
+
     }
 
-    .location {
-      margin-top: 35px;
 
-      padding-top: 18px;
+    .hero-photo img {
 
-      border-top:
-        1px solid var(--line);
+      width: 100%;
+
+      aspect-ratio: 4 / 5;
+
+      object-fit: cover;
+
+    }
+
+
+    .photo-meta {
+
+      margin-top: 17px;
+
+      padding-top: 15px;
 
       display: flex;
+
       justify-content: space-between;
 
       gap: 20px;
+
+      border-top:
+        1px solid var(--line);
 
       color: var(--muted);
 
@@ -311,6 +382,7 @@
       letter-spacing: .08em;
 
       text-transform: uppercase;
+
     }
 
 
@@ -319,13 +391,17 @@
     ===================================================== */
 
     .intro {
+
       padding:
         130px 7vw;
 
       background: var(--paper);
+
     }
 
+
     .intro-grid {
+
       max-width: 1400px;
 
       margin: 0 auto;
@@ -336,9 +412,12 @@
         .7fr 2.3fr;
 
       gap: 8vw;
+
     }
 
+
     .section-label {
+
       color: var(--muted);
 
       font-size: 10px;
@@ -347,13 +426,19 @@
       letter-spacing: .1em;
 
       text-transform: uppercase;
+
     }
+
 
     .intro-copy {
+
       max-width: 850px;
+
     }
 
+
     .intro-copy h2 {
+
       margin:
         0 0 38px;
 
@@ -367,9 +452,12 @@
       letter-spacing: -.055em;
 
       font-weight: 500;
+
     }
 
+
     .intro-copy p {
+
       max-width: 760px;
 
       margin:
@@ -380,35 +468,46 @@
       font-size: 15px;
 
       line-height: 1.85;
+
     }
 
 
     /* =====================================================
-       THREE LENSES
+       LENSES
     ===================================================== */
 
     .lenses {
+
       padding:
         130px 7vw;
 
       background: var(--navy);
 
       color: white;
+
     }
 
+
     .lenses-inner {
+
       max-width: 1400px;
 
       margin: 0 auto;
+
     }
+
 
     .lenses .section-label {
-      color: var(--slate);
 
       margin-bottom: 65px;
+
+      color: var(--slate);
+
     }
 
+
     .lenses-title {
+
       max-width: 1050px;
 
       margin:
@@ -419,49 +518,63 @@
       font-size:
         clamp(48px, 7vw, 104px);
 
-      line-height: 1;
+      line-height: 1.02;
 
       letter-spacing: -.065em;
 
       font-weight: 500;
+
     }
+
 
     .lenses-title span {
+
       display: block;
 
-      margin-top: 8px;
+      margin-top: 10px;
 
       color: var(--slate);
+
     }
 
+
     .lens-grid {
+
       display: grid;
 
       grid-template-columns:
         repeat(3, 1fr);
 
       gap: 35px;
+
     }
 
+
     .lens {
+
       padding-top: 24px;
 
       border-top:
         1px solid rgba(255,255,255,.20);
+
     }
 
+
     .lens-number {
+
       margin-bottom: 38px;
 
       color: var(--slate);
 
       font-size: 9px;
-      font-weight: 500;
 
       letter-spacing: .08em;
+
     }
 
+
     .lens h3 {
+
       margin:
         0 0 16px;
 
@@ -471,9 +584,12 @@
       font-weight: 500;
 
       letter-spacing: -.035em;
+
     }
 
+
     .lens p {
+
       max-width: 330px;
 
       margin: 0;
@@ -483,6 +599,7 @@
       font-size: 13px;
 
       line-height: 1.75;
+
     }
 
 
@@ -491,13 +608,17 @@
     ===================================================== */
 
     .throughline {
+
       padding:
         135px 7vw;
 
       background: var(--paper);
+
     }
 
+
     .throughline-grid {
+
       max-width: 1400px;
 
       margin: 0 auto;
@@ -508,13 +629,19 @@
         .7fr 2.3fr;
 
       gap: 8vw;
+
     }
+
 
     .throughline-content {
+
       max-width: 900px;
+
     }
 
+
     .throughline-content h2 {
+
       margin:
         0 0 55px;
 
@@ -528,14 +655,20 @@
       letter-spacing: -.055em;
 
       font-weight: 500;
+
     }
+
 
     .experience-list {
+
       border-top:
         1px solid var(--line);
+
     }
 
+
     .experience {
+
       padding:
         27px 0;
 
@@ -550,15 +683,35 @@
 
       border-bottom:
         1px solid var(--line);
+
+      transition:
+        padding .2s ease,
+        background .2s ease;
+
     }
 
+
+    .experience:hover {
+
+      padding-left: 14px;
+      padding-right: 14px;
+
+      background: var(--ice);
+
+    }
+
+
     .experience-number {
+
       color: var(--muted);
 
       font-size: 10px;
+
     }
 
+
     .experience-main strong {
+
       display: block;
 
       margin-bottom: 6px;
@@ -571,15 +724,21 @@
       letter-spacing: -.025em;
 
       color: var(--navy);
+
     }
 
+
     .experience-main span {
+
       color: var(--muted);
 
       font-size: 12px;
+
     }
 
+
     .experience-period {
+
       color: var(--muted);
 
       font-size: 9px;
@@ -588,6 +747,7 @@
       letter-spacing: .06em;
 
       text-transform: uppercase;
+
     }
 
 
@@ -596,13 +756,17 @@
     ===================================================== */
 
     .current {
+
       padding:
         120px 7vw;
 
       background: var(--ice);
+
     }
 
+
     .current-grid {
+
       max-width: 1400px;
 
       margin: 0 auto;
@@ -613,9 +777,12 @@
         1fr 1fr;
 
       gap: 70px;
+
     }
 
+
     .current-main h2 {
+
       max-width: 650px;
 
       margin:
@@ -631,9 +798,12 @@
       letter-spacing: -.06em;
 
       font-weight: 500;
+
     }
 
+
     .current-main p {
+
       max-width: 610px;
 
       margin: 0;
@@ -643,14 +813,20 @@
       font-size: 15px;
 
       line-height: 1.85;
+
     }
+
 
     .current-list {
+
       border-top:
         1px solid var(--line);
+
     }
 
+
     .current-item {
+
       padding:
         22px 0;
 
@@ -663,21 +839,28 @@
 
       border-bottom:
         1px solid var(--line);
+
     }
 
+
     .current-item span {
+
       color: var(--muted);
 
       font-size: 9px;
+
     }
 
+
     .current-item strong {
+
+      color: var(--navy);
+
       font-size: 14px;
       font-weight: 500;
 
       line-height: 1.55;
 
-      color: var(--navy);
     }
 
 
@@ -686,27 +869,37 @@
     ===================================================== */
 
     .statement {
+
       padding:
         140px 7vw;
 
       background: var(--navy-deep);
 
       color: white;
+
     }
 
+
     .statement-inner {
+
       max-width: 1400px;
 
       margin: 0 auto;
+
     }
+
 
     .statement .section-label {
-      color: var(--slate);
 
       margin-bottom: 45px;
+
+      color: var(--slate);
+
     }
 
+
     .statement h2 {
+
       max-width: 1100px;
 
       margin: 0;
@@ -716,32 +909,42 @@
       font-size:
         clamp(62px, 9vw, 140px);
 
-      line-height: .92;
+      line-height: 1;
 
       letter-spacing: -.07em;
 
       font-weight: 500;
+
     }
 
+
     .statement h2 span {
+
       display: block;
 
+      margin-top: 28px;
+
       color: var(--slate);
+
     }
 
 
     /* =====================================================
-       CONTACT / FOOTER
+       CONTACT
     ===================================================== */
 
     .bottom {
+
       padding:
         85px 7vw 42px;
 
       background: var(--ice);
+
     }
 
+
     .contact-block {
+
       max-width: 1400px;
 
       margin: 0 auto;
@@ -757,13 +960,19 @@
 
       border-bottom:
         1px solid var(--line);
+
     }
+
 
     .contact-copy .section-label {
+
       margin-bottom: 18px;
+
     }
 
+
     .contact-copy h3 {
+
       margin: 0;
 
       font-family: "Manrope", sans-serif;
@@ -776,17 +985,23 @@
       letter-spacing: -.055em;
 
       font-weight: 500;
+
     }
 
+
     .contact-links {
+
       display: flex;
 
       flex-wrap: wrap;
 
       gap: 10px;
+
     }
 
+
     .contact-link {
+
       padding:
         11px 16px;
 
@@ -808,12 +1023,18 @@
         background .2s ease,
         color .2s ease,
         border-color .2s ease;
+
     }
 
+
     .contact-link:hover {
+
       background: var(--navy);
+
       color: white;
+
       border-color: var(--navy);
+
     }
 
 
@@ -822,6 +1043,7 @@
     ===================================================== */
 
     .footer {
+
       max-width: 1400px;
 
       margin: 0 auto;
@@ -843,21 +1065,30 @@
       letter-spacing: .07em;
 
       text-transform: uppercase;
+
     }
+
 
     .footer-location {
+
       text-align: right;
+
     }
 
+
     .footer-socials {
+
       display: flex;
 
       align-items: center;
 
       gap: 10px;
+
     }
 
+
     .social-icon {
+
       width: 36px;
       height: 36px;
 
@@ -878,9 +1109,12 @@
         color .2s ease,
         transform .2s ease,
         border-color .2s ease;
+
     }
 
+
     .social-icon svg {
+
       width: 15px;
       height: 15px;
 
@@ -892,14 +1126,20 @@
 
       stroke-linecap: round;
       stroke-linejoin: round;
+
     }
+
 
     .social-icon svg .filled {
+
       fill: currentColor;
       stroke: none;
+
     }
 
+
     .linkedin-mark {
+
       font-family: "Inter", sans-serif;
 
       font-size: 14px;
@@ -910,9 +1150,12 @@
       letter-spacing: -.06em;
 
       text-transform: lowercase;
+
     }
 
+
     .social-icon:hover {
+
       background: var(--navy);
 
       color: white;
@@ -921,6 +1164,7 @@
 
       transform:
         translateY(-2px);
+
     }
 
 
@@ -931,21 +1175,28 @@
     @media(max-width: 900px) {
 
       .nav {
+
         min-height: 78px;
 
         padding:
           16px 20px;
 
         gap: 16px;
+
       }
 
+
       .brand {
+
         font-size: 15px;
 
         white-space: nowrap;
+
       }
 
+
       .nav-links {
+
         gap: 14px;
 
         font-size: 9px;
@@ -953,32 +1204,46 @@
         letter-spacing: .04em;
 
         white-space: nowrap;
+
       }
+
 
       .contact-nav {
+
         padding:
           8px 11px;
+
       }
+
 
       .hero {
+
+        min-height: auto;
+
         padding:
           80px 22px;
+
       }
 
+
       .hero-grid {
+
         grid-template-columns:
           1fr;
 
-        gap: 70px;
+        gap: 65px;
+
       }
 
-      .hero h1 {
-        max-width: 800px;
+
+      .hero-photo-wrap {
+
+        justify-self: start;
+
+        max-width: 390px;
+
       }
 
-      .hero-side {
-        max-width: 650px;
-      }
 
       .intro,
       .lenses,
@@ -986,43 +1251,60 @@
       .current,
       .statement,
       .bottom {
+
         padding-left: 22px;
         padding-right: 22px;
+
       }
+
 
       .intro-grid,
       .throughline-grid {
+
         grid-template-columns:
           1fr;
 
         gap: 35px;
+
       }
 
+
       .lens-grid {
+
         grid-template-columns:
           1fr;
 
         gap: 45px;
+
       }
 
+
       .current-grid {
+
         grid-template-columns:
           1fr;
 
         gap: 70px;
+
       }
 
+
       .footer {
+
         grid-template-columns:
           1fr;
 
         gap: 22px;
 
         align-items: flex-start;
+
       }
 
+
       .footer-location {
+
         text-align: left;
+
       }
 
     }
@@ -1035,6 +1317,7 @@
     @media(max-width: 600px) {
 
       .nav {
+
         flex-direction: column;
 
         align-items: flex-start;
@@ -1043,77 +1326,144 @@
 
         padding:
           18px 20px;
+
       }
 
+
       .nav-links {
+
         width: 100%;
 
         justify-content: space-between;
 
         gap: 8px;
+
       }
+
 
       .contact-nav {
+
         padding:
           7px 10px;
+
       }
+
 
       .hero {
-        min-height: auto;
 
         padding:
-          75px 20px 85px;
+          70px 20px 80px;
+
       }
+
 
       .hero h1 {
-        font-size:
-          clamp(55px, 16vw, 78px);
 
-        line-height: .96;
+        font-size:
+          clamp(54px, 15vw, 76px);
+
+        line-height: .97;
+
       }
+
+
+      .hero-grid {
+
+        gap: 50px;
+
+      }
+
+
+      .hero-photo-wrap {
+
+        max-width: 100%;
+
+      }
+
+
+      .hero-photo {
+
+        border-radius: 24px;
+
+      }
+
 
       .intro,
       .lenses,
       .throughline,
       .current,
       .statement {
+
         padding-top: 95px;
         padding-bottom: 95px;
+
       }
 
+
       .lenses-title {
+
         margin-bottom: 60px;
 
         font-size:
           clamp(48px, 14vw, 68px);
 
-        line-height: 1.03;
+        line-height: 1.04;
+
       }
 
+
       .experience {
+
         grid-template-columns:
           34px 1fr;
 
         gap: 15px;
+
       }
+
 
       .experience-period {
+
         grid-column: 2;
+
       }
 
+
+      .experience:hover {
+
+        padding-left: 0;
+        padding-right: 0;
+
+        background: transparent;
+
+      }
+
+
       .statement h2 {
+
         font-size:
           clamp(58px, 18vw, 90px);
 
-        line-height: .95;
+        line-height: 1;
+
       }
 
+
+      .statement h2 span {
+
+        margin-top: 24px;
+
+      }
+
+
       .contact-block {
+
         flex-direction: column;
 
         align-items: flex-start;
 
         gap: 35px;
+
       }
 
     }
@@ -1121,6 +1471,7 @@
   </style>
 
 </head>
+
 
 
 <body>
@@ -1132,6 +1483,7 @@
 
   <header class="nav">
 
+
     <a
       href="index.html"
       class="brand"
@@ -1142,9 +1494,11 @@
 
     <nav class="nav-links">
 
+
       <a href="index.html#work">
         Work
       </a>
+
 
       <a
         href="about.html"
@@ -1153,9 +1507,11 @@
         About
       </a>
 
+
       <a href="index.html#now">
         Now
       </a>
+
 
       <a
         href="#contact"
@@ -1164,7 +1520,9 @@
         Contact
       </a>
 
+
     </nav>
+
 
   </header>
 
@@ -1181,6 +1539,7 @@
 
 
       <div>
+
 
         <div class="hero-label">
           About / 01
@@ -1199,40 +1558,38 @@
 
         </h1>
 
+
       </div>
 
 
 
-      <div class="hero-side">
+      <div class="hero-photo-wrap">
 
 
-        <p>
-
-          I’m Felipe Quiroz, a product and growth
-          operator based in Santiago, Chile.
-
-        </p>
+        <div class="hero-photo">
 
 
-        <p>
-
-          My work has moved across product management,
-          company building and partnerships — but the
-          common thread is turning ideas into systems
-          that people actually use.
-
-        </p>
+          <img
+            src="profile.jpg"
+            alt="Felipe Quiroz"
+          >
 
 
-        <div class="location">
+        </div>
+
+
+        <div class="photo-meta">
+
 
           <span>
-            Santiago
+            Felipe Quiroz
           </span>
 
+
           <span>
-            Chile
+            Santiago / CL
           </span>
+
 
         </div>
 
@@ -1262,6 +1619,7 @@
       </div>
 
 
+
       <div class="intro-copy">
 
 
@@ -1269,6 +1627,17 @@
           From ideas to
           real operating systems.
         </h2>
+
+
+        <p>
+
+          I’m Felipe Quiroz, a product and growth operator
+          based in Santiago, Chile. My work has moved across
+          product management, company building and
+          partnerships — but the common thread is turning
+          ideas into systems that people actually use.
+
+        </p>
 
 
         <p>
@@ -1284,9 +1653,9 @@
         <p>
 
           Before that, I worked across partnerships
-          and education technology at TetherEd, helping
-          connect products with institutions, public
-          systems and new markets.
+          and education technology at TetherEd, connecting
+          products with institutions, public systems
+          and new markets.
 
         </p>
 
@@ -1312,7 +1681,7 @@
 
 
   <!-- =====================================================
-       THREE LENSES
+       LENSES
   ====================================================== -->
 
   <section class="lenses">
@@ -1343,16 +1712,13 @@
 
         <div class="lens">
 
-
           <div class="lens-number">
             01
           </div>
 
-
           <h3>
             Product
           </h3>
-
 
           <p>
 
@@ -1362,23 +1728,19 @@
 
           </p>
 
-
         </div>
 
 
 
         <div class="lens">
 
-
           <div class="lens-number">
             02
           </div>
 
-
           <h3>
             Growth
           </h3>
-
 
           <p>
 
@@ -1388,23 +1750,19 @@
 
           </p>
 
-
         </div>
 
 
 
         <div class="lens">
 
-
           <div class="lens-number">
             03
           </div>
 
-
           <h3>
             Business
           </h3>
-
 
           <p>
 
@@ -1413,7 +1771,6 @@
             that make them sustainable.
 
           </p>
-
 
         </div>
 
@@ -1465,7 +1822,6 @@
               01
             </div>
 
-
             <div class="experience-main">
 
               <strong>
@@ -1477,7 +1833,6 @@
               </span>
 
             </div>
-
 
             <div class="experience-period">
               2026 — Present
@@ -1496,7 +1851,6 @@
               02
             </div>
 
-
             <div class="experience-main">
 
               <strong>
@@ -1508,7 +1862,6 @@
               </span>
 
             </div>
-
 
             <div class="experience-period">
               2025 — Present
@@ -1527,7 +1880,6 @@
               03
             </div>
 
-
             <div class="experience-main">
 
               <strong>
@@ -1539,7 +1891,6 @@
               </span>
 
             </div>
-
 
             <div class="experience-period">
               2024 — 2026
@@ -1649,7 +2000,7 @@
           </span>
 
           <strong>
-            Products that connect technology and real operations
+            Products connecting technology and real operations
           </strong>
 
         </div>
@@ -1765,10 +2116,6 @@
     </div>
 
 
-
-    <!-- ===================================================
-         FOOTER
-    ==================================================== -->
 
     <footer class="footer">
 
