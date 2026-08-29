@@ -1,0 +1,2291 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Ahora | Felipe Quiroz</title>
+
+  <meta
+    name="description"
+    content="Lo que Felipe Quiroz está construyendo, explorando y pensando actualmente en producto, growth y negocios."
+  >
+
+
+  <!-- SEO / LANGUAGES -->
+  <link
+    rel="canonical"
+    href="https://felipequirozp.github.io/es/now.html"
+  >
+
+  <link
+    rel="alternate"
+    hreflang="en"
+    href="https://felipequirozp.github.io/now.html"
+  >
+
+  <link
+    rel="alternate"
+    hreflang="es"
+    href="https://felipequirozp.github.io/es/now.html"
+  >
+
+  <link
+    rel="alternate"
+    hreflang="x-default"
+    href="https://felipequirozp.github.io/now.html"
+  >
+
+  <!-- FAVICON -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="../favicon.png"
+  >
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <style>
+
+    /* =====================================================
+       COLORS
+    ===================================================== */
+
+    :root {
+
+      --navy: #182536;
+      --navy-deep: #0d1724;
+
+      --steel: #324963;
+      --steel-light: #71869c;
+
+      --slate: #9aa9ba;
+      --slate-light: #c7d0d9;
+
+      --ice: #eef1f4;
+      --paper: #f5f6f7;
+
+      --white: #ffffff;
+
+      --ink: #10161d;
+      --muted: #66717d;
+
+      --line: #d4d9de;
+
+    }
+
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      margin: 0;
+
+      background: var(--paper);
+      color: var(--ink);
+
+      font-family: "Inter", sans-serif;
+
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    ::selection {
+      background: var(--navy);
+      color: white;
+    }
+
+
+    /* =====================================================
+       NAV
+    ===================================================== */
+
+    .nav {
+
+      min-height: 84px;
+
+      padding: 0 5vw;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+
+      background: var(--navy);
+      color: white;
+
+      border-bottom:
+        1px solid rgba(255,255,255,.12);
+
+    }
+
+
+    .brand {
+
+      flex-shrink: 0;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 17px;
+      font-weight: 600;
+
+      letter-spacing: -.04em;
+
+    }
+
+
+    .nav-links {
+
+      display: flex;
+      align-items: center;
+
+      gap: 30px;
+
+      font-size: 10px;
+      font-weight: 500;
+
+      letter-spacing: .07em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .nav-links > a:not(.contact-nav) {
+
+      position: relative;
+
+      color: var(--slate-light);
+
+      transition: color .2s ease;
+
+    }
+
+
+    .nav-links > a:not(.contact-nav)::after {
+
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: -7px;
+
+      width: 0;
+      height: 1px;
+
+      background: white;
+
+      transition: width .22s ease;
+
+    }
+
+
+    .nav-links > a:not(.contact-nav):hover,
+    .nav-links > a.active {
+
+      color: white;
+
+    }
+
+
+    .nav-links > a:not(.contact-nav):hover::after,
+    .nav-links > a.active::after {
+
+      width: 100%;
+
+    }
+
+
+    .contact-nav {
+
+      padding: 9px 15px;
+
+      border:
+        1px solid rgba(255,255,255,.28);
+
+      border-radius: 999px;
+
+      color: white;
+
+      transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+
+    }
+
+
+    .contact-nav:hover {
+
+      background: white;
+
+      color: var(--navy);
+
+      border-color: white;
+
+    }
+
+
+    /* =====================================================
+       LANGUAGE SWITCH
+    ===================================================== */
+
+    .lang-switch {
+
+      width: 38px;
+      height: 38px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      flex-shrink: 0;
+
+      border:
+        1px solid rgba(255,255,255,.22);
+
+      border-radius: 50%;
+
+      color: var(--slate-light) !important;
+
+      font-size: 9px;
+      font-weight: 600;
+
+      letter-spacing: .06em;
+
+      transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+
+    }
+
+
+    .lang-switch:hover {
+
+      background:
+        rgba(255,255,255,.10);
+
+      color: white !important;
+
+      border-color:
+        rgba(255,255,255,.45);
+
+    }
+
+
+    .nav-links > a.lang-switch::after {
+
+      display: none !important;
+
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+
+      min-height:
+        calc(100vh - 84px);
+
+      padding:
+        90px 7vw 95px;
+
+      display: flex;
+      align-items: center;
+
+      background: var(--ice);
+
+    }
+
+
+    .hero-grid {
+
+      width: 100%;
+      max-width: 1450px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns:
+        1.35fr .65fr;
+
+      gap: 8vw;
+
+      align-items: end;
+
+    }
+
+
+    .hero-label {
+
+      margin-bottom: 30px;
+
+      color: var(--muted);
+
+      font-size: 10px;
+      font-weight: 600;
+
+      letter-spacing: .1em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .hero h1 {
+
+      max-width: 950px;
+
+      margin: 0;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(68px, 8.4vw, 130px);
+
+      line-height: 1;
+
+      letter-spacing: -.07em;
+
+      font-weight: 500;
+
+      color: var(--navy);
+
+    }
+
+
+    .hero h1 span {
+
+      display: block;
+
+      margin-top: 20px;
+
+      color: var(--steel-light);
+
+    }
+
+
+    .hero-side {
+
+      padding-bottom: 8px;
+
+    }
+
+
+    .hero-side p {
+
+      margin:
+        0 0 26px;
+
+      color: #3f4a55;
+
+      font-size: 15px;
+
+      line-height: 1.85;
+
+    }
+
+
+    .hero-meta {
+
+      padding-top: 18px;
+
+      border-top:
+        1px solid var(--line);
+
+      display: flex;
+      justify-content: space-between;
+
+      gap: 20px;
+
+      color: var(--muted);
+
+      font-size: 9px;
+      font-weight: 500;
+
+      letter-spacing: .08em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =====================================================
+       SHARED
+    ===================================================== */
+
+    .section-label {
+
+      color: var(--muted);
+
+      font-size: 10px;
+      font-weight: 600;
+
+      letter-spacing: .1em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =====================================================
+       BUILDING
+    ===================================================== */
+
+    .building {
+
+      padding:
+        130px 7vw 145px;
+
+      background: var(--paper);
+
+    }
+
+
+    .section-grid {
+
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns:
+        .7fr 2.3fr;
+
+      gap: 8vw;
+
+    }
+
+
+    .section-content {
+
+      max-width: 950px;
+
+    }
+
+
+    .section-content h2 {
+
+      margin:
+        0 0 58px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(42px, 5.5vw, 78px);
+
+      line-height: 1.10;
+
+      letter-spacing: -.055em;
+
+      font-weight: 500;
+
+    }
+
+
+    /* =====================================================
+       TRACKS
+    ===================================================== */
+
+    .tracks {
+
+      border-top:
+        1px solid var(--line);
+
+    }
+
+
+    .track {
+
+      padding:
+        32px 0;
+
+      display: grid;
+
+      grid-template-columns:
+        55px 1.2fr 1fr;
+
+      gap: 30px;
+
+      align-items: start;
+
+      border-bottom:
+        1px solid var(--line);
+
+      transition:
+        padding .22s ease,
+        background .22s ease;
+
+    }
+
+
+    a.track:hover {
+
+      padding-left: 16px;
+      padding-right: 16px;
+
+      background: var(--ice);
+
+    }
+
+
+    .track-number {
+
+      padding-top: 5px;
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+    }
+
+
+    .track-main strong {
+
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 25px;
+      font-weight: 500;
+
+      letter-spacing: -.035em;
+
+      color: var(--navy);
+
+    }
+
+
+    .track-main span {
+
+      color: var(--muted);
+
+      font-size: 11px;
+
+      letter-spacing: .05em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .track-description {
+
+      color: #4c5864;
+
+      font-size: 13px;
+
+      line-height: 1.75;
+
+    }
+
+
+    /* =====================================================
+       INTERESTS
+    ===================================================== */
+
+    .interests {
+
+      padding:
+        125px 7vw;
+
+      background: var(--navy);
+
+      color: white;
+
+    }
+
+
+    .interests-inner {
+
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+    }
+
+
+    .interests .section-label {
+
+      margin-bottom: 55px;
+
+      color: var(--slate);
+
+    }
+
+
+    .interests h2 {
+
+      max-width: 1000px;
+
+      margin:
+        0 0 80px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(50px, 7vw, 105px);
+
+      line-height: 1.05;
+
+      letter-spacing: -.065em;
+
+      font-weight: 500;
+
+    }
+
+
+    .interests h2 span {
+
+      display: block;
+
+      margin-top: 18px;
+
+      color: var(--slate);
+
+    }
+
+
+    .interest-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      border-top:
+        1px solid rgba(255,255,255,.18);
+
+    }
+
+
+    .interest {
+
+      min-height: 155px;
+
+      padding:
+        28px 28px 28px 0;
+
+      border-bottom:
+        1px solid rgba(255,255,255,.18);
+
+    }
+
+
+    .interest:nth-child(odd) {
+
+      border-right:
+        1px solid rgba(255,255,255,.18);
+
+      padding-right: 38px;
+
+    }
+
+
+    .interest:nth-child(even) {
+
+      padding-left: 38px;
+
+    }
+
+
+    .interest-number {
+
+      margin-bottom: 30px;
+
+      color: var(--slate);
+
+      font-size: 9px;
+
+      letter-spacing: .08em;
+
+    }
+
+
+    .interest strong {
+
+      display: block;
+
+      margin-bottom: 10px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 21px;
+      font-weight: 500;
+
+      letter-spacing: -.03em;
+
+    }
+
+
+    .interest p {
+
+      max-width: 430px;
+
+      margin: 0;
+
+      color: #bbc5d0;
+
+      font-size: 13px;
+
+      line-height: 1.7;
+
+    }
+
+
+    /* =====================================================
+       OPERATING
+    ===================================================== */
+
+    .operating {
+
+      padding:
+        130px 7vw;
+
+      background: var(--paper);
+
+    }
+
+
+    .operating-grid {
+
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns:
+        .7fr 2.3fr;
+
+      gap: 8vw;
+
+    }
+
+
+    .operating-content h2 {
+
+      max-width: 850px;
+
+      margin:
+        0 0 60px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(42px, 5.5vw, 78px);
+
+      line-height: 1.10;
+
+      letter-spacing: -.055em;
+
+      font-weight: 500;
+
+    }
+
+
+    .principles {
+
+      border-top:
+        1px solid var(--line);
+
+    }
+
+
+    .principle {
+
+      padding:
+        25px 0;
+
+      display: grid;
+
+      grid-template-columns:
+        55px 1fr auto;
+
+      gap: 25px;
+
+      align-items: center;
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .principle-number {
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+    }
+
+
+    .principle strong {
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 20px;
+      font-weight: 500;
+
+      letter-spacing: -.025em;
+
+      color: var(--navy);
+
+    }
+
+
+    .principle span {
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      letter-spacing: .07em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =====================================================
+       STATEMENT
+    ===================================================== */
+
+    .statement {
+
+      padding:
+        145px 7vw;
+
+      background: var(--navy-deep);
+
+      color: white;
+
+    }
+
+
+    .statement-inner {
+
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+    }
+
+
+    .statement .section-label {
+
+      margin-bottom: 48px;
+
+      color: var(--slate);
+
+    }
+
+
+    .statement h2 {
+
+      margin: 0;
+
+      max-width: 1150px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(60px, 8vw, 125px);
+
+      line-height: 1;
+
+      letter-spacing: -.07em;
+
+      font-weight: 500;
+
+    }
+
+
+    .statement h2 span {
+
+      display: block;
+
+      margin-top: 28px;
+
+      color: var(--slate);
+
+    }
+
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+
+    .bottom {
+
+      padding:
+        85px 7vw 42px;
+
+      background: var(--ice);
+
+    }
+
+
+    .contact-block {
+
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+      padding-bottom: 70px;
+
+      display: flex;
+
+      justify-content: space-between;
+      align-items: flex-end;
+
+      gap: 50px;
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .contact-copy .section-label {
+
+      margin-bottom: 18px;
+
+    }
+
+
+    .contact-copy h3 {
+
+      margin: 0;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(40px, 5vw, 72px);
+
+      line-height: 1;
+
+      letter-spacing: -.055em;
+
+      font-weight: 500;
+
+    }
+
+
+    .contact-links {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+    }
+
+
+    .contact-link {
+
+      padding:
+        11px 16px;
+
+      border:
+        1px solid rgba(24,37,54,.20);
+
+      border-radius: 999px;
+
+      color: var(--navy);
+
+      font-size: 10px;
+      font-weight: 500;
+
+      text-transform: uppercase;
+
+      letter-spacing: .05em;
+
+      transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+
+    }
+
+
+    .contact-link:hover {
+
+      background: var(--navy);
+
+      color: white;
+
+      border-color: var(--navy);
+
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer {
+
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+      padding-top: 32px;
+
+      display: grid;
+
+      grid-template-columns:
+        1fr auto 1fr;
+
+      align-items: center;
+
+      color: var(--muted);
+
+      font-size: 9px;
+      font-weight: 500;
+
+      letter-spacing: .07em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .footer-location {
+      text-align: right;
+    }
+
+
+    .footer-socials {
+
+      display: flex;
+      align-items: center;
+
+      gap: 10px;
+
+    }
+
+
+    .social-icon {
+
+      width: 36px;
+      height: 36px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border:
+        1px solid rgba(24,37,54,.18);
+
+      border-radius: 50%;
+
+      color: var(--navy);
+
+      transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease,
+        border-color .2s ease;
+
+    }
+
+
+    .social-icon svg {
+
+      width: 15px;
+      height: 15px;
+
+      fill: none;
+
+      stroke: currentColor;
+
+      stroke-width: 1.5;
+
+      stroke-linecap: round;
+      stroke-linejoin: round;
+
+    }
+
+
+    .social-icon svg .filled {
+
+      fill: currentColor;
+      stroke: none;
+
+    }
+
+
+    .linkedin-mark {
+
+      font-family: "Inter", sans-serif;
+
+      font-size: 14px;
+      font-weight: 600;
+
+      line-height: 1;
+
+      letter-spacing: -.06em;
+
+      text-transform: lowercase;
+
+    }
+
+
+    .social-icon:hover {
+
+      background: var(--navy);
+
+      color: white;
+
+      border-color: var(--navy);
+
+      transform:
+        translateY(-2px);
+
+    }
+
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media(max-width: 900px) {
+
+      .nav {
+
+        min-height: 78px;
+
+        padding:
+          16px 20px;
+
+        gap: 16px;
+
+      }
+
+
+      .brand {
+
+        font-size: 15px;
+
+        white-space: nowrap;
+
+      }
+
+
+      .nav-links {
+
+        gap: 14px;
+
+        font-size: 9px;
+
+        letter-spacing: .04em;
+
+        white-space: nowrap;
+
+      }
+
+
+      .contact-nav {
+
+        padding:
+          8px 11px;
+
+      }
+
+
+      .hero {
+
+        min-height: auto;
+
+        padding:
+          90px 22px;
+
+      }
+
+
+      .hero-grid {
+
+        grid-template-columns:
+          1fr;
+
+        gap: 60px;
+
+      }
+
+
+      .hero-side {
+
+        max-width: 620px;
+
+      }
+
+
+      .building,
+      .interests,
+      .operating,
+      .statement,
+      .bottom {
+
+        padding-left: 22px;
+        padding-right: 22px;
+
+      }
+
+
+      .section-grid,
+      .operating-grid {
+
+        grid-template-columns:
+          1fr;
+
+        gap: 35px;
+
+      }
+
+
+      .track {
+
+        grid-template-columns:
+          45px 1fr;
+
+      }
+
+
+      .track-description {
+
+        grid-column: 2;
+
+      }
+
+
+      .footer {
+
+        grid-template-columns:
+          1fr;
+
+        gap: 22px;
+
+        align-items: flex-start;
+
+      }
+
+
+      .footer-location {
+
+        text-align: left;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media(max-width: 600px) {
+
+      .nav {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 14px;
+
+        padding:
+          18px 20px;
+
+      }
+
+
+      .nav-links {
+
+        width: 100%;
+
+        justify-content: space-between;
+
+        gap: 8px;
+
+      }
+
+
+      .contact-nav {
+
+        padding:
+          7px 10px;
+
+      }
+
+
+      .lang-switch {
+
+        width: 34px;
+        height: 34px;
+
+        font-size: 8px;
+
+      }
+
+
+      .hero {
+
+        padding:
+          70px 20px 80px;
+
+      }
+
+
+      .hero h1 {
+
+        font-size:
+          clamp(56px, 16vw, 80px);
+
+        line-height: 1.03;
+
+      }
+
+
+      .hero h1 span {
+
+        margin-top: 16px;
+
+      }
+
+
+      .building,
+      .interests,
+      .operating,
+      .statement {
+
+        padding-top: 95px;
+        padding-bottom: 95px;
+
+      }
+
+
+      .section-content h2,
+      .operating-content h2 {
+
+        margin-bottom: 45px;
+
+        line-height: 1.12;
+
+      }
+
+
+      .track {
+
+        grid-template-columns:
+          32px 1fr;
+
+        gap: 15px;
+
+      }
+
+
+      .track-description {
+
+        grid-column: 2;
+
+      }
+
+
+      a.track:hover {
+
+        padding-left: 0;
+        padding-right: 0;
+
+        background: transparent;
+
+      }
+
+
+      .interest-grid {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .interest,
+      .interest:nth-child(odd),
+      .interest:nth-child(even) {
+
+        padding:
+          28px 0;
+
+        border-right: 0;
+
+      }
+
+
+      .interests h2 {
+
+        margin-bottom: 60px;
+
+        font-size:
+          clamp(48px, 14vw, 70px);
+
+        line-height: 1.08;
+
+      }
+
+
+      .interests h2 span {
+
+        margin-top: 14px;
+
+      }
+
+
+      .principle {
+
+        grid-template-columns:
+          34px 1fr;
+
+      }
+
+
+      .principle span {
+
+        grid-column: 2;
+
+      }
+
+
+      .statement h2 {
+
+        font-size:
+          clamp(56px, 16vw, 88px);
+
+      }
+
+
+      .statement h2 span {
+
+        margin-top: 24px;
+
+      }
+
+
+      .contact-block {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 35px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       NAV
+  ====================================================== -->
+
+  <header class="nav">
+
+
+    <a
+      href="index.html"
+      class="brand"
+    >
+      Felipe Quiroz
+    </a>
+
+
+    <nav class="nav-links">
+
+
+      <a href="index.html#work">
+        Trabajo
+      </a>
+
+
+      <a href="about.html">
+        Sobre mí
+      </a>
+
+
+      <a
+        href="now.html"
+        class="active"
+      >
+        Ahora
+      </a>
+
+
+      <a
+        href="#contact"
+        class="contact-nav"
+      >
+        Contactoo
+      </a>
+
+
+      <a
+        href="../now.html"
+        class="lang-switch"
+        aria-label="View site in English"
+      >
+        EN
+      </a>
+
+
+    </nav>
+
+
+  </header>
+
+
+
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
+
+  <section class="hero">
+
+
+    <div class="hero-grid">
+
+
+      <div>
+
+
+        <div class="hero-label">
+          Ahora / 01
+        </div>
+
+
+        <h1>
+
+          Lo que estoy construyendo
+
+          <span>
+            ahora.
+          </span>
+
+        </h1>
+
+
+      </div>
+
+
+
+      <div class="hero-side">
+
+
+        <p>
+
+          A snapshot of the products, systems and ideas
+          occupying most of my attention ahora.
+
+        </p>
+
+
+        <p>
+
+          Casi siempre en la intersección entre producto,
+          construcción de compañías, growth y tecnología emergente.
+
+        </p>
+
+
+        <div class="hero-meta">
+
+          <span>
+            Santiago / CL
+          </span>
+
+          <span>
+            2026
+          </span>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =====================================================
+       BUILDING
+  ====================================================== -->
+
+  <section class="building">
+
+
+    <div class="section-grid">
+
+
+      <div class="section-label">
+        02 / Construyendo
+      </div>
+
+
+
+      <div class="section-content">
+
+
+        <h2>
+          Tres cosas que hoy
+          concentran mi atención.
+        </h2>
+
+
+
+        <div class="tracks">
+
+
+          <!-- GEOVICTORIA -->
+
+          <a
+            href="geovictoria.html"
+            class="track"
+          >
+
+
+            <div class="track-number">
+              01
+            </div>
+
+
+            <div class="track-main">
+
+              <strong>
+                GeoVictoria
+              </strong>
+
+              <span>
+                Product · Workforce Management
+              </span>
+
+            </div>
+
+
+            <div class="track-description">
+
+              Construyendo y validando productos de workforce management
+              alrededor de planificación, optimización y
+              operación de turnos para equipos enterprise.
+
+            </div>
+
+
+          </a>
+
+
+
+          <!-- LOWSIGNAL -->
+
+          <a
+            href="lowsignal.html"
+            class="track"
+          >
+
+
+            <div class="track-number">
+              02
+            </div>
+
+
+            <div class="track-main">
+
+              <strong>
+                lowsignal
+              </strong>
+
+              <span>
+                Company Building · Growth Sistemas
+              </span>
+
+            </div>
+
+
+            <div class="track-description">
+
+              Construyendo los sistemas, productos e infraestructura
+              operativa detrás de una growth company que
+              conecta estrategia, tecnología y ejecución.
+
+            </div>
+
+
+          </a>
+
+
+
+          <!-- EXPLORING -->
+
+          <div class="track">
+
+
+            <div class="track-number">
+              03
+            </div>
+
+
+            <div class="track-main">
+
+              <strong>
+                Explorando
+              </strong>
+
+              <span>
+                IA · Productos · Nuevos Modelos
+              </span>
+
+            </div>
+
+
+            <div class="track-description">
+
+              Explorando cómo los productos AI-native, la automatización
+              y nuevos modelos de compañía están cambiando lo que
+              equipos pequeños pueden construir y operar.
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =====================================================
+       INTERESTS
+  ====================================================== -->
+
+  <section class="interests">
+
+
+    <div class="interests-inner">
+
+
+      <div class="section-label">
+        03 / En qué estoy interesado
+      </div>
+
+
+      <h2>
+
+        Cosas a las que
+
+        <span>
+          estoy prestando atención.
+        </span>
+
+      </h2>
+
+
+
+      <div class="interest-grid">
+
+
+        <div class="interest">
+
+
+          <div class="interest-number">
+            01
+          </div>
+
+
+          <strong>
+            Productos AI-native
+          </strong>
+
+
+          <p>
+
+            Productos diseñados alrededor de IA desde el inicio,
+            en vez de agregarla después como una funcionalidad más.
+
+          </p>
+
+
+        </div>
+
+
+
+        <div class="interest">
+
+
+          <div class="interest-number">
+            02
+          </div>
+
+
+          <strong>
+            Sistemas de workforce
+          </strong>
+
+
+          <p>
+
+            Cómo la planificación, optimización y los workflows
+            de colaboradores pueden ser más inteligentes y menos manuales.
+
+          </p>
+
+
+        </div>
+
+
+
+        <div class="interest">
+
+
+          <div class="interest-number">
+            03
+          </div>
+
+
+          <strong>
+            Infraestructura de growth
+          </strong>
+
+
+          <p>
+
+            Construir sistemas repetibles entre posicionamiento,
+            distribución, automatización y ejecución.
+
+          </p>
+
+
+        </div>
+
+
+
+        <div class="interest">
+
+
+          <div class="interest-number">
+            04
+          </div>
+
+
+          <strong>
+            Construcción de compañías
+          </strong>
+
+
+          <p>
+
+            Nuevas formas de estructurar compañías, productos
+            y equipos alrededor de tecnología y leverage.
+
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =====================================================
+       OPERATING
+  ====================================================== -->
+
+  <section class="operating">
+
+
+    <div class="operating-grid">
+
+
+      <div class="section-label">
+        04 / Operando
+      </div>
+
+
+
+      <div class="operating-content">
+
+
+        <h2>
+          Lo que estoy optimizando.
+        </h2>
+
+
+
+        <div class="principles">
+
+
+          <div class="principle">
+
+            <div class="principle-number">
+              01
+            </div>
+
+            <strong>
+              Claridad
+            </strong>
+
+            <span>
+              Menos complejidad
+            </span>
+
+          </div>
+
+
+
+          <div class="principle">
+
+            <div class="principle-number">
+              02
+            </div>
+
+            <strong>
+              Sistemas
+            </strong>
+
+            <span>
+              Más repetibilidad
+            </span>
+
+          </div>
+
+
+
+          <div class="principle">
+
+            <div class="principle-number">
+              03
+            </div>
+
+            <strong>
+              Leverage
+            </strong>
+
+            <span>
+              Mejor resultado
+            </span>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =====================================================
+       STATEMENT
+  ====================================================== -->
+
+  <section class="statement">
+
+
+    <div class="statement-inner">
+
+
+      <div class="section-label">
+        05 / Siempre
+      </div>
+
+
+      <h2>
+
+        Sigo construyendo.
+
+        <span>
+          Sigo aprendiendo.
+        </span>
+
+      </h2>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =====================================================
+       CONTACT
+  ====================================================== -->
+
+  <section
+    class="bottom"
+    id="contact"
+  >
+
+
+    <div class="contact-block">
+
+
+      <div class="contact-copy">
+
+
+        <div class="section-label">
+          Contacto
+        </div>
+
+
+        <h3>
+          Conversemos.
+        </h3>
+
+
+      </div>
+
+
+
+      <div class="contact-links">
+
+
+        <a
+          href="https://www.linkedin.com/in/felipequirozp"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-link"
+        >
+          LinkedIn
+        </a>
+
+
+        <a
+          href="https://www.instagram.com/felipe_quirozp/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-link"
+        >
+          Instagram
+        </a>
+
+
+        <a
+          href="mailto:felipe@lowsignal.cl"
+          class="contact-link"
+        >
+          Email
+        </a>
+
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- ===================================================
+         FOOTER
+    ==================================================== -->
+
+    <footer class="footer">
+
+
+      <div>
+        © 2026 Felipe Quiroz
+      </div>
+
+
+
+      <div class="footer-socials">
+
+
+        <!-- LINKEDIN -->
+
+        <a
+          href="https://www.linkedin.com/in/felipequirozp"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          class="social-icon"
+        >
+
+          <span class="linkedin-mark">
+            in
+          </span>
+
+        </a>
+
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+          href="https://www.instagram.com/felipe_quirozp/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+          class="social-icon"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+
+            <rect
+              x="4"
+              y="4"
+              width="16"
+              height="16"
+              rx="5"
+            />
+
+            <circle
+              cx="12"
+              cy="12"
+              r="3.5"
+            />
+
+            <circle
+              cx="17.3"
+              cy="6.8"
+              r=".7"
+              class="filled"
+            />
+
+          </svg>
+
+        </a>
+
+
+
+        <!-- EMAIL -->
+
+        <a
+          href="mailto:felipe@lowsignal.cl"
+          aria-label="Email"
+          class="social-icon"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+
+            <rect
+              x="3"
+              y="5"
+              width="18"
+              height="14"
+              rx="2"
+            />
+
+            <path
+              d="M4 7L12 13L20 7"
+            />
+
+          </svg>
+
+        </a>
+
+
+      </div>
+
+
+
+      <div class="footer-location">
+        Santiago / CL
+      </div>
+
+
+    </footer>
+
+
+  </section>
+
+
+</body>
+
+</html>
