@@ -10,19 +10,21 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Felipe Quiroz — Producto, Growth & Business</title>
+  <title>Felipe Quiroz | Producto, Growth & Negocio</title>
 
   <meta
     name="description"
-    content="Portfolio de Felipe Quiroz. Producto, growth, negocios y construcción de sistemas desde Santiago, Chile."
+    content="Felipe Quiroz — Product Manager, Co-Founder y operador trabajando entre producto, growth y negocio."
   >
-
-  <!-- =====================================================
-       SEO / LANGUAGES
-  ====================================================== -->
 
   <link
     rel="canonical"
+    href="https://felipequirozp.github.io/es/"
+  >
+
+  <link
+    rel="alternate"
+    hreflang="es"
     href="https://felipequirozp.github.io/es/"
   >
 
@@ -34,28 +36,18 @@
 
   <link
     rel="alternate"
-    hreflang="es"
-    href="https://felipequirozp.github.io/es/"
-  >
-
-  <link
-    rel="alternate"
     hreflang="x-default"
     href="https://felipequirozp.github.io/"
   >
 
-
   <!-- FAVICON -->
-
   <link
     rel="icon"
     type="image/png"
     href="../favicon.png"
   >
 
-
   <!-- FONTS -->
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <link
@@ -142,7 +134,7 @@
 
 
     ::selection {
-      background: var(--steel);
+      background: var(--navy);
       color: white;
     }
 
@@ -155,17 +147,16 @@
 
       min-height: 84px;
 
-      padding:
-        0 5vw;
+      padding: 0 5vw;
 
       display: flex;
+
       align-items: center;
       justify-content: space-between;
 
       gap: 30px;
 
       background: var(--navy);
-
       color: white;
 
       border-bottom:
@@ -191,9 +182,10 @@
     .nav-links {
 
       display: flex;
+
       align-items: center;
 
-      gap: 28px;
+      gap: 30px;
 
       font-size: 10px;
       font-weight: 500;
@@ -205,7 +197,7 @@
     }
 
 
-    .nav-links > a:not(.contact-nav) {
+    .nav-links > a:not(.contact-nav):not(.lang-switch) {
 
       position: relative;
 
@@ -217,7 +209,7 @@
     }
 
 
-    .nav-links > a:not(.contact-nav)::after {
+    .nav-links > a:not(.contact-nav):not(.lang-switch)::after {
 
       content: "";
 
@@ -237,14 +229,14 @@
     }
 
 
-    .nav-links > a:not(.contact-nav):hover {
+    .nav-links > a:not(.contact-nav):not(.lang-switch):hover {
 
       color: white;
 
     }
 
 
-    .nav-links > a:not(.contact-nav):hover::after {
+    .nav-links > a:not(.contact-nav):not(.lang-switch):hover::after {
 
       width: 100%;
 
@@ -253,7 +245,44 @@
 
     .lang-switch {
 
-      color: white !important;
+      width: 38px;
+      height: 38px;
+
+      flex-shrink: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border:
+        1px solid rgba(255,255,255,.22);
+
+      border-radius: 50%;
+
+      color: var(--slate-light);
+
+      font-size: 9px;
+      font-weight: 600;
+
+      letter-spacing: .06em;
+
+      transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+
+    }
+
+
+    .lang-switch:hover {
+
+      background:
+        rgba(255,255,255,.10);
+
+      color: white;
+
+      border-color:
+        rgba(255,255,255,.45);
 
     }
 
@@ -299,42 +328,48 @@
         calc(100vh - 84px);
 
       padding:
-        90px 5vw 75px;
+        70px 7vw 75px;
 
       background: var(--navy);
 
       color: white;
 
-      display: grid;
+      display: flex;
 
-      grid-template-columns:
-        minmax(0, 1.45fr)
-        minmax(300px, .55fr);
-
-      gap: 7vw;
-
-      align-items: end;
+      align-items: center;
 
     }
 
 
-    .hero-copy {
+    .hero-grid {
 
-      max-width: 1000px;
+      width: 100%;
+      max-width: 1500px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns:
+        1.35fr .65fr;
+
+      gap: 7vw;
+
+      align-items: center;
 
     }
 
 
     .hero-label {
 
-      margin-bottom: 36px;
+      margin-bottom: 30px;
 
-      color: var(--slate-light);
+      color: var(--slate);
 
-      font-size: 9px;
+      font-size: 10px;
       font-weight: 500;
 
-      letter-spacing: .09em;
+      letter-spacing: .1em;
 
       text-transform: uppercase;
 
@@ -343,16 +378,18 @@
 
     .hero h1 {
 
+      max-width: 950px;
+
       margin: 0;
 
       font-family: "Manrope", sans-serif;
 
       font-size:
-        clamp(62px, 9vw, 142px);
+        clamp(68px, 8.2vw, 132px);
 
-      line-height: .94;
+      line-height: .96;
 
-      letter-spacing: -.075em;
+      letter-spacing: -.07em;
 
       font-weight: 500;
 
@@ -364,7 +401,7 @@
       display: block;
 
       margin:
-        18px 0;
+        10px 0 12px;
 
       color: var(--slate);
 
@@ -373,14 +410,13 @@
 
     .hero-description {
 
-      max-width: 650px;
+      max-width: 720px;
 
-      margin:
-        50px 0 0;
+      margin-top: 42px;
 
-      color: var(--slate-light);
+      color: #c4ccd5;
 
-      font-size: 14px;
+      font-size: 15px;
 
       line-height: 1.8;
 
@@ -388,89 +424,44 @@
 
 
     /* =====================================================
-       HERO SIDE
+       HERO ROLES
     ===================================================== */
-
-    .hero-side {
-
-      align-self: stretch;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-
-      gap: 30px;
-
-    }
-
-
-    .profile-wrap {
-
-      width: 100%;
-
-      max-width: 360px;
-
-      margin-left: auto;
-
-      overflow: hidden;
-
-      border-radius: 24px;
-
-      background: var(--steel);
-
-    }
-
-
-    .profile-wrap img {
-
-      width: 100%;
-      aspect-ratio: 4 / 5;
-
-      object-fit: cover;
-
-    }
-
 
     .hero-roles {
 
-      width: 100%;
+      margin-top: 42px;
 
-      max-width: 360px;
+      display: flex;
 
-      margin-left: auto;
+      flex-direction: column;
 
-      border-top:
-        1px solid rgba(255,255,255,.18);
+      gap: 14px;
 
     }
 
 
     .hero-role {
 
-      padding:
-        18px 0;
-
       display: grid;
 
       grid-template-columns:
-        100px 1fr;
+        160px 1fr;
 
       gap: 20px;
 
-      border-bottom:
-        1px solid rgba(255,255,255,.18);
+      align-items: baseline;
 
     }
 
 
     .hero-role span {
 
-      color: white;
+      color: var(--slate-light);
 
-      font-family: "Manrope", sans-serif;
-
-      font-size: 12px;
+      font-size: 10px;
       font-weight: 500;
+
+      letter-spacing: .02em;
 
       text-transform: none;
 
@@ -479,12 +470,95 @@
 
     .hero-role strong {
 
-      color: var(--slate-light);
+      font-size: 13px;
+      font-weight: 500;
+
+      color: white;
+
+    }
+
+
+    /* =====================================================
+       HERO PHOTO
+    ===================================================== */
+
+    .hero-photo-wrap {
+
+      width: 100%;
+
+      max-width: 420px;
+
+      justify-self: end;
+
+    }
+
+
+    .hero-photo {
+
+      overflow: hidden;
+
+      border-radius: 32px;
+
+      border:
+        1px solid rgba(255,255,255,.13);
+
+      background: var(--steel);
+
+    }
+
+
+    .hero-photo img {
+
+      width: 100%;
+
+      aspect-ratio: 4 / 5;
+
+      object-fit: cover;
+
+    }
+
+
+    .photo-meta {
+
+      margin-top: 17px;
+
+      padding-top: 15px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      border-top:
+        1px solid rgba(255,255,255,.14);
+
+      color: var(--slate);
+
+      font-size: 9px;
+      font-weight: 500;
+
+      letter-spacing: .08em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =====================================================
+       SHARED SECTION LABEL
+    ===================================================== */
+
+    .section-label {
+
+      color: var(--muted);
 
       font-size: 10px;
-      font-weight: 400;
+      font-weight: 600;
 
-      line-height: 1.55;
+      letter-spacing: .1em;
+
+      text-transform: uppercase;
 
     }
 
@@ -513,49 +587,29 @@
       display: grid;
 
       grid-template-columns:
-        150px minmax(0, 1fr);
+        .7fr 2.3fr;
 
-      gap: 55px;
-
-      align-items: start;
-
-    }
-
-
-    .section-label {
-
-      padding-top: 8px;
-
-      color: var(--muted);
-
-      font-size: 9px;
-      font-weight: 600;
-
-      letter-spacing: .09em;
-
-      text-transform: uppercase;
+      gap: 8vw;
 
     }
 
 
     .section-head h2 {
 
-      max-width: 920px;
+      max-width: 950px;
 
       margin: 0;
 
       font-family: "Manrope", sans-serif;
 
       font-size:
-        clamp(46px, 6vw, 88px);
+        clamp(48px, 6vw, 88px);
 
       line-height: 1.10;
 
       letter-spacing: -.06em;
 
       font-weight: 500;
-
-      color: var(--navy);
 
     }
 
@@ -578,21 +632,21 @@
 
     .project {
 
-      min-height: 250px;
+      position: relative;
+
+      min-height: 260px;
 
       padding:
-        38px 0;
+        42px 0;
 
       display: grid;
 
       grid-template-columns:
-        70px
-        minmax(180px, .55fr)
-        minmax(300px, 1fr);
+        70px 1.25fr .85fr;
 
-      gap: 35px;
+      gap: 40px;
 
-      align-items: center;
+      align-items: start;
 
       border-bottom:
         1px solid var(--line);
@@ -606,8 +660,8 @@
 
     .project:hover {
 
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 22px;
+      padding-right: 22px;
 
       background: var(--ice);
 
@@ -616,292 +670,252 @@
 
     .project-number {
 
-      align-self: start;
-
-      padding-top: 4px;
+      padding-top: 6px;
 
       color: var(--muted);
 
-      font-size: 9px;
+      font-size: 10px;
 
     }
 
 
-    .project-name {
+    .project-main h3 {
 
-      align-self: start;
-
-    }
-
-
-    .project-name strong {
-
-      display: block;
-
-      margin-bottom: 8px;
+      margin:
+        0 0 14px;
 
       font-family: "Manrope", sans-serif;
 
       font-size:
-        clamp(25px, 3vw, 38px);
+        clamp(36px, 4.4vw, 68px);
+
+      line-height: .98;
+
+      letter-spacing: -.06em;
 
       font-weight: 500;
-
-      letter-spacing: -.045em;
 
       color: var(--navy);
 
     }
 
 
-    .project-name span {
+    .project-main .role {
 
       color: var(--muted);
 
-      font-size: 10px;
+      font-size: 11px;
 
-      line-height: 1.5;
-
-    }
-
-
-    .project-content {
-
-      display: grid;
-
-      grid-template-columns:
-        minmax(200px, 1fr)
-        minmax(230px, .85fr);
-
-      gap: 45px;
-
-      align-items: center;
+      line-height: 1.55;
 
     }
 
 
-    .project-visual {
+    .project-side {
 
-      min-height: 150px;
-
-      padding:
-        28px;
-
-      border-radius: 18px;
-
-      background: var(--navy);
-
-      color: white;
+      padding-top: 5px;
 
       display: flex;
+
       flex-direction: column;
+
       justify-content: space-between;
 
-      overflow: hidden;
-
-    }
-
-
-    /* GEO VISUAL */
-
-    .mini-bars {
-
-      display: flex;
-      align-items: flex-end;
-
-      gap: 8px;
-
-      height: 65px;
-
-    }
-
-
-    .mini-bar {
-
-      flex: 1;
-
-      border-radius:
-        5px 5px 2px 2px;
-
-      background:
-        rgba(255,255,255,.18);
-
-    }
-
-
-    .mini-bar:nth-child(1) {
-      height: 34%;
-    }
-
-    .mini-bar:nth-child(2) {
-      height: 64%;
-    }
-
-    .mini-bar:nth-child(3) {
-      height: 47%;
-    }
-
-    .mini-bar:nth-child(4) {
-      height: 82%;
-    }
-
-    .mini-bar:nth-child(5) {
-      height: 68%;
-    }
-
-    .mini-bar:nth-child(6) {
-      height: 100%;
-    }
-
-
-    .visual-meta {
-
-      display: flex;
-      justify-content: space-between;
-
-      gap: 15px;
-
-      color: var(--slate-light);
-
-      font-size: 8px;
-
-      letter-spacing: .06em;
-
-      text-transform: uppercase;
-
-    }
-
-
-    /* LOW VISUAL */
-
-    .system-line {
-
-      display: grid;
-
-      grid-template-columns:
-        1fr 22px 1fr 22px 1fr;
-
-      align-items: center;
-
-      gap: 5px;
-
-    }
-
-
-    .system-node {
-
-      min-height: 54px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      border:
-        1px solid rgba(255,255,255,.18);
-
-      border-radius: 10px;
-
-      color: var(--slate-light);
-
-      font-size: 9px;
-
-      text-align: center;
-
-    }
-
-
-    .system-node.center {
-
-      color: white;
-
-      background:
-        rgba(255,255,255,.10);
-
-    }
-
-
-    .system-connector {
-
-      height: 1px;
-
-      background:
-        rgba(255,255,255,.20);
-
-    }
-
-
-    /* TETHER VISUAL */
-
-    .education-line {
-
-      display: grid;
-
-      grid-template-columns:
-        1fr 20px 1fr 20px 1fr;
-
-      align-items: center;
-
-    }
-
-
-    .education-node {
-
-      min-height: 52px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      border:
-        1px solid rgba(255,255,255,.18);
-
-      border-radius: 10px;
-
-      color: var(--slate-light);
-
-      font-size: 8px;
-
-      text-align: center;
-
-    }
-
-
-    .education-node.middle {
-
-      color: white;
-
-      background:
-        rgba(255,255,255,.10);
-
-    }
-
-
-    .education-connector {
-
-      height: 1px;
-
-      background:
-        rgba(255,255,255,.20);
+      min-height: 165px;
 
     }
 
 
     .project-statement {
 
-      max-width: 370px;
+      max-width: 420px;
 
-      font-family: "Manrope", sans-serif;
+      color: #3f4a55;
 
-      font-size:
-        clamp(22px, 2.2vw, 31px);
+      font-size: 15px;
 
-      line-height: 1.24;
+      line-height: 1.65;
 
-      letter-spacing: -.04em;
+    }
 
-      font-weight: 500;
 
-      color: var(--navy);
+    .project-meta {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      letter-spacing: .07em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =====================================================
+       GEOVICTORIA VISUAL
+    ===================================================== */
+
+    .project-visual {
+
+      margin-top: 32px;
+
+      max-width: 430px;
+
+      height: 38px;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+    }
+
+
+    .visual-bar {
+
+      height: 8px;
+
+      border-radius: 999px;
+
+      background: var(--slate-light);
+
+    }
+
+
+    .visual-bar.a {
+      width: 28%;
+    }
+
+
+    .visual-bar.b {
+
+      width: 48%;
+
+      background: var(--steel-light);
+
+    }
+
+
+    .visual-bar.c {
+
+      width: 18%;
+
+      background: var(--navy);
+
+    }
+
+
+    /* =====================================================
+       LOWSIGNAL VISUAL
+    ===================================================== */
+
+    .system-visual {
+
+      margin-top: 32px;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      max-width: 430px;
+
+    }
+
+
+    .system-dot {
+
+      min-width: 62px;
+
+      padding:
+        10px 13px;
+
+      border:
+        1px solid var(--line);
+
+      border-radius: 10px;
+
+      color: var(--muted);
+
+      font-size: 8px;
+
+      text-align: center;
+
+      text-transform: uppercase;
+
+      letter-spacing: .05em;
+
+    }
+
+
+    .system-line {
+
+      flex: 1;
+
+      height: 1px;
+
+      background: var(--line);
+
+    }
+
+
+    /* =====================================================
+       TETHERED VISUAL
+    ===================================================== */
+
+    .network-visual {
+
+      margin-top: 32px;
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 30px 1fr 30px 1fr;
+
+      align-items: center;
+
+      max-width: 430px;
+
+    }
+
+
+    .network-node {
+
+      height: 42px;
+
+      border:
+        1px solid var(--line);
+
+      border-radius: 10px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      color: var(--muted);
+
+      font-size: 8px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .network-line {
+
+      height: 1px;
+
+      background: var(--line);
 
     }
 
@@ -913,14 +927,14 @@
     .about {
 
       padding:
-        130px 7vw;
+        135px 7vw;
 
       background: var(--ice);
 
     }
 
 
-    .about-inner {
+    .about-grid {
 
       max-width: 1400px;
 
@@ -929,9 +943,9 @@
       display: grid;
 
       grid-template-columns:
-        150px minmax(0, 1fr);
+        .7fr 2.3fr;
 
-      gap: 55px;
+      gap: 8vw;
 
     }
 
@@ -945,12 +959,13 @@
 
     .about-content h2 {
 
-      margin: 0;
+      margin:
+        0 0 42px;
 
       font-family: "Manrope", sans-serif;
 
       font-size:
-        clamp(48px, 6.4vw, 94px);
+        clamp(48px, 6.5vw, 94px);
 
       line-height: 1.08;
 
@@ -970,35 +985,35 @@
       margin:
         16px 0 14px;
 
-      color: var(--slate);
+      color: var(--steel-light);
 
     }
 
 
     .about-copy {
 
-      max-width: 650px;
+      max-width: 680px;
 
-      margin-top: 42px;
+      margin-bottom: 36px;
 
-      color: #4a5560;
+      color: #3f4a55;
 
-      font-size: 14px;
+      font-size: 15px;
 
       line-height: 1.85;
 
     }
 
 
+    /* =====================================================
+       TEXT LINKS
+    ===================================================== */
+
     .text-link {
 
-      width: fit-content;
+      display: inline-flex;
 
-      margin-top: 30px;
-
-      padding-bottom: 5px;
-
-      display: inline-block;
+      padding-bottom: 4px;
 
       border-bottom:
         1px solid rgba(24,37,54,.35);
@@ -1012,13 +1027,14 @@
 
       text-transform: uppercase;
 
+      transition:
+        opacity .2s ease;
+
     }
 
 
     .text-link:hover {
-
       opacity: .55;
-
     }
 
 
@@ -1029,59 +1045,55 @@
     .now {
 
       padding:
-        125px 7vw 135px;
+        130px 7vw;
 
       background: var(--paper);
 
     }
 
 
-    .now-inner {
+    .now-grid {
 
       max-width: 1400px;
 
       margin: 0 auto;
 
-    }
-
-
-    .now-head {
-
-      margin-bottom: 65px;
-
       display: grid;
 
       grid-template-columns:
-        150px 1fr;
+        .7fr 2.3fr;
 
-      gap: 55px;
+      gap: 8vw;
 
     }
 
 
-    .now-head h2 {
+    .now-content h2 {
 
-      margin: 0;
+      max-width: 800px;
+
+      margin:
+        0 0 55px;
 
       font-family: "Manrope", sans-serif;
 
       font-size:
-        clamp(46px, 5.5vw, 80px);
+        clamp(44px, 5.5vw, 80px);
 
-      line-height: 1.08;
+      line-height: 1.06;
 
       letter-spacing: -.06em;
 
       font-weight: 500;
-
-      color: var(--navy);
 
     }
 
 
     .now-list {
 
-      margin-left: 205px;
+      max-width: 900px;
+
+      margin-bottom: 38px;
 
       border-top:
         1px solid var(--line);
@@ -1092,18 +1104,28 @@
     .now-item {
 
       padding:
-        25px 0;
+        24px 0;
 
       display: grid;
 
       grid-template-columns:
-        minmax(160px, .5fr)
-        1fr;
+        55px 1fr auto;
 
-      gap: 30px;
+      gap: 25px;
+
+      align-items: center;
 
       border-bottom:
         1px solid var(--line);
+
+    }
+
+
+    .now-number {
+
+      color: var(--muted);
+
+      font-size: 10px;
 
     }
 
@@ -1112,8 +1134,10 @@
 
       font-family: "Manrope", sans-serif;
 
-      font-size: 17px;
+      font-size: 20px;
       font-weight: 500;
+
+      letter-spacing: -.025em;
 
       color: var(--navy);
 
@@ -1124,44 +1148,33 @@
 
       color: var(--muted);
 
-      font-size: 12px;
+      font-size: 9px;
 
-      line-height: 1.6;
+      letter-spacing: .06em;
 
-    }
-
-
-    .now-link-wrap {
-
-      margin-left: 205px;
+      text-transform: uppercase;
 
     }
 
 
     /* =====================================================
-       FINAL STATEMENT
+       STATEMENT
     ===================================================== */
 
     .statement {
 
-      min-height: 520px;
-
       padding:
-        100px 7vw;
+        145px 7vw;
 
       background: var(--navy-deep);
 
       color: white;
-
-      display: flex;
-      align-items: center;
 
     }
 
 
     .statement-inner {
 
-      width: 100%;
       max-width: 1400px;
 
       margin: 0 auto;
@@ -1169,34 +1182,27 @@
     }
 
 
-    .statement-label {
+    .statement .section-label {
 
       margin-bottom: 48px;
 
       color: var(--slate);
-
-      font-size: 9px;
-      font-weight: 500;
-
-      letter-spacing: .09em;
-
-      text-transform: uppercase;
 
     }
 
 
     .statement h2 {
 
-      margin: 0;
+      max-width: 1150px;
 
-      max-width: 1000px;
+      margin: 0;
 
       font-family: "Manrope", sans-serif;
 
       font-size:
-        clamp(58px, 8vw, 120px);
+        clamp(64px, 9vw, 140px);
 
-      line-height: 1.02;
+      line-height: 1;
 
       letter-spacing: -.07em;
 
@@ -1223,7 +1229,7 @@
     .bottom {
 
       padding:
-        85px 7vw 42px;
+        90px 7vw 42px;
 
       background: var(--ice);
 
@@ -1236,9 +1242,10 @@
 
       margin: 0 auto;
 
-      padding-bottom: 70px;
+      padding-bottom: 75px;
 
       display: flex;
+
       justify-content: space-between;
       align-items: flex-end;
 
@@ -1251,9 +1258,7 @@
 
 
     .contact-copy .section-label {
-
       margin-bottom: 18px;
-
     }
 
 
@@ -1264,7 +1269,7 @@
       font-family: "Manrope", sans-serif;
 
       font-size:
-        clamp(40px, 5vw, 72px);
+        clamp(42px, 5.5vw, 78px);
 
       line-height: 1;
 
@@ -1272,14 +1277,13 @@
 
       font-weight: 500;
 
-      color: var(--navy);
-
     }
 
 
     .contact-links {
 
       display: flex;
+
       flex-wrap: wrap;
 
       gap: 10px;
@@ -1302,9 +1306,9 @@
       font-size: 10px;
       font-weight: 500;
 
-      text-transform: uppercase;
-
       letter-spacing: .05em;
+
+      text-transform: uppercase;
 
       transition:
         background .2s ease,
@@ -1357,15 +1361,14 @@
 
 
     .footer-location {
-
       text-align: right;
-
     }
 
 
     .footer-socials {
 
       display: flex;
+
       align-items: center;
 
       gap: 10px;
@@ -1379,6 +1382,7 @@
       height: 36px;
 
       display: flex;
+
       align-items: center;
       justify-content: center;
 
@@ -1457,60 +1461,6 @@
        TABLET
     ===================================================== */
 
-    @media(max-width: 1000px) {
-
-      .hero {
-
-        grid-template-columns:
-          1fr;
-
-        gap: 70px;
-
-      }
-
-
-      .hero-side {
-
-        display: grid;
-
-        grid-template-columns:
-          minmax(250px, 360px)
-          minmax(250px, 1fr);
-
-        align-items: end;
-
-      }
-
-
-      .profile-wrap,
-      .hero-roles {
-
-        margin-left: 0;
-
-      }
-
-
-      .project {
-
-        grid-template-columns:
-          55px 1fr;
-
-      }
-
-
-      .project-content {
-
-        grid-column: 2;
-
-      }
-
-    }
-
-
-    /* =====================================================
-       MOBILE NAV / TABLET
-    ===================================================== */
-
     @media(max-width: 900px) {
 
       .nav {
@@ -1536,11 +1486,11 @@
 
       .nav-links {
 
-        gap: 13px;
+        gap: 14px;
 
         font-size: 9px;
 
-        letter-spacing: .035em;
+        letter-spacing: .04em;
 
         white-space: nowrap;
 
@@ -1557,15 +1507,38 @@
 
       .hero {
 
+        min-height: auto;
+
         padding:
-          75px 22px;
+          80px 22px;
+
+      }
+
+
+      .hero-grid {
+
+        grid-template-columns:
+          1fr;
+
+        gap: 65px;
+
+      }
+
+
+      .hero-photo-wrap {
+
+        justify-self: start;
+
+        max-width: 390px;
 
       }
 
 
       .work,
       .about,
-      .now {
+      .now,
+      .statement,
+      .bottom {
 
         padding-left: 22px;
         padding-right: 22px;
@@ -1574,37 +1547,32 @@
 
 
       .section-head,
-      .about-inner,
-      .now-head {
+      .about-grid,
+      .now-grid {
 
         grid-template-columns:
           1fr;
 
-        gap: 25px;
+        gap: 35px;
 
       }
 
 
-      .now-list,
-      .now-link-wrap {
+      .project {
 
-        margin-left: 0;
-
-      }
-
-
-      .statement {
-
-        padding-left: 22px;
-        padding-right: 22px;
+        grid-template-columns:
+          55px 1fr;
 
       }
 
 
-      .bottom {
+      .project-side {
 
-        padding-left: 22px;
-        padding-right: 22px;
+        grid-column: 2;
+
+        min-height: auto;
+
+        gap: 30px;
 
       }
 
@@ -1622,9 +1590,7 @@
 
 
       .footer-location {
-
         text-align: left;
-
       }
 
     }
@@ -1634,7 +1600,7 @@
        MOBILE
     ===================================================== */
 
-    @media(max-width: 650px) {
+    @media(max-width: 600px) {
 
       .nav {
 
@@ -1656,9 +1622,7 @@
 
         justify-content: space-between;
 
-        gap: 7px;
-
-        font-size: 8px;
+        gap: 8px;
 
       }
 
@@ -1666,17 +1630,15 @@
       .contact-nav {
 
         padding:
-          7px 9px;
+          7px 10px;
 
       }
 
 
       .hero {
 
-        min-height: auto;
-
         padding:
-          65px 20px 70px;
+          70px 20px 80px;
 
       }
 
@@ -1684,9 +1646,9 @@
       .hero h1 {
 
         font-size:
-          clamp(56px, 18vw, 84px);
+          clamp(58px, 16vw, 80px);
 
-        line-height: .98;
+        line-height: 1;
 
       }
 
@@ -1694,69 +1656,54 @@
       .hero h1 span {
 
         margin:
-          14px 0;
+          12px 0 14px;
 
       }
 
 
       .hero-description {
-
-        margin-top: 38px;
-
-      }
-
-
-      .hero-side {
-
-        display: flex;
-
-      }
-
-
-      .profile-wrap {
-
-        max-width: 100%;
-
-      }
-
-
-      .hero-roles {
-
-        max-width: 100%;
-
+        margin-top: 35px;
       }
 
 
       .hero-role {
 
         grid-template-columns:
-          90px 1fr;
+          1fr;
+
+        gap: 5px;
 
       }
 
 
-      .work {
+      .hero-photo-wrap {
+        max-width: 100%;
+      }
 
-        padding:
-          95px 20px 105px;
+
+      .hero-photo {
+        border-radius: 24px;
+      }
+
+
+      .work,
+      .about,
+      .now,
+      .statement {
+
+        padding-top: 95px;
+        padding-bottom: 95px;
 
       }
 
 
       .section-head {
-
-        margin-bottom: 50px;
-
+        margin-bottom: 55px;
       }
 
 
       .section-head h2 {
-
-        font-size:
-          clamp(42px, 12vw, 60px);
-
         line-height: 1.12;
-
       }
 
 
@@ -1764,13 +1711,13 @@
 
         min-height: auto;
 
+        grid-template-columns:
+          35px 1fr;
+
+        gap: 15px;
+
         padding:
           30px 0;
-
-        grid-template-columns:
-          34px 1fr;
-
-        gap: 18px;
 
       }
 
@@ -1785,47 +1732,30 @@
       }
 
 
-      .project-content {
+      .project-main h3 {
 
-        grid-column:
-          1 / -1;
-
-        grid-template-columns:
-          1fr;
-
-        gap: 25px;
-
-        padding-top: 18px;
+        font-size:
+          clamp(36px, 11vw, 52px);
 
       }
 
 
-      .project-visual {
-
-        min-height: 140px;
-
+      .project-side {
+        grid-column: 2;
       }
 
 
-      .project-statement {
-
-        font-size: 25px;
-
-      }
-
-
-      .about {
-
-        padding:
-          95px 20px;
-
+      .project-visual,
+      .system-visual,
+      .network-visual {
+        max-width: 100%;
       }
 
 
       .about-content h2 {
 
         font-size:
-          clamp(44px, 13vw, 64px);
+          clamp(48px, 14vw, 68px);
 
         line-height: 1.10;
 
@@ -1835,23 +1765,7 @@
       .about-content h2 span {
 
         margin:
-          16px 0;
-
-      }
-
-
-      .now {
-
-        padding:
-          95px 20px;
-
-      }
-
-
-      .now-head h2 {
-
-        font-size:
-          clamp(42px, 12vw, 60px);
+          14px 0 12px;
 
       }
 
@@ -1859,37 +1773,30 @@
       .now-item {
 
         grid-template-columns:
-          1fr;
+          34px 1fr;
 
-        gap: 8px;
+        gap: 15px;
 
       }
 
 
-      .statement {
-
-        min-height: 450px;
-
-        padding:
-          80px 20px;
-
+      .now-item span {
+        grid-column: 2;
       }
 
 
       .statement h2 {
 
         font-size:
-          clamp(55px, 16vw, 78px);
+          clamp(58px, 17vw, 92px);
 
-        line-height: 1.05;
+        line-height: 1;
 
       }
 
 
       .statement h2 span {
-
-        margin-top: 22px;
-
+        margin-top: 24px;
       }
 
 
@@ -1948,19 +1855,19 @@
 
 
       <a
+        href="#contact"
+        class="contact-nav"
+      >
+        Contacto
+      </a>
+
+
+      <a
         href="../index.html"
         class="lang-switch"
         aria-label="Ver sitio en inglés"
       >
         EN
-      </a>
-
-
-      <a
-        href="#contact"
-        class="contact-nav"
-      >
-        Contacto
       </a>
 
 
@@ -1978,80 +1885,102 @@
   <section class="hero">
 
 
-    <div class="hero-copy">
+    <div class="hero-grid">
 
 
-      <div class="hero-label">
-        Felipe Quiroz / Santiago
-      </div>
+      <!-- HERO COPY -->
+
+      <div>
 
 
-      <h1>
-
-        Producto,
-
-        <span>
-          crecimiento
-        </span>
-
-        y negocio.
-
-      </h1>
+        <div class="hero-label">
+          Felipe Quiroz / Santiago
+        </div>
 
 
-      <p class="hero-description">
+        <h1>
 
-        Construyo productos, empresas y sistemas que
-        convierten ideas en soluciones que funcionan
-        en el mundo real.
-
-      </p>
-
-
-    </div>
-
-
-
-    <div class="hero-side">
-
-
-      <div class="profile-wrap">
-
-        <img
-          src="../profile.jpg"
-          alt="Felipe Quiroz"
-        >
-
-      </div>
-
-
-
-      <div class="hero-roles">
-
-
-        <div class="hero-role">
+          Producto,
 
           <span>
-            GeoVictoria
+            growth
           </span>
 
-          <strong>
-            Product Manager · Workforce Management
-          </strong>
+          y negocio.
+
+        </h1>
+
+
+        <p class="hero-description">
+
+          Construyendo productos, empresas y sistemas
+          que llevan ideas al mundo real.
+
+        </p>
+
+
+
+        <div class="hero-roles">
+
+
+          <div class="hero-role">
+
+            <span>
+              GeoVictoria
+            </span>
+
+            <strong>
+              Product Manager · Workforce Management
+            </strong>
+
+          </div>
+
+
+
+          <div class="hero-role">
+
+            <span>
+              lowsignal
+            </span>
+
+            <strong>
+              Co-Founder & COO · Growth Systems
+            </strong>
+
+          </div>
+
 
         </div>
 
 
+      </div>
 
-        <div class="hero-role">
+
+
+      <!-- HERO PHOTO -->
+
+      <div class="hero-photo-wrap">
+
+
+        <div class="hero-photo">
+
+          <img
+            src="../profile.jpg"
+            alt="Felipe Quiroz"
+          >
+
+        </div>
+
+
+        <div class="photo-meta">
 
           <span>
-            lowsignal
+            Producto / Growth / Negocio
           </span>
 
-          <strong>
-            Co-Founder & COO · Growth Systems
-          </strong>
+          <span>
+            CL
+          </span>
 
         </div>
 
@@ -2080,12 +2009,13 @@
 
 
       <div class="section-label">
-        Trabajo / 01
+        01 / Trabajo seleccionado
       </div>
 
 
       <h2>
-        Productos, empresas y sistemas que he ayudado a construir.
+        Productos, empresas
+        y sistemas que he ayudado a construir.
       </h2>
 
 
@@ -2111,59 +2041,55 @@
         </div>
 
 
-        <div class="project-name">
 
-          <strong>
+        <div class="project-main">
+
+
+          <h3>
             GeoVictoria
-          </strong>
+          </h3>
 
-          <span>
-            Workforce Management · Product
-          </span>
+
+          <div class="role">
+            Product Manager · Workforce Management
+          </div>
+
+
+          <div class="project-visual">
+
+            <div class="visual-bar a"></div>
+
+            <div class="visual-bar b"></div>
+
+            <div class="visual-bar c"></div>
+
+          </div>
+
 
         </div>
 
 
 
-        <div class="project-content">
-
-
-          <div class="project-visual">
-
-
-            <div class="visual-meta">
-
-              <span>
-                Workforce
-              </span>
-
-              <span>
-                SaaS
-              </span>
-
-            </div>
-
-
-
-            <div class="mini-bars">
-
-              <div class="mini-bar"></div>
-              <div class="mini-bar"></div>
-              <div class="mini-bar"></div>
-              <div class="mini-bar"></div>
-              <div class="mini-bar"></div>
-              <div class="mini-bar"></div>
-
-            </div>
-
-
-          </div>
-
+        <div class="project-side">
 
 
           <div class="project-statement">
 
-            Construyendo sistemas de producto para operaciones reales de workforce management.
+            Construyendo sistemas de producto para
+            operaciones reales de workforce management.
+
+          </div>
+
+
+          <div class="project-meta">
+
+            <span>
+              Producto / SaaS
+            </span>
+
+            <span>
+              2026 — Present
+            </span>
 
           </div>
 
@@ -2190,74 +2116,64 @@
         </div>
 
 
-        <div class="project-name">
 
-          <strong>
+        <div class="project-main">
+
+
+          <h3>
             lowsignal
-          </strong>
+          </h3>
 
-          <span>
-            Growth Systems · Company Building
-          </span>
+
+          <div class="role">
+            Co-Founder & COO · Growth Systems
+          </div>
+
+
+          <div class="system-visual">
+
+            <div class="system-dot">
+              Estrategia
+            </div>
+
+            <div class="system-line"></div>
+
+            <div class="system-dot">
+              Sistemas
+            </div>
+
+            <div class="system-line"></div>
+
+            <div class="system-dot">
+              Growth
+            </div>
+
+          </div>
+
 
         </div>
 
 
 
-        <div class="project-content">
-
-
-          <div class="project-visual">
-
-
-            <div class="visual-meta">
-
-              <span>
-                Growth Systems
-              </span>
-
-              <span>
-                2025 —
-              </span>
-
-            </div>
-
-
-
-            <div class="system-line">
-
-
-              <div class="system-node">
-                Strategy
-              </div>
-
-
-              <div class="system-connector"></div>
-
-
-              <div class="system-node center">
-                Systems
-              </div>
-
-
-              <div class="system-connector"></div>
-
-
-              <div class="system-node">
-                Growth
-              </div>
-
-
-            </div>
-
-
-          </div>
-
+        <div class="project-side">
 
 
           <div class="project-statement">
 
             Construyendo el sistema detrás del crecimiento.
+
+          </div>
+
+
+          <div class="project-meta">
+
+            <span>
+              Growth / Company Building
+            </span>
+
+            <span>
+              2025 — Present
+            </span>
 
           </div>
 
@@ -2284,74 +2200,65 @@
         </div>
 
 
-        <div class="project-name">
 
-          <strong>
+        <div class="project-main">
+
+
+          <h3>
             TetherEd
-          </strong>
+          </h3>
 
-          <span>
-            EdTech · Partnerships
-          </span>
+
+          <div class="role">
+            Head of Partnerships · EdTech
+          </div>
+
+
+          <div class="network-visual">
+
+            <div class="network-node">
+              Colegios
+            </div>
+
+            <div class="network-line"></div>
+
+            <div class="network-node">
+              Comunidades
+            </div>
+
+            <div class="network-line"></div>
+
+            <div class="network-node">
+              Instituciones
+            </div>
+
+          </div>
+
 
         </div>
 
 
 
-        <div class="project-content">
-
-
-          <div class="project-visual">
-
-
-            <div class="visual-meta">
-
-              <span>
-                Education
-              </span>
-
-              <span>
-                Partnerships
-              </span>
-
-            </div>
-
-
-
-            <div class="education-line">
-
-
-              <div class="education-node">
-                Schools
-              </div>
-
-
-              <div class="education-connector"></div>
-
-
-              <div class="education-node middle">
-                Communities
-              </div>
-
-
-              <div class="education-connector"></div>
-
-
-              <div class="education-node">
-                Institutions
-              </div>
-
-
-            </div>
-
-
-          </div>
-
+        <div class="project-side">
 
 
           <div class="project-statement">
 
-            Ampliando el acceso a la educación a través de productos y alianzas.
+            Ampliando el acceso a la educación
+            a través de productos y alianzas.
+
+          </div>
+
+
+          <div class="project-meta">
+
+            <span>
+              EdTech / Alianzas
+            </span>
+
+            <span>
+              2024 — 2026
+            </span>
 
           </div>
 
@@ -2376,11 +2283,11 @@
   <section class="about">
 
 
-    <div class="about-inner">
+    <div class="about-grid">
 
 
       <div class="section-label">
-        Sobre mí / 02
+        02 / Sobre mí
       </div>
 
 
@@ -2390,23 +2297,23 @@
 
         <h2>
 
-          Construyo donde se cruzan
+          Construyo donde
 
           <span>
             producto, growth
           </span>
 
-          y negocio.
+          y negocio se cruzan.
 
         </h2>
 
 
         <p class="about-copy">
 
-          Me interesa transformar ideas en sistemas que
-          puedan operar, aprender y crecer: desde nuevos
-          productos y experiencias digitales hasta
-          compañías, procesos y modelos de crecimiento.
+          Mi trabajo ha pasado por producto,
+          construcción de empresas y alianzas — pero el
+          hilo común es convertir ideas en sistemas
+          que las personas realmente usan.
 
         </p>
 
@@ -2415,7 +2322,7 @@
           href="about.html"
           class="text-link"
         >
-          Conocer más
+          Sobre mí
         </a>
 
 
@@ -2436,82 +2343,91 @@
   <section class="now">
 
 
-    <div class="now-inner">
+    <div class="now-grid">
 
 
-      <div class="now-head">
+      <div class="section-label">
+        03 / Ahora
+      </div>
 
 
-        <div class="section-label">
-          Ahora / 03
-        </div>
+
+      <div class="now-content">
 
 
         <h2>
-          Lo que estoy construyendo ahora.
+          Construyendo ahora.
         </h2>
 
 
-      </div>
+
+        <div class="now-list">
+
+
+          <div class="now-item">
+
+            <div class="now-number">
+              01
+            </div>
+
+            <strong>
+              GeoVictoria
+            </strong>
+
+            <span>
+              Workforce Management
+            </span>
+
+          </div>
 
 
 
-      <div class="now-list">
+          <div class="now-item">
+
+            <div class="now-number">
+              02
+            </div>
+
+            <strong>
+              lowsignal
+            </strong>
+
+            <span>
+              Growth Systems
+            </span>
+
+          </div>
 
 
-        <div class="now-item">
 
-          <strong>
-            GeoVictoria
-          </strong>
+          <div class="now-item">
 
-          <span>
-            Productos y nuevos sistemas para workforce management.
-          </span>
+            <div class="now-number">
+              03
+            </div>
+
+            <strong>
+              Explorando
+            </strong>
+
+            <span>
+              Productos AI-native
+            </span>
+
+          </div>
+
 
         </div>
 
 
-
-        <div class="now-item">
-
-          <strong>
-            lowsignal
-          </strong>
-
-          <span>
-            Una growth company construida alrededor de sistemas, tecnología y ejecución.
-          </span>
-
-        </div>
-
-
-
-        <div class="now-item">
-
-          <strong>
-            Explorando
-          </strong>
-
-          <span>
-            Productos AI-native, nuevos modelos de negocio y formas de crear leverage.
-          </span>
-
-        </div>
-
-
-      </div>
-
-
-
-      <div class="now-link-wrap">
 
         <a
           href="now.html"
           class="text-link"
         >
-          Ver ahora
+          Ver en qué estoy trabajando
         </a>
+
 
       </div>
 
@@ -2533,8 +2449,8 @@
     <div class="statement-inner">
 
 
-      <div class="statement-label">
-        Siguiente
+      <div class="section-label">
+        04 / Siguiente
       </div>
 
 
