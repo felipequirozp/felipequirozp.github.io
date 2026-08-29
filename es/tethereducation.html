@@ -2447,10 +2447,10 @@
     .field-block {
 
       margin-top:
-        72px;
+        82px;
 
       padding-top:
-        44px;
+        50px;
 
       border-top:
         1px solid var(--line);
@@ -2476,7 +2476,7 @@
         .14em;
 
       text-transform:
-        none;
+        uppercase;
 
     }
 
@@ -2484,7 +2484,7 @@
     .field-heading {
 
       max-width:
-        720px;
+        760px;
 
       margin:
         0 0 18px;
@@ -2496,7 +2496,7 @@
         "Manrope", sans-serif;
 
       font-size:
-        clamp(28px, 3.4vw, 48px);
+        clamp(30px, 3.6vw, 50px);
 
       font-weight:
         500;
@@ -2513,10 +2513,10 @@
     .field-copy {
 
       max-width:
-        690px;
+        710px;
 
       margin:
-        0 0 34px;
+        0 0 48px;
 
       color:
         var(--muted);
@@ -2536,31 +2536,44 @@
         grid;
 
       grid-template-columns:
-        minmax(0, 1.45fr)
-        minmax(260px, .9fr);
-
-      grid-template-rows:
-        repeat(3, 180px);
+        repeat(2, minmax(0, 1fr));
 
       gap:
-        12px;
+        52px 24px;
 
     }
 
 
     .field-photo {
 
-      position:
-        relative;
+      margin:
+        0;
 
       min-width:
         0;
+
+    }
+
+
+    .field-photo.featured,
+    .field-photo.wide {
+
+      grid-column:
+        1 / -1;
+
+    }
+
+
+    .field-photo-media {
+
+      width:
+        100%;
 
       overflow:
         hidden;
 
       border-radius:
-        2px;
+        18px;
 
       background:
         var(--ice);
@@ -2568,10 +2581,19 @@
     }
 
 
-    .field-photo.featured {
+    .field-photo.featured .field-photo-media,
+    .field-photo.wide .field-photo-media {
 
-      grid-row:
-        1 / 4;
+      aspect-ratio:
+        16 / 8.7;
+
+    }
+
+
+    .field-photo:not(.featured):not(.wide) .field-photo-media {
+
+      aspect-ratio:
+        4 / 3;
 
     }
 
@@ -2591,7 +2613,23 @@
         cover;
 
       transition:
-        transform .55s cubic-bezier(.2,.7,.2,1);
+        transform .6s cubic-bezier(.2,.7,.2,1);
+
+    }
+
+
+    .field-photo.featured img {
+
+      object-position:
+        center 45%;
+
+    }
+
+
+    .field-photo.wide img {
+
+      object-position:
+        center 48%;
 
     }
 
@@ -2599,78 +2637,42 @@
     .field-photo:hover img {
 
       transform:
-        scale(1.018);
-
-    }
-
-
-    .field-photo::after {
-
-      content:
-        "";
-
-      position:
-        absolute;
-
-      inset:
-        0;
-
-      pointer-events:
-        none;
-
-      background:
-        linear-gradient(
-          to top,
-          rgba(13,23,36,.42) 0%,
-          rgba(13,23,36,0) 34%
-        );
+        scale(1.012);
 
     }
 
 
     .field-caption {
 
-      position:
-        absolute;
-
-      left:
-        16px;
-
-      right:
-        16px;
-
-      bottom:
-        14px;
-
-      z-index:
-        2;
+      margin-top:
+        12px;
 
       display:
         flex;
 
       align-items:
-        center;
+        baseline;
 
       justify-content:
         space-between;
 
       gap:
-        12px;
+        16px;
 
       color:
-        rgba(255,255,255,.92);
+        var(--ink);
 
       font-size:
-        9px;
+        11px;
 
       font-weight:
-        600;
+        550;
 
       letter-spacing:
-        .04em;
+        0;
 
       text-transform:
-        uppercase;
+        none;
 
     }
 
@@ -2678,7 +2680,13 @@
     .field-caption span:last-child {
 
       color:
-        rgba(255,255,255,.66);
+        var(--steel-light);
+
+      font-size:
+        10px;
+
+      font-weight:
+        500;
 
       white-space:
         nowrap;
@@ -2686,49 +2694,23 @@
     }
 
 
-    @media (max-width: 860px) {
+    @media (max-width: 760px) {
 
-      .field-gallery {
+      .field-photo-media {
 
-        grid-template-columns:
-          1fr 1fr;
-
-        grid-template-rows:
-          420px 220px 220px;
+        border-radius:
+          14px;
 
       }
 
-
-      .field-photo.featured {
-
-        grid-column:
-          1 / 3;
-
-        grid-row:
-          auto;
-
-      }
-
-
-      .field-photo:last-child {
-
-        grid-column:
-          1 / 3;
-
-      }
-
-    }
-
-
-    @media (max-width: 600px) {
 
       .field-block {
 
         margin-top:
-          54px;
+          60px;
 
         padding-top:
-          32px;
+          36px;
 
       }
 
@@ -2736,7 +2718,7 @@
       .field-copy {
 
         margin-bottom:
-          26px;
+          34px;
 
         font-size:
           13px;
@@ -2746,26 +2728,27 @@
 
       .field-gallery {
 
-        display:
-          flex;
-
-        flex-direction:
-          column;
+        grid-template-columns:
+          1fr;
 
         gap:
-          10px;
+          34px;
 
       }
 
 
-      .field-photo,
-      .field-photo.featured {
+      .field-photo.featured,
+      .field-photo.wide {
 
-        width:
-          100%;
-
-        height:
+        grid-column:
           auto;
+
+      }
+
+
+      .field-photo.featured .field-photo-media,
+      .field-photo.wide .field-photo-media,
+      .field-photo:not(.featured):not(.wide) .field-photo-media {
 
         aspect-ratio:
           4 / 3;
@@ -2773,27 +2756,21 @@
       }
 
 
-      .field-photo.featured {
+      .field-caption {
 
-        aspect-ratio:
-          1 / 1;
+        margin-top:
+          9px;
+
+        font-size:
+          10px;
 
       }
 
 
-      .field-caption {
-
-        left:
-          13px;
-
-        right:
-          13px;
-
-        bottom:
-          12px;
+      .field-caption span:last-child {
 
         font-size:
-          8px;
+          9px;
 
       }
 
@@ -3457,11 +3434,30 @@
               </span>
 
               <img
-                src="../christopher-neilson.jpg"
+                src="/christopher-neilson.jpg"
                 alt="Christopher Neilson"
                 class="leadership-photo"
                 loading="lazy"
-                onerror="this.style.display='none'"
+                data-chris-source="0"
+                onerror="
+                  const sources = [
+                    '/christopher-neilson.jpg',
+                    '/christopher-neilson.jpeg',
+                    '/christopher-neilson.JPG',
+                    '/christopher-neilson.png',
+                    '../christopher-neilson.jpg',
+                    '../christopher-neilson.jpeg',
+                    '../christopher-neilson.JPG',
+                    '../christopher-neilson.png'
+                  ];
+                  const current = Number(this.dataset.chrisSource || 0) + 1;
+                  if (current < sources.length) {
+                    this.dataset.chrisSource = String(current);
+                    this.src = sources[current];
+                  } else {
+                    this.style.display = 'none';
+                  }
+                "
               >
 
             </div>
@@ -3989,22 +3985,22 @@
 
 
             <div class="field-kicker">
-              Partnerships en terreno
+              Equipo &amp; partnerships
             </div>
 
 
             <h3 class="field-heading">
-              Relaciones que se construyen
-              fuera de la plataforma.
+              Construyendo junto a
+              equipos e instituciones.
             </h3>
 
 
             <p class="field-copy">
 
-              Parte del trabajo implicó estar cerca de instituciones,
-              equipos educativos y comunidades: entendiendo contextos,
-              construyendo confianza y llevando partnerships desde
-              la conversación hasta implementaciones reales.
+              Parte del trabajo fue colaborar directamente con equipos,
+              instituciones y comunidades educativas: entendiendo contextos,
+              construyendo relaciones y llevando ideas y partnerships
+              hasta implementaciones reales.
 
             </p>
 
@@ -4015,45 +4011,15 @@
 
               <figure class="field-photo featured">
 
-                <img
-                  src="../tether-partnerships-crecer.jpg"
-                  alt="Visita y trabajo con una organización educativa en Santiago"
-                  loading="lazy"
-                >
+                <div class="field-photo-media">
 
-                <figcaption class="field-caption">
-                  <span>Crecer con Todos</span>
-                  <span>Santiago</span>
-                </figcaption>
+                  <img
+                    src="../tether-team-meeting.jpg"
+                    alt="Sesión de trabajo del equipo de TetherEd"
+                    loading="lazy"
+                  >
 
-              </figure>
-
-
-
-              <figure class="field-photo">
-
-                <img
-                  src="../tether-partnerships-kiri.jpg"
-                  alt="Encuentro de trabajo con una comunidad educativa"
-                  loading="lazy"
-                >
-
-                <figcaption class="field-caption">
-                  <span>Kiri</span>
-                  <span>Partnership</span>
-                </figcaption>
-
-              </figure>
-
-
-
-              <figure class="field-photo">
-
-                <img
-                  src="../tether-team-meeting.jpg"
-                  alt="Sesión de trabajo del equipo de TetherEd"
-                  loading="lazy"
-                >
+                </div>
 
                 <figcaption class="field-caption">
                   <span>TetherEd</span>
@@ -4066,22 +4032,67 @@
 
               <figure class="field-photo">
 
-                <img
-                  src="../tether-team-santiago.jpg"
-                  alt="Equipo de TetherEd reunido en Santiago"
-                  loading="lazy"
-                >
+                <div class="field-photo-media">
+
+                  <img
+                    src="../tether-partnerships-crecer.jpg"
+                    alt="Trabajo con Crecer con Todos en Santiago"
+                    loading="lazy"
+                  >
+
+                </div>
+
+                <figcaption class="field-caption">
+                  <span>Crecer con Todos</span>
+                  <span>Santiago</span>
+                </figcaption>
+
+              </figure>
+
+
+
+              <figure class="field-photo">
+
+                <div class="field-photo-media">
+
+                  <img
+                    src="../tether-partnerships-kiri.jpg"
+                    alt="Encuentro de trabajo con Kiri"
+                    loading="lazy"
+                  >
+
+                </div>
+
+                <figcaption class="field-caption">
+                  <span>Kiri</span>
+                  <span>Partnership</span>
+                </figcaption>
+
+              </figure>
+
+
+
+              <figure class="field-photo wide">
+
+                <div class="field-photo-media">
+
+                  <img
+                    src="../tether-team-santiago.jpg"
+                    alt="Equipo de TetherEd reunido en Santiago"
+                    loading="lazy"
+                  >
+
+                </div>
 
                 <figcaption class="field-caption">
                   <span>TetherEd</span>
-                  <span>Equipo</span>
+                  <span>Equipo · Santiago</span>
                 </figcaption>
 
               </figure>
 
 
             </div>
-
 
           </div>
 
