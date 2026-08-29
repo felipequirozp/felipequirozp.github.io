@@ -1706,6 +1706,374 @@
        TABLET
     ===================================================== */
 
+
+    /* =====================================================
+       CO-FOUNDER
+    ===================================================== */
+
+    .cofounder-card {
+
+      margin-top:
+        34px;
+
+      padding-top:
+        0;
+
+      display:
+        grid;
+
+      grid-template-columns:
+        92px minmax(0,1fr);
+
+      gap:
+        24px;
+
+      align-items:
+        center;
+
+    }
+
+
+    .cofounder-photo {
+
+      width:
+        92px;
+
+      height:
+        112px;
+
+      display:
+        block;
+
+      object-fit:
+        cover;
+
+      object-position:
+        center 32%;
+
+      border-radius:
+        18px;
+
+      background:
+        var(--ice);
+
+    }
+
+
+    .cofounder-eyebrow {
+
+      margin-bottom:
+        8px;
+
+      color:
+        var(--steel-light);
+
+      font-size:
+        10px;
+
+      font-weight:
+        600;
+
+      letter-spacing:
+        .12em;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+    .cofounder-name {
+
+      margin:
+        0 0 6px;
+
+      color:
+        var(--navy);
+
+      font-family:
+        "Manrope", sans-serif;
+
+      font-size:
+        20px;
+
+      font-weight:
+        600;
+
+      letter-spacing:
+        -.025em;
+
+    }
+
+
+    .cofounder-meta {
+
+      margin:
+        0 0 11px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        12px;
+
+      line-height:
+        1.55;
+
+    }
+
+
+    .cofounder-copy {
+
+      max-width:
+        620px;
+
+      margin:
+        0;
+
+      color:
+        #45505b;
+
+      font-size:
+        13px;
+
+      line-height:
+        1.75;
+
+    }
+
+    .cofounder-links {
+
+      margin-top:
+        14px;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      gap:
+        8px;
+
+    }
+
+
+    .cofounder-links a {
+
+      width:
+        36px;
+
+      height:
+        36px;
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      border:
+        1px solid var(--line);
+
+      border-radius:
+        50%;
+
+      color:
+        var(--steel);
+
+      text-decoration:
+        none;
+
+      transition:
+        transform .2s ease,
+        color .2s ease,
+        border-color .2s ease,
+        background .2s ease;
+
+    }
+
+
+    .cofounder-links a:hover {
+
+      transform:
+        translateY(-2px);
+
+      color:
+        var(--navy);
+
+      border-color:
+        var(--steel-light);
+
+      background:
+        var(--white);
+
+    }
+
+
+    .cofounder-links svg {
+
+      width:
+        15px;
+
+      height:
+        15px;
+
+      display:
+        block;
+
+    }
+
+
+    /* =====================================================
+       CLIENT WORK
+    ===================================================== */
+
+    .client-work {
+
+      padding-bottom:
+        105px;
+
+    }
+
+
+    .client-work-copy {
+
+      max-width:
+        720px;
+
+      margin-bottom:
+        38px;
+
+    }
+
+
+    .client-work-copy p {
+
+      margin:
+        0;
+
+      color:
+        #45505b;
+
+      font-size:
+        14px;
+
+      line-height:
+        1.85;
+
+    }
+
+
+    .client-work-figure {
+
+      margin:
+        0;
+
+    }
+
+
+    .client-work-media {
+
+      width:
+        100%;
+
+      aspect-ratio:
+        16 / 10;
+
+      overflow:
+        hidden;
+
+      border-radius:
+        18px;
+
+      background:
+        var(--ice);
+
+    }
+
+
+    .client-work-media img {
+
+      width:
+        100%;
+
+      height:
+        100%;
+
+      display:
+        block;
+
+      object-fit:
+        cover;
+
+      object-position:
+        center 46%;
+
+      transition:
+        transform .6s cubic-bezier(.2,.7,.2,1);
+
+    }
+
+
+    .client-work-media:hover img {
+
+      transform:
+        scale(1.012);
+
+    }
+
+
+    .client-work-caption {
+
+      margin-top:
+        12px;
+
+      display:
+        flex;
+
+      align-items:
+        baseline;
+
+      justify-content:
+        space-between;
+
+      gap:
+        16px;
+
+      color:
+        var(--navy);
+
+      font-size:
+        11px;
+
+      font-weight:
+        550;
+
+    }
+
+
+    .client-work-caption span:last-child {
+
+      color:
+        var(--steel-light);
+
+      font-size:
+        10px;
+
+      font-weight:
+        500;
+
+      white-space:
+        nowrap;
+
+    }
+
+
+
     @media(max-width: 900px) {
 
       .nav {
@@ -1876,6 +2244,112 @@
     ===================================================== */
 
     @media(max-width: 600px) {
+
+      .cofounder-card {
+
+        grid-template-columns:
+          72px minmax(0,1fr);
+
+        gap:
+          16px;
+
+        margin-top:
+          28px;
+
+        padding-top:
+          0;
+
+        align-items:
+          start;
+
+      }
+
+
+      .cofounder-photo {
+
+        width:
+          72px;
+
+        height:
+          88px;
+
+        border-radius:
+          14px;
+
+      }
+
+
+      .cofounder-name {
+
+        font-size:
+          18px;
+
+      }
+
+
+      .cofounder-copy {
+
+        font-size:
+          12px;
+
+      }
+
+
+      .client-work {
+
+        padding-bottom:
+          78px;
+
+      }
+
+
+      .client-work-copy {
+
+        margin-bottom:
+          26px;
+
+      }
+
+
+      .client-work-copy p {
+
+        font-size:
+          13px;
+
+      }
+
+
+      .client-work-media {
+
+        aspect-ratio:
+          4 / 3;
+
+        border-radius:
+          14px;
+
+      }
+
+
+      .client-work-caption {
+
+        margin-top:
+          9px;
+
+        font-size:
+          10px;
+
+      }
+
+
+      .client-work-caption span:last-child {
+
+        font-size:
+          9px;
+
+      }
+
+
+
 
       .nav {
 
@@ -2626,6 +3100,60 @@
           </div>
 
 
+          <div class="cofounder-card">
+
+            <img
+              src="../damian-aldunate.jpg"
+              alt="Damián Aldunate"
+              class="cofounder-photo"
+              loading="lazy"
+            >
+
+            <div>
+
+              <div class="cofounder-eyebrow">
+                Co-fundador
+              </div>
+
+              <h3 class="cofounder-name">
+                Damián Aldunate
+              </h3>
+
+              <p class="cofounder-meta">
+                Co-Founder &amp; CMO, lowsignal
+              </p>
+
+              <p class="cofounder-copy">
+                Co-fundé lowsignal junto a Damián, combinando
+                roles complementarios entre marca, growth,
+                operación y desarrollo de negocio.
+              </p>
+
+              <div class="cofounder-links">
+
+                <a
+                  href="https://www.linkedin.com/in/damianaldunate/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn de Damián Aldunate"
+                  title="LinkedIn"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
+                  </svg>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
         </section>
 
 
@@ -2939,6 +3467,59 @@
 
 
           </div>
+
+
+        </section>
+
+
+
+        <!-- CLIENT WORK -->
+
+        <section class="section client-work">
+
+
+          <div class="section-label">
+            05 / Trabajo con clientes
+          </div>
+
+
+          <h2>
+            Construyendo cerca
+            del problema.
+          </h2>
+
+
+          <div class="client-work-copy">
+
+            <p>
+              El trabajo con clientes parte por entender
+              cómo operan, dónde se pierde tiempo y qué
+              necesita conectarse. Desde ahí, convertimos
+              estrategia en sistemas que los equipos pueden
+              usar, medir y mejorar.
+            </p>
+
+          </div>
+
+
+          <figure class="client-work-figure">
+
+            <div class="client-work-media">
+
+              <img
+                src="../lowsignal-client-work.jpg"
+                alt="Sesión de trabajo de lowsignal con clientes"
+                loading="lazy"
+              >
+
+            </div>
+
+            <figcaption class="client-work-caption">
+              <span>lowsignal</span>
+              <span>Sesión de trabajo con clientes</span>
+            </figcaption>
+
+          </figure>
 
 
         </section>
