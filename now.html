@@ -783,6 +783,410 @@
     }
 
 
+
+    /* =====================================================
+       ECOSYSTEM / PLATANUS
+    ===================================================== */
+
+    .ecosystem {
+
+      padding:
+        112px 5vw 118px;
+
+      background:
+        var(--paper);
+
+    }
+
+
+    .ecosystem-inner {
+
+      max-width:
+        1280px;
+
+      margin:
+        0 auto;
+
+    }
+
+
+    .ecosystem-header {
+
+      margin-top:
+        42px;
+
+      display:
+        grid;
+
+      grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(280px, .65fr);
+
+      gap:
+        70px;
+
+      align-items:
+        end;
+
+    }
+
+
+    .ecosystem-header h2 {
+
+      max-width:
+        780px;
+
+      margin:
+        0;
+
+      font-family:
+        "Manrope", sans-serif;
+
+      font-size:
+        clamp(46px, 6vw, 84px);
+
+      font-weight:
+        400;
+
+      letter-spacing:
+        -.06em;
+
+      line-height:
+        1.02;
+
+    }
+
+
+    .ecosystem-header p {
+
+      max-width:
+        480px;
+
+      margin:
+        0 0 7px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        14px;
+
+      line-height:
+        1.85;
+
+    }
+
+
+    .ecosystem-gallery {
+
+      margin-top:
+        54px;
+
+      display:
+        grid;
+
+      grid-template-columns:
+        minmax(0, 1.45fr)
+        minmax(280px, .72fr);
+
+      gap:
+        28px;
+
+      align-items:
+        end;
+
+    }
+
+
+    .ecosystem-figure {
+
+      margin:
+        0;
+
+    }
+
+
+    .ecosystem-media {
+
+      width:
+        100%;
+
+      overflow:
+        hidden;
+
+      border-radius:
+        18px;
+
+      background:
+        var(--ice);
+
+    }
+
+
+    .ecosystem-main .ecosystem-media {
+
+      aspect-ratio:
+        16 / 10;
+
+    }
+
+
+    .ecosystem-secondary {
+
+      transform:
+        translateY(42px);
+
+    }
+
+
+    .ecosystem-secondary .ecosystem-media {
+
+      aspect-ratio:
+        4 / 5;
+
+    }
+
+
+    .ecosystem-media img {
+
+      width:
+        100%;
+
+      height:
+        100%;
+
+      display:
+        block;
+
+      object-fit:
+        cover;
+
+      transition:
+        transform .6s cubic-bezier(.2,.7,.2,1);
+
+    }
+
+
+    .ecosystem-main .ecosystem-media img {
+
+      object-position:
+        center 46%;
+
+    }
+
+
+    .ecosystem-secondary .ecosystem-media img {
+
+      object-position:
+        center 52%;
+
+    }
+
+
+    .ecosystem-media:hover img {
+
+      transform:
+        scale(1.012);
+
+    }
+
+
+    .ecosystem-caption {
+
+      margin-top:
+        12px;
+
+      display:
+        flex;
+
+      align-items:
+        baseline;
+
+      justify-content:
+        space-between;
+
+      gap:
+        18px;
+
+      color:
+        var(--ink);
+
+      font-size:
+        11px;
+
+      font-weight:
+        550;
+
+    }
+
+
+    .ecosystem-caption span:last-child {
+
+      color:
+        var(--steel-light);
+
+      font-size:
+        10px;
+
+      font-weight:
+        500;
+
+      text-align:
+        right;
+
+    }
+
+
+    @media (max-width: 860px) {
+
+      .ecosystem {
+
+        padding:
+          88px 5vw 100px;
+
+      }
+
+
+      .ecosystem-header {
+
+        grid-template-columns:
+          1fr;
+
+        gap:
+          24px;
+
+      }
+
+
+      .ecosystem-gallery {
+
+        grid-template-columns:
+          1fr;
+
+        gap:
+          36px;
+
+      }
+
+
+      .ecosystem-secondary {
+
+        width:
+          72%;
+
+        margin-left:
+          auto;
+
+        transform:
+          none;
+
+      }
+
+
+      .ecosystem-secondary .ecosystem-media {
+
+        aspect-ratio:
+          4 / 5;
+
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .ecosystem {
+
+        padding:
+          72px 6vw 82px;
+
+      }
+
+
+      .ecosystem-header {
+
+        margin-top:
+          30px;
+
+      }
+
+
+      .ecosystem-header h2 {
+
+        font-size:
+          clamp(38px, 13vw, 58px);
+
+        line-height:
+          1.04;
+
+      }
+
+
+      .ecosystem-header p {
+
+        font-size:
+          13px;
+
+      }
+
+
+      .ecosystem-gallery {
+
+        margin-top:
+          36px;
+
+        gap:
+          30px;
+
+      }
+
+
+      .ecosystem-media {
+
+        border-radius:
+          14px;
+
+      }
+
+
+      .ecosystem-main .ecosystem-media {
+
+        aspect-ratio:
+          4 / 3;
+
+      }
+
+
+      .ecosystem-secondary {
+
+        width:
+          88%;
+
+      }
+
+
+      .ecosystem-caption {
+
+        margin-top:
+          9px;
+
+        font-size:
+          10px;
+
+      }
+
+
+      .ecosystem-caption span:last-child {
+
+        font-size:
+          9px;
+
+      }
+
+    }
+
+
+
     /* =====================================================
        OPERATING
     ===================================================== */
@@ -1973,6 +2377,117 @@
 
 
 
+
+  <!-- =====================================================
+       ECOSYSTEM
+  ====================================================== -->
+
+  <section class="ecosystem">
+
+
+    <div class="ecosystem-inner">
+
+
+      <div class="section-label">
+        04 / In the ecosystem
+      </div>
+
+
+
+      <div class="ecosystem-header">
+
+
+        <h2>
+          Closer to what’s
+          being built.
+        </h2>
+
+
+        <p>
+          Events, conversations and spaces where product,
+          startups and technology intersect with new ways
+          of building companies.
+        </p>
+
+
+      </div>
+
+
+
+      <div class="ecosystem-gallery">
+
+
+        <figure class="ecosystem-figure ecosystem-main">
+
+
+          <div class="ecosystem-media">
+
+            <img
+              src="platanus-ai-native.jpg"
+              alt="Platanus AI Native Startups event in Santiago"
+              loading="lazy"
+            >
+
+          </div>
+
+
+          <figcaption class="ecosystem-caption">
+
+            <span>
+              Platanus
+            </span>
+
+            <span>
+              AI Native Startups · Santiago
+            </span>
+
+          </figcaption>
+
+
+        </figure>
+
+
+
+        <figure class="ecosystem-figure ecosystem-secondary">
+
+
+          <div class="ecosystem-media">
+
+            <img
+              src="platanus-event.jpg"
+              alt="Product and startup gathering at Platanus"
+              loading="lazy"
+            >
+
+          </div>
+
+
+          <figcaption class="ecosystem-caption">
+
+            <span>
+              Platanus
+            </span>
+
+            <span>
+              Product · Startups · Technology
+            </span>
+
+          </figcaption>
+
+
+        </figure>
+
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
   <!-- =====================================================
        OPERATING
   ====================================================== -->
@@ -1984,7 +2499,7 @@
 
 
       <div class="section-label">
-        04 / Operating
+        05 / Operating
       </div>
 
 
@@ -2078,7 +2593,7 @@
 
 
       <div class="section-label">
-        05 / Still
+        06 / Still
       </div>
 
 
