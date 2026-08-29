@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Felipe Quiroz</title>
 
   <meta
     name="description"
-    content="Felipe Quiroz — Product, growth, business and company building."
-  >
+    content="Felipe Quiroz — Product Manager, Co-Founder & COO. Product, growth, business and company building."
+  />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap"
     rel="stylesheet"
   >
 
@@ -24,13 +24,20 @@
     :root {
       --navy: #182536;
       --navy-deep: #0d1724;
-      --slate: #9eabba;
-      --paper: #f4f5f3;
+      --navy-soft: #223247;
+
+      --slate: #9aa9ba;
+      --slate-light: #c7d0d9;
+
+      --paper: #f3f4f2;
+      --paper-2: #e8ebee;
+
       --white: #ffffff;
       --ink: #10161d;
-      --muted: #697481;
-      --line: #d6dadd;
-      --orange: #f36b35;
+      --muted: #66717d;
+
+      --line: #d4d9de;
+      --orange: #ef6a38;
     }
 
 
@@ -53,6 +60,7 @@
       font-family: "Inter", sans-serif;
 
       -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
 
@@ -64,7 +72,7 @@
 
     img {
       display: block;
-      width: 100%;
+      max-width: 100%;
     }
 
 
@@ -80,33 +88,39 @@
 
 
     .nav {
-      height: 88px;
+      height: 86px;
 
-      padding: 0 42px;
+      padding: 0 5vw;
 
       display: grid;
       grid-template-columns: 1fr auto 1fr;
+
       align-items: center;
 
       background: var(--navy);
       color: white;
 
-      border-bottom: 1px solid rgba(255,255,255,.14);
+      border-bottom: 1px solid rgba(255,255,255,.12);
     }
 
 
     .brand {
+      font-family: "Manrope", sans-serif;
+
       font-size: 17px;
       font-weight: 600;
-      letter-spacing: -.035em;
+
+      letter-spacing: -.04em;
     }
 
 
     .nav-center {
-      font-family: "DM Mono", monospace;
-
       font-size: 10px;
-      letter-spacing: .12em;
+
+      font-weight: 500;
+
+      letter-spacing: .11em;
+
       text-transform: uppercase;
 
       color: var(--slate);
@@ -119,10 +133,12 @@
 
       gap: 28px;
 
-      font-family: "DM Mono", monospace;
-
       font-size: 10px;
-      letter-spacing: .08em;
+
+      font-weight: 500;
+
+      letter-spacing: .09em;
+
       text-transform: uppercase;
     }
 
@@ -133,7 +149,7 @@
 
 
     .nav-links a:hover {
-      opacity: .5;
+      opacity: .45;
     }
 
 
@@ -143,52 +159,52 @@
 
 
     .hero {
-      min-height: calc(100vh - 88px);
+      min-height: calc(100vh - 86px);
 
       background: var(--navy);
       color: white;
 
-      position: relative;
-
-      overflow: hidden;
+      padding: 45px 5vw 50px;
 
       display: grid;
-      grid-template-columns: 55% 45%;
+      grid-template-columns: 1.05fr .95fr;
+
+      gap: 6vw;
+
+      align-items: stretch;
     }
 
 
-    .hero-copy {
-      position: relative;
-      z-index: 3;
-
-      padding: 70px 40px 48px 7vw;
-
+    .hero-left {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      min-height: 680px;
     }
 
 
-    .hero-kicker {
+    .hero-top {
       display: flex;
       align-items: center;
 
-      gap: 12px;
-
-      font-family: "DM Mono", monospace;
-
-      font-size: 10px;
-      letter-spacing: .1em;
-
-      text-transform: uppercase;
+      gap: 10px;
 
       color: var(--slate);
+
+      font-size: 10px;
+
+      font-weight: 500;
+
+      letter-spacing: .11em;
+
+      text-transform: uppercase;
     }
 
 
-    .dot {
-      width: 6px;
-      height: 6px;
+    .status-dot {
+      width: 7px;
+      height: 7px;
 
       border-radius: 50%;
 
@@ -196,196 +212,232 @@
     }
 
 
-    .hero-title {
-      margin: 30px 0;
-
-      position: relative;
-      z-index: 5;
+    .hero-main {
+      margin: 60px 0;
     }
 
 
-    .hero-title .first {
-      display: block;
+    .hero-small {
+      margin-bottom: 16px;
 
-      font-family: "Instrument Serif", serif;
+      color: var(--slate);
 
-      font-size: clamp(82px, 11vw, 180px);
-      line-height: .72;
+      font-size: 13px;
 
-      font-weight: 400;
+      font-weight: 500;
 
-      letter-spacing: -.055em;
+      letter-spacing: -.02em;
+    }
 
+
+    .hero h1 {
+      margin: 0;
+
+      max-width: 780px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: clamp(74px, 9vw, 145px);
+
+      line-height: .82;
+
+      letter-spacing: -.075em;
+
+      font-weight: 500;
+    }
+
+
+    .hero h1 .soft {
       color: var(--slate);
     }
 
 
-    .hero-title .last {
-      display: block;
+    .hero-description {
+      margin-top: 36px;
 
-      font-size: clamp(78px, 10vw, 168px);
-      line-height: .78;
+      max-width: 560px;
 
-      font-weight: 500;
+      font-size: 15px;
 
-      letter-spacing: -.075em;
+      line-height: 1.72;
 
-      white-space: nowrap;
+      color: #ccd4dc;
     }
 
 
-    .hero-bottom {
+    .hero-footer {
       display: grid;
       grid-template-columns: 1fr 1fr;
 
-      gap: 50px;
+      gap: 40px;
 
-      max-width: 700px;
-    }
+      padding-top: 28px;
 
-
-    .hero-role {
-      font-size: 14px;
-      line-height: 1.65;
-
-      color: #eef1f4;
+      border-top: 1px solid rgba(255,255,255,.18);
     }
 
 
     .hero-role span {
       display: block;
 
-      margin-bottom: 7px;
+      margin-bottom: 8px;
 
-      font-family: "DM Mono", monospace;
+      color: var(--slate);
 
       font-size: 9px;
 
-      text-transform: uppercase;
+      font-weight: 500;
 
       letter-spacing: .1em;
 
-      color: var(--slate);
+      text-transform: uppercase;
     }
 
 
-    .hero-intro {
+    .hero-role strong {
+      display: block;
+
+      margin-bottom: 5px;
+
       font-size: 14px;
-      line-height: 1.65;
 
-      color: #c5ced8;
+      font-weight: 500;
     }
 
 
-    /* PHOTO */
+    .hero-role p {
+      margin: 0;
 
+      color: #c1cad4;
 
-    .hero-photo {
-      position: relative;
+      font-size: 12px;
 
-      min-height: calc(100vh - 88px);
-
-      overflow: hidden;
-
-      background: var(--navy-deep);
-    }
-
-
-    .hero-photo::before {
-      content: "";
-
-      position: absolute;
-      inset: 0;
-
-      z-index: 2;
-
-      background:
-        linear-gradient(
-          90deg,
-          var(--navy) 0%,
-          rgba(24,37,54,.55) 13%,
-          rgba(24,37,54,0) 40%
-        );
-    }
-
-
-    .hero-photo::after {
-      content: "";
-
-      position: absolute;
-      inset: 0;
-
-      z-index: 2;
-
-      background:
-        linear-gradient(
-          180deg,
-          transparent 55%,
-          rgba(13,23,36,.45) 100%
-        );
-    }
-
-
-    .hero-photo img {
-      position: absolute;
-
-      inset: 0;
-
-      height: 100%;
-
-      object-fit: cover;
-
-      filter: saturate(.78) contrast(1.02);
-    }
-
-
-    .photo-meta {
-      position: absolute;
-
-      z-index: 4;
-
-      right: 35px;
-      bottom: 36px;
-
-      text-align: right;
-
-      font-family: "DM Mono", monospace;
-
-      font-size: 9px;
-      line-height: 1.6;
-
-      letter-spacing: .08em;
-
-      text-transform: uppercase;
-
-      color: rgba(255,255,255,.72);
-    }
-
-
-    .scroll-note {
-      position: absolute;
-
-      bottom: 40px;
-      left: 24px;
-
-      z-index: 5;
-
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-
-      font-family: "DM Mono", monospace;
-
-      font-size: 9px;
-      letter-spacing: .12em;
-
-      color: rgba(255,255,255,.55);
-
-      text-transform: uppercase;
+      line-height: 1.55;
     }
 
 
     /* =====================================================
-       INTRO STRIP
+       HERO PHOTO
+    ===================================================== */
+
+
+    .hero-right {
+      position: relative;
+
+      min-height: 680px;
+
+      display: flex;
+      align-items: stretch;
+
+      padding: 12px 0;
+    }
+
+
+    .photo-wrap {
+      position: relative;
+
+      width: 100%;
+
+      min-height: 650px;
+
+      overflow: hidden;
+
+      border-radius: 34px;
+
+      background: var(--navy-deep);
+
+      box-shadow:
+        0 28px 70px rgba(0,0,0,.26);
+    }
+
+
+    .photo-wrap img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+
+      filter:
+        saturate(.82)
+        contrast(1.03);
+    }
+
+
+    .photo-wrap::after {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          180deg,
+          transparent 50%,
+          rgba(8,15,24,.42) 100%
+        );
+
+      pointer-events: none;
+    }
+
+
+    .photo-badge {
+      position: absolute;
+
+      z-index: 3;
+
+      left: 22px;
+      bottom: 22px;
+
+      padding: 13px 15px;
+
+      border-radius: 14px;
+
+      background: rgba(13,23,36,.74);
+
+      backdrop-filter: blur(14px);
+
+      border: 1px solid rgba(255,255,255,.16);
+
+      color: white;
+
+      font-size: 10px;
+
+      line-height: 1.55;
+
+      letter-spacing: .06em;
+
+      text-transform: uppercase;
+    }
+
+
+    .photo-index {
+      position: absolute;
+
+      right: -26px;
+      top: 35px;
+
+      z-index: 3;
+
+      color: rgba(255,255,255,.13);
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 135px;
+
+      line-height: 1;
+
+      font-weight: 500;
+
+      letter-spacing: -.08em;
+
+      pointer-events: none;
+    }
+
+
+    /* =====================================================
+       STATEMENT
     ===================================================== */
 
 
@@ -393,51 +445,52 @@
       background: var(--navy-deep);
       color: white;
 
-      padding: 74px 7vw;
+      padding: 80px 5vw;
     }
 
 
     .statement-grid {
       display: grid;
-      grid-template-columns: 1fr 4fr;
+      grid-template-columns: .8fr 3fr;
 
       gap: 70px;
     }
 
 
     .section-code {
-      font-family: "DM Mono", monospace;
+      color: var(--slate);
 
       font-size: 10px;
-      line-height: 1.5;
 
-      letter-spacing: .09em;
+      font-weight: 500;
+
+      letter-spacing: .1em;
 
       text-transform: uppercase;
 
-      color: var(--slate);
+      line-height: 1.6;
     }
 
 
     .statement h2 {
-      max-width: 1100px;
-
       margin: 0;
 
-      font-family: "Instrument Serif", serif;
+      max-width: 1100px;
 
-      font-weight: 400;
+      font-family: "Manrope", sans-serif;
 
-      font-size: clamp(44px, 6vw, 92px);
-      line-height: 1;
+      font-size: clamp(42px, 6vw, 88px);
 
-      letter-spacing: -.04em;
+      line-height: .98;
+
+      letter-spacing: -.055em;
+
+      font-weight: 500;
     }
 
 
-    .statement h2 em {
+    .statement h2 span {
       color: var(--slate);
-      font-weight: 400;
     }
 
 
@@ -447,43 +500,57 @@
 
 
     .work {
-      padding: 120px 7vw 150px;
+      padding: 125px 5vw 145px;
     }
 
 
     .work-head {
-      margin-bottom: 90px;
-
       display: grid;
-      grid-template-columns: 1fr 3fr;
+      grid-template-columns: .8fr 3fr;
 
       gap: 70px;
 
       align-items: end;
+
+      margin-bottom: 85px;
     }
 
 
-    .work-head h2 {
+    .work-heading-row {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: end;
+
+      gap: 40px;
+    }
+
+
+    .work-heading-row h2 {
       margin: 0;
 
-      font-size: clamp(60px, 9vw, 130px);
-      font-weight: 500;
+      font-family: "Manrope", sans-serif;
 
-      line-height: .8;
+      font-size: clamp(62px, 9vw, 130px);
+
+      line-height: .82;
 
       letter-spacing: -.075em;
+
+      font-weight: 500;
     }
 
 
-    .work-head p {
-      margin: 0;
+    .work-heading-row p {
+      margin: 0 0 8px;
 
-      max-width: 430px;
-
-      font-size: 14px;
-      line-height: 1.7;
+      max-width: 360px;
 
       color: var(--muted);
+
+      font-size: 14px;
+
+      line-height: 1.7;
     }
 
 
@@ -495,12 +562,10 @@
     .project {
       position: relative;
 
-      min-height: 190px;
-
-      padding: 34px 0;
+      min-height: 180px;
 
       display: grid;
-      grid-template-columns: 75px 1.5fr 1fr 120px;
+      grid-template-columns: 70px 1.4fr 1fr 80px;
 
       align-items: center;
 
@@ -510,29 +575,71 @@
     }
 
 
-    .project-bg {
-      position: absolute;
+    .project::before {
+      content: "";
 
+      position: absolute;
       inset: 0;
 
       background: var(--navy);
 
       transform: translateY(101%);
 
-      transition: transform .45s cubic-bezier(.76,0,.24,1);
+      transition:
+        transform .42s cubic-bezier(.76,0,.24,1);
     }
 
 
-    .project:hover .project-bg {
+    .project:hover::before {
       transform: translateY(0);
     }
 
 
-    .project > *:not(.project-bg) {
+    .project > * {
       position: relative;
       z-index: 2;
+    }
 
-      transition: color .3s ease;
+
+    .project-number {
+      color: var(--muted);
+
+      font-size: 10px;
+
+      font-weight: 500;
+    }
+
+
+    .company {
+      font-family: "Manrope", sans-serif;
+
+      font-size: clamp(40px, 5vw, 78px);
+
+      letter-spacing: -.055em;
+
+      font-weight: 500;
+    }
+
+
+    .project-meta {
+      color: var(--muted);
+
+      font-size: 10px;
+
+      line-height: 1.8;
+
+      letter-spacing: .04em;
+
+      text-transform: uppercase;
+    }
+
+
+    .project-arrow {
+      text-align: right;
+
+      font-size: 26px;
+
+      transition: transform .25s ease;
     }
 
 
@@ -541,64 +648,14 @@
     }
 
 
-    .project-number {
-      font-family: "DM Mono", monospace;
-
-      font-size: 10px;
-
-      color: var(--muted);
-    }
-
-
-    .project:hover .project-number {
-      color: var(--slate);
-    }
-
-
-    .company-name {
-      font-size: clamp(40px, 5.5vw, 82px);
-
-      letter-spacing: -.06em;
-
-      font-weight: 500;
-    }
-
-
-    .project:nth-child(2) .company-name {
-      text-transform: lowercase;
-    }
-
-
-    .project-meta {
-      font-family: "DM Mono", monospace;
-
-      font-size: 10px;
-      line-height: 1.75;
-
-      letter-spacing: .03em;
-
-      text-transform: uppercase;
-
-      color: var(--muted);
-    }
-
-
+    .project:hover .project-number,
     .project:hover .project-meta {
-      color: #c5ced8;
-    }
-
-
-    .project-arrow {
-      text-align: right;
-
-      font-size: 28px;
-
-      transition: transform .25s ease;
+      color: var(--slate-light);
     }
 
 
     .project:hover .project-arrow {
-      transform: translate(8px, -8px);
+      transform: translate(7px, -7px);
     }
 
 
@@ -608,15 +665,15 @@
 
 
     .about {
-      background: #e8ebee;
+      background: var(--paper-2);
 
-      padding: 130px 7vw;
+      padding: 125px 5vw;
     }
 
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 3fr;
+      grid-template-columns: .8fr 3fr;
 
       gap: 70px;
     }
@@ -624,33 +681,40 @@
 
     .about-main {
       display: grid;
-      grid-template-columns: 1.6fr 1fr;
+      grid-template-columns: 1.5fr 1fr;
 
-      gap: 80px;
+      gap: 75px;
     }
 
 
     .about-main h2 {
       margin: 0;
 
-      font-family: "Instrument Serif", serif;
+      font-family: "Manrope", sans-serif;
 
-      font-weight: 400;
+      font-size: clamp(46px, 6vw, 88px);
 
-      font-size: clamp(48px, 6vw, 94px);
-      line-height: .98;
+      line-height: .97;
 
-      letter-spacing: -.04em;
+      letter-spacing: -.055em;
+
+      font-weight: 500;
+    }
+
+
+    .about-main h2 span {
+      color: #8796a6;
     }
 
 
     .about-copy {
       align-self: end;
 
-      font-size: 15px;
-      line-height: 1.8;
-
       color: #4d5965;
+
+      font-size: 15px;
+
+      line-height: 1.8;
     }
 
 
@@ -663,28 +727,28 @@
       background: var(--navy);
       color: white;
 
-      padding: 120px 7vw;
+      padding: 125px 5vw;
     }
 
 
     .now-grid {
       display: grid;
-      grid-template-columns: 1fr 3fr;
+      grid-template-columns: .8fr 3fr;
 
       gap: 70px;
     }
 
 
     .now-content h2 {
-      margin: 0 0 70px;
+      margin: 0 0 75px;
 
-      max-width: 950px;
+      font-family: "Manrope", sans-serif;
 
-      font-size: clamp(54px, 8vw, 120px);
+      font-size: clamp(54px, 8vw, 116px);
+
+      line-height: .87;
 
       letter-spacing: -.07em;
-
-      line-height: .88;
 
       font-weight: 500;
     }
@@ -692,8 +756,6 @@
 
     .now-content h2 span {
       color: var(--slate);
-      font-family: "Instrument Serif", serif;
-      font-weight: 400;
     }
 
 
@@ -701,35 +763,40 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
 
-      gap: 25px;
+      gap: 28px;
     }
 
 
     .now-item {
-      padding-top: 24px;
+      padding-top: 22px;
 
-      border-top: 1px solid rgba(255,255,255,.22);
+      border-top: 1px solid rgba(255,255,255,.2);
     }
 
 
     .now-item strong {
       display: block;
 
-      margin-bottom: 14px;
+      margin-bottom: 13px;
+
+      font-family: "Manrope", sans-serif;
 
       font-size: 17px;
+
+      font-weight: 500;
     }
 
 
     .now-item p {
       margin: 0;
 
-      max-width: 460px;
+      max-width: 450px;
+
+      color: #bdc8d3;
 
       font-size: 14px;
-      line-height: 1.75;
 
-      color: #bdc7d2;
+      line-height: 1.75;
     }
 
 
@@ -739,51 +806,47 @@
 
 
     .contact {
-      background: var(--paper);
-
-      padding: 130px 7vw 50px;
+      padding: 125px 5vw 42px;
     }
 
 
-    .contact-top {
+    .contact-grid {
       display: grid;
-      grid-template-columns: 1fr 3fr;
+      grid-template-columns: .8fr 3fr;
 
       gap: 70px;
 
-      padding-bottom: 120px;
+      padding-bottom: 110px;
     }
 
 
     .contact-title {
-      font-size: clamp(65px, 10vw, 160px);
+      font-family: "Manrope", sans-serif;
+
+      font-size: clamp(58px, 9vw, 140px);
+
+      line-height: .83;
+
+      letter-spacing: -.075em;
 
       font-weight: 500;
-
-      letter-spacing: -.08em;
-
-      line-height: .8;
     }
 
 
-    .contact-title em {
+    .contact-title span {
       display: block;
 
-      color: var(--slate);
-
-      font-family: "Instrument Serif", serif;
-
-      font-weight: 400;
+      color: #8998a7;
     }
 
 
     .contact-links {
-      margin-top: 55px;
-
       display: flex;
       flex-wrap: wrap;
 
       gap: 12px;
+
+      margin-top: 50px;
     }
 
 
@@ -791,43 +854,47 @@
       padding: 13px 18px;
 
       border: 1px solid var(--ink);
-      border-radius: 999px;
 
-      font-family: "DM Mono", monospace;
+      border-radius: 999px;
 
       font-size: 10px;
 
+      font-weight: 500;
+
+      letter-spacing: .07em;
+
       text-transform: uppercase;
 
-      transition: .25s ease;
+      transition: all .22s ease;
     }
 
 
     .contact-link:hover {
       background: var(--navy);
-      color: white;
 
       border-color: var(--navy);
+
+      color: white;
     }
 
 
     .footer {
-      padding-top: 25px;
+      padding-top: 24px;
 
       border-top: 1px solid var(--line);
 
       display: flex;
       justify-content: space-between;
 
-      font-family: "DM Mono", monospace;
+      color: var(--muted);
 
       font-size: 9px;
 
+      font-weight: 500;
+
+      letter-spacing: .08em;
+
       text-transform: uppercase;
-
-      letter-spacing: .07em;
-
-      color: var(--muted);
     }
 
 
@@ -839,7 +906,7 @@
     @media(max-width: 900px) {
 
       .nav {
-        padding: 0 20px;
+        padding: 0 22px;
 
         grid-template-columns: 1fr auto;
       }
@@ -857,30 +924,49 @@
 
       .hero {
         grid-template-columns: 1fr;
+
+        padding: 40px 22px 25px;
       }
 
 
-      .hero-copy {
-        min-height: 72vh;
-
-        padding: 50px 22px;
+      .hero-left {
+        min-height: auto;
       }
 
 
-      .hero-title .last {
-        white-space: normal;
+      .hero-main {
+        margin: 80px 0 60px;
       }
 
 
-      .hero-bottom {
+      .hero h1 {
+        font-size: clamp(65px, 17vw, 110px);
+      }
+
+
+      .hero-footer {
         grid-template-columns: 1fr;
 
-        gap: 28px;
+        margin-bottom: 45px;
       }
 
 
-      .hero-photo {
-        min-height: 72vh;
+      .hero-right {
+        min-height: 520px;
+
+        padding: 0;
+      }
+
+
+      .photo-wrap {
+        min-height: 520px;
+
+        border-radius: 26px;
+      }
+
+
+      .photo-index {
+        font-size: 90px;
       }
 
 
@@ -899,29 +985,24 @@
       .about-grid,
       .about-main,
       .now-grid,
-      .contact-top {
+      .contact-grid {
         grid-template-columns: 1fr;
+
+        gap: 38px;
       }
 
 
-      .statement-grid,
-      .work-head,
-      .about-grid,
-      .now-grid,
-      .contact-top {
-        gap: 35px;
-      }
+      .work-heading-row {
+        flex-direction: column;
 
-
-      .about-main {
-        gap: 40px;
+        align-items: flex-start;
       }
 
 
       .project {
-        grid-template-columns: 40px 1fr 35px;
+        grid-template-columns: 42px 1fr 35px;
 
-        min-height: 140px;
+        min-height: 135px;
       }
 
 
@@ -938,7 +1019,7 @@
       .footer {
         flex-direction: column;
 
-        gap: 10px;
+        gap: 9px;
       }
 
     }
@@ -950,14 +1031,11 @@
 <body>
 
 
-  <!-- =====================================================
-       NAVIGATION
-  ====================================================== -->
-
+  <!-- NAV -->
 
   <header class="nav">
 
-    <a href="#" class="brand">
+    <a class="brand" href="#">
       Felipe Quiroz
     </a>
 
@@ -968,30 +1046,40 @@
 
 
     <nav class="nav-links">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#now">Now</a>
-      <a href="#contact">Contact ↗</a>
+
+      <a href="#work">
+        Work
+      </a>
+
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#now">
+        Now
+      </a>
+
+      <a href="#contact">
+        Contact ↗
+      </a>
+
     </nav>
 
   </header>
 
 
 
-  <!-- =====================================================
-       HERO
-  ====================================================== -->
-
+  <!-- HERO -->
 
   <section class="hero">
 
 
-    <div class="hero-copy">
+    <div class="hero-left">
 
 
-      <div class="hero-kicker">
+      <div class="hero-top">
 
-        <span class="dot"></span>
+        <span class="status-dot"></span>
 
         Santiago, Chile · 2026
 
@@ -999,37 +1087,68 @@
 
 
 
-      <div class="hero-title">
+      <div class="hero-main">
 
-        <span class="first">
-          Felipe
-        </span>
 
-        <span class="last">
-          QUIROZ
-        </span>
+        <div class="hero-small">
+          Product · Growth · Business
+        </div>
+
+
+        <h1>
+
+          Felipe<br>
+
+          <span class="soft">
+            Quiroz.
+          </span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+          Working across product, growth and business —
+          building products, systems and companies
+          across Latin America.
+
+        </p>
+
 
       </div>
 
 
 
-      <div class="hero-bottom">
+      <div class="hero-footer">
 
 
         <div class="hero-role">
 
-          <span>Currently</span>
+          <span>Current role</span>
 
-          Product Manager @ GeoVictoria<br>
-          Co-Founder & COO @ lowsignal
+          <strong>
+            Product Manager · GeoVictoria
+          </strong>
+
+          <p>
+            Workforce Management
+          </p>
 
         </div>
 
 
-        <div class="hero-intro">
 
-          Working across product, growth and business —
-          building products, systems and companies.
+        <div class="hero-role">
+
+          <span>Also building</span>
+
+          <strong>
+            Co-Founder & COO · lowsignal
+          </strong>
+
+          <p>
+            Growth Systems
+          </p>
 
         </div>
 
@@ -1041,22 +1160,33 @@
 
 
 
-    <div class="hero-photo">
+    <div class="hero-right">
 
-      <img
-        src="profile.jpg"
-        alt="Felipe Quiroz"
-      >
 
-      <div class="photo-meta">
-        Product<br>
-        Growth<br>
-        Business
+      <div class="photo-wrap">
+
+        <img
+          src="profile.jpg"
+          alt="Felipe Quiroz"
+        >
+
+
+        <div class="photo-index">
+          FQ
+        </div>
+
+
+        <div class="photo-badge">
+
+          Felipe Quiroz<br>
+
+          Product · Growth · Business
+
+        </div>
+
+
       </div>
 
-      <div class="scroll-note">
-        Scroll to explore ↓
-      </div>
 
     </div>
 
@@ -1065,10 +1195,7 @@
 
 
 
-  <!-- =====================================================
-       STATEMENT
-  ====================================================== -->
-
+  <!-- STATEMENT -->
 
   <section class="statement">
 
@@ -1079,19 +1206,21 @@
       <div class="section-code">
 
         01 / Profile<br>
-        SCL — CL
+        Santiago — CL
 
       </div>
+
 
 
       <h2>
 
         I work where product,
+
         business and execution
 
-        <em>
+        <span>
           come together.
-        </em>
+        </span>
 
       </h2>
 
@@ -1103,10 +1232,7 @@
 
 
 
-  <!-- =====================================================
-       SELECTED WORK
-  ====================================================== -->
-
+  <!-- WORK -->
 
   <section class="work" id="work">
 
@@ -1122,16 +1248,22 @@
       </div>
 
 
-      <div>
+
+      <div class="work-heading-row">
+
 
         <h2>
           Work.
         </h2>
 
+
         <p>
+
           Building products, companies and partnerships
           across technology, SaaS and digital businesses.
+
         </p>
+
 
       </div>
 
@@ -1145,29 +1277,37 @@
 
       <!-- GEOVICTORIA -->
 
-      <a href="#" class="project">
+      <a
+        class="project"
+        href="#"
+      >
 
-        <div class="project-bg"></div>
 
         <div class="project-number">
           01
         </div>
 
-        <div class="company-name">
+
+        <div class="company">
           GeoVictoria
         </div>
+
 
         <div class="project-meta">
 
           Product Manager<br>
+
           Workforce Management<br>
+
           2026 — Present
 
         </div>
 
+
         <div class="project-arrow">
           ↗
         </div>
+
 
       </a>
 
@@ -1175,29 +1315,37 @@
 
       <!-- LOWSIGNAL -->
 
-      <a href="#" class="project">
+      <a
+        class="project"
+        href="#"
+      >
 
-        <div class="project-bg"></div>
 
         <div class="project-number">
           02
         </div>
 
-        <div class="company-name">
+
+        <div class="company">
           lowsignal
         </div>
+
 
         <div class="project-meta">
 
           Co-Founder & COO<br>
+
           Growth Systems<br>
+
           2025 — Present
 
         </div>
 
+
         <div class="project-arrow">
           ↗
         </div>
+
 
       </a>
 
@@ -1205,29 +1353,37 @@
 
       <!-- TETHERED -->
 
-      <a href="#" class="project">
+      <a
+        class="project"
+        href="#"
+      >
 
-        <div class="project-bg"></div>
 
         <div class="project-number">
           03
         </div>
 
-        <div class="company-name">
+
+        <div class="company">
           TetherEd
         </div>
+
 
         <div class="project-meta">
 
           Head of Partnerships<br>
+
           EdTech<br>
+
           Previous
 
         </div>
 
+
         <div class="project-arrow">
           ↗
         </div>
+
 
       </a>
 
@@ -1239,10 +1395,7 @@
 
 
 
-  <!-- =====================================================
-       ABOUT
-  ====================================================== -->
-
+  <!-- ABOUT -->
 
   <section class="about" id="about">
 
@@ -1264,17 +1417,13 @@
 
         <h2>
 
-          Business-minded.
+          Business-minded.<br>
 
-          <br>
+          Product-driven.<br>
 
-          Product-driven.
-
-          <br>
-
-          <em>
+          <span>
             Always building.
-          </em>
+          </span>
 
         </h2>
 
@@ -1288,7 +1437,7 @@
 
           <br><br>
 
-          My experience spans workforce technology,
+          My experience spans workforce management,
           growth systems, EdTech, partnerships and
           company building across Latin America.
 
@@ -1305,10 +1454,7 @@
 
 
 
-  <!-- =====================================================
-       NOW
-  ====================================================== -->
-
+  <!-- NOW -->
 
   <section class="now" id="now">
 
@@ -1319,7 +1465,7 @@
       <div class="section-code">
 
         04 / Now<br>
-        What I'm building
+        Currently building
 
       </div>
 
@@ -1350,8 +1496,10 @@
             </strong>
 
             <p>
+
               Building and developing workforce management
               products for companies across Latin America.
+
             </p>
 
           </div>
@@ -1365,8 +1513,10 @@
             </strong>
 
             <p>
+
               Building growth systems, digital products
               and new ways for companies to grow.
+
             </p>
 
           </div>
@@ -1385,15 +1535,12 @@
 
 
 
-  <!-- =====================================================
-       CONTACT
-  ====================================================== -->
-
+  <!-- CONTACT -->
 
   <section class="contact" id="contact">
 
 
-    <div class="contact-top">
+    <div class="contact-grid">
 
 
       <div class="section-code">
@@ -1412,9 +1559,9 @@
 
           Let's make
 
-          <em>
+          <span>
             things happen.
-          </em>
+          </span>
 
         </div>
 
@@ -1425,8 +1572,9 @@
 
           <a
             class="contact-link"
-            href="#"
+            href="https://www.linkedin.com/in/felipequirozp"
             target="_blank"
+            rel="noopener noreferrer"
           >
             LinkedIn ↗
           </a>
@@ -1434,8 +1582,9 @@
 
           <a
             class="contact-link"
-            href="#"
+            href="https://www.instagram.com/felipe_quirozp/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Instagram ↗
           </a>
@@ -1443,7 +1592,7 @@
 
           <a
             class="contact-link"
-            href="mailto:tuemail@email.com"
+            href="mailto:felipe@lowsignal.cl"
           >
             Email ↗
           </a>
@@ -1461,17 +1610,21 @@
 
     <footer class="footer">
 
+
       <span>
         © 2026 Felipe Quiroz
       </span>
+
 
       <span>
         Product · Growth · Business
       </span>
 
+
       <span>
         Santiago / CL
       </span>
+
 
     </footer>
 
