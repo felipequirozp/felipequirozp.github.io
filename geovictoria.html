@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -17,13 +16,7 @@
     content="Felipe Quiroz — Product Manager at GeoVictoria. Workforce Management, product development and pilots across LATAM."
   >
 
-
-  <!-- FONTS -->
-
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <link
     rel="preconnect"
@@ -36,7 +29,6 @@
     rel="stylesheet"
   >
 
-
   <style>
 
     /* =====================================================
@@ -44,12 +36,10 @@
     ===================================================== */
 
     :root {
-
       --navy: #182536;
       --navy-deep: #0d1724;
 
       --steel: #324963;
-      --steel-2: #3d5570;
       --steel-light: #71869c;
 
       --slate: #9aa9ba;
@@ -57,13 +47,13 @@
 
       --ice: #eef1f4;
       --paper: #f5f6f7;
+
       --white: #ffffff;
 
       --ink: #10161d;
       --muted: #66717d;
 
       --line: #d4d9de;
-
     }
 
 
@@ -82,7 +72,6 @@
 
 
     body {
-
       margin: 0;
 
       background: var(--paper);
@@ -92,7 +81,6 @@
 
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
-
     }
 
 
@@ -119,7 +107,6 @@
     ===================================================== */
 
     .nav {
-
       height: 84px;
 
       padding: 0 5vw;
@@ -137,41 +124,78 @@
 
       border-bottom:
         1px solid rgba(255,255,255,.12);
-
     }
 
 
     .brand {
-
       font-family: "Manrope", sans-serif;
 
       font-size: 17px;
       font-weight: 600;
 
       letter-spacing: -.04em;
-
     }
 
 
-    .nav-center {
+    .nav-links {
+      display: flex;
 
-      color: var(--slate);
+      align-items: center;
+
+      gap: 30px;
 
       font-size: 10px;
       font-weight: 500;
 
-      letter-spacing: .08em;
+      letter-spacing: .07em;
 
       text-transform: uppercase;
+    }
 
+
+    .nav-links a {
+      position: relative;
+
+      color: var(--slate-light);
+
+      transition:
+        color .2s ease;
+    }
+
+
+    .nav-links a::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: -7px;
+
+      width: 0;
+      height: 1px;
+
+      background: white;
+
+      transition:
+        width .22s ease;
+    }
+
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+
+    .nav-links a:hover::after {
+      width: 100%;
     }
 
 
     .back {
-
       justify-self: end;
 
-      padding: 9px 15px;
+      padding:
+        9px 15px;
 
       border:
         1px solid rgba(255,255,255,.28);
@@ -189,18 +213,15 @@
         background .2s ease,
         color .2s ease,
         border-color .2s ease;
-
     }
 
 
     .back:hover {
-
       background: white;
 
       color: var(--navy);
 
       border-color: white;
-
     }
 
 
@@ -209,34 +230,31 @@
     ===================================================== */
 
     .hero {
-
       min-height:
         calc(100vh - 84px);
 
       display: grid;
 
       grid-template-columns:
-        47% 53%;
+        44% 56%;
 
       background: var(--ice);
-
     }
 
 
     /* =====================================================
-       LEFT — WORKFORCE VISUAL
+       HERO LEFT
     ===================================================== */
 
     .hero-visual {
-
       position: relative;
 
-      min-height: 720px;
+      min-height: 700px;
 
       overflow: hidden;
 
       padding:
-        70px 6vw 65px;
+        58px 5vw 52px;
 
       background: var(--steel);
 
@@ -245,16 +263,10 @@
       display: flex;
 
       flex-direction: column;
-
-      justify-content: space-between;
-
     }
 
 
-    /* subtle background grid */
-
     .hero-visual::before {
-
       content: "";
 
       position: absolute;
@@ -264,13 +276,13 @@
       background-image:
 
         linear-gradient(
-          rgba(255,255,255,.08) 1px,
+          rgba(255,255,255,.07) 1px,
           transparent 1px
         ),
 
         linear-gradient(
           90deg,
-          rgba(255,255,255,.08) 1px,
+          rgba(255,255,255,.07) 1px,
           transparent 1px
         );
 
@@ -278,12 +290,10 @@
         160px 160px;
 
       pointer-events: none;
-
     }
 
 
     .visual-top {
-
       position: relative;
 
       z-index: 2;
@@ -295,12 +305,10 @@
       align-items: center;
 
       gap: 20px;
-
     }
 
 
     .visual-label {
-
       color: var(--slate-light);
 
       font-size: 10px;
@@ -309,14 +317,12 @@
       letter-spacing: .1em;
 
       text-transform: uppercase;
-
     }
 
 
     .visual-code {
-
       color:
-        rgba(255,255,255,.45);
+        rgba(255,255,255,.44);
 
       font-size: 9px;
       font-weight: 500;
@@ -324,57 +330,52 @@
       letter-spacing: .08em;
 
       text-transform: uppercase;
-
     }
 
 
     /* =====================================================
-       ABSTRACT SCHEDULE
+       COMPACT SCHEDULE
     ===================================================== */
 
     .schedule {
-
       position: relative;
 
       z-index: 2;
 
       margin:
-        55px 0 60px;
+        40px 0 38px;
 
       padding:
-        24px 0;
+        17px 0;
 
       border-top:
-        1px solid rgba(255,255,255,.14);
+        1px solid rgba(255,255,255,.13);
 
       border-bottom:
-        1px solid rgba(255,255,255,.14);
-
+        1px solid rgba(255,255,255,.13);
     }
 
 
     .schedule-header {
-
       display: grid;
 
       grid-template-columns:
-        70px repeat(5, 1fr);
+        58px repeat(5, 1fr);
 
       gap: 8px;
 
-      margin-bottom: 18px;
+      margin-bottom: 13px;
 
       color:
-        rgba(255,255,255,.48);
+        rgba(255,255,255,.46);
 
-      font-size: 8px;
+      font-size: 7px;
 
       letter-spacing: .08em;
 
       text-transform: uppercase;
 
       text-align: center;
-
     }
 
 
@@ -384,71 +385,56 @@
 
 
     .schedule-row {
-
       display: grid;
 
       grid-template-columns:
-        70px repeat(5, 1fr);
+        58px repeat(5, 1fr);
 
       gap: 8px;
 
       align-items: center;
 
-      min-height: 42px;
+      min-height: 31px;
 
       border-top:
-        1px solid rgba(255,255,255,.08);
-
+        1px solid rgba(255,255,255,.06);
     }
 
 
     .schedule-time {
-
       color:
-        rgba(255,255,255,.5);
+        rgba(255,255,255,.42);
 
-      font-size: 8px;
+      font-size: 7px;
 
-      letter-spacing: .06em;
-
+      letter-spacing: .05em;
     }
 
 
     .shift {
-
-      height: 12px;
+      height: 8px;
 
       border-radius: 999px;
 
       background:
-        rgba(255,255,255,.12);
-
+        rgba(255,255,255,.10);
     }
 
 
     .shift.medium {
-
       background:
-        rgba(199,208,217,.38);
-
+        rgba(199,208,217,.34);
     }
 
 
     .shift.active {
-
       background:
-        rgba(255,255,255,.82);
-
+        rgba(255,255,255,.78);
     }
 
 
     .shift.short {
-      width: 54%;
-    }
-
-
-    .shift.long {
-      width: 88%;
+      width: 52%;
     }
 
 
@@ -457,40 +443,42 @@
     }
 
 
+    .shift.long {
+      width: 88%;
+    }
+
+
     /* =====================================================
-       LEFT TITLE
+       LEFT HERO TITLE
     ===================================================== */
 
     .visual-title {
-
       position: relative;
 
       z-index: 2;
 
+      margin-top: auto;
     }
 
 
     .visual-title span {
-
       display: block;
 
-      margin-bottom: 17px;
+      margin-bottom: 14px;
 
       color:
-        rgba(255,255,255,.60);
+        rgba(255,255,255,.57);
 
-      font-size: 10px;
+      font-size: 9px;
       font-weight: 500;
 
       letter-spacing: .1em;
 
       text-transform: uppercase;
-
     }
 
 
     .visual-title strong {
-
       display: block;
 
       max-width: 520px;
@@ -498,36 +486,29 @@
       font-family: "Manrope", sans-serif;
 
       font-size:
-        clamp(52px, 5.6vw, 88px);
+        clamp(45px, 4.6vw, 72px);
 
-      /*
-        More breathing room than previous version
-      */
+      line-height: 1.06;
 
-      line-height: 1.02;
-
-      letter-spacing: -.06em;
+      letter-spacing: -.055em;
 
       font-weight: 500;
-
     }
 
 
     /* =====================================================
-       RIGHT HERO CONTENT
+       HERO RIGHT
     ===================================================== */
 
     .hero-content {
-
       padding:
-        70px 7vw 70px 6vw;
+        65px 7vw 65px 5vw;
 
       display: flex;
 
       flex-direction: column;
 
       justify-content: center;
-
     }
 
 
@@ -536,45 +517,49 @@
     ===================================================== */
 
     .company-logo {
-
-      margin-bottom: 36px;
-
+      margin-bottom: 32px;
     }
 
 
     .company-logo-link {
+      display: inline-flex;
 
-      display: inline-block;
+      align-items: center;
+
+      justify-content: center;
+
+      padding:
+        14px 18px;
+
+      background: var(--navy);
+
+      border-radius: 14px;
+
+      box-shadow:
+        0 10px 30px
+        rgba(24,37,54,.10);
 
       transition:
-        opacity .2s ease,
-        transform .2s ease;
-
+        transform .2s ease,
+        box-shadow .2s ease;
     }
 
 
     .company-logo-link:hover {
-
-      opacity: .65;
-
       transform:
         translateY(-2px);
 
+      box-shadow:
+        0 14px 36px
+        rgba(24,37,54,.16);
     }
 
 
     .company-logo-link img {
-
       width: 145px;
-
-      height: auto;
-
-      max-height: 52px;
+      height: 38px;
 
       object-fit: contain;
-
-      object-position: left center;
-
     }
 
 
@@ -582,9 +567,22 @@
        HERO TEXT
     ===================================================== */
 
-    .kicker {
+    .hero-breadcrumb {
+      margin-bottom: 15px;
 
-      margin-bottom: 25px;
+      color: var(--muted);
+
+      font-size: 9px;
+      font-weight: 500;
+
+      letter-spacing: .1em;
+
+      text-transform: uppercase;
+    }
+
+
+    .kicker {
+      margin-bottom: 24px;
 
       color: var(--steel-light);
 
@@ -594,12 +592,10 @@
       letter-spacing: .11em;
 
       text-transform: uppercase;
-
     }
 
 
     .hero-content h1 {
-
       margin: 0;
 
       font-family: "Manrope", sans-serif;
@@ -607,19 +603,17 @@
       font-size:
         clamp(58px, 6vw, 98px);
 
-      line-height: .92;
+      line-height: .94;
 
       letter-spacing: -.065em;
 
       font-weight: 500;
 
       color: var(--navy);
-
     }
 
 
     .hero-role {
-
       margin-top: 25px;
 
       color: #576473;
@@ -627,13 +621,11 @@
       font-size: 16px;
 
       line-height: 1.55;
-
     }
 
 
     .hero-description {
-
-      margin-top: 42px;
+      margin-top: 40px;
 
       max-width: 690px;
 
@@ -642,25 +634,21 @@
       font-size: 15px;
 
       line-height: 1.85;
-
     }
 
 
     .hero-tags {
-
       display: flex;
 
       flex-wrap: wrap;
 
       gap: 9px;
 
-      margin-top: 38px;
-
+      margin-top: 36px;
     }
 
 
     .tag {
-
       padding:
         9px 13px;
 
@@ -680,7 +668,6 @@
       letter-spacing: .05em;
 
       text-transform: uppercase;
-
     }
 
 
@@ -689,17 +676,14 @@
     ===================================================== */
 
     .case {
-
       padding:
         125px 7vw 145px;
 
       background: var(--paper);
-
     }
 
 
     .case-grid {
-
       display: grid;
 
       grid-template-columns:
@@ -710,26 +694,20 @@
       max-width: 1400px;
 
       margin: 0 auto;
-
     }
 
 
     .case-main {
-
       max-width: 850px;
-
     }
 
 
     .case-section {
-
       margin-bottom: 95px;
-
     }
 
 
     .section-label {
-
       margin-bottom: 20px;
 
       color: var(--muted);
@@ -740,12 +718,10 @@
       letter-spacing: .1em;
 
       text-transform: uppercase;
-
     }
 
 
     .case-section h2 {
-
       margin:
         0 0 30px;
 
@@ -759,12 +735,10 @@
       letter-spacing: -.045em;
 
       font-weight: 500;
-
     }
 
 
     .case-section p {
-
       margin:
         0 0 22px;
 
@@ -773,7 +747,6 @@
       font-size: 15px;
 
       line-height: 1.85;
-
     }
 
 
@@ -782,17 +755,14 @@
     ===================================================== */
 
     .initiatives {
-
       margin-top: 38px;
 
       border-top:
         1px solid var(--line);
-
     }
 
 
     .initiative {
-
       padding:
         25px 0;
 
@@ -809,43 +779,35 @@
       transition:
         padding .25s ease,
         background .25s ease;
-
     }
 
 
     .initiative:hover {
-
       padding-left: 15px;
       padding-right: 15px;
 
       background: var(--ice);
-
     }
 
 
     .initiative-number {
-
       color: var(--muted);
 
       font-size: 10px;
-
     }
 
 
     .initiative-name {
-
       font-family: "Manrope", sans-serif;
 
       font-size: 21px;
       font-weight: 500;
 
       letter-spacing: -.025em;
-
     }
 
 
     .initiative-type {
-
       color: var(--muted);
 
       font-size: 9px;
@@ -853,7 +815,6 @@
       letter-spacing: .07em;
 
       text-transform: uppercase;
-
     }
 
 
@@ -862,7 +823,6 @@
     ===================================================== */
 
     .clean-list {
-
       margin:
         28px 0 0;
 
@@ -872,12 +832,10 @@
 
       border-top:
         1px solid var(--line);
-
     }
 
 
     .clean-list li {
-
       padding:
         18px 0;
 
@@ -896,16 +854,13 @@
       font-size: 14px;
 
       line-height: 1.7;
-
     }
 
 
     .clean-list li::before {
-
       content: "•";
 
       color: var(--steel-light);
-
     }
 
 
@@ -914,18 +869,15 @@
     ===================================================== */
 
     .sidebar {
-
       position: sticky;
 
       top: 110px;
 
       align-self: start;
-
     }
 
 
     .sidebar-box {
-
       padding:
         28px 26px;
 
@@ -935,34 +887,28 @@
         1px solid var(--line);
 
       border-radius: 22px;
-
     }
 
 
     .sidebar-row {
-
       padding-bottom: 20px;
 
       margin-bottom: 20px;
 
       border-bottom:
         1px solid rgba(24,37,54,.10);
-
     }
 
 
     .sidebar-row:last-child {
-
       margin-bottom: 0;
       padding-bottom: 0;
 
       border-bottom: 0;
-
     }
 
 
     .sidebar-row span {
-
       display: block;
 
       margin-bottom: 7px;
@@ -975,12 +921,10 @@
       letter-spacing: .08em;
 
       text-transform: uppercase;
-
     }
 
 
     .sidebar-row strong {
-
       color: var(--navy);
 
       font-size: 13px;
@@ -988,12 +932,10 @@
       line-height: 1.55;
 
       font-weight: 500;
-
     }
 
 
     .company-website {
-
       display: inline-block;
 
       padding-bottom: 2px;
@@ -1004,16 +946,13 @@
       transition:
         opacity .2s ease,
         border-color .2s ease;
-
     }
 
 
     .company-website:hover {
-
       opacity: .55;
 
       border-color: transparent;
-
     }
 
 
@@ -1022,19 +961,16 @@
     ===================================================== */
 
     .focus {
-
       padding:
         125px 7vw;
 
       background: var(--navy);
 
       color: white;
-
     }
 
 
     .focus-grid {
-
       display: grid;
 
       grid-template-columns:
@@ -1045,19 +981,15 @@
       max-width: 1400px;
 
       margin: 0 auto;
-
     }
 
 
     .focus .section-label {
-
       color: var(--slate);
-
     }
 
 
     .focus-title {
-
       margin: 0;
 
       font-family: "Manrope", sans-serif;
@@ -1070,21 +1002,17 @@
       letter-spacing: -.065em;
 
       font-weight: 500;
-
     }
 
 
     .focus-title span {
-
       display: block;
 
       color: var(--slate);
-
     }
 
 
     .focus-items {
-
       margin-top: 75px;
 
       display: grid;
@@ -1093,34 +1021,28 @@
         repeat(3, 1fr);
 
       gap: 28px;
-
     }
 
 
     .focus-item {
-
       padding-top: 22px;
 
       border-top:
         1px solid rgba(255,255,255,.20);
-
     }
 
 
     .focus-item strong {
-
       display: block;
 
       margin-bottom: 12px;
 
       font-size: 15px;
       font-weight: 500;
-
     }
 
 
     .focus-item p {
-
       margin: 0;
 
       color: #bbc5d0;
@@ -1128,26 +1050,22 @@
       font-size: 13px;
 
       line-height: 1.7;
-
     }
 
 
     /* =====================================================
-       NEXT PROJECT
+       NEXT
     ===================================================== */
 
     .next {
-
       padding:
         120px 7vw 45px;
 
       background: var(--ice);
-
     }
 
 
     .next-link {
-
       display: flex;
 
       justify-content:
@@ -1163,12 +1081,10 @@
 
       border-bottom:
         1px solid var(--line);
-
     }
 
 
     .next-small {
-
       color: var(--muted);
 
       font-size: 10px;
@@ -1177,12 +1093,10 @@
       text-transform: uppercase;
 
       letter-spacing: .08em;
-
     }
 
 
     .next-name {
-
       margin-top: 18px;
 
       font-family: "Manrope", sans-serif;
@@ -1195,12 +1109,10 @@
       letter-spacing: -.06em;
 
       font-weight: 500;
-
     }
 
 
     .next-action {
-
       padding:
         10px 16px;
 
@@ -1217,17 +1129,14 @@
       transition:
         background .2s ease,
         color .2s ease;
-
     }
 
 
     .next-link:hover
     .next-action {
-
       background: var(--navy);
 
       color: white;
-
     }
 
 
@@ -1236,7 +1145,6 @@
     ===================================================== */
 
     .footer {
-
       padding-top: 28px;
 
       display: flex;
@@ -1252,7 +1160,6 @@
       letter-spacing: .07em;
 
       text-transform: uppercase;
-
     }
 
 
@@ -1262,147 +1169,116 @@
 
     @media(max-width: 900px) {
 
-
       .nav {
+        height: 78px;
 
         padding:
           0 22px;
 
         grid-template-columns:
           1fr auto;
-
       }
 
 
-      .nav-center {
+      .nav-links {
         display: none;
       }
 
 
       .hero {
-
         grid-template-columns:
           1fr;
-
       }
 
 
       .hero-visual {
-
-        min-height: 620px;
+        min-height: 570px;
 
         padding:
-          55px 22px;
-
+          48px 22px;
       }
 
 
       .schedule-header {
-
         grid-template-columns:
-          50px repeat(5, 1fr);
-
+          48px repeat(5, 1fr);
       }
 
 
       .schedule-row {
-
         grid-template-columns:
-          50px repeat(5, 1fr);
-
+          48px repeat(5, 1fr);
       }
 
 
       .hero-content {
-
         padding:
           65px 22px;
-
       }
 
 
       .company-logo-link img {
-
         width: 130px;
-
       }
 
 
       .case,
       .focus,
       .next {
-
         padding-left: 22px;
         padding-right: 22px;
-
       }
 
 
       .case-grid {
-
         grid-template-columns:
           1fr;
-
       }
 
 
       .sidebar {
-
         position: static;
-
       }
 
 
       .focus-grid {
-
         grid-template-columns:
           1fr;
 
         gap: 35px;
-
       }
 
 
       .focus-items {
-
         grid-template-columns:
           1fr;
-
       }
 
 
       .initiative {
-
         grid-template-columns:
           40px 1fr;
-
       }
 
 
       .initiative-type {
-
         display: none;
-
       }
 
 
       .next-link {
-
         flex-direction: column;
 
         align-items: flex-start;
 
         gap: 28px;
-
       }
 
 
       .footer {
-
         flex-direction: column;
 
         gap: 9px;
-
       }
 
     }
@@ -1422,7 +1298,6 @@
 
   <header class="nav">
 
-
     <a
       href="index.html"
       class="brand"
@@ -1431,11 +1306,25 @@
     </a>
 
 
-    <div class="nav-center">
+    <nav class="nav-links">
 
-      Selected Work / GeoVictoria
+      <a href="index.html#work">
+        Work
+      </a>
 
-    </div>
+      <a href="index.html#about">
+        About
+      </a>
+
+      <a href="index.html#now">
+        Now
+      </a>
+
+      <a href="index.html#contact">
+        Contact
+      </a>
+
+    </nav>
 
 
     <a
@@ -1444,7 +1333,6 @@
     >
       Back
     </a>
-
 
   </header>
 
@@ -1464,26 +1352,18 @@
 
       <div class="visual-top">
 
-
         <div class="visual-label">
-
           Workforce Management
-
         </div>
-
 
         <div class="visual-code">
-
           Product / 01
-
         </div>
-
 
       </div>
 
 
-
-      <!-- ABSTRACT WORKFORCE SCHEDULE -->
+      <!-- ABSTRACT SCHEDULE -->
 
       <div class="schedule">
 
@@ -1505,7 +1385,6 @@
         </div>
 
 
-
         <div class="schedule-row">
 
           <div class="schedule-time">
@@ -1523,7 +1402,6 @@
           <div class="shift medium long"></div>
 
         </div>
-
 
 
         <div class="schedule-row">
@@ -1545,7 +1423,6 @@
         </div>
 
 
-
         <div class="schedule-row">
 
           <div class="schedule-time">
@@ -1563,7 +1440,6 @@
           <div class="shift short"></div>
 
         </div>
-
 
 
         <div class="schedule-row">
@@ -1585,50 +1461,20 @@
         </div>
 
 
-
-        <div class="schedule-row">
-
-          <div class="schedule-time">
-            16:00
-          </div>
-
-          <div class="shift medium long"></div>
-
-          <div class="shift active mid"></div>
-
-          <div class="shift short"></div>
-
-          <div class="shift medium long"></div>
-
-          <div class="shift active short"></div>
-
-        </div>
-
-
       </div>
-
 
 
       <div class="visual-title">
 
-
         <span>
-
           Built for real operations
-
         </span>
 
-
         <strong>
-
           Product<br>
-
           systems<br>
-
           at scale.
-
         </strong>
-
 
       </div>
 
@@ -1646,7 +1492,6 @@
 
       <div class="company-logo">
 
-
         <a
           class="company-logo-link"
           href="https://www.geovictoria.com/"
@@ -1655,42 +1500,34 @@
           aria-label="Visit GeoVictoria website"
         >
 
-
           <img
             src="geovictoria-logo.png"
             alt="GeoVictoria logo"
           >
 
-
         </a>
-
 
       </div>
 
+
+      <div class="hero-breadcrumb">
+        Selected Work / 01
+      </div>
 
 
       <div class="kicker">
-
         Current role · 2026 — Present
-
       </div>
-
 
 
       <h1>
-
         GeoVictoria
-
       </h1>
 
 
-
       <div class="hero-role">
-
         Product Manager · Workforce Management
-
       </div>
-
 
 
       <p class="hero-description">
@@ -1703,29 +1540,23 @@
       </p>
 
 
-
       <div class="hero-tags">
-
 
         <span class="tag">
           Product
         </span>
 
-
         <span class="tag">
           SaaS
         </span>
-
 
         <span class="tag">
           Workforce Management
         </span>
 
-
         <span class="tag">
           LATAM
         </span>
-
 
       </div>
 
@@ -1738,7 +1569,7 @@
 
 
   <!-- =====================================================
-       CASE BODY
+       CASE
   ====================================================== -->
 
   <section class="case">
@@ -1747,8 +1578,6 @@
     <div class="case-grid">
 
 
-      <!-- MAIN -->
-
       <main class="case-main">
 
 
@@ -1756,21 +1585,14 @@
 
         <section class="case-section">
 
-
           <div class="section-label">
-
             01 / Role
-
           </div>
 
-
           <h2>
-
             Product from validation
             to execution.
-
           </h2>
-
 
           <p>
 
@@ -1782,7 +1604,6 @@
 
           </p>
 
-
           <p>
 
             The role combines product strategy, customer
@@ -1792,7 +1613,6 @@
 
           </p>
 
-
         </section>
 
 
@@ -1801,18 +1621,12 @@
 
         <section class="case-section">
 
-
           <div class="section-label">
-
             02 / Selected initiatives
-
           </div>
 
-
           <h2>
-
             Products I'm working on.
-
           </h2>
 
 
@@ -1821,94 +1635,72 @@
 
             <div class="initiative">
 
-
               <div class="initiative-number">
                 01
               </div>
-
 
               <div class="initiative-name">
                 Smart Scheduler
               </div>
 
-
               <div class="initiative-type">
                 Planning
               </div>
 
-
             </div>
 
 
-
             <div class="initiative">
-
 
               <div class="initiative-number">
                 02
               </div>
 
-
               <div class="initiative-name">
                 Shift Optimizer
               </div>
-
 
               <div class="initiative-type">
                 Optimization
               </div>
 
-
             </div>
 
 
-
             <div class="initiative">
-
 
               <div class="initiative-number">
                 03
               </div>
 
-
               <div class="initiative-name">
                 Shift Change Workflow
               </div>
 
-
               <div class="initiative-type">
                 Workflow
               </div>
-
 
             </div>
 
 
           </div>
 
-
         </section>
 
 
 
-        <!-- HOW I WORK -->
+        <!-- HOW -->
 
         <section class="case-section">
 
-
           <div class="section-label">
-
             03 / How I work
-
           </div>
 
-
           <h2>
-
             Product in the real world.
-
           </h2>
-
 
           <p>
 
@@ -1921,47 +1713,30 @@
 
           <ul class="clean-list">
 
-
             <li>
-
               Customer discovery and validation
               with enterprise teams.
-
             </li>
 
-
             <li>
-
               Pilot design and product feedback cycles.
-
             </li>
 
-
             <li>
-
               Product requirements and prioritization.
-
             </li>
 
-
             <li>
-
               Alignment across product, development,
               sales and customer teams.
-
             </li>
-
 
             <li>
-
               Building the path from pilot
               to scalable product adoption.
-
             </li>
 
-
           </ul>
-
 
         </section>
 
@@ -1971,21 +1746,14 @@
 
         <section class="case-section">
 
-
           <div class="section-label">
-
             04 / Context
-
           </div>
 
-
           <h2>
-
             Workforce management
             is an operating system.
-
           </h2>
-
 
           <p>
 
@@ -1997,7 +1765,6 @@
 
           </p>
 
-
           <p>
 
             That complexity is what makes the category
@@ -2006,7 +1773,6 @@
             and the people actually using the system.
 
           </p>
-
 
         </section>
 
@@ -2018,7 +1784,6 @@
       <!-- SIDEBAR -->
 
       <aside class="sidebar">
-
 
         <div class="sidebar-box">
 
@@ -2034,7 +1799,6 @@
             </strong>
 
           </div>
-
 
 
           <div class="sidebar-row">
@@ -2059,7 +1823,6 @@
           </div>
 
 
-
           <div class="sidebar-row">
 
             <span>
@@ -2071,7 +1834,6 @@
             </strong>
 
           </div>
-
 
 
           <div class="sidebar-row">
@@ -2087,7 +1849,6 @@
           </div>
 
 
-
           <div class="sidebar-row">
 
             <span>
@@ -2099,7 +1860,6 @@
             </strong>
 
           </div>
-
 
 
           <div class="sidebar-row">
@@ -2115,7 +1875,6 @@
           </div>
 
 
-
           <div class="sidebar-row">
 
             <span>
@@ -2123,22 +1882,16 @@
             </span>
 
             <strong>
-
               New products<br>
-
               Pilots<br>
-
               Product validation<br>
-
               Enterprise SaaS
-
             </strong>
 
           </div>
 
 
         </div>
-
 
       </aside>
 
@@ -2156,32 +1909,24 @@
 
   <section class="focus">
 
-
     <div class="focus-grid">
 
-
       <div class="section-label">
-
         05 / Focus
-
       </div>
 
 
       <div>
-
 
         <h2 class="focus-title">
 
           From product idea
 
           <span>
-
             to real adoption.
-
           </span>
 
         </h2>
-
 
 
         <div class="focus-items">
@@ -2189,11 +1934,9 @@
 
           <div class="focus-item">
 
-
             <strong>
               Discover
             </strong>
-
 
             <p>
 
@@ -2202,18 +1945,14 @@
 
             </p>
 
-
           </div>
-
 
 
           <div class="focus-item">
 
-
             <strong>
               Validate
             </strong>
-
 
             <p>
 
@@ -2222,18 +1961,14 @@
 
             </p>
 
-
           </div>
-
 
 
           <div class="focus-item">
 
-
             <strong>
               Scale
             </strong>
-
 
             <p>
 
@@ -2242,18 +1977,14 @@
 
             </p>
 
-
           </div>
 
 
         </div>
 
-
       </div>
 
-
     </div>
-
 
   </section>
 
@@ -2265,63 +1996,42 @@
 
   <section class="next">
 
-
     <a
       class="next-link"
       href="lowsignal.html"
     >
 
-
       <div>
 
-
         <div class="next-small">
-
           Next / Selected Work
-
         </div>
-
 
         <div class="next-name">
-
           lowsignal
-
         </div>
-
 
       </div>
 
 
       <div class="next-action">
-
         Next project
-
       </div>
-
 
     </a>
 
 
-
     <footer class="footer">
 
-
       <span>
-
         © 2026 Felipe Quiroz
-
       </span>
-
 
       <span>
-
         Santiago / CL
-
       </span>
-
 
     </footer>
-
 
   </section>
 
