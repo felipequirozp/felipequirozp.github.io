@@ -17,6 +17,31 @@
     content="Selected work at TetherEd — education technology, partnerships, public-sector collaboration and international expansion."
   >
 
+
+  <!-- SEO / LANGUAGES -->
+  <link
+    rel="canonical"
+    href="https://felipequirozp.github.io/tethereducation.html"
+  >
+
+  <link
+    rel="alternate"
+    hreflang="en"
+    href="https://felipequirozp.github.io/tethereducation.html"
+  >
+
+  <link
+    rel="alternate"
+    hreflang="es"
+    href="https://felipequirozp.github.io/es/tethereducation.html"
+  >
+
+  <link
+    rel="alternate"
+    hreflang="x-default"
+    href="https://felipequirozp.github.io/tethereducation.html"
+  >
+
   <!-- FAVICON -->
   <link
     rel="icon"
@@ -245,6 +270,63 @@
       border-color: white;
 
     }
+
+
+    /* =====================================================
+       LANGUAGE SWITCH
+    ===================================================== */
+
+    .lang-switch {
+
+      width: 38px;
+      height: 38px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      flex-shrink: 0;
+
+      border:
+        1px solid rgba(255,255,255,.22);
+
+      border-radius: 50%;
+
+      color: var(--slate-light) !important;
+
+      font-size: 9px;
+      font-weight: 600;
+
+      letter-spacing: .06em;
+
+      transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+
+    }
+
+
+    .lang-switch:hover {
+
+      background:
+        rgba(255,255,255,.10);
+
+      color: white !important;
+
+      border-color:
+        rgba(255,255,255,.45);
+
+    }
+
+
+    .nav-links > a.lang-switch::after {
+
+      display: none !important;
+
+    }
+
+
 
 
     /* =====================================================
@@ -1947,6 +2029,18 @@
       }
 
 
+      .lang-switch {
+
+        width: 34px;
+        height: 34px;
+
+        font-size: 8px;
+
+      }
+
+
+
+
       .hero-visual {
 
         padding:
@@ -2282,6 +2376,14 @@
         class="contact-nav"
       >
         Contact
+      </a>
+
+      <a
+        href="es/tethereducation.html"
+        class="lang-switch"
+        aria-label="Ver sitio en español"
+      >
+        ES
       </a>
 
 
