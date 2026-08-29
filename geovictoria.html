@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
 
   <meta
@@ -29,6 +30,7 @@
     rel="stylesheet"
   >
 
+
   <style>
 
     /* =====================================================
@@ -36,6 +38,7 @@
     ===================================================== */
 
     :root {
+
       --navy: #182536;
       --navy-deep: #0d1724;
 
@@ -54,6 +57,7 @@
       --muted: #66717d;
 
       --line: #d4d9de;
+
     }
 
 
@@ -72,6 +76,7 @@
 
 
     body {
+
       margin: 0;
 
       background: var(--paper);
@@ -81,24 +86,31 @@
 
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
+
     }
 
 
     a {
+
       color: inherit;
       text-decoration: none;
+
     }
 
 
     img {
+
       display: block;
       max-width: 100%;
+
     }
 
 
     ::selection {
+
       background: var(--navy);
       color: white;
+
     }
 
 
@@ -107,37 +119,39 @@
     ===================================================== */
 
     .nav {
+
       height: 84px;
 
       padding: 0 5vw;
 
-      display: grid;
-
-      grid-template-columns:
-        1fr auto 1fr;
+      display: flex;
 
       align-items: center;
+      justify-content: space-between;
 
       background: var(--navy);
-
       color: white;
 
       border-bottom:
         1px solid rgba(255,255,255,.12);
+
     }
 
 
     .brand {
+
       font-family: "Manrope", sans-serif;
 
       font-size: 17px;
       font-weight: 600;
 
       letter-spacing: -.04em;
+
     }
 
 
     .nav-links {
+
       display: flex;
 
       align-items: center;
@@ -150,20 +164,24 @@
       letter-spacing: .07em;
 
       text-transform: uppercase;
+
     }
 
 
-    .nav-links a {
+    .nav-links > a:not(.contact-nav) {
+
       position: relative;
 
       color: var(--slate-light);
 
       transition:
         color .2s ease;
+
     }
 
 
-    .nav-links a::after {
+    .nav-links > a:not(.contact-nav)::after {
+
       content: "";
 
       position: absolute;
@@ -178,21 +196,25 @@
 
       transition:
         width .22s ease;
+
     }
 
 
-    .nav-links a:hover {
+    .nav-links > a:not(.contact-nav):hover {
+
       color: white;
+
     }
 
 
-    .nav-links a:hover::after {
+    .nav-links > a:not(.contact-nav):hover::after {
+
       width: 100%;
+
     }
 
 
-    .back {
-      justify-self: end;
+    .contact-nav {
 
       padding:
         9px 15px;
@@ -202,26 +224,24 @@
 
       border-radius: 999px;
 
-      font-size: 10px;
-      font-weight: 500;
-
-      letter-spacing: .06em;
-
-      text-transform: uppercase;
+      color: white;
 
       transition:
         background .2s ease,
         color .2s ease,
         border-color .2s ease;
+
     }
 
 
-    .back:hover {
+    .contact-nav:hover {
+
       background: white;
 
       color: var(--navy);
 
       border-color: white;
+
     }
 
 
@@ -230,6 +250,7 @@
     ===================================================== */
 
     .hero {
+
       min-height:
         calc(100vh - 84px);
 
@@ -239,6 +260,7 @@
         44% 56%;
 
       background: var(--ice);
+
     }
 
 
@@ -247,6 +269,7 @@
     ===================================================== */
 
     .hero-visual {
+
       position: relative;
 
       min-height: 700px;
@@ -263,10 +286,12 @@
       display: flex;
 
       flex-direction: column;
+
     }
 
 
     .hero-visual::before {
+
       content: "";
 
       position: absolute;
@@ -290,10 +315,12 @@
         160px 160px;
 
       pointer-events: none;
+
     }
 
 
     .visual-top {
+
       position: relative;
 
       z-index: 2;
@@ -301,14 +328,15 @@
       display: flex;
 
       justify-content: space-between;
-
       align-items: center;
 
       gap: 20px;
+
     }
 
 
     .visual-label {
+
       color: var(--slate-light);
 
       font-size: 10px;
@@ -317,10 +345,12 @@
       letter-spacing: .1em;
 
       text-transform: uppercase;
+
     }
 
 
     .visual-code {
+
       color:
         rgba(255,255,255,.44);
 
@@ -330,14 +360,16 @@
       letter-spacing: .08em;
 
       text-transform: uppercase;
+
     }
 
 
     /* =====================================================
-       COMPACT SCHEDULE
+       ABSTRACT WORKFORCE SCHEDULE
     ===================================================== */
 
     .schedule {
+
       position: relative;
 
       z-index: 2;
@@ -353,10 +385,12 @@
 
       border-bottom:
         1px solid rgba(255,255,255,.13);
+
     }
 
 
     .schedule-header {
+
       display: grid;
 
       grid-template-columns:
@@ -376,15 +410,19 @@
       text-transform: uppercase;
 
       text-align: center;
+
     }
 
 
     .schedule-header span:first-child {
+
       text-align: left;
+
     }
 
 
     .schedule-row {
+
       display: grid;
 
       grid-template-columns:
@@ -398,38 +436,47 @@
 
       border-top:
         1px solid rgba(255,255,255,.06);
+
     }
 
 
     .schedule-time {
+
       color:
         rgba(255,255,255,.42);
 
       font-size: 7px;
 
       letter-spacing: .05em;
+
     }
 
 
     .shift {
+
       height: 8px;
 
       border-radius: 999px;
 
       background:
         rgba(255,255,255,.10);
+
     }
 
 
     .shift.medium {
+
       background:
         rgba(199,208,217,.34);
+
     }
 
 
     .shift.active {
+
       background:
         rgba(255,255,255,.78);
+
     }
 
 
@@ -449,19 +496,22 @@
 
 
     /* =====================================================
-       LEFT HERO TITLE
+       LEFT TITLE
     ===================================================== */
 
     .visual-title {
+
       position: relative;
 
       z-index: 2;
 
       margin-top: auto;
+
     }
 
 
     .visual-title span {
+
       display: block;
 
       margin-bottom: 14px;
@@ -475,10 +525,12 @@
       letter-spacing: .1em;
 
       text-transform: uppercase;
+
     }
 
 
     .visual-title strong {
+
       display: block;
 
       max-width: 520px;
@@ -493,6 +545,7 @@
       letter-spacing: -.055em;
 
       font-weight: 500;
+
     }
 
 
@@ -501,6 +554,7 @@
     ===================================================== */
 
     .hero-content {
+
       padding:
         65px 7vw 65px 5vw;
 
@@ -509,6 +563,7 @@
       flex-direction: column;
 
       justify-content: center;
+
     }
 
 
@@ -517,15 +572,17 @@
     ===================================================== */
 
     .company-logo {
+
       margin-bottom: 32px;
+
     }
 
 
     .company-logo-link {
+
       display: inline-flex;
 
       align-items: center;
-
       justify-content: center;
 
       padding:
@@ -542,24 +599,29 @@
       transition:
         transform .2s ease,
         box-shadow .2s ease;
+
     }
 
 
     .company-logo-link:hover {
+
       transform:
         translateY(-2px);
 
       box-shadow:
         0 14px 36px
         rgba(24,37,54,.16);
+
     }
 
 
     .company-logo-link img {
+
       width: 145px;
       height: 38px;
 
       object-fit: contain;
+
     }
 
 
@@ -568,6 +630,7 @@
     ===================================================== */
 
     .hero-breadcrumb {
+
       margin-bottom: 15px;
 
       color: var(--muted);
@@ -578,10 +641,12 @@
       letter-spacing: .1em;
 
       text-transform: uppercase;
+
     }
 
 
     .kicker {
+
       margin-bottom: 24px;
 
       color: var(--steel-light);
@@ -592,10 +657,12 @@
       letter-spacing: .11em;
 
       text-transform: uppercase;
+
     }
 
 
     .hero-content h1 {
+
       margin: 0;
 
       font-family: "Manrope", sans-serif;
@@ -610,10 +677,12 @@
       font-weight: 500;
 
       color: var(--navy);
+
     }
 
 
     .hero-role {
+
       margin-top: 25px;
 
       color: #576473;
@@ -621,10 +690,12 @@
       font-size: 16px;
 
       line-height: 1.55;
+
     }
 
 
     .hero-description {
+
       margin-top: 40px;
 
       max-width: 690px;
@@ -634,10 +705,12 @@
       font-size: 15px;
 
       line-height: 1.85;
+
     }
 
 
     .hero-tags {
+
       display: flex;
 
       flex-wrap: wrap;
@@ -645,10 +718,12 @@
       gap: 9px;
 
       margin-top: 36px;
+
     }
 
 
     .tag {
+
       padding:
         9px 13px;
 
@@ -668,22 +743,26 @@
       letter-spacing: .05em;
 
       text-transform: uppercase;
+
     }
 
 
     /* =====================================================
-       CASE
+       CASE BODY
     ===================================================== */
 
     .case {
+
       padding:
         125px 7vw 145px;
 
       background: var(--paper);
+
     }
 
 
     .case-grid {
+
       display: grid;
 
       grid-template-columns:
@@ -694,20 +773,26 @@
       max-width: 1400px;
 
       margin: 0 auto;
+
     }
 
 
     .case-main {
+
       max-width: 850px;
+
     }
 
 
     .case-section {
+
       margin-bottom: 95px;
+
     }
 
 
     .section-label {
+
       margin-bottom: 20px;
 
       color: var(--muted);
@@ -718,10 +803,12 @@
       letter-spacing: .1em;
 
       text-transform: uppercase;
+
     }
 
 
     .case-section h2 {
+
       margin:
         0 0 30px;
 
@@ -735,10 +822,12 @@
       letter-spacing: -.045em;
 
       font-weight: 500;
+
     }
 
 
     .case-section p {
+
       margin:
         0 0 22px;
 
@@ -747,6 +836,7 @@
       font-size: 15px;
 
       line-height: 1.85;
+
     }
 
 
@@ -755,14 +845,17 @@
     ===================================================== */
 
     .initiatives {
+
       margin-top: 38px;
 
       border-top:
         1px solid var(--line);
+
     }
 
 
     .initiative {
+
       padding:
         25px 0;
 
@@ -779,35 +872,43 @@
       transition:
         padding .25s ease,
         background .25s ease;
+
     }
 
 
     .initiative:hover {
+
       padding-left: 15px;
       padding-right: 15px;
 
       background: var(--ice);
+
     }
 
 
     .initiative-number {
+
       color: var(--muted);
 
       font-size: 10px;
+
     }
 
 
     .initiative-name {
+
       font-family: "Manrope", sans-serif;
 
       font-size: 21px;
       font-weight: 500;
 
       letter-spacing: -.025em;
+
     }
 
 
     .initiative-type {
+
       color: var(--muted);
 
       font-size: 9px;
@@ -815,6 +916,7 @@
       letter-spacing: .07em;
 
       text-transform: uppercase;
+
     }
 
 
@@ -823,6 +925,7 @@
     ===================================================== */
 
     .clean-list {
+
       margin:
         28px 0 0;
 
@@ -832,10 +935,12 @@
 
       border-top:
         1px solid var(--line);
+
     }
 
 
     .clean-list li {
+
       padding:
         18px 0;
 
@@ -854,13 +959,16 @@
       font-size: 14px;
 
       line-height: 1.7;
+
     }
 
 
     .clean-list li::before {
+
       content: "•";
 
       color: var(--steel-light);
+
     }
 
 
@@ -869,15 +977,18 @@
     ===================================================== */
 
     .sidebar {
+
       position: sticky;
 
       top: 110px;
 
       align-self: start;
+
     }
 
 
     .sidebar-box {
+
       padding:
         28px 26px;
 
@@ -887,28 +998,34 @@
         1px solid var(--line);
 
       border-radius: 22px;
+
     }
 
 
     .sidebar-row {
+
       padding-bottom: 20px;
 
       margin-bottom: 20px;
 
       border-bottom:
         1px solid rgba(24,37,54,.10);
+
     }
 
 
     .sidebar-row:last-child {
+
       margin-bottom: 0;
       padding-bottom: 0;
 
       border-bottom: 0;
+
     }
 
 
     .sidebar-row span {
+
       display: block;
 
       margin-bottom: 7px;
@@ -921,10 +1038,12 @@
       letter-spacing: .08em;
 
       text-transform: uppercase;
+
     }
 
 
     .sidebar-row strong {
+
       color: var(--navy);
 
       font-size: 13px;
@@ -932,10 +1051,12 @@
       line-height: 1.55;
 
       font-weight: 500;
+
     }
 
 
     .company-website {
+
       display: inline-block;
 
       padding-bottom: 2px;
@@ -946,13 +1067,16 @@
       transition:
         opacity .2s ease,
         border-color .2s ease;
+
     }
 
 
     .company-website:hover {
+
       opacity: .55;
 
       border-color: transparent;
+
     }
 
 
@@ -961,16 +1085,19 @@
     ===================================================== */
 
     .focus {
+
       padding:
         125px 7vw;
 
       background: var(--navy);
 
       color: white;
+
     }
 
 
     .focus-grid {
+
       display: grid;
 
       grid-template-columns:
@@ -981,15 +1108,19 @@
       max-width: 1400px;
 
       margin: 0 auto;
+
     }
 
 
     .focus .section-label {
+
       color: var(--slate);
+
     }
 
 
     .focus-title {
+
       margin: 0;
 
       font-family: "Manrope", sans-serif;
@@ -1002,17 +1133,21 @@
       letter-spacing: -.065em;
 
       font-weight: 500;
+
     }
 
 
     .focus-title span {
+
       display: block;
 
       color: var(--slate);
+
     }
 
 
     .focus-items {
+
       margin-top: 75px;
 
       display: grid;
@@ -1021,28 +1156,34 @@
         repeat(3, 1fr);
 
       gap: 28px;
+
     }
 
 
     .focus-item {
+
       padding-top: 22px;
 
       border-top:
         1px solid rgba(255,255,255,.20);
+
     }
 
 
     .focus-item strong {
+
       display: block;
 
       margin-bottom: 12px;
 
       font-size: 15px;
       font-weight: 500;
+
     }
 
 
     .focus-item p {
+
       margin: 0;
 
       color: #bbc5d0;
@@ -1050,22 +1191,26 @@
       font-size: 13px;
 
       line-height: 1.7;
+
     }
 
 
     /* =====================================================
-       NEXT
+       NEXT PROJECT
     ===================================================== */
 
     .next {
+
       padding:
         120px 7vw 45px;
 
       background: var(--ice);
+
     }
 
 
     .next-link {
+
       display: flex;
 
       justify-content:
@@ -1081,10 +1226,12 @@
 
       border-bottom:
         1px solid var(--line);
+
     }
 
 
     .next-small {
+
       color: var(--muted);
 
       font-size: 10px;
@@ -1093,10 +1240,12 @@
       text-transform: uppercase;
 
       letter-spacing: .08em;
+
     }
 
 
     .next-name {
+
       margin-top: 18px;
 
       font-family: "Manrope", sans-serif;
@@ -1109,10 +1258,12 @@
       letter-spacing: -.06em;
 
       font-weight: 500;
+
     }
 
 
     .next-action {
+
       padding:
         10px 16px;
 
@@ -1129,14 +1280,17 @@
       transition:
         background .2s ease,
         color .2s ease;
+
     }
 
 
     .next-link:hover
     .next-action {
+
       background: var(--navy);
 
       color: white;
+
     }
 
 
@@ -1145,12 +1299,15 @@
     ===================================================== */
 
     .footer {
-      padding-top: 28px;
 
-      display: flex;
+      padding-top: 32px;
 
-      justify-content:
-        space-between;
+      display: grid;
+
+      grid-template-columns:
+        1fr auto 1fr;
+
+      align-items: center;
 
       color: var(--muted);
 
@@ -1160,6 +1317,90 @@
       letter-spacing: .07em;
 
       text-transform: uppercase;
+
+    }
+
+
+    .footer-location {
+
+      text-align: right;
+
+    }
+
+
+    .footer-socials {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+    }
+
+
+    .social-icon {
+
+      width: 38px;
+      height: 38px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border:
+        1px solid rgba(24,37,54,.18);
+
+      border-radius: 50%;
+
+      color: var(--navy);
+
+      transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease,
+        border-color .2s ease;
+
+    }
+
+
+    .social-icon svg {
+
+      width: 16px;
+      height: 16px;
+
+      fill: none;
+
+      stroke: currentColor;
+
+      stroke-width: 1.5;
+
+      stroke-linecap: round;
+      stroke-linejoin: round;
+
+    }
+
+
+    .social-icon svg .filled {
+
+      fill: currentColor;
+      stroke: none;
+
+    }
+
+
+    .social-icon:hover {
+
+      background: var(--navy);
+
+      color: white;
+
+      border-color: var(--navy);
+
+      transform:
+        translateY(-2px);
+
     }
 
 
@@ -1169,116 +1410,174 @@
 
     @media(max-width: 900px) {
 
+
       .nav {
+
         height: 78px;
 
         padding:
           0 22px;
 
-        grid-template-columns:
-          1fr auto;
       }
 
 
       .nav-links {
+
+        gap: 15px;
+
+      }
+
+
+      .nav-links > a:not(.contact-nav) {
+
         display: none;
+
       }
 
 
       .hero {
+
         grid-template-columns:
           1fr;
+
       }
 
 
       .hero-visual {
+
         min-height: 570px;
 
         padding:
           48px 22px;
+
       }
 
 
       .schedule-header {
+
         grid-template-columns:
           48px repeat(5, 1fr);
+
       }
 
 
       .schedule-row {
+
         grid-template-columns:
           48px repeat(5, 1fr);
+
       }
 
 
       .hero-content {
+
         padding:
           65px 22px;
+
       }
 
 
       .company-logo-link img {
+
         width: 130px;
+
       }
 
 
       .case,
       .focus,
       .next {
+
         padding-left: 22px;
         padding-right: 22px;
+
       }
 
 
       .case-grid {
+
         grid-template-columns:
           1fr;
+
       }
 
 
       .sidebar {
+
         position: static;
+
       }
 
 
       .focus-grid {
+
         grid-template-columns:
           1fr;
 
         gap: 35px;
+
       }
 
 
       .focus-items {
+
         grid-template-columns:
           1fr;
+
       }
 
 
       .initiative {
+
         grid-template-columns:
           40px 1fr;
+
       }
 
 
       .initiative-type {
+
         display: none;
+
       }
 
 
       .next-link {
+
         flex-direction: column;
 
         align-items: flex-start;
 
         gap: 28px;
+
       }
 
 
       .footer {
-        flex-direction: column;
 
-        gap: 9px;
+        grid-template-columns:
+          1fr;
+
+        gap: 22px;
+
+        align-items: flex-start;
+
+      }
+
+
+      .footer-socials {
+
+        order: 2;
+
+      }
+
+
+      .footer-location {
+
+        order: 3;
+
+        text-align: left;
+
       }
 
     }
@@ -1298,6 +1597,7 @@
 
   <header class="nav">
 
+
     <a
       href="index.html"
       class="brand"
@@ -1308,31 +1608,32 @@
 
     <nav class="nav-links">
 
+
       <a href="index.html#work">
         Work
       </a>
+
 
       <a href="index.html#about">
         About
       </a>
 
+
       <a href="index.html#now">
         Now
       </a>
 
-      <a href="index.html#contact">
+
+      <a
+        href="index.html#contact"
+        class="contact-nav"
+      >
         Contact
       </a>
 
+
     </nav>
 
-
-    <a
-      href="index.html#work"
-      class="back"
-    >
-      Back
-    </a>
 
   </header>
 
@@ -1352,18 +1653,24 @@
 
       <div class="visual-top">
 
+
         <div class="visual-label">
+
           Workforce Management
+
         </div>
 
+
         <div class="visual-code">
+
           Product / 01
+
         </div>
+
 
       </div>
 
 
-      <!-- ABSTRACT SCHEDULE -->
 
       <div class="schedule">
 
@@ -1385,6 +1692,7 @@
         </div>
 
 
+
         <div class="schedule-row">
 
           <div class="schedule-time">
@@ -1402,6 +1710,7 @@
           <div class="shift medium long"></div>
 
         </div>
+
 
 
         <div class="schedule-row">
@@ -1423,6 +1732,7 @@
         </div>
 
 
+
         <div class="schedule-row">
 
           <div class="schedule-time">
@@ -1440,6 +1750,7 @@
           <div class="shift short"></div>
 
         </div>
+
 
 
         <div class="schedule-row">
@@ -1464,17 +1775,27 @@
       </div>
 
 
+
       <div class="visual-title">
 
+
         <span>
+
           Built for real operations
+
         </span>
 
+
         <strong>
+
           Product<br>
+
           systems<br>
+
           at scale.
+
         </strong>
+
 
       </div>
 
@@ -1488,9 +1809,8 @@
     <div class="hero-content">
 
 
-      <!-- LOGO -->
-
       <div class="company-logo">
+
 
         <a
           class="company-logo-link"
@@ -1500,34 +1820,50 @@
           aria-label="Visit GeoVictoria website"
         >
 
+
           <img
             src="geovictoria-logo.png"
             alt="GeoVictoria logo"
           >
 
+
         </a>
 
+
       </div>
+
 
 
       <div class="hero-breadcrumb">
+
         Selected Work / 01
+
       </div>
+
 
 
       <div class="kicker">
+
         Current role · 2026 — Present
+
       </div>
+
 
 
       <h1>
+
         GeoVictoria
+
       </h1>
 
 
+
       <div class="hero-role">
+
         Product Manager · Workforce Management
+
       </div>
+
 
 
       <p class="hero-description">
@@ -1540,23 +1876,29 @@
       </p>
 
 
+
       <div class="hero-tags">
+
 
         <span class="tag">
           Product
         </span>
 
+
         <span class="tag">
           SaaS
         </span>
+
 
         <span class="tag">
           Workforce Management
         </span>
 
+
         <span class="tag">
           LATAM
         </span>
+
 
       </div>
 
@@ -1585,14 +1927,21 @@
 
         <section class="case-section">
 
+
           <div class="section-label">
+
             01 / Role
+
           </div>
 
+
           <h2>
+
             Product from validation
             to execution.
+
           </h2>
+
 
           <p>
 
@@ -1604,6 +1953,7 @@
 
           </p>
 
+
           <p>
 
             The role combines product strategy, customer
@@ -1613,6 +1963,7 @@
 
           </p>
 
+
         </section>
 
 
@@ -1621,12 +1972,18 @@
 
         <section class="case-section">
 
+
           <div class="section-label">
+
             02 / Selected initiatives
+
           </div>
 
+
           <h2>
+
             Products I'm working on.
+
           </h2>
 
 
@@ -1650,6 +2007,7 @@
             </div>
 
 
+
             <div class="initiative">
 
               <div class="initiative-number">
@@ -1665,6 +2023,7 @@
               </div>
 
             </div>
+
 
 
             <div class="initiative">
@@ -1686,21 +2045,29 @@
 
           </div>
 
+
         </section>
 
 
 
-        <!-- HOW -->
+        <!-- HOW I WORK -->
 
         <section class="case-section">
 
+
           <div class="section-label">
+
             03 / How I work
+
           </div>
 
+
           <h2>
+
             Product in the real world.
+
           </h2>
+
 
           <p>
 
@@ -1713,30 +2080,37 @@
 
           <ul class="clean-list">
 
+
             <li>
               Customer discovery and validation
               with enterprise teams.
             </li>
 
+
             <li>
               Pilot design and product feedback cycles.
             </li>
 
+
             <li>
               Product requirements and prioritization.
             </li>
+
 
             <li>
               Alignment across product, development,
               sales and customer teams.
             </li>
 
+
             <li>
               Building the path from pilot
               to scalable product adoption.
             </li>
 
+
           </ul>
+
 
         </section>
 
@@ -1746,14 +2120,21 @@
 
         <section class="case-section">
 
+
           <div class="section-label">
+
             04 / Context
+
           </div>
 
+
           <h2>
+
             Workforce management
             is an operating system.
+
           </h2>
+
 
           <p>
 
@@ -1765,6 +2146,7 @@
 
           </p>
 
+
           <p>
 
             That complexity is what makes the category
@@ -1773,6 +2155,7 @@
             and the people actually using the system.
 
           </p>
+
 
         </section>
 
@@ -1784,6 +2167,7 @@
       <!-- SIDEBAR -->
 
       <aside class="sidebar">
+
 
         <div class="sidebar-box">
 
@@ -1799,6 +2183,7 @@
             </strong>
 
           </div>
+
 
 
           <div class="sidebar-row">
@@ -1823,6 +2208,7 @@
           </div>
 
 
+
           <div class="sidebar-row">
 
             <span>
@@ -1834,6 +2220,7 @@
             </strong>
 
           </div>
+
 
 
           <div class="sidebar-row">
@@ -1849,6 +2236,7 @@
           </div>
 
 
+
           <div class="sidebar-row">
 
             <span>
@@ -1860,6 +2248,7 @@
             </strong>
 
           </div>
+
 
 
           <div class="sidebar-row">
@@ -1875,6 +2264,7 @@
           </div>
 
 
+
           <div class="sidebar-row">
 
             <span>
@@ -1882,16 +2272,22 @@
             </span>
 
             <strong>
+
               New products<br>
+
               Pilots<br>
+
               Product validation<br>
+
               Enterprise SaaS
+
             </strong>
 
           </div>
 
 
         </div>
+
 
       </aside>
 
@@ -1909,24 +2305,32 @@
 
   <section class="focus">
 
+
     <div class="focus-grid">
 
+
       <div class="section-label">
+
         05 / Focus
+
       </div>
 
 
       <div>
+
 
         <h2 class="focus-title">
 
           From product idea
 
           <span>
+
             to real adoption.
+
           </span>
 
         </h2>
+
 
 
         <div class="focus-items">
@@ -1948,6 +2352,7 @@
           </div>
 
 
+
           <div class="focus-item">
 
             <strong>
@@ -1962,6 +2367,7 @@
             </p>
 
           </div>
+
 
 
           <div class="focus-item">
@@ -1982,9 +2388,12 @@
 
         </div>
 
+
       </div>
 
+
     </div>
+
 
   </section>
 
@@ -1996,42 +2405,183 @@
 
   <section class="next">
 
+
     <a
       class="next-link"
       href="lowsignal.html"
     >
 
+
       <div>
 
+
         <div class="next-small">
+
           Next / Selected Work
+
         </div>
 
+
         <div class="next-name">
+
           lowsignal
+
         </div>
+
 
       </div>
 
 
       <div class="next-action">
+
         Next project
+
       </div>
+
 
     </a>
 
 
+
+    <!-- FOOTER -->
+
     <footer class="footer">
 
-      <span>
-        © 2026 Felipe Quiroz
-      </span>
 
-      <span>
+      <div class="footer-copy">
+
+        © 2026 Felipe Quiroz
+
+      </div>
+
+
+
+      <div class="footer-socials">
+
+
+        <!-- LINKEDIN -->
+
+        <a
+          href="https://www.linkedin.com/in/felipequirozp"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          class="social-icon"
+        >
+
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+
+            <path
+              d="M6.5 8.5V18M6.5 5.75V5.8M10.5 18V12.5C10.5 10.8 11.7 9.5 13.5 9.5C15.3 9.5 16.5 10.8 16.5 12.5V18M10.5 13V9.75M4 4H20V20H4V4Z"
+            />
+
+          </svg>
+
+
+        </a>
+
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+          href="https://www.instagram.com/felipe_quirozp/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+          class="social-icon"
+        >
+
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+
+
+            <rect
+              x="4"
+              y="4"
+              width="16"
+              height="16"
+              rx="5"
+            />
+
+
+            <circle
+              cx="12"
+              cy="12"
+              r="3.5"
+            />
+
+
+            <circle
+              cx="17.3"
+              cy="6.8"
+              r=".7"
+              class="filled"
+            />
+
+
+          </svg>
+
+
+        </a>
+
+
+
+        <!-- EMAIL -->
+
+        <a
+          href="mailto:felipe@lowsignal.cl"
+          aria-label="Email"
+          class="social-icon"
+        >
+
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+
+
+            <rect
+              x="3"
+              y="5"
+              width="18"
+              height="14"
+              rx="2"
+            />
+
+
+            <path
+              d="M4 7L12 13L20 7"
+            />
+
+
+          </svg>
+
+
+        </a>
+
+
+      </div>
+
+
+
+      <div class="footer-location">
+
         Santiago / CL
-      </span>
+
+      </div>
+
 
     </footer>
+
 
   </section>
 
