@@ -33,38 +33,38 @@
 
   <style>
 
+    /* =====================================================
+       COLORS
+    ===================================================== */
+
     :root {
 
       --navy: #182536;
-
       --navy-deep: #0d1724;
-
       --navy-soft: #223247;
 
       --steel: #324963;
-
       --steel-light: #6f8298;
 
       --slate: #9aa9ba;
-
       --slate-light: #c7d0d9;
 
       --ice: #eef1f4;
-
       --paper: #f5f6f7;
 
       --white: #ffffff;
 
       --ink: #10161d;
-
       --muted: #66717d;
 
       --line: #d4d9de;
 
-      --accent: #7f94aa;
-
     }
 
+
+    /* =====================================================
+       RESET
+    ===================================================== */
 
     * {
       box-sizing: border-box;
@@ -81,13 +81,11 @@
       margin: 0;
 
       background: var(--paper);
-
       color: var(--ink);
 
       font-family: "Inter", sans-serif;
 
       -webkit-font-smoothing: antialiased;
-
       text-rendering: optimizeLegibility;
 
     }
@@ -96,8 +94,15 @@
     a {
 
       color: inherit;
-
       text-decoration: none;
+
+    }
+
+
+    img {
+
+      display: block;
+      max-width: 100%;
 
     }
 
@@ -105,7 +110,6 @@
     ::selection {
 
       background: var(--navy);
-
       color: white;
 
     }
@@ -122,13 +126,11 @@
       padding: 0 5vw;
 
       display: grid;
-
       grid-template-columns: 1fr auto 1fr;
 
       align-items: center;
 
       background: var(--navy);
-
       color: white;
 
       border-bottom:
@@ -142,7 +144,6 @@
       font-family: "Manrope", sans-serif;
 
       font-size: 17px;
-
       font-weight: 600;
 
       letter-spacing: -.04em;
@@ -155,11 +156,9 @@
       color: var(--slate);
 
       font-size: 10px;
-
       font-weight: 500;
 
       letter-spacing: .08em;
-
       text-transform: uppercase;
 
     }
@@ -169,19 +168,17 @@
 
       justify-self: end;
 
-      padding: 9px 14px;
+      padding: 9px 15px;
 
       border:
-        1px solid rgba(255,255,255,.25);
+        1px solid rgba(255,255,255,.28);
 
       border-radius: 999px;
 
       font-size: 10px;
-
       font-weight: 500;
 
       letter-spacing: .06em;
-
       text-transform: uppercase;
 
       transition:
@@ -195,7 +192,6 @@
     .back:hover {
 
       background: white;
-
       color: var(--navy);
 
       border-color: white;
@@ -244,19 +240,18 @@
     .grid-lines {
 
       position: absolute;
-
       inset: 0;
 
       background-image:
 
         linear-gradient(
-          rgba(255,255,255,.13) 1px,
+          rgba(255,255,255,.12) 1px,
           transparent 1px
         ),
 
         linear-gradient(
           90deg,
-          rgba(255,255,255,.13) 1px,
+          rgba(255,255,255,.12) 1px,
           transparent 1px
         );
 
@@ -271,13 +266,11 @@
       position: absolute;
 
       width: 620px;
-
       height: 620px;
 
       border-radius: 50%;
 
       right: -340px;
-
       top: 50%;
 
       transform:
@@ -292,22 +285,19 @@
 
       position: absolute;
 
-      width: 88px;
-
-      height: 88px;
+      width: 90px;
+      height: 90px;
 
       top: 115px;
-
       left: 17vw;
 
-      border-radius: 18px;
+      border-radius: 20px;
 
       background:
-        rgba(255,255,255,.10);
+        rgba(255,255,255,.09);
 
       border:
-        1px solid
-        rgba(255,255,255,.08);
+        1px solid rgba(255,255,255,.08);
 
     }
 
@@ -316,9 +306,8 @@
 
       position: absolute;
 
-      width: 8px;
-
-      height: 8px;
+      width: 7px;
+      height: 7px;
 
       border-radius: 50%;
 
@@ -329,9 +318,8 @@
 
     .visual-dot.one {
 
-      top: 12%;
-
-      right: 17%;
+      top: 13%;
+      right: 18%;
 
     }
 
@@ -339,7 +327,6 @@
     .visual-dot.two {
 
       bottom: 18%;
-
       left: 14%;
 
     }
@@ -347,9 +334,8 @@
 
     .visual-dot.three {
 
-      top: 43%;
-
-      left: 30%;
+      top: 42%;
+      left: 31%;
 
     }
 
@@ -361,7 +347,6 @@
       z-index: 2;
 
       left: 6vw;
-
       bottom: 7vw;
 
     }
@@ -371,17 +356,15 @@
 
       display: block;
 
-      margin-bottom: 15px;
+      margin-bottom: 16px;
 
       color:
-        rgba(255,255,255,.65);
+        rgba(255,255,255,.62);
 
       font-size: 10px;
-
       font-weight: 500;
 
       letter-spacing: .1em;
-
       text-transform: uppercase;
 
     }
@@ -398,7 +381,7 @@
       font-size:
         clamp(55px, 6vw, 98px);
 
-      line-height: .85;
+      line-height: .86;
 
       letter-spacing: -.065em;
 
@@ -414,7 +397,7 @@
     .hero-content {
 
       padding:
-        70px 7vw 70px 6vw;
+        65px 7vw 65px 6vw;
 
       display: flex;
 
@@ -425,18 +408,73 @@
     }
 
 
+    /* LOGO */
+
+    .company-logo {
+
+      margin-bottom: 35px;
+
+    }
+
+
+    .company-logo-box {
+
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      background: white;
+
+      padding:
+        13px 17px;
+
+      border:
+        1px solid rgba(24,37,54,.10);
+
+      border-radius: 14px;
+
+      box-shadow:
+        0 8px 28px rgba(24,37,54,.06);
+
+      transition:
+        transform .22s ease,
+        box-shadow .22s ease;
+
+    }
+
+
+    .company-logo-box:hover {
+
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 12px 34px rgba(24,37,54,.10);
+
+    }
+
+
+    .company-logo-box img {
+
+      width: 135px;
+      height: 42px;
+
+      object-fit: contain;
+
+    }
+
+
     .kicker {
 
-      margin-bottom: 28px;
+      margin-bottom: 24px;
 
       color: var(--steel-light);
 
       font-size: 10px;
-
       font-weight: 600;
 
-      letter-spacing: .12em;
-
+      letter-spacing: .11em;
       text-transform: uppercase;
 
     }
@@ -477,9 +515,9 @@
 
     .hero-description {
 
-      margin-top: 42px;
+      margin-top: 40px;
 
-      max-width: 700px;
+      max-width: 690px;
 
       color: #3f4a55;
 
@@ -498,30 +536,30 @@
 
       gap: 9px;
 
-      margin-top: 38px;
+      margin-top: 36px;
 
     }
 
 
     .tag {
 
-      padding: 9px 12px;
+      padding:
+        9px 12px;
 
       border:
-        1px solid rgba(24,37,54,.22);
+        1px solid rgba(24,37,54,.18);
 
       border-radius: 999px;
 
+      background:
+        rgba(255,255,255,.48);
+
       color: var(--navy);
 
-      background:
-        rgba(255,255,255,.42);
-
       font-size: 9px;
-
       font-weight: 500;
 
-      letter-spacing: .06em;
+      letter-spacing: .05em;
 
       text-transform: uppercase;
 
@@ -535,7 +573,7 @@
     .case {
 
       padding:
-        120px 7vw 140px;
+        125px 7vw 145px;
 
       background: var(--paper);
 
@@ -558,10 +596,6 @@
     }
 
 
-    /* =====================================================
-       MAIN COLUMN
-    ===================================================== */
-
     .case-main {
 
       max-width: 850px;
@@ -571,7 +605,7 @@
 
     .case-section {
 
-      margin-bottom: 90px;
+      margin-bottom: 95px;
 
     }
 
@@ -583,7 +617,6 @@
       color: var(--muted);
 
       font-size: 10px;
-
       font-weight: 600;
 
       letter-spacing: .1em;
@@ -632,10 +665,6 @@
 
     .initiatives {
 
-      display: grid;
-
-      gap: 0;
-
       margin-top: 38px;
 
       border-top:
@@ -647,7 +676,7 @@
     .initiative {
 
       padding:
-        24px 0;
+        25px 0;
 
       display: grid;
 
@@ -668,9 +697,8 @@
 
     .initiative:hover {
 
-      padding-left: 14px;
-
-      padding-right: 14px;
+      padding-left: 15px;
+      padding-right: 15px;
 
       background: var(--ice);
 
@@ -691,7 +719,6 @@
       font-family: "Manrope", sans-serif;
 
       font-size: 21px;
-
       font-weight: 500;
 
       letter-spacing: -.025em;
@@ -713,13 +740,13 @@
 
 
     /* =====================================================
-       LIST
+       HOW I WORK
     ===================================================== */
 
     .clean-list {
 
       margin:
-        26px 0 0;
+        28px 0 0;
 
       padding: 0;
 
@@ -734,7 +761,7 @@
     .clean-list li {
 
       padding:
-        17px 0;
+        18px 0;
 
       border-bottom:
         1px solid var(--line);
@@ -809,7 +836,6 @@
     .sidebar-row:last-child {
 
       margin-bottom: 0;
-
       padding-bottom: 0;
 
       border-bottom: 0;
@@ -826,7 +852,6 @@
       color: var(--muted);
 
       font-size: 9px;
-
       font-weight: 600;
 
       letter-spacing: .08em;
@@ -842,21 +867,48 @@
 
       font-size: 13px;
 
-      line-height: 1.5;
+      line-height: 1.55;
 
       font-weight: 500;
 
     }
 
 
+    /* WEBSITE */
+
+    .company-website {
+
+      display: inline-block;
+
+      padding-bottom: 2px;
+
+      border-bottom:
+        1px solid rgba(24,37,54,.25);
+
+      transition:
+        opacity .2s ease,
+        border-color .2s ease;
+
+    }
+
+
+    .company-website:hover {
+
+      opacity: .55;
+
+      border-color: transparent;
+
+    }
+
+
     /* =====================================================
-       CURRENT FOCUS
+       FOCUS
     ===================================================== */
 
     .focus {
 
       padding:
-        120px 7vw;
+        125px 7vw;
 
       background: var(--navy);
 
@@ -917,14 +969,14 @@
 
     .focus-items {
 
-      margin-top: 70px;
+      margin-top: 75px;
 
       display: grid;
 
       grid-template-columns:
         repeat(3, 1fr);
 
-      gap: 25px;
+      gap: 28px;
 
     }
 
@@ -934,7 +986,7 @@
       padding-top: 22px;
 
       border-top:
-        1px solid rgba(255,255,255,.2);
+        1px solid rgba(255,255,255,.20);
 
     }
 
@@ -946,7 +998,6 @@
       margin-bottom: 12px;
 
       font-size: 15px;
-
       font-weight: 500;
 
     }
@@ -966,7 +1017,7 @@
 
 
     /* =====================================================
-       NEXT
+       NEXT PROJECT
     ===================================================== */
 
     .next {
@@ -983,9 +1034,7 @@
 
       display: flex;
 
-      justify-content:
-        space-between;
-
+      justify-content: space-between;
       align-items: end;
 
       padding:
@@ -1005,6 +1054,7 @@
       color: var(--muted);
 
       font-size: 10px;
+      font-weight: 500;
 
       text-transform: uppercase;
 
@@ -1042,7 +1092,6 @@
       border-radius: 999px;
 
       font-size: 10px;
-
       font-weight: 500;
 
       text-transform: uppercase;
@@ -1080,7 +1129,6 @@
       color: var(--muted);
 
       font-size: 9px;
-
       font-weight: 500;
 
       letter-spacing: .07em;
@@ -1125,7 +1173,7 @@
 
       .hero-visual {
 
-        min-height: 520px;
+        min-height: 500px;
 
       }
 
@@ -1138,14 +1186,18 @@
       }
 
 
+      .company-logo-box img {
+
+        width: 120px;
+
+      }
+
+
       .case,
-
       .focus,
-
       .next {
 
         padding-left: 22px;
-
         padding-right: 22px;
 
       }
@@ -1205,7 +1257,7 @@
 
         align-items: flex-start;
 
-        gap: 25px;
+        gap: 28px;
 
       }
 
@@ -1270,17 +1322,16 @@
   <section class="hero">
 
 
+    <!-- LEFT VISUAL -->
+
     <div class="hero-visual">
 
 
       <div class="grid-lines"></div>
 
-
       <div class="visual-marker"></div>
 
-
       <div class="visual-circle"></div>
-
 
       <div class="visual-dot one"></div>
 
@@ -1315,7 +1366,36 @@
 
 
 
+    <!-- RIGHT -->
+
     <div class="hero-content">
+
+
+      <!-- LOGO + OFFICIAL WEBSITE -->
+
+      <div class="company-logo">
+
+
+        <a
+          class="company-logo-box"
+          href="https://www.geovictoria.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit GeoVictoria website"
+        >
+
+
+          <img
+            src="geovictoria-logo.jpg"
+            alt="GeoVictoria logo"
+          >
+
+
+        </a>
+
+
+      </div>
+
 
 
       <div class="kicker">
@@ -1325,6 +1405,7 @@
       </div>
 
 
+
       <h1>
 
         GeoVictoria
@@ -1332,11 +1413,13 @@
       </h1>
 
 
+
       <div class="hero-role">
 
         Product Manager · Workforce Management
 
       </div>
+
 
 
       <p class="hero-description">
@@ -1347,6 +1430,7 @@
         through validation, iteration and commercial adoption.
 
       </p>
+
 
 
       <div class="hero-tags">
@@ -1383,7 +1467,7 @@
 
 
   <!-- =====================================================
-       CASE
+       CASE BODY
   ====================================================== -->
 
   <section class="case">
@@ -1419,8 +1503,8 @@
 
           <p>
 
-            My work at GeoVictoria focuses on building and
-            developing new workforce management products,
+            My work at GeoVictoria focuses on building
+            and developing new workforce management products,
             translating business needs and operational
             challenges into products that can be tested,
             validated and scaled.
@@ -1442,7 +1526,7 @@
 
 
 
-        <!-- INITIATIVES -->
+        <!-- PRODUCTS -->
 
         <section class="case-section">
 
@@ -1536,7 +1620,7 @@
 
 
 
-        <!-- HOW -->
+        <!-- HOW I WORK -->
 
         <section class="case-section">
 
@@ -1569,8 +1653,8 @@
 
             <li>
 
-              Customer discovery and validation with
-              enterprise teams.
+              Customer discovery and validation
+              with enterprise teams.
 
             </li>
 
@@ -1599,8 +1683,8 @@
 
             <li>
 
-              Building the path from pilot to scalable
-              product adoption.
+              Building the path from pilot
+              to scalable product adoption.
 
             </li>
 
@@ -1635,10 +1719,10 @@
           <p>
 
             Scheduling, optimization and shift changes
-            may look like isolated workflows, but they sit
-            inside a much larger operational system involving
-            people, regulations, demand, staffing and
-            business constraints.
+            may look like isolated workflows, but they
+            sit inside a much larger operational system
+            involving people, regulations, demand,
+            staffing and business constraints.
 
           </p>
 
@@ -1646,9 +1730,9 @@
           <p>
 
             That complexity is what makes the category
-            interesting: good product decisions have to work
-            for the business, the operator and the people
-            actually using the system.
+            interesting: good product decisions have
+            to work for the business, the operator
+            and the people actually using the system.
 
           </p>
 
@@ -1676,6 +1760,28 @@
 
             <strong>
               GeoVictoria
+            </strong>
+
+          </div>
+
+
+          <div class="sidebar-row">
+
+            <span>
+              Website
+            </span>
+
+            <strong>
+
+              <a
+                class="company-website"
+                href="https://www.geovictoria.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                geovictoria.com
+              </a>
+
             </strong>
 
           </div>
@@ -1798,6 +1904,7 @@
         </h2>
 
 
+
         <div class="focus-items">
 
 
@@ -1874,7 +1981,7 @@
 
 
   <!-- =====================================================
-       NEXT
+       NEXT PROJECT
   ====================================================== -->
 
   <section class="next">
