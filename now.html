@@ -17,6 +17,14 @@
     content="What Felipe Quiroz is currently building, exploring and thinking about across product, growth and business."
   >
 
+  <!-- FAVICON -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="favicon.png"
+  >
+
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <link
@@ -69,9 +77,11 @@
       box-sizing: border-box;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
+
 
     body {
 
@@ -87,10 +97,12 @@
 
     }
 
+
     a {
       color: inherit;
       text-decoration: none;
     }
+
 
     ::selection {
       background: var(--navy);
@@ -202,8 +214,7 @@
 
     .contact-nav {
 
-      padding:
-        9px 15px;
+      padding: 9px 15px;
 
       border:
         1px solid rgba(255,255,255,.28);
@@ -297,7 +308,7 @@
       font-size:
         clamp(68px, 8.4vw, 130px);
 
-      line-height: .95;
+      line-height: 1;
 
       letter-spacing: -.07em;
 
@@ -312,7 +323,7 @@
 
       display: block;
 
-      margin-top: 12px;
+      margin-top: 20px;
 
       color: var(--steel-light);
 
@@ -329,7 +340,7 @@
     .hero-side p {
 
       margin:
-        0 0 28px;
+        0 0 26px;
 
       color: #3f4a55;
 
@@ -358,6 +369,24 @@
       font-weight: 500;
 
       letter-spacing: .08em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =====================================================
+       SHARED
+    ===================================================== */
+
+    .section-label {
+
+      color: var(--muted);
+
+      font-size: 10px;
+      font-weight: 600;
+
+      letter-spacing: .1em;
 
       text-transform: uppercase;
 
@@ -394,20 +423,6 @@
     }
 
 
-    .section-label {
-
-      color: var(--muted);
-
-      font-size: 10px;
-      font-weight: 600;
-
-      letter-spacing: .1em;
-
-      text-transform: uppercase;
-
-    }
-
-
     .section-content {
 
       max-width: 950px;
@@ -425,7 +440,7 @@
       font-size:
         clamp(42px, 5.5vw, 78px);
 
-      line-height: 1.02;
+      line-height: 1.10;
 
       letter-spacing: -.055em;
 
@@ -435,7 +450,7 @@
 
 
     /* =====================================================
-       CURRENT TRACKS
+       TRACKS
     ===================================================== */
 
     .tracks {
@@ -579,7 +594,7 @@
       font-size:
         clamp(50px, 7vw, 105px);
 
-      line-height: 1.02;
+      line-height: 1.05;
 
       letter-spacing: -.065em;
 
@@ -592,7 +607,7 @@
 
       display: block;
 
-      margin-top: 12px;
+      margin-top: 18px;
 
       color: var(--slate);
 
@@ -614,7 +629,7 @@
 
     .interest {
 
-      min-height: 145px;
+      min-height: 155px;
 
       padding:
         28px 28px 28px 0;
@@ -728,7 +743,7 @@
       font-size:
         clamp(42px, 5.5vw, 78px);
 
-      line-height: 1.02;
+      line-height: 1.10;
 
       letter-spacing: -.055em;
 
@@ -1014,7 +1029,6 @@
     .footer-socials {
 
       display: flex;
-
       align-items: center;
 
       gap: 10px;
@@ -1028,7 +1042,6 @@
       height: 36px;
 
       display: flex;
-
       align-items: center;
       justify-content: center;
 
@@ -1066,8 +1079,10 @@
 
 
     .social-icon svg .filled {
+
       fill: currentColor;
       stroke: none;
+
     }
 
 
@@ -1227,7 +1242,9 @@
 
 
       .footer-location {
+
         text-align: left;
+
       }
 
     }
@@ -1285,7 +1302,14 @@
         font-size:
           clamp(56px, 16vw, 80px);
 
-        line-height: 1;
+        line-height: 1.03;
+
+      }
+
+
+      .hero h1 span {
+
+        margin-top: 16px;
 
       }
 
@@ -1305,6 +1329,8 @@
       .operating-content h2 {
 
         margin-bottom: 45px;
+
+        line-height: 1.12;
 
       }
 
@@ -1349,7 +1375,7 @@
       .interest:nth-child(even) {
 
         padding:
-          26px 0;
+          28px 0;
 
         border-right: 0;
 
@@ -1363,7 +1389,14 @@
         font-size:
           clamp(48px, 14vw, 70px);
 
-        line-height: 1.04;
+        line-height: 1.08;
+
+      }
+
+
+      .interests h2 span {
+
+        margin-top: 14px;
 
       }
 
@@ -1415,7 +1448,6 @@
 </head>
 
 
-
 <body>
 
 
@@ -1424,6 +1456,7 @@
   ====================================================== -->
 
   <header class="nav">
+
 
     <a
       href="index.html"
@@ -1435,13 +1468,16 @@
 
     <nav class="nav-links">
 
+
       <a href="index.html#work">
         Work
       </a>
 
+
       <a href="about.html">
         About
       </a>
+
 
       <a
         href="now.html"
@@ -1450,6 +1486,7 @@
         Now
       </a>
 
+
       <a
         href="#contact"
         class="contact-nav"
@@ -1457,7 +1494,9 @@
         Contact
       </a>
 
+
     </nav>
+
 
   </header>
 
