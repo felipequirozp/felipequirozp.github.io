@@ -1,0 +1,2728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>lowsignal — Felipe Quiroz</title>
+
+  <meta
+    name="description"
+    content="Felipe Quiroz — Co-Founder & COO at lowsignal. Growth systems, company building, operations and digital products."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <style>
+
+    /* =====================================================
+       COLORS
+    ===================================================== */
+
+    :root {
+
+      --navy: #182536;
+      --navy-deep: #0d1724;
+
+      --steel: #324963;
+      --steel-light: #71869c;
+
+      --slate: #9aa9ba;
+      --slate-light: #c7d0d9;
+
+      --ice: #eef1f4;
+      --paper: #f5f6f7;
+
+      --white: #ffffff;
+
+      --ink: #10161d;
+      --muted: #66717d;
+
+      --line: #d4d9de;
+
+    }
+
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      margin: 0;
+
+      background: var(--paper);
+      color: var(--ink);
+
+      font-family: "Inter", sans-serif;
+
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+
+    }
+
+
+    a {
+
+      color: inherit;
+      text-decoration: none;
+
+    }
+
+
+    img {
+
+      display: block;
+      max-width: 100%;
+
+    }
+
+
+    ::selection {
+
+      background: var(--navy);
+      color: white;
+
+    }
+
+
+    /* =====================================================
+       NAV
+    ===================================================== */
+
+    .nav {
+
+      min-height: 84px;
+
+      padding: 0 5vw;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+
+      background: var(--navy);
+      color: white;
+
+      border-bottom:
+        1px solid rgba(255,255,255,.12);
+
+    }
+
+
+    .brand {
+
+      flex-shrink: 0;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 17px;
+      font-weight: 600;
+
+      letter-spacing: -.04em;
+
+    }
+
+
+    .nav-links {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 30px;
+
+      font-size: 10px;
+      font-weight: 500;
+
+      letter-spacing: .07em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .nav-links > a:not(.contact-nav) {
+
+      position: relative;
+
+      color: var(--slate-light);
+
+      transition:
+        color .2s ease;
+
+    }
+
+
+    .nav-links > a:not(.contact-nav)::after {
+
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: -7px;
+
+      width: 0;
+      height: 1px;
+
+      background: white;
+
+      transition:
+        width .22s ease;
+
+    }
+
+
+    .nav-links > a:not(.contact-nav):hover {
+
+      color: white;
+
+    }
+
+
+    .nav-links > a:not(.contact-nav):hover::after {
+
+      width: 100%;
+
+    }
+
+
+    .contact-nav {
+
+      padding:
+        9px 15px;
+
+      border:
+        1px solid rgba(255,255,255,.28);
+
+      border-radius: 999px;
+
+      color: white;
+
+      transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+
+    }
+
+
+    .contact-nav:hover {
+
+      background: white;
+
+      color: var(--navy);
+
+      border-color: white;
+
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+
+      min-height:
+        calc(100vh - 84px);
+
+      display: grid;
+
+      grid-template-columns:
+        44% 56%;
+
+      background: var(--ice);
+
+    }
+
+
+    /* =====================================================
+       LEFT VISUAL
+    ===================================================== */
+
+    .hero-visual {
+
+      position: relative;
+
+      min-height: 700px;
+
+      overflow: hidden;
+
+      padding:
+        58px 5vw 52px;
+
+      background: var(--navy-deep);
+
+      color: white;
+
+      display: flex;
+
+      flex-direction: column;
+
+    }
+
+
+    .hero-visual::before {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background-image:
+
+        linear-gradient(
+          rgba(255,255,255,.045) 1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.045) 1px,
+          transparent 1px
+        );
+
+      background-size:
+        160px 160px;
+
+      pointer-events: none;
+
+    }
+
+
+    .visual-top {
+
+      position: relative;
+
+      z-index: 2;
+
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 20px;
+
+    }
+
+
+    .visual-label {
+
+      color: var(--slate-light);
+
+      font-size: 10px;
+      font-weight: 500;
+
+      letter-spacing: .1em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .visual-code {
+
+      color:
+        rgba(255,255,255,.38);
+
+      font-size: 9px;
+      font-weight: 500;
+
+      letter-spacing: .08em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =====================================================
+       GROWTH SYSTEM
+    ===================================================== */
+
+    .system-map {
+
+      position: relative;
+
+      z-index: 2;
+
+      margin:
+        55px 0 48px;
+
+      padding:
+        28px 0;
+
+      border-top:
+        1px solid rgba(255,255,255,.12);
+
+      border-bottom:
+        1px solid rgba(255,255,255,.12);
+
+    }
+
+
+    .system-main {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 34px 1fr 34px 1fr;
+
+      align-items: center;
+
+      gap: 8px;
+
+    }
+
+
+    .system-node {
+
+      min-height: 92px;
+
+      padding:
+        16px 14px;
+
+      border:
+        1px solid rgba(255,255,255,.14);
+
+      border-radius: 14px;
+
+      background:
+        rgba(255,255,255,.035);
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+
+    }
+
+
+    .system-node span {
+
+      color:
+        rgba(255,255,255,.45);
+
+      font-size: 7px;
+      font-weight: 500;
+
+      letter-spacing: .08em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .system-node strong {
+
+      color: white;
+
+      font-size: 12px;
+      font-weight: 500;
+
+    }
+
+
+    .system-arrow {
+
+      height: 1px;
+
+      background:
+        rgba(255,255,255,.24);
+
+      position: relative;
+
+    }
+
+
+    .system-arrow::after {
+
+      content: "";
+
+      position: absolute;
+
+      right: 0;
+      top: -3px;
+
+      width: 6px;
+      height: 6px;
+
+      border-top:
+        1px solid rgba(255,255,255,.45);
+
+      border-right:
+        1px solid rgba(255,255,255,.45);
+
+      transform:
+        rotate(45deg);
+
+    }
+
+
+    .system-services {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 10px;
+
+      margin-top: 18px;
+
+    }
+
+
+    .system-service {
+
+      padding-top: 11px;
+
+      border-top:
+        1px solid rgba(255,255,255,.09);
+
+      color:
+        rgba(255,255,255,.45);
+
+      font-size: 8px;
+
+      line-height: 1.6;
+
+      text-transform: uppercase;
+
+      letter-spacing: .05em;
+
+    }
+
+
+    /* =====================================================
+       LEFT TITLE
+    ===================================================== */
+
+    .visual-title {
+
+      position: relative;
+
+      z-index: 2;
+
+      margin-top: auto;
+
+    }
+
+
+    .visual-title span {
+
+      display: block;
+
+      margin-bottom: 14px;
+
+      color:
+        rgba(255,255,255,.52);
+
+      font-size: 9px;
+      font-weight: 500;
+
+      letter-spacing: .1em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .visual-title strong {
+
+      display: block;
+
+      max-width: 540px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(45px, 4.6vw, 72px);
+
+      line-height: 1.06;
+
+      letter-spacing: -.055em;
+
+      font-weight: 500;
+
+    }
+
+
+    /* =====================================================
+       RIGHT HERO
+    ===================================================== */
+
+    .hero-content {
+
+      padding:
+        65px 7vw 65px 5vw;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+    }
+
+
+    /* =====================================================
+       LOGO
+    ===================================================== */
+
+    .company-logo {
+
+      margin-bottom: 32px;
+
+    }
+
+
+    .company-logo-box {
+
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding:
+        15px 20px;
+
+      background: var(--navy);
+
+      border-radius: 14px;
+
+      box-shadow:
+        0 10px 30px
+        rgba(24,37,54,.10);
+
+    }
+
+
+    .company-logo-box img {
+
+      width: 145px;
+      height: 38px;
+
+      object-fit: contain;
+
+    }
+
+
+    /* =====================================================
+       HERO TEXT
+    ===================================================== */
+
+    .hero-breadcrumb {
+
+      margin-bottom: 15px;
+
+      color: var(--muted);
+
+      font-size: 9px;
+      font-weight: 500;
+
+      letter-spacing: .1em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .kicker {
+
+      margin-bottom: 24px;
+
+      color: var(--steel-light);
+
+      font-size: 10px;
+      font-weight: 600;
+
+      letter-spacing: .11em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .hero-content h1 {
+
+      margin: 0;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(58px, 6vw, 98px);
+
+      line-height: .94;
+
+      letter-spacing: -.065em;
+
+      font-weight: 500;
+
+      color: var(--navy);
+
+    }
+
+
+    .hero-role {
+
+      margin-top: 25px;
+
+      color: #576473;
+
+      font-size: 16px;
+
+      line-height: 1.55;
+
+    }
+
+
+    .hero-description {
+
+      margin-top: 40px;
+
+      max-width: 690px;
+
+      color: #3f4a55;
+
+      font-size: 15px;
+
+      line-height: 1.85;
+
+    }
+
+
+    .hero-tags {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 9px;
+
+      margin-top: 36px;
+
+    }
+
+
+    .tag {
+
+      padding:
+        9px 13px;
+
+      border:
+        1px solid rgba(24,37,54,.18);
+
+      border-radius: 999px;
+
+      background:
+        rgba(255,255,255,.42);
+
+      color: var(--navy);
+
+      font-size: 9px;
+      font-weight: 500;
+
+      letter-spacing: .05em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =====================================================
+       CASE BODY
+    ===================================================== */
+
+    .case {
+
+      padding:
+        125px 7vw 145px;
+
+      background: var(--paper);
+
+    }
+
+
+    .case-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        2.2fr .8fr;
+
+      gap: 8vw;
+
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+    }
+
+
+    .case-main {
+
+      max-width: 850px;
+
+    }
+
+
+    .case-section {
+
+      margin-bottom: 95px;
+
+    }
+
+
+    .section-label {
+
+      margin-bottom: 20px;
+
+      color: var(--muted);
+
+      font-size: 10px;
+      font-weight: 600;
+
+      letter-spacing: .1em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .case-section h2 {
+
+      margin:
+        0 0 30px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(34px, 4vw, 56px);
+
+      line-height: 1.03;
+
+      letter-spacing: -.045em;
+
+      font-weight: 500;
+
+    }
+
+
+    .case-section p {
+
+      margin:
+        0 0 22px;
+
+      color: #39444f;
+
+      font-size: 15px;
+
+      line-height: 1.85;
+
+    }
+
+
+    /* =====================================================
+       SOLUTIONS
+    ===================================================== */
+
+    .solutions {
+
+      margin-top: 38px;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      border-top:
+        1px solid var(--line);
+
+    }
+
+
+    .solution {
+
+      padding:
+        24px 20px 24px 0;
+
+      min-height: 120px;
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .solution:nth-child(odd) {
+
+      border-right:
+        1px solid var(--line);
+
+      padding-right: 30px;
+
+    }
+
+
+    .solution:nth-child(even) {
+
+      padding-left: 30px;
+
+    }
+
+
+    .solution-code {
+
+      margin-bottom: 18px;
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      text-transform: uppercase;
+
+      letter-spacing: .08em;
+
+    }
+
+
+    .solution-name {
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 22px;
+      font-weight: 500;
+
+      letter-spacing: -.03em;
+
+    }
+
+
+    .solution-description {
+
+      margin-top: 8px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.55;
+
+    }
+
+
+    /* =====================================================
+       OPERATING LIST
+    ===================================================== */
+
+    .clean-list {
+
+      margin:
+        28px 0 0;
+
+      padding: 0;
+
+      list-style: none;
+
+      border-top:
+        1px solid var(--line);
+
+    }
+
+
+    .clean-list li {
+
+      padding:
+        18px 0;
+
+      border-bottom:
+        1px solid var(--line);
+
+      display: grid;
+
+      grid-template-columns:
+        25px 1fr;
+
+      gap: 15px;
+
+      color: #39444f;
+
+      font-size: 14px;
+
+      line-height: 1.7;
+
+    }
+
+
+    .clean-list li::before {
+
+      content: "•";
+
+      color: var(--steel-light);
+
+    }
+
+
+    /* =====================================================
+       SIDEBAR
+    ===================================================== */
+
+    .sidebar {
+
+      position: sticky;
+
+      top: 110px;
+
+      align-self: start;
+
+    }
+
+
+    .sidebar-box {
+
+      padding:
+        28px 26px;
+
+      background: var(--ice);
+
+      border:
+        1px solid var(--line);
+
+      border-radius: 22px;
+
+    }
+
+
+    .sidebar-row {
+
+      padding-bottom: 20px;
+
+      margin-bottom: 20px;
+
+      border-bottom:
+        1px solid rgba(24,37,54,.10);
+
+    }
+
+
+    .sidebar-row:last-child {
+
+      margin-bottom: 0;
+      padding-bottom: 0;
+
+      border-bottom: 0;
+
+    }
+
+
+    .sidebar-row span {
+
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: var(--muted);
+
+      font-size: 9px;
+      font-weight: 600;
+
+      letter-spacing: .08em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .sidebar-row strong {
+
+      color: var(--navy);
+
+      font-size: 13px;
+
+      line-height: 1.55;
+
+      font-weight: 500;
+
+    }
+
+
+    /* =====================================================
+       FOCUS
+    ===================================================== */
+
+    .focus {
+
+      padding:
+        125px 7vw;
+
+      background: var(--navy);
+
+      color: white;
+
+    }
+
+
+    .focus-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        .8fr 3fr;
+
+      gap: 70px;
+
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+    }
+
+
+    .focus .section-label {
+
+      color: var(--slate);
+
+    }
+
+
+    .focus-title {
+
+      margin: 0;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(50px, 7vw, 105px);
+
+      line-height: .92;
+
+      letter-spacing: -.065em;
+
+      font-weight: 500;
+
+    }
+
+
+    .focus-title span {
+
+      display: block;
+
+      color: var(--slate);
+
+    }
+
+
+    .focus-items {
+
+      margin-top: 75px;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 28px;
+
+    }
+
+
+    .focus-item {
+
+      padding-top: 22px;
+
+      border-top:
+        1px solid rgba(255,255,255,.20);
+
+    }
+
+
+    .focus-item strong {
+
+      display: block;
+
+      margin-bottom: 12px;
+
+      font-size: 15px;
+      font-weight: 500;
+
+    }
+
+
+    .focus-item p {
+
+      margin: 0;
+
+      color: #bbc5d0;
+
+      font-size: 13px;
+
+      line-height: 1.7;
+
+    }
+
+
+    /* =====================================================
+       PROJECT NAV
+    ===================================================== */
+
+    .project-nav {
+
+      padding:
+        110px 7vw 45px;
+
+      background: var(--ice);
+
+    }
+
+
+    .project-nav-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 50px;
+
+      border-top:
+        1px solid var(--line);
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .project-link {
+
+      padding:
+        42px 0 46px;
+
+    }
+
+
+    .project-link:first-child {
+
+      padding-right: 50px;
+
+      border-right:
+        1px solid var(--line);
+
+    }
+
+
+    .project-link:last-child {
+
+      padding-left: 10px;
+
+      text-align: right;
+
+    }
+
+
+    .project-small {
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      text-transform: uppercase;
+
+      letter-spacing: .08em;
+
+    }
+
+
+    .project-name {
+
+      margin-top: 16px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(38px, 5vw, 74px);
+
+      line-height: .95;
+
+      letter-spacing: -.055em;
+
+      font-weight: 500;
+
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer {
+
+      padding-top: 32px;
+
+      display: grid;
+
+      grid-template-columns:
+        1fr auto 1fr;
+
+      align-items: center;
+
+      color: var(--muted);
+
+      font-size: 9px;
+      font-weight: 500;
+
+      letter-spacing: .07em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .footer-location {
+
+      text-align: right;
+
+    }
+
+
+    .footer-socials {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+    }
+
+
+    .social-icon {
+
+      width: 36px;
+      height: 36px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border:
+        1px solid rgba(24,37,54,.18);
+
+      border-radius: 50%;
+
+      color: var(--navy);
+
+      transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease;
+
+    }
+
+
+    .social-icon svg {
+
+      width: 15px;
+      height: 15px;
+
+      fill: none;
+
+      stroke: currentColor;
+
+      stroke-width: 1.5;
+
+      stroke-linecap: round;
+      stroke-linejoin: round;
+
+    }
+
+
+    .social-icon svg .filled {
+
+      fill: currentColor;
+      stroke: none;
+
+    }
+
+
+    .linkedin-mark {
+
+      font-size: 14px;
+      font-weight: 600;
+
+      line-height: 1;
+
+      letter-spacing: -.06em;
+
+      text-transform: lowercase;
+
+    }
+
+
+    .social-icon:hover {
+
+      background: var(--navy);
+
+      color: white;
+
+      transform:
+        translateY(-2px);
+
+    }
+
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media(max-width: 900px) {
+
+
+      .nav {
+
+        min-height: 78px;
+
+        padding:
+          16px 20px;
+
+        gap: 16px;
+
+      }
+
+
+      .brand {
+
+        font-size: 15px;
+
+        white-space: nowrap;
+
+      }
+
+
+      .nav-links {
+
+        gap: 14px;
+
+        font-size: 9px;
+
+        letter-spacing: .04em;
+
+      }
+
+
+      .contact-nav {
+
+        padding:
+          8px 11px;
+
+      }
+
+
+      .hero {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .hero-visual {
+
+        min-height: 570px;
+
+        padding:
+          48px 22px;
+
+      }
+
+
+      .hero-content {
+
+        padding:
+          65px 22px;
+
+      }
+
+
+      .case,
+      .focus,
+      .project-nav {
+
+        padding-left: 22px;
+        padding-right: 22px;
+
+      }
+
+
+      .case-grid {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .sidebar {
+
+        position: static;
+
+      }
+
+
+      .focus-grid {
+
+        grid-template-columns:
+          1fr;
+
+        gap: 35px;
+
+      }
+
+
+      .focus-items {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .footer {
+
+        grid-template-columns:
+          1fr;
+
+        gap: 22px;
+
+        align-items: flex-start;
+
+      }
+
+
+      .footer-location {
+
+        text-align: left;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       SMALL MOBILE
+    ===================================================== */
+
+    @media(max-width: 600px) {
+
+
+      .nav {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 14px;
+
+        padding:
+          18px 20px;
+
+      }
+
+
+      .nav-links {
+
+        width: 100%;
+
+        justify-content: space-between;
+
+        gap: 8px;
+
+      }
+
+
+      .contact-nav {
+
+        padding:
+          7px 10px;
+
+      }
+
+
+      .visual-code {
+
+        display: none;
+
+      }
+
+
+      .system-main {
+
+        grid-template-columns:
+          1fr 18px 1fr 18px 1fr;
+
+      }
+
+
+      .system-node {
+
+        min-height: 82px;
+
+        padding:
+          12px 9px;
+
+      }
+
+
+      .system-node strong {
+
+        font-size: 10px;
+
+      }
+
+
+      .system-services {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .visual-title strong {
+
+        font-size:
+          clamp(46px, 14vw, 68px);
+
+      }
+
+
+      .hero-content h1 {
+
+        font-size:
+          clamp(54px, 16vw, 80px);
+
+      }
+
+
+      .solutions {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .solution:nth-child(odd) {
+
+        border-right: 0;
+
+        padding-right: 0;
+
+      }
+
+
+      .solution:nth-child(even) {
+
+        padding-left: 0;
+
+      }
+
+
+      .project-nav-grid {
+
+        grid-template-columns:
+          1fr;
+
+        gap: 0;
+
+      }
+
+
+      .project-link:first-child {
+
+        border-right: 0;
+
+        border-bottom:
+          1px solid var(--line);
+
+        padding-right: 0;
+
+      }
+
+
+      .project-link:last-child {
+
+        padding-left: 0;
+
+        text-align: left;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+  <!-- =====================================================
+       NAV
+  ====================================================== -->
+
+  <header class="nav">
+
+
+    <a
+      href="index.html"
+      class="brand"
+    >
+      Felipe Quiroz
+    </a>
+
+
+    <nav class="nav-links">
+
+
+      <a href="index.html#work">
+        Work
+      </a>
+
+
+      <a href="index.html#about">
+        About
+      </a>
+
+
+      <a href="index.html#now">
+        Now
+      </a>
+
+
+      <a
+        href="index.html#contact"
+        class="contact-nav"
+      >
+        Contact
+      </a>
+
+
+    </nav>
+
+
+  </header>
+
+
+
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
+
+  <section class="hero">
+
+
+    <!-- LEFT -->
+
+    <div class="hero-visual">
+
+
+      <div class="visual-top">
+
+
+        <div class="visual-label">
+          Growth Systems
+        </div>
+
+
+        <div class="visual-code">
+          Company / 02
+        </div>
+
+
+      </div>
+
+
+
+      <!-- SYSTEM -->
+
+      <div class="system-map">
+
+
+        <div class="system-main">
+
+
+          <div class="system-node">
+
+            <span>
+              01
+            </span>
+
+            <strong>
+              Strategy
+            </strong>
+
+          </div>
+
+
+          <div class="system-arrow"></div>
+
+
+          <div class="system-node">
+
+            <span>
+              02
+            </span>
+
+            <strong>
+              Systems
+            </strong>
+
+          </div>
+
+
+          <div class="system-arrow"></div>
+
+
+          <div class="system-node">
+
+            <span>
+              03
+            </span>
+
+            <strong>
+              Growth
+            </strong>
+
+          </div>
+
+
+        </div>
+
+
+
+        <div class="system-services">
+
+
+          <div class="system-service">
+
+            Positioning<br>
+            GTM<br>
+            Brand
+
+          </div>
+
+
+          <div class="system-service">
+
+            Web<br>
+            AI<br>
+            Automation
+
+          </div>
+
+
+          <div class="system-service">
+
+            Ads<br>
+            Content<br>
+            Product
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+      <div class="visual-title">
+
+
+        <span>
+          Less noise. More growth.
+        </span>
+
+
+        <strong>
+
+          Building the<br>
+
+          system behind<br>
+
+          growth.
+
+        </strong>
+
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- RIGHT -->
+
+    <div class="hero-content">
+
+
+      <div class="company-logo">
+
+
+        <div class="company-logo-box">
+
+
+          <img
+            src="lowsignal-logo.png"
+            alt="lowsignal logo"
+          >
+
+
+        </div>
+
+
+      </div>
+
+
+
+      <div class="hero-breadcrumb">
+
+        Selected Work / 02
+
+      </div>
+
+
+
+      <div class="kicker">
+
+        Co-Founder · 2025 — Present
+
+      </div>
+
+
+
+      <h1>
+
+        lowsignal
+
+      </h1>
+
+
+
+      <div class="hero-role">
+
+        Co-Founder & COO · Growth Systems
+
+      </div>
+
+
+
+      <p class="hero-description">
+
+        Building a growth company around systems,
+        digital products and execution — connecting
+        strategy, technology, operations and creative
+        work into repeatable growth infrastructure.
+
+      </p>
+
+
+
+      <div class="hero-tags">
+
+
+        <span class="tag">
+          Growth
+        </span>
+
+
+        <span class="tag">
+          Operations
+        </span>
+
+
+        <span class="tag">
+          Company Building
+        </span>
+
+
+        <span class="tag">
+          Digital Products
+        </span>
+
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =====================================================
+       CASE BODY
+  ====================================================== -->
+
+  <section class="case">
+
+
+    <div class="case-grid">
+
+
+      <main class="case-main">
+
+
+        <!-- COMPANY -->
+
+        <section class="case-section">
+
+
+          <div class="section-label">
+
+            01 / Company
+
+          </div>
+
+
+          <h2>
+
+            Building a company,
+            not just campaigns.
+
+          </h2>
+
+
+          <p>
+
+            lowsignal is built around a simple idea:
+            companies do not need more disconnected
+            marketing activity — they need systems
+            that connect strategy, execution,
+            technology and growth.
+
+          </p>
+
+
+          <p>
+
+            The goal is to create an operating layer
+            that helps companies move faster,
+            communicate better and build repeatable
+            ways to grow.
+
+          </p>
+
+
+        </section>
+
+
+
+        <!-- ROLE -->
+
+        <section class="case-section">
+
+
+          <div class="section-label">
+
+            02 / My role
+
+          </div>
+
+
+          <h2>
+
+            Operating the system
+            behind the company.
+
+          </h2>
+
+
+          <p>
+
+            As Co-Founder & COO, my role sits across
+            operations, product, team coordination,
+            business development and the systems
+            that allow lowsignal to deliver consistently.
+
+          </p>
+
+
+          <ul class="clean-list">
+
+
+            <li>
+
+              Company operations and internal systems.
+
+            </li>
+
+
+            <li>
+
+              Product and service development.
+
+            </li>
+
+
+            <li>
+
+              Team structure and execution.
+
+            </li>
+
+
+            <li>
+
+              Growth infrastructure and automation.
+
+            </li>
+
+
+            <li>
+
+              New products, partnerships and business opportunities.
+
+            </li>
+
+
+          </ul>
+
+
+        </section>
+
+
+
+        <!-- SOLUTIONS -->
+
+        <section class="case-section">
+
+
+          <div class="section-label">
+
+            03 / What we build
+
+          </div>
+
+
+          <h2>
+
+            One system.
+            Multiple growth layers.
+
+          </h2>
+
+
+          <div class="solutions">
+
+
+            <div class="solution">
+
+              <div class="solution-code">
+                01 / Social
+              </div>
+
+              <div class="solution-name">
+                Low Social
+              </div>
+
+              <div class="solution-description">
+                Social media and content systems.
+              </div>
+
+            </div>
+
+
+
+            <div class="solution">
+
+              <div class="solution-code">
+                02 / Performance
+              </div>
+
+              <div class="solution-name">
+                Low Ads
+              </div>
+
+              <div class="solution-description">
+                Performance and paid acquisition.
+              </div>
+
+            </div>
+
+
+
+            <div class="solution">
+
+              <div class="solution-code">
+                03 / Web
+              </div>
+
+              <div class="solution-name">
+                Low Web
+              </div>
+
+              <div class="solution-description">
+                Websites and digital experiences.
+              </div>
+
+            </div>
+
+
+
+            <div class="solution">
+
+              <div class="solution-code">
+                04 / Growth
+              </div>
+
+              <div class="solution-name">
+                Low Scale
+              </div>
+
+              <div class="solution-description">
+                Growth systems and scalable acquisition.
+              </div>
+
+            </div>
+
+
+
+            <div class="solution">
+
+              <div class="solution-code">
+                05 / Product
+              </div>
+
+              <div class="solution-name">
+                Low Apps
+              </div>
+
+              <div class="solution-description">
+                Products, apps and digital tools.
+              </div>
+
+            </div>
+
+
+
+            <div class="solution">
+
+              <div class="solution-code">
+                06 / Automation
+              </div>
+
+              <div class="solution-name">
+                Low Flow
+              </div>
+
+              <div class="solution-description">
+                AI, automation and operational workflows.
+              </div>
+
+            </div>
+
+
+          </div>
+
+
+        </section>
+
+
+
+        <!-- MODEL -->
+
+        <section class="case-section">
+
+
+          <div class="section-label">
+
+            04 / Operating model
+
+          </div>
+
+
+          <h2>
+
+            Strategy is only useful
+            when it becomes a system.
+
+          </h2>
+
+
+          <p>
+
+            The operating model connects positioning,
+            acquisition, content, digital products,
+            automation and execution into one system.
+
+          </p>
+
+
+          <p>
+
+            Instead of treating each activity independently,
+            the goal is to build an infrastructure where
+            every layer reinforces the next one.
+
+          </p>
+
+
+        </section>
+
+
+      </main>
+
+
+
+      <!-- SIDEBAR -->
+
+      <aside class="sidebar">
+
+
+        <div class="sidebar-box">
+
+
+          <div class="sidebar-row">
+
+            <span>
+              Company
+            </span>
+
+            <strong>
+              lowsignal
+            </strong>
+
+          </div>
+
+
+
+          <div class="sidebar-row">
+
+            <span>
+              Role
+            </span>
+
+            <strong>
+              Co-Founder & COO
+            </strong>
+
+          </div>
+
+
+
+          <div class="sidebar-row">
+
+            <span>
+              Category
+            </span>
+
+            <strong>
+              Growth Systems
+            </strong>
+
+          </div>
+
+
+
+          <div class="sidebar-row">
+
+            <span>
+              Based
+            </span>
+
+            <strong>
+              Santiago, Chile
+            </strong>
+
+          </div>
+
+
+
+          <div class="sidebar-row">
+
+            <span>
+              Period
+            </span>
+
+            <strong>
+              2025 — Present
+            </strong>
+
+          </div>
+
+
+
+          <div class="sidebar-row">
+
+            <span>
+              Focus
+            </span>
+
+            <strong>
+
+              Operations<br>
+
+              Growth systems<br>
+
+              Digital products<br>
+
+              Company building
+
+            </strong>
+
+          </div>
+
+
+        </div>
+
+
+      </aside>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FOCUS
+  ====================================================== -->
+
+  <section class="focus">
+
+
+    <div class="focus-grid">
+
+
+      <div class="section-label">
+
+        05 / Focus
+
+      </div>
+
+
+      <div>
+
+
+        <h2 class="focus-title">
+
+          Build the system.
+
+          <span>
+            Then scale it.
+          </span>
+
+        </h2>
+
+
+
+        <div class="focus-items">
+
+
+          <div class="focus-item">
+
+
+            <strong>
+              Build
+            </strong>
+
+
+            <p>
+
+              Turn ideas into products,
+              services and repeatable growth systems.
+
+            </p>
+
+
+          </div>
+
+
+
+          <div class="focus-item">
+
+
+            <strong>
+              Operate
+            </strong>
+
+
+            <p>
+
+              Create the workflows, team structure
+              and infrastructure required to execute.
+
+            </p>
+
+
+          </div>
+
+
+
+          <div class="focus-item">
+
+
+            <strong>
+              Scale
+            </strong>
+
+
+            <p>
+
+              Make growth less dependent on isolated
+              actions and more dependent on systems.
+
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =====================================================
+       PROJECT NAV
+  ====================================================== -->
+
+  <section class="project-nav">
+
+
+    <div class="project-nav-grid">
+
+
+      <a
+        href="geovictoria.html"
+        class="project-link"
+      >
+
+
+        <div class="project-small">
+
+          Previous / Selected Work
+
+        </div>
+
+
+        <div class="project-name">
+
+          GeoVictoria
+
+        </div>
+
+
+      </a>
+
+
+
+      <a
+        href="tethered.html"
+        class="project-link"
+      >
+
+
+        <div class="project-small">
+
+          Next / Selected Work
+
+        </div>
+
+
+        <div class="project-name">
+
+          TetherEd
+
+        </div>
+
+
+      </a>
+
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+
+      <div>
+
+        © 2026 Felipe Quiroz
+
+      </div>
+
+
+
+      <div class="footer-socials">
+
+
+        <!-- LINKEDIN -->
+
+        <a
+          href="https://www.linkedin.com/in/felipequirozp"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          class="social-icon"
+        >
+
+          <span class="linkedin-mark">
+            in
+          </span>
+
+        </a>
+
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+          href="https://www.instagram.com/felipe_quirozp/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+          class="social-icon"
+        >
+
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+
+            <rect
+              x="4"
+              y="4"
+              width="16"
+              height="16"
+              rx="5"
+            />
+
+            <circle
+              cx="12"
+              cy="12"
+              r="3.5"
+            />
+
+            <circle
+              cx="17.3"
+              cy="6.8"
+              r=".7"
+              class="filled"
+            />
+
+          </svg>
+
+
+        </a>
+
+
+
+        <!-- EMAIL -->
+
+        <a
+          href="mailto:felipe@lowsignal.cl"
+          aria-label="Email"
+          class="social-icon"
+        >
+
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+
+            <rect
+              x="3"
+              y="5"
+              width="18"
+              height="14"
+              rx="2"
+            />
+
+            <path
+              d="M4 7L12 13L20 7"
+            />
+
+          </svg>
+
+
+        </a>
+
+
+      </div>
+
+
+
+      <div class="footer-location">
+
+        Santiago / CL
+
+      </div>
+
+
+    </footer>
+
+
+  </section>
+
+
+</body>
+
+</html>
