@@ -1,45 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>Felipe Quiroz</title>
 
   <meta
     name="description"
-    content="Felipe Quiroz — Product Manager, Co-Founder & COO. Product, growth, business and company building."
-  />
+    content="Felipe Quiroz — Product Manager, Co-Founder & COO. Product, growth and business."
+  >
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- FONTS -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap"
     rel="stylesheet"
   >
 
+
   <style>
 
+    /* =====================================================
+       VARIABLES
+    ===================================================== */
+
     :root {
+
       --navy: #182536;
+
       --navy-deep: #0d1724;
+
       --navy-soft: #223247;
 
       --slate: #9aa9ba;
+
       --slate-light: #c7d0d9;
 
       --paper: #f3f4f2;
+
       --paper-2: #e8ebee;
 
       --white: #ffffff;
+
       --ink: #10161d;
+
       --muted: #66717d;
 
       --line: #d4d9de;
+
       --orange: #ef6a38;
+
     }
 
+
+    /* =====================================================
+       RESET
+    ===================================================== */
 
     * {
       box-sizing: border-box;
@@ -52,33 +87,46 @@
 
 
     body {
+
       margin: 0;
 
       background: var(--paper);
+
       color: var(--ink);
 
       font-family: "Inter", sans-serif;
 
       -webkit-font-smoothing: antialiased;
+
       text-rendering: optimizeLegibility;
+
     }
 
 
     a {
+
       color: inherit;
+
       text-decoration: none;
+
     }
 
 
     img {
+
       display: block;
+
       max-width: 100%;
+
     }
 
 
     ::selection {
+
       background: var(--navy);
+
       color: white;
+
     }
 
 
@@ -86,70 +134,120 @@
        NAV
     ===================================================== */
 
-
     .nav {
+
       height: 86px;
 
       padding: 0 5vw;
 
       display: grid;
+
       grid-template-columns: 1fr auto 1fr;
 
       align-items: center;
 
       background: var(--navy);
+
       color: white;
 
-      border-bottom: 1px solid rgba(255,255,255,.12);
+      border-bottom:
+        1px solid rgba(255,255,255,.12);
+
     }
 
 
     .brand {
+
       font-family: "Manrope", sans-serif;
 
       font-size: 17px;
+
       font-weight: 600;
 
       letter-spacing: -.04em;
+
     }
 
 
     .nav-center {
+
       font-size: 10px;
 
       font-weight: 500;
 
-      letter-spacing: .11em;
+      letter-spacing: .08em;
 
       text-transform: uppercase;
 
       color: var(--slate);
+
     }
 
 
     .nav-links {
+
       display: flex;
+
       justify-content: flex-end;
 
-      gap: 28px;
+      align-items: center;
+
+      gap: 24px;
 
       font-size: 10px;
 
       font-weight: 500;
 
-      letter-spacing: .09em;
+      letter-spacing: .06em;
 
       text-transform: uppercase;
+
     }
 
 
     .nav-links a {
+
       transition: opacity .2s ease;
+
     }
 
 
     .nav-links a:hover {
-      opacity: .45;
+
+      opacity: .5;
+
+    }
+
+
+    /* CONTACT NAV BUTTON */
+
+    .nav-links .contact-nav {
+
+      padding: 9px 14px;
+
+      border:
+        1px solid rgba(255,255,255,.28);
+
+      border-radius: 999px;
+
+      transition:
+        background .22s ease,
+        color .22s ease,
+        border-color .22s ease;
+
+    }
+
+
+    .nav-links .contact-nav:hover {
+
+      background: white;
+
+      color: var(--navy);
+
+      border-color: white;
+
+      opacity: 1;
+
     }
 
 
@@ -157,35 +255,47 @@
        HERO
     ===================================================== */
 
-
     .hero {
-      min-height: calc(100vh - 86px);
+
+      min-height:
+        calc(100vh - 86px);
 
       background: var(--navy);
+
       color: white;
 
-      padding: 45px 5vw 50px;
+      padding:
+        45px 5vw 50px;
 
       display: grid;
-      grid-template-columns: 1.05fr .95fr;
+
+      grid-template-columns:
+        1.05fr .95fr;
 
       gap: 6vw;
 
       align-items: stretch;
+
     }
 
 
     .hero-left {
+
       display: flex;
+
       flex-direction: column;
+
       justify-content: space-between;
 
       min-height: 680px;
+
     }
 
 
     .hero-top {
+
       display: flex;
+
       align-items: center;
 
       gap: 10px;
@@ -196,29 +306,37 @@
 
       font-weight: 500;
 
-      letter-spacing: .11em;
+      letter-spacing: .09em;
 
       text-transform: uppercase;
+
     }
 
 
     .status-dot {
+
       width: 7px;
+
       height: 7px;
 
       border-radius: 50%;
 
       background: var(--orange);
+
     }
 
 
     .hero-main {
-      margin: 60px 0;
+
+      margin:
+        60px 0;
+
     }
 
 
     .hero-small {
-      margin-bottom: 16px;
+
+      margin-bottom: 18px;
 
       color: var(--slate);
 
@@ -227,57 +345,82 @@
       font-weight: 500;
 
       letter-spacing: -.02em;
+
     }
 
 
+    /* NAME */
+
     .hero h1 {
+
       margin: 0;
 
       max-width: 780px;
 
-      font-family: "Manrope", sans-serif;
+      font-family:
+        "Manrope",
+        sans-serif;
 
-      font-size: clamp(74px, 9vw, 145px);
+      font-size:
+        clamp(74px, 9vw, 145px);
 
-      line-height: .82;
+      line-height: .94;
 
       letter-spacing: -.075em;
 
       font-weight: 500;
+
     }
 
 
     .hero h1 .soft {
+
+      display: block;
+
       color: var(--slate);
+
+      margin-top: 8px;
+
     }
 
 
     .hero-description {
-      margin-top: 36px;
 
-      max-width: 560px;
+      margin-top: 38px;
+
+      max-width: 620px;
 
       font-size: 15px;
 
-      line-height: 1.72;
+      line-height: 1.75;
 
       color: #ccd4dc;
+
     }
 
 
+    /* HERO ROLES */
+
     .hero-footer {
+
       display: grid;
-      grid-template-columns: 1fr 1fr;
+
+      grid-template-columns:
+        1fr 1fr;
 
       gap: 40px;
 
       padding-top: 28px;
 
-      border-top: 1px solid rgba(255,255,255,.18);
+      border-top:
+        1px solid
+        rgba(255,255,255,.18);
+
     }
 
 
     .hero-role span {
+
       display: block;
 
       margin-bottom: 8px;
@@ -288,13 +431,15 @@
 
       font-weight: 500;
 
-      letter-spacing: .1em;
+      letter-spacing: .08em;
 
       text-transform: uppercase;
+
     }
 
 
     .hero-role strong {
+
       display: block;
 
       margin-bottom: 5px;
@@ -302,10 +447,12 @@
       font-size: 14px;
 
       font-weight: 500;
+
     }
 
 
     .hero-role p {
+
       margin: 0;
 
       color: #c1cad4;
@@ -313,6 +460,7 @@
       font-size: 12px;
 
       line-height: 1.55;
+
     }
 
 
@@ -320,20 +468,23 @@
        HERO PHOTO
     ===================================================== */
 
-
     .hero-right {
+
       position: relative;
 
       min-height: 680px;
 
       display: flex;
+
       align-items: stretch;
 
       padding: 12px 0;
+
     }
 
 
     .photo-wrap {
+
       position: relative;
 
       width: 100%;
@@ -347,24 +498,31 @@
       background: var(--navy-deep);
 
       box-shadow:
-        0 28px 70px rgba(0,0,0,.26);
+        0 28px 70px
+        rgba(0,0,0,.26);
+
     }
 
 
     .photo-wrap img {
+
       width: 100%;
+
       height: 100%;
 
       object-fit: cover;
+
       object-position: center;
 
       filter:
-        saturate(.82)
-        contrast(1.03);
+        saturate(.88)
+        contrast(1.02);
+
     }
 
 
     .photo-wrap::after {
+
       content: "";
 
       position: absolute;
@@ -374,31 +532,39 @@
       background:
         linear-gradient(
           180deg,
-          transparent 50%,
-          rgba(8,15,24,.42) 100%
+          transparent 55%,
+          rgba(8,15,24,.38) 100%
         );
 
       pointer-events: none;
+
     }
 
 
     .photo-badge {
+
       position: absolute;
 
       z-index: 3;
 
       left: 22px;
+
       bottom: 22px;
 
-      padding: 13px 15px;
+      padding:
+        13px 15px;
 
       border-radius: 14px;
 
-      background: rgba(13,23,36,.74);
+      background:
+        rgba(13,23,36,.74);
 
-      backdrop-filter: blur(14px);
+      backdrop-filter:
+        blur(14px);
 
-      border: 1px solid rgba(255,255,255,.16);
+      border:
+        1px solid
+        rgba(255,255,255,.16);
 
       color: white;
 
@@ -406,23 +572,29 @@
 
       line-height: 1.55;
 
-      letter-spacing: .06em;
+      letter-spacing: .05em;
 
       text-transform: uppercase;
+
     }
 
 
     .photo-index {
+
       position: absolute;
 
-      right: -26px;
+      right: -22px;
+
       top: 35px;
 
       z-index: 3;
 
-      color: rgba(255,255,255,.13);
+      color:
+        rgba(255,255,255,.12);
 
-      font-family: "Manrope", sans-serif;
+      font-family:
+        "Manrope",
+        sans-serif;
 
       font-size: 135px;
 
@@ -433,6 +605,7 @@
       letter-spacing: -.08em;
 
       pointer-events: none;
+
     }
 
 
@@ -440,57 +613,74 @@
        STATEMENT
     ===================================================== */
 
-
     .statement {
-      background: var(--navy-deep);
+
+      background:
+        var(--navy-deep);
+
       color: white;
 
-      padding: 80px 5vw;
+      padding:
+        80px 5vw;
+
     }
 
 
     .statement-grid {
+
       display: grid;
-      grid-template-columns: .8fr 3fr;
+
+      grid-template-columns:
+        .8fr 3fr;
 
       gap: 70px;
+
     }
 
 
     .section-code {
+
       color: var(--slate);
 
       font-size: 10px;
 
       font-weight: 500;
 
-      letter-spacing: .1em;
+      letter-spacing: .08em;
 
       text-transform: uppercase;
 
       line-height: 1.6;
+
     }
 
 
     .statement h2 {
+
       margin: 0;
 
       max-width: 1100px;
 
-      font-family: "Manrope", sans-serif;
+      font-family:
+        "Manrope",
+        sans-serif;
 
-      font-size: clamp(42px, 6vw, 88px);
+      font-size:
+        clamp(42px, 6vw, 88px);
 
       line-height: .98;
 
       letter-spacing: -.055em;
 
       font-weight: 500;
+
     }
 
 
     .statement h2 span {
+
       color: var(--slate);
+
     }
 
 
@@ -498,51 +688,68 @@
        WORK
     ===================================================== */
 
-
     .work {
-      padding: 125px 5vw 145px;
+
+      padding:
+        125px 5vw 145px;
+
     }
 
 
     .work-head {
+
       display: grid;
-      grid-template-columns: .8fr 3fr;
+
+      grid-template-columns:
+        .8fr 3fr;
 
       gap: 70px;
 
       align-items: end;
 
       margin-bottom: 85px;
+
     }
 
 
     .work-heading-row {
+
       display: flex;
 
-      justify-content: space-between;
+      justify-content:
+        space-between;
+
       align-items: end;
 
       gap: 40px;
+
     }
 
 
     .work-heading-row h2 {
+
       margin: 0;
 
-      font-family: "Manrope", sans-serif;
+      font-family:
+        "Manrope",
+        sans-serif;
 
-      font-size: clamp(62px, 9vw, 130px);
+      font-size:
+        clamp(62px, 9vw, 130px);
 
       line-height: .82;
 
       letter-spacing: -.075em;
 
       font-weight: 500;
+
     }
 
 
     .work-heading-row p {
-      margin: 0 0 8px;
+
+      margin:
+        0 0 8px;
 
       max-width: 360px;
 
@@ -551,77 +758,107 @@
       font-size: 14px;
 
       line-height: 1.7;
+
     }
 
 
     .projects {
-      border-top: 1px solid var(--line);
+
+      border-top:
+        1px solid var(--line);
+
     }
 
 
     .project {
+
       position: relative;
 
       min-height: 180px;
 
       display: grid;
-      grid-template-columns: 70px 1.4fr 1fr 80px;
+
+      grid-template-columns:
+        70px 1.4fr 1fr 80px;
 
       align-items: center;
 
-      border-bottom: 1px solid var(--line);
+      border-bottom:
+        1px solid var(--line);
 
       overflow: hidden;
+
     }
 
 
     .project::before {
+
       content: "";
 
       position: absolute;
+
       inset: 0;
 
-      background: var(--navy);
+      background:
+        var(--navy);
 
-      transform: translateY(101%);
+      transform:
+        translateY(101%);
 
       transition:
-        transform .42s cubic-bezier(.76,0,.24,1);
+        transform
+        .42s
+        cubic-bezier(.76,0,.24,1);
+
     }
 
 
     .project:hover::before {
-      transform: translateY(0);
+
+      transform:
+        translateY(0);
+
     }
 
 
     .project > * {
+
       position: relative;
+
       z-index: 2;
+
     }
 
 
     .project-number {
+
       color: var(--muted);
 
       font-size: 10px;
 
       font-weight: 500;
+
     }
 
 
     .company {
-      font-family: "Manrope", sans-serif;
 
-      font-size: clamp(40px, 5vw, 78px);
+      font-family:
+        "Manrope",
+        sans-serif;
+
+      font-size:
+        clamp(40px, 5vw, 78px);
 
       letter-spacing: -.055em;
 
       font-weight: 500;
+
     }
 
 
     .project-meta {
+
       color: var(--muted);
 
       font-size: 10px;
@@ -631,31 +868,53 @@
       letter-spacing: .04em;
 
       text-transform: uppercase;
+
     }
 
 
-    .project-arrow {
+    .project-view {
+
       text-align: right;
 
-      font-size: 26px;
+      font-size: 10px;
 
-      transition: transform .25s ease;
+      font-weight: 500;
+
+      letter-spacing: .06em;
+
+      text-transform: uppercase;
+
+      transition:
+        transform .22s ease;
+
     }
 
 
     .project:hover {
+
       color: white;
+
     }
 
 
-    .project:hover .project-number,
-    .project:hover .project-meta {
-      color: var(--slate-light);
+    .project:hover
+    .project-number,
+
+    .project:hover
+    .project-meta {
+
+      color:
+        var(--slate-light);
+
     }
 
 
-    .project:hover .project-arrow {
-      transform: translate(7px, -7px);
+    .project:hover
+    .project-view {
+
+      transform:
+        translateX(-5px);
+
     }
 
 
@@ -663,51 +922,70 @@
        ABOUT
     ===================================================== */
 
-
     .about {
-      background: var(--paper-2);
 
-      padding: 125px 5vw;
+      background:
+        var(--paper-2);
+
+      padding:
+        125px 5vw;
+
     }
 
 
     .about-grid {
+
       display: grid;
-      grid-template-columns: .8fr 3fr;
+
+      grid-template-columns:
+        .8fr 3fr;
 
       gap: 70px;
+
     }
 
 
     .about-main {
+
       display: grid;
-      grid-template-columns: 1.5fr 1fr;
+
+      grid-template-columns:
+        1.5fr 1fr;
 
       gap: 75px;
+
     }
 
 
     .about-main h2 {
+
       margin: 0;
 
-      font-family: "Manrope", sans-serif;
+      font-family:
+        "Manrope",
+        sans-serif;
 
-      font-size: clamp(46px, 6vw, 88px);
+      font-size:
+        clamp(46px, 6vw, 88px);
 
       line-height: .97;
 
       letter-spacing: -.055em;
 
       font-weight: 500;
+
     }
 
 
     .about-main h2 span {
+
       color: #8796a6;
+
     }
 
 
     .about-copy {
+
       align-self: end;
 
       color: #4d5965;
@@ -715,6 +993,7 @@
       font-size: 15px;
 
       line-height: 1.8;
+
     }
 
 
@@ -722,72 +1001,101 @@
        NOW
     ===================================================== */
 
-
     .now {
-      background: var(--navy);
+
+      background:
+        var(--navy);
+
       color: white;
 
-      padding: 125px 5vw;
+      padding:
+        125px 5vw;
+
     }
 
 
     .now-grid {
+
       display: grid;
-      grid-template-columns: .8fr 3fr;
+
+      grid-template-columns:
+        .8fr 3fr;
 
       gap: 70px;
+
     }
 
 
     .now-content h2 {
-      margin: 0 0 75px;
 
-      font-family: "Manrope", sans-serif;
+      margin:
+        0 0 75px;
 
-      font-size: clamp(54px, 8vw, 116px);
+      font-family:
+        "Manrope",
+        sans-serif;
+
+      font-size:
+        clamp(54px, 8vw, 116px);
 
       line-height: .87;
 
       letter-spacing: -.07em;
 
       font-weight: 500;
+
     }
 
 
     .now-content h2 span {
+
       color: var(--slate);
+
     }
 
 
     .now-items {
+
       display: grid;
-      grid-template-columns: 1fr 1fr;
+
+      grid-template-columns:
+        1fr 1fr;
 
       gap: 28px;
+
     }
 
 
     .now-item {
+
       padding-top: 22px;
 
-      border-top: 1px solid rgba(255,255,255,.2);
+      border-top:
+        1px solid
+        rgba(255,255,255,.2);
+
     }
 
 
     .now-item strong {
+
       display: block;
 
       margin-bottom: 13px;
 
-      font-family: "Manrope", sans-serif;
+      font-family:
+        "Manrope",
+        sans-serif;
 
       font-size: 17px;
 
       font-weight: 500;
+
     }
 
 
     .now-item p {
+
       margin: 0;
 
       max-width: 450px;
@@ -797,6 +1105,7 @@
       font-size: 14px;
 
       line-height: 1.75;
+
     }
 
 
@@ -804,56 +1113,77 @@
        CONTACT
     ===================================================== */
 
-
     .contact {
-      padding: 125px 5vw 42px;
+
+      padding:
+        125px 5vw 42px;
+
     }
 
 
     .contact-grid {
+
       display: grid;
-      grid-template-columns: .8fr 3fr;
+
+      grid-template-columns:
+        .8fr 3fr;
 
       gap: 70px;
 
       padding-bottom: 110px;
+
     }
 
 
     .contact-title {
-      font-family: "Manrope", sans-serif;
 
-      font-size: clamp(58px, 9vw, 140px);
+      font-family:
+        "Manrope",
+        sans-serif;
+
+      font-size:
+        clamp(58px, 9vw, 140px);
 
       line-height: .83;
 
       letter-spacing: -.075em;
 
       font-weight: 500;
+
     }
 
 
     .contact-title span {
+
       display: block;
 
       color: #8998a7;
+
     }
 
 
+    /* SOCIAL BUTTONS */
+
     .contact-links {
+
       display: flex;
+
       flex-wrap: wrap;
 
       gap: 12px;
 
       margin-top: 50px;
+
     }
 
 
     .contact-link {
-      padding: 13px 18px;
 
-      border: 1px solid var(--ink);
+      padding:
+        13px 19px;
+
+      border:
+        1px solid var(--ink);
 
       border-radius: 999px;
 
@@ -865,26 +1195,40 @@
 
       text-transform: uppercase;
 
-      transition: all .22s ease;
+      transition:
+        background .22s ease,
+        color .22s ease,
+        transform .22s ease;
+
     }
 
 
     .contact-link:hover {
-      background: var(--navy);
 
-      border-color: var(--navy);
+      background:
+        var(--navy);
 
       color: white;
+
+      transform:
+        translateY(-2px);
+
     }
 
 
+    /* FOOTER */
+
     .footer {
+
       padding-top: 24px;
 
-      border-top: 1px solid var(--line);
+      border-top:
+        1px solid var(--line);
 
       display: flex;
-      justify-content: space-between;
+
+      justify-content:
+        space-between;
 
       color: var(--muted);
 
@@ -892,9 +1236,10 @@
 
       font-weight: 500;
 
-      letter-spacing: .08em;
+      letter-spacing: .07em;
 
       text-transform: uppercase;
+
     }
 
 
@@ -902,174 +1247,254 @@
        MOBILE
     ===================================================== */
 
-
     @media(max-width: 900px) {
 
-      .nav {
-        padding: 0 22px;
 
-        grid-template-columns: 1fr auto;
+      .nav {
+
+        padding:
+          0 22px;
+
+        grid-template-columns:
+          1fr auto;
+
       }
 
 
       .nav-center {
+
         display: none;
+
       }
 
 
-      .nav-links a:not(:last-child) {
+      .nav-links a:not(.contact-nav) {
+
         display: none;
+
       }
 
 
       .hero {
-        grid-template-columns: 1fr;
 
-        padding: 40px 22px 25px;
+        grid-template-columns:
+          1fr;
+
+        padding:
+          40px 22px 25px;
+
       }
 
 
       .hero-left {
+
         min-height: auto;
+
       }
 
 
       .hero-main {
-        margin: 80px 0 60px;
+
+        margin:
+          80px 0 60px;
+
       }
 
 
       .hero h1 {
-        font-size: clamp(65px, 17vw, 110px);
+
+        font-size:
+          clamp(65px, 17vw, 110px);
+
       }
 
 
       .hero-footer {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
 
         margin-bottom: 45px;
+
       }
 
 
       .hero-right {
+
         min-height: 520px;
 
         padding: 0;
+
       }
 
 
       .photo-wrap {
+
         min-height: 520px;
 
         border-radius: 26px;
+
       }
 
 
       .photo-index {
+
         font-size: 90px;
+
       }
 
 
       .statement,
+
       .work,
+
       .about,
+
       .now,
+
       .contact {
+
         padding-left: 22px;
+
         padding-right: 22px;
+
       }
 
 
       .statement-grid,
+
       .work-head,
+
       .about-grid,
+
       .about-main,
+
       .now-grid,
+
       .contact-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
 
         gap: 38px;
+
       }
 
 
       .work-heading-row {
-        flex-direction: column;
 
-        align-items: flex-start;
+        flex-direction:
+          column;
+
+        align-items:
+          flex-start;
+
       }
 
 
       .project {
-        grid-template-columns: 42px 1fr 35px;
+
+        grid-template-columns:
+          42px 1fr 50px;
 
         min-height: 135px;
+
       }
 
 
       .project-meta {
+
         display: none;
+
       }
 
 
       .now-items {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
+
       }
 
 
       .footer {
-        flex-direction: column;
+
+        flex-direction:
+          column;
 
         gap: 9px;
+
       }
 
     }
 
   </style>
+
 </head>
+
 
 
 <body>
 
 
-  <!-- NAV -->
+  <!-- =====================================================
+       NAV
+  ====================================================== -->
 
   <header class="nav">
 
-    <a class="brand" href="#">
+
+    <a
+      class="brand"
+      href="#"
+    >
       Felipe Quiroz
     </a>
 
 
     <div class="nav-center">
+
       Product / Growth / Business
+
     </div>
 
 
     <nav class="nav-links">
 
+
       <a href="#work">
         Work
       </a>
+
 
       <a href="#about">
         About
       </a>
 
+
       <a href="#now">
         Now
       </a>
 
-      <a href="#contact">
-        Contact ↗
+
+      <a
+        href="#contact"
+        class="contact-nav"
+      >
+        Contact
       </a>
 
+
     </nav>
+
 
   </header>
 
 
 
-  <!-- HERO -->
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
 
   <section class="hero">
 
@@ -1091,13 +1516,15 @@
 
 
         <div class="hero-small">
+
           Product · Growth · Business
+
         </div>
 
 
         <h1>
 
-          Felipe<br>
+          Felipe
 
           <span class="soft">
             Quiroz.
@@ -1124,15 +1551,21 @@
 
         <div class="hero-role">
 
-          <span>Current role</span>
+
+          <span>
+            Current role
+          </span>
+
 
           <strong>
             Product Manager · GeoVictoria
           </strong>
 
+
           <p>
             Workforce Management
           </p>
+
 
         </div>
 
@@ -1140,15 +1573,21 @@
 
         <div class="hero-role">
 
-          <span>Also building</span>
+
+          <span>
+            Also building
+          </span>
+
 
           <strong>
             Co-Founder & COO · lowsignal
           </strong>
 
+
           <p>
             Growth Systems
           </p>
+
 
         </div>
 
@@ -1164,6 +1603,7 @@
 
 
       <div class="photo-wrap">
+
 
         <img
           src="profile.jpg"
@@ -1195,7 +1635,9 @@
 
 
 
-  <!-- STATEMENT -->
+  <!-- =====================================================
+       STATEMENT
+  ====================================================== -->
 
   <section class="statement">
 
@@ -1206,10 +1648,10 @@
       <div class="section-code">
 
         01 / Profile<br>
+
         Santiago — CL
 
       </div>
-
 
 
       <h2>
@@ -1232,9 +1674,14 @@
 
 
 
-  <!-- WORK -->
+  <!-- =====================================================
+       WORK
+  ====================================================== -->
 
-  <section class="work" id="work">
+  <section
+    class="work"
+    id="work"
+  >
 
 
     <div class="work-head">
@@ -1243,6 +1690,7 @@
       <div class="section-code">
 
         02 / Experience<br>
+
         Selected work
 
       </div>
@@ -1304,8 +1752,8 @@
         </div>
 
 
-        <div class="project-arrow">
-          ↗
+        <div class="project-view">
+          View
         </div>
 
 
@@ -1342,8 +1790,8 @@
         </div>
 
 
-        <div class="project-arrow">
-          ↗
+        <div class="project-view">
+          View
         </div>
 
 
@@ -1380,8 +1828,8 @@
         </div>
 
 
-        <div class="project-arrow">
-          ↗
+        <div class="project-view">
+          View
         </div>
 
 
@@ -1395,9 +1843,14 @@
 
 
 
-  <!-- ABOUT -->
+  <!-- =====================================================
+       ABOUT
+  ====================================================== -->
 
-  <section class="about" id="about">
+  <section
+    class="about"
+    id="about"
+  >
 
 
     <div class="about-grid">
@@ -1406,10 +1859,10 @@
       <div class="section-code">
 
         03 / About<br>
+
         Felipe Quiroz
 
       </div>
-
 
 
       <div class="about-main">
@@ -1426,7 +1879,6 @@
           </span>
 
         </h2>
-
 
 
         <div class="about-copy">
@@ -1454,9 +1906,14 @@
 
 
 
-  <!-- NOW -->
+  <!-- =====================================================
+       NOW
+  ====================================================== -->
 
-  <section class="now" id="now">
+  <section
+    class="now"
+    id="now"
+  >
 
 
     <div class="now-grid">
@@ -1465,10 +1922,10 @@
       <div class="section-code">
 
         04 / Now<br>
+
         Currently building
 
       </div>
-
 
 
       <div class="now-content">
@@ -1485,15 +1942,16 @@
         </h2>
 
 
-
         <div class="now-items">
 
 
           <div class="now-item">
 
+
             <strong>
               GeoVictoria
             </strong>
+
 
             <p>
 
@@ -1502,15 +1960,18 @@
 
             </p>
 
+
           </div>
 
 
 
           <div class="now-item">
 
+
             <strong>
               lowsignal
             </strong>
+
 
             <p>
 
@@ -1518,6 +1979,7 @@
               and new ways for companies to grow.
 
             </p>
+
 
           </div>
 
@@ -1535,9 +1997,14 @@
 
 
 
-  <!-- CONTACT -->
+  <!-- =====================================================
+       CONTACT
+  ====================================================== -->
 
-  <section class="contact" id="contact">
+  <section
+    class="contact"
+    id="contact"
+  >
 
 
     <div class="contact-grid">
@@ -1546,6 +2013,7 @@
       <div class="section-code">
 
         05 / Contact<br>
+
         Santiago, Chile
 
       </div>
@@ -1566,7 +2034,6 @@
         </div>
 
 
-
         <div class="contact-links">
 
 
@@ -1576,7 +2043,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            LinkedIn ↗
+            LinkedIn
           </a>
 
 
@@ -1586,7 +2053,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            Instagram ↗
+            Instagram
           </a>
 
 
@@ -1594,7 +2061,7 @@
             class="contact-link"
             href="mailto:felipe@lowsignal.cl"
           >
-            Email ↗
+            Email
           </a>
 
 
@@ -1633,4 +2100,5 @@
 
 
 </body>
+
 </html>
