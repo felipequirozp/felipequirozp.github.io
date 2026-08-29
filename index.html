@@ -10,26 +10,16 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Felipe Quiroz</title>
+  <title>GeoVictoria — Felipe Quiroz</title>
 
   <meta
     name="description"
-    content="Felipe Quiroz — Product Manager, Co-Founder & COO. Product, growth and business."
+    content="Felipe Quiroz — Product Manager at GeoVictoria. Workforce Management, product development and pilots across LATAM."
   >
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
-  <!-- FONTS -->
-
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap"
@@ -38,10 +28,6 @@
 
 
   <style>
-
-    /* =====================================================
-       VARIABLES
-    ===================================================== */
 
     :root {
 
@@ -57,7 +43,7 @@
 
       --paper: #f3f4f2;
 
-      --paper-2: #e8ebee;
+      --paper-warm: #eeeade;
 
       --white: #ffffff;
 
@@ -71,10 +57,6 @@
 
     }
 
-
-    /* =====================================================
-       RESET
-    ===================================================== */
 
     * {
       box-sizing: border-box;
@@ -98,8 +80,6 @@
 
       -webkit-font-smoothing: antialiased;
 
-      text-rendering: optimizeLegibility;
-
     }
 
 
@@ -108,15 +88,6 @@
       color: inherit;
 
       text-decoration: none;
-
-    }
-
-
-    img {
-
-      display: block;
-
-      max-width: 100%;
 
     }
 
@@ -136,7 +107,7 @@
 
     .nav {
 
-      height: 86px;
+      height: 84px;
 
       padding: 0 5vw;
 
@@ -171,6 +142,8 @@
 
     .nav-center {
 
+      color: var(--slate);
+
       font-size: 10px;
 
       font-weight: 500;
@@ -179,20 +152,19 @@
 
       text-transform: uppercase;
 
-      color: var(--slate);
-
     }
 
 
-    .nav-links {
+    .back {
 
-      display: flex;
+      justify-self: end;
 
-      justify-content: flex-end;
+      padding: 9px 14px;
 
-      align-items: center;
+      border:
+        1px solid rgba(255,255,255,.25);
 
-      gap: 24px;
+      border-radius: 999px;
 
       font-size: 10px;
 
@@ -202,51 +174,16 @@
 
       text-transform: uppercase;
 
-    }
-
-
-    .nav-links a {
-
-      transition: opacity .2s ease;
+      transition: .2s ease;
 
     }
 
 
-    .nav-links a:hover {
-
-      opacity: .5;
-
-    }
-
-
-    /* CONTACT NAV BUTTON */
-
-    .nav-links .contact-nav {
-
-      padding: 9px 14px;
-
-      border:
-        1px solid rgba(255,255,255,.28);
-
-      border-radius: 999px;
-
-      transition:
-        background .22s ease,
-        color .22s ease,
-        border-color .22s ease;
-
-    }
-
-
-    .nav-links .contact-nav:hover {
+    .back:hover {
 
       background: white;
 
       color: var(--navy);
-
-      border-color: white;
-
-      opacity: 1;
 
     }
 
@@ -258,461 +195,684 @@
     .hero {
 
       min-height:
-        calc(100vh - 86px);
-
-      background: var(--navy);
-
-      color: white;
-
-      padding:
-        45px 5vw 50px;
+        calc(100vh - 84px);
 
       display: grid;
 
       grid-template-columns:
-        1.05fr .95fr;
+        47% 53%;
 
-      gap: 6vw;
-
-      align-items: stretch;
+      background: var(--paper-warm);
 
     }
 
 
-    .hero-left {
+    /* HERO VISUAL */
 
-      display: flex;
+    .hero-visual {
 
-      flex-direction: column;
+      position: relative;
 
-      justify-content: space-between;
+      overflow: hidden;
 
       min-height: 680px;
 
+      background: #39588d;
+
+      color: white;
+
     }
 
 
-    .hero-top {
+    .grid-lines {
 
-      display: flex;
+      position: absolute;
 
-      align-items: center;
+      inset: 0;
 
-      gap: 10px;
+      background-image:
 
-      color: var(--slate);
+        linear-gradient(
+          rgba(255,255,255,.18) 1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.18) 1px,
+          transparent 1px
+        );
+
+      background-size:
+        180px 180px;
+
+    }
+
+
+    .visual-circle {
+
+      position: absolute;
+
+      width: 620px;
+
+      height: 620px;
+
+      border-radius: 50%;
+
+      right: -340px;
+
+      top: 50%;
+
+      transform:
+        translateY(-50%);
+
+      background:
+        var(--paper-warm);
+
+    }
+
+
+    .visual-title {
+
+      position: absolute;
+
+      z-index: 2;
+
+      left: 6vw;
+
+      bottom: 7vw;
+
+    }
+
+
+    .visual-title span {
+
+      display: block;
+
+      margin-bottom: 15px;
+
+      color: rgba(255,255,255,.65);
 
       font-size: 10px;
 
       font-weight: 500;
 
-      letter-spacing: .09em;
+      letter-spacing: .1em;
 
       text-transform: uppercase;
 
     }
 
 
-    .status-dot {
-
-      width: 7px;
-
-      height: 7px;
-
-      border-radius: 50%;
-
-      background: var(--orange);
-
-    }
-
-
-    .hero-main {
-
-      margin:
-        60px 0;
-
-    }
-
-
-    .hero-small {
-
-      margin-bottom: 18px;
-
-      color: var(--slate);
-
-      font-size: 13px;
-
-      font-weight: 500;
-
-      letter-spacing: -.02em;
-
-    }
-
-
-    /* NAME */
-
-    .hero h1 {
-
-      margin: 0;
-
-      max-width: 780px;
-
-      font-family:
-        "Manrope",
-        sans-serif;
-
-      font-size:
-        clamp(74px, 9vw, 145px);
-
-      line-height: .94;
-
-      letter-spacing: -.075em;
-
-      font-weight: 500;
-
-    }
-
-
-    .hero h1 .soft {
+    .visual-title strong {
 
       display: block;
 
-      color: var(--slate);
+      max-width: 500px;
 
-      margin-top: 8px;
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(55px, 6vw, 98px);
+
+      line-height: .85;
+
+      letter-spacing: -.065em;
+
+      font-weight: 500;
+
+    }
+
+
+    .visual-marker {
+
+      position: absolute;
+
+      width: 90px;
+
+      height: 90px;
+
+      top: 110px;
+
+      left: 17vw;
+
+      background:
+        rgba(255,255,255,.13);
+
+    }
+
+
+    /* HERO CONTENT */
+
+    .hero-content {
+
+      padding:
+        70px 7vw 70px 6vw;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+    }
+
+
+    .kicker {
+
+      margin-bottom: 28px;
+
+      color: #a84f2d;
+
+      font-size: 10px;
+
+      font-weight: 600;
+
+      letter-spacing: .12em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .hero-content h1 {
+
+      margin: 0;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(55px, 6vw, 96px);
+
+      line-height: .9;
+
+      letter-spacing: -.065em;
+
+      font-weight: 500;
+
+      color: var(--navy);
+
+    }
+
+
+    .hero-role {
+
+      margin-top: 24px;
+
+      color: #576473;
+
+      font-size: 16px;
+
+      line-height: 1.5;
 
     }
 
 
     .hero-description {
 
-      margin-top: 38px;
+      margin-top: 42px;
 
-      max-width: 620px;
+      max-width: 700px;
+
+      color: #3f4a55;
 
       font-size: 15px;
 
-      line-height: 1.75;
-
-      color: #ccd4dc;
+      line-height: 1.8;
 
     }
 
 
-    /* HERO ROLES */
+    .hero-tags {
 
-    .hero-footer {
+      display: flex;
 
-      display: grid;
+      flex-wrap: wrap;
 
-      grid-template-columns:
-        1fr 1fr;
+      gap: 9px;
 
-      gap: 40px;
-
-      padding-top: 28px;
-
-      border-top:
-        1px solid
-        rgba(255,255,255,.18);
+      margin-top: 38px;
 
     }
 
 
-    .hero-role span {
+    .tag {
 
-      display: block;
+      padding: 9px 12px;
 
-      margin-bottom: 8px;
+      border:
+        1px solid rgba(24,37,54,.25);
 
-      color: var(--slate);
+      border-radius: 999px;
+
+      color: var(--navy);
 
       font-size: 9px;
 
       font-weight: 500;
 
-      letter-spacing: .08em;
+      letter-spacing: .06em;
 
       text-transform: uppercase;
 
     }
 
 
-    .hero-role strong {
-
-      display: block;
-
-      margin-bottom: 5px;
-
-      font-size: 14px;
-
-      font-weight: 500;
-
-    }
-
-
-    .hero-role p {
-
-      margin: 0;
-
-      color: #c1cad4;
-
-      font-size: 12px;
-
-      line-height: 1.55;
-
-    }
-
-
     /* =====================================================
-       HERO PHOTO
+       CASE BODY
     ===================================================== */
 
-    .hero-right {
-
-      position: relative;
-
-      min-height: 680px;
-
-      display: flex;
-
-      align-items: stretch;
-
-      padding: 12px 0;
-
-    }
-
-
-    .photo-wrap {
-
-      position: relative;
-
-      width: 100%;
-
-      min-height: 650px;
-
-      overflow: hidden;
-
-      border-radius: 34px;
-
-      background: var(--navy-deep);
-
-      box-shadow:
-        0 28px 70px
-        rgba(0,0,0,.26);
-
-    }
-
-
-    .photo-wrap img {
-
-      width: 100%;
-
-      height: 100%;
-
-      object-fit: cover;
-
-      object-position: center;
-
-      filter:
-        saturate(.88)
-        contrast(1.02);
-
-    }
-
-
-    .photo-wrap::after {
-
-      content: "";
-
-      position: absolute;
-
-      inset: 0;
-
-      background:
-        linear-gradient(
-          180deg,
-          transparent 55%,
-          rgba(8,15,24,.38) 100%
-        );
-
-      pointer-events: none;
-
-    }
-
-
-    .photo-badge {
-
-      position: absolute;
-
-      z-index: 3;
-
-      left: 22px;
-
-      bottom: 22px;
+    .case {
 
       padding:
-        13px 15px;
+        120px 7vw 140px;
 
-      border-radius: 14px;
-
-      background:
-        rgba(13,23,36,.74);
-
-      backdrop-filter:
-        blur(14px);
-
-      border:
-        1px solid
-        rgba(255,255,255,.16);
-
-      color: white;
-
-      font-size: 10px;
-
-      line-height: 1.55;
-
-      letter-spacing: .05em;
-
-      text-transform: uppercase;
+      background: var(--paper);
 
     }
 
 
-    .photo-index {
-
-      position: absolute;
-
-      right: -22px;
-
-      top: 35px;
-
-      z-index: 3;
-
-      color:
-        rgba(255,255,255,.12);
-
-      font-family:
-        "Manrope",
-        sans-serif;
-
-      font-size: 135px;
-
-      line-height: 1;
-
-      font-weight: 500;
-
-      letter-spacing: -.08em;
-
-      pointer-events: none;
-
-    }
-
-
-    /* =====================================================
-       STATEMENT
-    ===================================================== */
-
-    .statement {
-
-      background:
-        var(--navy-deep);
-
-      color: white;
-
-      padding:
-        80px 5vw;
-
-    }
-
-
-    .statement-grid {
+    .case-grid {
 
       display: grid;
 
       grid-template-columns:
-        .8fr 3fr;
+        2.2fr .8fr;
 
-      gap: 70px;
+      gap: 8vw;
 
-    }
+      max-width: 1400px;
 
-
-    .section-code {
-
-      color: var(--slate);
-
-      font-size: 10px;
-
-      font-weight: 500;
-
-      letter-spacing: .08em;
-
-      text-transform: uppercase;
-
-      line-height: 1.6;
+      margin: 0 auto;
 
     }
 
 
-    .statement h2 {
+    /* MAIN COLUMN */
 
-      margin: 0;
+    .case-main {
 
-      max-width: 1100px;
-
-      font-family:
-        "Manrope",
-        sans-serif;
-
-      font-size:
-        clamp(42px, 6vw, 88px);
-
-      line-height: .98;
-
-      letter-spacing: -.055em;
-
-      font-weight: 500;
+      max-width: 850px;
 
     }
 
 
-    .statement h2 span {
-
-      color: var(--slate);
-
-    }
-
-
-    /* =====================================================
-       WORK
-    ===================================================== */
-
-    .work {
-
-      padding:
-        125px 5vw 145px;
-
-    }
-
-
-    .work-head {
-
-      display: grid;
-
-      grid-template-columns:
-        .8fr 3fr;
-
-      gap: 70px;
-
-      align-items: end;
+    .case-section {
 
       margin-bottom: 85px;
 
     }
 
 
-    .work-heading-row {
+    .section-label {
+
+      margin-bottom: 20px;
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      font-weight: 600;
+
+      letter-spacing: .1em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .case-section h2 {
+
+      margin:
+        0 0 28px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(32px, 4vw, 54px);
+
+      line-height: 1;
+
+      letter-spacing: -.045em;
+
+      font-weight: 500;
+
+    }
+
+
+    .case-section p {
+
+      margin:
+        0 0 22px;
+
+      color: #39444f;
+
+      font-size: 15px;
+
+      line-height: 1.8;
+
+    }
+
+
+    /* INITIATIVES */
+
+    .initiatives {
+
+      display: grid;
+
+      gap: 12px;
+
+      margin-top: 34px;
+
+    }
+
+
+    .initiative {
+
+      padding:
+        22px 0;
+
+      display: grid;
+
+      grid-template-columns:
+        55px 1fr auto;
+
+      align-items: center;
+
+      border-top:
+        1px solid var(--line);
+
+    }
+
+
+    .initiative:last-child {
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .initiative-number {
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+    }
+
+
+    .initiative-name {
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 21px;
+
+      font-weight: 500;
+
+      letter-spacing: -.025em;
+
+    }
+
+
+    .initiative-type {
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      letter-spacing: .07em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* LIST */
+
+    .clean-list {
+
+      margin:
+        26px 0 0;
+
+      padding: 0;
+
+      list-style: none;
+
+      border-top:
+        1px solid var(--line);
+
+    }
+
+
+    .clean-list li {
+
+      padding:
+        17px 0;
+
+      border-bottom:
+        1px solid var(--line);
+
+      display: grid;
+
+      grid-template-columns:
+        25px 1fr;
+
+      gap: 15px;
+
+      color: #39444f;
+
+      font-size: 14px;
+
+      line-height: 1.65;
+
+    }
+
+
+    .clean-list li::before {
+
+      content: "•";
+
+      color: var(--orange);
+
+    }
+
+
+    /* =====================================================
+       SIDEBAR
+    ===================================================== */
+
+    .sidebar {
+
+      position: sticky;
+
+      top: 110px;
+
+      align-self: start;
+
+    }
+
+
+    .sidebar-box {
+
+      padding:
+        28px 0;
+
+      border-top:
+        1px solid var(--line);
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .sidebar-row {
+
+      margin-bottom: 23px;
+
+    }
+
+
+    .sidebar-row:last-child {
+
+      margin-bottom: 0;
+
+    }
+
+
+    .sidebar-row span {
+
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      font-weight: 600;
+
+      letter-spacing: .08em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .sidebar-row strong {
+
+      font-size: 13px;
+
+      line-height: 1.5;
+
+      font-weight: 500;
+
+    }
+
+
+    /* =====================================================
+       CURRENT FOCUS
+    ===================================================== */
+
+    .focus {
+
+      padding:
+        120px 7vw;
+
+      background: var(--navy);
+
+      color: white;
+
+    }
+
+
+    .focus-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        .8fr 3fr;
+
+      gap: 70px;
+
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+    }
+
+
+    .focus-title {
+
+      margin: 0;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(50px, 7vw, 105px);
+
+      line-height: .88;
+
+      letter-spacing: -.065em;
+
+      font-weight: 500;
+
+    }
+
+
+    .focus-title span {
+
+      color: var(--slate);
+
+    }
+
+
+    .focus-items {
+
+      margin-top: 70px;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 25px;
+
+    }
+
+
+    .focus-item {
+
+      padding-top: 22px;
+
+      border-top:
+        1px solid rgba(255,255,255,.2);
+
+    }
+
+
+    .focus-item strong {
+
+      display: block;
+
+      margin-bottom: 12px;
+
+      font-size: 15px;
+
+      font-weight: 500;
+
+    }
+
+
+    .focus-item p {
+
+      margin: 0;
+
+      color: #bbc5d0;
+
+      font-size: 13px;
+
+      line-height: 1.7;
+
+    }
+
+
+    /* =====================================================
+       NEXT
+    ===================================================== */
+
+    .next {
+
+      padding:
+        120px 7vw 45px;
+
+      background: var(--paper);
+
+    }
+
+
+    .next-link {
 
       display: flex;
 
@@ -721,509 +881,65 @@
 
       align-items: end;
 
-      gap: 40px;
-
-    }
-
-
-    .work-heading-row h2 {
-
-      margin: 0;
-
-      font-family:
-        "Manrope",
-        sans-serif;
-
-      font-size:
-        clamp(62px, 9vw, 130px);
-
-      line-height: .82;
-
-      letter-spacing: -.075em;
-
-      font-weight: 500;
-
-    }
-
-
-    .work-heading-row p {
-
-      margin:
-        0 0 8px;
-
-      max-width: 360px;
-
-      color: var(--muted);
-
-      font-size: 14px;
-
-      line-height: 1.7;
-
-    }
-
-
-    .projects {
+      padding:
+        45px 0;
 
       border-top:
         1px solid var(--line);
-
-    }
-
-
-    .project {
-
-      position: relative;
-
-      min-height: 180px;
-
-      display: grid;
-
-      grid-template-columns:
-        70px 1.4fr 1fr 80px;
-
-      align-items: center;
 
       border-bottom:
         1px solid var(--line);
 
-      overflow: hidden;
-
     }
 
 
-    .project::before {
-
-      content: "";
-
-      position: absolute;
-
-      inset: 0;
-
-      background:
-        var(--navy);
-
-      transform:
-        translateY(101%);
-
-      transition:
-        transform
-        .42s
-        cubic-bezier(.76,0,.24,1);
-
-    }
-
-
-    .project:hover::before {
-
-      transform:
-        translateY(0);
-
-    }
-
-
-    .project > * {
-
-      position: relative;
-
-      z-index: 2;
-
-    }
-
-
-    .project-number {
+    .next-small {
 
       color: var(--muted);
 
       font-size: 10px;
 
-      font-weight: 500;
+      text-transform: uppercase;
+
+      letter-spacing: .08em;
 
     }
 
 
-    .company {
+    .next-name {
 
-      font-family:
-        "Manrope",
-        sans-serif;
+      margin-top: 18px;
+
+      font-family: "Manrope", sans-serif;
 
       font-size:
-        clamp(40px, 5vw, 78px);
+        clamp(50px, 7vw, 100px);
 
-      letter-spacing: -.055em;
+      line-height: .9;
+
+      letter-spacing: -.06em;
 
       font-weight: 500;
 
     }
 
 
-    .project-meta {
+    .next-action {
 
-      color: var(--muted);
+      padding-bottom: 8px;
 
-      font-size: 10px;
+      font-size: 11px;
 
-      line-height: 1.8;
-
-      letter-spacing: .04em;
+      font-weight: 500;
 
       text-transform: uppercase;
 
     }
 
-
-    .project-view {
-
-      text-align: right;
-
-      font-size: 10px;
-
-      font-weight: 500;
-
-      letter-spacing: .06em;
-
-      text-transform: uppercase;
-
-      transition:
-        transform .22s ease;
-
-    }
-
-
-    .project:hover {
-
-      color: white;
-
-    }
-
-
-    .project:hover
-    .project-number,
-
-    .project:hover
-    .project-meta {
-
-      color:
-        var(--slate-light);
-
-    }
-
-
-    .project:hover
-    .project-view {
-
-      transform:
-        translateX(-5px);
-
-    }
-
-
-    /* =====================================================
-       ABOUT
-    ===================================================== */
-
-    .about {
-
-      background:
-        var(--paper-2);
-
-      padding:
-        125px 5vw;
-
-    }
-
-
-    .about-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        .8fr 3fr;
-
-      gap: 70px;
-
-    }
-
-
-    .about-main {
-
-      display: grid;
-
-      grid-template-columns:
-        1.5fr 1fr;
-
-      gap: 75px;
-
-    }
-
-
-    .about-main h2 {
-
-      margin: 0;
-
-      font-family:
-        "Manrope",
-        sans-serif;
-
-      font-size:
-        clamp(46px, 6vw, 88px);
-
-      line-height: .97;
-
-      letter-spacing: -.055em;
-
-      font-weight: 500;
-
-    }
-
-
-    .about-main h2 span {
-
-      color: #8796a6;
-
-    }
-
-
-    .about-copy {
-
-      align-self: end;
-
-      color: #4d5965;
-
-      font-size: 15px;
-
-      line-height: 1.8;
-
-    }
-
-
-    /* =====================================================
-       NOW
-    ===================================================== */
-
-    .now {
-
-      background:
-        var(--navy);
-
-      color: white;
-
-      padding:
-        125px 5vw;
-
-    }
-
-
-    .now-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        .8fr 3fr;
-
-      gap: 70px;
-
-    }
-
-
-    .now-content h2 {
-
-      margin:
-        0 0 75px;
-
-      font-family:
-        "Manrope",
-        sans-serif;
-
-      font-size:
-        clamp(54px, 8vw, 116px);
-
-      line-height: .87;
-
-      letter-spacing: -.07em;
-
-      font-weight: 500;
-
-    }
-
-
-    .now-content h2 span {
-
-      color: var(--slate);
-
-    }
-
-
-    .now-items {
-
-      display: grid;
-
-      grid-template-columns:
-        1fr 1fr;
-
-      gap: 28px;
-
-    }
-
-
-    .now-item {
-
-      padding-top: 22px;
-
-      border-top:
-        1px solid
-        rgba(255,255,255,.2);
-
-    }
-
-
-    .now-item strong {
-
-      display: block;
-
-      margin-bottom: 13px;
-
-      font-family:
-        "Manrope",
-        sans-serif;
-
-      font-size: 17px;
-
-      font-weight: 500;
-
-    }
-
-
-    .now-item p {
-
-      margin: 0;
-
-      max-width: 450px;
-
-      color: #bdc8d3;
-
-      font-size: 14px;
-
-      line-height: 1.75;
-
-    }
-
-
-    /* =====================================================
-       CONTACT
-    ===================================================== */
-
-    .contact {
-
-      padding:
-        125px 5vw 42px;
-
-    }
-
-
-    .contact-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        .8fr 3fr;
-
-      gap: 70px;
-
-      padding-bottom: 110px;
-
-    }
-
-
-    .contact-title {
-
-      font-family:
-        "Manrope",
-        sans-serif;
-
-      font-size:
-        clamp(58px, 9vw, 140px);
-
-      line-height: .83;
-
-      letter-spacing: -.075em;
-
-      font-weight: 500;
-
-    }
-
-
-    .contact-title span {
-
-      display: block;
-
-      color: #8998a7;
-
-    }
-
-
-    /* SOCIAL BUTTONS */
-
-    .contact-links {
-
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 12px;
-
-      margin-top: 50px;
-
-    }
-
-
-    .contact-link {
-
-      padding:
-        13px 19px;
-
-      border:
-        1px solid var(--ink);
-
-      border-radius: 999px;
-
-      font-size: 10px;
-
-      font-weight: 500;
-
-      letter-spacing: .07em;
-
-      text-transform: uppercase;
-
-      transition:
-        background .22s ease,
-        color .22s ease,
-        transform .22s ease;
-
-    }
-
-
-    .contact-link:hover {
-
-      background:
-        var(--navy);
-
-      color: white;
-
-      transform:
-        translateY(-2px);
-
-    }
-
-
-    /* FOOTER */
 
     .footer {
 
-      padding-top: 24px;
-
-      border-top:
-        1px solid var(--line);
+      padding-top: 28px;
 
       display: flex;
 
@@ -1268,91 +984,34 @@
       }
 
 
-      .nav-links a:not(.contact-nav) {
-
-        display: none;
-
-      }
-
-
       .hero {
 
         grid-template-columns:
           1fr;
 
+      }
+
+
+      .hero-visual {
+
+        min-height: 520px;
+
+      }
+
+
+      .hero-content {
+
         padding:
-          40px 22px 25px;
+          60px 22px;
 
       }
 
 
-      .hero-left {
+      .case,
 
-        min-height: auto;
+      .focus,
 
-      }
-
-
-      .hero-main {
-
-        margin:
-          80px 0 60px;
-
-      }
-
-
-      .hero h1 {
-
-        font-size:
-          clamp(65px, 17vw, 110px);
-
-      }
-
-
-      .hero-footer {
-
-        grid-template-columns:
-          1fr;
-
-        margin-bottom: 45px;
-
-      }
-
-
-      .hero-right {
-
-        min-height: 520px;
-
-        padding: 0;
-
-      }
-
-
-      .photo-wrap {
-
-        min-height: 520px;
-
-        border-radius: 26px;
-
-      }
-
-
-      .photo-index {
-
-        font-size: 90px;
-
-      }
-
-
-      .statement,
-
-      .work,
-
-      .about,
-
-      .now,
-
-      .contact {
+      .next {
 
         padding-left: 22px;
 
@@ -1361,66 +1020,68 @@
       }
 
 
-      .statement-grid,
-
-      .work-head,
-
-      .about-grid,
-
-      .about-main,
-
-      .now-grid,
-
-      .contact-grid {
+      .case-grid {
 
         grid-template-columns:
           1fr;
 
-        gap: 38px;
+      }
+
+
+      .sidebar {
+
+        position: static;
 
       }
 
 
-      .work-heading-row {
-
-        flex-direction:
-          column;
-
-        align-items:
-          flex-start;
-
-      }
-
-
-      .project {
+      .focus-grid {
 
         grid-template-columns:
-          42px 1fr 50px;
+          1fr;
 
-        min-height: 135px;
+        gap: 35px;
 
       }
 
 
-      .project-meta {
+      .focus-items {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .initiative {
+
+        grid-template-columns:
+          40px 1fr;
+
+      }
+
+
+      .initiative-type {
 
         display: none;
 
       }
 
 
-      .now-items {
+      .next-link {
 
-        grid-template-columns:
-          1fr;
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
 
       }
 
 
       .footer {
 
-        flex-direction:
-          column;
+        flex-direction: column;
 
         gap: 9px;
 
@@ -1437,16 +1098,14 @@
 <body>
 
 
-  <!-- =====================================================
-       NAV
-  ====================================================== -->
+  <!-- NAV -->
 
   <header class="nav">
 
 
     <a
+      href="index.html"
       class="brand"
-      href="#"
     >
       Felipe Quiroz
     </a>
@@ -1454,263 +1113,57 @@
 
     <div class="nav-center">
 
-      Product / Growth / Business
+      Selected Work / GeoVictoria
 
     </div>
 
 
-    <nav class="nav-links">
-
-
-      <a href="#work">
-        Work
-      </a>
-
-
-      <a href="#about">
-        About
-      </a>
-
-
-      <a href="#now">
-        Now
-      </a>
-
-
-      <a
-        href="#contact"
-        class="contact-nav"
-      >
-        Contact
-      </a>
-
-
-    </nav>
+    <a
+      href="index.html#work"
+      class="back"
+    >
+      Back
+    </a>
 
 
   </header>
 
 
 
-  <!-- =====================================================
-       HERO
-  ====================================================== -->
+  <!-- HERO -->
 
   <section class="hero">
 
 
-    <div class="hero-left">
+    <div class="hero-visual">
 
 
-      <div class="hero-top">
+      <div class="grid-lines"></div>
 
-        <span class="status-dot"></span>
 
-        Santiago, Chile · 2026
+      <div class="visual-marker"></div>
 
-      </div>
 
+      <div class="visual-circle"></div>
 
 
-      <div class="hero-main">
+      <div class="visual-title">
 
-
-        <div class="hero-small">
-
-          Product · Growth · Business
-
-        </div>
-
-
-        <h1>
-
-          Felipe
-
-          <span class="soft">
-            Quiroz.
-          </span>
-
-        </h1>
-
-
-        <p class="hero-description">
-
-          Working across product, growth and business —
-          building products, systems and companies
-          across Latin America.
-
-        </p>
-
-
-      </div>
-
-
-
-      <div class="hero-footer">
-
-
-        <div class="hero-role">
-
-
-          <span>
-            Current role
-          </span>
-
-
-          <strong>
-            Product Manager · GeoVictoria
-          </strong>
-
-
-          <p>
-            Workforce Management
-          </p>
-
-
-        </div>
-
-
-
-        <div class="hero-role">
-
-
-          <span>
-            Also building
-          </span>
-
-
-          <strong>
-            Co-Founder & COO · lowsignal
-          </strong>
-
-
-          <p>
-            Growth Systems
-          </p>
-
-
-        </div>
-
-
-      </div>
-
-
-    </div>
-
-
-
-    <div class="hero-right">
-
-
-      <div class="photo-wrap">
-
-
-        <img
-          src="profile.jpg"
-          alt="Felipe Quiroz"
-        >
-
-
-        <div class="photo-index">
-          FQ
-        </div>
-
-
-        <div class="photo-badge">
-
-          Felipe Quiroz<br>
-
-          Product · Growth · Business
-
-        </div>
-
-
-      </div>
-
-
-    </div>
-
-
-  </section>
-
-
-
-  <!-- =====================================================
-       STATEMENT
-  ====================================================== -->
-
-  <section class="statement">
-
-
-    <div class="statement-grid">
-
-
-      <div class="section-code">
-
-        01 / Profile<br>
-
-        Santiago — CL
-
-      </div>
-
-
-      <h2>
-
-        I work where product,
-
-        business and execution
 
         <span>
-          come together.
+
+          Workforce Management
+
         </span>
 
-      </h2>
 
+        <strong>
 
-    </div>
+          Product<br>
+          Systems<br>
+          at scale.
 
-
-  </section>
-
-
-
-  <!-- =====================================================
-       WORK
-  ====================================================== -->
-
-  <section
-    class="work"
-    id="work"
-  >
-
-
-    <div class="work-head">
-
-
-      <div class="section-code">
-
-        02 / Experience<br>
-
-        Selected work
-
-      </div>
-
-
-
-      <div class="work-heading-row">
-
-
-        <h2>
-          Work.
-        </h2>
-
-
-        <p>
-
-          Building products, companies and partnerships
-          across technology, SaaS and digital businesses.
-
-        </p>
+        </strong>
 
 
       </div>
@@ -1720,180 +1173,69 @@
 
 
 
-    <div class="projects">
+    <div class="hero-content">
 
 
-      <!-- GEOVICTORIA -->
+      <div class="kicker">
 
-      <a
-        class="project"
-        href="#"
-      >
-
-
-        <div class="project-number">
-          01
-        </div>
-
-
-        <div class="company">
-          GeoVictoria
-        </div>
-
-
-        <div class="project-meta">
-
-          Product Manager<br>
-
-          Workforce Management<br>
-
-          2026 — Present
-
-        </div>
-
-
-        <div class="project-view">
-          View
-        </div>
-
-
-      </a>
-
-
-
-      <!-- LOWSIGNAL -->
-
-      <a
-        class="project"
-        href="#"
-      >
-
-
-        <div class="project-number">
-          02
-        </div>
-
-
-        <div class="company">
-          lowsignal
-        </div>
-
-
-        <div class="project-meta">
-
-          Co-Founder & COO<br>
-
-          Growth Systems<br>
-
-          2025 — Present
-
-        </div>
-
-
-        <div class="project-view">
-          View
-        </div>
-
-
-      </a>
-
-
-
-      <!-- TETHERED -->
-
-      <a
-        class="project"
-        href="#"
-      >
-
-
-        <div class="project-number">
-          03
-        </div>
-
-
-        <div class="company">
-          TetherEd
-        </div>
-
-
-        <div class="project-meta">
-
-          Head of Partnerships<br>
-
-          EdTech<br>
-
-          Previous
-
-        </div>
-
-
-        <div class="project-view">
-          View
-        </div>
-
-
-      </a>
-
-
-    </div>
-
-
-  </section>
-
-
-
-  <!-- =====================================================
-       ABOUT
-  ====================================================== -->
-
-  <section
-    class="about"
-    id="about"
-  >
-
-
-    <div class="about-grid">
-
-
-      <div class="section-code">
-
-        03 / About<br>
-
-        Felipe Quiroz
+        Current role · 2026 — Present
 
       </div>
 
 
-      <div class="about-main">
+      <h1>
+
+        GeoVictoria
+
+      </h1>
 
 
-        <h2>
+      <div class="hero-role">
 
-          Business-minded.<br>
+        Product Manager · Workforce Management
 
-          Product-driven.<br>
-
-          <span>
-            Always building.
-          </span>
-
-        </h2>
+      </div>
 
 
-        <div class="about-copy">
+      <p class="hero-description">
 
-          I work across product, business, growth and operations,
-          turning ideas into products and products into real
-          business opportunities.
+        Building and developing workforce management products
+        for enterprise operations across Latin America —
+        working from early product exploration and pilots
+        through validation, iteration and commercial adoption.
 
-          <br><br>
+      </p>
 
-          My experience spans workforce management,
-          growth systems, EdTech, partnerships and
-          company building across Latin America.
 
-        </div>
+      <div class="hero-tags">
+
+
+        <span class="tag">
+
+          Product
+
+        </span>
+
+
+        <span class="tag">
+
+          SaaS
+
+        </span>
+
+
+        <span class="tag">
+
+          Workforce Management
+
+        </span>
+
+
+        <span class="tag">
+
+          LATAM
+
+        </span>
 
 
       </div>
@@ -1906,57 +1248,448 @@
 
 
 
-  <!-- =====================================================
-       NOW
-  ====================================================== -->
+  <!-- CASE -->
 
-  <section
-    class="now"
-    id="now"
-  >
+  <section class="case">
 
 
-    <div class="now-grid">
+    <div class="case-grid">
 
 
-      <div class="section-code">
+      <!-- MAIN -->
 
-        04 / Now<br>
-
-        Currently building
-
-      </div>
+      <main class="case-main">
 
 
-      <div class="now-content">
+        <!-- ROLE -->
+
+        <section class="case-section">
 
 
-        <h2>
+          <div class="section-label">
 
-          Building what
+            01 / Role
 
-          <span>
-            comes next.
-          </span>
-
-        </h2>
+          </div>
 
 
-        <div class="now-items">
+          <h2>
+
+            Product from validation
+            to execution.
+
+          </h2>
 
 
-          <div class="now-item">
+          <p>
 
+            My work at GeoVictoria focuses on building and
+            developing new workforce management products,
+            translating business needs and operational
+            challenges into products that can be tested,
+            validated and scaled.
+
+          </p>
+
+
+          <p>
+
+            The role combines product strategy, customer
+            discovery, pilot management, commercial context
+            and close collaboration with technology,
+            sales and customer-facing teams.
+
+          </p>
+
+
+        </section>
+
+
+
+        <!-- INITIATIVES -->
+
+        <section class="case-section">
+
+
+          <div class="section-label">
+
+            02 / Selected initiatives
+
+          </div>
+
+
+          <h2>
+
+            Products I'm working on.
+
+          </h2>
+
+
+          <div class="initiatives">
+
+
+            <div class="initiative">
+
+
+              <div class="initiative-number">
+
+                01
+
+              </div>
+
+
+              <div class="initiative-name">
+
+                Smart Scheduler
+
+              </div>
+
+
+              <div class="initiative-type">
+
+                Planning
+
+              </div>
+
+
+            </div>
+
+
+
+            <div class="initiative">
+
+
+              <div class="initiative-number">
+
+                02
+
+              </div>
+
+
+              <div class="initiative-name">
+
+                Shift Optimizer
+
+              </div>
+
+
+              <div class="initiative-type">
+
+                Optimization
+
+              </div>
+
+
+            </div>
+
+
+
+            <div class="initiative">
+
+
+              <div class="initiative-number">
+
+                03
+
+              </div>
+
+
+              <div class="initiative-name">
+
+                Shift Change Workflow
+
+              </div>
+
+
+              <div class="initiative-type">
+
+                Workflow
+
+              </div>
+
+
+            </div>
+
+
+          </div>
+
+
+        </section>
+
+
+
+        <!-- HOW -->
+
+        <section class="case-section">
+
+
+          <div class="section-label">
+
+            03 / How I work
+
+          </div>
+
+
+          <h2>
+
+            Product in the real world.
+
+          </h2>
+
+
+          <p>
+
+            The focus is not only on defining features,
+            but on understanding whether a product actually
+            solves a meaningful operational problem.
+
+          </p>
+
+
+          <ul class="clean-list">
+
+
+            <li>
+
+              Customer discovery and validation with
+              enterprise teams.
+
+            </li>
+
+
+            <li>
+
+              Pilot design and product feedback cycles.
+
+            </li>
+
+
+            <li>
+
+              Product requirements and prioritization.
+
+            </li>
+
+
+            <li>
+
+              Alignment across product, development,
+              sales and customer teams.
+
+            </li>
+
+
+            <li>
+
+              Building the path from pilot to scalable
+              product adoption.
+
+            </li>
+
+
+          </ul>
+
+
+        </section>
+
+
+
+        <!-- WHY -->
+
+        <section class="case-section">
+
+
+          <div class="section-label">
+
+            04 / Context
+
+          </div>
+
+
+          <h2>
+
+            Workforce management
+            is an operating system.
+
+          </h2>
+
+
+          <p>
+
+            Scheduling, optimization and shift changes
+            may look like isolated workflows, but they sit
+            inside a much larger operational system involving
+            people, regulations, demand, staffing and
+            business constraints.
+
+          </p>
+
+
+          <p>
+
+            That complexity is what makes the category
+            interesting: good product decisions have to work
+            for the business, the operator and the people
+            actually using the system.
+
+          </p>
+
+
+        </section>
+
+
+      </main>
+
+
+
+      <!-- SIDEBAR -->
+
+      <aside class="sidebar">
+
+
+        <div class="sidebar-box">
+
+
+          <div class="sidebar-row">
+
+            <span>
+              Company
+            </span>
 
             <strong>
               GeoVictoria
             </strong>
 
+          </div>
+
+
+          <div class="sidebar-row">
+
+            <span>
+              Role
+            </span>
+
+            <strong>
+              Product Manager
+            </strong>
+
+          </div>
+
+
+          <div class="sidebar-row">
+
+            <span>
+              Category
+            </span>
+
+            <strong>
+              Workforce Management
+            </strong>
+
+          </div>
+
+
+          <div class="sidebar-row">
+
+            <span>
+              Geography
+            </span>
+
+            <strong>
+              Latin America
+            </strong>
+
+          </div>
+
+
+          <div class="sidebar-row">
+
+            <span>
+              Period
+            </span>
+
+            <strong>
+              2026 — Present
+            </strong>
+
+          </div>
+
+
+          <div class="sidebar-row">
+
+            <span>
+              Focus
+            </span>
+
+            <strong>
+              New products<br>
+              Pilots<br>
+              Product validation<br>
+              Enterprise SaaS
+            </strong>
+
+          </div>
+
+
+        </div>
+
+
+      </aside>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- CURRENT FOCUS -->
+
+  <section class="focus">
+
+
+    <div class="focus-grid">
+
+
+      <div class="section-label">
+
+        05 / Focus
+
+      </div>
+
+
+      <div>
+
+
+        <h2 class="focus-title">
+
+          From product idea
+
+          <span>
+            to real adoption.
+          </span>
+
+        </h2>
+
+
+        <div class="focus-items">
+
+
+          <div class="focus-item">
+
+
+            <strong>
+
+              Discover
+
+            </strong>
+
 
             <p>
 
-              Building and developing workforce management
-              products for companies across Latin America.
+              Understand real customer problems,
+              operational constraints and product needs.
 
             </p>
 
@@ -1965,18 +1698,42 @@
 
 
 
-          <div class="now-item">
+          <div class="focus-item">
 
 
             <strong>
-              lowsignal
+
+              Validate
+
             </strong>
 
 
             <p>
 
-              Building growth systems, digital products
-              and new ways for companies to grow.
+              Run pilots, gather feedback and identify
+              what needs to change before scaling.
+
+            </p>
+
+
+          </div>
+
+
+
+          <div class="focus-item">
+
+
+            <strong>
+
+              Scale
+
+            </strong>
+
+
+            <p>
+
+              Turn validated workflows into products
+              that can create repeatable value.
 
             </p>
 
@@ -1997,73 +1754,30 @@
 
 
 
-  <!-- =====================================================
-       CONTACT
-  ====================================================== -->
+  <!-- NEXT -->
 
-  <section
-    class="contact"
-    id="contact"
-  >
+  <section class="next">
 
 
-    <div class="contact-grid">
-
-
-      <div class="section-code">
-
-        05 / Contact<br>
-
-        Santiago, Chile
-
-      </div>
-
+    <a
+      class="next-link"
+      href="lowsignal.html"
+    >
 
 
       <div>
 
 
-        <div class="contact-title">
+        <div class="next-small">
 
-          Let's make
-
-          <span>
-            things happen.
-          </span>
+          Next / Selected Work
 
         </div>
 
 
-        <div class="contact-links">
+        <div class="next-name">
 
-
-          <a
-            class="contact-link"
-            href="https://www.linkedin.com/in/felipequirozp"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-
-
-          <a
-            class="contact-link"
-            href="https://www.instagram.com/felipe_quirozp/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram
-          </a>
-
-
-          <a
-            class="contact-link"
-            href="mailto:felipe@lowsignal.cl"
-          >
-            Email
-          </a>
-
+          lowsignal
 
         </div>
 
@@ -2071,7 +1785,14 @@
       </div>
 
 
-    </div>
+      <div class="next-action">
+
+        Next project
+
+      </div>
+
+
+    </a>
 
 
 
@@ -2079,17 +1800,23 @@
 
 
       <span>
+
         © 2026 Felipe Quiroz
+
       </span>
 
 
       <span>
+
         Product · Growth · Business
+
       </span>
 
 
       <span>
+
         Santiago / CL
+
       </span>
 
 
