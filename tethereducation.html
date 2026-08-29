@@ -14,7 +14,7 @@
 
   <meta
     name="description"
-    content="Felipe Quiroz — Head of Partnerships at TetherEd. EdTech, partnerships, education ecosystems and expansion."
+    content="Felipe Quiroz — Head of Partnerships at TetherEd. EdTech, partnerships, education access and international expansion."
   >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +38,6 @@
     ===================================================== */
 
     :root {
-
       --navy: #182536;
       --navy-deep: #0d1724;
 
@@ -57,7 +56,6 @@
       --muted: #66717d;
 
       --line: #d4d9de;
-
     }
 
 
@@ -106,7 +104,6 @@
     ===================================================== */
 
     .nav {
-
       min-height: 84px;
 
       padding: 0 5vw;
@@ -122,12 +119,9 @@
 
       border-bottom:
         1px solid rgba(255,255,255,.12);
-
     }
 
-
     .brand {
-
       flex-shrink: 0;
 
       font-family: "Manrope", sans-serif;
@@ -136,12 +130,9 @@
       font-weight: 600;
 
       letter-spacing: -.04em;
-
     }
 
-
     .nav-links {
-
       display: flex;
       align-items: center;
 
@@ -153,24 +144,17 @@
       letter-spacing: .07em;
 
       text-transform: uppercase;
-
     }
 
-
     .nav-links > a:not(.contact-nav) {
-
       position: relative;
 
       color: var(--slate-light);
 
-      transition:
-        color .2s ease;
-
+      transition: color .2s ease;
     }
 
-
     .nav-links > a:not(.contact-nav)::after {
-
       content: "";
 
       position: absolute;
@@ -183,26 +167,19 @@
 
       background: white;
 
-      transition:
-        width .22s ease;
-
+      transition: width .22s ease;
     }
-
 
     .nav-links > a:not(.contact-nav):hover {
       color: white;
     }
 
-
     .nav-links > a:not(.contact-nav):hover::after {
       width: 100%;
     }
 
-
     .contact-nav {
-
-      padding:
-        9px 15px;
+      padding: 9px 15px;
 
       border:
         1px solid rgba(255,255,255,.28);
@@ -215,18 +192,14 @@
         background .2s ease,
         color .2s ease,
         border-color .2s ease;
-
     }
 
-
     .contact-nav:hover {
-
       background: white;
 
       color: var(--navy);
 
       border-color: white;
-
     }
 
 
@@ -235,7 +208,6 @@
     ===================================================== */
 
     .hero {
-
       min-height:
         calc(100vh - 84px);
 
@@ -245,7 +217,6 @@
         44% 56%;
 
       background: var(--ice);
-
     }
 
 
@@ -254,7 +225,6 @@
     ===================================================== */
 
     .hero-visual {
-
       position: relative;
 
       min-height: 700px;
@@ -262,7 +232,7 @@
       overflow: hidden;
 
       padding:
-        58px 5vw 52px;
+        52px 5vw 48px;
 
       background: var(--steel);
 
@@ -270,12 +240,9 @@
 
       display: flex;
       flex-direction: column;
-
     }
 
-
     .hero-visual::before {
-
       content: "";
 
       position: absolute;
@@ -283,12 +250,10 @@
       inset: 0;
 
       background-image:
-
         linear-gradient(
           rgba(255,255,255,.055) 1px,
           transparent 1px
         ),
-
         linear-gradient(
           90deg,
           rgba(255,255,255,.055) 1px,
@@ -299,28 +264,21 @@
         160px 160px;
 
       pointer-events: none;
-
     }
 
-
     .visual-top {
-
       position: relative;
 
       z-index: 2;
 
       display: flex;
-
       align-items: center;
       justify-content: space-between;
 
       gap: 20px;
-
     }
 
-
     .visual-label {
-
       color: var(--slate-light);
 
       font-size: 10px;
@@ -329,12 +287,9 @@
       letter-spacing: .1em;
 
       text-transform: uppercase;
-
     }
 
-
     .visual-code {
-
       color:
         rgba(255,255,255,.40);
 
@@ -344,7 +299,6 @@
       letter-spacing: .08em;
 
       text-transform: uppercase;
-
     }
 
 
@@ -353,28 +307,24 @@
     ===================================================== */
 
     .network {
-
       position: relative;
 
       z-index: 2;
 
       margin:
-        50px 0 45px;
+        38px 0 32px;
 
       padding:
-        28px 0;
+        22px 0;
 
       border-top:
         1px solid rgba(255,255,255,.13);
 
       border-bottom:
         1px solid rgba(255,255,255,.13);
-
     }
 
-
     .network-row {
-
       display: grid;
 
       grid-template-columns:
@@ -383,21 +333,16 @@
       align-items: center;
 
       gap: 8px;
-
     }
 
-
     .network-node {
-
-      min-height: 90px;
+      min-height: 76px;
 
       padding:
-        16px 14px;
+        14px 14px;
 
       display: flex;
-
       flex-direction: column;
-
       justify-content: space-between;
 
       border:
@@ -407,12 +352,9 @@
 
       background:
         rgba(255,255,255,.035);
-
     }
 
-
     .network-node span {
-
       color:
         rgba(255,255,255,.45);
 
@@ -422,35 +364,26 @@
       letter-spacing: .08em;
 
       text-transform: uppercase;
-
     }
 
-
     .network-node strong {
-
       font-size: 12px;
       font-weight: 500;
 
       color: white;
-
     }
 
-
     .network-line {
-
       position: relative;
 
       height: 1px;
 
       background:
         rgba(255,255,255,.23);
-
     }
-
 
     .network-line::before,
     .network-line::after {
-
       content: "";
 
       position: absolute;
@@ -464,22 +397,17 @@
 
       background:
         rgba(255,255,255,.45);
-
     }
-
 
     .network-line::before {
       left: 0;
     }
 
-
     .network-line::after {
       right: 0;
     }
 
-
     .network-meta {
-
       display: grid;
 
       grid-template-columns:
@@ -487,14 +415,11 @@
 
       gap: 10px;
 
-      margin-top: 18px;
-
+      margin-top: 16px;
     }
 
-
     .network-meta-item {
-
-      padding-top: 11px;
+      padding-top: 10px;
 
       border-top:
         1px solid rgba(255,255,255,.08);
@@ -504,12 +429,11 @@
 
       font-size: 8px;
 
-      line-height: 1.6;
+      line-height: 1.55;
 
       letter-spacing: .05em;
 
       text-transform: uppercase;
-
     }
 
 
@@ -518,18 +442,14 @@
     ===================================================== */
 
     .visual-title {
-
       position: relative;
 
       z-index: 2;
 
       margin-top: auto;
-
     }
 
-
     .visual-title span {
-
       display: block;
 
       margin-bottom: 14px;
@@ -543,27 +463,23 @@
       letter-spacing: .1em;
 
       text-transform: uppercase;
-
     }
 
-
     .visual-title strong {
-
       display: block;
 
-      max-width: 560px;
+      max-width: 620px;
 
       font-family: "Manrope", sans-serif;
 
       font-size:
-        clamp(43px, 4.3vw, 68px);
+        clamp(36px, 3.15vw, 50px);
 
       line-height: 1.08;
 
       letter-spacing: -.052em;
 
       font-weight: 500;
-
     }
 
 
@@ -572,16 +488,13 @@
     ===================================================== */
 
     .hero-content {
-
       padding:
         65px 7vw 65px 5vw;
 
       display: flex;
-
       flex-direction: column;
 
       justify-content: center;
-
     }
 
 
@@ -593,9 +506,7 @@
       margin-bottom: 32px;
     }
 
-
     .company-logo-box {
-
       display: inline-flex;
 
       align-items: center;
@@ -615,16 +526,25 @@
         0 10px 30px
         rgba(24,37,54,.10);
 
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
     }
 
+    .company-logo-box:hover {
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 14px 36px
+        rgba(24,37,54,.16);
+    }
 
     .company-logo-box img {
-
       width: 150px;
       height: 38px;
 
       object-fit: contain;
-
     }
 
 
@@ -633,7 +553,6 @@
     ===================================================== */
 
     .hero-breadcrumb {
-
       margin-bottom: 15px;
 
       color: var(--muted);
@@ -644,12 +563,9 @@
       letter-spacing: .1em;
 
       text-transform: uppercase;
-
     }
 
-
     .kicker {
-
       margin-bottom: 24px;
 
       color: var(--steel-light);
@@ -660,12 +576,9 @@
       letter-spacing: .11em;
 
       text-transform: uppercase;
-
     }
 
-
     .hero-content h1 {
-
       margin: 0;
 
       font-family: "Manrope", sans-serif;
@@ -680,12 +593,9 @@
       font-weight: 500;
 
       color: var(--navy);
-
     }
 
-
     .hero-role {
-
       margin-top: 25px;
 
       color: #576473;
@@ -693,12 +603,9 @@
       font-size: 16px;
 
       line-height: 1.55;
-
     }
 
-
     .hero-description {
-
       margin-top: 40px;
 
       max-width: 690px;
@@ -708,12 +615,9 @@
       font-size: 15px;
 
       line-height: 1.85;
-
     }
 
-
     .hero-tags {
-
       display: flex;
 
       flex-wrap: wrap;
@@ -721,12 +625,9 @@
       gap: 9px;
 
       margin-top: 36px;
-
     }
 
-
     .tag {
-
       padding:
         9px 13px;
 
@@ -746,7 +647,6 @@
       letter-spacing: .05em;
 
       text-transform: uppercase;
-
     }
 
 
@@ -755,17 +655,13 @@
     ===================================================== */
 
     .case {
-
       padding:
         125px 7vw 145px;
 
       background: var(--paper);
-
     }
 
-
     .case-grid {
-
       display: grid;
 
       grid-template-columns:
@@ -776,22 +672,17 @@
       max-width: 1400px;
 
       margin: 0 auto;
-
     }
-
 
     .case-main {
       max-width: 850px;
     }
 
-
     .case-section {
       margin-bottom: 95px;
     }
 
-
     .section-label {
-
       margin-bottom: 20px;
 
       color: var(--muted);
@@ -802,12 +693,9 @@
       letter-spacing: .1em;
 
       text-transform: uppercase;
-
     }
 
-
     .case-section h2 {
-
       margin:
         0 0 30px;
 
@@ -821,12 +709,9 @@
       letter-spacing: -.045em;
 
       font-weight: 500;
-
     }
 
-
     .case-section p {
-
       margin:
         0 0 22px;
 
@@ -835,7 +720,6 @@
       font-size: 15px;
 
       line-height: 1.85;
-
     }
 
 
@@ -844,7 +728,6 @@
     ===================================================== */
 
     .metrics {
-
       display: grid;
 
       grid-template-columns:
@@ -859,30 +742,21 @@
 
       border-bottom:
         1px solid var(--line);
-
     }
-
 
     .metric {
-
       padding:
         28px 25px 28px 0;
-
     }
 
-
     .metric + .metric {
-
       padding-left: 25px;
 
       border-left:
         1px solid var(--line);
-
     }
 
-
     .metric strong {
-
       display: block;
 
       margin-bottom: 9px;
@@ -899,12 +773,9 @@
       font-weight: 500;
 
       color: var(--navy);
-
     }
 
-
     .metric span {
-
       color: var(--muted);
 
       font-size: 10px;
@@ -914,7 +785,81 @@
       text-transform: uppercase;
 
       letter-spacing: .05em;
+    }
 
+
+    /* =====================================================
+       PRODUCT CAPABILITIES
+    ===================================================== */
+
+    .product-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      margin-top: 38px;
+
+      border-top:
+        1px solid var(--line);
+    }
+
+    .product-item {
+      min-height: 145px;
+
+      padding:
+        26px 28px 26px 0;
+
+      border-bottom:
+        1px solid var(--line);
+    }
+
+    .product-item:nth-child(odd) {
+      border-right:
+        1px solid var(--line);
+
+      padding-right: 34px;
+    }
+
+    .product-item:nth-child(even) {
+      padding-left: 34px;
+    }
+
+    .product-number {
+      margin-bottom: 18px;
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      letter-spacing: .08em;
+
+      text-transform: uppercase;
+    }
+
+    .product-item strong {
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 19px;
+      font-weight: 500;
+
+      letter-spacing: -.025em;
+
+      color: var(--navy);
+    }
+
+    .product-item p {
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.65;
     }
 
 
@@ -923,17 +868,13 @@
     ===================================================== */
 
     .projects {
-
       margin-top: 38px;
 
       border-top:
         1px solid var(--line);
-
     }
 
-
     .project {
-
       padding:
         25px 0;
 
@@ -950,45 +891,33 @@
         1px solid var(--line);
 
       transition:
-        padding .2s ease,
-        background .2s ease;
-
+        padding .22s ease,
+        background .22s ease;
     }
 
-
     .project:hover {
-
       padding-left: 14px;
       padding-right: 14px;
 
       background: var(--ice);
-
     }
 
-
     .project-number {
-
       color: var(--muted);
 
       font-size: 10px;
-
     }
 
-
     .project-name {
-
       font-family: "Manrope", sans-serif;
 
       font-size: 20px;
       font-weight: 500;
 
       letter-spacing: -.025em;
-
     }
 
-
     .project-type {
-
       color: var(--muted);
 
       font-size: 9px;
@@ -997,6 +926,7 @@
 
       text-transform: uppercase;
 
+      white-space: nowrap;
     }
 
 
@@ -1005,7 +935,6 @@
     ===================================================== */
 
     .clean-list {
-
       margin:
         28px 0 0;
 
@@ -1015,12 +944,9 @@
 
       border-top:
         1px solid var(--line);
-
     }
 
-
     .clean-list li {
-
       padding:
         18px 0;
 
@@ -1039,16 +965,12 @@
       font-size: 14px;
 
       line-height: 1.7;
-
     }
 
-
     .clean-list li::before {
-
       content: "•";
 
       color: var(--steel-light);
-
     }
 
 
@@ -1057,18 +979,14 @@
     ===================================================== */
 
     .sidebar {
-
       position: sticky;
 
       top: 110px;
 
       align-self: start;
-
     }
 
-
     .sidebar-box {
-
       padding:
         28px 26px;
 
@@ -1078,34 +996,25 @@
         1px solid var(--line);
 
       border-radius: 22px;
-
     }
 
-
     .sidebar-row {
-
       padding-bottom: 20px;
 
       margin-bottom: 20px;
 
       border-bottom:
         1px solid rgba(24,37,54,.10);
-
     }
 
-
     .sidebar-row:last-child {
-
       margin-bottom: 0;
       padding-bottom: 0;
 
       border-bottom: 0;
-
     }
 
-
     .sidebar-row span {
-
       display: block;
 
       margin-bottom: 7px;
@@ -1118,12 +1027,9 @@
       letter-spacing: .08em;
 
       text-transform: uppercase;
-
     }
 
-
     .sidebar-row strong {
-
       color: var(--navy);
 
       font-size: 13px;
@@ -1131,7 +1037,25 @@
       line-height: 1.55;
 
       font-weight: 500;
+    }
 
+    .company-website {
+      display: inline-block;
+
+      padding-bottom: 2px;
+
+      border-bottom:
+        1px solid rgba(24,37,54,.25);
+
+      transition:
+        opacity .2s ease,
+        border-color .2s ease;
+    }
+
+    .company-website:hover {
+      opacity: .55;
+
+      border-color: transparent;
     }
 
 
@@ -1140,19 +1064,15 @@
     ===================================================== */
 
     .focus {
-
       padding:
         125px 7vw;
 
       background: var(--navy);
 
       color: white;
-
     }
 
-
     .focus-grid {
-
       display: grid;
 
       grid-template-columns:
@@ -1163,17 +1083,13 @@
       max-width: 1400px;
 
       margin: 0 auto;
-
     }
-
 
     .focus .section-label {
       color: var(--slate);
     }
 
-
     .focus-title {
-
       margin: 0;
 
       font-family: "Manrope", sans-serif;
@@ -1186,23 +1102,17 @@
       letter-spacing: -.065em;
 
       font-weight: 500;
-
     }
 
-
     .focus-title span {
-
       display: block;
 
       margin-top: 10px;
 
       color: var(--slate);
-
     }
 
-
     .focus-items {
-
       margin-top: 75px;
 
       display: grid;
@@ -1211,34 +1121,25 @@
         repeat(3, 1fr);
 
       gap: 28px;
-
     }
 
-
     .focus-item {
-
       padding-top: 22px;
 
       border-top:
         1px solid rgba(255,255,255,.20);
-
     }
 
-
     .focus-item strong {
-
       display: block;
 
       margin-bottom: 12px;
 
       font-size: 15px;
       font-weight: 500;
-
     }
 
-
     .focus-item p {
-
       margin: 0;
 
       color: #bbc5d0;
@@ -1246,7 +1147,6 @@
       font-size: 13px;
 
       line-height: 1.7;
-
     }
 
 
@@ -1255,17 +1155,13 @@
     ===================================================== */
 
     .project-nav {
-
       padding:
         110px 7vw 45px;
 
       background: var(--ice);
-
     }
 
-
     .project-nav-grid {
-
       display: grid;
 
       grid-template-columns:
@@ -1278,39 +1174,27 @@
 
       border-bottom:
         1px solid var(--line);
-
     }
-
 
     .project-link {
-
       padding:
         42px 0 46px;
-
     }
 
-
     .project-link:first-child {
-
       padding-right: 50px;
 
       border-right:
         1px solid var(--line);
-
     }
 
-
     .project-link:last-child {
-
       padding-left: 10px;
 
       text-align: right;
-
     }
 
-
     .project-small {
-
       color: var(--muted);
 
       font-size: 9px;
@@ -1318,12 +1202,9 @@
       letter-spacing: .08em;
 
       text-transform: uppercase;
-
     }
 
-
     .project-link-name {
-
       margin-top: 16px;
 
       font-family: "Manrope", sans-serif;
@@ -1336,7 +1217,6 @@
       letter-spacing: -.055em;
 
       font-weight: 500;
-
     }
 
 
@@ -1345,7 +1225,6 @@
     ===================================================== */
 
     .footer {
-
       padding-top: 32px;
 
       display: grid;
@@ -1363,28 +1242,21 @@
       letter-spacing: .07em;
 
       text-transform: uppercase;
-
     }
-
 
     .footer-location {
       text-align: right;
     }
 
-
     .footer-socials {
-
       display: flex;
 
       align-items: center;
 
       gap: 10px;
-
     }
 
-
     .social-icon {
-
       width: 36px;
       height: 36px;
 
@@ -1405,12 +1277,9 @@
         color .2s ease,
         transform .2s ease,
         border-color .2s ease;
-
     }
 
-
     .social-icon svg {
-
       width: 15px;
       height: 15px;
 
@@ -1422,20 +1291,14 @@
 
       stroke-linecap: round;
       stroke-linejoin: round;
-
     }
-
 
     .social-icon svg .filled {
-
       fill: currentColor;
       stroke: none;
-
     }
 
-
     .linkedin-mark {
-
       font-family: "Inter", sans-serif;
 
       font-size: 14px;
@@ -1446,12 +1309,9 @@
       letter-spacing: -.06em;
 
       text-transform: lowercase;
-
     }
 
-
     .social-icon:hover {
-
       background: var(--navy);
 
       color: white;
@@ -1460,7 +1320,6 @@
 
       transform:
         translateY(-2px);
-
     }
 
 
@@ -1471,28 +1330,21 @@
     @media(max-width: 900px) {
 
       .nav {
-
         min-height: 78px;
 
         padding:
           16px 20px;
 
         gap: 16px;
-
       }
 
-
       .brand {
-
         font-size: 15px;
 
         white-space: nowrap;
-
       }
 
-
       .nav-links {
-
         gap: 14px;
 
         font-size: 9px;
@@ -1500,96 +1352,66 @@
         letter-spacing: .04em;
 
         white-space: nowrap;
-
       }
-
 
       .contact-nav {
-
         padding:
           8px 11px;
-
       }
-
 
       .hero {
-
         grid-template-columns:
           1fr;
-
       }
 
-
       .hero-visual {
-
         min-height: 570px;
 
         padding:
           48px 22px;
-
       }
-
 
       .hero-content {
-
         padding:
           65px 22px;
-
       }
-
 
       .case,
       .focus,
       .project-nav {
-
         padding-left: 22px;
         padding-right: 22px;
-
       }
-
 
       .case-grid {
-
         grid-template-columns:
           1fr;
-
       }
-
 
       .sidebar {
         position: static;
       }
 
-
       .focus-grid {
-
         grid-template-columns:
           1fr;
 
         gap: 35px;
-
       }
-
 
       .focus-items {
-
         grid-template-columns:
           1fr;
-
       }
 
-
       .footer {
-
         grid-template-columns:
           1fr;
 
         gap: 22px;
 
         align-items: flex-start;
-
       }
-
 
       .footer-location {
         text-align: left;
@@ -1605,7 +1427,6 @@
     @media(max-width: 600px) {
 
       .nav {
-
         flex-direction: column;
 
         align-items: flex-start;
@@ -1614,161 +1435,144 @@
 
         padding:
           18px 20px;
-
       }
 
-
       .nav-links {
-
         width: 100%;
 
         justify-content: space-between;
 
         gap: 8px;
-
       }
-
 
       .contact-nav {
-
         padding:
           7px 10px;
-
       }
-
 
       .visual-code {
         display: none;
       }
 
-
       .hero-visual {
-
-        min-height: 570px;
-
+        min-height: 540px;
       }
 
+      .network {
+        margin:
+          32px 0 28px;
+      }
 
       .network-row {
-
         grid-template-columns:
           1fr 18px 1fr 18px 1fr;
-
       }
-
 
       .network-node {
-
-        min-height: 78px;
+        min-height: 72px;
 
         padding:
-          12px 8px;
-
+          11px 8px;
       }
-
 
       .network-node strong {
-
         font-size: 10px;
-
       }
 
-
       .network-meta {
-
         grid-template-columns:
           1fr;
 
         gap: 6px;
-
       }
-
 
       .visual-title strong {
-
         font-size:
-          clamp(42px, 12vw, 60px);
+          clamp(34px, 10vw, 46px);
 
+        line-height: 1.09;
       }
-
 
       .hero-content h1 {
-
         font-size:
           clamp(54px, 16vw, 80px);
-
       }
-
 
       .metrics {
-
         grid-template-columns:
           1fr;
-
       }
-
 
       .metric {
-
         padding:
           24px 0;
-
       }
 
-
       .metric + .metric {
-
         padding-left: 0;
 
         border-left: 0;
 
         border-top:
           1px solid var(--line);
-
       }
 
+      .product-grid {
+        grid-template-columns:
+          1fr;
+      }
+
+      .product-item,
+      .product-item:nth-child(odd),
+      .product-item:nth-child(even) {
+        padding:
+          24px 0;
+
+        border-right: 0;
+      }
 
       .project {
-
         grid-template-columns:
-          40px 1fr;
+          35px 1fr;
 
+        gap: 12px;
       }
-
 
       .project-type {
-        display: none;
+        grid-column: 2;
+
+        white-space: normal;
+
+        line-height: 1.5;
       }
 
+      .project:hover {
+        padding-left: 0;
+        padding-right: 0;
+
+        background: transparent;
+      }
 
       .project-nav-grid {
-
         grid-template-columns:
           1fr;
 
         gap: 0;
-
       }
 
-
       .project-link:first-child {
-
         border-right: 0;
 
         border-bottom:
           1px solid var(--line);
 
         padding-right: 0;
-
       }
 
-
       .project-link:last-child {
-
         padding-left: 0;
 
         text-align: left;
-
       }
 
     }
@@ -1962,14 +1766,20 @@
 
       <div class="company-logo">
 
-        <div class="company-logo-box">
+        <a
+          class="company-logo-box"
+          href="https://tether.education/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit TetherEd website"
+        >
 
           <img
             src="tethered-logo.svg"
             alt="TetherEd logo"
           >
 
-        </div>
+        </a>
 
       </div>
 
@@ -1997,10 +1807,10 @@
 
       <p class="hero-description">
 
-        Building partnerships and education ecosystems
-        across multiple markets — connecting schools,
-        public institutions and communities through
-        technology and simpler access to education options.
+        Building partnerships around user-centered
+        education products — connecting schools,
+        public institutions and communities across
+        multiple markets.
 
       </p>
 
@@ -2057,27 +1867,28 @@
 
 
           <h2>
-            Partnerships as a
-            growth infrastructure.
+            Partnerships around
+            a complex product problem.
           </h2>
 
 
           <p>
 
-            As Head of Partnerships, my work focused on
-            creating relationships with schools, education
-            organizations and public institutions that could
-            expand the reach and adoption of TetherEd.
+            TetherEd builds user-centered guidance products
+            for school choice and admissions — helping
+            families navigate complex education systems
+            and make better-informed decisions.
 
           </p>
 
 
           <p>
 
-            The role combined business development,
-            institutional partnerships, market expansion
-            and the coordination required to turn
-            partnerships into real education access.
+            As Head of Partnerships, my role was to connect
+            that product with education systems, public
+            institutions and partners across different
+            markets, turning institutional relationships
+            into real deployments and adoption.
 
           </p>
 
@@ -2164,19 +1975,142 @@
 
 
 
+        <!-- PRODUCT -->
+
+        <section class="case-section">
+
+
+          <div class="section-label">
+            03 / Product
+          </div>
+
+
+          <h2>
+            Making complex education
+            systems easier to navigate.
+          </h2>
+
+
+          <p>
+
+            TetherEd combines product, data and research
+            to simplify school choice and admissions —
+            translating complex rules and allocation
+            systems into clearer experiences for families
+            and communities.
+
+          </p>
+
+
+          <p>
+
+            The product approach is designed not only
+            around usability, but also around measurement
+            and continuous learning — helping partners
+            understand what works in practice.
+
+          </p>
+
+
+
+          <div class="product-grid">
+
+
+            <div class="product-item">
+
+              <div class="product-number">
+                01 / Guidance
+              </div>
+
+              <strong>
+                Interactive guidance
+              </strong>
+
+              <p>
+                Clear, mobile-friendly experiences
+                explaining rules, processes and choices.
+              </p>
+
+            </div>
+
+
+
+            <div class="product-item">
+
+              <div class="product-number">
+                02 / Discovery
+              </div>
+
+              <strong>
+                Guided search
+              </strong>
+
+              <p>
+                Helping families explore education options
+                based on their preferences and constraints.
+              </p>
+
+            </div>
+
+
+
+            <div class="product-item">
+
+              <div class="product-number">
+                03 / Decision Support
+              </div>
+
+              <strong>
+                Better decisions
+              </strong>
+
+              <p>
+                Making complex information more
+                interpretable and useful for users.
+              </p>
+
+            </div>
+
+
+
+            <div class="product-item">
+
+              <div class="product-number">
+                04 / Measurement
+              </div>
+
+              <strong>
+                Built to learn
+              </strong>
+
+              <p>
+                Deployments structured for evaluation,
+                iteration and continuous improvement.
+              </p>
+
+            </div>
+
+
+          </div>
+
+
+        </section>
+
+
+
         <!-- SELECTED PROJECTS -->
 
         <section class="case-section">
 
 
           <div class="section-label">
-            03 / Selected projects
+            04 / Selected projects
           </div>
 
 
           <h2>
-            Partnerships with
-            real-world reach.
+            Partnerships
+            across markets.
           </h2>
 
 
@@ -2194,10 +2128,11 @@
               </div>
 
               <div class="project-type">
-                Public Education
+                Chile · Public Education
               </div>
 
             </div>
+
 
 
             <div class="project">
@@ -2211,10 +2146,11 @@
               </div>
 
               <div class="project-type">
-                Municipal Education
+                Chile · Municipal Education
               </div>
 
             </div>
+
 
 
             <div class="project">
@@ -2228,10 +2164,51 @@
               </div>
 
               <div class="project-type">
-                Early Education
+                Chile · Early Education
               </div>
 
             </div>
+
+
+
+            <div class="project">
+
+              <div class="project-number">
+                04
+              </div>
+
+              <div class="project-name">
+                Mentu
+              </div>
+
+              <div class="project-type">
+                Colombia · Partnership
+              </div>
+
+            </div>
+
+
+
+            <a
+              class="project"
+              href="https://www.nhps.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <div class="project-number">
+                05
+              </div>
+
+              <div class="project-name">
+                New Haven Public Schools
+              </div>
+
+              <div class="project-type">
+                United States · Public Education
+              </div>
+
+            </a>
 
 
           </div>
@@ -2241,13 +2218,13 @@
 
 
 
-        <!-- HOW -->
+        <!-- HOW I WORKED -->
 
         <section class="case-section">
 
 
           <div class="section-label">
-            04 / How I worked
+            05 / How I worked
           </div>
 
 
@@ -2261,7 +2238,7 @@
 
             The work was not only about opening doors.
             A partnership had to translate into activation,
-            onboarding and meaningful use of the platform.
+            onboarding and meaningful use of the product.
 
           </p>
 
@@ -2285,7 +2262,7 @@
             </li>
 
             <li>
-              Connecting commercial opportunities with product adoption.
+              Connecting partnership opportunities with product adoption.
             </li>
 
           </ul>
@@ -2321,6 +2298,30 @@
           </div>
 
 
+
+          <div class="sidebar-row">
+
+            <span>
+              Website
+            </span>
+
+            <strong>
+
+              <a
+                href="https://tether.education/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="company-website"
+              >
+                tether.education
+              </a>
+
+            </strong>
+
+          </div>
+
+
+
           <div class="sidebar-row">
 
             <span>
@@ -2332,6 +2333,7 @@
             </strong>
 
           </div>
+
 
 
           <div class="sidebar-row">
@@ -2347,6 +2349,7 @@
           </div>
 
 
+
           <div class="sidebar-row">
 
             <span>
@@ -2354,6 +2357,7 @@
             </span>
 
             <strong>
+
               Chile<br>
               Colombia<br>
               Peru<br>
@@ -2361,9 +2365,11 @@
               United States<br>
               Denmark<br>
               Spain
+
             </strong>
 
           </div>
+
 
 
           <div class="sidebar-row">
@@ -2379,6 +2385,7 @@
           </div>
 
 
+
           <div class="sidebar-row">
 
             <span>
@@ -2386,10 +2393,12 @@
             </span>
 
             <strong>
+
               Partnerships<br>
               Expansion<br>
               Public sector<br>
               Education access
+
             </strong>
 
           </div>
@@ -2419,7 +2428,7 @@
 
 
       <div class="section-label">
-        05 / Focus
+        06 / Focus
       </div>
 
 
@@ -2449,28 +2458,30 @@
 
             <p>
 
-              Build relationships between schools,
-              institutions and the communities they serve.
+              Build relationships between education
+              institutions, partners and communities.
 
             </p>
 
           </div>
+
 
 
           <div class="focus-item">
 
             <strong>
-              Expand
+              Deploy
             </strong>
 
             <p>
 
-              Open new markets and create partnerships
-              that extend the reach of the platform.
+              Turn partnerships into real product
+              implementations and adoption.
 
             </p>
 
           </div>
+
 
 
           <div class="focus-item">
@@ -2481,8 +2492,8 @@
 
             <p>
 
-              Turn partnerships into repeatable
-              adoption and lasting education access.
+              Extend access across markets through
+              repeatable institutional partnerships.
 
             </p>
 
