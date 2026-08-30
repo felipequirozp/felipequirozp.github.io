@@ -10,35 +10,22 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Felipe Quiroz | Producto, Growth & Negocio</title>
+  <title>Sobre mí | Felipe Quiroz</title>
 
   <meta
     name="description"
-    content="Felipe Quiroz — Product Manager, Co-Founder y operador trabajando entre producto, growth y negocio."
+    content="Sobre Felipe Quiroz — producto, growth y negocios desde Santiago, Chile."
   >
 
-  <link
-    rel="canonical"
-    href="https://felipequirozp.cl/es/"
-  >
 
-  <link
-    rel="alternate"
-    hreflang="es"
-    href="https://felipequirozp.cl/es/"
-  >
+  <!-- SEO / LANGUAGES -->
+  <link rel="canonical" href="https://felipequirozp.cl/es/about">
 
-  <link
-    rel="alternate"
-    hreflang="en"
-    href="https://felipequirozp.cl/"
-  >
+  <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/about">
 
-  <link
-    rel="alternate"
-    hreflang="x-default"
-    href="https://felipequirozp.cl/"
-  >
+  <link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/about">
+
+  <link rel="alternate" hreflang="x-default" href="https://felipequirozp.cl/about">
 
   <!-- FAVICON -->
   <link
@@ -150,7 +137,6 @@
       padding: 0 5vw;
 
       display: flex;
-
       align-items: center;
       justify-content: space-between;
 
@@ -182,7 +168,6 @@
     .nav-links {
 
       display: flex;
-
       align-items: center;
 
       gap: 30px;
@@ -197,7 +182,7 @@
     }
 
 
-    .nav-links > a:not(.contact-nav):not(.lang-switch) {
+    .nav-links > a:not(.contact-nav) {
 
       position: relative;
 
@@ -209,7 +194,7 @@
     }
 
 
-    .nav-links > a:not(.contact-nav):not(.lang-switch)::after {
+    .nav-links > a:not(.contact-nav)::after {
 
       content: "";
 
@@ -229,37 +214,74 @@
     }
 
 
-    .nav-links > a:not(.contact-nav):not(.lang-switch):hover {
+    .nav-links > a:not(.contact-nav):hover,
+    .nav-links > a.active {
 
       color: white;
 
     }
 
 
-    .nav-links > a:not(.contact-nav):not(.lang-switch):hover::after {
+    .nav-links > a:not(.contact-nav):hover::after,
+    .nav-links > a.active::after {
 
       width: 100%;
 
     }
 
 
+    .contact-nav {
+
+      padding:
+        9px 15px;
+
+      border:
+        1px solid rgba(255,255,255,.28);
+
+      border-radius: 999px;
+
+      color: white;
+
+      transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+
+    }
+
+
+    .contact-nav:hover {
+
+      background: white;
+
+      color: var(--navy);
+
+      border-color: white;
+
+    }
+
+
+    /* =====================================================
+       LANGUAGE SWITCH
+    ===================================================== */
+
     .lang-switch {
 
       width: 38px;
       height: 38px;
 
-      flex-shrink: 0;
-
       display: flex;
       align-items: center;
       justify-content: center;
+
+      flex-shrink: 0;
 
       border:
         1px solid rgba(255,255,255,.22);
 
       border-radius: 50%;
 
-      color: var(--slate-light);
+      color: var(--slate-light) !important;
 
       font-size: 9px;
       font-weight: 600;
@@ -279,7 +301,7 @@
       background:
         rgba(255,255,255,.10);
 
-      color: white;
+      color: white !important;
 
       border-color:
         rgba(255,255,255,.45);
@@ -287,33 +309,9 @@
     }
 
 
-    .contact-nav {
+    .nav-links > a.lang-switch::after {
 
-      padding:
-        9px 15px;
-
-      border:
-        1px solid rgba(255,255,255,.28);
-
-      border-radius: 18px;
-
-      color: white;
-
-      transition:
-        background .2s ease,
-        color .2s ease,
-        border-color .2s ease;
-
-    }
-
-
-    .contact-nav:hover {
-
-      background: white;
-
-      color: var(--navy);
-
-      border-color: white;
+      display: none !important;
 
     }
 
@@ -344,15 +342,12 @@
         calc(100vh - 84px);
 
       padding:
-        70px 7vw 75px;
-
-      background: var(--navy);
-
-      color: white;
+        70px 7vw 80px;
 
       display: flex;
-
       align-items: center;
+
+      background: var(--ice);
 
     }
 
@@ -367,7 +362,7 @@
       display: grid;
 
       grid-template-columns:
-        1.35fr .65fr;
+        1.3fr .7fr;
 
       gap: 7vw;
 
@@ -378,12 +373,12 @@
 
     .hero-label {
 
-      margin-bottom: 30px;
+      margin-bottom: 28px;
 
-      color: var(--slate);
+      color: var(--muted);
 
       font-size: 10px;
-      font-weight: 500;
+      font-weight: 600;
 
       letter-spacing: .1em;
 
@@ -394,20 +389,22 @@
 
     .hero h1 {
 
-      max-width: 950px;
+      max-width: 940px;
 
       margin: 0;
 
       font-family: "Manrope", sans-serif;
 
       font-size:
-        clamp(68px, 8.2vw, 132px);
+        clamp(62px, 7.4vw, 118px);
 
-      line-height: .96;
+      line-height: 1.01;
 
       letter-spacing: -.07em;
 
       font-weight: 500;
+
+      color: var(--navy);
 
     }
 
@@ -419,77 +416,7 @@
       margin:
         10px 0 12px;
 
-      color: var(--slate);
-
-    }
-
-
-    .hero-description {
-
-      max-width: 720px;
-
-      margin-top: 42px;
-
-      color: #c4ccd5;
-
-      font-size: 15px;
-
-      line-height: 1.8;
-
-    }
-
-
-    /* =====================================================
-       HERO ROLES
-    ===================================================== */
-
-    .hero-roles {
-
-      margin-top: 42px;
-
-      display: flex;
-
-      flex-direction: column;
-
-      gap: 14px;
-
-    }
-
-
-    .hero-role {
-
-      display: grid;
-
-      grid-template-columns:
-        160px 1fr;
-
-      gap: 20px;
-
-      align-items: baseline;
-
-    }
-
-
-    .hero-role span {
-
-      color: var(--slate-light);
-
-      font-size: 10px;
-      font-weight: 500;
-
-      letter-spacing: .02em;
-
-      text-transform: none;
-
-    }
-
-
-    .hero-role strong {
-
-      font-size: 13px;
-      font-weight: 500;
-
-      color: white;
+      color: var(--steel-light);
 
     }
 
@@ -513,12 +440,9 @@
 
       overflow: hidden;
 
-      border-radius: 32px;
+      border-radius: 30px;
 
-      border:
-        1px solid rgba(255,255,255,.13);
-
-      background: var(--steel);
+      background: var(--slate-light);
 
     }
 
@@ -541,15 +465,14 @@
       padding-top: 15px;
 
       display: flex;
-
       justify-content: space-between;
 
       gap: 20px;
 
       border-top:
-        1px solid rgba(255,255,255,.14);
+        1px solid var(--line);
 
-      color: var(--slate);
+      color: var(--muted);
 
       font-size: 9px;
       font-weight: 500;
@@ -562,7 +485,7 @@
 
 
     /* =====================================================
-       SHARED SECTION LABEL
+       SHARED
     ===================================================== */
 
     .section-label {
@@ -580,536 +503,10 @@
 
 
     /* =====================================================
-       SELECTED WORK
+       INTRO
     ===================================================== */
 
-    .work {
-
-      padding:
-        130px 7vw 145px;
-
-      background: var(--paper);
-
-    }
-
-
-    .section-head {
-
-      max-width: 1400px;
-
-      margin:
-        0 auto 75px;
-
-      display: grid;
-
-      grid-template-columns:
-        .7fr 2.3fr;
-
-      gap: 8vw;
-
-    }
-
-
-    .section-head h2 {
-
-      max-width: 950px;
-
-      margin: 0;
-
-      font-family: "Manrope", sans-serif;
-
-      font-size:
-        clamp(48px, 6vw, 88px);
-
-      line-height: 1.10;
-
-      letter-spacing: -.06em;
-
-      font-weight: 500;
-
-    }
-
-
-    /* =====================================================
-       PROJECTS
-    ===================================================== */
-
-    .projects {
-
-      max-width: 1400px;
-
-      margin: 0 auto;
-
-      border-top:
-        1px solid var(--line);
-
-    }
-
-
-    .project {
-
-      position: relative;
-
-      min-height: 260px;
-
-      padding:
-        42px 0;
-
-      display: grid;
-
-      grid-template-columns:
-        70px 1.25fr .85fr;
-
-      gap: 40px;
-
-      align-items: start;
-
-      border-bottom:
-        1px solid var(--line);
-
-      transition:
-        padding .25s ease,
-        background .25s ease;
-
-    }
-
-
-    .project:hover {
-
-      padding-left: 22px;
-      padding-right: 22px;
-
-      background: var(--ice);
-
-    }
-
-
-    .project-number {
-
-      padding-top: 6px;
-
-      color: var(--muted);
-
-      font-size: 10px;
-
-    }
-
-
-    .project-main h3 {
-
-      margin:
-        0 0 14px;
-
-      font-family: "Manrope", sans-serif;
-
-      font-size:
-        clamp(36px, 4.4vw, 68px);
-
-      line-height: .98;
-
-      letter-spacing: -.06em;
-
-      font-weight: 500;
-
-      color: var(--navy);
-
-    }
-
-
-    .project-main .role {
-
-      color: var(--muted);
-
-      font-size: 11px;
-
-      line-height: 1.55;
-
-    }
-
-
-    .project-side {
-
-      padding-top: 5px;
-
-      display: flex;
-
-      flex-direction: column;
-
-      justify-content: space-between;
-
-      min-height: 165px;
-
-    }
-
-
-    .project-statement {
-
-      max-width: 420px;
-
-      color: #3f4a55;
-
-      font-size: 15px;
-
-      line-height: 1.65;
-
-    }
-
-
-    .project-meta {
-
-      display: flex;
-
-      justify-content: space-between;
-
-      gap: 20px;
-
-      color: var(--muted);
-
-      font-size: 9px;
-
-      letter-spacing: .07em;
-
-      text-transform: uppercase;
-
-    }
-
-
-    /* =====================================================
-       GEOVICTORIA VISUAL
-    ===================================================== */
-
-    .project-visual {
-
-      margin-top: 32px;
-
-      max-width: 430px;
-
-      height: 38px;
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 8px;
-
-    }
-
-
-    .visual-bar {
-
-      height: 8px;
-
-      border-radius: 18px;
-
-      background: var(--slate-light);
-
-    }
-
-
-    .visual-bar.a {
-      width: 28%;
-    }
-
-
-    .visual-bar.b {
-
-      width: 48%;
-
-      background: var(--steel-light);
-
-    }
-
-
-    .visual-bar.c {
-
-      width: 18%;
-
-      background: var(--navy);
-
-    }
-
-
-    /* =====================================================
-       LOWSIGNAL VISUAL
-    ===================================================== */
-
-    .system-visual {
-
-      margin-top: 32px;
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 10px;
-
-      max-width: 430px;
-
-    }
-
-
-    .system-dot {
-
-      min-width: 62px;
-
-      padding:
-        10px 13px;
-
-      border:
-        1px solid var(--line);
-
-      border-radius: 10px;
-
-      color: var(--muted);
-
-      font-size: 8px;
-
-      text-align: center;
-
-      text-transform: uppercase;
-
-      letter-spacing: .05em;
-
-    }
-
-
-    .system-line {
-
-      flex: 1;
-
-      height: 1px;
-
-      background: var(--line);
-
-    }
-
-
-    /* =====================================================
-       TetherEd VISUAL
-    ===================================================== */
-
-    .network-visual {
-
-      margin-top: 32px;
-
-      display: grid;
-
-      grid-template-columns:
-        1fr 30px 1fr 30px 1fr;
-
-      align-items: center;
-
-      max-width: 430px;
-
-    }
-
-
-    .network-node {
-
-      height: 42px;
-
-      border:
-        1px solid var(--line);
-
-      border-radius: 10px;
-
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-
-      color: var(--muted);
-
-      font-size: 8px;
-
-      text-transform: uppercase;
-
-    }
-
-
-    .network-line {
-
-      height: 1px;
-
-      background: var(--line);
-
-    }
-
-
-
-    /* =====================================================
-       USM VISUAL
-    ===================================================== */
-
-    .usm-visual {
-      margin-top: 32px;
-      max-width: 430px;
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .usm-node {
-      min-height: 38px;
-      padding: 0 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      color: var(--steel);
-      font-size: 9px;
-      font-weight: 500;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    .usm-line {
-      width: 30px;
-      height: 1px;
-      background: var(--line);
-    }
-
-    @media(max-width: 600px) {
-      .usm-visual {
-        grid-template-columns: 1fr;
-        gap: 8px;
-        max-width: 220px;
-      }
-
-      .usm-line {
-        width: 1px;
-        height: 14px;
-        justify-self: center;
-      }
-    }
-
-
-    /* =====================================================
-       ABOUT
-    ===================================================== */
-
-    .about {
-
-      padding:
-        135px 7vw;
-
-      background: var(--ice);
-
-    }
-
-
-    .about-grid {
-
-      max-width: 1400px;
-
-      margin: 0 auto;
-
-      display: grid;
-
-      grid-template-columns:
-        .7fr 2.3fr;
-
-      gap: 8vw;
-
-    }
-
-
-    .about-content {
-
-      max-width: 950px;
-
-    }
-
-
-    .about-content h2 {
-
-      margin:
-        0 0 42px;
-
-      font-family: "Manrope", sans-serif;
-
-      font-size:
-        clamp(48px, 6.5vw, 94px);
-
-      line-height: 1.08;
-
-      letter-spacing: -.065em;
-
-      font-weight: 500;
-
-      color: var(--navy);
-
-    }
-
-
-    .about-content h2 span {
-
-      display: block;
-
-      margin:
-        16px 0 14px;
-
-      color: var(--steel-light);
-
-    }
-
-
-    .about-copy {
-
-      max-width: 680px;
-
-      margin-bottom: 36px;
-
-      color: #3f4a55;
-
-      font-size: 15px;
-
-      line-height: 1.85;
-
-    }
-
-
-    /* =====================================================
-       TEXT LINKS
-    ===================================================== */
-
-    .text-link {
-
-      display: inline-flex;
-
-      padding-bottom: 4px;
-
-      border-bottom:
-        1px solid rgba(24,37,54,.35);
-
-      color: var(--navy);
-
-      font-size: 10px;
-      font-weight: 600;
-
-      letter-spacing: .06em;
-
-      text-transform: uppercase;
-
-      transition:
-        opacity .2s ease;
-
-    }
-
-
-    .text-link:hover {
-      opacity: .55;
-    }
-
-
-    /* =====================================================
-       NOW
-    ===================================================== */
-
-    .now {
+    .intro {
 
       padding:
         130px 7vw;
@@ -1119,7 +516,7 @@
     }
 
 
-    .now-grid {
+    .intro-grid {
 
       max-width: 1400px;
 
@@ -1135,9 +532,217 @@
     }
 
 
-    .now-content h2 {
+    .intro-copy {
 
-      max-width: 800px;
+      max-width: 850px;
+
+    }
+
+
+    .intro-copy h2 {
+
+      margin:
+        0 0 38px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(40px, 5vw, 72px);
+
+      line-height: 1.08;
+
+      letter-spacing: -.055em;
+
+      font-weight: 500;
+
+    }
+
+
+    .intro-copy p {
+
+      max-width: 760px;
+
+      margin:
+        0 0 22px;
+
+      color: #39444f;
+
+      font-size: 15px;
+
+      line-height: 1.85;
+
+    }
+
+
+    /* =====================================================
+       LENSES
+    ===================================================== */
+
+    .lenses {
+
+      padding:
+        130px 7vw;
+
+      background: var(--navy);
+
+      color: white;
+
+    }
+
+
+    .lenses-inner {
+
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+    }
+
+
+    .lenses .section-label {
+
+      margin-bottom: 65px;
+
+      color: var(--slate);
+
+    }
+
+
+    .lenses-title {
+
+      max-width: 1050px;
+
+      margin:
+        0 0 85px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size:
+        clamp(48px, 7vw, 104px);
+
+      line-height: 1.05;
+
+      letter-spacing: -.065em;
+
+      font-weight: 500;
+
+    }
+
+
+    .lenses-title span {
+
+      display: block;
+
+      margin-top: 16px;
+
+      color: var(--slate);
+
+    }
+
+
+    .lens-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 35px;
+
+    }
+
+
+    .lens {
+
+      padding-top: 24px;
+
+      border-top:
+        1px solid rgba(255,255,255,.20);
+
+    }
+
+
+    .lens-number {
+
+      margin-bottom: 38px;
+
+      color: var(--slate);
+
+      font-size: 9px;
+
+      letter-spacing: .08em;
+
+    }
+
+
+    .lens h3 {
+
+      margin:
+        0 0 16px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 27px;
+      font-weight: 500;
+
+      letter-spacing: -.035em;
+
+    }
+
+
+    .lens p {
+
+      max-width: 330px;
+
+      margin: 0;
+
+      color: #bbc5d0;
+
+      font-size: 13px;
+
+      line-height: 1.75;
+
+    }
+
+
+    /* =====================================================
+       THROUGHLINE
+    ===================================================== */
+
+    .throughline {
+
+      padding:
+        135px 7vw;
+
+      background: var(--paper);
+
+    }
+
+
+    .throughline-grid {
+
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns:
+        .7fr 2.3fr;
+
+      gap: 8vw;
+
+    }
+
+
+    .throughline-content {
+
+      max-width: 900px;
+
+    }
+
+
+    .throughline-content h2 {
 
       margin:
         0 0 55px;
@@ -1145,22 +750,18 @@
       font-family: "Manrope", sans-serif;
 
       font-size:
-        clamp(44px, 5.5vw, 80px);
+        clamp(42px, 5vw, 72px);
 
-      line-height: 1.06;
+      line-height: 1.08;
 
-      letter-spacing: -.06em;
+      letter-spacing: -.055em;
 
       font-weight: 500;
 
     }
 
 
-    .now-list {
-
-      max-width: 900px;
-
-      margin-bottom: 38px;
+    .experience-list {
 
       border-top:
         1px solid var(--line);
@@ -1168,10 +769,10 @@
     }
 
 
-    .now-item {
+    .experience {
 
       padding:
-        24px 0;
+        27px 0;
 
       display: grid;
 
@@ -1185,10 +786,24 @@
       border-bottom:
         1px solid var(--line);
 
+      transition:
+        padding .2s ease,
+        background .2s ease;
+
     }
 
 
-    .now-number {
+    .experience:hover {
+
+      padding-left: 14px;
+      padding-right: 14px;
+
+      background: var(--ice);
+
+    }
+
+
+    .experience-number {
 
       color: var(--muted);
 
@@ -1197,7 +812,11 @@
     }
 
 
-    .now-item strong {
+    .experience-main strong {
+
+      display: block;
+
+      margin-bottom: 6px;
 
       font-family: "Manrope", sans-serif;
 
@@ -1211,11 +830,21 @@
     }
 
 
-    .now-item span {
+    .experience-main span {
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+    }
+
+
+    .experience-period {
 
       color: var(--muted);
 
       font-size: 9px;
+      font-weight: 500;
 
       letter-spacing: .06em;
 
@@ -1224,115 +853,115 @@
     }
 
 
-
     /* =====================================================
-       NOW / HUMAN SIGNAL
+       CURRENT
     ===================================================== */
 
-    .now-moment {
+    .current {
 
-      max-width:
-        900px;
+      padding:
+        120px 7vw;
+
+      background: var(--ice);
+
+    }
+
+
+    .current-grid {
+
+      max-width: 1400px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 70px;
+
+    }
+
+
+    .current-main h2 {
+
+      max-width: 650px;
 
       margin:
-        44px 0 30px;
+        18px 0 35px;
 
-    }
-
-
-    .now-moment-media {
-
-      width:
-        100%;
-
-      aspect-ratio:
-        16 / 8;
-
-      overflow:
-        hidden;
-
-      border-radius:
-        18px;
-
-      background:
-        var(--ice);
-
-    }
-
-
-    .now-moment-media img {
-
-      width:
-        100%;
-
-      height:
-        100%;
-
-      display:
-        block;
-
-      object-fit:
-        cover;
-
-      object-position:
-        center 48%;
-
-      transition:
-        transform .6s cubic-bezier(.2,.7,.2,1);
-
-    }
-
-
-    .now-moment-media:hover img {
-
-      transform:
-        scale(1.012);
-
-    }
-
-
-    .now-moment-caption {
-
-      margin-top:
-        11px;
-
-      display:
-        flex;
-
-      align-items:
-        baseline;
-
-      justify-content:
-        space-between;
-
-      gap:
-        18px;
-
-      color:
-        var(--navy);
+      font-family: "Manrope", sans-serif;
 
       font-size:
-        11px;
+        clamp(42px, 5.5vw, 80px);
 
-      font-weight:
-        550;
+      line-height: 1.06;
+
+      letter-spacing: -.06em;
+
+      font-weight: 500;
 
     }
 
 
-    .now-moment-caption span:last-child {
+    .current-main p {
 
-      color:
-        var(--steel-light);
+      max-width: 610px;
 
-      font-size:
-        10px;
+      margin: 0;
 
-      font-weight:
-        500;
+      color: #39444f;
 
-      text-align:
-        right;
+      font-size: 15px;
+
+      line-height: 1.85;
+
+    }
+
+
+    .current-list {
+
+      border-top:
+        1px solid var(--line);
+
+    }
+
+
+    .current-item {
+
+      padding:
+        22px 0;
+
+      display: grid;
+
+      grid-template-columns:
+        42px 1fr;
+
+      gap: 20px;
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .current-item span {
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+    }
+
+
+    .current-item strong {
+
+      color: var(--navy);
+
+      font-size: 14px;
+      font-weight: 500;
+
+      line-height: 1.55;
 
     }
 
@@ -1344,7 +973,7 @@
     .statement {
 
       padding:
-        145px 7vw;
+        140px 7vw;
 
       background: var(--navy-deep);
 
@@ -1364,7 +993,7 @@
 
     .statement .section-label {
 
-      margin-bottom: 48px;
+      margin-bottom: 45px;
 
       color: var(--slate);
 
@@ -1373,14 +1002,14 @@
 
     .statement h2 {
 
-      max-width: 1150px;
+      max-width: 1100px;
 
       margin: 0;
 
       font-family: "Manrope", sans-serif;
 
       font-size:
-        clamp(64px, 9vw, 140px);
+        clamp(62px, 9vw, 140px);
 
       line-height: 1;
 
@@ -1409,7 +1038,7 @@
     .bottom {
 
       padding:
-        90px 7vw 42px;
+        85px 7vw 42px;
 
       background: var(--ice);
 
@@ -1422,7 +1051,7 @@
 
       margin: 0 auto;
 
-      padding-bottom: 75px;
+      padding-bottom: 70px;
 
       display: flex;
 
@@ -1438,7 +1067,9 @@
 
 
     .contact-copy .section-label {
+
       margin-bottom: 18px;
+
     }
 
 
@@ -1449,7 +1080,7 @@
       font-family: "Manrope", sans-serif;
 
       font-size:
-        clamp(42px, 5.5vw, 78px);
+        clamp(40px, 5vw, 72px);
 
       line-height: 1;
 
@@ -1486,9 +1117,9 @@
       font-size: 10px;
       font-weight: 500;
 
-      letter-spacing: .05em;
-
       text-transform: uppercase;
+
+      letter-spacing: .05em;
 
       transition:
         background .2s ease,
@@ -1541,7 +1172,9 @@
 
 
     .footer-location {
+
       text-align: right;
+
     }
 
 
@@ -1714,9 +1347,10 @@
       }
 
 
-      .work,
-      .about,
-      .now,
+      .intro,
+      .lenses,
+      .throughline,
+      .current,
       .statement,
       .bottom {
 
@@ -1726,9 +1360,8 @@
       }
 
 
-      .section-head,
-      .about-grid,
-      .now-grid {
+      .intro-grid,
+      .throughline-grid {
 
         grid-template-columns:
           1fr;
@@ -1738,21 +1371,22 @@
       }
 
 
-      .project {
+      .lens-grid {
 
         grid-template-columns:
-          55px 1fr;
+          1fr;
+
+        gap: 45px;
 
       }
 
 
-      .project-side {
+      .current-grid {
 
-        grid-column: 2;
+        grid-template-columns:
+          1fr;
 
-        min-height: auto;
-
-        gap: 30px;
+        gap: 70px;
 
       }
 
@@ -1770,7 +1404,9 @@
 
 
       .footer-location {
+
         text-align: left;
+
       }
 
     }
@@ -1815,6 +1451,16 @@
       }
 
 
+      .lang-switch {
+
+        width: 34px;
+        height: 34px;
+
+        font-size: 8px;
+
+      }
+
+
       .hero {
 
         padding:
@@ -1826,9 +1472,9 @@
       .hero h1 {
 
         font-size:
-          clamp(58px, 16vw, 80px);
+          clamp(54px, 15vw, 76px);
 
-        line-height: 1;
+        line-height: 1.03;
 
       }
 
@@ -1841,34 +1487,31 @@
       }
 
 
-      .hero-description {
-        margin-top: 35px;
-      }
+      .hero-grid {
 
-
-      .hero-role {
-
-        grid-template-columns:
-          1fr;
-
-        gap: 5px;
+        gap: 50px;
 
       }
 
 
       .hero-photo-wrap {
+
         max-width: 100%;
+
       }
 
 
       .hero-photo {
+
         border-radius: 24px;
+
       }
 
 
-      .work,
-      .about,
-      .now,
+      .intro,
+      .lenses,
+      .throughline,
+      .current,
       .statement {
 
         padding-top: 95px;
@@ -1877,119 +1520,26 @@
       }
 
 
-      .section-head {
-        margin-bottom: 55px;
-      }
+      .lenses-title {
 
-
-      .section-head h2 {
-        line-height: 1.12;
-      }
-
-
-      .project {
-
-        min-height: auto;
-
-        grid-template-columns:
-          35px 1fr;
-
-        gap: 15px;
-
-        padding:
-          30px 0;
-
-      }
-
-
-      .project:hover {
-
-        padding-left: 0;
-        padding-right: 0;
-
-        background: transparent;
-
-      }
-
-
-      .project-main h3 {
-
-        font-size:
-          clamp(36px, 11vw, 52px);
-
-      }
-
-
-      .project-side {
-        grid-column: 2;
-      }
-
-
-      .project-visual,
-      .system-visual,
-      .network-visual {
-        max-width: 100%;
-      }
-
-
-      .about-content h2 {
+        margin-bottom: 60px;
 
         font-size:
           clamp(48px, 14vw, 68px);
 
-        line-height: 1.10;
+        line-height: 1.06;
 
       }
 
 
-      .about-content h2 span {
+      .lenses-title span {
 
-        margin:
-          14px 0 12px;
-
-      }
-
-
-
-      .now-moment {
-
-        margin:
-          34px 0 26px;
+        margin-top: 14px;
 
       }
 
 
-      .now-moment-media {
-
-        aspect-ratio:
-          4 / 3;
-
-        border-radius:
-          14px;
-
-      }
-
-
-      .now-moment-caption {
-
-        margin-top:
-          9px;
-
-        font-size:
-          10px;
-
-      }
-
-
-      .now-moment-caption span:last-child {
-
-        font-size:
-          9px;
-
-      }
-
-
-      .now-item {
+      .experience {
 
         grid-template-columns:
           34px 1fr;
@@ -1999,29 +1549,36 @@
       }
 
 
-      .now-item span {
+      .experience-period {
+
         grid-column: 2;
+
       }
 
+
+      .experience:hover {
+
+        padding-left: 0;
+        padding-right: 0;
+
+        background: transparent;
+
+      }
 
 
       .statement h2 {
 
-        max-width: 100%;
-
         font-size:
-          clamp(48px, 11vw, 76px);
+          clamp(58px, 18vw, 90px);
 
-        line-height: 1.04;
-
-        letter-spacing: -.055em;
+        line-height: 1;
 
       }
 
 
       .statement h2 span {
 
-        margin-top: 20px;
+        margin-top: 24px;
 
       }
 
@@ -2036,6 +1593,53 @@
 
       }
 
+    }
+
+  
+    .experience:not(a) {
+      cursor: default;
+    }
+
+  
+    /* =====================================================
+       CV DOWNLOAD
+    ===================================================== */
+
+    .cv-download {
+      margin-top: 34px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--navy);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease,
+        transform .2s ease;
+    }
+
+    .cv-download:hover {
+      background: var(--navy);
+      color: white;
+      border-color: var(--navy);
+      transform: translateY(-2px);
+    }
+
+    .cv-download svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
   </style>
@@ -2055,7 +1659,7 @@
 
 
     <a
-      href="index.html"
+      href="/es/"
       class="brand"
     >
       Felipe Quiroz
@@ -2065,17 +1669,20 @@
     <nav class="nav-links">
 
 
-      <a href="#work">
+      <a href="/es/#work">
         Trabajo
       </a>
 
 
-      <a href="about.html">
+      <a
+        href="/es/about"
+        class="active"
+      >
         Sobre mí
       </a>
 
 
-      <a href="now.html">
+      <a href="/es/now">
         Ahora
       </a>
 
@@ -2089,9 +1696,9 @@
 
 
       <a
-        href="../index.html"
+        href="/about"
         class="lang-switch"
-        aria-label="Ver sitio en inglés"
+        aria-label="View site in English"
       >
         EN
       </a>
@@ -2114,452 +1721,64 @@
     <div class="hero-grid">
 
 
-      <!-- HERO COPY -->
-
       <div>
 
 
         <div class="hero-label">
-          Felipe Quiroz / Santiago
+          Sobre mí / 01
         </div>
 
 
         <h1>
 
-          Producto,
+          Construyo donde
 
           <span>
-            growth
+            producto, growth
           </span>
 
-          y negocio.
+          y negocio se encuentran.
 
         </h1>
-
-
-        <p class="hero-description">
-
-          Construyendo productos, compañías y sistemas
-          que convierten oportunidades en realidad.
-
-        </p>
-
-
-
-        <div class="hero-roles">
-
-
-          <div class="hero-role">
-
-            <span>
-              GeoVictoria
-            </span>
-
-            <strong>
-              Product Manager · Workforce Management
-            </strong>
-
-          </div>
-
-
-
-          <div class="hero-role">
-
-            <span>
-              lowsignal
-            </span>
-
-            <strong>
-              Co-Founder & COO · Growth Systems
-            </strong>
-
-          </div>
-
-
-        </div>
 
 
       </div>
 
 
-
-      <!-- HERO PHOTO -->
 
       <div class="hero-photo-wrap">
 
 
         <div class="hero-photo">
 
+
           <img
             src="../profile.jpg"
             alt="Felipe Quiroz"
           >
+
 
         </div>
 
 
         <div class="photo-meta">
 
-          <span>
-            Producto / Growth / Negocio
-          </span>
 
           <span>
-            CL
+            Felipe Quiroz
           </span>
+
+
+          <span>
+            Santiago / CL
+          </span>
+
 
         </div>
 
 
       </div>
 
-
-    </div>
-
-
-  </section>
-
-
-
-  <!-- =====================================================
-       SELECTED WORK
-  ====================================================== -->
-
-  <section
-    class="work"
-    id="work"
-  >
-
-
-    <div class="section-head">
-
-
-      <div class="section-label">
-        01 / Trabajo seleccionado
-      </div>
-
-
-      <h2>
-        Productos, compañías
-        y sistemas que he ayudado a construir.
-      </h2>
-
-
-    </div>
-
-
-
-    <div class="projects">
-
-
-      <!-- =================================================
-           GEOVICTORIA
-      ================================================== -->
-
-      <a
-        href="geovictoria.html"
-        class="project"
-      >
-
-
-        <div class="project-number">
-          01
-        </div>
-
-
-
-        <div class="project-main">
-
-
-          <h3>
-            GeoVictoria
-          </h3>
-
-
-          <div class="role">
-            Product Manager · Workforce Management
-          </div>
-
-
-          <div class="project-visual">
-
-            <div class="visual-bar a"></div>
-
-            <div class="visual-bar b"></div>
-
-            <div class="visual-bar c"></div>
-
-          </div>
-
-
-        </div>
-
-
-
-        <div class="project-side">
-
-
-          <div class="project-statement">
-
-            Liderando productos para operaciones reales
-            de Workforce Management.
-
-          </div>
-
-
-          <div class="project-meta">
-
-            <span>
-              Producto / SaaS
-            </span>
-
-            <span>
-              2026 — Presente
-            </span>
-
-          </div>
-
-
-        </div>
-
-
-      </a>
-
-
-
-      <!-- =================================================
-           LOWSIGNAL
-      ================================================== -->
-
-      <a
-        href="lowsignal.html"
-        class="project"
-      >
-
-
-        <div class="project-number">
-          02
-        </div>
-
-
-
-        <div class="project-main">
-
-
-          <h3>
-            lowsignal
-          </h3>
-
-
-          <div class="role">
-            Co-Founder & COO · Growth Systems
-          </div>
-
-
-          <div class="system-visual">
-
-            <div class="system-dot">
-              Estrategia
-            </div>
-
-            <div class="system-line"></div>
-
-            <div class="system-dot">
-              Sistemas
-            </div>
-
-            <div class="system-line"></div>
-
-            <div class="system-dot">
-              Growth
-            </div>
-
-          </div>
-
-
-        </div>
-
-
-
-        <div class="project-side">
-
-
-          <div class="project-statement">
-
-            Construyendo Growth Systems que conectan
-            estrategia, tecnología y ejecución.
-
-          </div>
-
-
-          <div class="project-meta">
-
-            <span>
-              Growth / Company Building
-            </span>
-
-            <span>
-              2025 — Presente
-            </span>
-
-          </div>
-
-
-        </div>
-
-
-      </a>
-
-
-
-      <!-- =================================================
-           TetherEd
-      ================================================== -->
-
-      <a
-        href="tethereducation.html"
-        class="project"
-      >
-
-
-        <div class="project-number">
-          03
-        </div>
-
-
-
-        <div class="project-main">
-
-
-          <h3>
-            TetherEd
-          </h3>
-
-
-          <div class="role">
-            Head of Partnerships · EdTech
-          </div>
-
-
-          <div class="network-visual">
-
-            <div class="network-node">
-              Colegios
-            </div>
-
-            <div class="network-line"></div>
-
-            <div class="network-node">
-              Comunidades
-            </div>
-
-            <div class="network-line"></div>
-
-            <div class="network-node">
-              Instituciones
-            </div>
-
-          </div>
-
-
-        </div>
-
-
-
-        <div class="project-side">
-
-
-          <div class="project-statement">
-
-            Conectando producto, instituciones y nuevos
-            mercados a través de partnerships.
-
-          </div>
-
-
-          <div class="project-meta">
-
-            <span>
-              EdTech / Alianzas
-            </span>
-
-            <span>
-              2024 — 2026
-            </span>
-
-          </div>
-
-
-        </div>
-
-
-      </a>
-
-
-
-      <!-- =================================================
-           USM
-      ================================================== -->
-
-      <a
-        href="usm.html"
-        class="project"
-      >
-
-        <div class="project-number">
-          04
-        </div>
-
-        <div class="project-main">
-
-          <h3>
-            USM
-          </h3>
-
-          <div class="role">
-            Coordinador de Promoción de Admisión · Coordinador Asistente
-          </div>
-
-          <div class="usm-visual">
-
-            <div class="usm-node">
-              Admisión
-            </div>
-
-            <div class="usm-line"></div>
-
-            <div class="usm-node">
-              Operaciones
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="project-side">
-
-          <div class="project-statement">
-
-            Conectando adquisición, datos y procesos
-            dentro de educación superior.
-
-          </div>
-
-          <div class="project-meta">
-
-            <span>
-              Educación / Operaciones
-            </span>
-
-            <span>
-              2023 — 2025
-            </span>
-
-          </div>
-
-        </div>
-
-      </a>
 
     </div>
 
@@ -2572,50 +1791,183 @@
        ABOUT
   ====================================================== -->
 
-  <section class="about">
+  <section class="intro">
 
-
-    <div class="about-grid">
-
+    <div class="intro-grid">
 
       <div class="section-label">
         02 / Sobre mí
       </div>
 
-
-
-      <div class="about-content">
-
+      <div class="intro-copy">
 
         <h2>
-
-          Construyo donde
-
-          <span>
-            producto, growth
-          </span>
-
-          y negocio se cruzan.
-
+          De oportunidades a
+          sistemas que operan de verdad.
         </h2>
 
+        <p>
+          Soy Felipe Quiroz, Product Manager y Co-Founder
+          basado en Santiago, Chile. Mi experiencia cruza
+          producto, growth, partnerships y construcción de
+          compañías, con una misma lógica: convertir problemas
+          y oportunidades en sistemas que puedan operar, aprender
+          y escalar.
+        </p>
 
-        <p class="about-copy">
+        <p>
+          Hoy lidero productos de Workforce Management en
+          GeoVictoria y construyo lowsignal, donde trabajo
+          sobre operaciones, estrategia comercial, producto
+          y Growth Systems.
+        </p>
 
-          Mi experiencia cruza producto, growth,
-          partnerships y construcción de compañías.
-          El hilo común es convertir problemas y oportunidades
-          en sistemas que puedan operar, aprender y escalar.
+        <p>
+          Antes, en TetherEd, trabajé en partnerships,
+          expansión y tecnología educativa, conectando
+          producto con instituciones, sistemas públicos
+          y nuevos mercados.
+        </p>
 
+        <p>
+          Me interesan especialmente la IA aplicada,
+          los productos que viven cerca de operaciones reales
+          y las nuevas formas de construir compañías con
+          equipos pequeños, tecnología y sistemas bien diseñados.
         </p>
 
 
         <a
-          href="about.html"
-          class="text-link"
+          href="../felipe-quiroz-cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cv-download"
         >
-          Sobre mí
+          Descargar CV
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path d="M12 4v10"></path>
+            <path d="m8 10 4 4 4-4"></path>
+            <path d="M5 19h14"></path>
+          </svg>
         </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       LENSES
+  ====================================================== -->
+
+  <section class="lenses">
+
+
+    <div class="lenses-inner">
+
+
+      <div class="section-label">
+        03 / Cómo pienso
+      </div>
+
+
+      <h2 class="lenses-title">
+
+        Tres lentes.
+
+        <span>
+          Una misma forma de operar.
+        </span>
+
+      </h2>
+
+
+
+      <div class="lens-grid">
+
+
+        <div class="lens">
+
+
+          <div class="lens-number">
+            01
+          </div>
+
+
+          <h3>
+            Product
+          </h3>
+
+
+          <p>
+
+            Construir cerca del problema real:
+            entender operaciones, validar supuestos y
+            diseñar productos que puedan adoptarse y escalar.
+
+          </p>
+
+
+        </div>
+
+
+
+        <div class="lens">
+
+
+          <div class="lens-number">
+            02
+          </div>
+
+
+          <h3>
+            Growth
+          </h3>
+
+
+          <p>
+
+            Convertir estrategia y ejecución en sistemas:
+            distribución, contenido, automatización y
+            aprendizaje continuo alrededor del crecimiento.
+
+          </p>
+
+
+        </div>
+
+
+
+        <div class="lens">
+
+
+          <div class="lens-number">
+            03
+          </div>
+
+
+          <h3>
+            Business
+          </h3>
+
+
+          <p>
+
+            Conectar producto con mercado, negocio y
+            partnerships para que una buena solución
+            también pueda sostenerse y crecer.
+
+          </p>
+
+
+        </div>
 
 
       </div>
@@ -2629,128 +1981,264 @@
 
 
   <!-- =====================================================
-       NOW
+       STRENGTHS
   ====================================================== -->
 
-  <section class="now">
+  <section class="current">
+
+    <div class="current-grid">
+
+      <div class="current-main">
+
+        <div class="section-label">
+          04 / Lo que hago bien
+        </div>
+
+        <h2>
+          Donde suelo
+          generar más valor.
+        </h2>
+
+        <p>
+          Me muevo bien en espacios donde todavía hay
+          ambigüedad: cuando hay que entender el problema,
+          ordenar prioridades, conectar equipos y convertir
+          una oportunidad en algo que realmente funcione.
+        </p>
+
+      </div>
+
+      <div class="current-list">
+
+        <div class="current-item">
+          <span>01</span>
+          <strong>Estrategia de producto y discovery</strong>
+        </div>
+
+        <div class="current-item">
+          <span>02</span>
+          <strong>Go-to-market y estrategia comercial</strong>
+        </div>
+
+        <div class="current-item">
+          <span>03</span>
+          <strong>Sistemas operativos y procesos escalables</strong>
+        </div>
+
+        <div class="current-item">
+          <span>04</span>
+          <strong>Ejecución transversal</strong>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+<!-- =====================================================
+       THROUGHLINE
+  ====================================================== -->
+
+  <section class="throughline">
 
 
-    <div class="now-grid">
+    <div class="throughline-grid">
 
 
       <div class="section-label">
-        03 / Ahora
+        05 / Trayectoria
       </div>
 
 
 
-      <div class="now-content">
+      <div class="throughline-content">
 
 
         <h2>
-          En qué estoy trabajando ahora.
+          Distintos roles.
+          La misma obsesión.
         </h2>
 
-
-
-        <div class="now-list">
-
-
-          <div class="now-item">
-
-            <div class="now-number">
-              01
-            </div>
-
-            <strong>
-              GeoVictoria
-            </strong>
-
-            <span>
-              Workforce Management
-            </span>
-
-          </div>
-
-
-
-          <div class="now-item">
-
-            <div class="now-number">
-              02
-            </div>
-
-            <strong>
-              lowsignal
-            </strong>
-
-            <span>
-              Growth Systems
-            </span>
-
-          </div>
-
-
-
-          <div class="now-item">
-
-            <div class="now-number">
-              03
-            </div>
-
-            <strong>
-              Explorando
-            </strong>
-
-            <span>
-              IA · Agentes · Nuevos modelos
-            </span>
-
-          </div>
-
-
+        <div class="section-copy">
+          <p>
+            Producto, growth, partnerships y operaciones pueden parecer caminos
+            distintos. Para mí, son distintas formas de resolver
+            el mismo problema: entender qué necesita cambiar,
+            alinear a las personas correctas y construir el sistema
+            que permite llevarlo a la realidad.
+          </p>
         </div>
 
 
+        <div class="experience-list">
+
+
+          <a
+            href="/es/geovictoria"
+            class="experience"
+          >
+
+
+            <div class="experience-number">
+              01
+            </div>
+
+
+            <div class="experience-main">
+
+              <strong>
+                GeoVictoria
+              </strong>
+
+              <span>
+                Product Manager · Workforce Management
+              </span>
+
+            </div>
+
+
+            <div class="experience-period">
+              2026 — Presente
+            </div>
+
+
+          </a>
 
 
 
-        <figure class="now-moment">
+          <a
+            href="/es/lowsignal"
+            class="experience"
+          >
 
 
-          <div class="now-moment-media">
+            <div class="experience-number">
+              02
+            </div>
 
-            <img
-              src="../platanus-ai-native.jpg"
-              alt="Evento AI Native Startups de Platanus en Santiago"
-              loading="lazy"
-            >
+
+            <div class="experience-main">
+
+              <strong>
+                lowsignal
+              </strong>
+
+              <span>
+                Co-Founder & COO · Growth Systems
+              </span>
+
+            </div>
+
+
+            <div class="experience-period">
+              2025 — Presente
+            </div>
+
+
+          </a>
+
+
+
+          <a
+            href="/es/tethereducation"
+            class="experience"
+          >
+
+
+            <div class="experience-number">
+              03
+            </div>
+
+
+            <div class="experience-main">
+
+              <strong>
+                TetherEd
+              </strong>
+
+              <span>
+                Head of Partnerships · EdTech
+              </span>
+
+            </div>
+
+
+            <div class="experience-period">
+              2024 — 2026
+            </div>
+
+
+          </a>
+
+
+
+          <a
+            href="/es/usm"
+            class="experience"
+          >
+
+
+            <div class="experience-number">
+              04
+            </div>
+
+
+            <div class="experience-main">
+
+              <strong>
+                USM
+              </strong>
+
+              <span>
+                Coordinador de Promoción de Admisión · Coordinador Asistente
+              </span>
+
+            </div>
+
+
+            <div class="experience-period">
+              2023 — 2025
+            </div>
+
+
+          </a>
+
+
+
+          <div
+            class="experience"
+          >
+
+
+            <div class="experience-number">
+              05
+            </div>
+
+
+            <div class="experience-main">
+
+              <strong>
+                RECH
+              </strong>
+
+              <span>
+                Math Program Coordinator · Datos & Operaciones
+              </span>
+
+            </div>
+
+
+            <div class="experience-period">
+              2019 — 2021
+            </div>
+
 
           </div>
 
 
-          <figcaption class="now-moment-caption">
 
-            <span>
-              En el ecosistema
-            </span>
-
-            <span>
-              Platanus · AI Native Startups · Santiago
-            </span>
-
-          </figcaption>
-
-
-        </figure>
-
-
-        <a
-          href="now.html"
-          class="text-link"
-        >
-          Ver en qué estoy trabajando
-        </a>
+        </div>
 
 
       </div>
@@ -2760,6 +2248,10 @@
 
 
   </section>
+
+
+
+  
 
 
 
@@ -2774,16 +2266,16 @@
 
 
       <div class="section-label">
-        04 / Siguiente
+        06 / Principio
       </div>
 
 
       <h2>
 
-        Construyendo
+        Cerca de la realidad.
 
         <span>
-          lo que viene.
+          Hacer que el sistema funcione.
         </span>
 
       </h2>
