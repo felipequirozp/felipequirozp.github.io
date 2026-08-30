@@ -14,7 +14,7 @@
 
   <meta
     name="description"
-    content="Selected work at TetherEd — education technology, partnerships, public-sector collaboration and international expansion."
+    content="Selected work at Tether Education — partnerships, public-sector transformation, AI-enabled education products and international expansion."
   >
 
 
@@ -327,6 +327,37 @@
     }
 
 
+
+    /* =====================================================
+       STICKY HEADER
+    ===================================================== */
+
+    header {
+
+      position:
+        sticky;
+
+      top:
+        0;
+
+      z-index:
+        1000;
+
+      background:
+        rgba(13,23,36,.94);
+
+      backdrop-filter:
+        blur(16px);
+
+      -webkit-backdrop-filter:
+        blur(16px);
+
+      border-bottom:
+        1px solid rgba(255,255,255,.06);
+
+    }
+
+
     /* =====================================================
        HERO
     ===================================================== */
@@ -518,7 +549,7 @@
       display: grid;
 
       grid-template-columns:
-        repeat(3, 1fr);
+        repeat(2, 1fr);
 
       gap: 14px;
 
@@ -1030,7 +1061,7 @@
       display: grid;
 
       grid-template-columns:
-        repeat(3, 1fr);
+        repeat(2, 1fr);
 
       border-top:
         1px solid var(--line);
@@ -1044,12 +1075,12 @@
     .metric {
 
       padding:
-        30px 26px 30px 0;
+        34px 30px;
 
     }
 
 
-    .metric:not(:last-child) {
+    .metric:nth-child(odd) {
 
       border-right:
         1px solid var(--line);
@@ -1057,9 +1088,10 @@
     }
 
 
-    .metric:not(:first-child) {
+    .metric:nth-child(-n+2) {
 
-      padding-left: 26px;
+      border-bottom:
+        1px solid var(--line);
 
     }
 
@@ -1207,6 +1239,140 @@
 
       line-height: 1.72;
 
+    }
+
+
+
+    /* =====================================================
+       SELECTED PROJECT CASES
+    ===================================================== */
+
+    .project-cases { margin-top:44px; display:grid; gap:18px; }
+
+    .project-case {
+      padding:30px 32px;
+      display:grid;
+      grid-template-columns:46px minmax(0,1.35fr) minmax(260px,.65fr);
+      gap:26px;
+      align-items:start;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:rgba(255,255,255,.55);
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+
+    
+    .project-case:hover {
+      transform: translateY(-2px);
+      border-color: var(--slate-light);
+      background: rgba(255,255,255,.78);
+    }
+
+.project-case-number {
+      padding-top:5px;
+      color:var(--steel-light);
+      font-size:9px;
+      font-weight:600;
+      letter-spacing:.08em;
+    }
+
+    .project-case-type,
+    .project-case-side-label {
+      margin-bottom:11px;
+      color:var(--steel-light);
+      font-size:9px;
+      font-weight:600;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .project-case h3 {
+      max-width:670px;
+      margin:0 0 13px;
+      color:var(--navy);
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(22px,2.5vw,32px);
+      font-weight:520;
+      letter-spacing:-.035em;
+      line-height:1.1;
+    }
+
+    .project-case-description {
+      max-width:690px;
+      margin:0;
+      color:#4c5864;
+      font-size:13px;
+      line-height:1.78;
+    }
+
+    .project-case-side {
+      padding-left:24px;
+      border-left:1px solid var(--line);
+    }
+
+    .project-case-side p {
+      margin:0;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.72;
+    }
+
+    .project-case-metrics {
+      margin-top:18px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    .project-case-metric {
+      padding:7px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:var(--steel);
+      font-size:9px;
+      font-weight:600;
+      letter-spacing:.03em;
+      background:var(--white);
+    }
+
+    .project-case-link {
+      margin-top:18px;
+      display:inline-flex;
+      color:var(--navy);
+      font-size:11px;
+      font-weight:600;
+      text-decoration:none;
+      border-bottom:1px solid rgba(24,37,54,.22);
+      padding-bottom:2px;
+    }
+
+    .project-case-link:hover { border-color:var(--navy); }
+
+    @media (max-width:860px) {
+      .project-case { grid-template-columns:36px minmax(0,1fr); }
+      .project-case-side {
+        grid-column:2;
+        padding-left:0;
+        padding-top:20px;
+        border-left:0;
+        border-top:1px solid var(--line);
+      }
+    }
+
+    @media (max-width:600px) {
+      .project-cases { margin-top:32px; }
+      .project-case {
+        padding:24px 20px;
+        grid-template-columns:1fr;
+        gap:12px;
+        border-radius:14px;
+      }
+      .project-case-number { padding-top:0; }
+      .project-case-side {
+        grid-column:auto;
+        padding-top:18px;
+      }
+      .project-case-description { font-size:12px; }
     }
 
 
@@ -3204,9 +3370,9 @@
               </div>
 
               <div class="network-meta-copy">
-                Discovery<br>
-                Access<br>
-                Applications
+                Explore<br>
+                Compare<br>
+                Apply
               </div>
 
             </div>
@@ -3220,9 +3386,9 @@
               </div>
 
               <div class="network-meta-copy">
-                Public sector<br>
-                Institutions<br>
-                Ecosystems
+                Governments<br>
+                School networks<br>
+                Institutions
               </div>
 
             </div>
@@ -3238,7 +3404,7 @@
               <div class="network-meta-copy">
                 Adoption<br>
                 Markets<br>
-                Scale
+                Scaler
               </div>
 
             </div>
@@ -3258,16 +3424,16 @@
 
 
         <div class="visual-kicker">
-          Education without friction
+          Access, information and decisions
         </div>
 
 
         <h2 class="visual-title">
 
-          Connecting communities
+          Infrastructure for better choices.
 
           <span>
-            with better ways to access education.
+            And access with less friction.
           </span>
 
         </h2>
@@ -3310,7 +3476,7 @@
 
 
         <div class="case-period">
-          Previous role · 2024 — 2026
+          Head of Partnerships · 2024 — 2026
         </div>
 
 
@@ -3326,7 +3492,10 @@
 
         <p class="hero-description">
 
-          Building partnerships around human-centered education products — connecting schools, public institutions and communities across Latin America and international markets.
+          I led partnership strategy, business development
+          and expansion across Latin America, connecting governments,
+          school networks and education organizations with
+          AI-enabled digital admissions and enrollment infrastructure.
 
         </p>
 
@@ -3338,15 +3507,15 @@
           </div>
 
           <div class="tag">
-            EdTech
+            GovTech
           </div>
 
           <div class="tag">
-            Expansion
+            AI &amp; Education
           </div>
 
           <div class="tag">
-            Public sector
+            LATAM Expansion
           </div>
 
         </div>
@@ -3379,36 +3548,33 @@
 
         <section class="section">
 
-
           <div class="section-label">
-            01 / Role
+            01 / Rolee
           </div>
 
-
           <h2>
-            Partnerships around a complex product challenge.
+            Connecting market,
+            product and execution.
           </h2>
-
 
           <div class="section-copy">
 
-
             <p>
-
-              TetherEd builds human-centered guidance products for school choice and admissions — helping families navigate complex education systems and make better-informed decisions.
-
+              Tether Education is a U.S.-based GovTech company incubated
+              at ConsiliumBots, focused on digital infrastructure
+              for school choice, admissions and enrollment.
             </p>
 
-
             <p>
-
-              As Head of Partnerships, I connected the product with education systems, public institutions and partners across different markets, turning institutional relationships into real implementations and adoption.
-
+              As Head of Partnerships, I led partnership strategy,
+              business development and expansion across Latin America.
+              I worked with governments, school networks and education
+              organizations, coordinating initiatives across Sales, Product,
+              Engineering, Marketing and Operations to turn
+              opportunities into real adoption.
             </p>
-
 
           </div>
-
 
           <div class="leadership-card">
 
@@ -3422,7 +3588,7 @@
               </span>
 
               <img
-                src="/christopher-neilson.jpg"
+                src="christopher-neilson.jpg"
                 alt="Christopher Neilson"
                 class="leadership-photo"
                 loading="lazy"
@@ -3453,7 +3619,7 @@
             <div>
 
               <div class="leadership-eyebrow">
-                Leadership
+                Direct leadership
               </div>
 
               <h3 class="leadership-name">
@@ -3466,7 +3632,9 @@
               </p>
 
               <p class="leadership-copy">
-                I worked closely and directly with Christopher across partnerships, institutional relationships and Tether Education’s expansion initiatives.
+                I worked closely and directly with Christopher,
+                aligning partnerships, institutional relationships
+                and expansion initiatives with the evolution of the product.
               </p>
 
               <div class="leadership-links">
@@ -3475,18 +3643,10 @@
                   href="https://www.christopher-neilson.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Website de Christopher Neilson"
+                  aria-label="Christopher Neilson website"
                   title="Website"
                 >
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <circle cx="12" cy="12" r="9"></circle>
                     <path d="M3 12h18"></path>
                     <path d="M12 3c2.5 2.5 3.8 5.5 3.8 9S14.5 18.5 12 21"></path>
@@ -3498,14 +3658,10 @@
                   href="https://www.linkedin.com/in/christopher-a-neilson/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn de Christopher Neilson"
+                  aria-label="Christopher Neilson on LinkedIn"
                   title="LinkedIn"
                 >
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
                   </svg>
                 </a>
@@ -3516,7 +3672,6 @@
 
           </div>
 
-
         </section>
 
 
@@ -3525,77 +3680,49 @@
 
         <section class="section">
 
-
           <div class="section-label">
             02 / Scale
           </div>
 
-
           <h2>
-            Expanding access across education.
+            Partnerships with
+            measurable reach.
           </h2>
-
 
           <div class="section-copy">
 
-
             <p>
-
-              The platform connected education options, families and institutions across Latin America, the United States, Denmark and Spain — combining school discovery, admissions guidance and institutional partnerships.
-
+              I built and scaled the partnership ecosystem across
+              multiple markets, combining public and private relationships
+              with a commercial operation focused on
+              adoption, visibility and growth.
             </p>
 
-
           </div>
-
-
 
           <div class="metrics">
 
-
             <div class="metric">
-
-              <strong>
-                600+
-              </strong>
-
-              <span>
-                Schools with profiles on the platform
-              </span>
-
+              <strong>14+</strong>
+              <span>Organizations connected</span>
             </div>
 
-
-
             <div class="metric">
-
-              <strong>
-                2M+
-              </strong>
-
-              <span>
-                Historical applications
-              </span>
-
+              <strong>20.000+</strong>
+              <span>Families reached</span>
             </div>
 
-
-
             <div class="metric">
-
-              <strong>
-                LATAM+
-              </strong>
-
-              <span>
-                United States · Denmark · Spain
-              </span>
-
+              <strong>1M+</strong>
+              <span>Applications handled by the platform in 2024</span>
             </div>
 
+            <div class="metric">
+              <strong>5M+</strong>
+              <span>Profile views in 2024</span>
+            </div>
 
           </div>
-
 
         </section>
 
@@ -3605,167 +3732,90 @@
 
         <section class="section">
 
-
           <div class="section-label">
-            03 / Product
+            03 / Product & AI
           </div>
 
-
           <h2>
-            Making complex education systems easier to navigate.
+            Bringing market signals
+            back into product.
           </h2>
-
 
           <div class="section-copy">
 
-
             <p>
-
-              The product combined technology, data and research to simplify school choice and admissions — while building the measurement infrastructure needed to learn, evaluate and improve.
-
+              I worked with Product and Engineering to translate
+              the needs of clients, institutions and families
+              into product improvements and AI-enabled initiatives.
+              The logic was simple: use the market as a source of
+              learning and turn that learning into product.
             </p>
 
-
           </div>
-
 
           <div class="product-collaboration">
 
             <div class="product-collaboration-label">
-              Collaboration
+              Applied AI
             </div>
 
             <p class="product-collaboration-copy">
-              <strong>Tether Education collaborated with OpenAI</strong>
-              on initiatives related to the use of AI in education and access.
+              The work included initiatives developed with
+              <strong>OpenAI</strong> and, on specific projects,
+              <strong>Columbia University</strong> and
+              <strong>SLEP del Pino</strong>, connecting research,
+              institutional needs and implementation.
             </p>
 
           </div>
 
-
-
           <div class="product-grid">
 
-
             <div class="product-item">
-
-
-              <div class="product-number">
-                01
-              </div>
-
-
-              <h3>
-                Interactive guidance
-              </h3>
-
-
-              <div class="product-type">
-                Guidance
-              </div>
-
-
+              <div class="product-number">01</div>
+              <h3>Market signals</h3>
+              <div class="product-type">Discovery</div>
               <p>
-
-                Clear, mobile-friendly explanations of education rules, admissions processes and available options.
-
+                Turning conversations with institutions and families
+                into useful signals for product prioritization and evolution.
               </p>
-
-
             </div>
 
-
-
             <div class="product-item">
-
-
-              <div class="product-number">
-                02
-              </div>
-
-
-              <h3>
-                Guided discovery
-              </h3>
-
-
-              <div class="product-type">
-                Discovery
-              </div>
-
-
+              <div class="product-number">02</div>
+              <h3>Product &amp; Engineering</h3>
+              <div class="product-type">Translation</div>
               <p>
-
-                Helping families discover education options based on their preferences, constraints and local context.
-
+                Translating commercial and operational requirements
+                into concrete problems technical teams
+                could design, build and validate.
               </p>
-
-
             </div>
 
-
-
             <div class="product-item">
-
-
-              <div class="product-number">
-                03
-              </div>
-
-
-              <h3>
-                Better decisions
-              </h3>
-
-
-              <div class="product-type">
-                Decision support
-              </div>
-
-
+              <div class="product-number">03</div>
+              <h3>Applied AI</h3>
+              <div class="product-type">Innovation</div>
               <p>
-
-                Making information easier to interpret so families can compare options and make better-informed decisions.
-
+                Connecting AI opportunities with real needs
+                around access, guidance and operations in education communities.
               </p>
-
-
             </div>
 
-
-
             <div class="product-item">
-
-
-              <div class="product-number">
-                04
-              </div>
-
-
-              <h3>
-                Designed to learn
-              </h3>
-
-
-              <div class="product-type">
-                Measurement
-              </div>
-
-
+              <div class="product-number">04</div>
+              <h3>Measurement</h3>
+              <div class="product-type">Learning</div>
               <p>
-
-                Product and measurement infrastructure designed for evaluation, iteration and continuous improvement.
-
+                Designing operations and processes to learn
+                from adoption, measure outcomes and iterate with evidence.
               </p>
-
-
             </div>
-
 
           </div>
 
-
         </section>
+
 
 
 
@@ -3773,196 +3823,169 @@
 
         <section class="section">
 
-
           <div class="section-label">
             04 / Selected projects
           </div>
 
-
           <h2>
-            Partnerships across different markets.
+            Product, implementation
+            and transformation at scale.
           </h2>
 
-
-
-          <div class="projects">
-
-
-            <div class="project">
-
-
-              <div class="project-number">
-                01
-              </div>
-
-
-              <div class="project-main">
-
-                <strong>
-                  SLEP del Pino
-                </strong>
-
-                <span>
-                  Public education
-                </span>
-
-              </div>
-
-
-              <div class="project-market">
-                Chile
-              </div>
-
-
-            </div>
-
-
-
-            <div class="project">
-
-
-              <div class="project-number">
-                02
-              </div>
-
-
-              <div class="project-main">
-
-                <strong>
-                  CORMUN Rancagua
-                </strong>
-
-                <span>
-                  Municipal education
-                </span>
-
-              </div>
-
-
-              <div class="project-market">
-                Chile
-              </div>
-
-
-            </div>
-
-
-
-            <div class="project">
-
-
-              <div class="project-number">
-                03
-              </div>
-
-
-              <div class="project-main">
-
-                <strong>
-                  JUNJI
-                </strong>
-
-                <span>
-                  Early childhood education
-                </span>
-
-              </div>
-
-
-              <div class="project-market">
-                Chile
-              </div>
-
-
-            </div>
-
-
-
-            <div class="project">
-
-
-              <div class="project-number">
-                04
-              </div>
-
-
-              <div class="project-main">
-
-                <strong>
-                  Mentu
-                </strong>
-
-                <span>
-                  Partnership
-                </span>
-
-              </div>
-
-
-              <div class="project-market">
-                Colombia
-              </div>
-
-
-            </div>
-
-
-
-            <a
-              href="https://www.nhps.net/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project external"
-            >
-
-
-              <div class="project-number">
-                05
-              </div>
-
-
-              <div class="project-main">
-
-                <strong>
-                  New Haven Public Schools
-                </strong>
-
-                <span>
-                  Public education
-                </span>
-
-              </div>
-
-
-              <div class="project-market">
-                United States
-              </div>
-
-
-            </a>
-
-
+          <div class="section-copy">
+            <p>
+              A selection of initiatives where I worked across
+              product, institutions and execution — from education
+              discovery tools to digital transformation
+              and AI adoption in public education.
+            </p>
           </div>
 
+          <div class="project-cases">
 
-        
+            <article class="project-case">
+              <div class="project-case-number">01</div>
+              <div>
+                <div class="project-case-type">Product · AI-powered discovery</div>
+                <h3>Virtual School Explorer</h3>
+                <p class="project-case-description">
+                  An education discovery platform with maps,
+                  personalized filters, enriched profiles,
+                  availability, admission estimates and an AI assistant
+                  that helps families explore and compare options.
+                </p>
+                <div class="project-case-metrics">
+                  <span class="project-case-metric">Map-based search</span>
+                  <span class="project-case-metric">Admission probability</span>
+                  <span class="project-case-metric">Real-time vacancies</span>
+                  <span class="project-case-metric">AI assistant</span>
+                </div>
+
+                <a
+                  href="https://explorador.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-case-link"
+                >
+                  View Explorer
+                </a>
+              </div>
+              <div class="project-case-side">
+                <div class="project-case-side-label">My role</div>
+                <p>
+                  I connected institutional and family needs
+                  with product and adoption opportunities, bringing
+                  market signals into partnership and
+                  product development decisions.
+                </p>
+              </div>
+            </article>
+
+            <article class="project-case">
+              <div class="project-case-number">02</div>
+              <div>
+                <div class="project-case-type">Public education · Chile · Aug–Dec 2024</div>
+                <h3>Public Education Digital Transformation</h3>
+                <p class="project-case-description">
+                  I led strategic and implementation initiatives with SLEP del Pino
+                  and CORMUN Rancagua to digitize admissions and expand access
+                  to digital application infrastructure across public education.
+                </p>
+                <div class="project-case-metrics">
+                  <span class="project-case-metric">100+ public schools</span>
+                  <span class="project-case-metric">35,000+ students</span>
+                  <span class="project-case-metric">2 public education systems</span>
+                </div>
+              </div>
+              <div class="project-case-side">
+                <div class="project-case-side-label">My role</div>
+                <p>
+                  I coordinated public-sector stakeholders, school leadership and internal
+                  product teams, translating institutional and operational requirements
+                  into scalable implementation strategies.
+                </p>
+              </div>
+            </article>
+
+            <article class="project-case">
+              <div class="project-case-number">03</div>
+              <div>
+                <div class="project-case-type">AI · Public education · Chile · Jul–Dec 2025</div>
+                <h3>AI-Powered Education Transformation</h3>
+                <p class="project-case-description">
+                  An international initiative developed with Columbia University,
+                  OpenAI, Tether Education and SLEP del Pino to accelerate responsible
+                  and equitable AI adoption across public schools in Chile.
+                </p>
+                <div class="project-case-metrics">
+                  <span class="project-case-metric">50+ institutions</span>
+                  <span class="project-case-metric">OpenAI</span>
+                  <span class="project-case-metric">Columbia University</span>
+                  <span class="project-case-metric">AI adoption at scale</span>
+                </div>
+              </div>
+              <div class="project-case-side">
+                <div class="project-case-side-label">My role</div>
+                <p>
+                  I led implementation across participating schools, coordinating
+                  execution, stakeholders and the connection between research,
+                  institutional needs and AI-enabled solutions.
+                </p>
+              </div>
+            </article>
+
+            <article class="project-case">
+              <div class="project-case-number">04</div>
+              <div>
+                <div class="project-case-type">AI-enabled product · School operations</div>
+                <h3>Tether Studio</h3>
+                <p class="project-case-description">
+                  An AI-enabled school photography platform that centralizes portraits,
+                  events, yearbooks, consent, family access and school administration
+                  in one digital workflow.
+                </p>
+                <div class="project-case-metrics">
+                  <span class="project-case-metric">−82% operational hours</span>
+                  <span class="project-case-metric">6 weeks to launch</span>
+                  <span class="project-case-metric">1 platform · 5 stages</span>
+                  <span class="project-case-metric">100% auditable consent</span>
+                </div>
+                <a href="https://tetherstudio.ai/" target="_blank" rel="noopener noreferrer" class="project-case-link">
+                  View Tether Studio
+                </a>
+              </div>
+              <div class="project-case-side">
+                <div class="project-case-side-label">My role</div>
+                <p>
+                  I worked on product development and positioning, connecting
+                  schools’ operational needs with a simpler digital experience
+                  for teams and families.
+                </p>
+              </div>
+            </article>
+
+          </div>
 
           <div class="field-block">
 
 
             <div class="field-kicker">
-              Team &amp; partnerships
+              Work in context
             </div>
 
 
             <h3 class="field-heading">
-              Building alongside teams and institutions.
+              Adoption is built
+              with people.
             </h3>
 
 
             <p class="field-copy">
 
-              Part of the work meant collaborating directly with teams, institutions and education communities — understanding context, building relationships and taking ideas and partnerships through to real implementation.
+              A large part of the role happened outside the pipeline:
+              sessions with internal teams, education leaders and
+              institutions. That’s where real needs became
+              product, implementation and adoption decisions.
 
             </p>
 
@@ -4067,101 +4090,58 @@
 
         <section class="section">
 
-
           <div class="section-label">
-            05 / How I worked
+            05 / Operating system
           </div>
 
-
           <h2>
-            From partnership to adoption.
+            From opportunity
+            to implementation.
           </h2>
-
 
           <div class="section-copy">
 
-
             <p>
-
-              The work required connecting institutional relationships with product adoption — understanding how education organizations operate, what they need and how a product can fit into those systems.
-
+              My role combined business development, institutional coordination
+              and the building of internal systems
+              so expansion could be visible, measurable and repeatable.
             </p>
 
-
           </div>
-
-
 
           <div class="work-list">
 
-
             <div class="work-item">
-
-              <div class="work-number">
-                01
-              </div>
-
-              <strong>
-                Partnership development
-              </strong>
-
+              <div class="work-number">01</div>
+              <strong>Partnership strategy and business development</strong>
             </div>
 
-
             <div class="work-item">
-
-              <div class="work-number">
-                02
-              </div>
-
-              <strong>
-                Institutional and public-sector relationship management
-              </strong>
-
+              <div class="work-number">02</div>
+              <strong>Pipeline, prospecting and negotiation</strong>
             </div>
 
-
             <div class="work-item">
-
-              <div class="work-number">
-                03
-              </div>
-
-              <strong>
-                Market expansion and ecosystem development
-              </strong>
-
+              <div class="work-number">03</div>
+              <strong>Public- and private-sector relationships</strong>
             </div>
 
-
             <div class="work-item">
-
-              <div class="work-number">
-                04
-              </div>
-
-              <strong>
-                Partner onboarding and activation
-              </strong>
-
+              <div class="work-number">04</div>
+              <strong>Cross-functional execution across Sales, Product, Marketing and Operations</strong>
             </div>
 
-
             <div class="work-item">
-
-              <div class="work-number">
-                05
-              </div>
-
-              <strong>
-                Connecting opportunities with product adoption
-              </strong>
-
+              <div class="work-number">05</div>
+              <strong>Market signals into product and AI improvements</strong>
             </div>
 
+            <div class="work-item">
+              <div class="work-number">06</div>
+              <strong>CRM, dashboards, reporting and scalable processes</strong>
+            </div>
 
           </div>
-
 
         </section>
 
@@ -4182,7 +4162,7 @@
           </div>
 
           <div class="sidebar-value">
-            TetherEd
+            Tether Education
           </div>
 
         </div>
@@ -4232,7 +4212,7 @@
           </div>
 
           <div class="sidebar-value">
-            EdTech
+            GovTech / EdTech
           </div>
 
         </div>
@@ -4259,7 +4239,7 @@
         <div class="sidebar-card">
 
           <div class="sidebar-label">
-            Period
+            Periodo
           </div>
 
           <div class="sidebar-value">
@@ -4278,9 +4258,9 @@
 
           <div class="sidebar-value">
             Partnerships<br>
+            Business development<br>
             Expansion<br>
-            Public sector<br>
-            Education access
+            Product adoption
           </div>
 
         </div>
@@ -4307,16 +4287,16 @@
 
 
       <div class="focus-label">
-        Partnerships focus
+        Partnership principle
       </div>
 
 
       <h2 class="focus-title">
 
-        Connect the ecosystem.
+        Connect stakeholders.
 
         <span>
-          Expand access.
+          Turn relationships into adoption.
         </span>
 
       </h2>
@@ -4325,15 +4305,15 @@
       <div class="focus-steps">
 
         <div class="focus-step">
-          Connect
+          Understand
+        </div>
+
+        <div class="focus-step">
+          Align
         </div>
 
         <div class="focus-step">
           Implement
-        </div>
-
-        <div class="focus-step">
-          Scale
         </div>
 
       </div>
@@ -4353,10 +4333,10 @@
 
       <h2 class="focus-title">
 
-        Simplify complexity.
+        Listen to the market.
 
         <span>
-          Make decisions easier.
+          Build better.
         </span>
 
       </h2>
@@ -4365,15 +4345,15 @@
       <div class="focus-steps">
 
         <div class="focus-step">
-          Guidance
+          Signals
         </div>
 
         <div class="focus-step">
-          Access
+          Product
         </div>
 
         <div class="focus-step">
-          Decisions
+          Learning
         </div>
 
       </div>
