@@ -1994,14 +1994,15 @@
     ===================================================== */
 
     .leadership-card {
-      margin-top: 34px;
+      margin-top: 30px;
       display: grid;
-      grid-template-columns: 170px 1fr;
-      gap: 28px;
+      grid-template-columns: 112px 1fr;
+      gap: 22px;
       align-items: center;
-      padding: 24px;
+      max-width: 620px;
+      padding: 18px;
       border: 1px solid var(--line);
-      border-radius: 18px;
+      border-radius: 16px;
       background: rgba(255,255,255,.62);
     }
 
@@ -2029,12 +2030,12 @@
     }
 
     .leadership-name {
-      margin: 0 0 5px;
+      margin: 0 0 4px;
       color: var(--navy);
       font-family: "Manrope", sans-serif;
-      font-size: 27px;
+      font-size: 23px;
       font-weight: 500;
-      letter-spacing: -.035em;
+      letter-spacing: -.03em;
       line-height: 1.1;
     }
 
@@ -2043,6 +2044,35 @@
       font-size: 13px;
       line-height: 1.5;
     }
+
+
+    .leadership-links {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .leadership-linkedin {
+      width: 32px;
+      height: 32px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .2s ease, border-color .2s ease;
+    }
+
+    .leadership-linkedin:hover {
+      background: var(--ice);
+      border-color: #bcc5ce;
+    }
+
 
     .scale-grid {
       margin-top: 36px;
@@ -2087,9 +2117,9 @@
 
     @media (max-width: 700px) {
       .leadership-card {
-        grid-template-columns: 110px 1fr;
-        gap: 20px;
-        padding: 18px;
+        grid-template-columns: 88px 1fr;
+        gap: 16px;
+        padding: 14px;
         border-radius: 14px;
       }
 
@@ -2486,6 +2516,18 @@
 
               <div class="leadership-role">
                 CEO, GeoVictoria
+              </div>
+
+              <div class="leadership-links">
+                <a
+                  class="leadership-linkedin"
+                  href="https://www.linkedin.com/in/francisca-astudillo-bessi-200b2432/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn de Francisca Astudillo"
+                >
+                  in
+                </a>
               </div>
             </div>
 
