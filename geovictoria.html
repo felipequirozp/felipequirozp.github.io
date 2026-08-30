@@ -14,7 +14,7 @@
 
   <meta
     name="description"
-    content="Selected work at GeoVictoria — workforce management products, pilots, validation and enterprise product development."
+    content="Work seleccionado en GeoVictoria — productos de workforce management, pilotos, validación y desarrollo de producto enterprise."
   >
 
 
@@ -329,6 +329,20 @@
     }
 
 
+
+    /* =====================================================
+       STICKY HEADER
+    ===================================================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(13,23,36,.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
 
 
     /* =====================================================
@@ -877,7 +891,7 @@
 
 
     /* =====================================================
-       INITIATIVES
+       INITAITIVES
     ===================================================== */
 
     .initiatives {
@@ -1777,8 +1791,6 @@
       }
 
 
-
-
       .hero-visual {
 
         padding:
@@ -1976,7 +1988,169 @@
 
     }
 
-  </style>
+  
+    /* =====================================================
+       LEADERSHIP / SCALE
+    ===================================================== */
+
+    .leadership-card {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 112px 1fr;
+      gap: 22px;
+      align-items: center;
+      max-width: 620px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255,255,255,.62);
+    }
+
+    .leadership-photo {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 16px;
+      background: var(--ice);
+    }
+
+    .leadership-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .leadership-eyebrow {
+      margin-bottom: 8px;
+      color: var(--steel-light);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .leadership-name {
+      margin: 0 0 4px;
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-size: 23px;
+      font-weight: 500;
+      letter-spacing: -.03em;
+      line-height: 1.1;
+    }
+
+    .leadership-role {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+
+    .leadership-links {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .leadership-linkedin {
+      width: 32px;
+      height: 32px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .2s ease, border-color .2s ease;
+    }
+
+    .leadership-linkedin:hover {
+      background: var(--ice);
+      border-color: #bcc5ce;
+    }
+
+
+    .scale-grid {
+      margin-top: 36px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .scale-item {
+      min-height: 160px;
+      padding: 30px 28px;
+    }
+
+    .scale-item:nth-child(odd) {
+      border-right: 1px solid var(--line);
+    }
+
+    .scale-item:nth-child(-n+2) {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .scale-item strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(34px, 4vw, 54px);
+      font-weight: 500;
+      letter-spacing: -.05em;
+      line-height: 1;
+    }
+
+    .scale-item span {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 700px) {
+      .leadership-card {
+        grid-template-columns: 88px 1fr;
+        gap: 16px;
+        padding: 14px;
+        border-radius: 14px;
+      }
+
+      .leadership-photo {
+        border-radius: 12px;
+      }
+
+      .leadership-name {
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .scale-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .scale-item {
+        min-height: auto;
+        padding: 24px 0;
+        border-right: 0 !important;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .scale-item:last-child {
+        border-bottom: 0;
+      }
+    }
+
+
+</style>
 
 </head>
 
@@ -2025,10 +2199,11 @@
         Contact
       </a>
 
+
       <a
         href="es/geovictoria.html"
         class="lang-switch"
-        aria-label="Ver sitio en español"
+        aria-label="View site in Spanish"
       >
         ES
       </a>
@@ -2078,11 +2253,11 @@
           <div class="schedule-head">
 
             <span></span>
-            <span>Mon</span>
-            <span>Tue</span>
-            <span>Wed</span>
-            <span>Thu</span>
-            <span>Fri</span>
+            <span>Lun</span>
+            <span>Mar</span>
+            <span>Mié</span>
+            <span>Jue</span>
+            <span>Vie</span>
 
           </div>
 
@@ -2091,7 +2266,7 @@
           <div class="schedule-row">
 
             <div class="schedule-name">
-              Team 01
+              Equipo 01
             </div>
 
             <div class="shift active"></div>
@@ -2107,7 +2282,7 @@
           <div class="schedule-row">
 
             <div class="schedule-name">
-              Team 02
+              Equipo 02
             </div>
 
             <div class="shift medium"></div>
@@ -2123,7 +2298,7 @@
           <div class="schedule-row">
 
             <div class="schedule-name">
-              Team 03
+              Equipo 03
             </div>
 
             <div class="shift active"></div>
@@ -2139,7 +2314,7 @@
           <div class="schedule-row">
 
             <div class="schedule-name">
-              Team 04
+              Equipo 04
             </div>
 
             <div class="shift dark"></div>
@@ -2162,13 +2337,13 @@
 
 
         <div class="visual-kicker">
-          Built for real operations
+          Diseñado para operaciones reales
         </div>
 
 
         <h2 class="visual-title">
 
-          Product / systems /
+          Product / sistemas
 
           <span>
             at scale.
@@ -2199,7 +2374,7 @@
           target="_blank"
           rel="noopener noreferrer"
           class="company-logo"
-          aria-label="Visit GeoVictoria"
+          aria-label="Visitar GeoVictoria"
         >
 
           <img
@@ -2211,12 +2386,12 @@
 
 
         <div class="case-label">
-          Selected Work / 01
+          Selected work / 01
         </div>
 
 
         <div class="case-period">
-          Current Role · 2026 — Present
+          Current role · 2026 — Present
         </div>
 
 
@@ -2232,11 +2407,9 @@
 
         <p class="hero-description">
 
-          Building and developing workforce management
-          products for enterprise operations across
-          multiple markets — working from early product
-          exploration and pilots through validation,
-          iteration and commercial adoption.
+          I lead the strategy and evolution of Workforce Management
+          solutions, connecting customer needs, business opportunities
+          and technology to build scalable products across Latin America.
 
         </p>
 
@@ -2289,66 +2462,93 @@
 
         <!-- ROLE -->
 
+        <!-- ROLE -->
+
         <section class="section">
 
-
           <div class="section-label">
-            01 / Role
+            01 / My role
           </div>
 
-
           <h2>
-            Product from validation
-            to execution.
+            From strategy
+            to adoption.
           </h2>
-
 
           <div class="section-copy">
 
-
             <p>
-
-              My work focuses on building and validating
-              workforce management products around real
-              operational needs — translating customer
-              problems into product opportunities, pilots
-              and scalable solutions.
-
+              As Product Manager, I lead strategy,
+              roadmap and prioritization across three
+              Workforce Management products, balancing customer
+              needs, business impact and technical feasibility.
             </p>
 
-
             <p>
-
-              The role sits between product strategy,
-              customer discovery, product execution and
-              commercial adoption, working closely with
-              customers and internal teams to understand
-              what should be built, how it should work
-              and what is needed for it to scale.
-
+              I work from customer discovery and validation
+              through execution, pilots and adoption, connecting
+              market opportunities with scalable solutions
+              alongside Engineering, Design, Sales,
+              Customer Success, Operations and Support teams.
             </p>
-
 
           </div>
 
+          <div class="leadership-card">
+
+            <div class="leadership-photo">
+              <img
+                src="francisca-astudillo.jpg"
+                alt="Francisca Astudillo"
+                loading="lazy"
+              >
+            </div>
+
+            <div>
+              <div class="leadership-eyebrow">
+                Leadership
+              </div>
+
+              <h3 class="leadership-name">
+                Francisca Astudillo
+              </h3>
+
+              <div class="leadership-role">
+                CEO, GeoVictoria
+              </div>
+
+              <div class="leadership-links">
+                <a
+                  class="leadership-linkedin"
+                  href="https://www.linkedin.com/in/francisca-astudillo-bessi-200b2432/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Francisca Astudillo on LinkedIn"
+                >
+                  in
+                </a>
+              </div>
+            </div>
+
+          </div>
 
         </section>
 
 
 
-        <!-- INITIATIVES -->
+        <!-- INITAITIVES -->
 
         <section class="section">
 
 
           <div class="section-label">
-            02 / Selected Initiatives
+            02 / Products
           </div>
 
 
           <h2>
-            Building around
-            workforce operations.
+            Three products.
+            One operating system.
           </h2>
 
 
@@ -2379,9 +2579,9 @@
 
                 <p>
 
-                  Workforce planning tools designed to
-                  simplify shift assignment, staffing
-                  decisions and operational scheduling.
+                  Workforce and shift planning for
+                  complex operations, connecting rules,
+                  coverage needs and staffing decisions.
 
                 </p>
 
@@ -2416,10 +2616,9 @@
 
                 <p>
 
-                  Optimization workflows focused on
-                  matching workforce availability,
-                  operating requirements and demand
-                  more effectively.
+                  An optimization MVP designed to connect
+                  availability, demand and operational constraints
+                  to support more efficient staffing decisions.
 
                 </p>
 
@@ -2454,10 +2653,9 @@
 
                 <p>
 
-                  A structured workflow for employee
-                  shift changes and swaps, adding
-                  configurable rules, approvals and
-                  greater operational control.
+                  A workflow for shift changes and swaps,
+                  with configurable rules, approvals and validations
+                  that add flexibility without losing operational control.
 
                 </p>
 
@@ -2479,105 +2677,58 @@
 
         <section class="section">
 
-
           <div class="section-label">
-            03 / How I Work
+            03 / How I build product
           </div>
 
-
           <h2>
-            Product in the
-            real world.
+            From problem
+            to scalable product.
           </h2>
-
 
           <div class="section-copy">
 
-
             <p>
-
-              I like product work that gets close to
-              real operations — where customer behavior,
-              technical constraints, business logic and
-              adoption all have to work together.
-
+              I work close to customers and real operations to
+              understand problems, validate assumptions and decide what
+              is worth building before scaling development.
             </p>
 
-
           </div>
-
-
 
           <div class="work-list">
 
-
             <div class="work-item">
-
-              <div class="work-number">
-                01
-              </div>
-
-              <strong>
-                Customer discovery and product validation
-              </strong>
-
+              <div class="work-number">01</div>
+              <strong>Direct discovery with customers and operations</strong>
             </div>
 
-
             <div class="work-item">
-
-              <div class="work-number">
-                02
-              </div>
-
-              <strong>
-                Pilot design and learning loops
-              </strong>
-
+              <div class="work-number">02</div>
+              <strong>Roadmap, prioritization and opportunity definition</strong>
             </div>
 
-
             <div class="work-item">
-
-              <div class="work-number">
-                03
-              </div>
-
-              <strong>
-                Requirements, rules and prioritization
-              </strong>
-
+              <div class="work-number">03</div>
+              <strong>AI-powered MVPs: concept, pilot and validation</strong>
             </div>
 
-
             <div class="work-item">
-
-              <div class="work-number">
-                04
-              </div>
-
-              <strong>
-                Alignment across product, commercial and customer teams
-              </strong>
-
+              <div class="work-number">04</div>
+              <strong>Cross-functional execution across Engineering, Design, Sales and Customer Success</strong>
             </div>
 
-
             <div class="work-item">
-
-              <div class="work-number">
-                05
-              </div>
-
-              <strong>
-                Moving from pilot to scalable adoption
-              </strong>
-
+              <div class="work-number">05</div>
+              <strong>Metrics, feedback, experimentation and learning</strong>
             </div>
 
+            <div class="work-item">
+              <div class="work-number">06</div>
+              <strong>Adoption, continuous improvement and scaling</strong>
+            </div>
 
           </div>
-
 
         </section>
 
@@ -2587,56 +2738,81 @@
 
         <section class="section">
 
-
           <div class="section-label">
-            04 / Context
+            04 / Scaler
           </div>
 
-
           <h2>
-            Workforce management
-            is an operating system.
+            Product for operations
+            across multiple markets.
           </h2>
-
 
           <div class="section-copy">
 
-
             <p>
-
-              GeoVictoria serves more than 10,000 customers
-              across 20+ countries, making workforce
-              management a product challenge shaped by
-              scale, operational complexity and very
+              GeoVictoria serves more than 10,000 customers across 20+ countries.
+              In that context, building Workforce Management means
+              designing for scale, operational complexity and very
               different local realities.
-
             </p>
-
-
-            <p>
-
-              Workforce products live inside complex
-              operational environments: schedules,
-              labor rules, approvals, employee behavior,
-              business demand and existing systems all
-              interact at the same time.
-
-            </p>
-
-
-            <p>
-
-              That makes the product challenge bigger
-              than a single interface. The real work is
-              designing systems that reduce complexity
-              while still giving operations the control
-              they need.
-
-            </p>
-
 
           </div>
 
+          <div class="scale-grid">
+
+            <div class="scale-item">
+              <strong>3</strong>
+              <span>Products I lead</span>
+            </div>
+
+            <div class="scale-item">
+              <strong>10.000+</strong>
+              <span>GeoVictoria customers</span>
+            </div>
+
+            <div class="scale-item">
+              <strong>20+</strong>
+              <span>Countries</span>
+            </div>
+
+            <div class="scale-item">
+              <strong>Cross-functional</strong>
+              <span>Engineering · Design · Sales · CS · Ops</span>
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <section class="section">
+
+          <div class="section-label">
+            05 / Real operations
+          </div>
+
+          <h2>
+            Workforce Management
+            is an operating system.
+          </h2>
+
+          <div class="section-copy">
+
+            <p>
+              Workforce products live inside complex environments:
+              schedules, labor rules, approvals, employee behavior,
+              business demand and existing systems all
+              interact at the same time.
+            </p>
+
+            <p>
+              The challenge is not just designing an interface.
+              It is building systems that reduce complexity,
+              give operations the control they need and adapt
+              to different customers, markets and ways of working.
+            </p>
+
+          </div>
 
         </section>
 
@@ -2739,8 +2915,8 @@
           </div>
 
           <div class="sidebar-value">
-            10,000+ customers<br>
-            20+ countries
+            10.000+ clientes<br>
+            20+ países
           </div>
 
         </div>
@@ -2750,7 +2926,7 @@
         <div class="sidebar-card">
 
           <div class="sidebar-label">
-            Period
+            Periodo
           </div>
 
           <div class="sidebar-value">
@@ -2769,10 +2945,10 @@
 
           <div class="sidebar-value">
 
-            New products<br>
-            Pilots<br>
-            Product validation<br>
-            Enterprise SaaS
+            Product strategy<br>
+            Discovery & validation<br>
+            AI-powered MVPs<br>
+            Adoption & scale
 
           </div>
 
@@ -2800,13 +2976,13 @@
 
 
       <div class="focus-label">
-        Product Focus
+        Focus de producto
       </div>
 
 
       <h2 class="focus-title">
 
-        From product idea
+        From problem
 
         <span>
           to real adoption.
@@ -2840,13 +3016,13 @@
 
 
       <div class="focus-label">
-        Operating Principle
+        Operating principle
       </div>
 
 
       <h2 class="focus-title">
 
-        Build around
+        Construir para
 
         <span>
           real operations.
@@ -2858,7 +3034,7 @@
       <div class="focus-steps">
 
         <div class="focus-step">
-          Customer
+          Cliente
         </div>
 
         <div class="focus-step">
@@ -2866,7 +3042,7 @@
         </div>
 
         <div class="focus-step">
-          Adoption
+          Adopción
         </div>
 
       </div>
@@ -2895,11 +3071,11 @@
       >
 
         <div class="project-link-label">
-          Selected Work
+          Work seleccionado
         </div>
 
         <strong>
-          All projects
+          Todos los proyectos
         </strong>
 
       </a>
@@ -2912,7 +3088,7 @@
       >
 
         <div class="project-link-label">
-          Next Project
+          Next project
         </div>
 
         <strong>
@@ -2951,7 +3127,7 @@
 
 
         <h3>
-          Let's connect.
+          Let’s talk.
         </h3>
 
 
