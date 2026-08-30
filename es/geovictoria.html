@@ -329,6 +329,22 @@
     }
 
 
+
+    /* =====================================================
+       STICKY HEADER
+    ===================================================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(13,23,36,.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+
+
     /* =====================================================
        HERO
     ===================================================== */
@@ -1972,7 +1988,139 @@
 
     }
 
-  </style>
+  
+    /* =====================================================
+       LEADERSHIP / SCALE
+    ===================================================== */
+
+    .leadership-card {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 28px;
+      align-items: center;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.62);
+    }
+
+    .leadership-photo {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 16px;
+      background: var(--ice);
+    }
+
+    .leadership-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .leadership-eyebrow {
+      margin-bottom: 8px;
+      color: var(--steel-light);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .leadership-name {
+      margin: 0 0 5px;
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-size: 27px;
+      font-weight: 500;
+      letter-spacing: -.035em;
+      line-height: 1.1;
+    }
+
+    .leadership-role {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .scale-grid {
+      margin-top: 36px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .scale-item {
+      min-height: 160px;
+      padding: 30px 28px;
+    }
+
+    .scale-item:nth-child(odd) {
+      border-right: 1px solid var(--line);
+    }
+
+    .scale-item:nth-child(-n+2) {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .scale-item strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(34px, 4vw, 54px);
+      font-weight: 500;
+      letter-spacing: -.05em;
+      line-height: 1;
+    }
+
+    .scale-item span {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 700px) {
+      .leadership-card {
+        grid-template-columns: 110px 1fr;
+        gap: 20px;
+        padding: 18px;
+        border-radius: 14px;
+      }
+
+      .leadership-photo {
+        border-radius: 12px;
+      }
+
+      .leadership-name {
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .scale-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .scale-item {
+        min-height: auto;
+        padding: 24px 0;
+        border-right: 0 !important;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .scale-item:last-child {
+        border-bottom: 0;
+      }
+    }
+
+
+</style>
 
 </head>
 
@@ -2213,7 +2361,7 @@
 
 
         <div class="case-period">
-          Rol actual · 2026 — Presentee
+          Rol actual · 2026 — Presente
         </div>
 
 
@@ -2229,10 +2377,10 @@
 
         <p class="hero-description">
 
-          Construyendo y desarrollando productos de workforce management
-          para operaciones enterprise en distintos mercados —
-          desde la exploración inicial y los pilotos hasta la
-          validación, iteración y adopción comercial.
+          Lidero la estrategia y evolución de soluciones de
+          Workforce Management, conectando necesidades de clientes,
+          oportunidades de negocio y tecnología para construir
+          productos escalables en Latinoamérica.
 
         </p>
 
@@ -2285,47 +2433,63 @@
 
         <!-- ROLE -->
 
+        <!-- ROLE -->
+
         <section class="section">
 
-
           <div class="section-label">
-            01 / Rol
+            01 / Mi rol
           </div>
 
-
           <h2>
-            Producto desde la validación
-            hasta la ejecución.
+            De estrategia
+            a adopción.
           </h2>
-
 
           <div class="section-copy">
 
-
             <p>
-
-              Mi trabajo se enfoca en construir y validar
-              productos de workforce management alrededor de
-              necesidades operacionales reales — transformando
-              problemas de clientes en oportunidades de producto,
-              pilotos y soluciones escalables.
-
+              Como Product Manager, lidero la estrategia,
+              roadmap y priorización de tres productos de
+              Workforce Management, equilibrando necesidades
+              de clientes, impacto de negocio y factibilidad técnica.
             </p>
 
-
             <p>
-
-              El rol se mueve entre estrategia de producto,
-              customer discovery, ejecución y adopción comercial,
-              trabajando de cerca con clientes y equipos internos
-              para entender qué construir, cómo debe funcionar
-              y qué necesita para escalar.
-
+              Trabajo desde discovery y validación con clientes
+              hasta ejecución, pilotos y adopción, conectando
+              oportunidades de mercado con soluciones escalables
+              junto a equipos de Engineering, Design, Sales,
+              Customer Success, Operations y Support.
             </p>
-
 
           </div>
 
+          <div class="leadership-card">
+
+            <div class="leadership-photo">
+              <img
+                src="../francisca-astudillo.jpg"
+                alt="Francisca Astudillo"
+                loading="lazy"
+              >
+            </div>
+
+            <div>
+              <div class="leadership-eyebrow">
+                Liderazgo
+              </div>
+
+              <h3 class="leadership-name">
+                Francisca Astudillo
+              </h3>
+
+              <div class="leadership-role">
+                CEO, GeoVictoria
+              </div>
+            </div>
+
+          </div>
 
         </section>
 
@@ -2337,13 +2501,13 @@
 
 
           <div class="section-label">
-            02 / Iniciativas seleccionadas
+            02 / Productos
           </div>
 
 
           <h2>
-            Construyendo alrededor de
-            operaciones de workforce.
+            Tres productos.
+            Un mismo sistema operativo.
           </h2>
 
 
@@ -2374,9 +2538,9 @@
 
                 <p>
 
-                  Herramientas de planificación diseñadas para
-                  simplificar la asignación de turnos, decisiones
-                  de dotación y planificación operacional.
+                  Planificación de dotación y turnos para
+                  operaciones complejas, conectando reglas,
+                  necesidades de cobertura y decisiones de staffing.
 
                 </p>
 
@@ -2411,10 +2575,9 @@
 
                 <p>
 
-                  Optimización workflows focused on
-                  matching workforce availability,
-                  operating requirements and demand
-                  more effectively.
+                  MVP de optimización orientado a cruzar
+                  disponibilidad, demanda y restricciones operativas
+                  para apoyar decisiones de dotación más eficientes.
 
                 </p>
 
@@ -2449,10 +2612,9 @@
 
                 <p>
 
-                  Un workflow estructurado para cambios e
-                  intercambios de turno, incorporando reglas
-                  configurables, aprobaciones y mayor
-                  control operacional.
+                  Workflow para cambios e intercambios de turno,
+                  con reglas configurables, aprobaciones y validaciones
+                  que entregan flexibilidad sin perder control operacional.
 
                 </p>
 
@@ -2474,105 +2636,58 @@
 
         <section class="section">
 
-
           <div class="section-label">
-            03 / Cómo trabajo
+            03 / Cómo construyo producto
           </div>
 
-
           <h2>
-            Producto en el
-            mundo real.
+            Del problema
+            al producto escalable.
           </h2>
-
 
           <div class="section-copy">
 
-
             <p>
-
-              Me interesa el trabajo de producto que se acerca
-              a las operaciones reales — donde el comportamiento
-              del cliente, las restricciones técnicas, la lógica
-              de negocio y la adopción tienen que funcionar juntas.
-
+              Trabajo cerca de clientes y operaciones reales para
+              entender problemas, validar supuestos y decidir qué
+              vale la pena construir antes de escalar desarrollo.
             </p>
 
-
           </div>
-
-
 
           <div class="work-list">
 
-
             <div class="work-item">
-
-              <div class="work-number">
-                01
-              </div>
-
-              <strong>
-                Cliente discovery y validación de producto
-              </strong>
-
+              <div class="work-number">01</div>
+              <strong>Discovery directo con clientes y operaciones</strong>
             </div>
 
-
             <div class="work-item">
-
-              <div class="work-number">
-                02
-              </div>
-
-              <strong>
-                Diseño de pilotos y ciclos de aprendizaje
-              </strong>
-
+              <div class="work-number">02</div>
+              <strong>Roadmap, priorización y definición de oportunidades</strong>
             </div>
 
-
             <div class="work-item">
-
-              <div class="work-number">
-                03
-              </div>
-
-              <strong>
-                Requerimientos, reglas y priorización
-              </strong>
-
+              <div class="work-number">03</div>
+              <strong>MVPs habilitados por IA: concepto, piloto y validación</strong>
             </div>
 
-
             <div class="work-item">
-
-              <div class="work-number">
-                04
-              </div>
-
-              <strong>
-                Alineación entre producto, comercial y equipos de clientes
-              </strong>
-
+              <div class="work-number">04</div>
+              <strong>Ejecución transversal con Engineering, Design, Sales y Customer Success</strong>
             </div>
 
-
             <div class="work-item">
-
-              <div class="work-number">
-                05
-              </div>
-
-              <strong>
-                Del piloto a una adopción escalable
-              </strong>
-
+              <div class="work-number">05</div>
+              <strong>Métricas, feedback, experimentación y aprendizaje</strong>
             </div>
 
+            <div class="work-item">
+              <div class="work-number">06</div>
+              <strong>Adopción, mejora continua y escalamiento</strong>
+            </div>
 
           </div>
-
 
         </section>
 
@@ -2582,56 +2697,81 @@
 
         <section class="section">
 
-
           <div class="section-label">
-            04 / Contexto
+            04 / Escalar
           </div>
 
-
           <h2>
-            Workforce management
-            es un sistema operativo.
+            Producto para operaciones
+            en múltiples mercados.
           </h2>
-
 
           <div class="section-copy">
 
-
             <p>
-
-              GeoVictoria trabaja con más de 10.000 clientes
-              en más de 20 países, haciendo de workforce
-              management un desafío de producto marcado por
-              la escala, la complejidad operacional y
-              realidades locales muy distintas.
-
+              GeoVictoria sirve a más de 10.000 clientes en 20+ países.
+              En ese contexto, construir Workforce Management implica
+              diseñar para escala, complejidad operacional y realidades
+              locales muy distintas.
             </p>
-
-
-            <p>
-
-              Los productos de workforce viven dentro de
-              entornos operacionales complejos: turnos,
-              reglas laborales, aprobaciones, comportamiento
-              de colaboradores, demanda del negocio y sistemas
-              existentes interactúan al mismo tiempo.
-
-            </p>
-
-
-            <p>
-
-              Eso hace que el desafío de producto sea mayor
-              que una sola interfaz. El trabajo real está en
-              diseñar sistemas que reduzcan la complejidad
-              sin quitar a las operaciones el control que
-              necesitan.
-
-            </p>
-
 
           </div>
 
+          <div class="scale-grid">
+
+            <div class="scale-item">
+              <strong>3</strong>
+              <span>Productos bajo liderazgo de producto</span>
+            </div>
+
+            <div class="scale-item">
+              <strong>10.000+</strong>
+              <span>Clientes de GeoVictoria</span>
+            </div>
+
+            <div class="scale-item">
+              <strong>20+</strong>
+              <span>Países</span>
+            </div>
+
+            <div class="scale-item">
+              <strong>Cross-functional</strong>
+              <span>Engineering · Design · Sales · CS · Ops</span>
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <section class="section">
+
+          <div class="section-label">
+            05 / Operaciones reales
+          </div>
+
+          <h2>
+            Workforce Management
+            es un sistema operativo.
+          </h2>
+
+          <div class="section-copy">
+
+            <p>
+              Los productos de workforce viven dentro de entornos
+              complejos: turnos, reglas laborales, aprobaciones,
+              comportamiento de colaboradores, demanda del negocio
+              y sistemas existentes interactúan al mismo tiempo.
+            </p>
+
+            <p>
+              El desafío no es solo diseñar una interfaz.
+              Es construir sistemas que reduzcan complejidad,
+              entreguen control a la operación y puedan adaptarse
+              a distintos clientes, mercados y formas de trabajar.
+            </p>
+
+          </div>
 
         </section>
 
@@ -2764,10 +2904,10 @@
 
           <div class="sidebar-value">
 
-            Nuevos productos<br>
-            Pilotos<br>
-            Validación de producto<br>
-            Enterprise SaaS
+            Estrategia de producto<br>
+            Discovery & validación<br>
+            AI-powered MVPs<br>
+            Adopción & escala
 
           </div>
 
@@ -2801,7 +2941,7 @@
 
       <h2 class="focus-title">
 
-        De la idea de producto
+        Del problema
 
         <span>
           a la adopción real.
