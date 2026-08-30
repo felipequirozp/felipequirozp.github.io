@@ -19,25 +19,25 @@
 
   <link
     rel="canonical"
-    href="https://felipequirozp.github.io/"
+    href="https://felipequirozp.cl/"
   >
 
   <link
     rel="alternate"
     hreflang="es"
-    href="https://felipequirozp.github.io/es/"
+    href="https://felipequirozp.cl/es/"
   >
 
   <link
     rel="alternate"
     hreflang="en"
-    href="https://felipequirozp.github.io/"
+    href="https://felipequirozp.cl/"
   >
 
   <link
     rel="alternate"
     hreflang="x-default"
-    href="https://felipequirozp.github.io/"
+    href="https://felipequirozp.cl/"
   >
 
   <!-- FAVICON -->
@@ -933,6 +933,57 @@
 
       background: var(--line);
 
+    }
+
+
+
+    /* =====================================================
+       USM VISUAL
+    ===================================================== */
+
+    .usm-visual {
+      margin-top: 32px;
+      max-width: 430px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .usm-node {
+      min-height: 38px;
+      padding: 0 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--steel);
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .usm-line {
+      width: 30px;
+      height: 1px;
+      background: var(--line);
+    }
+
+    @media(max-width: 600px) {
+      .usm-visual {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        max-width: 220px;
+      }
+
+      .usm-line {
+        width: 1px;
+        height: 14px;
+        justify-self: center;
+      }
     }
 
 
@@ -2437,6 +2488,71 @@
 
       </a>
 
+
+
+      <!-- =================================================
+           USM
+      ================================================== -->
+
+      <a
+        href="usm.html"
+        class="project"
+      >
+
+        <div class="project-number">
+          04
+        </div>
+
+        <div class="project-main">
+
+          <h3>
+            USM
+          </h3>
+
+          <div class="role">
+            Admissions Promotion Coordinator · Assistant Coordinator
+          </div>
+
+          <div class="usm-visual">
+
+            <div class="usm-node">
+              Admissions
+            </div>
+
+            <div class="usm-line"></div>
+
+            <div class="usm-node">
+              Operations
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="project-side">
+
+          <div class="project-statement">
+
+            Connecting acquisition, data and processes
+            inside higher education.
+
+          </div>
+
+          <div class="project-meta">
+
+            <span>
+              Education / Operations
+            </span>
+
+            <span>
+              2023 — 2025
+            </span>
+
+          </div>
+
+        </div>
+
+      </a>
 
     </div>
 
