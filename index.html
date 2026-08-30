@@ -17,8 +17,6 @@
     content="Felipe Quiroz — Product Manager, Co-Founder and operator working across product, growth and business."
   >
 
-
-  <!-- SEO / LANGUAGES -->
   <link
     rel="canonical"
     href="https://felipequirozp.github.io/"
@@ -26,14 +24,14 @@
 
   <link
     rel="alternate"
-    hreflang="en"
-    href="https://felipequirozp.github.io/"
+    hreflang="es"
+    href="https://felipequirozp.github.io/es/"
   >
 
   <link
     rel="alternate"
-    hreflang="es"
-    href="https://felipequirozp.github.io/es/"
+    hreflang="en"
+    href="https://felipequirozp.github.io/"
   >
 
   <link
@@ -199,7 +197,7 @@
     }
 
 
-    .nav-links > a:not(.contact-nav) {
+    .nav-links > a:not(.contact-nav):not(.lang-switch) {
 
       position: relative;
 
@@ -211,7 +209,7 @@
     }
 
 
-    .nav-links > a:not(.contact-nav)::after {
+    .nav-links > a:not(.contact-nav):not(.lang-switch)::after {
 
       content: "";
 
@@ -231,16 +229,60 @@
     }
 
 
-    .nav-links > a:not(.contact-nav):hover {
+    .nav-links > a:not(.contact-nav):not(.lang-switch):hover {
 
       color: white;
 
     }
 
 
-    .nav-links > a:not(.contact-nav):hover::after {
+    .nav-links > a:not(.contact-nav):not(.lang-switch):hover::after {
 
       width: 100%;
+
+    }
+
+
+    .lang-switch {
+
+      width: 38px;
+      height: 38px;
+
+      flex-shrink: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border:
+        1px solid rgba(255,255,255,.22);
+
+      border-radius: 50%;
+
+      color: var(--slate-light);
+
+      font-size: 9px;
+      font-weight: 600;
+
+      letter-spacing: .06em;
+
+      transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+
+    }
+
+
+    .lang-switch:hover {
+
+      background:
+        rgba(255,255,255,.10);
+
+      color: white;
+
+      border-color:
+        rgba(255,255,255,.45);
 
     }
 
@@ -276,61 +318,20 @@
     }
 
 
+
     /* =====================================================
-       LANGUAGE SWITCH
+       STICKY HEADER
     ===================================================== */
 
-    .lang-switch {
-
-      width: 38px;
-      height: 38px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      flex-shrink: 0;
-
-      border:
-        1px solid rgba(255,255,255,.22);
-
-      border-radius: 50%;
-
-      color: var(--slate-light) !important;
-
-      font-size: 9px;
-      font-weight: 600;
-
-      letter-spacing: .06em;
-
-      transition:
-        background .2s ease,
-        color .2s ease,
-        border-color .2s ease;
-
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(13,23,36,.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,.06);
     }
-
-
-    .lang-switch:hover {
-
-      background:
-        rgba(255,255,255,.10);
-
-      color: white !important;
-
-      border-color:
-        rgba(255,255,255,.45);
-
-    }
-
-
-    .nav-links > a.lang-switch::after {
-
-      display: none !important;
-
-    }
-
-
 
 
     /* =====================================================
@@ -884,7 +885,7 @@
 
 
     /* =====================================================
-       TETHERED VISUAL
+       TetherEd VISUAL
     ===================================================== */
 
     .network-visual {
@@ -1763,18 +1764,6 @@
       }
 
 
-      .lang-switch {
-
-        width: 34px;
-        height: 34px;
-
-        font-size: 8px;
-
-      }
-
-
-
-
       .hero {
 
         padding:
@@ -2024,7 +2013,7 @@
 
 
       <a href="about.html">
-        About
+        About me
       </a>
 
 
@@ -2040,10 +2029,11 @@
         Contact
       </a>
 
+
       <a
         href="es/index.html"
         class="lang-switch"
-        aria-label="Ver sitio en español"
+        aria-label="View site in Spanish"
       >
         ES
       </a>
@@ -2092,7 +2082,7 @@
         <p class="hero-description">
 
           Building products, companies and systems
-          that move ideas into the real world.
+          that turn opportunities into reality.
 
         </p>
 
@@ -2253,8 +2243,8 @@
 
           <div class="project-statement">
 
-            Building product systems for real
-            workforce operations.
+            Leading products for real
+            Workforce Management operations.
 
           </div>
 
@@ -2311,13 +2301,13 @@
           <div class="system-visual">
 
             <div class="system-dot">
-              Strategy
+              Estrategia
             </div>
 
             <div class="system-line"></div>
 
             <div class="system-dot">
-              Systems
+              Sistemas
             </div>
 
             <div class="system-line"></div>
@@ -2338,7 +2328,8 @@
 
           <div class="project-statement">
 
-            Building the system behind growth.
+            Building Growth Systems that connect
+            strategy, technology and execution.
 
           </div>
 
@@ -2364,7 +2355,7 @@
 
 
       <!-- =================================================
-           TETHERED
+           TetherEd
       ================================================== -->
 
       <a
@@ -2395,7 +2386,7 @@
           <div class="network-visual">
 
             <div class="network-node">
-              Schools
+              Colegios
             </div>
 
             <div class="network-line"></div>
@@ -2422,8 +2413,8 @@
 
           <div class="project-statement">
 
-            Expanding education access
-            through products and partnerships.
+            Connecting product, institutions and new
+            markets through partnerships.
 
           </div>
 
@@ -2488,10 +2479,10 @@
 
         <p class="about-copy">
 
-          My work has moved across product management,
-          company building and partnerships — but the
-          common thread is turning ideas into systems
-          that people actually use.
+          My experience spans product, growth,
+          partnerships and company building.
+          The common thread is turning problems and opportunities
+          into systems that can operate, learn and scale.
 
         </p>
 
@@ -2585,11 +2576,11 @@
             </div>
 
             <strong>
-              Exploring
+              Explorando
             </strong>
 
             <span>
-              AI-native products
+              AI · Agents · New models
             </span>
 
           </div>
@@ -2608,7 +2599,7 @@
 
             <img
               src="platanus-ai-native.jpg"
-              alt="AI Native Startups event at Platanus in Santiago"
+              alt="Evento AI Native Startups de Platanus en Santiago"
               loading="lazy"
             >
 
