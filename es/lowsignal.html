@@ -329,6 +329,22 @@
     }
 
 
+
+    /* =====================================================
+       STICKY HEADER
+    ===================================================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(13,23,36,.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+
+
     /* =====================================================
        HERO
     ===================================================== */
@@ -906,6 +922,64 @@
     }
 
 
+
+    /* =====================================================
+       SCALE / OPERATING PROOF
+    ===================================================== */
+
+    .proof-grid {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .proof-item {
+      min-height: 165px;
+      padding: 30px 28px;
+    }
+
+    .proof-item:nth-child(odd) {
+      border-right: 1px solid var(--line);
+    }
+
+    .proof-item:nth-child(-n+2) {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .proof-item strong {
+      display: block;
+      margin-bottom: 9px;
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(34px, 4vw, 56px);
+      font-weight: 500;
+      letter-spacing: -.05em;
+      line-height: 1;
+    }
+
+    .proof-item span {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 600px) {
+      .proof-grid { grid-template-columns: 1fr; }
+      .proof-item {
+        min-height: auto;
+        padding: 24px 0;
+        border-right: 0 !important;
+        border-bottom: 1px solid var(--line);
+      }
+      .proof-item:last-child { border-bottom: 0; }
+    }
+
+
     /* =====================================================
        ROLE LIST
     ===================================================== */
@@ -1134,6 +1208,148 @@
 
       text-transform: uppercase;
 
+    }
+
+
+
+    /* =====================================================
+       SELECTED CASES
+    ===================================================== */
+
+    .cases-section {
+      padding: 92px 0 20px;
+    }
+
+    .cases-intro {
+      max-width: 760px;
+      margin-bottom: 42px;
+    }
+
+    .cases-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .case-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(280px, .7fr);
+      gap: 44px;
+      align-items: end;
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.62);
+      text-decoration: none;
+      transition:
+        transform .22s ease,
+        border-color .22s ease,
+        background .22s ease;
+    }
+
+    .case-card:hover {
+      transform: translateY(-2px);
+      border-color: #bcc5ce;
+      background: #fff;
+    }
+
+    .case-card-topline {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .case-card-number,
+    .case-card-type {
+      font-size: 10px;
+      line-height: 1;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .case-card-number {
+      color: var(--navy);
+    }
+
+    .case-card-type {
+      color: var(--steel-light);
+    }
+
+    .case-card h3 {
+      margin: 0 0 16px;
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(34px, 4.3vw, 58px);
+      font-weight: 500;
+      letter-spacing: -.05em;
+      line-height: .98;
+    }
+
+    .case-card p {
+      margin: 0;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .case-card-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 24px;
+    }
+
+    .case-card-layers {
+      display: grid;
+      gap: 14px;
+    }
+
+    .case-layer {
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .case-layer strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .case-layer span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .case-card-link {
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 760px) {
+      .cases-section {
+        padding-top: 70px;
+      }
+
+      .case-card {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 26px;
+        border-radius: 14px;
+      }
+
+      .case-card h3 {
+        font-size: clamp(34px, 10vw, 48px);
+      }
     }
 
 
@@ -2880,7 +3096,7 @@
 
 
         <div class="case-period">
-          Co-Founder · 2025 — Presente
+          Co-Founder & COO · 2025 — Presente
         </div>
 
 
@@ -2896,10 +3112,10 @@
 
         <p class="hero-description">
 
-          Construyendo una growth company alrededor de sistemas,
-          productos digitales y ejecución — conectando
-          estrategia, tecnología, operaciones y creatividad
-          en una infraestructura de crecimiento repetible.
+          Lidero operaciones, estrategia comercial y delivery de producto,
+          construyendo Growth Systems que combinan estrategia, IA,
+          automatización, experiencias digitales y performance
+          para generar crecimiento sostenible.
 
         </p>
 
@@ -2991,7 +3207,33 @@
           </div>
 
 
-        </section>
+        
+
+          <div class="proof-grid">
+
+            <div class="proof-item">
+              <strong>15+</strong>
+              <span>Organizaciones con las que hemos trabajado</span>
+            </div>
+
+            <div class="proof-item">
+              <strong>5+</strong>
+              <span>Industrias</span>
+            </div>
+
+            <div class="proof-item">
+              <strong>End-to-end</strong>
+              <span>Motor comercial</span>
+            </div>
+
+            <div class="proof-item">
+              <strong>Cross-functional</strong>
+              <span>Product · Marketing · Design · Sales · CS</span>
+            </div>
+
+          </div>
+
+</section>
 
 
 
@@ -2999,160 +3241,60 @@
 
         <section class="section">
 
-
           <div class="section-label">
             02 / Mi rol
           </div>
-
 
           <h2>
             Operando el sistema
             detrás de la compañía.
           </h2>
 
-
           <div class="section-copy">
 
-
             <p>
-
-              Como Co-Founder & COO, mi trabajo cruza
-              operaciones de la compañía, productos, ejecución
-              del equipo y desarrollo de negocio — convirtiendo
-              ideas y oportunidades en sistemas operativos
-              repetibles.
-
+              Como Co-Founder & COO, lidero operaciones,
+              estrategia comercial y delivery de producto.
+              Mi trabajo cruza cómo vendemos, cómo entregamos
+              y cómo escalamos — convirtiendo oportunidades,
+              procesos y aprendizajes en sistemas repetibles.
             </p>
 
-
           </div>
-
-
 
           <div class="role-list">
 
-
             <div class="role-item">
-
-              <div class="role-number">
-                01
-              </div>
-
-              <strong>
-                Operaciones y ejecución de la compañía
-              </strong>
-
+              <div class="role-number">01</div>
+              <strong>Operaciones y ejecución de la compañía</strong>
             </div>
 
-
             <div class="role-item">
-
-              <div class="role-number">
-                02
-              </div>
-
-              <strong>
-                Desarrollo de productos y servicios
-              </strong>
-
+              <div class="role-number">02</div>
+              <strong>Generación de demanda, propuestas y negociación</strong>
             </div>
 
-
             <div class="role-item">
-
-              <div class="role-number">
-                03
-              </div>
-
-              <strong>
-                Sistemas de equipo y workflows
-              </strong>
-
+              <div class="role-number">03</div>
+              <strong>Growth de cuentas y estrategia go-to-market</strong>
             </div>
 
-
             <div class="role-item">
-
-              <div class="role-number">
-                04
-              </div>
-
-              <strong>
-                Desarrollo de negocio y partnerships
-              </strong>
-
+              <div class="role-number">04</div>
+              <strong>Delivery de producto y soluciones digitales</strong>
             </div>
 
-
             <div class="role-item">
-
-              <div class="role-number">
-                05
-              </div>
-
-              <strong>
-                Construcción de sistemas internos escalables
-              </strong>
-
+              <div class="role-number">05</div>
+              <strong>Liderazgo transversal entre Product, Marketing, Design, Sales y Customer Success</strong>
             </div>
 
-
-          </div>
-
-
-          <div class="cofounder-card">
-
-            <img
-              src="../damian-aldunate.jpg"
-              alt="Damián Aldunate"
-              class="cofounder-photo"
-              loading="lazy"
-            >
-
-            <div>
-
-              <div class="cofounder-eyebrow">
-                Liderazgo
-              </div>
-
-              <h3 class="cofounder-name">
-                Damián Aldunate
-              </h3>
-
-              <p class="cofounder-meta">
-                Co-Founder &amp; CMO, lowsignal
-              </p>
-
-              <p class="cofounder-copy">
-                Junto a Damián, construimos lowsignal desde
-                roles complementarios entre marca, growth,
-                operación y desarrollo de negocio.
-              </p>
-
-              <div class="cofounder-links">
-
-                <a
-                  href="https://www.linkedin.com/in/damianaldunate/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn de Damián Aldunate"
-                  title="LinkedIn"
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
-                  </svg>
-                </a>
-
-              </div>
-
+            <div class="role-item">
+              <div class="role-number">06</div>
+              <strong>Dashboards, reporting y procesos escalables</strong>
             </div>
 
           </div>
-
 
         </section>
 
@@ -3388,25 +3530,12 @@
 
           <div class="section-copy">
 
-
             <p>
-
-              La idea operativa detrás de lowsignal es
-              simple: conectar estrategia con los sistemas
-              y la ejecución necesarios para hacerla repetible.
-
+              La estrategia solo sirve cuando se convierte en sistema.
+              Por eso construimos dashboards, marcos de reporting,
+              procesos de entrega y ciclos de revisión que mejoran
+              visibilidad, decisiones, eficiencia y valor de largo plazo.
             </p>
-
-
-            <p>
-
-              Eso implica pensar el growth no como
-              entregables individuales, sino como infraestructura
-              que se puede construir, operar y mejorar
-              con el tiempo.
-
-            </p>
-
 
           </div>
 
@@ -3525,7 +3654,201 @@
         </section>
 
 
-      </div>
+      
+        <!-- SELECTED CASES -->
+        <section class="section cases-section">
+
+          <div class="section-label">
+            06 / Casos seleccionados
+          </div>
+
+          <div class="cases-intro">
+
+            <h2>
+              Sistemas aplicados
+              a negocios reales.
+            </h2>
+
+            <div class="section-copy">
+              <p>
+                Una selección de proyectos donde combinamos estrategia,
+                tecnología, contenido y ejecución para resolver problemas
+                distintos con sistemas de crecimiento concretos.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="cases-grid">
+
+            <a
+              class="case-card"
+              href="https://www.lowsignal.cl/casos-de-exito/gets"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="case-card-main">
+
+                <div class="case-card-topline">
+                  <span class="case-card-number">01 / GETS Educación</span>
+                  <span class="case-card-type">Growth System · Content · Performance · Web</span>
+                </div>
+
+                <h3>
+                  Fortaleciendo el crecimiento
+                  digital de GETS Educación.
+                </h3>
+
+                <p>
+                  Construimos un ecosistema de contenido, campañas y experiencia web
+                  para fortalecer su posicionamiento y conectar sus soluciones
+                  con nuevas audiencias.
+                </p>
+
+              </div>
+
+              <div class="case-card-side">
+
+                <div class="case-card-layers">
+
+                  <div class="case-layer">
+                    <strong>Content system</strong>
+                    <span>Planificación, piezas, reels, stories y producción audiovisual.</span>
+                  </div>
+
+                  <div class="case-layer">
+                    <strong>Performance</strong>
+                    <span>Campañas para amplificar alcance y capturar demanda.</span>
+                  </div>
+
+                  <div class="case-layer">
+                    <strong>Web experience</strong>
+                    <span>Soporte digital para ordenar la propuesta y acompañar conversión.</span>
+                  </div>
+
+                </div>
+
+                <span class="case-card-link">
+                  Ver caso completo
+                </span>
+
+              </div>
+            </a>
+
+            <a
+              class="case-card"
+              href="https://www.lowsignal.cl/casos-de-exito/fcct"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="case-card-main">
+
+                <div class="case-card-topline">
+                  <span class="case-card-number">02 / Fundación Crecer con Todos</span>
+                  <span class="case-card-type">Digital Experience · Web Platform</span>
+                </div>
+
+                <h3>
+                  Una plataforma diseñada
+                  para amplificar su impacto.
+                </h3>
+
+                <p>
+                  Rediseñamos la experiencia digital de Fundación Crecer con Todos
+                  para fortalecer su presencia online, facilitar el acceso a sus
+                  recursos educativos y comunicar su impacto a una audiencia
+                  nacional e internacional.
+                </p>
+
+              </div>
+
+              <div class="case-card-side">
+
+                <div class="case-card-layers">
+
+                  <div class="case-layer">
+                    <strong>Digital experience</strong>
+                    <span>Una experiencia web más clara, navegable y coherente con la misión de la fundación.</span>
+                  </div>
+
+                  <div class="case-layer">
+                    <strong>Information architecture</strong>
+                    <span>Organización de contenidos y recursos para facilitar acceso y descubrimiento.</span>
+                  </div>
+
+                  <div class="case-layer">
+                    <strong>Impact communication</strong>
+                    <span>Estructura pensada para comunicar programas, alcance y propuesta de valor.</span>
+                  </div>
+
+                </div>
+
+                <span class="case-card-link">
+                  Ver caso completo
+                </span>
+
+              </div>
+            </a>
+
+            <a
+              class="case-card"
+              href="https://www.lowsignal.cl/casos-de-exito/dulce-reino"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="case-card-main">
+
+                <div class="case-card-topline">
+                  <span class="case-card-number">03 / DulceReino</span>
+                  <span class="case-card-type">Brand · Content · Digital Strategy</span>
+                </div>
+
+                <h3>
+                  Creando una marca que conquista
+                  a través de cada detalle.
+                </h3>
+
+                <p>
+                  Construimos una presencia digital coherente que combina contenido,
+                  identidad y estrategia para fortalecer la marca y sostener
+                  su crecimiento en el tiempo.
+                </p>
+
+              </div>
+
+              <div class="case-card-side">
+
+                <div class="case-card-layers">
+
+                  <div class="case-layer">
+                    <strong>Brand system</strong>
+                    <span>Una identidad consistente aplicada a los puntos de contacto digitales.</span>
+                  </div>
+
+                  <div class="case-layer">
+                    <strong>Content strategy</strong>
+                    <span>Contenido pensado para construir marca, mantener presencia y conectar con la audiencia.</span>
+                  </div>
+
+                  <div class="case-layer">
+                    <strong>Digital growth</strong>
+                    <span>Una estrategia continua para transformar visibilidad en crecimiento sostenible.</span>
+                  </div>
+
+                </div>
+
+                <span class="case-card-link">
+                  Ver caso completo
+                </span>
+
+              </div>
+            </a>
+
+          </div>
+
+        </section>
+
+</div>
 
 
 
@@ -3637,9 +3960,9 @@
           <div class="sidebar-value">
 
             Operaciones<br>
-            Growth systems<br>
-            Productos digitales<br>
-            Construcción de compañía
+            Estrategia comercial<br>
+            Growth Systems<br>
+            Delivery de producto
 
           </div>
 
