@@ -1210,6 +1210,132 @@
     }
 
 
+
+    /* =====================================================
+       SELECTED PROJECT CASES
+    ===================================================== */
+
+    .project-cases { margin-top:44px; display:grid; gap:18px; }
+
+    .project-case {
+      padding:30px 32px;
+      display:grid;
+      grid-template-columns:46px minmax(0,1.35fr) minmax(260px,.65fr);
+      gap:26px;
+      align-items:start;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:rgba(255,255,255,.42);
+    }
+
+    .project-case-number {
+      padding-top:5px;
+      color:var(--steel-light);
+      font-size:9px;
+      font-weight:600;
+      letter-spacing:.08em;
+    }
+
+    .project-case-type,
+    .project-case-side-label {
+      margin-bottom:11px;
+      color:var(--steel-light);
+      font-size:9px;
+      font-weight:600;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .project-case h3 {
+      max-width:670px;
+      margin:0 0 13px;
+      color:var(--navy);
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(22px,2.5vw,32px);
+      font-weight:520;
+      letter-spacing:-.035em;
+      line-height:1.1;
+    }
+
+    .project-case-description {
+      max-width:690px;
+      margin:0;
+      color:#4c5864;
+      font-size:13px;
+      line-height:1.78;
+    }
+
+    .project-case-side {
+      padding-left:24px;
+      border-left:1px solid var(--line);
+    }
+
+    .project-case-side p {
+      margin:0;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.72;
+    }
+
+    .project-case-metrics {
+      margin-top:18px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    .project-case-metric {
+      padding:7px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:var(--steel);
+      font-size:9px;
+      font-weight:600;
+      letter-spacing:.03em;
+      background:var(--white);
+    }
+
+    .project-case-link {
+      margin-top:18px;
+      display:inline-flex;
+      color:var(--navy);
+      font-size:11px;
+      font-weight:600;
+      text-decoration:none;
+      border-bottom:1px solid rgba(24,37,54,.22);
+      padding-bottom:2px;
+    }
+
+    .project-case-link:hover { border-color:var(--navy); }
+
+    @media (max-width:860px) {
+      .project-case { grid-template-columns:36px minmax(0,1fr); }
+      .project-case-side {
+        grid-column:2;
+        padding-left:0;
+        padding-top:20px;
+        border-left:0;
+        border-top:1px solid var(--line);
+      }
+    }
+
+    @media (max-width:600px) {
+      .project-cases { margin-top:32px; }
+      .project-case {
+        padding:24px 20px;
+        grid-template-columns:1fr;
+        gap:12px;
+        border-radius:14px;
+      }
+      .project-case-number { padding-top:0; }
+      .project-case-side {
+        grid-column:auto;
+        padding-top:18px;
+      }
+      .project-case-description { font-size:12px; }
+    }
+
+
     /* =====================================================
        PROJECTS
     ===================================================== */
@@ -3800,184 +3926,151 @@
 
 
 
+
         <!-- SELECTED PROJECTS -->
 
         <section class="section">
-
 
           <div class="section-label">
             04 / Proyectos seleccionados
           </div>
 
-
           <h2>
-            Partnerships
-            en distintos mercados.
+            Producto, implementación
+            y transformación a escala.
           </h2>
 
-
-
-          <div class="projects">
-
-
-            <div class="project">
-
-
-              <div class="project-number">
-                01
-              </div>
-
-
-              <div class="project-main">
-
-                <strong>
-                  SLEP del Pino
-                </strong>
-
-                <span>
-                  Educación pública
-                </span>
-
-              </div>
-
-
-              <div class="project-market">
-                Chile
-              </div>
-
-
-            </div>
-
-
-
-            <div class="project">
-
-
-              <div class="project-number">
-                02
-              </div>
-
-
-              <div class="project-main">
-
-                <strong>
-                  CORMUN Rancagua
-                </strong>
-
-                <span>
-                  Educación municipal
-                </span>
-
-              </div>
-
-
-              <div class="project-market">
-                Chile
-              </div>
-
-
-            </div>
-
-
-
-            <div class="project">
-
-
-              <div class="project-number">
-                03
-              </div>
-
-
-              <div class="project-main">
-
-                <strong>
-                  JUNJI
-                </strong>
-
-                <span>
-                  Educación inicial
-                </span>
-
-              </div>
-
-
-              <div class="project-market">
-                Chile
-              </div>
-
-
-            </div>
-
-
-
-            <div class="project">
-
-
-              <div class="project-number">
-                04
-              </div>
-
-
-              <div class="project-main">
-
-                <strong>
-                  Mentu
-                </strong>
-
-                <span>
-                  Partnership
-                </span>
-
-              </div>
-
-
-              <div class="project-market">
-                Colombia
-              </div>
-
-
-            </div>
-
-
-
-            <a
-              href="https://www.nhps.net/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project external"
-            >
-
-
-              <div class="project-number">
-                05
-              </div>
-
-
-              <div class="project-main">
-
-                <strong>
-                  New Haven Public Schools
-                </strong>
-
-                <span>
-                  Educación pública
-                </span>
-
-              </div>
-
-
-              <div class="project-market">
-                Estados Unidos
-              </div>
-
-
-            </a>
-
-
+          <div class="section-copy">
+            <p>
+              Algunos de los proyectos que mejor resumen mi etapa en
+              Tether Education: desde productos AI-native hasta
+              implementaciones de educación pública y adopción de IA
+              en múltiples instituciones.
+            </p>
           </div>
 
+          <div class="project-cases">
 
-        
+            <article class="project-case">
+              <div class="project-case-number">01</div>
+              <div>
+                <div class="project-case-type">Producto · Descubrimiento con IA</div>
+                <h3>Virtual School Explorer</h3>
+                <p class="project-case-description">
+                  Plataforma de exploración educativa con mapa, filtros personalizados,
+                  perfiles enriquecidos y un asistente de IA que ayuda a las familias a
+                  descubrir, comparar y evaluar alternativas con mayor claridad.
+                </p>
+                <div class="project-case-metrics">
+                  <span class="project-case-metric">Búsqueda inteligente de colegios</span>
+                  <span class="project-case-metric">Insights de admisión</span>
+                  <span class="project-case-metric">Vacantes en tiempo real</span>
+                  <span class="project-case-metric">Asistente de IA</span>
+                </div>
+
+                <a
+                  href="https://explorador.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-case-link"
+                >
+                  Ver Explorador
+                </a>
+              </div>
+              <div class="project-case-side">
+                <div class="project-case-side-label">Mi aporte</div>
+                <p>
+                  Conecté necesidades de instituciones y familias con oportunidades de
+                  producto, partnership y adopción, llevando señales del mercado hacia
+                  iniciativas de crecimiento y desarrollo.
+                </p>
+              </div>
+            </article>
+
+            <article class="project-case">
+              <div class="project-case-number">02</div>
+              <div>
+                <div class="project-case-type">Educación pública · Chile</div>
+                <h3>Public Education Digital Transformation</h3>
+                <p class="project-case-description">
+                  Lideré iniciativas estratégicas y de implementación junto a SLEP del Pino
+                  y CORMUN Rancagua para digitalizar procesos de admisión y ampliar el acceso
+                  a infraestructura digital de postulación en educación pública.
+                </p>
+                <div class="project-case-metrics">
+                  <span class="project-case-metric">100+ colegios públicos</span>
+                  <span class="project-case-metric">35.000+ estudiantes</span>
+                  <span class="project-case-metric">2 sistemas públicos</span>
+                </div>
+              </div>
+              <div class="project-case-side">
+                <div class="project-case-side-label">Mi aporte</div>
+                <p>
+                  Coordiné stakeholders públicos, equipos directivos y equipos internos
+                  de producto, traduciendo requerimientos institucionales y operativos
+                  en estrategias de implementación escalables.
+                </p>
+              </div>
+            </article>
+
+            <article class="project-case">
+              <div class="project-case-number">03</div>
+              <div>
+                <div class="project-case-type">IA · Educación pública · Chile</div>
+                <h3>AI-Powered Education Transformation</h3>
+                <p class="project-case-description">
+                  Iniciativa internacional desarrollada junto a Columbia University,
+                  OpenAI, Tether Education y SLEP del Pino para acelerar una adopción
+                  responsable y equitativa de IA en escuelas públicas de Chile.
+                </p>
+                <div class="project-case-metrics">
+                  <span class="project-case-metric">50+ instituciones</span>
+                  <span class="project-case-metric">OpenAI</span>
+                  <span class="project-case-metric">Columbia University</span>
+                  <span class="project-case-metric">Adopción de IA a escala</span>
+                </div>
+              </div>
+              <div class="project-case-side">
+                <div class="project-case-side-label">Mi aporte</div>
+                <p>
+                  Lideré la implementación en establecimientos participantes, coordinando
+                  ejecución, stakeholders y la conexión entre investigación, necesidades
+                  institucionales y soluciones habilitadas por IA.
+                </p>
+              </div>
+            </article>
+
+            <article class="project-case">
+              <div class="project-case-number">04</div>
+              <div>
+                <div class="project-case-type">Producto nativo en IA · Colegios</div>
+                <h3>Tether Studio</h3>
+                <p class="project-case-description">
+                  Plataforma de fotografía escolar con IA que centraliza retratos,
+                  eventos, anuarios, consentimiento, portal de familias y administración
+                  escolar en un solo flujo digital.
+                </p>
+                <div class="project-case-metrics">
+                  <span class="project-case-metric">−82% horas operativas</span>
+                  <span class="project-case-metric">6 semanas hasta operar</span>
+                  <span class="project-case-metric">1 plataforma · 5 etapas</span>
+                  <span class="project-case-metric">100% consentimiento auditable</span>
+                </div>
+                <a href="https://tetherstudio.ai/" target="_blank" rel="noopener noreferrer" class="project-case-link">
+                  Ver Tether Studio
+                </a>
+              </div>
+              <div class="project-case-side">
+                <div class="project-case-side-label">Mi aporte</div>
+                <p>
+                  Trabajé en la construcción y posicionamiento del producto, conectando
+                  necesidades operativas de colegios con una experiencia digital más
+                  simple para equipos y familias.
+                </p>
+              </div>
+            </article>
+
+          </div>
 
           <div class="field-block">
 
