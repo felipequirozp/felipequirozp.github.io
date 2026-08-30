@@ -518,7 +518,7 @@
       display: grid;
 
       grid-template-columns:
-        repeat(3, 1fr);
+        repeat(2, 1fr);
 
       gap: 14px;
 
@@ -1049,7 +1049,7 @@
     }
 
 
-    .metric:not(:last-child) {
+    .metric:nth-child(odd) {
 
       border-right:
         1px solid var(--line);
@@ -1057,9 +1057,17 @@
     }
 
 
-    .metric:not(:first-child) {
+    .metric:nth-child(even) {
 
       padding-left: 26px;
+
+    }
+
+
+    .metric:nth-child(-n+2) {
+
+      border-bottom:
+        1px solid var(--line);
 
     }
 
@@ -1225,10 +1233,18 @@
       align-items:start;
       border:1px solid var(--line);
       border-radius:18px;
-      background:rgba(255,255,255,.42);
+      background:rgba(255,255,255,.55);
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
     }
 
-    .project-case-number {
+    
+    .project-case:hover {
+      transform: translateY(-2px);
+      border-color: var(--slate-light);
+      background: rgba(255,255,255,.78);
+    }
+
+.project-case-number {
       padding-top:5px;
       color:var(--steel-light);
       font-size:9px;
@@ -3330,9 +3346,9 @@
               </div>
 
               <div class="network-meta-copy">
-                Descubrimiento<br>
-                Acceso<br>
-                Postulaciones
+                Explorar<br>
+                Comparar<br>
+                Postular
               </div>
 
             </div>
@@ -3346,9 +3362,9 @@
               </div>
 
               <div class="network-meta-copy">
-                Sector público<br>
-                Instituciones<br>
-                Ecosistemas
+                Gobiernos<br>
+                Redes escolares<br>
+                Instituciones
               </div>
 
             </div>
@@ -3384,16 +3400,16 @@
 
 
         <div class="visual-kicker">
-          Educación sin fricción
+          Acceso, información y decisiones
         </div>
 
 
         <h2 class="visual-title">
 
-          Conectando comunidades
+          Infraestructura para elegir mejor.
 
           <span>
-            con mejores opciones para acceder a la educación.
+            Y acceder con menos fricción.
           </span>
 
         </h2>
@@ -3436,7 +3452,7 @@
 
 
         <div class="case-period">
-          Rol anterior · 2024 — 2026
+          Head of Partnerships · 2025 — 2026
         </div>
 
 
@@ -3452,10 +3468,10 @@
 
         <p class="hero-description">
 
-          Construyendo partnerships alrededor de productos
-          educativos centrados en las personas — conectando
-          colegios, instituciones públicas y comunidades en
-          Latinoamérica y mercados internacionales.
+          Lideré la estrategia de partnerships, desarrollo de negocio
+          y expansión en Latinoamérica, conectando gobiernos,
+          redes escolares y organizaciones educativas con
+          infraestructura digital de admisión y matrícula habilitada por IA.
 
         </p>
 
@@ -3467,15 +3483,15 @@
           </div>
 
           <div class="tag">
-            EdTech
+            GovTech
           </div>
 
           <div class="tag">
-            Expansión
+            IA &amp; Educación
           </div>
 
           <div class="tag">
-            Sector público
+            Expansión LATAM
           </div>
 
         </div>
@@ -3508,43 +3524,33 @@
 
         <section class="section">
 
-
           <div class="section-label">
             01 / Rol
           </div>
 
-
           <h2>
-            Partnerships alrededor de
-            un desafío de producto complejo.
+            Conectar mercado,
+            producto y ejecución.
           </h2>
-
 
           <div class="section-copy">
 
-
             <p>
-
-              TetherEd construye productos de orientación centrados
-              en las personas para elección escolar y admisión —
-              ayudando a las familias a navegar sistemas educativos
-              complejos y tomar decisiones mejor informadas.
-
+              Tether Education es una GovTech estadounidense incubada
+              en ConsiliumBots, enfocada en infraestructura digital
+              para elección escolar, admisión y matrícula.
             </p>
 
-
             <p>
-
-              Como Head of Partnerships, conecté el producto con
-              sistemas educativos, instituciones públicas y partners
-              en distintos mercados, convirtiendo relaciones
-              institucionales en implementaciones reales y adopción.
-
+              Como Head of Partnerships, lideré estrategia de alianzas,
+              desarrollo de negocio y expansión en Latinoamérica.
+              Trabajé con gobiernos, redes escolares y organizaciones
+              educativas, coordinando iniciativas con Sales, Product,
+              Engineering, Marketing y Operations para convertir
+              oportunidades en adopción real.
             </p>
-
 
           </div>
-
 
           <div class="leadership-card">
 
@@ -3589,7 +3595,7 @@
             <div>
 
               <div class="leadership-eyebrow">
-                Liderazgo
+                Liderazgo directo
               </div>
 
               <h3 class="leadership-name">
@@ -3603,8 +3609,8 @@
 
               <p class="leadership-copy">
                 Trabajé de forma directa y cercana con Christopher,
-                impulsando partnerships, relaciones institucionales
-                e iniciativas de expansión de Tether Education.
+                alineando partnerships, relaciones institucionales
+                e iniciativas de expansión con la evolución del producto.
               </p>
 
               <div class="leadership-links">
@@ -3616,15 +3622,7 @@
                   aria-label="Sitio web de Christopher Neilson"
                   title="Sitio web"
                 >
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <circle cx="12" cy="12" r="9"></circle>
                     <path d="M3 12h18"></path>
                     <path d="M12 3c2.5 2.5 3.8 5.5 3.8 9S14.5 18.5 12 21"></path>
@@ -3639,11 +3637,7 @@
                   aria-label="LinkedIn de Christopher Neilson"
                   title="LinkedIn"
                 >
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
                   </svg>
                 </a>
@@ -3654,7 +3648,6 @@
 
           </div>
 
-
         </section>
 
 
@@ -3663,82 +3656,49 @@
 
         <section class="section">
 
-
           <div class="section-label">
             02 / Escala
           </div>
 
-
           <h2>
-            Ampliando el alcance
-            en educación.
+            Partnerships con
+            alcance medible.
           </h2>
-
 
           <div class="section-copy">
 
-
             <p>
-
-              La plataforma conectó opciones educativas,
-              familias e instituciones en Latinoamérica,
-              Estados Unidos, Dinamarca y España — combinando
-              descubrimiento de colegios, orientación para admisión
-              y partnerships institucionales.
-
+              Construí y escalé el ecosistema de partnerships en
+              múltiples mercados, combinando relaciones públicas
+              y privadas con una operación comercial orientada
+              a adopción, visibilidad y crecimiento.
             </p>
 
-
           </div>
-
-
 
           <div class="metrics">
 
-
             <div class="metric">
-
-              <strong>
-                600+
-              </strong>
-
-              <span>
-                Colegios con perfil en la plataforma
-              </span>
-
+              <strong>14+</strong>
+              <span>Organizaciones conectadas</span>
             </div>
 
-
-
             <div class="metric">
-
-              <strong>
-                2M+
-              </strong>
-
-              <span>
-                Postulaciones históricas
-              </span>
-
+              <strong>20.000+</strong>
+              <span>Familias alcanzadas</span>
             </div>
 
-
-
             <div class="metric">
-
-              <strong>
-                LATAM+
-              </strong>
-
-              <span>
-                Estados Unidos · Dinamarca · España
-              </span>
-
+              <strong>1M+</strong>
+              <span>Postulaciones gestionadas por la plataforma en 2024</span>
             </div>
 
+            <div class="metric">
+              <strong>5M+</strong>
+              <span>Vistas de perfiles en 2024</span>
+            </div>
 
           </div>
-
 
         </section>
 
@@ -3748,179 +3708,87 @@
 
         <section class="section">
 
-
           <div class="section-label">
-            03 / Producto
+            03 / Producto e IA
           </div>
 
-
           <h2>
-            Haciendo más simples
-            sistemas educativos complejos.
+            Llevar señales del mercado
+            de vuelta al producto.
           </h2>
-
 
           <div class="section-copy">
 
-
             <p>
-
-              El producto combinó tecnología, datos
-              e investigación para simplificar la elección
-              escolar y los procesos de admisión — mientras
-              construía la infraestructura de medición necesaria
-              para aprender, evaluar y mejorar.
-
+              Trabajé con Product y Engineering para traducir
+              necesidades de clientes, instituciones y familias
+              en mejoras de producto e iniciativas habilitadas por IA.
+              La lógica era simple: usar el mercado como fuente de
+              aprendizaje y convertir ese aprendizaje en producto.
             </p>
 
-
           </div>
-
 
           <div class="product-collaboration">
 
             <div class="product-collaboration-label">
-              Colaboración
+              IA aplicada
             </div>
 
             <p class="product-collaboration-copy">
-              <strong>Tether Education colaboró con OpenAI</strong>
-              en iniciativas vinculadas al uso de IA aplicada
-              a educación y acceso.
+              El trabajo incluyó iniciativas desarrolladas junto a
+              <strong>OpenAI</strong> y, en proyectos específicos,
+              <strong>Columbia University</strong> y
+              <strong>SLEP del Pino</strong>, conectando investigación,
+              necesidades institucionales e implementación.
             </p>
 
           </div>
 
-
-
           <div class="product-grid">
 
-
             <div class="product-item">
-
-
-              <div class="product-number">
-                01
-              </div>
-
-
-              <h3>
-                Orientación interactiva
-              </h3>
-
-
-              <div class="product-type">
-                Orientación
-              </div>
-
-
+              <div class="product-number">01</div>
+              <h3>Señales de mercado</h3>
+              <div class="product-type">Descubrimiento</div>
               <p>
-
-                Explicaciones claras y adaptadas a mobile
-                sobre reglas educativas, procesos de admisión
-                y opciones disponibles.
-
+                Convertir conversaciones con instituciones y familias
+                en señales útiles para priorización y evolución del producto.
               </p>
-
-
             </div>
 
-
-
             <div class="product-item">
-
-
-              <div class="product-number">
-                02
-              </div>
-
-
-              <h3>
-                Búsqueda guiada
-              </h3>
-
-
-              <div class="product-type">
-                Descubrimiento
-              </div>
-
-
+              <div class="product-number">02</div>
+              <h3>Producto &amp; Ingeniería</h3>
+              <div class="product-type">Traducción</div>
               <p>
-
-                Ayudando a las familias a descubrir opciones
-                educativas según sus preferencias,
-                restricciones y contexto local.
-
+                Traducir requerimientos comerciales y operativos
+                en problemas concretos que los equipos técnicos
+                pudieran diseñar, construir y validar.
               </p>
-
-
             </div>
 
-
-
             <div class="product-item">
-
-
-              <div class="product-number">
-                03
-              </div>
-
-
-              <h3>
-                Mejores decisiones
-              </h3>
-
-
-              <div class="product-type">
-                Apoyo a decisiones
-              </div>
-
-
+              <div class="product-number">03</div>
+              <h3>IA aplicada</h3>
+              <div class="product-type">Innovación</div>
               <p>
-
-                Haciendo la información más fácil de interpretar
-                para que las familias puedan comparar opciones
-                y tomar decisiones mejor informadas.
-
+                Conectar oportunidades de IA con necesidades reales
+                de acceso, orientación y operación dentro de comunidades educativas.
               </p>
-
-
             </div>
 
-
-
             <div class="product-item">
-
-
-              <div class="product-number">
-                04
-              </div>
-
-
-              <h3>
-                Diseñado para aprender
-              </h3>
-
-
-              <div class="product-type">
-                Medición
-              </div>
-
-
+              <div class="product-number">04</div>
+              <h3>Medición</h3>
+              <div class="product-type">Aprendizaje</div>
               <p>
-
-                Infraestructura de producto y medición
-                diseñada para evaluación, iteración
-                y mejora continua.
-
+                Diseñar la operación y los procesos para aprender
+                desde la adopción, medir resultados e iterar con evidencia.
               </p>
-
-
             </div>
-
 
           </div>
-
 
         </section>
 
@@ -3942,10 +3810,10 @@
 
           <div class="section-copy">
             <p>
-              Algunos de los proyectos que mejor resumen mi etapa en
-              Tether Education: desde productos AI-native hasta
-              implementaciones de educación pública y adopción de IA
-              en múltiples instituciones.
+              Una selección de iniciativas donde participé conectando
+              producto, instituciones y ejecución: desde herramientas
+              de descubrimiento educativo hasta transformación digital
+              y adopción de IA en educación pública.
             </p>
           </div>
 
@@ -3957,13 +3825,14 @@
                 <div class="project-case-type">Producto · Descubrimiento con IA</div>
                 <h3>Virtual School Explorer</h3>
                 <p class="project-case-description">
-                  Plataforma de exploración educativa con mapa, filtros personalizados,
-                  perfiles enriquecidos y un asistente de IA que ayuda a las familias a
-                  descubrir, comparar y evaluar alternativas con mayor claridad.
+                  Plataforma de descubrimiento educativo con mapa,
+                  filtros personalizados, perfiles enriquecidos,
+                  disponibilidad, estimación de admisión y un asistente
+                  de IA que ayuda a las familias a explorar y comparar opciones.
                 </p>
                 <div class="project-case-metrics">
-                  <span class="project-case-metric">Búsqueda inteligente de colegios</span>
-                  <span class="project-case-metric">Insights de admisión</span>
+                  <span class="project-case-metric">Búsqueda por mapa</span>
+                  <span class="project-case-metric">Probabilidad de admisión</span>
                   <span class="project-case-metric">Vacantes en tiempo real</span>
                   <span class="project-case-metric">Asistente de IA</span>
                 </div>
@@ -3980,9 +3849,10 @@
               <div class="project-case-side">
                 <div class="project-case-side-label">Mi aporte</div>
                 <p>
-                  Conecté necesidades de instituciones y familias con oportunidades de
-                  producto, partnership y adopción, llevando señales del mercado hacia
-                  iniciativas de crecimiento y desarrollo.
+                  Conecté necesidades de instituciones y familias
+                  con oportunidades de producto y adopción, llevando
+                  señales del mercado hacia decisiones de partnership
+                  y desarrollo.
                 </p>
               </div>
             </article>
@@ -3990,7 +3860,7 @@
             <article class="project-case">
               <div class="project-case-number">02</div>
               <div>
-                <div class="project-case-type">Educación pública · Chile</div>
+                <div class="project-case-type">Educación pública · Chile · ago.–dic. 2024</div>
                 <h3>Public Education Digital Transformation</h3>
                 <p class="project-case-description">
                   Lideré iniciativas estratégicas y de implementación junto a SLEP del Pino
@@ -4016,7 +3886,7 @@
             <article class="project-case">
               <div class="project-case-number">03</div>
               <div>
-                <div class="project-case-type">IA · Educación pública · Chile</div>
+                <div class="project-case-type">IA · Educación pública · Chile · jul.–dic. 2025</div>
                 <h3>AI-Powered Education Transformation</h3>
                 <p class="project-case-description">
                   Iniciativa internacional desarrollada junto a Columbia University,
@@ -4043,7 +3913,7 @@
             <article class="project-case">
               <div class="project-case-number">04</div>
               <div>
-                <div class="project-case-type">Producto nativo en IA · Colegios</div>
+                <div class="project-case-type">Producto con IA · Operaciones escolares</div>
                 <h3>Tether Studio</h3>
                 <p class="project-case-description">
                   Plataforma de fotografía escolar con IA que centraliza retratos,
@@ -4076,22 +3946,22 @@
 
 
             <div class="field-kicker">
-              Equipo &amp; partnerships
+              Trabajo en contexto
             </div>
 
 
             <h3 class="field-heading">
-              Construyendo junto a
-              equipos e instituciones.
+              La adopción se construye
+              con personas.
             </h3>
 
 
             <p class="field-copy">
 
-              Parte del trabajo fue colaborar directamente con equipos,
-              instituciones y comunidades educativas: entendiendo contextos,
-              construyendo relaciones y llevando ideas y partnerships
-              hasta implementaciones reales.
+              Gran parte del rol ocurrió fuera del pipeline:
+              sesiones con equipos internos, líderes educativos e
+              instituciones. Ahí las necesidades reales se convertían
+              en decisiones de producto, implementación y adopción.
 
             </p>
 
@@ -4196,106 +4066,58 @@
 
         <section class="section">
 
-
           <div class="section-label">
-            05 / Cómo trabajé
+            05 / Sistema operativo
           </div>
 
-
           <h2>
-            Del partnership
-            a la adopción.
+            De la oportunidad
+            a la implementación.
           </h2>
-
 
           <div class="section-copy">
 
-
             <p>
-
-              El trabajo requería conectar relaciones
-              institucionales con adopción de producto —
-              entendiendo cómo operan las organizaciones
-              educativas, qué necesitan y cómo un producto
-              puede integrarse a esos sistemas.
-
+              Mi rol combinó desarrollo comercial, coordinación
+              institucional y construcción de sistemas internos
+              para que la expansión fuera visible, medible y repetible.
             </p>
 
-
           </div>
-
-
 
           <div class="work-list">
 
-
             <div class="work-item">
-
-              <div class="work-number">
-                01
-              </div>
-
-              <strong>
-                Desarrollo de partnerships
-              </strong>
-
+              <div class="work-number">01</div>
+              <strong>Estrategia de partnerships y desarrollo de negocio</strong>
             </div>
 
-
             <div class="work-item">
-
-              <div class="work-number">
-                02
-              </div>
-
-              <strong>
-                Gestión de relaciones institucionales y con el sector público
-              </strong>
-
+              <div class="work-number">02</div>
+              <strong>Pipeline, prospección y negociación</strong>
             </div>
 
-
             <div class="work-item">
-
-              <div class="work-number">
-                03
-              </div>
-
-              <strong>
-                Expansión de mercados y desarrollo de ecosistemas
-              </strong>
-
+              <div class="work-number">03</div>
+              <strong>Relaciones con sector público y privado</strong>
             </div>
 
-
             <div class="work-item">
-
-              <div class="work-number">
-                04
-              </div>
-
-              <strong>
-                Onboarding y activación de partners
-              </strong>
-
+              <div class="work-number">04</div>
+              <strong>Ejecución transversal con Sales, Product, Marketing y Operations</strong>
             </div>
 
-
             <div class="work-item">
-
-              <div class="work-number">
-                05
-              </div>
-
-              <strong>
-                Conectar oportunidades con adopción de producto
-              </strong>
-
+              <div class="work-number">05</div>
+              <strong>Señales de mercado hacia mejoras de producto e IA</strong>
             </div>
 
+            <div class="work-item">
+              <div class="work-number">06</div>
+              <strong>CRM, tableros, reportes y procesos escalables</strong>
+            </div>
 
           </div>
-
 
         </section>
 
@@ -4316,7 +4138,7 @@
           </div>
 
           <div class="sidebar-value">
-            TetherEd
+            Tether Education
           </div>
 
         </div>
@@ -4366,7 +4188,7 @@
           </div>
 
           <div class="sidebar-value">
-            EdTech
+            GovTech / EdTech
           </div>
 
         </div>
@@ -4397,7 +4219,7 @@
           </div>
 
           <div class="sidebar-value">
-            2024 — 2026
+            may. 2025 — jun. 2026
           </div>
 
         </div>
@@ -4412,9 +4234,9 @@
 
           <div class="sidebar-value">
             Partnerships<br>
+            Desarrollo de negocio<br>
             Expansión<br>
-            Sector público<br>
-            Acceso a la educación
+            Adopción de producto
           </div>
 
         </div>
@@ -4441,16 +4263,16 @@
 
 
       <div class="focus-label">
-        Foco de partnerships
+        Principio de partnerships
       </div>
 
 
       <h2 class="focus-title">
 
-        Conecta el ecosistema.
+        Conecta actores.
 
         <span>
-          Amplía el acceso.
+          Convierte relaciones en adopción.
         </span>
 
       </h2>
@@ -4459,15 +4281,15 @@
       <div class="focus-steps">
 
         <div class="focus-step">
-          Conectar
+          Entender
+        </div>
+
+        <div class="focus-step">
+          Alinear
         </div>
 
         <div class="focus-step">
           Implementar
-        </div>
-
-        <div class="focus-step">
-          Escalar
         </div>
 
       </div>
@@ -4487,10 +4309,10 @@
 
       <h2 class="focus-title">
 
-        Simplifica lo complejo.
+        Escucha el mercado.
 
         <span>
-          Facilita la decisión.
+          Construye mejor.
         </span>
 
       </h2>
@@ -4499,15 +4321,15 @@
       <div class="focus-steps">
 
         <div class="focus-step">
-          Orientación
+          Señales
         </div>
 
         <div class="focus-step">
-          Acceso
+          Producto
         </div>
 
         <div class="focus-step">
-          Decisiones
+          Aprendizaje
         </div>
 
       </div>
