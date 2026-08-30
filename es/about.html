@@ -1615,6 +1615,48 @@
       cursor: default;
     }
 
+  
+    /* =====================================================
+       CV DOWNLOAD
+    ===================================================== */
+
+    .cv-download {
+      margin-top: 34px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--navy);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease,
+        transform .2s ease;
+    }
+
+    .cv-download:hover {
+      background: var(--navy);
+      color: white;
+      border-color: var(--navy);
+      transform: translateY(-2px);
+    }
+
+    .cv-download svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
   </style>
 
 </head>
@@ -1808,6 +1850,25 @@
           y las nuevas formas de construir compañías con
           equipos pequeños, tecnología y sistemas bien diseñados.
         </p>
+
+
+        <a
+          href="../felipe-quiroz-cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cv-download"
+        >
+          Descargar CV
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path d="M12 4v10"></path>
+            <path d="m8 10 4 4 4-4"></path>
+            <path d="M5 19h14"></path>
+          </svg>
+        </a>
 
       </div>
 
