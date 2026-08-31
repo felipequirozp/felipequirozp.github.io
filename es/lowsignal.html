@@ -3061,6 +3061,175 @@
       }
     }
 
+  
+    /* =====================================================
+       LOWSIGNAL — TETHER-LIKE EDITORIAL REFINEMENT
+    ===================================================== */
+
+    .capability-list {
+      margin-top: 42px;
+      border-top: 1px solid var(--line);
+    }
+
+    .capability-row {
+      display: grid;
+      grid-template-columns: 56px minmax(220px,.65fr) 1.35fr;
+      gap: 26px;
+      align-items: start;
+      padding: 25px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .capability-number {
+      color: var(--steel-light);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .07em;
+    }
+
+    .capability-row h3 {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      font-size: 22px;
+      line-height: 1.15;
+      letter-spacing: -.03em;
+      color: var(--navy);
+    }
+
+    .capability-row p {
+      margin: 0;
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.75;
+    }
+
+    .operating-flow {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: clamp(42px, 7vw, 92px);
+      align-items: start;
+      margin-top: 38px;
+    }
+
+    .operating-flow-copy {
+      max-width: 500px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .flow-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .flow-row {
+      display: grid;
+      grid-template-columns: 42px 1fr auto;
+      gap: 18px;
+      align-items: baseline;
+      padding: 17px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .flow-row span:first-child {
+      color: var(--steel-light);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .07em;
+    }
+
+    .flow-row strong {
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .flow-row em {
+      color: var(--muted);
+      font-size: 10px;
+      font-style: normal;
+    }
+
+    .traction-layout {
+      display: grid;
+      grid-template-columns: .78fr 1.22fr;
+      gap: clamp(46px, 7vw, 96px);
+      align-items: start;
+      margin-top: 36px;
+    }
+
+    .traction-statement {
+      max-width: 510px;
+      font-family: "Manrope", sans-serif;
+      color: var(--navy);
+      font-size: clamp(30px, 3.5vw, 48px);
+      line-height: 1.08;
+      letter-spacing: -.045em;
+      font-weight: 500;
+    }
+
+    .traction-statement span {
+      color: var(--steel-light);
+    }
+
+    .traction-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .traction-row {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 22px;
+      align-items: baseline;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .traction-row strong {
+      font-family: "Manrope", sans-serif;
+      color: var(--navy);
+      font-size: clamp(28px, 3vw, 42px);
+      font-weight: 500;
+      letter-spacing: -.04em;
+    }
+
+    .traction-row span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    @media(max-width:800px){
+      .capability-row {
+        grid-template-columns: 38px 1fr;
+      }
+
+      .capability-row p {
+        grid-column: 2;
+      }
+
+      .operating-flow,
+      .traction-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media(max-width:600px){
+      .traction-row {
+        grid-template-columns: 86px 1fr;
+      }
+
+      .flow-row {
+        grid-template-columns: 34px 1fr;
+      }
+
+      .flow-row em {
+        grid-column: 2;
+      }
+    }
+
   </style>
 
 </head>
@@ -3503,305 +3672,88 @@
 
         <section class="section">
 
-
-          <div class="section-label">
-            03 / Qué construimos
-          </div>
-
+          <div class="section-label">03 / Qué construimos</div>
 
           <h2>
-            Un sistema.
-            Múltiples capas de growth.
+            Todo lo que necesitas
+            para crecer, conectado.
           </h2>
 
-
-
-          <div class="solutions">
-
-
-            <div class="solution">
-
-
-              <div class="solution-number">
-                01
-              </div>
-
-
-              <h3>
-                Low Social
-              </h3>
-
-
-              <div class="solution-type">
-                Social Media
-              </div>
-
-
-              <p>
-
-                Sistemas de social media y contenido
-                diseñados para mantener consistencia de marca,
-                distribución y una ejecución repetible.
-
-              </p>
-
-
-            </div>
-
-
-
-            <div class="solution">
-
-
-              <div class="solution-number">
-                02
-              </div>
-
-
-              <h3>
-                Low Ads
-              </h3>
-
-
-              <div class="solution-type">
-                Performance
-              </div>
-
-
-              <p>
-
-                Sistemas de adquisición pagada y performance
-                enfocados en crecimiento medible
-                y optimización continua.
-
-              </p>
-
-
-            </div>
-
-
-
-            <div class="solution">
-
-
-              <div class="solution-number">
-                03
-              </div>
-
-
-              <h3>
-                Low Web
-              </h3>
-
-
-              <div class="solution-type">
-                Web Development
-              </div>
-
-
-              <p>
-
-                Sitios web y experiencias digitales
-                construidos como parte de un sistema de
-                growth, no como activos aislados.
-
-              </p>
-
-
-            </div>
-
-
-
-            <div class="solution">
-
-
-              <div class="solution-number">
-                04
-              </div>
-
-
-              <h3>
-                Low Escala
-              </h3>
-
-
-              <div class="solution-type">
-                Growth Systems
-              </div>
-
-
-              <p>
-
-                Infraestructura de growth que conecta
-                adquisición, posicionamiento, procesos
-                y ejecución escalable.
-
-              </p>
-
-
-            </div>
-
-
-
-            <div class="solution">
-
-
-              <div class="solution-number">
-                05
-              </div>
-
-
-              <h3>
-                Low Apps
-              </h3>
-
-
-              <div class="solution-type">
-                Products & Apps
-              </div>
-
-
-              <p>
-
-                Productos digitales, apps y herramientas
-                diseñados alrededor de problemas específicos
-                de operación o crecimiento.
-
-              </p>
-
-
-            </div>
-
-
-
-            <div class="solution">
-
-
-              <div class="solution-number">
-                06
-              </div>
-
-
-              <h3>
-                Low Flow
-              </h3>
-
-
-              <div class="solution-type">
-                AI & Automation
-              </div>
-
-
-              <p>
-
-                IA, automatización y workflows operativos
-                que eliminan trabajo repetitivo y crean
-                leverage para los equipos.
-
-              </p>
-
-
-            </div>
-
-
+          <div class="section-copy">
+            <p>
+              lowsignal es una Growth Company. Conectamos estrategia, contenido,
+              tecnología, producto e IA para que distintas capacidades trabajen
+              como un solo sistema de crecimiento.
+            </p>
           </div>
 
+          <div class="capability-list">
+
+            <div class="capability-row">
+              <div class="capability-number">01</div>
+              <h3>Contenido &amp; campañas</h3>
+              <p>
+                Marca, contenido social y campañas de performance diseñadas para
+                conectar atención, adquisición y crecimiento medible.
+              </p>
+            </div>
+
+            <div class="capability-row">
+              <div class="capability-number">02</div>
+              <h3>Web &amp; producto</h3>
+              <p>
+                Experiencias digitales, sitios, apps y productos construidos
+                alrededor de problemas comerciales y operativos concretos.
+              </p>
+            </div>
+
+            <div class="capability-row">
+              <div class="capability-number">03</div>
+              <h3>Sistemas &amp; automatización</h3>
+              <p>
+                Procesos, IA y automatización para reducir fricción, mejorar
+                visibilidad y crear leverage para los equipos.
+              </p>
+            </div>
+
+          </div>
 
         </section>
 
 
-
-        <!-- OPERATING MODEL -->
+<!-- OPERATING MODEL -->
 
         <section class="section">
 
-
-          <div class="section-label">
-            04 / Modelo operativo
-          </div>
-
+          <div class="section-label">04 / Cómo operamos</div>
 
           <h2>
-            La estrategia solo sirve
-            cuando se convierte en sistema.
+            De la oportunidad
+            al sistema que opera.
           </h2>
 
+          <div class="operating-flow">
 
-          <div class="section-copy">
+            <div class="operating-flow-copy">
+              Mi rol cruza todo el loop: estrategia comercial, operaciones,
+              entrega y los sistemas que mantienen cada etapa conectada.
+              La estrategia se vuelve útil cuando se convierte en ejecución repetible.
+            </div>
 
-            <p>
-              La estrategia solo sirve cuando se convierte en sistema.
-              Por eso construimos dashboards, marcos de reporting,
-              procesos de entrega y ciclos de revisión que mejoran
-              visibilidad, decisiones, eficiencia y valor de largo plazo.
-            </p>
+            <div class="flow-list">
+              <div class="flow-row"><span>01</span><strong>Demanda</strong><em>Generar &amp; calificar</em></div>
+              <div class="flow-row"><span>02</span><strong>Discovery</strong><em>Entender &amp; definir</em></div>
+              <div class="flow-row"><span>03</span><strong>Comercial</strong><em>Proponer &amp; cerrar</em></div>
+              <div class="flow-row"><span>04</span><strong>Entrega</strong><em>Coordinar &amp; ejecutar</em></div>
+              <div class="flow-row"><span>05</span><strong>Growth</strong><em>Aprender &amp; expandir</em></div>
+            </div>
 
           </div>
-
-
-
-          <div class="operating-list">
-
-
-            <div class="operating-item">
-
-              <div class="operating-number">
-                01
-              </div>
-
-              <strong>
-                Construir
-              </strong>
-
-              <span>
-                Infrastructure
-              </span>
-
-            </div>
-
-
-            <div class="operating-item">
-
-              <div class="operating-number">
-                02
-              </div>
-
-              <strong>
-                Operar
-              </strong>
-
-              <span>
-                Ejecución
-              </span>
-
-            </div>
-
-
-            <div class="operating-item">
-
-              <div class="operating-number">
-                03
-              </div>
-
-              <strong>
-                Escalar
-              </strong>
-
-              <span>
-                Growth
-              </span>
-
-            </div>
-
-
-          </div>
-
 
         </section>
 
 
-
-        <!-- CLIENT WORK -->
+<!-- CLIENT WORK -->
 
         <section class="section client-work">
 
@@ -3856,10 +3808,37 @@
       
         
         
-        <section class="section founders-bridge">
+                <section class="section">
+
+          <div class="section-label">06 / Tracción</div>
+
+          <h2>
+            Seis meses construyendo.
+            Los números detrás.
+          </h2>
+
+          <div class="traction-layout">
+
+            <div class="traction-statement">
+              Un sistema, <span>no servicios aislados.</span>
+            </div>
+
+            <div class="traction-list">
+              <div class="traction-row"><strong>15+</strong><span>clientes y marcas acompañadas</span></div>
+              <div class="traction-row"><strong>100+</strong><span>piezas de contenido creadas</span></div>
+              <div class="traction-row"><strong>50+</strong><span>campañas lanzadas</span></div>
+              <div class="traction-row"><strong>5+</strong><span>industrias y categorías atendidas</span></div>
+            </div>
+
+          </div>
+
+        </section>
+
+
+<section class="section founders-bridge">
 
           <div class="section-label">
-            06 / Construido en conjunto
+            07 / Construido en conjunto
           </div>
 
           <div class="founders-story">
@@ -3906,7 +3885,7 @@
         <section class="section testimonial-section">
 
           <div class="section-label">
-            07 / Señal de cliente
+            08 / Señal de cliente
           </div>
 
           <div class="testimonial">
@@ -3942,7 +3921,7 @@
         <section class="section cases-section">
 
           <div class="section-label">
-            08 / Casos seleccionados
+            09 / Casos seleccionados
           </div>
 
           <div class="cases-intro">
