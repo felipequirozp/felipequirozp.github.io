@@ -739,8 +739,37 @@
 
     }
 
+    .project-impact {
+      margin-top: 26px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: end;
+    }
 
-    .project-meta {
+    .project-impact strong {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(34px, 3.2vw, 54px);
+      line-height: .9;
+      letter-spacing: -.06em;
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    .project-impact span {
+      max-width: 240px;
+      padding-bottom: 2px;
+      color: var(--muted);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .07em;
+      line-height: 1.45;
+      text-transform: uppercase;
+    }
+
+.project-meta {
 
       display: flex;
 
@@ -971,6 +1000,80 @@
       }
     }
 
+
+
+    /* =====================================================
+       EDITORIAL BRIDGE
+    ===================================================== */
+
+    .editorial-bridge {
+      padding: 110px 7vw;
+      background: var(--navy-deep);
+      color: white;
+    }
+
+    .editorial-bridge-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 8vw;
+      align-items: center;
+    }
+
+    .editorial-bridge-copy .section-label {
+      margin-bottom: 32px;
+      color: var(--slate);
+    }
+
+    .editorial-bridge h2 {
+      max-width: 780px;
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(46px, 6vw, 90px);
+      line-height: 1.02;
+      letter-spacing: -.065em;
+      font-weight: 500;
+    }
+
+    .editorial-bridge h2 span {
+      display: block;
+      margin-top: 14px;
+      color: var(--slate);
+    }
+
+    .editorial-bridge-meta {
+      margin-top: 34px;
+      color: var(--slate-light);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .editorial-bridge-visual {
+      margin: 0;
+    }
+
+    .editorial-bridge-visual img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+      border-radius: 18px;
+      filter: saturate(.82) contrast(.98);
+    }
+
+    .editorial-bridge-visual figcaption {
+      margin-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      color: var(--slate);
+      font-size: 9px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
 
     /* =====================================================
        ABOUT
@@ -2021,7 +2124,41 @@
 
       }
 
-    }
+    
+      .project-impact {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-top: 22px;
+      }
+
+      .project-impact strong {
+        font-size: 42px;
+      }
+
+      .editorial-bridge {
+        padding: 82px 6vw;
+      }
+
+      .editorial-bridge-inner {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+
+      .editorial-bridge h2 {
+        font-size: clamp(44px, 12vw, 66px);
+        line-height: 1.03;
+      }
+
+      .editorial-bridge-visual img {
+        border-radius: 14px;
+      }
+
+      .editorial-bridge-visual figcaption {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+}
 
   </style>
 
@@ -2292,6 +2429,11 @@
           </div>
 
 
+          <div class="project-impact">
+            <strong>10K+</strong>
+            <span>customers across the GeoVictoria platform</span>
+          </div>
+
           <div class="project-meta">
 
             <span>
@@ -2344,13 +2486,13 @@
           <div class="system-visual">
 
             <div class="system-dot">
-              Estrategia
+              Strategy
             </div>
 
             <div class="system-line"></div>
 
             <div class="system-dot">
-              Sistemas
+              Systems
             </div>
 
             <div class="system-line"></div>
@@ -2376,6 +2518,11 @@
 
           </div>
 
+
+          <div class="project-impact">
+            <strong>15+</strong>
+            <span>organizations worked with through lowsignal</span>
+          </div>
 
           <div class="project-meta">
 
@@ -2429,7 +2576,7 @@
           <div class="network-visual">
 
             <div class="network-node">
-              Colegios
+              Schools
             </div>
 
             <div class="network-line"></div>
@@ -2461,6 +2608,11 @@
 
           </div>
 
+
+          <div class="project-impact">
+            <strong>100+</strong>
+            <span>public schools reached through education projects</span>
+          </div>
 
           <div class="project-meta">
 
@@ -2530,6 +2682,11 @@
 
           </div>
 
+          <div class="project-impact">
+            <strong>1,000+</strong>
+            <span>prospective students engaged</span>
+          </div>
+
           <div class="project-meta">
 
             <span>
@@ -2548,6 +2705,53 @@
 
     </div>
 
+
+  </section>
+
+
+
+
+  <!-- =====================================================
+       EDITORIAL BRIDGE
+  ====================================================== -->
+
+  <section class="editorial-bridge">
+
+    <div class="editorial-bridge-inner">
+
+      <div class="editorial-bridge-copy">
+
+        <div class="section-label">
+          A way of building
+        </div>
+
+        <h2>
+          From opportunity
+          <span>to operating system.</span>
+        </h2>
+
+        <div class="editorial-bridge-meta">
+          Product · Growth · Operations · Company Building
+        </div>
+
+      </div>
+
+      <figure class="editorial-bridge-visual">
+
+        <img
+          src="building-in-the-field.jpg"
+          alt="Felipe Quiroz presenting and speaking with people at an education event in Santiago"
+          loading="lazy"
+        >
+
+        <figcaption>
+          <span>In the field / Product, people and real conversations</span>
+          <span>Santiago / CL</span>
+        </figcaption>
+
+      </figure>
+
+    </div>
 
   </section>
 
@@ -2684,7 +2888,7 @@
             </div>
 
             <strong>
-              Explorando
+              Exploring
             </strong>
 
             <span>
@@ -2707,7 +2911,7 @@
 
             <img
               src="platanus-ai-native.jpg"
-              alt="Evento AI Native Startups de Platanus en Santiago"
+              alt="Platanus AI Native Startups event in Santiago"
               loading="lazy"
             >
 
