@@ -3219,6 +3219,93 @@
     }
 
 
+  
+    /* =====================================================
+       INTERNATIONAL WORK + PARTNERSHIP SCALE
+    ===================================================== */
+
+    .international-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 38px;
+    }
+
+    .international-card {
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--white);
+    }
+
+    .international-card .eyebrow {
+      color: var(--steel-light);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .international-card h3 {
+      margin: 14px 0 0;
+      font-family: "Manrope", sans-serif;
+      color: var(--navy);
+      font-size: 22px;
+      line-height: 1.15;
+      letter-spacing: -.03em;
+    }
+
+    .international-card p {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .partnership-signal {
+      display: grid;
+      grid-template-columns: .72fr 1.28fr;
+      gap: clamp(36px, 6vw, 80px);
+      align-items: end;
+      margin-top: 34px;
+      padding: 34px 0 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .partnership-number {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(54px, 7vw, 88px);
+      line-height: .95;
+      letter-spacing: -.06em;
+      color: var(--navy);
+    }
+
+    .partnership-copy {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .market-line {
+      margin-top: 18px;
+      color: var(--steel);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    @media(max-width:900px){
+      .international-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .partnership-signal {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 
 </head>
@@ -3534,7 +3621,7 @@
         <section class="section">
 
           <div class="section-label">
-            01 / Rolee
+            01 / Role
           </div>
 
           <h2>
@@ -3892,8 +3979,34 @@
               </div>
             </article>
 
+            
             <article class="project-case">
               <div class="project-case-number">03</div>
+              <div>
+                <div class="project-case-type">Public education · Chile</div>
+                <h3>JUNJI · National Digital Enrollment</h3>
+                <p class="project-case-description">
+                  Supported the rollout of a national digital enrollment initiative
+                  designed to simplify applications and admissions for families
+                  accessing public early-childhood education.
+                </p>
+                <div class="project-case-metrics">
+                  <span class="project-case-metric">3,000+ public kindergartens</span>
+                  <span class="project-case-metric">Digital enrollment</span>
+                  <span class="project-case-metric">Public-sector implementation</span>
+                </div>
+              </div>
+              <div class="project-case-side">
+                <div class="project-case-side-label">My role</div>
+                <p>
+                  I supported institutional coordination and implementation,
+                  connecting public-sector requirements with product and rollout needs.
+                </p>
+              </div>
+            </article>
+
+<article class="project-case">
+              <div class="project-case-number">04</div>
               <div>
                 <div class="project-case-type">AI · Public education · Chile · Jul–Dec 2025</div>
                 <h3>AI-Powered Education Transformation</h3>
@@ -3920,7 +4033,7 @@
             </article>
 
             <article class="project-case">
-              <div class="project-case-number">04</div>
+              <div class="project-case-number">05</div>
               <div>
                 <div class="project-case-type">AI-enabled product · School operations</div>
                 <h3>Tether Studio</h3>
@@ -3985,7 +4098,7 @@
 
                   <img
                     src="tether-team-meeting.jpg"
-                    alt="Working session del equipo de TetherEd"
+                    alt="TetherEd team working session"
                     loading="lazy"
                   >
 
@@ -4006,7 +4119,7 @@
 
                   <img
                     src="tether-partnerships-crecer.jpg"
-                    alt="Work con Crecer con Todos en Santiago"
+                    alt="Work with Crecer con Todos in Santiago"
                     loading="lazy"
                   >
 
@@ -4027,7 +4140,7 @@
 
                   <img
                     src="tether-partnerships-kiri.jpg"
-                    alt="Encuentro de trabajo con Kiri"
+                    alt="Working session with Kiri"
                     loading="lazy"
                   >
 
@@ -4048,7 +4161,7 @@
 
                   <img
                     src="tether-team-santiago.jpg"
-                    alt="Equipo de TetherEd reunido en Santiago"
+                    alt="TetherEd team in Santiago"
                     loading="lazy"
                   >
 
@@ -4071,12 +4184,98 @@
 
 
 
-        <!-- HOW I WORKED -->
+        
+        <!-- INTERNATIONAL WORK -->
+        <section class="section">
+
+          <div class="section-label">05 / International work</div>
+
+          <h2>
+            From public systems
+            to international expansion.
+          </h2>
+
+          <div class="section-copy">
+            <p>
+              The work expanded across markets and education systems, connecting
+              partnerships, product adoption and research initiatives in the
+              United States and Europe.
+            </p>
+          </div>
+
+          <div class="market-line">
+            Chile · Colombia · United States · Denmark · Spain
+          </div>
+
+          <div class="international-grid">
+
+            <article class="international-card">
+              <div class="eyebrow">New Haven · United States</div>
+              <h3>District-level enrollment &amp; school choice</h3>
+              <p>
+                Partnership with New Haven Public Schools around school-choice
+                and enrollment tools, including guidance, admission simulations
+                and family-facing support.
+              </p>
+            </article>
+
+            <article class="international-card">
+              <div class="eyebrow">Copenhagen · Denmark</div>
+              <h3>AI-powered guidance &amp; research</h3>
+              <p>
+                TetherEd’s first expansion into Europe, in collaboration with the
+                University of Copenhagen around guidance and student decision-making.
+              </p>
+            </article>
+
+            <article class="international-card">
+              <div class="eyebrow">Barcelona · Spain</div>
+              <h3>Evidence-based educational guidance</h3>
+              <p>
+                International research work connected to the SHAPE initiative,
+                including the Barcelona Supercomputing Center and Yale-affiliated researchers.
+              </p>
+            </article>
+
+          </div>
+
+        </section>
+
+
+        <!-- PARTNERSHIP SCALE -->
+        <section class="section">
+
+          <div class="section-label">06 / Partnership scale</div>
+
+          <h2>
+            Building the ecosystem,
+            not just the pipeline.
+          </h2>
+
+          <div class="partnership-signal">
+            <div class="partnership-number">15</div>
+            <div>
+              <div class="partnership-copy">
+                Strategic educational partnerships built in 2025 across organizations
+                in Chile, Colombia, Peru and the Dominican Republic — connecting
+                institutions, technology providers and education organizations
+                around shared initiatives.
+              </div>
+              <div class="market-line">
+                Partnerships · Expansion · Ecosystem
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+
+<!-- HOW I WORKED -->
 
         <section class="section">
 
           <div class="section-label">
-            05 / Operating system
+            07 / Operating system
           </div>
 
           <h2>
@@ -4224,7 +4423,7 @@
         <div class="sidebar-card">
 
           <div class="sidebar-label">
-            Periodo
+            Period
           </div>
 
           <div class="sidebar-value">
