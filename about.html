@@ -1642,6 +1642,241 @@
       stroke-linejoin: round;
     }
 
+  
+    /* =====================================================
+       OPERATING STACK + HUMAN SIGNAL
+    ===================================================== */
+
+    .stack {
+      padding: 120px 7vw;
+      background: var(--paper);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .stack-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .stack-head {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 7vw;
+      align-items: start;
+      margin-bottom: 56px;
+    }
+
+    .stack-head h2 {
+      margin: 0;
+      max-width: 760px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(42px, 5vw, 72px);
+      line-height: 1.04;
+      letter-spacing: -.055em;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+
+    .stack-card {
+      min-height: 265px;
+      padding: 28px 24px 30px;
+      background: var(--white);
+    }
+
+    .stack-card .stack-label {
+      margin-bottom: 34px;
+      color: var(--steel-light);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .stack-card h3 {
+      margin: 0 0 18px;
+      font-family: "Manrope", sans-serif;
+      font-size: 23px;
+      line-height: 1.08;
+      letter-spacing: -.04em;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    .stack-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .stack-tools span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--steel);
+      background: var(--paper);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .035em;
+    }
+
+    .human-signal {
+      padding: 120px 7vw;
+      background: var(--white);
+    }
+
+    .human-signal-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 7vw;
+      align-items: center;
+    }
+
+    .human-signal img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+    }
+
+    .human-signal-copy h2 {
+      margin: 20px 0 24px;
+      max-width: 650px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(42px, 5vw, 72px);
+      line-height: 1.03;
+      letter-spacing: -.055em;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    .human-signal-copy p {
+      max-width: 560px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .human-signal-meta {
+      margin-top: 28px;
+      color: var(--steel-light);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    @media(max-width:900px){
+      .stack-head {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .stack-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .human-signal-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    @media(max-width:600px){
+      .stack,
+      .human-signal {
+        padding: 82px 6vw;
+      }
+
+      .stack-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stack-card {
+        min-height: auto;
+      }
+
+      .human-signal img {
+        border-radius: 14px;
+      }
+    }
+
+  
+    .compact-stack {
+      margin-top: 48px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+    }
+
+    .compact-stack-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 18px;
+    }
+
+    .compact-stack-title {
+      font-family: "Manrope", sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: -.03em;
+      color: var(--navy);
+    }
+
+    .compact-stack-note {
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.6;
+      text-align: right;
+    }
+
+    .compact-stack-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .compact-stack-tools span {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--steel);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .035em;
+    }
+
+    @media(max-width:600px){
+      .compact-stack-head {
+        display: block;
+      }
+
+      .compact-stack-note {
+        margin-top: 8px;
+        text-align: left;
+      }
+    }
+
+
   </style>
 
 </head>
@@ -1984,7 +2219,6 @@
   <!-- =====================================================
        STRENGTHS
   ====================================================== -->
-
   <section class="current">
 
     <div class="current-grid">
@@ -2034,6 +2268,26 @@
       </div>
 
     </div>
+
+  
+        <div class="compact-stack">
+          <div class="compact-stack-head">
+            <div class="compact-stack-title">My operating stack</div>
+            <div class="compact-stack-note">Tools I use to prototype, operate, distribute and learn.</div>
+          </div>
+          <div class="compact-stack-tools">
+            <span>Lovable</span>
+            <span>Replit</span>
+            <span>GitHub</span>
+            <span>Framer</span>
+            <span>Notion</span>
+            <span>Zoho</span>
+            <span>Excel</span>
+            <span>Metricool</span>
+            <span>Meta</span>
+            <span>ChatGPT</span>
+          </div>
+        </div>
 
   </section>
 
@@ -2260,6 +2514,29 @@
        STATEMENT
   ====================================================== -->
 
+  
+  <section class="human-signal">
+    <div class="human-signal-inner">
+      <img
+        src="felipe-ecosystem-team.jpg"
+        alt="Felipe Quiroz with a team at an ecosystem event in Santiago"
+        loading="lazy"
+      >
+
+      <div class="human-signal-copy">
+        <div class="section-label">06 / Outside the screen</div>
+        <h2>Close to people.<br>Close to reality.</h2>
+        <p>
+          I like being close to customers, teams and the environments where
+          products actually operate. The best systems usually start with a
+          real conversation.
+        </p>
+        <div class="human-signal-meta">Out in the ecosystem / Teams, conversations and new ideas · Santiago</div>
+      </div>
+    </div>
+  </section>
+
+
   <section class="statement">
 
 
@@ -2267,7 +2544,7 @@
 
 
       <div class="section-label">
-        06 / Principle
+        07 / Principle
       </div>
 
 
