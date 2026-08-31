@@ -2970,6 +2970,97 @@
       }
     }
 
+  
+    /* =====================================================
+       FOUNDERS STORY — PURPOSEFUL EDITORIAL BLOCK
+    ===================================================== */
+
+    .founders-story {
+      display: grid;
+      grid-template-columns: minmax(240px, 330px) 1fr;
+      gap: clamp(38px, 6vw, 82px);
+      align-items: center;
+      margin-top: 34px;
+    }
+
+    .founders-story-media {
+      margin: 0;
+      width: 100%;
+      max-width: 330px;
+    }
+
+    .founders-story-media img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+    }
+
+    .founders-story-eyebrow {
+      margin-bottom: 18px;
+      color: var(--steel-light);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .founders-story-copy h2 {
+      margin: 0;
+      max-width: 620px;
+    }
+
+    .founders-story-copy p {
+      max-width: 620px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .founders-story-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-top: 26px;
+      color: var(--steel);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .02em;
+    }
+
+    .founders-story-link {
+      display: inline-flex;
+      margin-top: 22px;
+      color: var(--navy);
+      font-size: 10px;
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 4px;
+    }
+
+    @media(max-width:800px){
+      .founders-story {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .founders-story-media {
+        max-width: 320px;
+      }
+    }
+
+    @media(max-width:600px){
+      .founders-story-media {
+        max-width: 100%;
+      }
+
+      .founders-story-media img {
+        border-radius: 14px;
+      }
+    }
+
   </style>
 
 </head>
@@ -3367,15 +3458,13 @@
           </h2>
 
           <div class="section-copy">
-
             <p>
-              As Co-Founder & COO, I lead operations,
+              As Co-Founder &amp; COO, I lead operations,
               commercial strategy and product delivery.
               My work spans how we sell, how we deliver
               and how we scale — turning opportunities,
               processes and learnings into repeatable systems.
             </p>
-
           </div>
 
           <div class="role-list">
@@ -3402,176 +3491,12 @@
 
             <div class="role-item">
               <div class="role-number">05</div>
-              <strong>Cross-functional leadership across Product, Marketing, Design, Sales and Customer Success</strong>
-            </div>
-
-            <div class="role-item">
-              <div class="role-number">06</div>
-              <strong>Dashboards, reporting and scalable processes</strong>
+              <strong>Cross-functional leadership and scalable operating systems</strong>
             </div>
 
           </div>
 
         </section>
-
-<section class="section">
-
-
-          <div class="section-label">
-            02 / My role
-          </div>
-
-
-          <h2>
-            Operating the system
-            behind the company.
-          </h2>
-
-
-          <div class="section-copy">
-
-
-            <p>
-
-              As Co-Founder & COO, my work spans
-              company operations, products, team execution
-              and business development — turning ideas and
-              opportunities into repeatable operating systems.
-
-            </p>
-
-
-          </div>
-
-
-
-          <div class="role-list">
-
-
-            <div class="role-item">
-
-              <div class="role-number">
-                01
-              </div>
-
-              <strong>
-                Company operations and execution
-              </strong>
-
-            </div>
-
-
-            <div class="role-item">
-
-              <div class="role-number">
-                02
-              </div>
-
-              <strong>
-                Product and service development
-              </strong>
-
-            </div>
-
-
-            <div class="role-item">
-
-              <div class="role-number">
-                03
-              </div>
-
-              <strong>
-                Team systems and workflows
-              </strong>
-
-            </div>
-
-
-            <div class="role-item">
-
-              <div class="role-number">
-                04
-              </div>
-
-              <strong>
-                Business development and partnerships
-              </strong>
-
-            </div>
-
-
-            <div class="role-item">
-
-              <div class="role-number">
-                05
-              </div>
-
-              <strong>
-                Building scalable internal systems
-              </strong>
-
-            </div>
-
-
-          </div>
-
-
-          <div class="cofounder-card">
-
-            <img
-              src="damian-aldunate.jpg"
-              alt="Damián Aldunate"
-              class="cofounder-photo"
-              loading="lazy"
-            >
-
-            <div>
-
-              <div class="cofounder-eyebrow">
-                Leadership
-              </div>
-
-              <h3 class="cofounder-name">
-                Damián Aldunate
-              </h3>
-
-              <p class="cofounder-meta">
-                Co-Founder &amp; CMO, lowsignal
-              </p>
-
-              <p class="cofounder-copy">
-                Together with Damián, we are building lowsignal through
-                complementary roles across brand, growth,
-                operations and business development.
-              </p>
-
-              <div class="cofounder-links">
-
-                <a
-                  href="https://www.linkedin.com/in/damianaldunate/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Damián Aldunate on LinkedIn"
-                  title="LinkedIn"
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
-                  </svg>
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-</section>
-
-
-
 
 
         <!-- WHAT WE BUILD -->
@@ -3934,20 +3859,55 @@
         <section class="section founders-bridge">
 
           <div class="section-label">
-            06 / Founders
+            06 / Built together
           </div>
 
-          <figure class="founders-editorial">
-            <img
-              src="lowsignal-founders.jpg"
-              alt="lowsignal founders together in Santiago"
-              loading="lazy"
-            >
-            <figcaption>
-              <span>Founders / lowsignal</span>
-              <span>Santiago / CL</span>
-            </figcaption>
-          </figure>
+          <div class="founders-story">
+
+            <figure class="founders-story-media">
+              <img
+                src="lowsignal-founders.jpg"
+                alt="Felipe Quiroz and Damián Aldunate, co-founders of lowsignal"
+                loading="lazy"
+              >
+            </figure>
+
+            <div class="founders-story-copy">
+
+              <div class="founders-story-eyebrow">
+                Founders / lowsignal
+              </div>
+
+              <h2>
+                Different strengths.
+                One operating system.
+              </h2>
+
+              <p>
+                lowsignal is built through complementary roles.
+                Damián leads brand and growth; I lead operations,
+                commercial strategy and product delivery. The point
+                is not to split the company into silos, but to connect
+                those strengths into one way of building and operating.
+              </p>
+
+              <div class="founders-story-meta">
+                <span>Felipe Quiroz · Co-Founder &amp; COO</span>
+                <span>Damián Aldunate · Co-Founder &amp; CMO</span>
+              </div>
+
+              <a
+                class="founders-story-link"
+                href="https://www.linkedin.com/in/damianaldunate/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Damián on LinkedIn
+              </a>
+
+            </div>
+
+          </div>
 
         </section>
 
