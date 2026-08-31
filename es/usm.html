@@ -3009,6 +3009,109 @@
       }
     }
 
+  
+    /* =====================================================
+       ENGINEERING 2030 PROJECT
+    ===================================================== */
+
+    .initiative-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      margin: 20px 0 0;
+      color: var(--steel-light);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    .initiative-link {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 28px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--line);
+      color: var(--navy);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-decoration: none;
+      transition: border-color .2s ease, color .2s ease;
+    }
+
+    .initiative-link:hover {
+      border-color: var(--navy);
+      color: var(--ink);
+    }
+
+  
+    /* =====================================================
+       USM ENVIRONMENT — COMPACT EDITORIAL SPLIT
+    ===================================================== */
+
+    .usm-environment-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: clamp(36px, 5vw, 68px);
+      align-items: center;
+      margin-top: 28px;
+    }
+
+    .usm-environment-copy {
+      max-width: 560px;
+    }
+
+    .usm-environment-copy p {
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .usm-environment-figure {
+      margin: 0;
+      width: 300px;
+      justify-self: end;
+    }
+
+    .usm-environment-figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+    }
+
+    .usm-environment-caption {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      margin-top: 10px;
+      color: var(--steel-light);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    @media(max-width:800px){
+      .usm-environment-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .usm-environment-figure {
+        width: min(300px, 100%);
+        justify-self: start;
+      }
+    }
+
+    @media(max-width:600px){
+      .usm-environment-figure img {
+        border-radius: 14px;
+      }
+    }
+
   </style>
 
 </head>
@@ -3284,24 +3387,72 @@
 
           <div class="section-label">05 / Entorno</div>
 
-          <h2>Construyendo desde dentro de la institución.</h2>
+          <div class="usm-environment-grid">
 
-          <figure class="client-work-figure">
-            <div class="usm-photo-media portrait">
-              <img src="../usm-campus-opening.jpg" alt="Evento institucional en USM" loading="lazy">
+            <div class="usm-environment-copy">
+              <h2>Construyendo desde dentro de la institución.</h2>
+              <p>
+                El trabajo fue más allá de programas específicos. Estar cerca de equipos académicos,
+                stakeholders institucionales e iniciativas universitarias implicó entender cómo
+                estrategia, operación y cultura se cruzan dentro de una organización compleja.
+              </p>
             </div>
-            <figcaption class="usm-photo-caption">
-              <span>USM</span>
-              <span>Evento institucional</span>
-            </figcaption>
-          </figure>
+
+            <figure class="usm-environment-figure">
+              <img src="../usm-campus-opening.jpg" alt="Evento institucional en USM" loading="lazy">
+              <figcaption class="usm-environment-caption">
+                <span>USM</span>
+                <span>Evento institucional</span>
+              </figcaption>
+            </figure>
+
+          </div>
 
         </section>
 
         
+        
         <section class="section">
 
-          <div class="section-label">06 / Liderazgo</div>
+          <div class="section-label">06 / Ingeniería 2030</div>
+
+          <h2>
+            Estrategia, innovación y transformación académica.
+          </h2>
+
+          <div class="initiative-meta">
+            <span>Estrategia &amp; Innovación</span>
+            <span>Chile</span>
+                      </div>
+
+          <div class="section-copy">
+            <p>
+              Contribuí a una iniciativa estratégica de alcance institucional alineada con el programa Ingeniería 2030 de Chile, enfocada en innovación, transformación académica y en fortalecer la conexión entre la formación en ingeniería, la tecnología y la industria.
+            </p>
+          </div>
+
+          <div class="role-list">
+            <div class="role-item"><div class="role-number">01</div><strong>Benchmarking nacional e internacional para identificar oportunidades estratégicas y tendencias emergentes</strong></div>
+            <div class="role-item"><div class="role-number">02</div><strong>Recomendaciones para integrar tecnologías emergentes y capacidades interdisciplinarias en programas de ingeniería</strong></div>
+            <div class="role-item"><div class="role-number">03</div><strong>Mejoras escalables a procesos académicos, modelos operativos y experiencias de aprendizaje</strong></div>
+            <div class="role-item"><div class="role-number">04</div><strong>Trabajo con académicos y stakeholders institucionales para traducir prioridades estratégicas en iniciativas accionables</strong></div>
+            <div class="role-item"><div class="role-number">05</div><strong>Apoyo a iniciativas de transformación de largo plazo conectando academia, tecnología y nuevas necesidades de la industria</strong></div>
+          </div>
+
+          <a
+            class="initiative-link"
+            href="https://ingenieria2030.usm.cl/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visitar Ingeniería 2030
+          </a>
+
+        </section>
+
+        <section class="section">
+
+          <div class="section-label">07 / Liderazgo</div>
 
           <h2>
             Trabajando directamente con quienes lideraban cada frente.
@@ -3407,7 +3558,7 @@
 
         <section class="section">
 
-          <div class="section-label">07 / Throughline</div>
+          <div class="section-label">08 / Hilo conductor</div>
 
           <h2>
             Construyendo sistemas antes de llamarlos sistemas.
