@@ -3047,23 +3047,23 @@
 
   
     /* =====================================================
-       USM ENVIRONMENT — EDITORIAL SPLIT
+       USM ENVIRONMENT — COMPACT EDITORIAL SPLIT
     ===================================================== */
 
     .usm-environment-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr);
-      gap: clamp(42px, 6vw, 84px);
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: clamp(36px, 5vw, 68px);
       align-items: center;
-      margin-top: 30px;
+      margin-top: 28px;
     }
 
     .usm-environment-copy {
-      max-width: 620px;
+      max-width: 560px;
     }
 
     .usm-environment-copy p {
-      margin: 22px 0 0;
+      margin: 20px 0 0;
       color: var(--muted);
       font-size: 14px;
       line-height: 1.8;
@@ -3071,8 +3071,7 @@
 
     .usm-environment-figure {
       margin: 0;
-      width: 100%;
-      max-width: 360px;
+      width: 300px;
       justify-self: end;
     }
 
@@ -3086,8 +3085,8 @@
     .usm-environment-caption {
       display: flex;
       justify-content: space-between;
-      gap: 18px;
-      margin-top: 12px;
+      gap: 14px;
+      margin-top: 10px;
       color: var(--steel-light);
       font-size: 9px;
       font-weight: 600;
@@ -3098,20 +3097,16 @@
     @media(max-width:800px){
       .usm-environment-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 28px;
       }
 
       .usm-environment-figure {
+        width: min(300px, 100%);
         justify-self: start;
-        max-width: 340px;
       }
     }
 
     @media(max-width:600px){
-      .usm-environment-figure {
-        max-width: 100%;
-      }
-
       .usm-environment-figure img {
         border-radius: 14px;
       }
@@ -3348,28 +3343,19 @@
 
         <section class="section usm-photo-block">
 
-          <div class="section-label">05 / Environment</div>
+          <div class="section-label">03 / In the field</div>
 
-          <div class="usm-environment-grid">
+          <h2>Close to students, teams and stakeholders.</h2>
 
-            <div class="usm-environment-copy">
-              <h2>Building from inside the institution.</h2>
-              <p>
-                The work extended beyond individual programs. Being close to academic teams,
-                institutional stakeholders and university initiatives meant understanding how
-                strategy, operations and culture intersect inside a complex organization.
-              </p>
+          <figure class="client-work-figure">
+            <div class="usm-photo-media landscape">
+              <img src="usm-admissions-team.jpg" alt="Team and participants at a USM admissions activity" loading="lazy">
             </div>
-
-            <figure class="usm-environment-figure">
-              <img src="usm-campus-opening.jpg" alt="Institutional event at USM" loading="lazy">
-              <figcaption class="usm-environment-caption">
-                <span>USM</span>
-                <span>Institutional event</span>
-              </figcaption>
-            </figure>
-
-          </div>
+            <figcaption class="usm-photo-caption">
+              <span>USM</span>
+              <span>Admissions · Outreach · Team</span>
+            </figcaption>
+          </figure>
 
         </section>
 
@@ -3401,17 +3387,26 @@
 
           <div class="section-label">05 / Environment</div>
 
-          <h2>Building from inside the institution.</h2>
+          <div class="usm-environment-grid">
 
-          <figure class="client-work-figure">
-            <div class="usm-photo-media portrait">
-              <img src="usm-campus-opening.jpg" alt="Institutional event at USM" loading="lazy">
+            <div class="usm-environment-copy">
+              <h2>Building from inside the institution.</h2>
+              <p>
+                The work extended beyond individual programs. Being close to academic teams,
+                institutional stakeholders and university initiatives meant understanding how
+                strategy, operations and culture intersect inside a complex organization.
+              </p>
             </div>
-            <figcaption class="usm-photo-caption">
-              <span>USM</span>
-              <span>Institutional event</span>
-            </figcaption>
-          </figure>
+
+            <figure class="usm-environment-figure">
+              <img src="usm-campus-opening.jpg" alt="Institutional event at USM" loading="lazy">
+              <figcaption class="usm-environment-caption">
+                <span>USM</span>
+                <span>Institutional event</span>
+              </figcaption>
+            </figure>
+
+          </div>
 
         </section>
 
