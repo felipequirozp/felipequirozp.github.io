@@ -740,6 +740,37 @@
     }
 
 
+
+    .project-impact {
+      margin-top: 26px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: end;
+    }
+
+    .project-impact strong {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(34px, 3.2vw, 54px);
+      line-height: .9;
+      letter-spacing: -.06em;
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    .project-impact span {
+      max-width: 240px;
+      padding-bottom: 2px;
+      color: var(--muted);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .07em;
+      line-height: 1.45;
+      text-transform: uppercase;
+    }
+
     .project-meta {
 
       display: flex;
@@ -971,6 +1002,79 @@
       }
     }
 
+
+
+    /* =====================================================
+       EDITORIAL BRIDGE
+    ===================================================== */
+
+    .editorial-bridge {
+      padding: 110px 7vw;
+      background: var(--navy-deep);
+      color: white;
+    }
+
+    .editorial-bridge-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 8vw;
+      align-items: center;
+    }
+
+    .editorial-bridge-copy .section-label {
+      margin-bottom: 32px;
+      color: var(--slate);
+    }
+
+    .editorial-bridge h2 {
+      max-width: 780px;
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(46px, 6vw, 90px);
+      line-height: 1.02;
+      letter-spacing: -.065em;
+      font-weight: 500;
+    }
+
+    .editorial-bridge h2 span {
+      display: block;
+      margin-top: 14px;
+      color: var(--slate);
+    }
+
+    .editorial-bridge-meta {
+      margin-top: 34px;
+      color: var(--slate-light);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .editorial-bridge-visual {
+      margin: 0;
+    }
+
+    .editorial-bridge-visual img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+      filter: saturate(.82) contrast(.98);
+    }
+
+    .editorial-bridge-visual figcaption {
+      margin-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      color: var(--slate);
+      font-size: 9px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
 
     /* =====================================================
        ABOUT
@@ -2021,7 +2125,41 @@
 
       }
 
-    }
+    
+      .project-impact {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-top: 22px;
+      }
+
+      .project-impact strong {
+        font-size: 42px;
+      }
+
+      .editorial-bridge {
+        padding: 82px 6vw;
+      }
+
+      .editorial-bridge-inner {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+
+      .editorial-bridge h2 {
+        font-size: clamp(44px, 12vw, 66px);
+        line-height: 1.03;
+      }
+
+      .editorial-bridge-visual img {
+        border-radius: 14px;
+      }
+
+      .editorial-bridge-visual figcaption {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+}
 
   </style>
 
@@ -2292,6 +2430,11 @@
           </div>
 
 
+          <div class="project-impact">
+            <strong>10K+</strong>
+            <span>clientes en la plataforma GeoVictoria</span>
+          </div>
+
           <div class="project-meta">
 
             <span>
@@ -2376,6 +2519,11 @@
 
           </div>
 
+
+          <div class="project-impact">
+            <strong>15+</strong>
+            <span>organizaciones con las que hemos trabajado en lowsignal</span>
+          </div>
 
           <div class="project-meta">
 
@@ -2462,6 +2610,11 @@
           </div>
 
 
+          <div class="project-impact">
+            <strong>100+</strong>
+            <span>colegios públicos alcanzados en proyectos de educación</span>
+          </div>
+
           <div class="project-meta">
 
             <span>
@@ -2530,6 +2683,11 @@
 
           </div>
 
+          <div class="project-impact">
+            <strong>1.000+</strong>
+            <span>prospectos de admisión involucrados</span>
+          </div>
+
           <div class="project-meta">
 
             <span>
@@ -2548,6 +2706,53 @@
 
     </div>
 
+
+  </section>
+
+
+
+
+  <!-- =====================================================
+       EDITORIAL BRIDGE
+  ====================================================== -->
+
+  <section class="editorial-bridge">
+
+    <div class="editorial-bridge-inner">
+
+      <div class="editorial-bridge-copy">
+
+        <div class="section-label">
+          Una forma de construir
+        </div>
+
+        <h2>
+          De oportunidad
+          <span>a sistema que opera.</span>
+        </h2>
+
+        <div class="editorial-bridge-meta">
+          Producto · Growth · Operaciones · Company Building
+        </div>
+
+      </div>
+
+      <figure class="editorial-bridge-visual">
+
+        <img
+          src="../building-in-the-field.jpg"
+          alt="Felipe Quiroz presentando y conversando con personas en un evento de educación en Santiago"
+          loading="lazy"
+        >
+
+        <figcaption>
+          <span>En terreno / Producto, personas y conversaciones reales</span>
+          <span>Santiago / CL</span>
+        </figcaption>
+
+      </figure>
+
+    </div>
 
   </section>
 
