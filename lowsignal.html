@@ -14,7 +14,7 @@
 
   <meta
     name="description"
-    content="Selected work at lowsignal — building growth systems, digital products and operating infrastructure for growth."
+    content="Work seleccionado en lowsignal — construyendo growth systems, productos digitales e infraestructura operativa para crecer."
   >
 
 
@@ -2841,393 +2841,20 @@
 
   
     /* =====================================================
-       FOUNDERS + TESTIMONIAL + SELECTED CASES REFINEMENT
+       FOOTER — NO DUPLICATE SOCIAL LINKS
     ===================================================== */
 
-    .founders-editorial {
-      margin: 42px auto 0;
-      max-width: 460px;
+    .footer-socials {
+      display: none !important;
     }
 
-    .founders-editorial img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 18px;
+    .footer {
+      grid-template-columns: 1fr auto !important;
     }
 
-    .founders-editorial figcaption {
-      margin-top: 12px;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      color: var(--steel-light);
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: .07em;
-      text-transform: uppercase;
-    }
-
-    .testimonial {
-      margin-top: 70px;
-      padding: 58px 0 8px;
-      border-top: 1px solid var(--line);
-    }
-
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: .75fr 1.25fr;
-      gap: 6vw;
-      align-items: center;
-    }
-
-    .testimonial-photo img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 18px;
-    }
-
-    .testimonial-quote {
-      margin: 0;
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(30px, 3.7vw, 52px);
-      line-height: 1.08;
-      letter-spacing: -.045em;
-      font-weight: 500;
-      color: var(--navy);
-    }
-
-    .testimonial-person {
-      margin-top: 34px;
-    }
-
-    .testimonial-person strong {
-      display: block;
-      font-family: "Manrope", sans-serif;
-      font-size: 18px;
-      font-weight: 600;
-      letter-spacing: -.02em;
-      color: var(--navy);
-    }
-
-    .testimonial-person span {
-      display: block;
-      margin-top: 6px;
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.6;
-    }
-
-    .cases-intro {
-      max-width: 760px;
-      margin: 18px 0 44px;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.75;
-    }
-
-    .case-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 14px 0 18px;
-    }
-
-    .case-tags span {
-      display: inline-flex;
-      padding: 6px 9px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: var(--paper);
-      color: var(--steel);
-      font-size: 8px;
-      font-weight: 700;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-    }
-
-    @media(max-width:800px){
-      .testimonial-grid {
-        grid-template-columns: 1fr;
-        gap: 34px;
-      }
-
-      .founders-editorial figcaption {
-        flex-direction: column;
-        gap: 5px;
-      }
-    }
-
-    @media(max-width:600px){
-      .founders-editorial {
-        max-width: 100%;
-      }
-
-      .founders-editorial img,
-      .testimonial-photo img {
-        border-radius: 14px;
-      }
-    }
-
-  
-    /* =====================================================
-       FOUNDERS STORY — PURPOSEFUL EDITORIAL BLOCK
-    ===================================================== */
-
-    .founders-story {
-      display: grid;
-      grid-template-columns: minmax(240px, 330px) 1fr;
-      gap: clamp(38px, 6vw, 82px);
-      align-items: center;
-      margin-top: 34px;
-    }
-
-    .founders-story-media {
-      margin: 0;
-      width: 100%;
-      max-width: 330px;
-    }
-
-    .founders-story-media img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 18px;
-    }
-
-    .founders-story-eyebrow {
-      margin-bottom: 18px;
-      color: var(--steel-light);
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    .founders-story-copy h2 {
-      margin: 0;
-      max-width: 620px;
-    }
-
-    .founders-story-copy p {
-      max-width: 620px;
-      margin: 24px 0 0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.8;
-    }
-
-    .founders-story-meta {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-      margin-top: 26px;
-      color: var(--steel);
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: .02em;
-    }
-
-    .founders-story-link {
-      display: inline-flex;
-      margin-top: 22px;
-      color: var(--navy);
-      font-size: 10px;
-      font-weight: 700;
-      text-decoration: none;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 4px;
-    }
-
-    @media(max-width:800px){
-      .founders-story {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
-      .founders-story-media {
-        max-width: 320px;
-      }
-    }
-
-    @media(max-width:600px){
-      .founders-story-media {
-        max-width: 100%;
-      }
-
-      .founders-story-media img {
-        border-radius: 14px;
-      }
-    }
-
-  
-    /* =====================================================
-       LOWSIGNAL — TETHER-LIKE EDITORIAL REFINEMENT
-    ===================================================== */
-
-    .capability-list {
-      margin-top: 42px;
-      border-top: 1px solid var(--line);
-    }
-
-    .capability-row {
-      display: grid;
-      grid-template-columns: 56px minmax(220px,.65fr) 1.35fr;
-      gap: 26px;
-      align-items: start;
-      padding: 25px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .capability-number {
-      color: var(--steel-light);
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: .07em;
-    }
-
-    .capability-row h3 {
-      margin: 0;
-      font-family: "Manrope", sans-serif;
-      font-size: 22px;
-      line-height: 1.15;
-      letter-spacing: -.03em;
-      color: var(--navy);
-    }
-
-    .capability-row p {
-      margin: 0;
-      max-width: 620px;
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.75;
-    }
-
-    .operating-flow {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: clamp(42px, 7vw, 92px);
-      align-items: start;
-      margin-top: 38px;
-    }
-
-    .operating-flow-copy {
-      max-width: 500px;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.8;
-    }
-
-    .flow-list {
-      border-top: 1px solid var(--line);
-    }
-
-    .flow-row {
-      display: grid;
-      grid-template-columns: 42px 1fr auto;
-      gap: 18px;
-      align-items: baseline;
-      padding: 17px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .flow-row span:first-child {
-      color: var(--steel-light);
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: .07em;
-    }
-
-    .flow-row strong {
-      color: var(--navy);
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .flow-row em {
-      color: var(--muted);
-      font-size: 10px;
-      font-style: normal;
-    }
-
-    .traction-layout {
-      display: grid;
-      grid-template-columns: .78fr 1.22fr;
-      gap: clamp(46px, 7vw, 96px);
-      align-items: start;
-      margin-top: 36px;
-    }
-
-    .traction-statement {
-      max-width: 510px;
-      font-family: "Manrope", sans-serif;
-      color: var(--navy);
-      font-size: clamp(30px, 3.5vw, 48px);
-      line-height: 1.08;
-      letter-spacing: -.045em;
-      font-weight: 500;
-    }
-
-    .traction-statement span {
-      color: var(--steel-light);
-    }
-
-    .traction-list {
-      border-top: 1px solid var(--line);
-    }
-
-    .traction-row {
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: 22px;
-      align-items: baseline;
-      padding: 18px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .traction-row strong {
-      font-family: "Manrope", sans-serif;
-      color: var(--navy);
-      font-size: clamp(28px, 3vw, 42px);
-      font-weight: 500;
-      letter-spacing: -.04em;
-    }
-
-    .traction-row span {
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.55;
-    }
-
-    @media(max-width:800px){
-      .capability-row {
-        grid-template-columns: 38px 1fr;
-      }
-
-      .capability-row p {
-        grid-column: 2;
-      }
-
-      .operating-flow,
-      .traction-layout {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-    }
-
-    @media(max-width:600px){
-      .traction-row {
-        grid-template-columns: 86px 1fr;
-      }
-
-      .flow-row {
-        grid-template-columns: 34px 1fr;
-      }
-
-      .flow-row em {
-        grid-column: 2;
-      }
+    .footer-location {
+      justify-self: end !important;
+      text-align: right !important;
     }
 
   </style>
@@ -3455,7 +3082,7 @@
           target="_blank"
           rel="noopener noreferrer"
           class="company-logo"
-          aria-label="Visit lowsignal"
+          aria-label="Visitar lowsignal"
         >
 
           <img
@@ -3627,13 +3254,15 @@
           </h2>
 
           <div class="section-copy">
+
             <p>
-              As Co-Founder &amp; COO, I lead operations,
+              As Co-Founder & COO, I lead operations,
               commercial strategy and product delivery.
               My work spans how we sell, how we deliver
               and how we scale — turning opportunities,
               processes and learnings into repeatable systems.
             </p>
+
           </div>
 
           <div class="role-list">
@@ -3660,100 +3289,484 @@
 
             <div class="role-item">
               <div class="role-number">05</div>
-              <strong>Cross-functional leadership and scalable operating systems</strong>
+              <strong>Cross-functional leadership across Product, Marketing, Design, Sales and Customer Success</strong>
+            </div>
+
+            <div class="role-item">
+              <div class="role-number">06</div>
+              <strong>Dashboards, reporting and scalable processes</strong>
             </div>
 
           </div>
 
         </section>
+
+<section class="section">
+
+
+          <div class="section-label">
+            02 / My role
+          </div>
+
+
+          <h2>
+            Operating the system
+            behind the company.
+          </h2>
+
+
+          <div class="section-copy">
+
+
+            <p>
+
+              Como Co-Founder & COO, mi trabajo cruza
+              operaciones de la compañía, productos, ejecución
+              del equipo y desarrollo de negocio — convirtiendo
+              ideas y oportunidades en sistemas operativos
+              repetibles.
+
+            </p>
+
+
+          </div>
+
+
+
+          <div class="role-list">
+
+
+            <div class="role-item">
+
+              <div class="role-number">
+                01
+              </div>
+
+              <strong>
+                Company operations and execution
+              </strong>
+
+            </div>
+
+
+            <div class="role-item">
+
+              <div class="role-number">
+                02
+              </div>
+
+              <strong>
+                Desarrollo de productos y servicios
+              </strong>
+
+            </div>
+
+
+            <div class="role-item">
+
+              <div class="role-number">
+                03
+              </div>
+
+              <strong>
+                Systems de equipo y workflows
+              </strong>
+
+            </div>
+
+
+            <div class="role-item">
+
+              <div class="role-number">
+                04
+              </div>
+
+              <strong>
+                Desarrollo de negocio y partnerships
+              </strong>
+
+            </div>
+
+
+            <div class="role-item">
+
+              <div class="role-number">
+                05
+              </div>
+
+              <strong>
+                Construcción de sistemas internos escalables
+              </strong>
+
+            </div>
+
+
+          </div>
+
+
+          <div class="cofounder-card">
+
+            <img
+              src="damian-aldunate.jpg"
+              alt="Damián Aldunate"
+              class="cofounder-photo"
+              loading="lazy"
+            >
+
+            <div>
+
+              <div class="cofounder-eyebrow">
+                Leadership
+              </div>
+
+              <h3 class="cofounder-name">
+                Damián Aldunate
+              </h3>
+
+              <p class="cofounder-meta">
+                Co-Founder &amp; CMO, lowsignal
+              </p>
+
+              <p class="cofounder-copy">
+                Junto a Damián, construimos lowsignal desde
+                roles complementarios entre marca, growth,
+                operación y desarrollo de negocio.
+              </p>
+
+              <div class="cofounder-links">
+
+                <a
+                  href="https://www.linkedin.com/in/damianaldunate/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn de Damián Aldunate"
+                  title="LinkedIn"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
+                  </svg>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </section>
+
+
+
 
 
         <!-- WHAT WE BUILD -->
 
         <section class="section">
 
-          <div class="section-label">03 / What we build</div>
+
+          <div class="section-label">
+            03 / What we build
+          </div>
+
 
           <h2>
-            Everything growth needs,
-            connected.
+            One system.
+            Multiple layers of growth.
           </h2>
 
-          <div class="section-copy">
-            <p>
-              lowsignal is a Growth Company. We connect strategy, content,
-              technology, product and AI so different capabilities work as
-              one operating system for growth.
-            </p>
+
+
+          <div class="solutions">
+
+
+            <div class="solution">
+
+
+              <div class="solution-number">
+                01
+              </div>
+
+
+              <h3>
+                Low Social
+              </h3>
+
+
+              <div class="solution-type">
+                Social Media
+              </div>
+
+
+              <p>
+
+                Systems de social media y contenido
+                diseñados para mantener consistencia de marca,
+                distribución y una ejecución repetible.
+
+              </p>
+
+
+            </div>
+
+
+
+            <div class="solution">
+
+
+              <div class="solution-number">
+                02
+              </div>
+
+
+              <h3>
+                Low Ads
+              </h3>
+
+
+              <div class="solution-type">
+                Performance
+              </div>
+
+
+              <p>
+
+                Systems de adquisición pagada y performance
+                enfocados en crecimiento medible
+                y optimización continua.
+
+              </p>
+
+
+            </div>
+
+
+
+            <div class="solution">
+
+
+              <div class="solution-number">
+                03
+              </div>
+
+
+              <h3>
+                Low Web
+              </h3>
+
+
+              <div class="solution-type">
+                Web Development
+              </div>
+
+
+              <p>
+
+                Sitios web y experiencias digitales
+                construidos como parte de un sistema de
+                growth, no como activos aislados.
+
+              </p>
+
+
+            </div>
+
+
+
+            <div class="solution">
+
+
+              <div class="solution-number">
+                04
+              </div>
+
+
+              <h3>
+                Low Scale
+              </h3>
+
+
+              <div class="solution-type">
+                Growth Systems
+              </div>
+
+
+              <p>
+
+                Infraestructura de growth que conecta
+                adquisición, posicionamiento, procesos
+                y ejecución escalable.
+
+              </p>
+
+
+            </div>
+
+
+
+            <div class="solution">
+
+
+              <div class="solution-number">
+                05
+              </div>
+
+
+              <h3>
+                Low Apps
+              </h3>
+
+
+              <div class="solution-type">
+                Products & Apps
+              </div>
+
+
+              <p>
+
+                Digital products, apps y herramientas
+                diseñados alrededor de problemas específicos
+                de operación o crecimiento.
+
+              </p>
+
+
+            </div>
+
+
+
+            <div class="solution">
+
+
+              <div class="solution-number">
+                06
+              </div>
+
+
+              <h3>
+                Low Flow
+              </h3>
+
+
+              <div class="solution-type">
+                AI & Automation
+              </div>
+
+
+              <p>
+
+                AI, automatización y workflows operativos
+                que eliminan trabajo repetitivo y crean
+                leverage para los equipos.
+
+              </p>
+
+
+            </div>
+
+
           </div>
 
-          <div class="capability-list">
-
-            <div class="capability-row">
-              <div class="capability-number">01</div>
-              <h3>Content &amp; campaigns</h3>
-              <p>
-                Brand, social content and performance campaigns designed to
-                connect attention, acquisition and measurable growth.
-              </p>
-            </div>
-
-            <div class="capability-row">
-              <div class="capability-number">02</div>
-              <h3>Web &amp; product</h3>
-              <p>
-                Digital experiences, websites, apps and products built around
-                concrete commercial and operational problems.
-              </p>
-            </div>
-
-            <div class="capability-row">
-              <div class="capability-number">03</div>
-              <h3>Systems &amp; automation</h3>
-              <p>
-                Processes, AI and automation that reduce friction, improve
-                visibility and create leverage for teams.
-              </p>
-            </div>
-
-          </div>
 
         </section>
 
 
-<!-- OPERATING MODEL -->
+
+        <!-- OPERATING MODEL -->
 
         <section class="section">
 
-          <div class="section-label">04 / How we operate</div>
+
+          <div class="section-label">
+            04 / Operating model
+          </div>
+
 
           <h2>
-            From opportunity
-            to operating system.
+            La estrategia solo sirve
+            cuando se convierte en sistema.
           </h2>
 
-          <div class="operating-flow">
 
-            <div class="operating-flow-copy">
-              My role crosses the full loop: commercial strategy, operations,
-              delivery and the systems that keep each stage connected.
-              Strategy becomes useful when it turns into repeatable execution.
-            </div>
+          <div class="section-copy">
 
-            <div class="flow-list">
-              <div class="flow-row"><span>01</span><strong>Demand</strong><em>Generate &amp; qualify</em></div>
-              <div class="flow-row"><span>02</span><strong>Discovery</strong><em>Understand &amp; shape</em></div>
-              <div class="flow-row"><span>03</span><strong>Commercial</strong><em>Propose &amp; close</em></div>
-              <div class="flow-row"><span>04</span><strong>Delivery</strong><em>Coordinate &amp; ship</em></div>
-              <div class="flow-row"><span>05</span><strong>Growth</strong><em>Learn &amp; expand</em></div>
-            </div>
+            <p>
+              Strategy only works when it becomes a system.
+              That is why we build dashboards, reporting frameworks,
+              delivery processes and review cycles that improve
+              visibility, decision-making, efficiency and long-term value.
+            </p>
 
           </div>
+
+
+
+          <div class="operating-list">
+
+
+            <div class="operating-item">
+
+              <div class="operating-number">
+                01
+              </div>
+
+              <strong>
+                Build
+              </strong>
+
+              <span>
+                Infrastructure
+              </span>
+
+            </div>
+
+
+            <div class="operating-item">
+
+              <div class="operating-number">
+                02
+              </div>
+
+              <strong>
+                Operate
+              </strong>
+
+              <span>
+                Execution
+              </span>
+
+            </div>
+
+
+            <div class="operating-item">
+
+              <div class="operating-number">
+                03
+              </div>
+
+              <strong>
+                Scale
+              </strong>
+
+              <span>
+                Growth
+              </span>
+
+            </div>
+
+
+          </div>
+
 
         </section>
 
 
-<!-- CLIENT WORK -->
+
+        <!-- CLIENT WORK -->
 
         <section class="section client-work">
 
@@ -3764,19 +3777,19 @@
 
 
           <h2>
-            Building close
-            to the problem.
+            Construyendo cerca
+            del problema.
           </h2>
 
 
           <div class="client-work-copy">
 
             <p>
-              Client work starts by understanding
-              how teams operate, where time is lost and what
-              needs to be connected. From there, we turn
-              strategy into systems teams can
-              use, measure and improve.
+              El trabajo con clientes parte por entender
+              cómo operan, dónde se pierde tiempo y qué
+              necesita conectarse. Desde ahí, convertimos
+              estrategia en sistemas que los equipos pueden
+              usar, medir y mejorar.
             </p>
 
           </div>
@@ -3788,7 +3801,7 @@
 
               <img
                 src="lowsignal-client-work.jpg"
-                alt="lowsignal working session with clients"
+                alt="Sesión de trabajo de lowsignal con clientes"
                 loading="lazy"
               >
 
@@ -3806,122 +3819,11 @@
 
 
       
-        
-        
-                <section class="section">
-
-          <div class="section-label">06 / Traction</div>
-
-          <h2>
-            Six months building.
-            The numbers behind it.
-          </h2>
-
-          <div class="traction-layout">
-
-            <div class="traction-statement">
-              One system, <span>not isolated services.</span>
-            </div>
-
-            <div class="traction-list">
-              <div class="traction-row"><strong>15+</strong><span>clients &amp; brands supported</span></div>
-              <div class="traction-row"><strong>100+</strong><span>content pieces created</span></div>
-              <div class="traction-row"><strong>50+</strong><span>campaigns launched</span></div>
-              <div class="traction-row"><strong>5+</strong><span>industries &amp; categories served</span></div>
-            </div>
-
-          </div>
-
-        </section>
-
-
-<section class="section founders-bridge">
-
-          <div class="section-label">
-            07 / Built together
-          </div>
-
-          <div class="founders-story">
-
-            <figure class="founders-story-media">
-              <img
-                src="lowsignal-founders.jpg"
-                alt="Felipe Quiroz and Damián Aldunate, co-founders of lowsignal"
-                loading="lazy"
-              >
-            </figure>
-
-            <div class="founders-story-copy">
-
-              <div class="founders-story-eyebrow">
-                Founders / lowsignal
-              </div>
-
-              <h2>
-                Different strengths.
-                One operating system.
-              </h2>
-
-              <p>
-                lowsignal is built through complementary roles.
-                Damián leads brand and growth; I lead operations,
-                commercial strategy and product delivery. The point
-                is not to split the company into silos, but to connect
-                those strengths into one way of building and operating.
-              </p>
-
-              <div class="founders-story-meta">
-                <span>Felipe Quiroz · Co-Founder &amp; COO</span>
-                <span>Damián Aldunate · Co-Founder &amp; CMO</span>
-              </div>
-</div>
-
-          </div>
-
-        </section>
-
-
-        <!-- CLIENT TESTIMONIAL -->
-        <section class="section testimonial-section">
-
-          <div class="section-label">
-            08 / Client signal
-          </div>
-
-          <div class="testimonial">
-            <div class="testimonial-grid">
-
-              <div class="testimonial-photo">
-                <img
-                  src="nicolas-munoz-rech.jpg"
-                  alt="Nicolás Muñoz, Executive Director at Red Educacional Camilo Henríquez"
-                  loading="lazy"
-                >
-              </div>
-
-              <div>
-                <p class="testimonial-quote">
-                  “lowsignal has become a strategic partner for our network.
-                  They understood our vision and truly got involved in the project.”
-                </p>
-
-                <div class="testimonial-person">
-                  <strong>Nicolás Muñoz</strong>
-                  <span>Executive Director · Red Educacional Camilo Henríquez</span>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </section>
-
-
-                <!-- SELECTED CASES -->
+        <!-- SELECTED CASES -->
         <section class="section cases-section">
 
           <div class="section-label">
-            09 / Selected cases
+            06 / Selected cases
           </div>
 
           <div class="cases-intro">
@@ -3960,11 +3862,12 @@
                   Strengthening GETS Educación’s
                   digital growth.
                 </h3>
-<div class="case-tags"><span>Content</span><span>Social</span><span>Performance</span></div>
 
                 <p>
-Ongoing content, campaigns and digital execution built to strengthen consistency, presence and results.
-</p>
+                  We built an ecosystem of content, campaigns and web experience
+                  to strengthen its positioning and connect its solutions
+                  with new audiences.
+                </p>
 
               </div>
 
@@ -4201,7 +4104,7 @@ Ongoing content, campaigns and digital execution built to strengthen consistency
         <div class="sidebar-card">
 
           <div class="sidebar-label">
-            Period
+            Periodo
           </div>
 
           <div class="sidebar-value">
@@ -4459,100 +4362,7 @@ Ongoing content, campaigns and digital execution built to strengthen consistency
         © 2026 Felipe Quiroz
       </div>
 
-
-
-      <div class="footer-socials">
-
-
-        <a
-          href="https://www.linkedin.com/in/felipequirozp"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          class="social-icon"
-        >
-
-          <span class="linkedin-mark">
-            in
-          </span>
-
-        </a>
-
-
-
-        <a
-          href="https://www.instagram.com/felipe_quirozp/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-          class="social-icon"
-        >
-
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-
-            <rect
-              x="4"
-              y="4"
-              width="16"
-              height="16"
-              rx="5"
-            />
-
-            <circle
-              cx="12"
-              cy="12"
-              r="3.5"
-            />
-
-            <circle
-              cx="17.3"
-              cy="6.8"
-              r=".7"
-              class="filled"
-            />
-
-          </svg>
-
-        </a>
-
-
-
-        <a
-          href="mailto:felipe@lowsignal.cl"
-          aria-label="Email"
-          class="social-icon"
-        >
-
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-
-            <rect
-              x="3"
-              y="5"
-              width="18"
-              height="14"
-              rx="2"
-            />
-
-            <path
-              d="M4 7L12 13L20 7"
-            />
-
-          </svg>
-
-        </a>
-
-
-      </div>
-
-
-
-      <div class="footer-location">
+<div class="footer-location">
         Santiago / CL
       </div>
 
