@@ -3221,89 +3221,20 @@
 
   
     /* =====================================================
-       INTERNATIONAL WORK + PARTNERSHIP SCALE
+       FOOTER — NO DUPLICATE SOCIAL LINKS
     ===================================================== */
 
-    .international-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 38px;
+    .footer-socials {
+      display: none !important;
     }
 
-    .international-card {
-      padding: 26px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: var(--white);
+    .footer {
+      grid-template-columns: 1fr auto !important;
     }
 
-    .international-card .eyebrow {
-      color: var(--steel-light);
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: .07em;
-      text-transform: uppercase;
-    }
-
-    .international-card h3 {
-      margin: 14px 0 0;
-      font-family: "Manrope", sans-serif;
-      color: var(--navy);
-      font-size: 22px;
-      line-height: 1.15;
-      letter-spacing: -.03em;
-    }
-
-    .international-card p {
-      margin: 16px 0 0;
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.7;
-    }
-
-    .partnership-signal {
-      display: grid;
-      grid-template-columns: .72fr 1.28fr;
-      gap: clamp(36px, 6vw, 80px);
-      align-items: end;
-      margin-top: 34px;
-      padding: 34px 0 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .partnership-number {
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(54px, 7vw, 88px);
-      line-height: .95;
-      letter-spacing: -.06em;
-      color: var(--navy);
-    }
-
-    .partnership-copy {
-      max-width: 620px;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.8;
-    }
-
-    .market-line {
-      margin-top: 18px;
-      color: var(--steel);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: .05em;
-      text-transform: uppercase;
-    }
-
-    @media(max-width:900px){
-      .international-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .partnership-signal {
-        grid-template-columns: 1fr;
-      }
+    .footer-location {
+      justify-self: end !important;
+      text-align: right !important;
     }
 
   </style>
@@ -3979,35 +3910,8 @@
               </div>
             </article>
 
-            
             <article class="project-case">
               <div class="project-case-number">03</div>
-              <div>
-                <div class="project-case-type">Educación pública · Chile</div>
-                <h3>JUNJI · Matrícula Digital Nacional</h3>
-                <p class="project-case-description">
-                  Apoyé el despliegue de una iniciativa nacional de matrícula digital
-                  orientada a simplificar postulaciones y admisiones para familias
-                  que acceden a educación parvularia pública.
-                </p>
-                <div class="project-case-metrics">
-                  <span class="project-case-metric">3.000+ jardines infantiles públicos</span>
-                  <span class="project-case-metric">Matrícula digital</span>
-                  <span class="project-case-metric">Implementación sector público</span>
-                </div>
-              </div>
-              <div class="project-case-side">
-                <div class="project-case-side-label">Mi rol</div>
-                <p>
-                  Apoyé la coordinación institucional y la implementación,
-                  conectando requerimientos del sector público con necesidades
-                  de producto y despliegue.
-                </p>
-              </div>
-            </article>
-
-<article class="project-case">
-              <div class="project-case-number">04</div>
               <div>
                 <div class="project-case-type">IA · Educación pública · Chile · jul.–dic. 2025</div>
                 <h3>AI-Powered Education Transformation</h3>
@@ -4185,99 +4089,12 @@
 
 
 
-        
-        <!-- TRABAJO INTERNACIONAL -->
-        <section class="section">
-
-          <div class="section-label">05 / Trabajo internacional</div>
-
-          <h2>
-            De sistemas públicos
-            a expansión internacional.
-          </h2>
-
-          <div class="section-copy">
-            <p>
-              El trabajo se expandió a distintos mercados y sistemas educativos,
-              conectando partnerships, adopción de producto e iniciativas de
-              investigación en Estados Unidos y Europa.
-            </p>
-          </div>
-
-          <div class="market-line">
-            Chile · Colombia · Estados Unidos · Dinamarca · España
-          </div>
-
-          <div class="international-grid">
-
-            <article class="international-card">
-              <div class="eyebrow">New Haven · Estados Unidos</div>
-              <h3>Matrícula y elección escolar a nivel distrital</h3>
-              <p>
-                Partnership con New Haven Public Schools en herramientas de
-                elección escolar y matrícula, incluyendo orientación,
-                simulaciones de admisión y apoyo a familias.
-              </p>
-            </article>
-
-            <article class="international-card">
-              <div class="eyebrow">Copenhague · Dinamarca</div>
-              <h3>Orientación con IA e investigación</h3>
-              <p>
-                Primera expansión de TetherEd a Europa, en colaboración con la
-                University of Copenhagen en orientación y toma de decisiones educativas.
-              </p>
-            </article>
-
-            <article class="international-card">
-              <div class="eyebrow">Barcelona · España</div>
-              <h3>Orientación educativa basada en evidencia</h3>
-              <p>
-                Trabajo de investigación internacional conectado a la iniciativa
-                SHAPE, incluyendo Barcelona Supercomputing Center e investigadores
-                afiliados a Yale.
-              </p>
-            </article>
-
-          </div>
-
-        </section>
-
-
-        <!-- ESCALA DE PARTNERSHIPS -->
-        <section class="section">
-
-          <div class="section-label">06 / Escala de partnerships</div>
-
-          <h2>
-            Construyendo el ecosistema,
-            no solo el pipeline.
-          </h2>
-
-          <div class="partnership-signal">
-            <div class="partnership-number">15</div>
-            <div>
-              <div class="partnership-copy">
-                Partnerships estratégicos en educación construidos durante 2025
-                con organizaciones de Chile, Colombia, Perú y República Dominicana,
-                conectando instituciones, proveedores de tecnología y organizaciones
-                educativas alrededor de iniciativas compartidas.
-              </div>
-              <div class="market-line">
-                Partnerships · Expansión · Ecosistema
-              </div>
-            </div>
-          </div>
-
-        </section>
-
-
-<!-- HOW I WORKED -->
+        <!-- HOW I WORKED -->
 
         <section class="section">
 
           <div class="section-label">
-            07 / Sistema operativo
+            05 / Sistema operativo
           </div>
 
           <h2>
@@ -4679,100 +4496,7 @@
         © 2026 Felipe Quiroz
       </div>
 
-
-
-      <div class="footer-socials">
-
-
-        <a
-          href="https://www.linkedin.com/in/felipequirozp"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          class="social-icon"
-        >
-
-          <span class="linkedin-mark">
-            in
-          </span>
-
-        </a>
-
-
-
-        <a
-          href="https://www.instagram.com/felipe_quirozp/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-          class="social-icon"
-        >
-
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-
-            <rect
-              x="4"
-              y="4"
-              width="16"
-              height="16"
-              rx="5"
-            />
-
-            <circle
-              cx="12"
-              cy="12"
-              r="3.5"
-            />
-
-            <circle
-              cx="17.3"
-              cy="6.8"
-              r=".7"
-              class="filled"
-            />
-
-          </svg>
-
-        </a>
-
-
-
-        <a
-          href="mailto:felipe@lowsignal.cl"
-          aria-label="Email"
-          class="social-icon"
-        >
-
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-
-            <rect
-              x="3"
-              y="5"
-              width="18"
-              height="14"
-              rx="2"
-            />
-
-            <path
-              d="M4 7L12 13L20 7"
-            />
-
-          </svg>
-
-        </a>
-
-
-      </div>
-
-
-
-      <div class="footer-location">
+<div class="footer-location">
         Santiago / CL
       </div>
 
