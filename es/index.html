@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
 
@@ -10,14 +10,14 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Felipe Quiroz | Producto, Growth & Operaciones</title>
+  <title>Felipe Quiroz | Product, Growth & Operations</title>
 
   <meta
     name="description"
-    content="Felipe Quiroz — producto, growth y operaciones. Construyendo productos, sistemas de growth y modelos operativos entre tecnología y negocio."
+    content="Felipe Quiroz — Product, growth and operations. Building products, growth systems and operating models across technology and business."
   >
 
-  <link rel="canonical" href="https://felipequirozp.cl/es/">
+  <link rel="canonical" href="https://felipequirozp.cl/">
 
   <link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/">
 
@@ -29,7 +29,7 @@
   <link
     rel="icon"
     type="image/png"
-    href="../favicon.png"
+    href="favicon.png"
   >
 
   <!-- FONTS -->
@@ -41,10 +41,7 @@
     crossorigin
   >
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 
   <style>
@@ -739,8 +736,6 @@
 
     }
 
-
-
     .project-impact {
       margin-top: 26px;
       padding-top: 18px;
@@ -771,7 +766,7 @@
       text-transform: uppercase;
     }
 
-    .project-meta {
+.project-meta {
 
       display: flex;
 
@@ -2268,6 +2263,487 @@
       }
     }
 
+  
+    /* =====================================================
+       HOME V23 — CLEAN REBUILD
+       Fresh pass from the original clean Home.
+       Inter, restrained palette, editorial rows, no UI overload.
+    ===================================================== */
+
+    :root {
+      --navy:#182536;
+      --navy-deep:#0d1724;
+      --steel:#324963;
+      --steel-light:#71869c;
+      --slate:#9aa9ba;
+      --slate-light:#c7d0d9;
+      --ice:#eef1f4;
+      --paper:#f5f6f7;
+      --white:#fff;
+      --ink:#10161d;
+      --muted:#66717d;
+      --line:#d4d9de;
+      --accent:#8ea4c2;
+    }
+
+    html, body, button, input, textarea, select,
+    h1, h2, h3, h4, h5, h6 {
+      font-family:"Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    }
+
+    body {
+      background:var(--paper);
+      color:var(--ink);
+    }
+
+    /* HERO */
+    .hero {
+      background:var(--navy) !important;
+    }
+
+    .hero-grid {
+      max-width:1220px !important;
+      gap:clamp(54px,6vw,88px) !important;
+    }
+
+    .hero h1 {
+      max-width:760px !important;
+      font-size:clamp(66px,7vw,112px) !important;
+      line-height:.96 !important;
+      letter-spacing:-.065em !important;
+      font-weight:500 !important;
+    }
+
+    .hero h1 span {
+      color:#a8b6c8 !important;
+    }
+
+    .hero-description {
+      max-width:560px !important;
+      font-size:13.5px !important;
+      line-height:1.72 !important;
+      color:var(--slate-light) !important;
+    }
+
+    .hero-roles {
+      display:none !important;
+    }
+
+    .hero-photo img {
+      border-radius:22px !important;
+    }
+
+    .photo-meta {
+      color:#aeb9c7 !important;
+      font-size:8.5px !important;
+      letter-spacing:.075em !important;
+    }
+
+    /* GLOBAL SECTION RHYTHM */
+    .work,
+    .editorial-bridge-inner,
+    .about-grid,
+    .now-grid,
+    .statement-inner,
+    .contact-block,
+    .footer {
+      max-width:1160px !important;
+      margin-left:auto !important;
+      margin-right:auto !important;
+    }
+
+    .section-label {
+      color:var(--steel-light) !important;
+      font-size:9px !important;
+      letter-spacing:.10em !important;
+      font-weight:700 !important;
+    }
+
+    /* SELECTED WORK — no cards */
+    .work {
+      padding-top:82px !important;
+      padding-bottom:86px !important;
+    }
+
+    .section-head {
+      display:grid !important;
+      grid-template-columns:1fr .72fr !important;
+      gap:48px !important;
+      align-items:end !important;
+      margin-bottom:38px !important;
+    }
+
+    .section-head h2 {
+      margin:0 !important;
+      max-width:690px !important;
+      font-size:clamp(44px,4.6vw,64px) !important;
+      line-height:1.02 !important;
+      letter-spacing:-.058em !important;
+      font-weight:500 !important;
+    }
+
+    .section-head::after {
+      content:"Selected work across product, growth, operations and company building.";
+      display:block;
+      max-width:390px;
+      justify-self:end;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.65;
+      padding-bottom:4px;
+    }
+
+    .projects {
+      border-top:1px solid var(--line) !important;
+    }
+
+    .project {
+      display:grid !important;
+      grid-template-columns:minmax(230px,.82fr) minmax(0,1.18fr) !important;
+      gap:clamp(44px,6vw,82px) !important;
+      align-items:start !important;
+      padding:38px 0 40px !important;
+      border-bottom:1px solid var(--line) !important;
+      text-decoration:none !important;
+      color:inherit !important;
+      background:transparent !important;
+      transition:opacity .18s ease, transform .18s ease !important;
+    }
+
+    .project:hover {
+      opacity:.78 !important;
+      transform:translateX(3px);
+    }
+
+    .project-number {
+      display:none !important;
+    }
+
+    .project-main h3 {
+      margin:0 !important;
+      font-size:26px !important;
+      line-height:1.05 !important;
+      letter-spacing:-.035em !important;
+      font-weight:600 !important;
+      color:var(--navy) !important;
+    }
+
+    .project-logo {
+      display:flex;
+      align-items:center;
+      height:30px;
+      margin-bottom:14px;
+    }
+
+    .project-logo img {
+      display:block;
+      max-width:142px;
+      max-height:28px;
+      width:auto;
+      height:auto;
+      object-fit:contain;
+      object-position:left center;
+    }
+
+    .project-logo.usm img {
+      filter:invert(1) brightness(.28);
+    }
+
+    .project-main .role {
+      margin-top:10px !important;
+      color:var(--steel-light) !important;
+      font-size:9px !important;
+      line-height:1.55 !important;
+      letter-spacing:.045em !important;
+    }
+
+    .project-visual,
+    .system-visual,
+    .network-visual,
+    .usm-visual {
+      display:none !important;
+    }
+
+    .project-side {
+      display:grid !important;
+      grid-template-columns:minmax(0,1fr) 170px !important;
+      gap:34px !important;
+      align-items:start !important;
+    }
+
+    .project-statement {
+      max-width:620px !important;
+      font-size:clamp(27px,2.9vw,39px) !important;
+      line-height:1.08 !important;
+      letter-spacing:-.045em !important;
+      font-weight:500 !important;
+      color:var(--navy) !important;
+    }
+
+    .project-impact {
+      grid-column:2 !important;
+      grid-row:1 !important;
+      border-top:1px solid var(--line);
+      padding-top:12px;
+    }
+
+    .project-impact strong {
+      display:block !important;
+      font-size:22px !important;
+      line-height:1 !important;
+      letter-spacing:-.035em !important;
+      color:var(--steel) !important;
+      font-weight:600 !important;
+    }
+
+    .project-impact span {
+      display:block !important;
+      margin-top:6px !important;
+      color:var(--muted) !important;
+      font-size:9px !important;
+      line-height:1.5 !important;
+    }
+
+    .project-meta {
+      grid-column:1 / -1 !important;
+      display:flex !important;
+      justify-content:space-between !important;
+      gap:20px !important;
+      margin-top:8px !important;
+      color:var(--steel-light) !important;
+      font-size:8.5px !important;
+      letter-spacing:.06em !important;
+      text-transform:uppercase !important;
+    }
+
+    /* EDITORIAL BRIDGE */
+    .editorial-bridge {
+      background:var(--navy-deep) !important;
+      color:var(--white) !important;
+      padding-top:82px !important;
+      padding-bottom:82px !important;
+    }
+
+    .editorial-bridge-inner {
+      gap:clamp(44px,6vw,78px) !important;
+      align-items:center !important;
+    }
+
+    .editorial-bridge h2 {
+      color:var(--white) !important;
+      max-width:590px !important;
+      font-size:clamp(43px,4.7vw,64px) !important;
+      line-height:1.02 !important;
+      letter-spacing:-.058em !important;
+    }
+
+    .editorial-bridge h2 span {
+      color:#aab9cb !important;
+    }
+
+    .editorial-bridge-meta {
+      color:var(--slate-light) !important;
+    }
+
+    .editorial-bridge-visual {
+      max-width:470px !important;
+      margin-left:auto !important;
+    }
+
+    .editorial-bridge-visual img {
+      border-radius:16px !important;
+    }
+
+    /* ABOUT */
+    .about {
+      background:var(--white) !important;
+    }
+
+    .about-grid {
+      padding-top:82px !important;
+      padding-bottom:82px !important;
+    }
+
+    .about-content h2 {
+      max-width:650px !important;
+      font-size:clamp(43px,4.5vw,62px) !important;
+      line-height:1.03 !important;
+      letter-spacing:-.055em !important;
+    }
+
+    .about-copy {
+      max-width:560px !important;
+      font-size:13px !important;
+      line-height:1.75 !important;
+    }
+
+    /* NOW */
+    .now {
+      background:var(--ice) !important;
+    }
+
+    .now-grid {
+      padding-top:78px !important;
+      padding-bottom:82px !important;
+    }
+
+    .now-content h2 {
+      max-width:620px !important;
+      font-size:clamp(40px,4.3vw,58px) !important;
+      line-height:1.03 !important;
+      letter-spacing:-.052em !important;
+    }
+
+    .now-list {
+      margin-top:34px !important;
+      border-top:1px solid var(--line) !important;
+    }
+
+    .now-item {
+      display:grid !important;
+      grid-template-columns:210px minmax(0,1fr) !important;
+      gap:24px !important;
+      padding:18px 0 !important;
+      border-bottom:1px solid var(--line) !important;
+    }
+
+    .now-number {
+      display:none !important;
+    }
+
+    .now-item strong {
+      font-size:17px !important;
+      color:var(--navy) !important;
+    }
+
+    .now-item span {
+      font-size:11.5px !important;
+      color:var(--muted) !important;
+    }
+
+    .now-moment {
+      display:grid !important;
+      grid-template-columns:minmax(0,1fr) 170px !important;
+      gap:18px !important;
+      max-width:660px !important;
+      margin-top:34px !important;
+      align-items:end !important;
+    }
+
+    .now-moment-media {
+      max-width:430px !important;
+    }
+
+    .now-moment-media img {
+      border-radius:14px !important;
+    }
+
+    .now-moment-caption {
+      font-size:8.5px !important;
+      line-height:1.55 !important;
+      color:var(--steel-light) !important;
+    }
+
+    /* STATEMENT */
+    .statement {
+      background:var(--navy) !important;
+    }
+
+    .statement-inner {
+      padding-top:84px !important;
+      padding-bottom:92px !important;
+    }
+
+    .statement h2 {
+      max-width:820px !important;
+      font-size:clamp(54px,6.2vw,92px) !important;
+      line-height:.98 !important;
+      letter-spacing:-.065em !important;
+    }
+
+    .statement h2 span {
+      color:#a8b6c8 !important;
+    }
+
+    /* CONTACT */
+    .bottom {
+      background:var(--paper) !important;
+    }
+
+    .contact-block {
+      padding-top:74px !important;
+      padding-bottom:68px !important;
+    }
+
+    .contact-block h3 {
+      font-size:clamp(48px,5.7vw,78px) !important;
+      line-height:1 !important;
+      letter-spacing:-.06em !important;
+    }
+
+    .footer-socials {
+      display:none !important;
+    }
+
+    .footer {
+      display:grid !important;
+      grid-template-columns:1fr auto !important;
+      align-items:center !important;
+    }
+
+    .footer-location {
+      justify-self:end !important;
+      text-align:right !important;
+      margin-left:auto !important;
+    }
+
+    @media(max-width:900px){
+      .section-head {
+        grid-template-columns:1fr !important;
+        gap:18px !important;
+      }
+      .section-head::after {
+        justify-self:start;
+      }
+      .project {
+        grid-template-columns:1fr !important;
+        gap:24px !important;
+      }
+      .project-side {
+        grid-template-columns:1fr !important;
+      }
+      .project-impact {
+        grid-column:1 !important;
+        grid-row:auto !important;
+        max-width:190px;
+      }
+    }
+
+    @media(max-width:700px){
+      .hero-grid {
+        grid-template-columns:1fr !important;
+      }
+      .hero h1 {
+        font-size:clamp(56px,15vw,82px) !important;
+      }
+      .section-head h2 {
+        font-size:40px !important;
+      }
+      .project-statement {
+        font-size:30px !important;
+      }
+      .now-item {
+        grid-template-columns:1fr !important;
+        gap:6px !important;
+      }
+      .now-moment {
+        grid-template-columns:1fr !important;
+      }
+      .editorial-bridge-visual {
+        max-width:100% !important;
+      }
+    }
+
   </style>
 
 </head>
@@ -2285,7 +2761,7 @@
 
 
     <a
-      href="/es/"
+      href="/"
       class="brand"
     >
       Felipe Quiroz
@@ -2296,17 +2772,17 @@
 
 
       <a href="#work">
-        Trabajo
+        Work
       </a>
 
 
-      <a href="/es/about">
-        Sobre mí
+      <a href="/about">
+        About
       </a>
 
 
-      <a href="/es/now">
-        Ahora
+      <a href="/now">
+        Now
       </a>
 
 
@@ -2314,16 +2790,16 @@
         href="#contact"
         class="contact-nav"
       >
-        Contacto
+        Contact
       </a>
 
 
       <a
-        href="/"
+        href="/es/"
         class="lang-switch"
-        aria-label="Ver sitio en inglés"
+        aria-label="View site in Spanish"
       >
-        EN
+        ES
       </a>
 
 
@@ -2356,44 +2832,24 @@
 
         <h1>
 
-          Producto,
+          Product,
 
           <span>
             growth
           </span>
 
-          y operaciones.
+          and operations.
 
         </h1>
 
 
         <p class="hero-description">
 
-          Construyo productos, sistemas de growth y modelos operativos
-          que conectan estrategia con ejecución.
+          I build products, growth systems and operating models
+          that connect strategy with execution.
 
         </p>
-
-
-
-        <div class="hero-roles">
-
-
-          <div class="hero-role">
-
-            <span>
-              GeoVictoria
-            </span>
-
-            <strong>
-              Product Manager · Workforce Management
-            </strong>
-
-          </div>
-
-
-
-          <div class="hero-role">
+<div class="hero-role">
 
             <span>
               lowsignal
@@ -2421,7 +2877,7 @@
         <div class="hero-photo">
 
           <img
-            src="../profile.jpg"
+            src="profile.jpg"
             alt="Felipe Quiroz"
           >
 
@@ -2431,7 +2887,7 @@
         <div class="photo-meta">
 
           <span>
-            Producto / Growth / Operaciones
+            Product / Growth / Operations
           </span>
 
           <span>
@@ -2463,13 +2919,13 @@
 
 
       <div class="section-label">
-        01 / Trabajo seleccionado
+        Selected Work
       </div>
 
 
       <h2>
-        Productos, compañías
-        y sistemas que he ayudado a construir.
+        Products, companies
+        and systems I've helped build.
       </h2>
 
 
@@ -2485,23 +2941,13 @@
       ================================================== -->
 
       <a
-        href="/es/geovictoria"
+        href="/geovictoria"
         class="project"
       >
+<div class="project-main">
 
 
-        <div class="project-number">
-          01
-        </div>
-
-
-
-        <div class="project-main">
-
-
-          <h3>
-            GeoVictoria
-          </h3>
+          <div class="project-logo"><img src="geovictoria-logo.png" alt="GeoVictoria" loading="lazy"></div><h3>GeoVictoria</h3>
 
 
           <div class="role">
@@ -2529,25 +2975,24 @@
 
           <div class="project-statement">
 
-            Liderando productos para operaciones reales
-            de Workforce Management.
+            Workforce products built for real operational complexity.
 
           </div>
 
 
           <div class="project-impact">
             <strong>10K+</strong>
-            <span>clientes en la plataforma GeoVictoria</span>
+            <span>customers across the GeoVictoria platform</span>
           </div>
 
           <div class="project-meta">
 
             <span>
-              Producto / SaaS
+              Product / SaaS
             </span>
 
             <span>
-              2026 — Presente
+              2026 — Present
             </span>
 
           </div>
@@ -2565,23 +3010,13 @@
       ================================================== -->
 
       <a
-        href="/es/lowsignal"
+        href="/lowsignal"
         class="project"
       >
+<div class="project-main">
 
 
-        <div class="project-number">
-          02
-        </div>
-
-
-
-        <div class="project-main">
-
-
-          <h3>
-            lowsignal
-          </h3>
+          <div class="project-logo"><img src="lowsignal-logo.png" alt="lowsignal" loading="lazy"></div><h3>lowsignal</h3>
 
 
           <div class="role">
@@ -2592,13 +3027,13 @@
           <div class="system-visual">
 
             <div class="system-dot">
-              Estrategia
+              Strategy
             </div>
 
             <div class="system-line"></div>
 
             <div class="system-dot">
-              Sistemas
+              Systems
             </div>
 
             <div class="system-line"></div>
@@ -2619,15 +3054,14 @@
 
           <div class="project-statement">
 
-            Construyendo Growth Systems que conectan
-            estrategia, tecnología y ejecución.
+            Growth systems connecting strategy, technology and execution.
 
           </div>
 
 
           <div class="project-impact">
             <strong>15+</strong>
-            <span>organizaciones con las que hemos trabajado en lowsignal</span>
+            <span>organizations worked with through lowsignal</span>
           </div>
 
           <div class="project-meta">
@@ -2637,7 +3071,7 @@
             </span>
 
             <span>
-              2025 — Presente
+              2025 — Present
             </span>
 
           </div>
@@ -2655,23 +3089,13 @@
       ================================================== -->
 
       <a
-        href="/es/tethereducation"
+        href="/tethereducation"
         class="project"
       >
+<div class="project-main">
 
 
-        <div class="project-number">
-          03
-        </div>
-
-
-
-        <div class="project-main">
-
-
-          <h3>
-            TetherEd
-          </h3>
+          <div class="project-logo"><img src="tethered-logo.svg" alt="TetherEd" loading="lazy"></div><h3>TetherEd</h3>
 
 
           <div class="role">
@@ -2682,19 +3106,19 @@
           <div class="network-visual">
 
             <div class="network-node">
-              Colegios
+              Schools
             </div>
 
             <div class="network-line"></div>
 
             <div class="network-node">
-              Comunidades
+              Communities
             </div>
 
             <div class="network-line"></div>
 
             <div class="network-node">
-              Instituciones
+              Institutions
             </div>
 
           </div>
@@ -2709,21 +3133,20 @@
 
           <div class="project-statement">
 
-            Conectando producto, instituciones y nuevos
-            mercados a través de partnerships.
+            Education products and partnerships across markets.
 
           </div>
 
 
           <div class="project-impact">
             <strong>100+</strong>
-            <span>colegios públicos alcanzados en proyectos de educación</span>
+            <span>public schools reached through education projects</span>
           </div>
 
           <div class="project-meta">
 
             <span>
-              EdTech / Alianzas
+              EdTech / Partnerships
             </span>
 
             <span>
@@ -2745,34 +3168,27 @@
       ================================================== -->
 
       <a
-        href="/es/usm"
+        href="/usm"
         class="project"
       >
+<div class="project-main">
 
-        <div class="project-number">
-          04
-        </div>
-
-        <div class="project-main">
-
-          <h3>
-            USM
-          </h3>
+          <div class="project-logo usm"><img src="logo-usm_blanco.svg" alt="Universidad Técnica Federico Santa María" loading="lazy"></div><h3>USM</h3>
 
           <div class="role">
-            Coordinador de Promoción de Admisión · Coordinador Asistente
+            Admissions Promotion Coordinator · Assistant Coordinator
           </div>
 
           <div class="usm-visual">
 
             <div class="usm-node">
-              Admisión
+              Admissions
             </div>
 
             <div class="usm-line"></div>
 
             <div class="usm-node">
-              Operaciones
+              Operations
             </div>
 
           </div>
@@ -2783,20 +3199,19 @@
 
           <div class="project-statement">
 
-            Conectando adquisición, datos y procesos
-            dentro de educación superior.
+            Admissions, academic operations and institutional transformation.
 
           </div>
 
           <div class="project-impact">
-            <strong>1.000+</strong>
-            <span>prospectos de admisión involucrados</span>
+            <strong>1,000+</strong>
+            <span>prospective students engaged</span>
           </div>
 
           <div class="project-meta">
 
             <span>
-              Educación / Operaciones
+              Education / Operations
             </span>
 
             <span>
@@ -2828,16 +3243,16 @@
       <div class="editorial-bridge-copy">
 
         <div class="section-label">
-          Una forma de construir
+          A way of building
         </div>
 
         <h2>
-          De oportunidad
-          <span>a sistema que opera.</span>
+          From opportunity
+          <span>to operating system.</span>
         </h2>
 
         <div class="editorial-bridge-meta">
-          Producto · Growth · Operaciones · Company Building
+          Product · Growth · Operations · Company Building
         </div>
 
       </div>
@@ -2845,13 +3260,13 @@
       <figure class="editorial-bridge-visual">
 
         <img
-          src="../building-in-the-field.jpg"
-          alt="Felipe Quiroz presentando y conversando con personas en un evento de educación en Santiago"
+          src="building-in-the-field.jpg"
+          alt="Felipe Quiroz presenting and speaking with people at an education event in Santiago"
           loading="lazy"
         >
 
         <figcaption>
-          <span>En terreno / Producto, personas y conversaciones reales</span>
+          <span>In the field / Product, people and real conversations</span>
           <span>Santiago / CL</span>
         </figcaption>
 
@@ -2874,7 +3289,7 @@
 
 
       <div class="section-label">
-        02 / Sobre mí
+        About
       </div>
 
 
@@ -2884,32 +3299,32 @@
 
         <h2>
 
-          Construyo donde
+          I build where
 
           <span>
-            producto, growth
+            product, growth
           </span>
 
-          y negocio se cruzan.
+          and business meet.
 
         </h2>
 
 
         <p class="about-copy">
 
-          Mi experiencia cruza producto, growth,
-          partnerships y construcción de compañías.
-          El hilo común es convertir problemas y oportunidades
-          en sistemas que puedan operar, aprender y escalar.
+          My experience spans product, growth,
+          operations, partnerships and company building.
+          The common thread is turning problems and opportunities
+          into systems that can operate, learn and scale.
 
         </p>
 
 
         <a
-          href="/es/about"
+          href="/about"
           class="text-link"
         >
-          Sobre mí
+          About
         </a>
 
 
@@ -2934,7 +3349,7 @@
 
 
       <div class="section-label">
-        03 / Ahora
+        Now
       </div>
 
 
@@ -2943,72 +3358,31 @@
 
 
         <h2>
-          En qué estoy trabajando ahora.
+          What I’m building and exploring now.
         </h2>
 
 
 
         <div class="now-list">
 
-
           <div class="now-item">
-
-            <div class="now-number">
-              01
-            </div>
-
-            <strong>
-              GeoVictoria
-            </strong>
-
-            <span>
-              Workforce Management
-            </span>
-
+            <strong>GeoVictoria</strong>
+            <span>Product Manager · Workforce Management</span>
           </div>
 
-
-
           <div class="now-item">
-
-            <div class="now-number">
-              02
-            </div>
-
-            <strong>
-              lowsignal
-            </strong>
-
-            <span>
-              Growth Systems
-            </span>
-
+            <strong>lowsignal</strong>
+            <span>Growth Systems · AI · Automation · Business</span>
           </div>
 
-
-
           <div class="now-item">
-
-            <div class="now-number">
-              03
-            </div>
-
-            <strong>
-              Explorando
-            </strong>
-
-            <span>
-              IA · Agentes · Nuevos modelos
-            </span>
-
+            <strong>Product &amp; AI</strong>
+            <span>Agents · AI-native products · Company building</span>
           </div>
-
 
         </div>
 
-
-
-
+        </div>
 
         <figure class="now-moment">
 
@@ -3016,8 +3390,8 @@
           <div class="now-moment-media">
 
             <img
-              src="../platanus-ai-native.jpg"
-              alt="Evento AI Native Startups de Platanus en Santiago"
+              src="platanus-ai-native.jpg"
+              alt="Platanus AI Native Startups event in Santiago"
               loading="lazy"
             >
 
@@ -3027,7 +3401,7 @@
           <figcaption class="now-moment-caption">
 
             <span>
-              En el ecosistema
+              Out in the ecosystem
             </span>
 
             <span>
@@ -3041,10 +3415,10 @@
 
 
         <a
-          href="/es/now"
+          href="/now"
           class="text-link"
         >
-          Ver en qué estoy trabajando
+          See what I'm working on
         </a>
 
 
@@ -3069,16 +3443,16 @@
 
 
       <div class="section-label">
-        04 / Siguiente
+        Next
       </div>
 
 
       <h2>
 
-        Construyendo
+        Building
 
         <span>
-          lo que viene.
+          what's next.
         </span>
 
       </h2>
@@ -3108,12 +3482,12 @@
 
 
         <div class="section-label">
-          Contacto
+          Contact
         </div>
 
 
         <h3>
-          Conversemos.
+          Let's connect.
         </h3>
 
 
@@ -3169,107 +3543,7 @@
       <div>
         © 2026 Felipe Quiroz
       </div>
-
-
-
-      <div class="footer-socials">
-
-
-        <!-- LINKEDIN -->
-
-        <a
-          href="https://www.linkedin.com/in/felipequirozp"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          class="social-icon"
-        >
-
-          <span class="linkedin-mark">
-            in
-          </span>
-
-        </a>
-
-
-
-        <!-- INSTAGRAM -->
-
-        <a
-          href="https://www.instagram.com/felipe_quirozp/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-          class="social-icon"
-        >
-
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-
-            <rect
-              x="4"
-              y="4"
-              width="16"
-              height="16"
-              rx="5"
-            />
-
-            <circle
-              cx="12"
-              cy="12"
-              r="3.5"
-            />
-
-            <circle
-              cx="17.3"
-              cy="6.8"
-              r=".7"
-              class="filled"
-            />
-
-          </svg>
-
-        </a>
-
-
-
-        <!-- EMAIL -->
-
-        <a
-          href="mailto:felipe@lowsignal.cl"
-          aria-label="Email"
-          class="social-icon"
-        >
-
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-
-            <rect
-              x="3"
-              y="5"
-              width="18"
-              height="14"
-              rx="2"
-            />
-
-            <path
-              d="M4 7L12 13L20 7"
-            />
-
-          </svg>
-
-        </a>
-
-
-      </div>
-
-
-
-      <div class="footer-location">
+<div class="footer-location">
         Santiago / CL
       </div>
 
