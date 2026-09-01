@@ -2168,131 +2168,20 @@
 
   
     /* =====================================================
-       PEOPLE — TETHER-STYLE OPEN ROWS
+       FOOTER — NO DUPLICATE SOCIAL LINKS
     ===================================================== */
 
-    .people-block {
-      margin-top: 42px;
+    .footer-socials {
+      display: none !important;
     }
 
-    .people-heading {
-      margin-bottom: 4px;
-      color: var(--steel-light);
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: .14em;
-      text-transform: uppercase;
+    .footer {
+      grid-template-columns: 1fr auto !important;
     }
 
-    .leadership-card {
-      margin-top: 0;
-      padding: 28px 0;
-      border: 0;
-      border-top: 1px solid var(--line);
-      border-radius: 0;
-      background: transparent;
-      display: grid;
-      grid-template-columns: 78px minmax(0,1fr);
-      gap: 24px;
-      align-items: center;
-      max-width: none;
-    }
-
-    .leadership-card:last-child {
-      border-bottom: 1px solid var(--line);
-    }
-
-    .leadership-photo {
-      width: 78px;
-      height: 78px;
-      aspect-ratio: auto;
-      overflow: hidden;
-      border-radius: 20px;
-      background: var(--ice);
-    }
-
-    .leadership-photo img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .leadership-eyebrow {
-      margin-bottom: 7px;
-      color: var(--steel-light);
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-
-    .leadership-name {
-      margin: 0 0 5px;
-      color: var(--ink);
-      font-family: "Manrope", sans-serif;
-      font-size: 18px;
-      font-weight: 650;
-      letter-spacing: -.02em;
-      line-height: 1.15;
-    }
-
-    .leadership-role {
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.55;
-    }
-
-    .leadership-copy {
-      margin: 9px 0 0;
-      max-width: 650px;
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.65;
-    }
-
-    .leadership-links {
-      margin-top: 13px;
-      display: flex;
-      align-items: center;
-      gap: 9px;
-    }
-
-    .leadership-linkedin {
-      width: 34px;
-      height: 34px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--line);
-      border-radius: 50%;
-      color: var(--steel);
-      font-size: 11px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: background .2s ease, border-color .2s ease, transform .2s ease;
-    }
-
-    .leadership-linkedin:hover {
-      background: var(--white);
-      border-color: var(--steel-light);
-      transform: translateY(-2px);
-    }
-
-    @media(max-width:600px){
-      .leadership-card {
-        grid-template-columns: 64px minmax(0,1fr);
-        gap: 16px;
-        padding: 24px 0;
-        align-items: start;
-      }
-
-      .leadership-photo {
-        width: 64px;
-        height: 64px;
-        border-radius: 16px;
-      }
+    .footer-location {
+      justify-self: end !important;
+      text-align: right !important;
     }
 
   </style>
@@ -2639,76 +2528,40 @@
 
           </div>
 
-          <div class="people-block">
+          <div class="leadership-card">
 
-            <div class="people-heading">
-              Personas con las que trabajé
+            <div class="leadership-photo">
+              <img
+                src="../francisca-astudillo.jpg"
+                alt="Francisca Astudillo"
+                loading="lazy"
+              >
             </div>
 
-            <div class="leadership-card">
+            <div>
+              <div class="leadership-eyebrow">
+                Liderazgo
+              </div>
 
-              <div class="leadership-photo">
-                <img
-                  src="../francisca-astudillo.jpg"
-                  alt="Francisca Astudillo"
-                  loading="lazy"
+              <h3 class="leadership-name">
+                Francisca Astudillo
+              </h3>
+
+              <div class="leadership-role">
+                CEO, GeoVictoria
+              </div>
+
+              <div class="leadership-links">
+                <a
+                  class="leadership-linkedin"
+                  href="https://www.linkedin.com/in/francisca-astudillo-bessi-200b2432/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn de Francisca Astudillo"
                 >
+                  in
+                </a>
               </div>
-
-              <div>
-                                <h3 class="leadership-name">Francisca Astudillo</h3>
-                <div class="leadership-role">CEO · GeoVictoria</div>
-                <p class="leadership-copy">
-                  Trabajé junto a Francisca en iniciativas de producto y evolución de la compañía,
-                  conectando necesidades de negocio, clientes y ejecución.
-                </p>
-
-                <div class="leadership-links">
-                  <a
-                    class="leadership-linkedin"
-                    href="https://www.linkedin.com/in/francisca-astudillo-bessi-200b2432/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn de Francisca Astudillo"
-                  >
-                    in
-                  </a>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="leadership-card">
-
-              <div class="leadership-photo">
-                <img
-                  src="../nicolas-garcias.jpg"
-                  alt="Nicolás Garcías"
-                  loading="lazy"
-                >
-              </div>
-
-              <div>
-                                <h3 class="leadership-name">Nicolás Garcías</h3>
-                <div class="leadership-role">Chief Product Officer · GeoVictoria</div>
-                <p class="leadership-copy">
-                  Trabajé directamente con Nicolás en estrategia de producto,
-                  priorización, pilotos y evolución de las soluciones de Workforce Management.
-                </p>
-                <div class="leadership-links">
-                  <a
-                    class="leadership-linkedin"
-                    href="https://www.linkedin.com/in/ngarcias/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn de Nicolás Garcías"
-                  >
-                    in
-                  </a>
-                </div>
-
-              </div>
-
             </div>
 
           </div>
@@ -3376,100 +3229,7 @@
         © 2026 Felipe Quiroz
       </div>
 
-
-
-      <div class="footer-socials">
-
-
-        <a
-          href="https://www.linkedin.com/in/felipequirozp"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          class="social-icon"
-        >
-
-          <span class="linkedin-mark">
-            in
-          </span>
-
-        </a>
-
-
-
-        <a
-          href="https://www.instagram.com/felipe_quirozp/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-          class="social-icon"
-        >
-
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-
-            <rect
-              x="4"
-              y="4"
-              width="16"
-              height="16"
-              rx="5"
-            />
-
-            <circle
-              cx="12"
-              cy="12"
-              r="3.5"
-            />
-
-            <circle
-              cx="17.3"
-              cy="6.8"
-              r=".7"
-              class="filled"
-            />
-
-          </svg>
-
-        </a>
-
-
-
-        <a
-          href="mailto:felipe@lowsignal.cl"
-          aria-label="Email"
-          class="social-icon"
-        >
-
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-
-            <rect
-              x="3"
-              y="5"
-              width="18"
-              height="14"
-              rx="2"
-            />
-
-            <path
-              d="M4 7L12 13L20 7"
-            />
-
-          </svg>
-
-        </a>
-
-
-      </div>
-
-
-
-      <div class="footer-location">
+<div class="footer-location">
         Santiago / CL
       </div>
 
