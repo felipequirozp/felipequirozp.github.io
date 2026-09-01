@@ -3026,6 +3026,107 @@
       }
     }
 
+  
+    /* =====================================================
+       FOUNDERS PHOTO — RESTORE SMALL EDITORIAL SIZE
+    ===================================================== */
+    .founders-editorial {
+      margin: 42px auto 0 !important;
+      max-width: 460px !important;
+    }
+
+    .founders-editorial img {
+      width: 100% !important;
+      height: auto !important;
+      display: block !important;
+      border-radius: 18px !important;
+    }
+
+    @media(max-width:600px){
+      .founders-editorial {
+        max-width: 100% !important;
+      }
+
+      .founders-editorial img {
+        border-radius: 14px !important;
+      }
+    }
+
+  
+    /* =====================================================
+       FOUNDERS CONTEXT — SMALL EDITORIAL SPLIT
+    ===================================================== */
+    .founders-editorial {
+      max-width: 980px !important;
+      margin: 46px 0 0 !important;
+      display: grid !important;
+      grid-template-columns: minmax(260px, 420px) minmax(0, 1fr) !important;
+      gap: 34px !important;
+      align-items: center !important;
+    }
+
+    .founders-editorial .founders-media {
+      overflow: hidden !important;
+      border-radius: 18px !important;
+      background: var(--ice) !important;
+    }
+
+    .founders-editorial .founders-media img {
+      width: 100% !important;
+      height: auto !important;
+      display: block !important;
+    }
+
+    .founders-editorial .founders-copy {
+      max-width: 430px !important;
+    }
+
+    .founders-editorial .founders-kicker {
+      margin-bottom: 12px !important;
+      color: var(--steel-light) !important;
+      font-size: 9px !important;
+      font-weight: 700 !important;
+      letter-spacing: .09em !important;
+      text-transform: uppercase !important;
+    }
+
+    .founders-editorial .founders-title {
+      margin: 0 0 14px !important;
+      font-family: "Manrope", sans-serif !important;
+      font-size: clamp(28px, 3vw, 42px) !important;
+      line-height: 1.08 !important;
+      letter-spacing: -.045em !important;
+      color: var(--navy) !important;
+    }
+
+    .founders-editorial .founders-text {
+      margin: 0 0 18px !important;
+      color: var(--muted) !important;
+      font-size: 13px !important;
+      line-height: 1.75 !important;
+    }
+
+    .founders-editorial .founders-meta {
+      color: var(--steel-light) !important;
+      font-size: 9px !important;
+      letter-spacing: .04em !important;
+    }
+
+    @media(max-width:760px) {
+      .founders-editorial {
+        grid-template-columns: 1fr !important;
+        gap: 22px !important;
+      }
+
+      .founders-editorial .founders-copy {
+        max-width: 100% !important;
+      }
+
+      .founders-editorial .founders-media {
+        border-radius: 14px !important;
+      }
+    }
+
   </style>
 
 </head>
@@ -3409,6 +3510,8 @@
 
 
 
+        
+
         <!-- MY ROLE -->
 
         <section class="section">
@@ -3468,111 +3571,7 @@
 
           </div>
 
-        </section>
-
-<section class="section">
-
-
-          <div class="section-label">
-            02 / My role
-          </div>
-
-
-          <h2>
-            Operating the system
-            behind the company.
-          </h2>
-
-
-          <div class="section-copy">
-
-
-            <p>
-
-              As Co-Founder & COO, my work spans
-              company operations, products, team execution
-              and business development — turning ideas and
-              opportunities into repeatable operating systems.
-
-            </p>
-
-
-          </div>
-
-
-
-          <div class="role-list">
-
-
-            <div class="role-item">
-
-              <div class="role-number">
-                01
-              </div>
-
-              <strong>
-                Company operations and execution
-              </strong>
-
-            </div>
-
-
-            <div class="role-item">
-
-              <div class="role-number">
-                02
-              </div>
-
-              <strong>
-                Product and service development
-              </strong>
-
-            </div>
-
-
-            <div class="role-item">
-
-              <div class="role-number">
-                03
-              </div>
-
-              <strong>
-                Team systems and workflows
-              </strong>
-
-            </div>
-
-
-            <div class="role-item">
-
-              <div class="role-number">
-                04
-              </div>
-
-              <strong>
-                Business development and partnerships
-              </strong>
-
-            </div>
-
-
-            <div class="role-item">
-
-              <div class="role-number">
-                05
-              </div>
-
-              <strong>
-                Building scalable internal systems
-              </strong>
-
-            </div>
-
-
-          </div>
-
-
-          <div class="cofounder-card">
+<div class="cofounder-card">
 
             <img
               src="damian-aldunate.jpg"
@@ -3628,20 +3627,30 @@
 
         
 
-          <figure class="founders-editorial">
-            <img
-              src="lowsignal-founders.jpg"
-              alt="lowsignal founders together in Santiago"
-              loading="lazy"
-            >
-            <figcaption>
-              <span>Founders / lowsignal</span>
-              <span>Santiago / CL</span>
-            </figcaption>
-          </figure>
-</section>
+          <div class="founders-editorial">
+              <div class="founders-media">
+                <img
+                  src="lowsignal-founders.jpg"
+                  alt="Felipe Quiroz and Damián Aldunate, founders of lowsignal"
+                  loading="lazy"
+                >
+              </div>
 
+              <div class="founders-copy">
+                <div class="founders-kicker">Building together</div>
+                <h3 class="founders-title">Building lowsignal from the ground up.</h3>
+                <p class="founders-text">
+                  We built lowsignal around the idea of creating growth systems that connect
+                  strategy, execution, technology and measurable outcomes. Damián and I work
+                  from complementary perspectives across operations, brand and growth.
+                </p>
+                <div class="founders-meta">
+                  Felipe Quiroz &amp; Damián Aldunate · Co-Founders
+                </div>
+              </div>
+            </div>
 
+        </section>
 
 
 
