@@ -2841,6 +2841,132 @@
 
   
     /* =====================================================
+       FOUNDERS + TESTIMONIAL + SELECTED CASES REFINEMENT
+    ===================================================== */
+
+    .founders-editorial {
+      margin-top: 52px;
+    }
+
+    .founders-editorial img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+    }
+
+    .founders-editorial figcaption {
+      margin-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--steel-light);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .testimonial {
+      margin-top: 70px;
+      padding: 58px 0 8px;
+      border-top: 1px solid var(--line);
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 6vw;
+      align-items: center;
+    }
+
+    .testimonial-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+    }
+
+    .testimonial-quote {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(30px, 3.7vw, 52px);
+      line-height: 1.08;
+      letter-spacing: -.045em;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    .testimonial-person {
+      margin-top: 34px;
+    }
+
+    .testimonial-person strong {
+      display: block;
+      font-family: "Manrope", sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -.02em;
+      color: var(--navy);
+    }
+
+    .testimonial-person span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .cases-intro {
+      max-width: 760px;
+      margin: 18px 0 44px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .case-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0 18px;
+    }
+
+    .case-tags span {
+      display: inline-flex;
+      padding: 6px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--steel);
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    @media(max-width:800px){
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .founders-editorial figcaption {
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+
+    @media(max-width:600px){
+      .founders-editorial img,
+      .testimonial-photo img {
+        border-radius: 14px;
+      }
+    }
+
+  
+    /* =====================================================
        FOOTER — NO DUPLICATE SOCIAL LINKS
     ===================================================== */
 
@@ -2855,6 +2981,49 @@
     .footer-location {
       justify-self: end !important;
       text-align: right !important;
+    }
+
+  
+    /* =====================================================
+       TESTIMONIAL — VISIBLE TEXT-ONLY FEATURE
+    ===================================================== */
+    .testimonial-visible {
+      margin: 10px 0 105px !important;
+      padding: 58px 56px 62px !important;
+      background: var(--navy) !important;
+      border-radius: 18px !important;
+    }
+
+    .testimonial-visible .section-label {
+      color: var(--slate) !important;
+      margin-bottom: 38px !important;
+    }
+
+    .testimonial-visible .testimonial {
+      margin-top: 0 !important;
+      padding: 0 !important;
+      border-top: 0 !important;
+    }
+
+    .testimonial-visible .testimonial-quote {
+      max-width: 900px !important;
+      color: var(--white) !important;
+      font-size: clamp(30px, 3.8vw, 54px) !important;
+    }
+
+    .testimonial-visible .testimonial-person strong {
+      color: var(--white) !important;
+    }
+
+    .testimonial-visible .testimonial-person span {
+      color: var(--slate-light) !important;
+    }
+
+    @media(max-width:600px) {
+      .testimonial-visible {
+        padding: 38px 26px 42px !important;
+        border-radius: 14px !important;
+      }
     }
 
   </style>
@@ -3320,11 +3489,10 @@
 
             <p>
 
-              Como Co-Founder & COO, mi trabajo cruza
-              operaciones de la compañía, productos, ejecución
-              del equipo y desarrollo de negocio — convirtiendo
-              ideas y oportunidades en sistemas operativos
-              repetibles.
+              As Co-Founder & COO, my work spans
+              company operations, products, team execution
+              and business development — turning ideas and
+              opportunities into repeatable operating systems.
 
             </p>
 
@@ -3356,7 +3524,7 @@
               </div>
 
               <strong>
-                Desarrollo de productos y servicios
+                Product and service development
               </strong>
 
             </div>
@@ -3369,7 +3537,7 @@
               </div>
 
               <strong>
-                Systems de equipo y workflows
+                Team systems and workflows
               </strong>
 
             </div>
@@ -3382,7 +3550,7 @@
               </div>
 
               <strong>
-                Desarrollo de negocio y partnerships
+                Business development and partnerships
               </strong>
 
             </div>
@@ -3395,7 +3563,7 @@
               </div>
 
               <strong>
-                Construcción de sistemas internos escalables
+                Building scalable internal systems
               </strong>
 
             </div>
@@ -3428,9 +3596,9 @@
               </p>
 
               <p class="cofounder-copy">
-                Junto a Damián, construimos lowsignal desde
-                roles complementarios entre marca, growth,
-                operación y desarrollo de negocio.
+                Together with Damián, we build lowsignal through
+                complementary roles across brand, growth,
+                operations and business development.
               </p>
 
               <div class="cofounder-links">
@@ -3439,7 +3607,7 @@
                   href="https://www.linkedin.com/in/damianaldunate/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn de Damián Aldunate"
+                  aria-label="Damián Aldunate on LinkedIn"
                   title="LinkedIn"
                 >
                   <svg
@@ -3458,7 +3626,20 @@
           </div>
 
 
-        </section>
+        
+
+          <figure class="founders-editorial">
+            <img
+              src="lowsignal-founders.jpg"
+              alt="lowsignal founders together in Santiago"
+              loading="lazy"
+            >
+            <figcaption>
+              <span>Founders / lowsignal</span>
+              <span>Santiago / CL</span>
+            </figcaption>
+          </figure>
+</section>
 
 
 
@@ -3504,9 +3685,9 @@
 
               <p>
 
-                Systems de social media y contenido
-                diseñados para mantener consistencia de marca,
-                distribución y una ejecución repetible.
+                Social media and content systems
+                designed to maintain brand consistency,
+                distribution and repeatable execution.
 
               </p>
 
@@ -3535,9 +3716,9 @@
 
               <p>
 
-                Systems de adquisición pagada y performance
-                enfocados en crecimiento medible
-                y optimización continua.
+                Paid acquisition and performance systems
+                focused on measurable growth
+                and continuous optimization.
 
               </p>
 
@@ -3566,9 +3747,9 @@
 
               <p>
 
-                Sitios web y experiencias digitales
-                construidos como parte de un sistema de
-                growth, no como activos aislados.
+                Websites and digital experiences
+                built as part of a broader growth system,
+                not as isolated assets.
 
               </p>
 
@@ -3597,9 +3778,9 @@
 
               <p>
 
-                Infraestructura de growth que conecta
-                adquisición, posicionamiento, procesos
-                y ejecución escalable.
+                Growth infrastructure connecting
+                acquisition, positioning, processes
+                and scalable execution.
 
               </p>
 
@@ -3628,9 +3809,9 @@
 
               <p>
 
-                Digital products, apps y herramientas
-                diseñados alrededor de problemas específicos
-                de operación o crecimiento.
+                Digital products, apps and tools
+                designed around specific operational
+                or growth challenges.
 
               </p>
 
@@ -3659,9 +3840,9 @@
 
               <p>
 
-                AI, automatización y workflows operativos
-                que eliminan trabajo repetitivo y crean
-                leverage para los equipos.
+                AI, automation and operational workflows
+                that remove repetitive work and create
+                leverage for teams.
 
               </p>
 
@@ -3687,8 +3868,8 @@
 
 
           <h2>
-            La estrategia solo sirve
-            cuando se convierte en sistema.
+            Strategy only works
+            when it becomes a system.
           </h2>
 
 
@@ -3777,19 +3958,19 @@
 
 
           <h2>
-            Construyendo cerca
-            del problema.
+            Building close
+            to the problem.
           </h2>
 
 
           <div class="client-work-copy">
 
             <p>
-              El trabajo con clientes parte por entender
-              cómo operan, dónde se pierde tiempo y qué
-              necesita conectarse. Desde ahí, convertimos
-              estrategia en sistemas que los equipos pueden
-              usar, medir y mejorar.
+              Client work starts by understanding
+              how teams operate, where time is lost and what
+              needs to be connected. From there, we turn
+              strategy into systems teams can use,
+              measure and improve.
             </p>
 
           </div>
@@ -3819,11 +4000,33 @@
 
 
       
-        <!-- SELECTED CASES -->
+        
+        <!-- CLIENT TESTIMONIAL -->
+        <section class="section testimonial-section testimonial-visible">
+
+          <div class="section-label">
+            06 / Client testimonial
+          </div>
+
+          <div class="testimonial testimonial-text-only">
+            <p class="testimonial-quote">
+              “lowsignal has become a strategic partner for our network.
+              They understood our vision and truly got involved in the project.”
+            </p>
+
+            <div class="testimonial-person">
+              <strong>Nicolás Muñoz</strong>
+              <span>Executive Director · Red Educacional Camilo Henríquez</span>
+            </div>
+          </div>
+
+        </section>
+
+                <!-- SELECTED CASES -->
         <section class="section cases-section">
 
           <div class="section-label">
-            06 / Selected cases
+            07 / Selected cases
           </div>
 
           <div class="cases-intro">
@@ -3862,12 +4065,11 @@
                   Strengthening GETS Educación’s
                   digital growth.
                 </h3>
+<div class="case-tags"><span>Content</span><span>Social</span><span>Performance</span></div>
 
                 <p>
-                  We built an ecosystem of content, campaigns and web experience
-                  to strengthen its positioning and connect its solutions
-                  with new audiences.
-                </p>
+Ongoing content, campaigns and digital execution built to strengthen consistency, presence and results.
+</p>
 
               </div>
 
