@@ -2841,6 +2841,132 @@
 
   
     /* =====================================================
+       FOUNDERS + TESTIMONIAL + SELECTED CASES REFINEMENT
+    ===================================================== */
+
+    .founders-editorial {
+      margin-top: 52px;
+    }
+
+    .founders-editorial img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+    }
+
+    .founders-editorial figcaption {
+      margin-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--steel-light);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .testimonial {
+      margin-top: 70px;
+      padding: 58px 0 8px;
+      border-top: 1px solid var(--line);
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 6vw;
+      align-items: center;
+    }
+
+    .testimonial-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+    }
+
+    .testimonial-quote {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(30px, 3.7vw, 52px);
+      line-height: 1.08;
+      letter-spacing: -.045em;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    .testimonial-person {
+      margin-top: 34px;
+    }
+
+    .testimonial-person strong {
+      display: block;
+      font-family: "Manrope", sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -.02em;
+      color: var(--navy);
+    }
+
+    .testimonial-person span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .cases-intro {
+      max-width: 760px;
+      margin: 18px 0 44px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .case-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0 18px;
+    }
+
+    .case-tags span {
+      display: inline-flex;
+      padding: 6px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--steel);
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    @media(max-width:800px){
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .founders-editorial figcaption {
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+
+    @media(max-width:600px){
+      .founders-editorial img,
+      .testimonial-photo img {
+        border-radius: 14px;
+      }
+    }
+
+  
+    /* =====================================================
        FOOTER — NO DUPLICATE SOCIAL LINKS
     ===================================================== */
 
@@ -2855,6 +2981,49 @@
     .footer-location {
       justify-self: end !important;
       text-align: right !important;
+    }
+
+  
+    /* =====================================================
+       TESTIMONIAL — VISIBLE TEXT-ONLY FEATURE
+    ===================================================== */
+    .testimonial-visible {
+      margin: 10px 0 105px !important;
+      padding: 58px 56px 62px !important;
+      background: var(--navy) !important;
+      border-radius: 18px !important;
+    }
+
+    .testimonial-visible .section-label {
+      color: var(--slate) !important;
+      margin-bottom: 38px !important;
+    }
+
+    .testimonial-visible .testimonial {
+      margin-top: 0 !important;
+      padding: 0 !important;
+      border-top: 0 !important;
+    }
+
+    .testimonial-visible .testimonial-quote {
+      max-width: 900px !important;
+      color: var(--white) !important;
+      font-size: clamp(30px, 3.8vw, 54px) !important;
+    }
+
+    .testimonial-visible .testimonial-person strong {
+      color: var(--white) !important;
+    }
+
+    .testimonial-visible .testimonial-person span {
+      color: var(--slate-light) !important;
+    }
+
+    @media(max-width:600px) {
+      .testimonial-visible {
+        padding: 38px 26px 42px !important;
+        border-radius: 14px !important;
+      }
     }
 
   </style>
@@ -2938,7 +3107,7 @@
       <div class="visual-top">
 
         <span>
-          Growth Systems
+          Sistemas de crecimiento
         </span>
 
         <span>
@@ -3047,7 +3216,7 @@
 
 
         <div class="visual-kicker">
-          Less noise. More growth.
+          Menos ruido. Más crecimiento.
         </div>
 
 
@@ -3109,15 +3278,15 @@
 
 
         <div class="hero-role">
-          Co-Founder & COO · Growth Systems
+          Co-Founder & COO · Sistemas de crecimiento
         </div>
 
 
         <p class="hero-description">
 
-          Lidero operaciones, estrategia comercial y delivery de producto,
-          construyendo Growth Systems que combinan estrategia, IA,
-          automatización, experiencias digitales y performance
+          Lidero operaciones, estrategia comercial y entrega de producto,
+          construyendo sistemas de crecimiento que combinan estrategia, IA,
+          automatización, experiencias digitales y rendimiento
           para generar crecimiento sostenible.
 
         </p>
@@ -3231,7 +3400,7 @@
 
             <div class="proof-item">
               <strong>Cross-functional</strong>
-              <span>Product · Marketing · Design · Sales · CS</span>
+              <span>Producto · Marketing · Diseño · Ventas · CS</span>
             </div>
 
           </div>
@@ -3257,7 +3426,7 @@
 
             <p>
               Como Co-Founder & COO, lidero operaciones,
-              estrategia comercial y delivery de producto.
+              estrategia comercial y entrega de producto.
               Mi trabajo cruza cómo vendemos, cómo entregamos
               y cómo escalamos — convirtiendo oportunidades,
               procesos y aprendizajes en sistemas repetibles.
@@ -3279,22 +3448,22 @@
 
             <div class="role-item">
               <div class="role-number">03</div>
-              <strong>Growth de cuentas y estrategia go-to-market</strong>
+              <strong>Crecimiento de cuentas y estrategia de salida al mercado</strong>
             </div>
 
             <div class="role-item">
               <div class="role-number">04</div>
-              <strong>Delivery de producto y soluciones digitales</strong>
+              <strong>Entrega de producto y soluciones digitales</strong>
             </div>
 
             <div class="role-item">
               <div class="role-number">05</div>
-              <strong>Liderazgo transversal entre Product, Marketing, Design, Sales y Customer Success</strong>
+              <strong>Liderazgo transversal entre Producto, Marketing, Diseño, Ventas y Customer Success</strong>
             </div>
 
             <div class="role-item">
               <div class="role-number">06</div>
-              <strong>Dashboards, reporting y procesos escalables</strong>
+              <strong>Dashboards, reportes y procesos escalables</strong>
             </div>
 
           </div>
@@ -3369,7 +3538,7 @@
               </div>
 
               <strong>
-                Sistemas de equipo y workflows
+                Sistemas de equipo y flujos de trabajo
               </strong>
 
             </div>
@@ -3458,7 +3627,20 @@
           </div>
 
 
-        </section>
+        
+
+          <figure class="founders-editorial">
+            <img
+              src="../lowsignal-founders.jpg"
+              alt="Founders de lowsignal juntos en Santiago"
+              loading="lazy"
+            >
+            <figcaption>
+              <span>Founders / lowsignal</span>
+              <span>Santiago / CL</span>
+            </figcaption>
+          </figure>
+</section>
 
 
 
@@ -3535,7 +3717,7 @@
 
               <p>
 
-                Sistemas de adquisición pagada y performance
+                Sistemas de adquisición pagada y rendimiento
                 enfocados en crecimiento medible
                 y optimización continua.
 
@@ -3560,7 +3742,7 @@
 
 
               <div class="solution-type">
-                Web Development
+                Desarrollo web
               </div>
 
 
@@ -3591,7 +3773,7 @@
 
 
               <div class="solution-type">
-                Growth Systems
+                Sistemas de crecimiento
               </div>
 
 
@@ -3622,7 +3804,7 @@
 
 
               <div class="solution-type">
-                Products & Apps
+                Productos y apps
               </div>
 
 
@@ -3653,15 +3835,15 @@
 
 
               <div class="solution-type">
-                AI & Automation
+                IA y automatización
               </div>
 
 
               <p>
 
-                IA, automatización y workflows operativos
+                IA, automatización y flujos operativos
                 que eliminan trabajo repetitivo y crean
-                leverage para los equipos.
+                apalancamiento para los equipos.
 
               </p>
 
@@ -3696,7 +3878,7 @@
 
             <p>
               La estrategia solo sirve cuando se convierte en sistema.
-              Por eso construimos dashboards, marcos de reporting,
+              Por eso construimos dashboards, marcos de reporte,
               procesos de entrega y ciclos de revisión que mejoran
               visibilidad, decisiones, eficiencia y valor de largo plazo.
             </p>
@@ -3819,11 +4001,33 @@
 
 
       
-        <!-- SELECTED CASES -->
+        
+        <!-- TESTIMONIO CLIENTE -->
+        <section class="section testimonial-section testimonial-visible">
+
+          <div class="section-label">
+            06 / Testimonio de cliente
+          </div>
+
+          <div class="testimonial testimonial-text-only">
+            <p class="testimonial-quote">
+              “lowsignal se ha convertido en un aliado estratégico para nuestra red.
+              Entendieron nuestra visión y se involucraron de verdad en el proyecto.”
+            </p>
+
+            <div class="testimonial-person">
+              <strong>Nicolás Muñoz</strong>
+              <span>Director Ejecutivo · Red Educacional Camilo Henríquez</span>
+            </div>
+          </div>
+
+        </section>
+
+                <!-- SELECTED CASES -->
         <section class="section cases-section">
 
           <div class="section-label">
-            06 / Casos seleccionados
+            07 / Casos seleccionados
           </div>
 
           <div class="cases-intro">
@@ -3855,19 +4059,18 @@
 
                 <div class="case-card-topline">
                   <span class="case-card-number">01 / GETS Educación</span>
-                  <span class="case-card-type">Growth System · Content · Performance · Web</span>
+                  <span class="case-card-type">Sistema de crecimiento · Contenido · Rendimiento · Web</span>
                 </div>
 
                 <h3>
                   Fortaleciendo el crecimiento
                   digital de GETS Educación.
                 </h3>
+<div class="case-tags"><span>Contenido</span><span>Social</span><span>Performance</span></div>
 
                 <p>
-                  Construimos un ecosistema de contenido, campañas y experiencia web
-                  para fortalecer su posicionamiento y conectar sus soluciones
-                  con nuevas audiencias.
-                </p>
+Gestión continua de contenidos, campañas y ejecución digital para fortalecer consistencia, presencia y resultados.
+</p>
 
               </div>
 
@@ -3909,7 +4112,7 @@
 
                 <div class="case-card-topline">
                   <span class="case-card-number">02 / Fundación Crecer con Todos</span>
-                  <span class="case-card-type">Digital Experience · Web Platform</span>
+                  <span class="case-card-type">Experiencia digital · Plataforma web</span>
                 </div>
 
                 <h3>
@@ -3964,7 +4167,7 @@
 
                 <div class="case-card-topline">
                   <span class="case-card-number">03 / DulceReino</span>
-                  <span class="case-card-type">Brand · Content · Digital Strategy</span>
+                  <span class="case-card-type">Marca · Contenido · Estrategia digital</span>
                 </div>
 
                 <h3>
@@ -3990,12 +4193,12 @@
                   </div>
 
                   <div class="case-layer">
-                    <strong>Content strategy</strong>
+                    <strong>Estrategia de contenido</strong>
                     <span>Contenido pensado para construir marca, mantener presencia y conectar con la audiencia.</span>
                   </div>
 
                   <div class="case-layer">
-                    <strong>Digital growth</strong>
+                    <strong>Crecimiento digital</strong>
                     <span>Una estrategia continua para transformar visibilidad en crecimiento sostenible.</span>
                   </div>
 
@@ -4080,7 +4283,7 @@
           </div>
 
           <div class="sidebar-value">
-            Growth Systems
+            Sistemas de crecimiento
           </div>
 
         </div>
@@ -4125,8 +4328,8 @@
 
             Operaciones<br>
             Estrategia comercial<br>
-            Growth Systems<br>
-            Delivery de producto
+            Sistemas de crecimiento<br>
+            Entrega de producto
 
           </div>
 
@@ -4203,7 +4406,7 @@
         Less noise.
 
         <span>
-          More growth.
+          Más crecimiento.
         </span>
 
       </h2>
