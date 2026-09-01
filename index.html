@@ -2589,6 +2589,49 @@
       }
     }
 
+  
+    /* =====================================================
+       POLISHED V4 — DARK LOGO BADGES
+    ===================================================== */
+
+    .project-logo {
+      background: var(--navy) !important;
+      border-color: var(--navy) !important;
+      box-shadow: 0 2px 10px rgba(13,23,36,.035) !important;
+    }
+
+    /* Preserve visibility over dark badge */
+    .project-logo img {
+      filter: none !important;
+      opacity: 1 !important;
+    }
+
+    /* White/light brand assets remain natural on navy */
+    .project-logo.usm {
+      background: var(--navy) !important;
+      border-color: var(--navy) !important;
+    }
+
+    /* For logos with dark lettering, use a light treatment inside the dark badge */
+    .project-logo:not(.usm) img {
+      filter: brightness(0) invert(1) !important;
+      opacity: .98 !important;
+    }
+
+    /* GeoVictoria has a colored mark; keep a little more visual presence */
+    .project:first-child .project-logo img {
+      filter: brightness(0) invert(1) !important;
+    }
+
+    .project:hover .project-logo,
+    .project:focus-visible .project-logo,
+    .project:hover .project-logo.usm,
+    .project:focus-visible .project-logo.usm {
+      background: var(--navy-deep) !important;
+      border-color: var(--navy-deep) !important;
+      box-shadow: 0 6px 18px rgba(13,23,36,.08) !important;
+    }
+
   </style>
 
 </head>
