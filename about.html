@@ -1877,6 +1877,261 @@
     }
 
 
+  
+    /* =====================================================
+       ABOUT POLISHED V2
+       Shorter intro · clearer strengths · structured stack
+       One social layer in contact/footer
+    ===================================================== */
+
+    /* INTRO — shorter and more editorial */
+    .intro {
+      padding-top: 104px !important;
+      padding-bottom: 108px !important;
+    }
+
+    .intro-grid {
+      align-items: start !important;
+    }
+
+    .intro-copy h2 {
+      max-width: 900px !important;
+      margin-bottom: 36px !important;
+      font-size: clamp(54px, 6vw, 88px) !important;
+      line-height: 1.04 !important;
+      letter-spacing: -.064em !important;
+    }
+
+    .intro-copy p {
+      max-width: 780px !important;
+      margin: 0 0 20px !important;
+      font-size: 15px !important;
+      line-height: 1.78 !important;
+    }
+
+    .intro-copy .intro-secondary {
+      color: var(--muted) !important;
+    }
+
+    .cv-download {
+      margin-top: 18px !important;
+    }
+
+    /* HOW I THINK */
+    .lenses {
+      padding-top: 102px !important;
+      padding-bottom: 106px !important;
+    }
+
+    .lenses-title {
+      max-width: 900px !important;
+      margin-bottom: 54px !important;
+    }
+
+    .lens-grid {
+      gap: 26px !important;
+    }
+
+    .lens {
+      min-height: 250px !important;
+      padding-top: 24px !important;
+    }
+
+    .lens p {
+      max-width: 330px !important;
+      font-size: 13px !important;
+      line-height: 1.7 !important;
+    }
+
+    /* STRENGTHS */
+    .current {
+      padding-top: 102px !important;
+      padding-bottom: 104px !important;
+    }
+
+    .current-grid {
+      gap: 7vw !important;
+    }
+
+    .current-main p {
+      max-width: 590px !important;
+    }
+
+    .current-list {
+      border-top: 1px solid var(--line) !important;
+    }
+
+    .current-item {
+      display: grid !important;
+      grid-template-columns: 38px minmax(220px,.8fr) minmax(0,1.2fr) !important;
+      gap: 22px !important;
+      align-items: start !important;
+      padding: 22px 0 !important;
+      border-bottom: 1px solid var(--line) !important;
+    }
+
+    .current-item > span:first-child {
+      color: var(--steel-light) !important;
+      font-size: 9px !important;
+      padding-top: 3px !important;
+    }
+
+    .current-item strong {
+      font-size: 16px !important;
+      line-height: 1.4 !important;
+    }
+
+    .current-item .strength-detail {
+      color: var(--muted) !important;
+      font-size: 12px !important;
+      line-height: 1.65 !important;
+    }
+
+    /* OPERATING STACK */
+    .compact-stack {
+      max-width: 1400px !important;
+      margin: 72px auto 0 !important;
+      padding-top: 30px !important;
+      border-top: 1px solid var(--line) !important;
+    }
+
+    .compact-stack-head {
+      display: grid !important;
+      grid-template-columns: .7fr 2.3fr !important;
+      gap: 8vw !important;
+      align-items: start !important;
+      margin-bottom: 30px !important;
+    }
+
+    .compact-stack-title {
+      color: var(--steel-light) !important;
+      font-size: 9px !important;
+      font-weight: 700 !important;
+      letter-spacing: .09em !important;
+      text-transform: uppercase !important;
+    }
+
+    .compact-stack-note {
+      max-width: 620px !important;
+      color: var(--muted) !important;
+      font-size: 12px !important;
+      line-height: 1.65 !important;
+    }
+
+    .stack-groups {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 24px !important;
+    }
+
+    .stack-group {
+      padding-top: 16px !important;
+      border-top: 1px solid var(--line) !important;
+    }
+
+    .stack-group-label {
+      margin-bottom: 14px !important;
+      color: var(--navy) !important;
+      font-size: 11px !important;
+      font-weight: 600 !important;
+      letter-spacing: .03em !important;
+    }
+
+    .stack-group-tools {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 8px !important;
+    }
+
+    .stack-group-tools span {
+      padding: 7px 10px !important;
+      border: 1px solid var(--line) !important;
+      border-radius: 999px !important;
+      color: var(--muted) !important;
+      background: rgba(255,255,255,.42) !important;
+      font-size: 9px !important;
+      line-height: 1 !important;
+    }
+
+    /* CAREER */
+    .throughline {
+      padding-top: 102px !important;
+      padding-bottom: 104px !important;
+    }
+
+    .throughline-content .section-copy {
+      max-width: 700px !important;
+    }
+
+    /* HUMAN SIGNAL */
+    .human-signal {
+      padding-top: 96px !important;
+      padding-bottom: 98px !important;
+    }
+
+    /* PRINCIPLE */
+    .statement {
+      padding-top: 92px !important;
+      padding-bottom: 96px !important;
+    }
+
+    /* CONTACT / FOOTER */
+    .footer-socials {
+      display: none !important;
+    }
+
+    .footer {
+      grid-template-columns: 1fr auto !important;
+    }
+
+    .footer-location {
+      justify-self: end !important;
+      text-align: right !important;
+    }
+
+    @media(max-width: 900px) {
+      .current-item {
+        grid-template-columns: 32px 1fr !important;
+      }
+
+      .current-item .strength-detail {
+        grid-column: 2 !important;
+      }
+
+      .compact-stack-head {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+      }
+
+      .stack-groups {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+
+    @media(max-width: 600px) {
+      .intro,
+      .lenses,
+      .current,
+      .throughline,
+      .human-signal,
+      .statement {
+        padding-top: 78px !important;
+        padding-bottom: 80px !important;
+      }
+
+      .intro-copy h2 {
+        font-size: clamp(46px, 13vw, 64px) !important;
+      }
+
+      .stack-groups {
+        grid-template-columns: 1fr !important;
+      }
+
+      .compact-stack {
+        margin-top: 56px !important;
+      }
+    }
+
   </style>
 
 </head>
@@ -1972,7 +2227,7 @@
             product, growth
           </span>
 
-          and business meet.
+          and operations meet.
 
         </h1>
 
@@ -2042,49 +2297,26 @@
         </h2>
 
         <p>
-          I’m Felipe Quiroz, a Product Manager and Co-Founder
-          based in Santiago, Chile. My experience spans
-          product, growth, partnerships and company building,
-          with one common thread: turning problems and
-          opportunities into systems that can operate, learn
-          and scale.
+          I’m Felipe Quiroz, a Product Manager and Co-Founder based in Santiago.
+          I work across product, growth and operations, turning opportunities
+          into systems that can operate, learn and scale.
         </p>
 
-        <p>
-          Today, I lead Workforce Management products at
-          GeoVictoria and build lowsignal, where I work across
-          operations, commercial strategy, product and
-          Growth Systems.
+        <p class="intro-secondary">
+          My experience spans B2B SaaS, education technology and company building —
+          from Workforce Management products at GeoVictoria, to building lowsignal,
+          and previously leading partnerships at TetherEd.
         </p>
-
-        <p>
-          Before that, at TetherEd, I worked across partnerships,
-          expansion and education technology, connecting
-          product with institutions, public systems
-          and new markets.
-        </p>
-
-        <p>
-          I’m especially interested in applied AI,
-          products that live close to real operations,
-          and new ways of building companies with
-          small teams, technology and well-designed systems.
-        </p>
-
-
 
         <a
-          href="/felipe-quiroz-cv-en.pdf"
+          href="/felipe-quiroz-cv-en.pdf?v=2"
           target="_blank"
           rel="noopener noreferrer"
           class="cv-download"
         >
           Download CV
 
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 4v10"></path>
             <path d="m8 10 4 4 4-4"></path>
             <path d="M5 19h14"></path>
@@ -2096,7 +2328,6 @@
     </div>
 
   </section>
-
 
 
   <!-- =====================================================
@@ -2190,15 +2421,15 @@
 
 
           <h3>
-            Business
+            Operations
           </h3>
 
 
           <p>
 
-            Connect product with market, business and
-            partnerships so a good solution can also
-            sustain itself and grow.
+            Turn good ideas into repeatable systems:
+            processes, ownership, automation and
+            execution that can scale.
 
           </p>
 
@@ -2235,10 +2466,9 @@
         </h2>
 
         <p>
-          I work well in spaces where there is still
-          ambiguity: when the problem needs to be understood,
-          priorities need to be shaped, teams need to align,
-          and an opportunity has to become something that actually works.
+          I work best when there is still ambiguity: the problem needs to be understood,
+          priorities need to be shaped and an opportunity has to become something
+          teams can actually operate.
         </p>
 
       </div>
@@ -2247,47 +2477,75 @@
 
         <div class="current-item">
           <span>01</span>
-          <strong>Product strategy & discovery</strong>
+          <strong>Product strategy &amp; discovery</strong>
+          <div class="strength-detail">Roadmaps · customer discovery · pilots · AI-powered MVPs</div>
         </div>
 
         <div class="current-item">
           <span>02</span>
-          <strong>Go-to-market & commercial strategy</strong>
+          <strong>Growth &amp; go-to-market</strong>
+          <div class="strength-detail">Commercial strategy · partnerships · acquisition · positioning</div>
         </div>
 
         <div class="current-item">
           <span>03</span>
-          <strong>Operating systems & scalable processes</strong>
+          <strong>Operating systems</strong>
+          <div class="strength-detail">Processes · automation · CRM · reporting · execution</div>
         </div>
 
         <div class="current-item">
           <span>04</span>
           <strong>Cross-functional execution</strong>
+          <div class="strength-detail">Product · Engineering · Sales · Customer Success · Operations</div>
         </div>
 
       </div>
 
     </div>
 
-  
-        <div class="compact-stack">
-          <div class="compact-stack-head">
-            <div class="compact-stack-title">My operating stack</div>
-            <div class="compact-stack-note">Tools I use to prototype, operate, distribute and learn.</div>
+    <div class="compact-stack">
+
+      <div class="compact-stack-head">
+        <div class="compact-stack-title">My operating stack</div>
+        <div class="compact-stack-note">
+          Tools I use to build, operate, distribute and learn — not a toolbox for its own sake.
+        </div>
+      </div>
+
+      <div class="stack-groups">
+
+        <div class="stack-group">
+          <div class="stack-group-label">Build</div>
+          <div class="stack-group-tools">
+            <span>Lovable</span><span>Replit</span><span>GitHub</span>
+            <span>Webflow</span><span>Framer</span><span>Shopify</span>
           </div>
-          <div class="compact-stack-tools">
-            <span>Lovable</span>
-            <span>Replit</span>
-            <span>GitHub</span>
-            <span>Framer</span>
-            <span>Notion</span>
-            <span>Zoho</span>
-            <span>Excel</span>
-            <span>Metricool</span>
-            <span>Meta</span>
+        </div>
+
+        <div class="stack-group">
+          <div class="stack-group-label">Operate</div>
+          <div class="stack-group-tools">
+            <span>Notion</span><span>HubSpot</span><span>Zoho</span><span>Excel</span>
+          </div>
+        </div>
+
+        <div class="stack-group">
+          <div class="stack-group-label">Distribute</div>
+          <div class="stack-group-tools">
+            <span>Metricool</span><span>Meta</span>
+          </div>
+        </div>
+
+        <div class="stack-group">
+          <div class="stack-group-label">AI</div>
+          <div class="stack-group-tools">
             <span>ChatGPT</span><span>Claude</span>
           </div>
         </div>
+
+      </div>
+
+    </div>
 
   </section>
 
@@ -2302,7 +2560,7 @@
 
 
       <div class="section-label">
-        05 / Throughline
+        05 / Career
       </div>
 
 
@@ -2312,16 +2570,14 @@
 
         <h2>
           Different roles.
-          Same obsession.
+          One operating thread.
         </h2>
 
         <div class="section-copy">
           <p>
-            Product, growth and partnerships can look like
-            different paths. To me, they are different ways of
-            solving the same problem: understanding what needs to change,
-            aligning the right people and building the system
-            that makes it real.
+            Across product, growth, partnerships and operations,
+            the pattern has been consistent: understand what needs to change,
+            align people around the problem and build a system that makes it real.
           </p>
         </div>
 
@@ -2645,106 +2901,7 @@
         © 2026 Felipe Quiroz
       </div>
 
-
-
-      <div class="footer-socials">
-
-
-        <!-- LINKEDIN -->
-
-        <a
-          href="https://www.linkedin.com/in/felipequirozp"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          class="social-icon"
-        >
-
-          <span class="linkedin-mark">
-            in
-          </span>
-
-        </a>
-
-
-
-        <!-- INSTAGRAM -->
-
-        <a
-          href="https://www.instagram.com/felipe_quirozp/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-          class="social-icon"
-        >
-
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-
-            <rect
-              x="4"
-              y="4"
-              width="16"
-              height="16"
-              rx="5"
-            />
-
-            <circle
-              cx="12"
-              cy="12"
-              r="3.5"
-            />
-
-            <circle
-              cx="17.3"
-              cy="6.8"
-              r=".7"
-              class="filled"
-            />
-
-          </svg>
-
-        </a>
-
-
-
-        <!-- EMAIL -->
-
-        <a
-          href="mailto:felipe@lowsignal.cl"
-          aria-label="Email"
-          class="social-icon"
-        >
-
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-
-            <rect
-              x="3"
-              y="5"
-              width="18"
-              height="14"
-              rx="2"
-            />
-
-            <path
-              d="M4 7L12 13L20 7"
-            />
-
-          </svg>
-
-        </a>
-
-
-      </div>
-
-
-
-      <div class="footer-location">
+<div class="footer-location">
         Santiago / CL
       </div>
 
