@@ -1979,6 +1979,272 @@
       color: var(--navy);
     }
 
+  
+    /* =====================================================
+       NOW POLISHED V2
+       Lighter editorial structure · current focus · no duplicate socials
+    ===================================================== */
+
+    .now-hero {
+      padding-top: 110px !important;
+      padding-bottom: 104px !important;
+    }
+
+    .now-hero h1 {
+      max-width: 980px !important;
+      font-family: "Manrope", sans-serif !important;
+      font-size: clamp(62px, 7.4vw, 112px) !important;
+      line-height: .98 !important;
+      letter-spacing: -.07em !important;
+    }
+
+    .now-hero p {
+      max-width: 700px !important;
+      margin-top: 28px !important;
+      font-size: 15px !important;
+      line-height: 1.75 !important;
+    }
+
+    .now-section {
+      padding-top: 102px !important;
+      padding-bottom: 106px !important;
+    }
+
+    .now-grid {
+      display:grid !important;
+      grid-template-columns: .7fr 2.3fr !important;
+      gap: 8vw !important;
+      align-items:start !important;
+    }
+
+    .now-list {
+      border-top:1px solid var(--line) !important;
+    }
+
+    .now-item {
+      display:grid !important;
+      grid-template-columns: minmax(160px,.75fr) minmax(0,1.25fr) !important;
+      gap: 34px !important;
+      align-items:start !important;
+      padding: 28px 0 !important;
+      border-bottom:1px solid var(--line) !important;
+    }
+
+    .now-item h3 {
+      margin:0 !important;
+      font-family:"Manrope", sans-serif !important;
+      font-size:24px !important;
+      line-height:1.15 !important;
+      letter-spacing:-.04em !important;
+    }
+
+    .now-item p {
+      margin:0 !important;
+      color:var(--muted) !important;
+      font-size:13px !important;
+      line-height:1.7 !important;
+    }
+
+    .now-tag {
+      display:inline-flex !important;
+      margin-top:12px !important;
+      padding:6px 9px !important;
+      border:1px solid var(--line) !important;
+      border-radius:999px !important;
+      color:var(--steel-light) !important;
+      font-size:8px !important;
+      font-weight:700 !important;
+      letter-spacing:.08em !important;
+      text-transform:uppercase !important;
+    }
+
+    .explore-grid,
+    .mode-grid {
+      display:grid !important;
+      grid-template-columns:repeat(3,1fr) !important;
+      gap:24px !important;
+      margin-top:46px !important;
+    }
+
+    .explore-card,
+    .mode-card {
+      padding-top:18px !important;
+      border-top:1px solid var(--line) !important;
+    }
+
+    .explore-card h3,
+    .mode-card h3 {
+      margin:0 0 12px !important;
+      font-family:"Manrope", sans-serif !important;
+      font-size:22px !important;
+      line-height:1.18 !important;
+      letter-spacing:-.035em !important;
+    }
+
+    .explore-card p,
+    .mode-card p {
+      margin:0 !important;
+      color:var(--muted) !important;
+      font-size:12px !important;
+      line-height:1.68 !important;
+    }
+
+    .now-image-wrap {
+      margin-top:58px !important;
+    }
+
+    .now-image-wrap img {
+      width:100% !important;
+      border-radius:18px !important;
+      display:block !important;
+    }
+
+    .now-image-caption {
+      display:flex !important;
+      justify-content:space-between !important;
+      gap:24px !important;
+      margin-top:12px !important;
+      color:var(--steel-light) !important;
+      font-size:9px !important;
+      line-height:1.4 !important;
+    }
+
+    .now-closing {
+      padding-top:92px !important;
+      padding-bottom:96px !important;
+    }
+
+    .now-closing h2 {
+      max-width:900px !important;
+      margin:0 !important;
+      font-family:"Manrope", sans-serif !important;
+      font-size:clamp(58px,7vw,108px) !important;
+      line-height:1 !important;
+      letter-spacing:-.065em !important;
+    }
+
+    .footer-socials {
+      display:none !important;
+    }
+
+    .footer {
+      grid-template-columns:1fr auto !important;
+    }
+
+    .footer-location {
+      justify-self:end !important;
+      text-align:right !important;
+    }
+
+    @media(max-width:900px) {
+      .now-grid {
+        grid-template-columns:1fr !important;
+        gap:34px !important;
+      }
+
+      .explore-grid,
+      .mode-grid {
+        grid-template-columns:1fr !important;
+      }
+    }
+
+    @media(max-width:600px) {
+      .now-hero,
+      .now-section,
+      .now-closing {
+        padding-top:78px !important;
+        padding-bottom:80px !important;
+      }
+
+      .now-item {
+        grid-template-columns:1fr !important;
+        gap:14px !important;
+      }
+
+      .now-image-caption {
+        flex-direction:column !important;
+        gap:4px !important;
+      }
+    }
+
+  
+    /* =====================================================
+       NOW POLISHED V3 — CLEAN LANGUAGE + SECTION RHYTHM
+    ===================================================== */
+
+    .now-hero,
+    .now-section,
+    .now-closing {
+      padding-left: 7vw !important;
+      padding-right: 7vw !important;
+    }
+
+    .now-hero {
+      background: var(--ice) !important;
+    }
+
+    .now-section {
+      background: var(--paper) !important;
+    }
+
+    .now-hero > *,
+    .now-section > *,
+    .now-closing > * {
+      max-width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .now-hero h1,
+    .now-hero p {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    .now-section.exploration-section {
+      background: var(--navy) !important;
+      color: var(--white) !important;
+    }
+
+    .exploration-section .section-label {
+      color: var(--slate) !important;
+    }
+
+    .exploration-section .explore-card {
+      border-top-color: rgba(255,255,255,.18) !important;
+    }
+
+    .exploration-section .explore-card h3 {
+      color: var(--white) !important;
+    }
+
+    .exploration-section .explore-card p {
+      color: #bbc5d0 !important;
+    }
+
+    .exploration-section .now-image-caption {
+      color: var(--slate) !important;
+    }
+
+    .now-closing {
+      background: var(--ice) !important;
+    }
+
+    .now-closing h2 {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      color: var(--navy) !important;
+    }
+
+    @media(max-width:600px) {
+      .now-hero,
+      .now-section,
+      .now-closing {
+        padding-left: 6vw !important;
+        padding-right: 6vw !important;
+      }
+    }
+
   </style>
 
 </head>
@@ -2051,622 +2317,112 @@
        HERO
   ====================================================== -->
 
-  <section class="hero">
+  <main>
 
-
-    <div class="hero-grid">
-
-
-      <div>
-
-
-        <div class="hero-label">
-          Ahora / 01
-        </div>
-
-
-        <h1>
-
-          Lo que estoy construyendo
-
-          <span>
-            ahora.
-          </span>
-
-        </h1>
-
-
-      </div>
-
-
-
-      <div class="hero-side">
-
-
-        <p>
-
-          Una mirada a los productos, sistemas e ideas
-          que hoy están ocupando gran parte de mi atención.
-
-        </p>
-
-
-        <p>
-
-          Casi siempre en la intersección entre producto,
-          operaciones, growth, IA y nuevas formas de construir compañías.
-
-        </p>
-
-
-        <div class="hero-meta">
-
-          <span>
-            Santiago / CL
-          </span>
-
-          <span>
-            2026
-          </span>
-
-        </div>
-
-        <div class="updated-stamp">
-          Actualizado / Agosto 2026
-        </div>
-
-
-      </div>
-
-
-    </div>
-
-
+  <section class="now-hero">
+    <div class="section-label">Ahora / Septiembre 2026</div>
+    <h1>Lo que estoy construyendo<br>y explorando hoy.</h1>
+    <p>
+      Una mirada actual a los productos, sistemas e ideas que hoy concentran mi atención, junto con las preguntas que estoy explorando.
+    </p>
   </section>
 
-
-
-  <!-- =====================================================
-       BUILDING
-  ====================================================== -->
-
-  <section class="building">
-
-
-    <div class="section-grid">
-
-
-      <div class="section-label">
-        02 / Construyendo
-      </div>
-
-
-
-      <div class="section-content">
-
-
-        <h2>
-          Tres frentes que hoy
-          concentran mi atención.
-        </h2>
-
-
-
-        <div class="tracks">
-
-
-          <!-- GEOVICTORIA -->
-
-          <a
-            href="/es/geovictoria"
-            class="track"
-          >
-
-
-            <div class="track-number">
-              01
-            </div>
-
-
-            <div class="track-main">
-
-              <strong>
-                GeoVictoria
-              </strong>
-
-              <span>
-                Product · Workforce Management
-              </span>
-
-              <div class="track-status">
-                Construyendo / Activo
-              </div>
-
-            </div>
-
-
-            <div class="track-description">
-
-              Liderando estrategia, discovery y validación de
-              tres productos de Workforce Management, desde
-              MVPs y pilotos hasta adopción y escalamiento.
-
-            </div>
-
-
-          </a>
-
-
-
-          <!-- LOWSIGNAL -->
-
-          <a
-            href="/es/lowsignal"
-            class="track"
-          >
-
-
-            <div class="track-number">
-              02
-            </div>
-
-
-            <div class="track-main">
-
-              <strong>
-                lowsignal
-              </strong>
-
-              <span>
-                Company Building · Growth Systems
-              </span>
-
-              <div class="track-status">
-                Construyendo / Activo
-              </div>
-
-            </div>
-
-
-            <div class="track-description">
-
-              Construyendo operaciones, estrategia comercial y
-              delivery de producto detrás de una growth company
-              basada en sistemas, tecnología y ejecución.
-
-            </div>
-
-
-          </a>
-
-
-
-          <!-- EXPLORING -->
-
-          <div class="track">
-
-
-            <div class="track-number">
-              03
-            </div>
-
-
-            <div class="track-main">
-
-              <strong>
-                AI-native
-              </strong>
-
-              <span>
-                Agentes · Automatización · Nuevos modelos
-              </span>
-
-              <div class="track-status">
-                Explorando
-              </div>
-
-            </div>
-
-
-            <div class="track-description">
-
-              Explorando cómo los productos nativos en IA,
-              los agentes, la automatización y nuevos modelos de
-              compañía están ampliando lo que equipos pequeños
-              pueden construir y operar.
-
-            </div>
-
-
+  <section class="now-section">
+    <div class="now-grid">
+      <div class="section-label">Actualmente construyendo</div>
+
+      <div class="now-list">
+
+        <div class="now-item">
+          <div>
+            <h3>GeoVictoria</h3>
+            <span class="now-tag">Producto · Gestión de turnos</span>
           </div>
-
-
-        </div>
-
-
-      </div>
-
-
-    </div>
-
-
-  </section>
-
-
-
-  <!-- =====================================================
-       INTERESTS
-  ====================================================== -->
-
-  <section class="interests">
-
-
-    <div class="interests-inner">
-
-
-      <div class="section-label">
-        03 / Lo que estoy explorando
-      </div>
-
-
-      <h2>
-
-        Preguntas y sistemas
-
-        <span>
-          que estoy explorando activamente.
-        </span>
-
-      </h2>
-
-
-
-      <div class="interest-grid">
-
-
-        <div class="interest">
-
-
-          <div class="interest-number">
-            01
-          </div>
-
-
-          <strong>
-            Agentes de IA
-          </strong>
-
-
           <p>
-
-            Cómo equipos pequeños pueden operar con workflows agentic que se hagan cargo de trabajo real.
-
+            Construyendo y evolucionando productos para planificación,
+            optimización de turnos y procesos operacionales.
           </p>
-
-
         </div>
 
-
-
-        <div class="interest">
-
-
-          <div class="interest-number">
-            02
+        <div class="now-item">
+          <div>
+            <h3>lowsignal</h3>
+            <span class="now-tag">Growth Systems</span>
           </div>
-
-
-          <strong>
-            Productos AI-native
-          </strong>
-
-
           <p>
-
-            Qué cambia cuando la IA es parte de la arquitectura del producto y no una funcionalidad agregada.
-
+            Construyendo sistemas que conectan crecimiento, operaciones, producto digital,
+            automatización e IA de una forma más coherente.
           </p>
-
-
         </div>
 
-
-
-        <div class="interest">
-
-
-          <div class="interest-number">
-            03
+        <div class="now-item">
+          <div>
+            <h3>Explorando</h3>
+            <span class="now-tag">Nativo en IA</span>
           </div>
-
-
-          <strong>
-            Operating systems para compañías
-          </strong>
-
-
           <p>
-
-            Cómo procesos, software y decisiones pueden convertirse en un sistema operativo coherente.
-
+            Explorando nuevos modelos de producto y compañía construidos alrededor de
+            agentes de IA, automatización y nuevos sistemas operativos.
           </p>
-
-
         </div>
 
-
-
-        <div class="interest">
-
-
-          <div class="interest-number">
-            04
-          </div>
-
-
-          <strong>
-            Nuevos modelos de compañía
-          </strong>
-
-
-          <p>
-
-            Equipos más pequeños, mayor leverage y ejecución más rápida apoyada por software e IA.
-
-          </p>
-
-
-        </div>
-
-
       </div>
-
-
     </div>
-
-
   </section>
 
+  <section class="now-section exploration-section">
+    <div class="section-label">Lo que estoy explorando</div>
 
-
-
-  <!-- =====================================================
-       ECOSYSTEM
-  ====================================================== -->
-
-  <section class="ecosystem">
-
-
-    <div class="ecosystem-inner">
-
-
-      <div class="section-label">
-        04 / Señales
+    <div class="explore-grid">
+      <div class="explore-card">
+        <h3>Agentes de IA</h3>
+        <p>Dónde los agentes pueden pasar de asistir a asumir responsabilidad real sobre procesos operacionales.</p>
       </div>
-
-
-
-      <div class="ecosystem-header">
-
-
-        <h2>
-          Lo que estoy viendo,
-          escuchando y probando.
-        </h2>
-
-
-        <p>
-          Eventos, conversaciones, experimentos y productos que
-          me mantienen cerca de lo que está cambiando en producto, IA y company building.
-        </p>
-
-
+      <div class="explore-card">
+        <h3>Productos nativos en IA</h3>
+        <p>Productos diseñados alrededor de IA desde el inicio, en vez de agregarla como una funcionalidad después.</p>
       </div>
-
-
-
-      <div class="ecosystem-gallery">
-
-
-        <figure class="ecosystem-figure ecosystem-main">
-
-
-          <div class="ecosystem-media">
-
-            <img
-              src="../platanus-ai-native.jpg"
-              alt="Evento AI Native Startups de Platanus en Santiago"
-              loading="lazy"
-            >
-
-          </div>
-
-
-          <figcaption class="ecosystem-caption">
-
-            <span>
-              Platanus
-            </span>
-
-            <span>
-              AI Native Startups · Santiago
-            </span>
-
-          </figcaption>
-
-
-        </figure>
-
-
-
-        <figure class="ecosystem-figure ecosystem-secondary">
-
-
-          <div class="ecosystem-media">
-
-            <img
-              src="../platanus-event.jpg"
-              alt="Encuentro de producto y startups en Platanus"
-              loading="lazy"
-            >
-
-          </div>
-
-
-          <figcaption class="ecosystem-caption">
-
-            <span>
-              Platanus
-            </span>
-
-            <span>
-              Producto · Startups · Tecnología
-            </span>
-
-          </figcaption>
-
-
-        </figure>
-
-
+      <div class="explore-card">
+        <h3>Sistemas operativos</h3>
+        <p>Cómo conectar herramientas, procesos, datos y personas en sistemas que realmente funcionen.</p>
       </div>
-
-
     </div>
 
-
-  </section>
-
-
-
-  <!-- =====================================================
-       OPERATING
-  ====================================================== -->
-
-  <section class="operating">
-
-
-    <div class="operating-grid">
-
-
-      <div class="section-label">
-        05 / Modo de operar
+    <div class="now-image-wrap">
+      <img src="../platanus-ai-native.jpg" alt="Sesión sobre productos y compañías nativas en IA en Santiago">
+      <div class="now-image-caption">
+        <span>En el ecosistema / Productos nativos en IA, personas y modelos operativos</span>
+        <span>Santiago / CL</span>
       </div>
-
-
-
-      <div class="operating-content">
-
-
-        <h2>
-          Cómo quiero trabajar hoy.
-        </h2>
-
-
-
-        <div class="principles">
-
-
-          <div class="principle">
-
-            <div class="principle-number">
-              01
-            </div>
-
-            <strong>
-              Claridad
-            </strong>
-
-            <span>
-              Saber qué importa
-            </span>
-
-          </div>
-
-
-
-          <div class="principle">
-
-            <div class="principle-number">
-              02
-            </div>
-
-            <strong>
-              Sistemas
-            </strong>
-
-            <span>
-              Hacer repetible el buen trabajo
-            </span>
-
-          </div>
-
-
-
-          <div class="principle">
-
-            <div class="principle-number">
-              03
-            </div>
-
-            <strong>
-              Leverage
-            </strong>
-
-            <span>
-              Hacer más con equipos pequeños
-            </span>
-
-          </div>
-
-
-        </div>
-
-
-      </div>
-
-
     </div>
-
-
   </section>
 
+  <section class="now-section">
+    <div class="section-label">Cómo estoy operando</div>
 
-
-  <!-- =====================================================
-       STATEMENT
-  ====================================================== -->
-
-  <section class="statement">
-
-
-    <div class="statement-inner">
-
-
-      <div class="section-label">
-        06 / Siempre
+    <div class="mode-grid">
+      <div class="mode-card">
+        <h3>Claridad</h3>
+        <p>Entender el problema real antes de sumar procesos, funcionalidades o tecnología.</p>
       </div>
-
-
-      <h2>
-
-        Sigo construyendo.
-
-        <span>
-          Sigo aprendiendo.
-        </span>
-
-      </h2>
-
-
+      <div class="mode-card">
+        <h3>Sistemas</h3>
+        <p>Convertir lo que funciona en algo repetible, medible y más fácil de operar.</p>
+      </div>
+      <div class="mode-card">
+        <h3>Apalancamiento</h3>
+        <p>Usar tecnología, automatización e IA para aumentar el impacto de buenos equipos.</p>
+      </div>
     </div>
-
-
   </section>
 
+  <section class="now-closing">
+    <h2>Sigo construyendo.<br>Sigo aprendiendo.</h2>
+  </section>
 
+</main>
 
-  <!-- =====================================================
+<!-- =====================================================
        CONTACT
   ====================================================== -->
 
@@ -2745,106 +2501,7 @@
         © 2026 Felipe Quiroz
       </div>
 
-
-
-      <div class="footer-socials">
-
-
-        <!-- LINKEDIN -->
-
-        <a
-          href="https://www.linkedin.com/in/felipequirozp"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          class="social-icon"
-        >
-
-          <span class="linkedin-mark">
-            in
-          </span>
-
-        </a>
-
-
-
-        <!-- INSTAGRAM -->
-
-        <a
-          href="https://www.instagram.com/felipe_quirozp/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-          class="social-icon"
-        >
-
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-
-            <rect
-              x="4"
-              y="4"
-              width="16"
-              height="16"
-              rx="5"
-            />
-
-            <circle
-              cx="12"
-              cy="12"
-              r="3.5"
-            />
-
-            <circle
-              cx="17.3"
-              cy="6.8"
-              r=".7"
-              class="filled"
-            />
-
-          </svg>
-
-        </a>
-
-
-
-        <!-- EMAIL -->
-
-        <a
-          href="mailto:felipe@lowsignal.cl"
-          aria-label="Email"
-          class="social-icon"
-        >
-
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-
-            <rect
-              x="3"
-              y="5"
-              width="18"
-              height="14"
-              rx="2"
-            />
-
-            <path
-              d="M4 7L12 13L20 7"
-            />
-
-          </svg>
-
-        </a>
-
-
-      </div>
-
-
-
-      <div class="footer-location">
+<div class="footer-location">
         Santiago / CL
       </div>
 
