@@ -3237,6 +3237,137 @@
       text-align: right !important;
     }
 
+  
+    /* =====================================================
+       TETHERED — NEW EDITORIAL FIELD / BUILDING IMAGES
+    ===================================================== */
+    .field-event-feature {
+      margin: 42px 0 34px;
+      max-width: 860px;
+    }
+
+    .field-event-feature .field-photo-media {
+      aspect-ratio: 16 / 10;
+      border-radius: 18px;
+      overflow: hidden;
+      background: var(--ice);
+    }
+
+    .field-event-feature img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 43%;
+      display: block;
+    }
+
+    .building-split {
+      margin-top: 44px;
+      display: grid;
+      grid-template-columns: minmax(260px, 390px) minmax(0, 420px);
+      gap: 48px;
+      align-items: center;
+      max-width: 900px;
+    }
+
+    .building-media {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      border-radius: 18px;
+      background: var(--ice);
+    }
+
+    .building-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
+
+    .building-copy {
+      max-width: 390px;
+    }
+
+    .building-copy h3 {
+      margin: 0 0 16px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(28px, 3vw, 42px);
+      line-height: 1.08;
+      letter-spacing: -.045em;
+      color: var(--navy);
+    }
+
+    .building-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    .building-meta {
+      margin-top: 16px;
+      color: var(--steel-light);
+      font-size: 9px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    @media(max-width:760px) {
+      .field-event-feature {
+        max-width: 100%;
+      }
+
+      .building-split {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 100%;
+      }
+
+      .building-copy {
+        max-width: 100%;
+      }
+    }
+
+  
+    /* V4 — keep only the right-side execution copy */
+    .building-split {
+      display: block !important;
+      max-width: 100% !important;
+      margin-top: 42px !important;
+    }
+
+    .building-split > div:first-child {
+      display: none !important;
+    }
+
+    .building-copy {
+      max-width: 560px !important;
+      margin-left: auto !important;
+      padding-left: 0 !important;
+    }
+
+    @media(max-width:760px) {
+      .building-copy {
+        max-width: 100% !important;
+        margin-left: 0 !important;
+      }
+    }
+
+  
+    /* V5 — slightly reduce team event feature so it doesn't overpower the page */
+    .field-event-feature {
+      max-width: 850px !important;
+      margin-left: 0 !important;
+      margin-right: auto !important;
+    }
+
+    @media(max-width:760px) {
+      .field-event-feature {
+        max-width: 100% !important;
+      }
+    }
+
   </style>
 
 </head>
@@ -3994,6 +4125,24 @@
 
 
 
+
+            <figure class="field-event-feature">
+
+              <div class="field-photo-media">
+                <img
+                  src="tether-team-event.jpg"
+                  alt="TetherEd and Nivel4 team at an education event"
+                  loading="lazy"
+                >
+              </div>
+
+              <figcaption class="field-caption">
+                <span>Team in the field</span>
+                <span>Education · Partnerships · Santiago</span>
+              </figcaption>
+
+            </figure>
+
             <div class="field-gallery">
 
 
@@ -4109,6 +4258,32 @@
               and the building of internal systems
               so expansion could be visible, measurable and repeatable.
             </p>
+
+          </div>
+
+
+          <div class="building-split">
+
+            <div>
+              <div class="building-media">
+                <img
+                  src="tether-building-ops.jpg"
+                  alt="Felipe Quiroz working at TetherEd"
+                  loading="lazy"
+                >
+              </div>
+            </div>
+
+            <div class="building-copy">
+              <p>
+                My role went beyond partnerships. I also worked across product,
+                growth and operations, turning opportunities into concrete initiatives
+                and coordinating teams to move them into execution.
+              </p>
+              <div class="building-meta">
+                Product · Growth · Operations
+              </div>
+            </div>
 
           </div>
 
