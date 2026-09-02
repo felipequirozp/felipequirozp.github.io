@@ -2132,6 +2132,52 @@
       }
     }
 
+  
+    /* =====================================================
+       ABOUT — EDITORIAL PORTRAIT
+    ===================================================== */
+    .human-signal {
+      padding-top: 110px !important;
+      padding-bottom: 110px !important;
+    }
+
+    .human-signal-inner {
+      grid-template-columns: minmax(280px, 390px) minmax(0, 520px) !important;
+      gap: 70px !important;
+      align-items: center !important;
+      max-width: 980px !important;
+    }
+
+    .human-signal img {
+      width: 100% !important;
+      max-width: 390px !important;
+      aspect-ratio: 4 / 5 !important;
+      object-fit: cover !important;
+      object-position: center 24% !important;
+      border-radius: 18px !important;
+    }
+
+    .human-signal-copy {
+      max-width: 500px !important;
+    }
+
+    @media(max-width:760px) {
+      .human-signal {
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+      }
+
+      .human-signal-inner {
+        grid-template-columns: 1fr !important;
+        gap: 34px !important;
+      }
+
+      .human-signal img {
+        max-width: 100% !important;
+        border-radius: 14px !important;
+      }
+    }
+
   </style>
 
 </head>
@@ -2774,20 +2820,20 @@
   <section class="human-signal">
     <div class="human-signal-inner">
       <img
-        src="felipe-ecosystem-team.jpg"
-        alt="Felipe Quiroz with a team at an ecosystem event in Santiago"
+        src="felipe-portrait.jpg"
+        alt="Portrait of Felipe Quiroz"
         loading="lazy"
       >
 
       <div class="human-signal-copy">
-        <div class="section-label">06 / Outside the screen</div>
-        <h2>Close to people.<br>Close to reality.</h2>
+        <div class="section-label">06 / Beyond the work</div>
+        <h2>Curious by nature.<br>Always building.</h2>
         <p>
-          I like being close to customers, teams and the environments where
-          products actually operate. The best systems usually start with a
-          real conversation.
+          I like understanding how things work, connecting ideas and turning them
+          into something concrete. Outside of projects, I keep exploring technology,
+          AI and new ways to work, build and learn.
         </p>
-        <div class="human-signal-meta">Out in the ecosystem / Teams, conversations and new ideas · Santiago</div>
+        <div class="human-signal-meta">Santiago, Chile · 2026</div>
       </div>
     </div>
   </section>
