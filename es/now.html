@@ -2355,6 +2355,143 @@
       }
     }
 
+  
+    /* =====================================================
+       NOW — CURRENT WORKSPACE / HUMAN MOMENT
+    ===================================================== */
+    .workspace-moment {
+      margin-top: 82px;
+      display: grid;
+      grid-template-columns: minmax(0, 430px) minmax(260px, 360px);
+      gap: 64px;
+      align-items: center;
+      max-width: 900px;
+    }
+
+    .workspace-copy {
+      max-width: 430px;
+    }
+
+    .workspace-copy h3 {
+      margin: 0 0 18px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(30px, 3.4vw, 46px);
+      line-height: 1.06;
+      letter-spacing: -.045em;
+      color: var(--navy);
+    }
+
+    .workspace-copy p {
+      margin: 0;
+      max-width: 420px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    .workspace-media {
+      width: 100%;
+      max-width: 340px;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      border-radius: 18px;
+      background: var(--ice);
+      justify-self: end;
+    }
+
+    .workspace-media img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .workspace-meta {
+      margin-top: 12px;
+      color: var(--steel-light);
+      font-size: 9px;
+      letter-spacing: .04em;
+    }
+
+    @media(max-width:760px) {
+      .workspace-moment {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-top: 62px;
+      }
+
+      .workspace-media {
+        max-width: 100%;
+        aspect-ratio: 4 / 5;
+        justify-self: start;
+      }
+
+      .workspace-copy,
+      .workspace-copy p {
+        max-width: 100%;
+      }
+    }
+
+  
+    /* =====================================================
+       NOW — CURRENT MOMENT, QUIETER EDITORIAL VERSION
+    ===================================================== */
+    .workspace-moment {
+      margin-top: 78px !important;
+      display: grid !important;
+      grid-template-columns: minmax(0, 430px) minmax(240px, 320px) !important;
+      gap: 58px !important;
+      align-items: center !important;
+      max-width: 840px !important;
+    }
+
+    .workspace-copy {
+      max-width: 430px !important;
+    }
+
+    .workspace-kicker {
+      margin-bottom: 12px;
+      color: var(--steel-light);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .workspace-copy h3 {
+      margin: 0 0 18px !important;
+      font-size: clamp(30px, 3.4vw, 44px) !important;
+      line-height: 1.07 !important;
+    }
+
+    .workspace-copy p {
+      max-width: 420px !important;
+    }
+
+    .workspace-media {
+      max-width: 310px !important;
+      aspect-ratio: 4 / 5 !important;
+      justify-self: end !important;
+    }
+
+    .workspace-meta {
+      margin-top: 18px !important;
+    }
+
+    @media(max-width:760px) {
+      .workspace-moment {
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+        max-width: 100% !important;
+      }
+
+      .workspace-media {
+        max-width: 100% !important;
+        justify-self: start !important;
+      }
+    }
+
   </style>
 
 </head>
@@ -2497,15 +2634,7 @@
         <p>Cómo conectar herramientas, procesos, datos y personas en sistemas que realmente funcionen.</p>
       </div>
     </div>
-
-    <div class="now-image-wrap">
-      <img src="../platanus-ai-native.jpg" alt="Sesión sobre productos y compañías nativas en IA en Santiago">
-      <div class="now-image-caption">
-        <span>En el ecosistema / Productos nativos en IA, personas y modelos operativos</span>
-        <span>Santiago / CL</span>
-      </div>
-    </div>
-  </section>
+</section>
 
   <section class="now-section">
     <div class="section-label">Cómo estoy operando</div>
@@ -2535,6 +2664,8 @@
         <p>Usar tecnología, automatización e IA para aumentar el impacto de buenos equipos.</p>
       </div>
     </div>
+
+
   </section>
 
   <section class="now-closing">
