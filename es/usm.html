@@ -3158,6 +3158,74 @@
       }
     }
 
+  
+    /* =====================================================
+       USM — PHOTO BALANCE V7
+       Smaller media, tighter hierarchy, cleaner captions
+    ===================================================== */
+    .usm-photo-block > h2 {
+      max-width: 900px !important;
+      font-size: clamp(44px, 5.6vw, 76px) !important;
+      line-height: .99 !important;
+    }
+
+    .usm-photo-media.landscape {
+      max-width: 720px !important;
+    }
+
+    .usm-photo-media.community {
+      max-width: 680px !important;
+    }
+
+    .usm-photo-split {
+      grid-template-columns: minmax(240px, 330px) minmax(0, 390px) !important;
+      gap: 44px !important;
+      max-width: 790px !important;
+      align-items: center !important;
+    }
+
+    .usm-photo-split .usm-photo-media.portrait,
+    .usm-photo-split .usm-photo-media.institutional {
+      max-width: 330px !important;
+    }
+
+    .usm-photo-split .usm-photo-sidecopy {
+      max-width: 390px !important;
+    }
+
+    .usm-photo-caption.solo {
+      justify-content: flex-start !important;
+    }
+
+    .usm-photo-caption.solo span {
+      color: var(--steel-light) !important;
+      font-size: 10px !important;
+      font-weight: 500 !important;
+      text-align: left !important;
+    }
+
+    @media(max-width:760px) {
+      .usm-photo-block > h2 {
+        font-size: clamp(38px, 11vw, 58px) !important;
+      }
+
+      .usm-photo-media.landscape,
+      .usm-photo-media.community {
+        max-width: 100% !important;
+      }
+
+      .usm-photo-split {
+        grid-template-columns: 1fr !important;
+        max-width: 100% !important;
+        gap: 22px !important;
+      }
+
+      .usm-photo-split .usm-photo-media.portrait,
+      .usm-photo-split .usm-photo-media.institutional {
+        max-width: 100% !important;
+      }
+    }
+
   </style>
 
 </head>
@@ -3395,7 +3463,7 @@
 
           <figure class="client-work-figure">
             <div class="usm-photo-media landscape">
-              <img src="../usm-admissions-team.jpg" alt="Equipo y participantes en una actividad de admisión de USM" loading="lazy">
+              <img src="../usm-admissions-team-san.jpg" alt="Equipo y participantes en una actividad de admisión de USM" loading="lazy">
             </div>
             <figcaption class="usm-photo-caption">
               <span>USM</span>
@@ -3507,8 +3575,7 @@
                   loading="lazy"
                 >
               </div>
-              <figcaption class="usm-photo-caption">
-                <span>Universidad Técnica Federico Santa María</span>
+              <figcaption class="usm-photo-caption solo">
                 <span>Encuentro institucional · Santiago, Chile</span>
               </figcaption>
             </figure>
