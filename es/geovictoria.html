@@ -2312,6 +2312,349 @@
       text-align: right !important;
     }
 
+  
+    /* =====================================================
+       GEOVICTORIA — CULTURE / 4H
+    ===================================================== */
+    .culture-4h {
+      padding-top: 92px;
+      padding-bottom: 92px;
+      border-top: 1px solid var(--line);
+    }
+
+    .culture-4h-inner {
+      max-width: 980px;
+    }
+
+    .culture-4h-title {
+      margin: 0 0 30px;
+      max-width: 760px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(44px, 5.4vw, 72px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      color: var(--navy);
+    }
+
+    .culture-4h-values {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 22px;
+      margin: 0 0 28px;
+      max-width: 900px;
+    }
+
+    .culture-4h-value {
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      font-family: "Manrope", sans-serif;
+      font-size: 18px;
+      font-weight: 650;
+      letter-spacing: -.02em;
+      color: var(--navy);
+    }
+
+    .culture-4h-copy {
+      margin: 0;
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    @media(max-width:760px) {
+      .culture-4h-values {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px 22px;
+      }
+    }
+
+    @media(max-width:520px) {
+      .culture-4h {
+        padding-top: 72px;
+        padding-bottom: 72px;
+      }
+
+      .culture-4h-values {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  
+    /* =====================================================
+       GEOVICTORIA — COMPANY SIGNALS
+    ===================================================== */
+    .company-signals {
+      padding-top: 92px;
+      padding-bottom: 92px;
+      border-top: 1px solid var(--line);
+    }
+
+    .company-signals-inner {
+      max-width: 980px;
+    }
+
+    .company-signals-title {
+      margin: 0 0 34px;
+      max-width: 760px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(44px, 5.4vw, 72px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      color: var(--navy);
+    }
+
+    .company-signals-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      max-width: 900px;
+    }
+
+    .company-signal {
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .company-signal-name {
+      margin: 0 0 10px;
+      font-family: "Manrope", sans-serif;
+      font-size: 21px;
+      font-weight: 650;
+      letter-spacing: -.025em;
+      color: var(--navy);
+    }
+
+    .company-signal-copy {
+      margin: 0;
+      max-width: 390px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.72;
+    }
+
+    @media(max-width:700px) {
+      .company-signals-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    @media(max-width:520px) {
+      .company-signals {
+        padding-top: 72px;
+        padding-bottom: 72px;
+      }
+    }
+
+  
+    /* =====================================================
+       GEOVICTORIA — OPERATIONS PRODUCT VISUAL
+    ===================================================== */
+    .operations-visual {
+      margin: 54px 0 92px;
+      max-width: 760px;
+    }
+
+    .operations-visual-card {
+      padding: 34px;
+      border-radius: 18px;
+      background: var(--navy);
+      overflow: hidden;
+    }
+
+    .operations-visual-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .operations-visual-caption {
+      margin-top: 12px;
+      color: var(--steel-light);
+      font-size: 9px;
+      letter-spacing: .04em;
+    }
+
+    @media(max-width:700px) {
+      .operations-visual {
+        max-width: 100%;
+        margin-top: 40px;
+        margin-bottom: 72px;
+      }
+
+      .operations-visual-card {
+        padding: 22px;
+        border-radius: 14px;
+      }
+    }
+
+  
+    /* =====================================================
+       GEOVICTORIA — WFM INTRO
+    ===================================================== */
+    .wfm-intro {
+      padding-top: 92px;
+      padding-bottom: 92px;
+      border-top: 1px solid var(--line);
+    }
+
+    .wfm-intro-inner {
+      max-width: 980px;
+    }
+
+    .wfm-intro-title {
+      margin: 0 0 18px;
+      max-width: 840px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(44px, 5.6vw, 76px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      color: var(--navy);
+    }
+
+    .wfm-intro-lead {
+      margin: 0 0 42px;
+      max-width: 700px;
+      color: var(--steel);
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .wfm-intro-split {
+      display: grid;
+      grid-template-columns: minmax(280px, 430px) minmax(0, 1fr);
+      gap: 56px;
+      align-items: center;
+      max-width: 920px;
+    }
+
+    .wfm-intro-media {
+      border-radius: 18px;
+      overflow: hidden;
+      background: var(--ice);
+    }
+
+    .wfm-intro-media img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .wfm-intro-copy {
+      max-width: 430px;
+    }
+
+    .wfm-intro-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    @media(max-width:760px) {
+      .wfm-intro {
+        padding-top: 72px;
+        padding-bottom: 72px;
+      }
+
+      .wfm-intro-split {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .wfm-intro-copy {
+        max-width: 100%;
+      }
+    }
+
+  
+    /* =====================================================
+       GEOVICTORIA — GEOCOFFEE / CLIENT COMMUNITY
+    ===================================================== */
+    .geocoffee {
+      padding-top: 92px;
+      padding-bottom: 92px;
+      border-top: 1px solid var(--line);
+    }
+
+    .geocoffee-inner {
+      max-width: 980px;
+    }
+
+    .geocoffee-title {
+      margin: 0 0 38px;
+      max-width: 780px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(44px, 5.4vw, 72px);
+      line-height: .99;
+      letter-spacing: -.055em;
+      color: var(--navy);
+    }
+
+    .geocoffee-split {
+      display: grid;
+      grid-template-columns: minmax(300px, 560px) minmax(0, 320px);
+      gap: 48px;
+      align-items: center;
+      max-width: 930px;
+    }
+
+    .geocoffee-media {
+      border-radius: 18px;
+      overflow: hidden;
+      background: var(--ice);
+      aspect-ratio: 4 / 3;
+    }
+
+    .geocoffee-media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .geocoffee-copy {
+      max-width: 320px;
+    }
+
+    .geocoffee-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.78;
+    }
+
+    .geocoffee-meta {
+      margin-top: 16px;
+      color: var(--steel-light);
+      font-size: 9px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    @media(max-width:760px) {
+      .geocoffee {
+        padding-top: 72px;
+        padding-bottom: 72px;
+      }
+
+      .geocoffee-split {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .geocoffee-copy {
+        max-width: 100%;
+      }
+
+      .geocoffee-media {
+        aspect-ratio: 4 / 3;
+      }
+    }
+
   </style>
 
 </head>
@@ -2655,11 +2998,42 @@
             </p>
 
           </div>
+<section class="section wfm-intro">
+          <div class="wfm-intro-inner">
+            <div class="section-label">03 / Workforce Management</div>
 
-          <div class="people-block">
+            <h2 class="wfm-intro-title">
+              ¿Qué es Workforce Management (WFM)?
+            </h2>
+
+            <p class="wfm-intro-lead">
+              De registrar qué pasó, a decidir qué debería pasar.
+            </p>
+
+            <div class="wfm-intro-split">
+              <div class="wfm-intro-media">
+                <img
+                  src="/geovictoria-workforce-management-es.jpg"
+                  alt="Visual sobre Workforce Management en GeoVictoria"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="wfm-intro-copy">
+                <p>
+                  Tener más personas de las necesarias cuesta dinero.
+                  Tener menos cuesta operación. Y tenerlas en el horario
+                  equivocado cuesta ambas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+<div class="people-block">
 
             <div class="people-heading">
-              Personas / Liderazgo de producto
+              Personas / Liderazgo
             </div>
 
             <div class="leadership-card">
@@ -2725,6 +3099,28 @@
                     in
                   </a>
                 </div>
+              </div>
+
+            </div>
+
+            <div class="leadership-card">
+
+              <div class="leadership-photo">
+                <img
+                  src="/rodrigo-lewit.jpg"
+                  alt="Rodrigo Lewit"
+                  loading="lazy"
+                >
+              </div>
+
+              <div>
+                <div class="leadership-eyebrow">Liderazgo comercial</div>
+                <h3 class="leadership-name">Rodrigo Lewit</h3>
+                <div class="leadership-role">Co-Founder &amp; Chief Commercial Officer · GeoVictoria</div>
+                <p class="leadership-copy">
+                  Co-fundador y líder comercial de GeoVictoria, con foco en crecimiento,
+                  go-to-market y desarrollo de relaciones con clientes y mercados.
+                </p>
               </div>
 
             </div>
@@ -3025,6 +3421,93 @@
 
 
         </section>
+
+
+        
+        <section class="section company-signals">
+          <div class="company-signals-inner">
+            <div class="section-label">06 / Company Signals</div>
+
+            <h2 class="company-signals-title">
+              Señales de escala, ecosistema y madurez tecnológica.
+            </h2>
+
+            <div class="company-signals-grid">
+              <div class="company-signal">
+                <h3 class="company-signal-name">Endeavor</h3>
+                <p class="company-signal-copy">
+                  GeoVictoria forma parte de la comunidad global de emprendimiento
+                  de alto impacto impulsada por Endeavor.
+                </p>
+              </div>
+
+              <div class="company-signal">
+                <h3 class="company-signal-name">Microsoft Gold Partner</h3>
+                <p class="company-signal-copy">
+                  Una credencial que refleja capacidades técnicas, estándares de
+                  implementación y experiencia construyendo soluciones empresariales.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+<section class="section culture-4h">
+          <div class="culture-4h-inner">
+            <div class="section-label">07 / Cultura · Las 4H</div>
+
+            <h2 class="culture-4h-title">
+              Una cultura construida alrededor de cuatro ideas simples.
+            </h2>
+
+            <div class="culture-4h-values">
+              <div class="culture-4h-value">Happy</div>
+              <div class="culture-4h-value">Honest</div>
+              <div class="culture-4h-value">Humble</div>
+              <div class="culture-4h-value">Hungry</div>
+            </div>
+
+            <p class="culture-4h-copy">
+              GeoVictoria articula su cultura alrededor de las 4H: trabajar con energía,
+              honestidad, humildad y ambición por seguir creciendo. Esa combinación también
+              se refleja en cómo los equipos colaboran, toman decisiones y construyen producto.
+            </p>
+          </div>
+        </section>
+
+
+
+        <section class="section geocoffee">
+          <div class="geocoffee-inner">
+            <div class="section-label">08 / Clientes &amp; comunidad</div>
+
+            <h2 class="geocoffee-title">
+              Aprender también pasa en conversación.
+            </h2>
+
+            <div class="geocoffee-split">
+              <div class="geocoffee-media">
+                <img
+                  src="/geovictoria-geocoffee.jpg"
+                  alt="Café con GeoVictoria junto a clientes de distintas industrias"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="geocoffee-copy">
+                <p>
+                  En espacios como Café con GeoVictoria reunimos a clientes de distintas
+                  industrias para compartir experiencias, resolver dudas y generar
+                  aprendizajes que aporten directamente a la gestión de personas.
+                </p>
+                <div class="geocoffee-meta">
+                  Café con GeoVictoria · Networking · Capacitación
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
 
       </div>
