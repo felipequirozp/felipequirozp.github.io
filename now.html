@@ -2583,6 +2583,61 @@
       color: var(--slate);
     }
 
+  
+    /* V15 — ecosystem diptych */
+    .now-secondary-image {
+      max-width: 1080px !important;
+      margin: 64px auto 0 !important;
+    }
+
+    .now-secondary-image .media-grid {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 18px !important;
+    }
+
+    .now-secondary-image .media {
+      overflow: hidden !important;
+      border-radius: 18px !important;
+      background: var(--ice) !important;
+      aspect-ratio: 4 / 3 !important;
+    }
+
+    .now-secondary-image img {
+      width: 100% !important;
+      height: 100% !important;
+      display: block !important;
+      object-fit: cover !important;
+      object-position: center !important;
+    }
+
+    .now-secondary-image .caption {
+      display: flex !important;
+      justify-content: space-between !important;
+      gap: 24px !important;
+      margin-top: 12px !important;
+      color: var(--steel-light) !important;
+      font-size: 9px !important;
+      line-height: 1.4 !important;
+    }
+
+    @media(max-width:700px) {
+      .now-secondary-image .media-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+      }
+
+      .now-secondary-image .media {
+        aspect-ratio: 4 / 3 !important;
+        border-radius: 14px !important;
+      }
+
+      .now-secondary-image .caption {
+        flex-direction: column !important;
+        gap: 4px !important;
+      }
+    }
+
   </style>
 
 </head>
@@ -2759,8 +2814,13 @@
 
 
     <div class="now-secondary-image">
-      <div class="media">
-        <img src="platanus-event.jpg" alt="Technology and startup ecosystem event in Santiago">
+      <div class="media-grid">
+        <div class="media">
+          <img src="platanus-event.jpg" alt="Technology and startup ecosystem event in Santiago">
+        </div>
+        <div class="media">
+          <img src="felipe-ecosystem-team.jpg" alt="Felipe Quiroz with a team in the startup and technology ecosystem">
+        </div>
       </div>
       <div class="caption">
         <span>Out in the ecosystem / Conversations, teams and new ideas</span>
