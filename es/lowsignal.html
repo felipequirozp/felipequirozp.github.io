@@ -3127,6 +3127,148 @@
       }
     }
 
+  
+    /* V7 — Editorial team section */
+    .team-section {
+      padding-top: 88px;
+      padding-bottom: 96px;
+    }
+
+    .team-section-inner {
+      max-width: 1080px;
+    }
+
+    .team-intro {
+      max-width: 980px;
+      margin-bottom: 42px;
+    }
+
+    .team-title {
+      margin: 0 0 20px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(44px, 5.2vw, 72px);
+      line-height: 1;
+      letter-spacing: -.05em;
+      color: var(--navy);
+    }
+
+    .team-copy {
+      margin: 0;
+      max-width: 920px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .team-member {
+      min-width: 0;
+    }
+
+    .team-photo {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 18px;
+      background: var(--ice);
+      display: block;
+    }
+
+    .team-meta {
+      padding-top: 14px;
+    }
+
+    .team-name {
+      margin: 0 0 4px;
+      font-family: "Manrope", sans-serif;
+      font-size: 17px;
+      font-weight: 650;
+      letter-spacing: -.02em;
+      color: var(--navy);
+    }
+
+    .team-role {
+      margin: 0;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    @media(max-width:900px) {
+      .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 18px;
+      }
+    }
+
+    @media(max-width:560px) {
+      .team-section {
+        padding-top: 68px;
+        padding-bottom: 76px;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .team-photo {
+        border-radius: 14px;
+      }
+    }
+}
+
+  
+    /* V9 — clean transition into Damián */
+    .cofounder-card {
+      margin-top: 48px;
+    }
+
+    @media(max-width:700px) {
+      .cofounder-card {
+        margin-top: 38px;
+      }
+    }
+
+  
+    /* V10 — team LinkedIn buttons */
+    .team-links {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .team-links a {
+      width: 36px;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--steel);
+      text-decoration: none;
+      transition: transform .2s ease, color .2s ease, border-color .2s ease, background .2s ease;
+    }
+
+    .team-links a:hover {
+      transform: translateY(-2px);
+      color: var(--navy);
+      border-color: var(--steel-light);
+      background: var(--white);
+    }
+
+    .team-links svg {
+      width: 15px;
+      height: 15px;
+      display: block;
+    }
+
   </style>
 
 </head>
@@ -3506,6 +3648,63 @@
 
           </div>
 
+          <div class="cofounder-card">
+
+            <img
+              src="/damian-aldunate.jpg"
+              alt="Damián Aldunate"
+              class="cofounder-photo"
+              loading="lazy"
+            >
+
+            <div>
+
+              <div class="cofounder-eyebrow">
+                Liderazgo
+              </div>
+
+              <h3 class="cofounder-name">
+                Damián Aldunate
+              </h3>
+
+              <p class="cofounder-meta">
+                Co-Founder &amp; CMO, lowsignal
+              </p>
+
+              <p class="cofounder-copy">
+                Junto a Damián, construimos lowsignal desde
+                roles complementarios entre marca, growth,
+                operación y desarrollo de negocio.
+              </p>
+
+              <div class="cofounder-links">
+
+                <a
+                  href="https://www.linkedin.com/in/damianaldunate/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn de Damián Aldunate"
+                  title="LinkedIn"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
+                  </svg>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        
+
+          
 </section>
 
 
@@ -3571,66 +3770,10 @@
 
           </div>
 
-<div class="cofounder-card">
-
-            <img
-              src="../damian-aldunate.jpg"
-              alt="Damián Aldunate"
-              class="cofounder-photo"
-              loading="lazy"
-            >
-
-            <div>
-
-              <div class="cofounder-eyebrow">
-                Liderazgo
-              </div>
-
-              <h3 class="cofounder-name">
-                Damián Aldunate
-              </h3>
-
-              <p class="cofounder-meta">
-                Co-Founder &amp; CMO, lowsignal
-              </p>
-
-              <p class="cofounder-copy">
-                Junto a Damián, construimos lowsignal desde
-                roles complementarios entre marca, growth,
-                operación y desarrollo de negocio.
-              </p>
-
-              <div class="cofounder-links">
-
-                <a
-                  href="https://www.linkedin.com/in/damianaldunate/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn de Damián Aldunate"
-                  title="LinkedIn"
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
-                  </svg>
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-        
-
-          <div class="founders-editorial">
+<div class="founders-editorial">
               <div class="founders-media">
                 <img
-                  src="../lowsignal-founders.jpg"
+                  src="/lowsignal-founders.jpg"
                   alt="Felipe Quiroz y Damián Aldunate, fundadores de lowsignal"
                   loading="lazy"
                 >
@@ -3652,6 +3795,76 @@
             </div>
 
         </section>
+        <section class="section team-section">
+          <div class="team-section-inner">
+            <div class="section-label">Equipo</div>
+
+            <div class="team-intro">
+              <h2 class="team-title">Las personas con las que construimos lowsignal.</h2>
+              <p class="team-copy">
+                Trabajo con un equipo multidisciplinario que conecta estrategia, desarrollo comercial,
+                contenido y producción audiovisual para convertir ideas en sistemas, campañas y experiencias
+                que generan resultados reales.
+              </p>
+            </div>
+
+            <div class="team-grid">
+              <article class="team-member">
+                <img src="/marco-kroeger.jpg" alt="Marco Kroeger" class="team-photo" loading="lazy">
+                <div class="team-meta">
+                  <h3 class="team-name">Marco Kroeger</h3>
+                  <p class="team-role">Business Development</p>
+                  <div class="team-links">
+                    <a href="https://www.linkedin.com/in/marcokroeger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Marco Kroeger" title="LinkedIn">
+                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="team-member">
+                <img src="/lia-morice.jpg" alt="Lía Morice" class="team-photo" loading="lazy">
+                <div class="team-meta">
+                  <h3 class="team-name">Lía Morice</h3>
+                  <p class="team-role">Content Creator</p>
+                  <div class="team-links">
+                    <a href="https://www.linkedin.com/in/l%C3%ADa-morice-b31521419/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Lía Morice" title="LinkedIn">
+                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="team-member">
+                <img src="/martin-alvarado.jpg" alt="Martín Alvarado" class="team-photo" loading="lazy">
+                <div class="team-meta">
+                  <h3 class="team-name">Martín Alvarado</h3>
+                  <p class="team-role">Audiovisual Producer</p>
+                  <div class="team-links">
+                    <a href="https://www.linkedin.com/in/martin-alvaradod" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Martín" title="LinkedIn">
+                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="team-member">
+                <img src="/jorge-munoz.jpg" alt="Jorge Muñoz" class="team-photo" loading="lazy">
+                <div class="team-meta">
+                  <h3 class="team-name">Jorge Muñoz</h3>
+                  <p class="team-role">Audiovisual Producer</p>
+                  <div class="team-links">
+                    <a href="https://www.linkedin.com/in/jorgemunozve/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Jorge Muñoz" title="LinkedIn">
+                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+
 
 
 
