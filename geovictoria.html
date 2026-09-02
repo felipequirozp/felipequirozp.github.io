@@ -2387,7 +2387,7 @@
     .company-signals {
       padding-top: 92px;
       padding-bottom: 92px;
-      border-top: 1px solid var(--line);
+      border-top: 0;
     }
 
     .company-signals-inner {
@@ -2652,6 +2652,20 @@
 
       .geocoffee-media {
         aspect-ratio: 4 / 3;
+      }
+    }
+
+  
+    /* V16 — balance spacing where dividers were removed */
+    .wfm-intro,
+    .company-signals {
+      padding-top: 64px !important;
+    }
+
+    @media(max-width:760px) {
+      .wfm-intro,
+      .company-signals {
+        padding-top: 52px !important;
       }
     }
 
