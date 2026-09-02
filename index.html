@@ -352,7 +352,7 @@
       display: grid;
 
       grid-template-columns:
-        1.18fr .82fr;
+        1.35fr .65fr;
 
       gap: 7vw;
 
@@ -487,7 +487,7 @@
 
       width: 100%;
 
-      max-width: 500px;
+      max-width: 420px;
 
       justify-self: end;
 
@@ -1796,7 +1796,7 @@
 
         justify-self: start;
 
-        max-width: 440px;
+        max-width: 390px;
 
       }
 
@@ -2673,48 +2673,9 @@
 
   
     /* V8 — Current signal + Now bridge */
-    .current-signal {
-      margin-top: 34px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 18px;
-      align-items: center;
-      color: var(--slate-light);
-      font-size: 11px;
-      letter-spacing: .035em;
-    }
-
-    .current-signal span {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .current-signal span + span::before {
-      content: "·";
-      color: var(--steel-light);
-      margin-right: 2px;
-    }
 @media(max-width:700px) {
-      .current-signal {
-        margin-top: 26px;
-        gap: 8px 12px;
-      }
-
-      .current-signal span + span::before {
-        display: none;
-      }
 }
-
-  
-    /* V10 — stronger hero portrait, no extra Now block */
-    @media(min-width:1200px) {
-      .hero-photo-wrap {
-        max-width: 520px;
-      }
-    }
-
-  </style>
+</style>
 
 </head>
 
@@ -2885,13 +2846,6 @@
 
 
     </div>
-
-
-  
-        <div class="current-signal">
-          <span>Santiago, Chile · 2026</span>
-          <span>Building products, growth systems and operations.</span>
-        </div>
 </section>
 
 <!-- =====================================================
