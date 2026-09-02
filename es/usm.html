@@ -3027,6 +3027,36 @@
       text-align: right !important;
     }
 
+  
+    /* =====================================================
+       USM — FOUR-PHOTO EDITORIAL FLOW
+    ===================================================== */
+    .usm-photo-media.institutional {
+      max-width: 760px;
+      aspect-ratio: 4 / 3;
+    }
+
+    .usm-photo-media.institutional img {
+      object-position: center 42%;
+    }
+
+    .usm-photo-media.community {
+      max-width: 920px;
+      aspect-ratio: 3 / 2;
+    }
+
+    .usm-photo-media.community img {
+      object-position: center center;
+    }
+
+    @media(max-width:600px) {
+      .usm-photo-media.institutional,
+      .usm-photo-media.community {
+        max-width: 100%;
+        aspect-ratio: 4 / 3;
+      }
+    }
+
   </style>
 
 </head>
@@ -3298,9 +3328,40 @@
 
         </section>
 
+        
         <section class="section usm-photo-block">
 
-          <div class="section-label">05 / Entorno</div>
+          <div class="section-label">05 / Equipo &amp; comunidad</div>
+
+          <h2>El trabajo también pasa fuera del escritorio.</h2>
+
+          <div class="section-copy">
+            <p>
+              Durante mi paso por Admisión participé en actividades, ferias y encuentros
+              junto al equipo, conectando directamente con estudiantes, familias y la
+              comunidad universitaria.
+            </p>
+          </div>
+
+          <figure class="client-work-figure">
+            <div class="usm-photo-media community">
+              <img
+                src="../usm-admissions-community.jpg"
+                alt="Felipe Quiroz junto al equipo de Admisión de la Universidad Técnica Federico Santa María"
+                loading="lazy"
+              >
+            </div>
+            <figcaption class="usm-photo-caption">
+              <span>Equipo de Admisión · Universidad Técnica Federico Santa María</span>
+              <span>Trabajo en terreno · Eventos · Vinculación con estudiantes</span>
+            </figcaption>
+          </figure>
+
+        </section>
+
+<section class="section usm-photo-block">
+
+          <div class="section-label">06 / Entorno</div>
 
           <h2>Construyendo desde dentro de la institución.</h2>
 
@@ -3317,9 +3378,32 @@
         </section>
 
         
-        <section class="section">
+        
+        <section class="section usm-photo-block">
 
-          <div class="section-label">06 / Liderazgo</div>
+          <div class="section-label">07 / Contexto institucional</div>
+
+          <h2>Una mirada cercana a la institución y su liderazgo.</h2>
+
+          <figure class="client-work-figure">
+            <div class="usm-photo-media institutional">
+              <img
+                src="../usm-rector.jpg"
+                alt="Felipe Quiroz junto al Rector de la Universidad Técnica Federico Santa María"
+                loading="lazy"
+              >
+            </div>
+            <figcaption class="usm-photo-caption">
+              <span>Universidad Técnica Federico Santa María</span>
+              <span>Encuentro institucional · Santiago, Chile</span>
+            </figcaption>
+          </figure>
+
+        </section>
+
+<section class="section">
+
+          <div class="section-label">08 / Liderazgo</div>
 
           <h2>
             Trabajando directamente con quienes lideraban cada frente.
@@ -3425,7 +3509,7 @@
 
         <section class="section">
 
-          <div class="section-label">07 / Throughline</div>
+          <div class="section-label">09 / Hilo conductor</div>
 
           <h2>
             Construyendo sistemas antes de llamarlos sistemas.
