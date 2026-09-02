@@ -3027,6 +3027,205 @@
       text-align: right !important;
     }
 
+  
+    /* =====================================================
+       USM — FOUR-PHOTO EDITORIAL FLOW
+    ===================================================== */
+    .usm-photo-media.institutional {
+      max-width: 760px;
+      aspect-ratio: 4 / 3;
+    }
+
+    .usm-photo-media.institutional img {
+      object-position: center 42%;
+    }
+
+    .usm-photo-media.community {
+      max-width: 920px;
+      aspect-ratio: 3 / 2;
+    }
+
+    .usm-photo-media.community img {
+      object-position: center center;
+    }
+
+    @media(max-width:600px) {
+      .usm-photo-media.institutional,
+      .usm-photo-media.community {
+        max-width: 100%;
+        aspect-ratio: 4 / 3;
+      }
+    }
+
+  
+    /* =====================================================
+       USM — REFINED PHOTO SCALE & EDITORIAL SPLITS
+    ===================================================== */
+
+    /* Never let editorial photos dominate the page */
+    .usm-photo-block .client-work-figure {
+      margin-top: 38px;
+    }
+
+    .usm-photo-media.landscape {
+      max-width: 820px;
+      aspect-ratio: 16 / 10;
+    }
+
+    .usm-photo-media.community {
+      max-width: 760px !important;
+      aspect-ratio: 3 / 2 !important;
+    }
+
+    /* Vertical / institutional images work better with copy beside them */
+    .usm-photo-split {
+      margin-top: 42px;
+      display: grid;
+      grid-template-columns: minmax(260px, 390px) minmax(0, 420px);
+      gap: 52px;
+      align-items: center;
+      max-width: 900px;
+    }
+
+    .usm-photo-split .client-work-figure {
+      margin: 0;
+    }
+
+    .usm-photo-split .usm-photo-media.portrait,
+    .usm-photo-split .usm-photo-media.institutional {
+      width: 100%;
+      max-width: 390px !important;
+      aspect-ratio: 4 / 5 !important;
+    }
+
+    .usm-photo-split .usm-photo-media.institutional img {
+      object-position: center 42%;
+    }
+
+    .usm-photo-sidecopy {
+      max-width: 390px;
+    }
+
+    .usm-photo-sidecopy .eyebrow {
+      margin-bottom: 14px;
+      color: var(--steel-light);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .usm-photo-sidecopy h3 {
+      margin: 0 0 16px;
+      max-width: 360px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(27px, 3vw, 40px);
+      line-height: 1.08;
+      letter-spacing: -.04em;
+      color: var(--navy);
+    }
+
+    .usm-photo-sidecopy p {
+      margin: 0;
+      max-width: 380px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    @media(max-width:760px) {
+      .usm-photo-media.landscape,
+      .usm-photo-media.community {
+        max-width: 100% !important;
+      }
+
+      .usm-photo-split {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 100%;
+      }
+
+      .usm-photo-split .usm-photo-media.portrait,
+      .usm-photo-split .usm-photo-media.institutional {
+        max-width: 100% !important;
+        aspect-ratio: 4 / 3 !important;
+      }
+
+      .usm-photo-sidecopy,
+      .usm-photo-sidecopy h3,
+      .usm-photo-sidecopy p {
+        max-width: 100%;
+      }
+    }
+
+  
+    /* =====================================================
+       USM — PHOTO BALANCE V7
+       Smaller media, tighter hierarchy, cleaner captions
+    ===================================================== */
+    .usm-photo-block > h2 {
+      max-width: 900px !important;
+      font-size: clamp(44px, 5.6vw, 76px) !important;
+      line-height: .99 !important;
+    }
+
+    .usm-photo-media.landscape {
+      max-width: 720px !important;
+    }
+
+    .usm-photo-media.community {
+      max-width: 680px !important;
+    }
+
+    .usm-photo-split {
+      grid-template-columns: minmax(240px, 330px) minmax(0, 390px) !important;
+      gap: 44px !important;
+      max-width: 790px !important;
+      align-items: center !important;
+    }
+
+    .usm-photo-split .usm-photo-media.portrait,
+    .usm-photo-split .usm-photo-media.institutional {
+      max-width: 330px !important;
+    }
+
+    .usm-photo-split .usm-photo-sidecopy {
+      max-width: 390px !important;
+    }
+
+    .usm-photo-caption.solo {
+      justify-content: flex-start !important;
+    }
+
+    .usm-photo-caption.solo span {
+      color: var(--steel-light) !important;
+      font-size: 10px !important;
+      font-weight: 500 !important;
+      text-align: left !important;
+    }
+
+    @media(max-width:760px) {
+      .usm-photo-block > h2 {
+        font-size: clamp(38px, 11vw, 58px) !important;
+      }
+
+      .usm-photo-media.landscape,
+      .usm-photo-media.community {
+        max-width: 100% !important;
+      }
+
+      .usm-photo-split {
+        grid-template-columns: 1fr !important;
+        max-width: 100% !important;
+        gap: 22px !important;
+      }
+
+      .usm-photo-split .usm-photo-media.portrait,
+      .usm-photo-split .usm-photo-media.institutional {
+        max-width: 100% !important;
+      }
+    }
+
   </style>
 
 </head>
@@ -3264,7 +3463,7 @@
 
           <figure class="client-work-figure">
             <div class="usm-photo-media landscape">
-              <img src="usm-admissions-team.jpg" alt="Team and participants at a USM admissions activity" loading="lazy">
+              <img src="usm-admissions-team-san.jpg" alt="Team and participants at a USM admissions activity" loading="lazy">
             </div>
             <figcaption class="usm-photo-caption">
               <span>USM</span>
@@ -3298,28 +3497,106 @@
 
         </section>
 
+        
         <section class="section usm-photo-block">
 
-          <div class="section-label">05 / Environment</div>
+          <div class="section-label">05 / Team &amp; community</div>
 
-          <h2>Building from inside the institution.</h2>
+          <h2>The work also happens outside the desk.</h2>
+
+          <div class="section-copy">
+            <p>
+              During my time in Admissions, I took part in activities, fairs and events
+              alongside the team, connecting directly with students, families and the
+              university community.
+            </p>
+          </div>
 
           <figure class="client-work-figure">
-            <div class="usm-photo-media portrait">
-              <img src="usm-campus-opening.jpg" alt="Institutional event at USM" loading="lazy">
+            <div class="usm-photo-media community">
+              <img
+                src="usm-admissions-community.jpg"
+                alt="Felipe Quiroz with the Admissions team at Universidad Técnica Federico Santa María"
+                loading="lazy"
+              >
             </div>
             <figcaption class="usm-photo-caption">
-              <span>USM</span>
-              <span>Institutional event</span>
+              <span>Admissions Team · Universidad Técnica Federico Santa María</span>
+              <span>Field work · Events · Student engagement</span>
             </figcaption>
           </figure>
 
         </section>
 
-        
-        <section class="section">
+<section class="section usm-photo-block">
 
-          <div class="section-label">06 / Leadership</div>
+          <div class="section-label">06 / Environment</div>
+
+          <h2>Building from inside the institution.</h2>
+
+          <div class="usm-photo-split">
+            <figure class="client-work-figure">
+              <div class="usm-photo-media portrait">
+                <img src="usm-campus-opening.jpg" alt="Institutional event at USM" loading="lazy">
+              </div>
+              <figcaption class="usm-photo-caption">
+                <span>USM</span>
+                <span>Institutional event</span>
+              </figcaption>
+            </figure>
+
+            <div class="usm-photo-sidecopy">
+              <div class="eyebrow">University life</div>
+              <h3>More than an Admissions operation.</h3>
+              <p>
+                Working inside the university also meant taking part in its milestones,
+                activities and institutional spaces, gaining a closer view of how
+                community, student experience and operations come together.
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+        
+        
+        <section class="section usm-photo-block">
+
+          <div class="section-label">07 / Institutional context</div>
+
+          <h2>A closer look at the institution and its leadership.</h2>
+
+          <div class="usm-photo-split">
+            <figure class="client-work-figure">
+              <div class="usm-photo-media institutional">
+                <img
+                  src="usm-rector.jpg"
+                  alt="Felipe Quiroz with the Rector of Universidad Técnica Federico Santa María"
+                  loading="lazy"
+                >
+              </div>
+              <figcaption class="usm-photo-caption solo">
+                <span>Institutional meeting · Santiago, Chile</span>
+              </figcaption>
+            </figure>
+
+            <div class="usm-photo-sidecopy">
+              <h3>Connecting execution with the broader picture.</h3>
+              <p>
+                My experience at USM allowed me to move between day-to-day operations
+                and institutional spaces, while also engaging with university leadership,
+                including Juan Yuz, Rector of USM. That gave me a broader view of how
+                different teams, decisions and leadership layers connect around a shared
+                university experience.
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+<section class="section">
+
+          <div class="section-label">08 / Leadership</div>
 
           <h2>
             Working directly with the leaders behind each area.
@@ -3425,7 +3702,7 @@
 
         <section class="section">
 
-          <div class="section-label">07 / Throughline</div>
+          <div class="section-label">09 / Throughline</div>
 
           <h2>
             Building systems before I called them systems.
