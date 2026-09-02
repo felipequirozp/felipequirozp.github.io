@@ -3511,6 +3511,28 @@
       opacity: .7;
     }
 
+  
+    /* V14 — logo is the only Avalanche link */
+    .backing-logo-wrap {
+      text-decoration: none !important;
+      transition: opacity .2s ease, transform .2s ease;
+    }
+
+    .backing-logo-wrap:hover {
+      opacity: .88;
+      transform: translateY(-1px);
+    }
+
+    .backing-row-copy-only {
+      display: block !important;
+      max-width: 560px !important;
+    }
+
+    .backing-row-copy-only .backing-copy {
+      max-width: 560px !important;
+      margin-top: 0 !important;
+    }
+
   </style>
 
 </head>
@@ -3959,25 +3981,23 @@
           <div class="backing-label">Respaldo</div>
 
           <div class="backing-brand">
-            <div class="backing-logo-wrap">
+            <a
+              class="backing-logo-wrap"
+              href="https://www.avalanche.vc/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Avalanche"
+            >
               <img
                 class="backing-logo"
                 src="/avalanche-logo.png"
                 alt="Avalanche"
                 loading="lazy"
               >
-            </div>
+            </a>
           </div>
 
-          <div class="backing-row">
-            <a
-              class="backing-link"
-              href="https://www.avalanche.vc/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Avalanche ↗
-            </a>
+          <div class="backing-row backing-row-copy-only">
             <p class="backing-copy">
               Tether Education está respaldada por Avalanche, una firma de inversión
               privada liderada por
