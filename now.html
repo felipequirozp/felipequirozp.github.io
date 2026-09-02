@@ -2492,6 +2492,91 @@
       }
     }
 
+  
+    /* V12 — Where I'm building from */
+    .building-from {
+      padding-top: 86px;
+      padding-bottom: 92px;
+    }
+
+    .building-from-inner {
+      max-width: 1040px;
+    }
+
+    .building-from-title {
+      margin: 0 0 34px;
+      max-width: 780px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(42px, 5vw, 70px);
+      line-height: 1;
+      letter-spacing: -.05em;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    .building-from-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.65fr) minmax(260px, .75fr);
+      gap: 46px;
+      align-items: center;
+      max-width: 980px;
+    }
+
+    .building-from-media {
+      overflow: hidden;
+      border-radius: 18px;
+      background: var(--ice);
+      aspect-ratio: 16 / 10;
+    }
+
+    .building-from-media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .building-from-copy {
+      max-width: 330px;
+    }
+
+    .building-from-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .building-from-meta {
+      margin-top: 16px;
+      color: var(--steel-light);
+      font-size: 9px;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    @media(max-width:760px) {
+      .building-from {
+        padding-top: 66px;
+        padding-bottom: 72px;
+      }
+
+      .building-from-grid {
+        grid-template-columns: 1fr;
+        gap: 26px;
+      }
+
+      .building-from-media {
+        border-radius: 14px;
+        aspect-ratio: 4 / 3;
+      }
+
+      .building-from-copy {
+        max-width: 100%;
+      }
+    }
+
   </style>
 
 </head>
@@ -2617,7 +2702,34 @@
     </div>
   </section>
 
-  <section class="now-section exploration-section">
+  
+  <section class="now-section building-from">
+    <div class="building-from-inner">
+      <div class="section-label">Where I’m building from</div>
+      <h2 class="building-from-title">Santiago as a starting point.</h2>
+
+      <div class="building-from-grid">
+        <div class="building-from-media">
+          <img
+            src="/now-santiago-workspace.jpg"
+            alt="Workspace overlooking Santiago and the Andes"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="building-from-copy">
+          <p>
+            I’m building from Santiago, connected to an ecosystem where product,
+            startups, technology and AI increasingly overlap. It’s my base for working
+            with teams, clients and ideas moving across Chile and other markets.
+          </p>
+          <div class="building-from-meta">Santiago, Chile · 2026</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="now-section exploration-section">
     <div class="section-label">What I’m exploring</div>
 
     <div class="explore-grid">
