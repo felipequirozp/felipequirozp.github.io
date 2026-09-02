@@ -3458,6 +3458,59 @@
       max-height: 26px !important;
     }
 
+  
+    /* =====================================================
+       V11 — BACKING SPACING / DIVIDER / DARK LOGO CARD
+    ===================================================== */
+    .backing-block {
+      max-width: none !important;
+      width: 100% !important;
+      margin: -72px 0 92px !important;
+      padding-top: 30px !important;
+      border-top: 1px solid var(--line) !important;
+    }
+
+    .backing-block > .backing-label,
+    .backing-block > .backing-brand,
+    .backing-block > .backing-row {
+      max-width: 720px;
+    }
+
+    .backing-logo-wrap {
+      background: var(--navy) !important;
+      border: 1px solid rgba(255,255,255,.06) !important;
+      padding: 14px 18px !important;
+      border-radius: 12px !important;
+    }
+
+    .backing-logo {
+      max-width: 112px !important;
+      max-height: 28px !important;
+    }
+
+    .backing-brand {
+      margin-bottom: 18px !important;
+    }
+
+    @media(max-width:700px) {
+      .backing-block {
+        margin-top: -48px !important;
+        margin-bottom: 72px !important;
+      }
+    }
+
+  
+    .backing-copy a {
+      color: var(--navy);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+    }
+
+    .backing-copy a:hover {
+      opacity: .7;
+    }
+
   </style>
 
 </head>
@@ -3927,7 +3980,12 @@
             </a>
             <p class="backing-copy">
               Tether Education está respaldada por Avalanche, una firma de inversión
-              privada liderada por Katelyn Donnelly.
+              privada liderada por
+              <a
+                href="https://katelyndonnelly.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Katelyn Donnelly</a>.
             </p>
           </div>
         </div>
