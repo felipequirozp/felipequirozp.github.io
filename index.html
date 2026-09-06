@@ -1190,129 +1190,7 @@
     .text-link:hover {
       opacity: .55;
     }
-
-
-    /* =====================================================
-       NOW
-    ===================================================== */
-
-    .now {
-
-      padding:
-        130px 7vw;
-
-      background: var(--paper);
-
-    }
-
-
-    .now-grid {
-
-      max-width: 1400px;
-
-      margin: 0 auto;
-
-      display: grid;
-
-      grid-template-columns:
-        .7fr 2.3fr;
-
-      gap: 8vw;
-
-    }
-
-
-    .now-content h2 {
-
-      max-width: 800px;
-
-      margin:
-        0 0 55px;
-
-      font-family: "Manrope", sans-serif;
-
-      font-size:
-        clamp(44px, 5.5vw, 80px);
-
-      line-height: 1.06;
-
-      letter-spacing: -.06em;
-
-      font-weight: 500;
-
-    }
-
-
-    .now-list {
-
-      max-width: 900px;
-
-      margin-bottom: 38px;
-
-      border-top:
-        1px solid var(--line);
-
-    }
-
-
-    .now-item {
-
-      padding:
-        24px 0;
-
-      display: grid;
-
-      grid-template-columns:
-        55px 1fr auto;
-
-      gap: 25px;
-
-      align-items: center;
-
-      border-bottom:
-        1px solid var(--line);
-
-    }
-
-
-    .now-number {
-
-      color: var(--muted);
-
-      font-size: 10px;
-
-    }
-
-
-    .now-item strong {
-
-      font-family: "Manrope", sans-serif;
-
-      font-size: 20px;
-      font-weight: 500;
-
-      letter-spacing: -.025em;
-
-      color: var(--navy);
-
-    }
-
-
-    .now-item span {
-
-      color: var(--muted);
-
-      font-size: 9px;
-
-      letter-spacing: .06em;
-
-      text-transform: uppercase;
-
-    }
-
-
-
-    /* =====================================================
+/* =====================================================
        NOW / HUMAN SIGNAL
     ===================================================== */
 
@@ -2675,7 +2553,224 @@
     /* V8 — Current signal + Now bridge */
 @media(max-width:700px) {
 }
-</style>
+
+    /* V13 — Art direction proposal: bold editorial, not a final replacement */
+
+    :root {
+      --art-accent: #8fa4bb;
+    }
+
+    /* HERO — bigger, more cinematic */
+    .hero {
+      min-height: 94vh;
+      padding-top: 92px;
+      padding-bottom: 82px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 4px;
+      height: 18%;
+      background: var(--art-accent);
+      opacity: .9;
+    }
+
+    .hero-grid {
+      grid-template-columns: minmax(0, 1.12fr) minmax(360px, .88fr);
+      gap: 5vw;
+      align-items: end;
+    }
+
+    .hero-title {
+      max-width: 1080px;
+      font-size: clamp(84px, 10.8vw, 170px);
+      line-height: .86;
+      letter-spacing: -.075em;
+      margin-bottom: 34px;
+    }
+
+    .hero-accent {
+      color: var(--art-accent);
+    }
+
+    .hero-description {
+      max-width: 720px;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    .hero-photo-wrap {
+      max-width: 540px;
+      align-self: end;
+    }
+
+    .hero-photo {
+      border-radius: 18px;
+    }
+
+    .photo-meta {
+      border-top: 1px solid rgba(255,255,255,.14);
+      padding-top: 12px;
+      margin-top: 14px;
+    }
+
+    /* SELECTED WORK — keep the editorial clarity */
+    .work {
+      padding-top: 128px;
+      padding-bottom: 124px;
+    }
+
+    .section-head h2 {
+      max-width: 1220px;
+      font-size: clamp(68px, 8vw, 124px);
+      line-height: .92;
+      letter-spacing: -.06em;
+    }
+
+    .project {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+
+    .project h3 {
+      font-size: clamp(30px, 3.3vw, 52px);
+      letter-spacing: -.04em;
+    }
+
+    /* NEW STRONG MOMENT — one brand-led section only */
+    .art-principle {
+      position: relative;
+      min-height: 76vh;
+      display: flex;
+      align-items: flex-end;
+      padding: 110px 7vw 100px;
+      background:
+        linear-gradient(rgba(13,23,36,.72), rgba(13,23,36,.86)),
+        url('/now-santiago-workspace.jpg') center / cover no-repeat;
+      color: white;
+      overflow: hidden;
+    }
+
+    .art-principle::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 4px;
+      height: 28%;
+      background: var(--art-accent);
+    }
+
+    .art-principle-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 1500px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0,1.2fr) minmax(320px,.8fr);
+      gap: 7vw;
+      align-items: end;
+    }
+
+    .art-principle-label {
+      margin-bottom: 24px;
+      color: var(--slate-light);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+
+    .art-principle-title {
+      margin: 0;
+      max-width: 900px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(64px, 8vw, 128px);
+      line-height: .9;
+      letter-spacing: -.065em;
+      font-weight: 500;
+    }
+
+    .art-principle-title .accent {
+      color: var(--art-accent);
+    }
+
+    .art-principle-copy {
+      max-width: 500px;
+      color: rgba(255,255,255,.78);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .art-principle-link {
+      display: inline-flex;
+      margin-top: 24px;
+      padding-bottom: 5px;
+      color: white;
+      border-bottom: 1px solid rgba(255,255,255,.35);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* ABOUT — still editorial, not another card */
+    .about {
+      padding-top: 116px;
+      padding-bottom: 116px;
+    }
+
+    .about h2 {
+      font-size: clamp(56px, 6.8vw, 104px);
+      line-height: .95;
+      letter-spacing: -.055em;
+    }
+
+    @media(max-width: 980px) {
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-grid,
+      .art-principle-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-photo-wrap {
+        max-width: 440px;
+        justify-self: start;
+      }
+
+      .art-principle {
+        min-height: auto;
+      }
+    }
+
+    @media(max-width: 600px) {
+      .hero {
+        padding-top: 72px;
+        padding-bottom: 72px;
+      }
+
+      .hero-title {
+        font-size: clamp(62px, 18vw, 94px);
+      }
+
+      .art-principle {
+        padding: 86px 22px 80px;
+      }
+
+      .art-principle-title {
+        font-size: clamp(52px, 15vw, 78px);
+      }
+    }
+
+  </style>
 
 </head>
 
@@ -2757,7 +2852,7 @@
 
 
         <div class="hero-label">
-          Felipe Quiroz / Santiago
+          Building what’s next · Santiago, Chile
         </div>
 
 
@@ -3253,7 +3348,28 @@
        ABOUT
   ====================================================== -->
 
-  <section class="about">
+  
+  <section class="art-principle">
+    <div class="art-principle-inner">
+      <div>
+        <div class="art-principle-label">Operating principle</div>
+        <h2 class="art-principle-title">
+          Build with clarity.<br>
+          <span class="accent">Scale what works.</span>
+        </h2>
+      </div>
+
+      <div>
+        <p class="art-principle-copy">
+          I like working close to the problem, turning ambiguity into systems,
+          products and operating models that teams can actually use.
+        </p>
+        <a class="art-principle-link" href="/now">See how I’m building now ↗</a>
+      </div>
+    </div>
+  </section>
+
+<section class="about">
 
 
     <div class="about-grid">
@@ -3312,139 +3428,7 @@
   <!-- =====================================================
        NOW
   ====================================================== -->
-
-  <section class="now">
-
-
-    <div class="now-grid">
-
-
-      <div class="section-label">
-        Now
-      </div>
-
-
-
-      <div class="now-content">
-
-
-        <h2>
-          Currently building.
-        </h2>
-
-
-
-        <div class="now-list">
-
-
-          <div class="now-item">
-
-            <div class="now-number">
-              01
-            </div>
-
-            <strong>
-              GeoVictoria
-            </strong>
-
-            <span>
-              Workforce Management
-            </span>
-
-          </div>
-
-
-
-          <div class="now-item">
-
-            <div class="now-number">
-              02
-            </div>
-
-            <strong>
-              lowsignal
-            </strong>
-
-            <span>
-              Growth Systems
-            </span>
-
-          </div>
-
-
-
-          <div class="now-item">
-
-            <div class="now-number">
-              03
-            </div>
-
-            <strong>
-              Exploring
-            </strong>
-
-            <span>
-              AI · Agents · New models
-            </span>
-
-          </div>
-
-
-        </div>
-
-
-
-
-
-        <figure class="now-moment">
-
-
-          <div class="now-moment-media">
-
-            <img
-              src="platanus-ai-native.jpg"
-              alt="Platanus AI Native Startups event in Santiago"
-              loading="lazy"
-            >
-
-          </div>
-
-
-          <figcaption class="now-moment-caption">
-
-            <span>
-              Out in the ecosystem
-            </span>
-
-            <span>
-              Platanus · AI Native Startups · Santiago
-            </span>
-
-          </figcaption>
-
-
-        </figure>
-
-
-        <a
-          href="/now"
-          class="text-link"
-        >
-          See what I'm working on
-        </a>
-
-
-      </div>
-
-
-    </div>
-
-
-  </section>
-
-
-
-  <!-- =====================================================
+<!-- =====================================================
        STATEMENT
   ====================================================== -->
 
