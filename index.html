@@ -2867,6 +2867,100 @@
       }
     }
 
+  
+    /* V17 — balanced hero scale: between original and bold preview */
+    .hero {
+      min-height: 87vh !important;
+      padding-top: 82px !important;
+      padding-bottom: 82px !important;
+    }
+
+    .hero-grid {
+      grid-template-columns: 1.26fr .74fr !important;
+      gap: 6vw !important;
+    }
+
+    .hero-title {
+      font-size: clamp(78px, 8.9vw, 144px) !important;
+      line-height: .90 !important;
+      letter-spacing: -.065em !important;
+      max-width: 1040px !important;
+    }
+
+    .hero-photo-wrap {
+      max-width: 460px !important;
+    }
+
+    @media(max-width:980px) {
+      .hero {
+        padding-top: 86px !important;
+        padding-bottom: 82px !important;
+      }
+
+      .hero-photo-wrap {
+        max-width: 420px !important;
+      }
+
+      .hero-title {
+        font-size: clamp(68px, 14.5vw, 112px) !important;
+      }
+    }
+
+    @media(max-width:600px) {
+      .hero {
+        padding-top: 70px !important;
+        padding-bottom: 76px !important;
+      }
+
+      .hero-title {
+        font-size: clamp(58px, 16.5vw, 86px) !important;
+        line-height: .93 !important;
+      }
+    }
+
+  
+    /* V18 — CSS-drawn arrow: no emoji rendering on iOS */
+    .art-principle-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .art-principle-link-icon {
+      position: relative;
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+      flex: 0 0 13px;
+      font-size: 0 !important;
+      line-height: 0 !important;
+      transform: none !important;
+      opacity: .8;
+    }
+
+    .art-principle-link-icon::before {
+      content: "";
+      position: absolute;
+      left: 1px;
+      bottom: 1px;
+      width: 10px;
+      height: 1px;
+      background: currentColor;
+      transform: rotate(-45deg);
+      transform-origin: left center;
+    }
+
+    .art-principle-link-icon::after {
+      content: "";
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      width: 7px;
+      height: 7px;
+      border-top: 1px solid currentColor;
+      border-right: 1px solid currentColor;
+    }
+
   </style>
 
 </head>
@@ -3463,7 +3557,7 @@
         </p>
         <a class="art-principle-link" href="/now">
           <span>See how I’m building now</span>
-          <span class="art-principle-link-icon" aria-hidden="true">↗</span>
+          <span class="art-principle-link-icon" aria-hidden="true"></span>
         </a>
       </div>
     </div>
