@@ -4504,7 +4504,451 @@
       }
     }
 
-  </style>
+  
+    /* =========================================================
+       V33 — contained operating photo + closing principles
+       ========================================================== */
+
+    /* Contain the operating photo so it supports the section,
+       rather than dominating the entire page. */
+    .operating-media{
+      width:min(76%, 980px) !important;
+      margin:50px auto 0 !important;
+      aspect-ratio:16/9 !important;
+    }
+
+    .operating-caption{
+      width:min(76%, 980px) !important;
+      margin:12px auto 0 !important;
+    }
+
+    /* Closing principles */
+    .closing-principles{
+      margin-top:14px;
+      margin-bottom:92px;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .closing-principles-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      min-height:560px;
+    }
+
+    .closing-principle{
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      padding:72px 7vw;
+      overflow:hidden;
+    }
+
+    .closing-principle:first-child{
+      background:var(--navy-deep);
+      color:#fff;
+    }
+
+    .closing-principle:last-child{
+      background:#8296aa;
+      color:#fff;
+    }
+
+    .closing-principle-label{
+      margin-bottom:44px;
+      font-size:10px;
+      font-weight:600;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.68);
+    }
+
+    .closing-principle h2{
+      margin:0;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(48px,4.7vw,78px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+      font-weight:500;
+      max-width:650px;
+    }
+
+    .closing-principle h2 span{
+      display:block;
+      margin-top:.18em;
+      color:#9fb0c3;
+    }
+
+    .closing-principle:last-child h2 span{
+      color:rgba(255,255,255,.58);
+    }
+
+    .closing-principle-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:44px;
+    }
+
+    .closing-principle-tags span{
+      padding:9px 15px;
+      border:1px solid rgba(255,255,255,.24);
+      border-radius:999px;
+      font-size:9px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.8);
+    }
+
+    .closing-operating-note{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:28px;
+      align-items:center;
+      padding:24px 0;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.5;
+    }
+
+    .closing-operating-note strong{
+      color:var(--navy);
+      font-size:10px;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+
+    @media(max-width:760px){
+      .operating-media,
+      .operating-caption{
+        width:100% !important;
+      }
+
+      .closing-principles{
+        margin-bottom:72px;
+      }
+
+      .closing-principles-grid{
+        grid-template-columns:1fr;
+        min-height:0;
+      }
+
+      .closing-principle{
+        min-height:440px;
+        padding:56px 24px;
+      }
+
+      .closing-principle h2{
+        font-size:clamp(44px,12vw,62px);
+      }
+
+      .closing-operating-note{
+        grid-template-columns:1fr;
+        gap:8px;
+      }
+    }
+
+  
+
+    /* =========================================================
+       V34 — operating section: photo left, principles stacked right
+       ========================================================== */
+
+    .operating-showcase{
+      display:grid;
+      grid-template-columns:minmax(0, 1.12fr) minmax(300px, .88fr);
+      gap:56px;
+      align-items:start;
+      margin-top:46px;
+    }
+
+    .operating-visual{
+      min-width:0;
+    }
+
+    .operating-media{
+      margin-top:0 !important;
+      width:100% !important;
+      aspect-ratio:5/4 !important;
+      max-height:680px;
+      border-radius:26px !important;
+      overflow:hidden !important;
+      background:#e9edf1 !important;
+    }
+
+    .operating-media img{
+      width:100% !important;
+      height:100% !important;
+      object-fit:cover !important;
+      display:block !important;
+    }
+
+    .operating-caption{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:20px;
+      margin-top:14px;
+      color:var(--steel-light);
+      font-size:11px;
+      line-height:1.45;
+    }
+
+    .operating-principles{
+      display:flex !important;
+      flex-direction:column !important;
+      gap:18px !important;
+      margin-top:0 !important;
+      padding-top:0 !important;
+    }
+
+    .operating-principle{
+      padding:22px 24px 24px !important;
+      border:1px solid var(--line) !important;
+      border-radius:22px !important;
+      background:rgba(255,255,255,.52) !important;
+      backdrop-filter:blur(2px);
+    }
+
+    .operating-principle h3{
+      margin:0 0 10px !important;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(24px,2.2vw,34px) !important;
+      line-height:1.08 !important;
+      letter-spacing:-.038em !important;
+      font-weight:500 !important;
+      color:var(--navy) !important;
+    }
+
+    .operating-principle p{
+      margin:0 !important;
+      max-width:none !important;
+      color:var(--muted) !important;
+      font-size:13.5px !important;
+      line-height:1.68 !important;
+    }
+
+    .operating-principle-index{
+      display:block !important;
+      margin-bottom:16px !important;
+      color:var(--steel-light) !important;
+      font-size:10px !important;
+      letter-spacing:.1em !important;
+      text-transform:uppercase;
+    }
+
+    @media(max-width:980px){
+      .operating-showcase{
+        grid-template-columns:1fr;
+        gap:34px;
+      }
+    }
+
+    @media(max-width:760px){
+      .operating-showcase{
+        gap:28px;
+        margin-top:34px;
+      }
+
+      .operating-media{
+        aspect-ratio:4/3 !important;
+        border-radius:18px !important;
+      }
+
+      .operating-principle{
+        padding:18px 18px 20px !important;
+        border-radius:18px !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       V35 — backing single-line + premium operating principles
+       ========================================================== */
+
+    .backing-block > .backing-label,
+    .backing-block > .backing-brand,
+    .backing-block > .backing-row {
+      max-width: 1000px !important;
+    }
+
+    .backing-row-copy-only,
+    .backing-row-copy-only .backing-copy {
+      max-width: none !important;
+    }
+
+    .backing-copy {
+      font-size: 13.5px !important;
+      line-height: 1.6 !important;
+      white-space: nowrap;
+    }
+
+    .operating-showcase {
+      grid-template-columns: minmax(0, 1fr) minmax(340px, 0.92fr) !important;
+      gap: 52px !important;
+      align-items: start !important;
+    }
+
+    .operating-principles {
+      gap: 16px !important;
+      align-self: start !important;
+    }
+
+    .operating-principle {
+      position: relative;
+      padding: 22px 24px 22px 28px !important;
+      border-radius: 24px !important;
+      border: 1px solid rgba(25, 47, 76, 0.10) !important;
+      background: linear-gradient(180deg, rgba(255,255,255,0.78) 0%, rgba(255,255,255,0.56) 100%) !important;
+      box-shadow: 0 12px 30px rgba(22, 37, 58, 0.05);
+      overflow: hidden;
+      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease, background-color .22s ease;
+    }
+
+    .operating-principle::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 18px;
+      bottom: 18px;
+      width: 4px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--navy) 0%, var(--steel) 100%);
+      opacity: .92;
+    }
+
+    .operating-principle:hover {
+      transform: translateY(-2px);
+      border-color: rgba(25, 47, 76, 0.16) !important;
+      background: linear-gradient(180deg, rgba(255,255,255,0.82) 0%, rgba(255,255,255,0.62) 100%) !important;
+      box-shadow: 0 18px 34px rgba(22, 37, 58, 0.08);
+    }
+
+    .operating-principle-index {
+      display: inline-flex !important;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px !important;
+      padding: 7px 11px !important;
+      border-radius: 999px;
+      border: 1px solid rgba(25, 47, 76, 0.10);
+      background: rgba(255,255,255,.6);
+      color: var(--steel-light) !important;
+      font-size: 10px !important;
+      letter-spacing: .12em !important;
+      line-height: 1 !important;
+    }
+
+    .operating-principle h3 {
+      margin: 0 0 8px !important;
+      font-size: clamp(26px, 2.15vw, 34px) !important;
+      line-height: 1.02 !important;
+      letter-spacing: -0.04em !important;
+      max-width: 12ch;
+    }
+
+    .operating-principle p {
+      margin: 0 !important;
+      font-size: 14px !important;
+      line-height: 1.68 !important;
+      color: var(--muted) !important;
+      max-width: 30ch;
+    }
+
+    @media (max-width: 1100px) {
+      .backing-copy {
+        white-space: normal;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .operating-showcase {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+      }
+
+      .operating-principles {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .operating-principle {
+        padding: 18px 18px 18px 22px !important;
+        border-radius: 18px !important;
+      }
+
+      .operating-principle::before {
+        top: 14px;
+        bottom: 14px;
+      }
+
+      .operating-principle h3 {
+        max-width: none;
+      }
+
+      .operating-principle p {
+        max-width: none;
+      }
+    }
+
+
+    /* =========================================================
+       V36 — sticky operating image + cleaner closing
+       ========================================================== */
+
+    .operating-showcase{
+      grid-template-columns:minmax(0,.96fr) minmax(360px,.84fr) !important;
+      gap:60px !important;
+      align-items:start !important;
+    }
+
+    .operating-visual{
+      position:sticky;
+      top:118px;
+      align-self:start;
+      min-width:0;
+    }
+
+    .operating-media{
+      width:100% !important;
+      margin:0 !important;
+      aspect-ratio:5/4 !important;
+      max-height:none !important;
+      border-radius:24px !important;
+    }
+
+    .operating-caption{
+      width:100% !important;
+      margin:14px 0 0 !important;
+    }
+
+    .operating-principles{
+      gap:18px !important;
+    }
+
+    @media(max-width:980px){
+      .operating-showcase{
+        grid-template-columns:1fr !important;
+        gap:34px !important;
+      }
+
+      .operating-visual{
+        position:relative;
+        top:auto;
+      }
+    }
+
+    @media(max-width:760px){
+      .operating-media{
+        aspect-ratio:4/3 !important;
+      }
+    }
+
+</style>
 </head>
 <body>
 <!-- =====================================================
@@ -5093,12 +5537,15 @@
             from conversation to implementation — aligning teams, priorities and
             execution across markets.
           </p>
+<div class="operating-showcase">
+<div class="operating-visual">
 <div class="operating-media">
 <img alt="Felipe Quiroz working at Tether Education" loading="lazy" src="/tether-building-ops.jpg"/>
 </div>
 <div class="operating-caption">
 <strong>Working session · Santiago</strong>
 <span>Product · Growth · Operations</span>
+</div>
 </div>
 <div class="operating-principles">
 <div class="operating-principle">
@@ -5115,6 +5562,7 @@
 <span class="operating-principle-index">03 / OPERATIONS</span>
 <h3>Build the path to execution.</h3>
 <p>Align teams, priorities and systems so initiatives can actually move.</p>
+</div>
 </div>
 </div>
 <div class="work-list">
@@ -5203,6 +5651,39 @@
 <!-- =====================================================
        PROJECT NAVIGATION
   ====================================================== -->
+
+        <section class="closing-principles">
+          <div class="closing-principles-grid">
+
+            <div class="closing-principle">
+              <div class="closing-principle-label">Partnership principle</div>
+              <h2>
+                Connect the actors.
+                <span>Turn relationships into adoption.</span>
+              </h2>
+              <div class="closing-principle-tags">
+                <span>Understand</span>
+                <span>Align</span>
+                <span>Implement</span>
+              </div>
+            </div>
+
+            <div class="closing-principle">
+              <div class="closing-principle-label">Product principle</div>
+              <h2>
+                Listen to the market.
+                <span>Build better.</span>
+              </h2>
+              <div class="closing-principle-tags">
+                <span>Signals</span>
+                <span>Product</span>
+                <span>Learning</span>
+              </div>
+            </div>
+
+          </div>
+</section>
+
 <section class="project-nav">
 <div class="project-nav-inner">
 <a class="project-link" href="/lowsignal">
