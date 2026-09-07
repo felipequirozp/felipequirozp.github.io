@@ -3773,6 +3773,151 @@ button:focus-visible{
     }
 
 </style>
+
+<style>
+/* =========================================================
+   FINAL — HERO SIZE MATCH TO TETHER
+   Same vertical rhythm, headline scale and bottom spacing.
+   ========================================================== */
+
+html body .case-hero{
+  padding:92px 0 76px !important;
+}
+
+html body .case-hero-top{
+  margin-bottom:86px !important;
+}
+
+html body .case-hero-logo{
+  min-width:164px !important;
+  padding:14px 20px !important;
+  border-radius:18px !important;
+}
+
+html body .case-hero-logo img{
+  max-width:132px !important;
+  max-height:34px !important;
+  width:auto !important;
+  height:auto !important;
+}
+
+html body .case-hero-pills{
+  gap:10px !important;
+}
+
+html body .case-hero-pills span{
+  padding:9px 14px !important;
+  font-size:9px !important;
+  line-height:1 !important;
+  letter-spacing:.09em !important;
+}
+
+html body .case-hero-kicker{
+  margin-bottom:24px !important;
+  font-size:12px !important;
+  font-weight:600 !important;
+  letter-spacing:.04em !important;
+}
+
+html body .case-hero h1{
+  max-width:1240px !important;
+  font-size:clamp(70px,8.6vw,142px) !important;
+  line-height:.90 !important;
+  letter-spacing:-.065em !important;
+  font-weight:400 !important;
+}
+
+html body .case-hero h1 span{
+  margin-top:.10em !important;
+  color:#aebbd0 !important;
+}
+
+html body .case-hero-bottom{
+  grid-template-columns:minmax(0,1fr) minmax(280px,.36fr) !important;
+  gap:60px !important;
+  margin-top:54px !important;
+  padding-top:34px !important;
+}
+
+html body .case-hero-copy{
+  max-width:980px !important;
+  font-size:17px !important;
+  line-height:1.75 !important;
+}
+
+html body .case-hero-role strong{
+  margin-bottom:3px !important;
+  font-size:18px !important;
+}
+
+html body .case-hero-role .role,
+html body .case-hero-role .context{
+  font-size:12px !important;
+  line-height:1.5 !important;
+}
+
+@media(max-width:900px){
+  html body .case-hero{
+    padding:72px 0 62px !important;
+  }
+
+  html body .case-hero-top{
+    align-items:flex-start !important;
+    flex-direction:column !important;
+    margin-bottom:66px !important;
+  }
+
+  html body .case-hero-pills{
+    justify-content:flex-start !important;
+  }
+
+  html body .case-hero-bottom{
+    grid-template-columns:1fr !important;
+    gap:28px !important;
+  }
+
+  html body .case-hero-role{
+    align-items:flex-start !important;
+    text-align:left !important;
+  }
+}
+
+@media(max-width:600px){
+  html body .case-hero{
+    padding:54px 0 48px !important;
+  }
+
+  html body .case-hero-top{
+    margin-bottom:52px !important;
+  }
+
+  html body .case-hero-logo{
+    min-width:144px !important;
+    padding:12px 16px !important;
+    border-radius:15px !important;
+  }
+
+  html body .case-hero-logo img{
+    max-width:118px !important;
+  }
+
+  html body .case-hero h1{
+    font-size:clamp(54px,15.2vw,78px) !important;
+    line-height:.94 !important;
+  }
+
+  html body .case-hero-copy{
+    font-size:15px !important;
+    line-height:1.68 !important;
+  }
+
+  html body .case-hero-bottom{
+    margin-top:38px !important;
+    padding-top:26px !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <!-- =====================================================
@@ -4180,4 +4325,3 @@ button:focus-visible{
 </section>
 </body>
 </html>
-
