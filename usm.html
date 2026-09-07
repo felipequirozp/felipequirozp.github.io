@@ -6968,14 +6968,109 @@
 .usm-field-community img{object-position:center 42% !important;}
 .usm-field-campus img{object-position:center 40% !important;}
 .usm-rector-media img{object-position:center 34% !important;}
-.usm-building-split{margin-top:58px !important;}
 .usm-building-split .building-media{aspect-ratio:4 / 5;}
 @media(max-width:760px){
-  .usm-building-split{margin-top:42px !important;}
   .usm-building-split .building-media{aspect-ratio:4 / 3;}
 }
 
 </style>
+<style>
+/* =====================================================
+   USM — ROLE LIST FIX
+   Restores Tether's exact list rhythm after the USM adapter.
+===================================================== */
+.role-list {
+  margin-top: 40px;
+  border-top: 1px solid var(--line);
+}
+
+.role-item {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 20px;
+  align-items: start;
+  border-bottom: 1px solid var(--line);
+}
+
+.role-number {
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.55;
+}
+
+.role-item strong {
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+@media (max-width: 600px) {
+  .role-list {
+    margin-top: 32px;
+  }
+
+  .role-item {
+    grid-template-columns: 34px 1fr;
+    gap: 14px;
+    padding: 18px 0;
+  }
+
+  .role-item strong {
+    font-size: 13px;
+  }
+}
+</style>
+
+
+<style id="usm-section-04-typography-fix">
+/* Section 04 — match standard Tether section typography exactly */
+.operating-band .section-label{
+  margin-bottom:28px !important;
+  color:var(--muted) !important;
+  font-family:"Inter",sans-serif !important;
+  font-size:10px !important;
+  font-weight:600 !important;
+  line-height:normal !important;
+  letter-spacing:.1em !important;
+  text-transform:uppercase !important;
+}
+
+.operating-band .operating-title{
+  max-width:860px !important;
+  margin:0 0 35px !important;
+  font-family:"Manrope",sans-serif !important;
+  font-size:clamp(40px,5vw,72px) !important;
+  line-height:1.10 !important;
+  letter-spacing:-.055em !important;
+  font-weight:500 !important;
+  color:var(--navy) !important;
+}
+
+.operating-band .operating-title span{
+  color:inherit !important;
+  font:inherit !important;
+  letter-spacing:inherit !important;
+}
+
+.operating-band .operating-intro{
+  max-width:760px !important;
+  margin:0 0 22px !important;
+  color:#45505b !important;
+  font-family:"Inter",sans-serif !important;
+  font-size:14px !important;
+  line-height:1.85 !important;
+}
+
+@media(max-width:600px){
+  .operating-band .operating-title{
+    font-size:clamp(40px,12vw,58px) !important;
+    line-height:1.12 !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="nav">
