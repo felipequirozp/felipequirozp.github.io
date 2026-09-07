@@ -3773,7 +3773,6 @@ button:focus-visible{
     }
 
 </style>
-
 <style>
 /* =========================================================
    FINAL — HERO SIZE MATCH TO TETHER
@@ -3917,7 +3916,337 @@ html body .case-hero-role .context{
   }
 }
 </style>
+<style>
+/* =========================================================
+   EXACT TETHER HERO COMPONENT
+   Same classes, dimensions, spacing and responsive behavior.
+   Only content/logo differ between case studies.
+   ========================================================== */
 
+html body .hero{
+  display:block !important;
+  min-height:auto !important;
+  padding:0 !important;
+  overflow:hidden !important;
+  position:relative !important;
+  color:#fff !important;
+  background:
+    radial-gradient(circle at 78% 58%, rgba(50,73,99,.28) 0%, rgba(50,73,99,0) 34%),
+    linear-gradient(135deg,#0D1724 0%,#182536 62%,#324963 100%) !important;
+  border-bottom:none !important;
+}
+
+html body .hero::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  background:
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px) !important;
+  background-size:120px 120px !important;
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.55),transparent 88%);
+  -webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,.55),transparent 88%);
+  pointer-events:none !important;
+}
+
+html body .hero::after{
+  display:none !important;
+  content:none !important;
+}
+
+html body .hero-editorial{
+  position:relative !important;
+  z-index:1 !important;
+  width:min(var(--page-max),calc(100% - (2 * var(--page-gutter)))) !important;
+  margin:0 auto !important;
+  padding:92px 0 76px !important;
+}
+
+html body .hero-editorial-top{
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:28px !important;
+  margin-bottom:86px !important;
+}
+
+html body .hero-editorial-logo{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-width:164px !important;
+  padding:14px 20px !important;
+  border:1px solid rgba(255,255,255,.10) !important;
+  border-radius:18px !important;
+  background:rgba(13,23,36,.78) !important;
+  text-decoration:none !important;
+  backdrop-filter:blur(10px) !important;
+  -webkit-backdrop-filter:blur(10px) !important;
+}
+
+html body .hero-editorial-logo img{
+  display:block !important;
+  max-width:132px !important;
+  max-height:34px !important;
+  width:auto !important;
+  height:auto !important;
+  object-fit:contain !important;
+}
+
+html body .hero-editorial-meta{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  justify-content:flex-end !important;
+  gap:10px !important;
+}
+
+html body .hero-editorial-meta span{
+  padding:9px 14px !important;
+  border:1px solid rgba(255,255,255,.14) !important;
+  border-radius:999px !important;
+  color:rgba(255,255,255,.72) !important;
+  background:transparent !important;
+  font-size:9px !important;
+  line-height:1 !important;
+  letter-spacing:.09em !important;
+  text-transform:uppercase !important;
+}
+
+html body .hero-editorial-kicker{
+  margin-bottom:24px !important;
+  color:#38E9E9 !important;
+  font-size:12px !important;
+  font-weight:600 !important;
+  letter-spacing:.04em !important;
+}
+
+html body .hero-editorial h1{
+  margin:0 !important;
+  max-width:1240px !important;
+  font-family:"Manrope",sans-serif !important;
+  font-size:clamp(70px,8.6vw,142px) !important;
+  line-height:.90 !important;
+  letter-spacing:-.065em !important;
+  font-weight:400 !important;
+  color:#fff !important;
+}
+
+html body .hero-editorial h1 .hero-accent{
+  display:block !important;
+  color:#A8B7C8 !important;
+  margin-top:.10em !important;
+}
+
+html body .hero-editorial-bottom{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) minmax(280px,.36fr) !important;
+  gap:60px !important;
+  align-items:end !important;
+  margin-top:54px !important;
+  padding-top:34px !important;
+  border-top:1px solid rgba(255,255,255,.14) !important;
+}
+
+html body .hero-editorial-description{
+  margin:0 !important;
+  max-width:980px !important;
+  color:rgba(255,255,255,.80) !important;
+  font-size:17px !important;
+  line-height:1.75 !important;
+}
+
+html body .hero-editorial-role{
+  text-align:right !important;
+}
+
+html body .hero-editorial-role strong{
+  display:block !important;
+  margin-bottom:8px !important;
+  color:#fff !important;
+  font-family:"Manrope",sans-serif !important;
+  font-size:18px !important;
+  font-weight:500 !important;
+}
+
+html body .hero-editorial-role span{
+  display:block !important;
+  color:rgba(255,255,255,.58) !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+}
+
+html body .hero-editorial-role .hero-role-title{
+  color:rgba(255,255,255,.82) !important;
+  font-weight:500 !important;
+}
+
+@media(max-width:900px){
+  html body .hero-editorial{
+    width:min(100% - 44px,900px) !important;
+    padding:72px 0 62px !important;
+  }
+
+  html body .hero-editorial-top{
+    align-items:flex-start !important;
+    flex-direction:column !important;
+    margin-bottom:66px !important;
+  }
+
+  html body .hero-editorial-meta{
+    justify-content:flex-start !important;
+  }
+
+  html body .hero-editorial-bottom{
+    grid-template-columns:1fr !important;
+    gap:28px !important;
+  }
+
+  html body .hero-editorial-role{
+    text-align:left !important;
+  }
+}
+
+@media(max-width:600px){
+  html body .hero-editorial{
+    width:calc(100% - 36px) !important;
+    padding:54px 0 48px !important;
+  }
+
+  html body .hero-editorial-top{
+    margin-bottom:52px !important;
+  }
+
+  html body .hero-editorial-logo{
+    min-width:144px !important;
+    padding:12px 16px !important;
+    border-radius:15px !important;
+  }
+
+  html body .hero-editorial-logo img{
+    max-width:118px !important;
+  }
+
+  html body .hero-editorial h1{
+    font-size:clamp(54px,15.2vw,78px) !important;
+    line-height:.94 !important;
+  }
+
+  html body .hero-editorial-description{
+    font-size:15px !important;
+    line-height:1.68 !important;
+  }
+
+  html body .hero-editorial-bottom{
+    margin-top:38px !important;
+    padding-top:26px !important;
+  }
+}
+</style>
+<style>
+/* =========================================================
+   FINAL PARITY CHECK — TETHER EFFECTIVE VALUES
+   This block mirrors the final effective Tether rules.
+   ========================================================== */
+
+/* Role block — V55 effective values */
+html body .hero-editorial-role{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-end !important;
+  gap:5px !important;
+  text-align:right !important;
+}
+
+html body .hero-editorial-role strong{
+  margin:0 !important;
+}
+
+html body .hero-editorial-role .hero-role-title{
+  color:rgba(255,255,255,.82) !important;
+  font-size:13px !important;
+  font-weight:500 !important;
+  letter-spacing:.01em !important;
+  line-height:1.5 !important;
+}
+
+html body .hero-editorial-role .hero-role-markets{
+  color:rgba(255,255,255,.55) !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+}
+
+/* Tether final page gutter behavior */
+@media(max-width:980px){
+  html body .hero-editorial-role{
+    align-items:flex-start !important;
+    text-align:left !important;
+  }
+}
+
+@media(max-width:760px){
+  :root{
+    --page-gutter:24px !important;
+  }
+
+  html body .hero-editorial{
+    width:calc(100% - 48px) !important;
+  }
+}
+
+/* Top pills — exact Tether final geometry */
+html body .hero-editorial-meta{
+  gap:10px !important;
+}
+
+html body .hero-editorial-meta span{
+  padding:9px 14px !important;
+  border:1px solid rgba(255,255,255,.14) !important;
+  border-radius:999px !important;
+  background:transparent !important;
+  font-size:9px !important;
+  line-height:1 !important;
+  letter-spacing:.09em !important;
+}
+
+/* Impact metric container — exact Tether rounded-box system */
+html body .impact-band-metrics{
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:1px !important;
+  overflow:hidden !important;
+  border:1px solid rgba(255,255,255,.12) !important;
+  border-radius:28px !important;
+  background:rgba(255,255,255,.12) !important;
+}
+
+html body .impact-signal{
+  border:0 !important;
+  background:rgba(13,23,36,.52) !important;
+  padding:34px 28px 32px !important;
+}
+
+@media(max-width:900px){
+  html body .impact-band-metrics{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}
+
+@media(max-width:760px){
+  html body .impact-band-metrics{
+    border-radius:20px !important;
+  }
+}
+
+@media(max-width:640px){
+  html body .impact-band-metrics{
+    grid-template-columns:1fr 1fr !important;
+  }
+
+  html body .impact-signal{
+    padding:24px 18px !important;
+  }
+}
+</style>
 </head>
 <body>
 <!-- =====================================================
@@ -3939,28 +4268,33 @@ html body .case-hero-role .context{
        HERO
   ====================================================== -->
 <section class="hero">
-<div class="case-hero">
-<div class="case-hero-top">
-<div aria-label="GeoVictoria" class="case-hero-logo">
+<div class="hero-editorial">
+<div class="hero-editorial-top">
+<a aria-label="Visit GeoVictoria" class="hero-editorial-logo" href="https://www.geovictoria.com/" rel="noopener noreferrer" target="_blank">
 <img alt="GeoVictoria" src="/geovictoria-logo.png"/>
-</div>
-<div class="case-hero-pills">
+</a>
+<div class="hero-editorial-meta">
 <span>Selected work / 01</span>
 <span>2026 — Present</span>
 <span>Product / B2B SaaS</span>
 </div>
 </div>
-<div class="case-hero-kicker">Workforce Management / Product / AI</div>
+<div class="hero-editorial-kicker">
+      Workforce Management / Product / AI
+    </div>
 <h1>
       Products built
-      <span>for real-world operations.</span>
-    </h1>
-<div class="case-hero-bottom">
-<p class="case-hero-copy">I lead the strategy and evolution of Workforce Management products, connecting customer needs, business opportunities, and technology from planning through adoption.</p>
-<div class="case-hero-role">
+      <span class="hero-accent">for real-world operations.</span>
+</h1>
+<div class="hero-editorial-bottom">
+<p class="hero-editorial-description">
+        I lead the strategy and evolution of Workforce Management products, connecting
+        customer needs, business opportunities, and technology from planning through adoption.
+      </p>
+<div class="hero-editorial-role">
 <strong>GeoVictoria</strong>
-<span class="role">Product Manager</span>
-<span class="context">20+ countries · 10,000+ clients</span>
+<span class="hero-role-title">Product Manager</span>
+<span class="hero-role-markets">20+ countries · 10,000+ clients</span>
 </div>
 </div>
 </div>
@@ -3976,7 +4310,7 @@ html body .case-hero-role .context{
 <span class="impact-line">From real problems</span>
 <span class="impact-line impact-line-accent">to scalable products.</span>
 </h2>
-<p class="impact-band-copy">I connect customer discovery, product strategy, and cross-functional execution to turn operational needs into Workforce Management solutions ready to validate, adopt, and scale.</p>
+<p class="impact-band-copy">The focus: turning operational complexity into product decisions that are easier to validate, adopt, and scale.</p>
 </div>
 <div class="impact-band-metrics">
 <div class="impact-signal">
@@ -4008,7 +4342,7 @@ html body .case-hero-role .context{
 <!-- ROLE -->
 <section class="section">
 <div class="section-label">01 / My role</div>
-<h2>From strategy to adoption.</h2>
+<h2>Leading product end to end.</h2>
 <div class="section-copy">
 <p>As Product Manager, I lead strategy, roadmap, and prioritization across three Workforce Management products, balancing customer needs, business impact, and technical feasibility.</p>
 <p>I work from customer discovery and validation through execution, pilots, and adoption, connecting market opportunities with scalable solutions alongside Engineering, Design, Sales, Customer Success, Operations, and Support.</p>
@@ -4019,8 +4353,8 @@ html body .case-hero-role .context{
 <div class="people-block">
 <div class="leadership-card">
 <div class="leadership-photo">
-<img alt="Francisca Astudillo" loading="lazy" src="../francisca-astudillo.jpg"/>
-</div>
+<img alt="Francisca Astudillo" loading="lazy" src="../francisca-astudillo.jpg">
+</img></div>
 <div>
 <div class="leadership-eyebrow">Company leadership</div>
 <h3 class="leadership-name">Francisca Astudillo</h3>
@@ -4125,7 +4459,7 @@ html body .case-hero-role .context{
 <!-- HOW I WORK -->
 <section class="section">
 <div class="section-label">05 / How I build product</div>
-<h2>From the problem to a scalable product.</h2>
+<h2>Validate before scaling.</h2>
 <div class="section-copy">
 <p>I stay close to customers and real-world operations to understand problems, validate assumptions, and decide what is worth building before scaling development.</p>
 </div>
@@ -4157,32 +4491,11 @@ html body .case-hero-role .context{
 </div>
 </section>
 <!-- CONTEXT -->
-<section class="section">
-<div class="section-label">06 / Scaling</div>
-<h2>Product for operations across multiple markets.</h2>
-<div class="section-copy">
-<p>GeoVictoria serves more than 10,000 clients across 20+ countries. In that context, building Workforce Management means designing for scale, operational complexity, and very different local realities.</p>
-</div>
-</section>
-<section class="section company-signals">
-<div class="company-signals-inner">
-<div class="section-label">07 / Scale &amp; ecosystem</div>
-<h2 class="company-signals-title">Signals of scale, ecosystem, and technology maturity.</h2>
-<div class="company-signals-grid">
-<div class="company-signal">
-<h3 class="company-signal-name">Endeavor</h3>
-<p class="company-signal-copy">GeoVictoria is part of Endeavor’s global high-impact entrepreneurship community.</p>
-</div>
-<div class="company-signal">
-<h3 class="company-signal-name">Microsoft Gold Partner</h3>
-<p class="company-signal-copy">A credential reflecting technical capabilities, implementation standards, and experience building enterprise solutions.</p>
-</div>
-</div>
-</div>
-</section>
+
+
 <section class="section culture-4h">
 <div class="culture-4h-inner">
-<div class="section-label">08 / Culture · The 4Hs</div>
+<div class="section-label">06 / Culture · The 4Hs</div>
 <h2 class="culture-4h-title">A culture built on four simple ideas.</h2>
 <div class="culture-4h-values">
 <div class="culture-4h-value">Happy</div>
@@ -4195,15 +4508,15 @@ html body .case-hero-role .context{
 </section>
 <section class="section geocoffee">
 <div class="geocoffee-inner">
-<div class="section-label">09 / Clients &amp; community</div>
-<h2 class="geocoffee-title">Learning also happens in conversation.</h2>
+<div class="section-label">07 / Clients &amp; community</div>
+<h2 class="geocoffee-title">Learning happens in conversation.</h2>
 <div class="geocoffee-split">
 <div class="geocoffee-media">
-<img alt="Café con GeoVictoria with clients from different industries" loading="lazy" src="/geocoffe.jpg"/>
+<img alt="GeoCoffe with customers from different industries" loading="lazy" src="/geocoffe.jpg"/>
 </div>
 <div class="geocoffee-copy">
-<p>In spaces like Café con GeoVictoria, we bring together clients from different industries to share experiences, work through questions, and generate insights that directly contribute to people management.</p>
-<div class="geocoffee-meta">Café con GeoVictoria · Networking · Training</div>
+<p>GeoCoffe brings together customers from different industries to exchange experiences, solve practical questions, and turn those conversations into insights for people management.</p>
+<div class="geocoffee-meta">GeoCoffe · Networking · Training</div>
 </div>
 </div>
 </div>
@@ -4258,7 +4571,7 @@ html body .case-hero-role .context{
 <section class="focus">
 <div class="focus-dark">
 <div class="focus-label">Product focus</div>
-<h2 class="focus-title">From the problem <span>to real adoption.</span></h2>
+<h2 class="focus-title">From discovery<span>to adoption.</span></h2>
 <div class="focus-steps">
 <div class="focus-step">Discover</div>
 <div class="focus-step">Validate</div>
