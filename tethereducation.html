@@ -3539,6 +3539,503 @@
       margin-top: 28px;
     }
 
+  
+    /* =========================================================
+       V23 — impact direction, rebuilt from the stable V21 source
+       ========================================================= */
+
+    :root{
+      --impact-accent:#8fa4bb;
+      --impact-dark:#0b1522;
+      --impact-dark-2:#101d2d;
+    }
+
+    .impact-band{
+      background:var(--impact-dark-2);
+      color:#fff;
+      padding:104px 6vw 96px;
+    }
+
+    .impact-band-inner{
+      max-width:1500px;
+      margin:0 auto;
+    }
+
+    .impact-band-label{
+      margin-bottom:24px;
+      color:var(--slate-light);
+      font-size:10px;
+      font-weight:600;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .impact-band-head{
+      display:grid;
+      grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);
+      gap:7vw;
+      align-items:end;
+      margin-bottom:72px;
+    }
+
+    .impact-band-title{
+      margin:0;
+      max-width:980px;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(58px,7vw,110px);
+      line-height:.92;
+      letter-spacing:-.06em;
+      font-weight:500;
+    }
+
+    .impact-band-title span{ color:var(--impact-accent); }
+
+    .impact-band-copy{
+      margin:0;
+      max-width:500px;
+      color:rgba(255,255,255,.72);
+      font-size:15px;
+      line-height:1.75;
+    }
+
+    .impact-band-metrics{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:1px;
+      background:rgba(255,255,255,.12);
+      border-top:1px solid rgba(255,255,255,.12);
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+
+    .impact-signal{
+      background:var(--impact-dark-2);
+      padding:34px 28px 32px;
+    }
+
+    .impact-signal strong{
+      display:block;
+      margin-bottom:8px;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(36px,4vw,58px);
+      line-height:1;
+      letter-spacing:-.045em;
+      font-weight:500;
+      color:#fff;
+    }
+
+    .impact-signal span{
+      color:var(--slate-light);
+      font-size:10px;
+      line-height:1.5;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    /* Softer project cards */
+    .project-case{
+      border:1px solid var(--line) !important;
+      border-radius:28px !important;
+      background:#f4f6f8 !important;
+      padding:38px 32px !important;
+      box-shadow:none !important;
+      transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease,
+        background-color .22s ease !important;
+    }
+
+    .project-case:hover{
+      transform:translateY(-2px) !important;
+      background:#f4f6f8 !important;
+      border-color:#c7d2de !important;
+      box-shadow:0 16px 34px rgba(15,23,42,.05) !important;
+    }
+
+    .project-case:active{
+      transform:translateY(0) !important;
+      background:#eef2f6 !important;
+      border-color:#b9c6d3 !important;
+      box-shadow:0 8px 20px rgba(15,23,42,.04) !important;
+    }
+
+    .project-case:focus-within{
+      outline:none !important;
+      border-color:#9aaec4 !important;
+      box-shadow:0 0 0 4px rgba(143,164,187,.13) !important;
+    }
+
+    /* Cool execution feature, still inside the original section */
+    .execution-feature{
+      margin-top:34px;
+      padding:50px;
+      border-radius:30px;
+      background:#0f1b2b;
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .execution-feature::after{
+      content:"";
+      position:absolute;
+      top:0;
+      right:0;
+      width:4px;
+      height:32%;
+      background:#8fa4bb;
+    }
+
+    .execution-feature-title{
+      margin:0 0 38px;
+      max-width:900px;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(50px,5.6vw,86px);
+      line-height:.94;
+      letter-spacing:-.055em;
+      font-weight:500;
+      color:#fff;
+    }
+
+    .execution-feature-title span{ color:#8fa4bb; }
+
+    .execution-feature-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr);
+      gap:48px;
+      align-items:center;
+    }
+
+    .execution-feature-media{
+      aspect-ratio:4/3;
+      border-radius:20px;
+      overflow:hidden;
+      background:#17263a;
+    }
+
+    .execution-feature-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .execution-feature-copy h3{
+      margin:0 0 14px;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(28px,2.8vw,42px);
+      line-height:1.06;
+      letter-spacing:-.035em;
+      font-weight:500;
+      color:#fff;
+    }
+
+    .execution-feature-copy p{
+      margin:0;
+      color:rgba(255,255,255,.74);
+      font-size:14px;
+      line-height:1.72;
+    }
+
+    .execution-signals{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:1px;
+      margin-top:30px;
+      background:rgba(255,255,255,.12);
+      border-top:1px solid rgba(255,255,255,.12);
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+
+    .execution-signal{
+      background:#0f1b2b;
+      padding:20px 16px;
+    }
+
+    .execution-signal strong{
+      display:block;
+      margin-bottom:6px;
+      color:#fff;
+      font-size:10px;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+
+    .execution-signal span{
+      color:#9fb0c3;
+      font-size:11px;
+      line-height:1.4;
+    }
+
+    @media(max-width:900px){
+      .impact-band-head{ grid-template-columns:1fr; gap:28px; }
+      .impact-band-metrics{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .execution-feature-grid{ grid-template-columns:1fr; gap:30px; }
+    }
+
+    @media(max-width:640px){
+      .impact-band{ padding:78px 22px 72px; }
+      .impact-band-title{ font-size:clamp(50px,14vw,76px); }
+      .impact-band-metrics{ grid-template-columns:1fr 1fr; }
+      .impact-signal{ padding:24px 18px; }
+
+      .project-case{
+        border-radius:22px !important;
+        padding:26px 20px !important;
+      }
+
+      .execution-feature{
+        padding:32px 20px;
+        border-radius:22px;
+      }
+
+      .execution-feature-title{
+        font-size:clamp(44px,13vw,64px);
+        margin-bottom:28px;
+      }
+
+      .execution-feature-media{ border-radius:16px; }
+      .execution-signals{ grid-template-columns:1fr; }
+    }
+
+  
+    /* =========================================================
+       V24 — renewed case-study system
+       ========================================================== */
+
+    .project-case{
+      border:1px solid var(--line) !important;
+      border-radius:30px !important;
+      background:#f3f5f7 !important;
+      padding:42px 36px !important;
+      box-shadow:none !important;
+      transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease,
+        background-color .22s ease !important;
+    }
+
+    .project-case:hover{
+      transform:translateY(-2px) !important;
+      background:#f3f5f7 !important;
+      border-color:#c5d0db !important;
+      box-shadow:0 18px 40px rgba(15,23,42,.055) !important;
+    }
+
+    .project-case:active{
+      transform:translateY(0) !important;
+      background:#edf1f5 !important;
+      border-color:#b8c5d2 !important;
+      box-shadow:0 9px 22px rgba(15,23,42,.045) !important;
+    }
+
+    .project-case:focus-within{
+      outline:none !important;
+      border-color:#9aaec4 !important;
+      box-shadow:0 0 0 4px rgba(143,164,187,.13) !important;
+    }
+
+    .project-case-metric{
+      border-radius:999px !important;
+      background:#eef2f5 !important;
+      border-color:#d3dce4 !important;
+    }
+
+    .leadership-card{
+      border-radius:0 !important;
+      background:transparent !important;
+      box-shadow:none !important;
+      border:none !important;
+      border-top:1px solid var(--line) !important;
+      padding:34px 0 0 !important;
+    }
+
+    .leadership-photo-wrap{
+      border-radius:18px !important;
+      overflow:hidden;
+    }
+
+    .operating-band{
+      margin-top:8px;
+      margin-bottom:105px;
+      padding:74px 58px 64px !important;
+      background:#0f1b2b;
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+      border-radius:0;
+    }
+
+    .operating-band::after{
+      content:"";
+      position:absolute;
+      top:0;
+      right:0;
+      width:4px;
+      height:26%;
+      background:#8fa4bb;
+    }
+
+    .operating-band .section-label{
+      color:#9fb0c3 !important;
+      margin-bottom:24px;
+    }
+
+    .operating-title{
+      margin:0 0 54px;
+      max-width:920px;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(58px,6.4vw,98px);
+      line-height:.92;
+      letter-spacing:-.06em;
+      font-weight:500;
+      color:#fff;
+    }
+
+    .operating-title span{
+      color:#8fa4bb;
+    }
+
+    .operating-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);
+      gap:54px;
+      align-items:center;
+    }
+
+    .operating-media{
+      aspect-ratio:4/3;
+      overflow:hidden;
+      border-radius:20px;
+      background:#17263a;
+    }
+
+    .operating-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .operating-copy{
+      max-width:560px;
+    }
+
+    .operating-copy h3{
+      margin:0 0 16px;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(30px,3.1vw,48px);
+      line-height:1.04;
+      letter-spacing:-.04em;
+      font-weight:500;
+      color:#fff;
+    }
+
+    .operating-copy p{
+      margin:0;
+      color:rgba(255,255,255,.74);
+      font-size:15px;
+      line-height:1.75;
+    }
+
+    .operating-signals{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      margin-top:34px;
+      border-top:1px solid rgba(255,255,255,.14);
+      border-bottom:1px solid rgba(255,255,255,.14);
+    }
+
+    .operating-signal{
+      padding:22px 18px 24px;
+      border-right:1px solid rgba(255,255,255,.14);
+    }
+
+    .operating-signal:last-child{
+      border-right:none;
+    }
+
+    .operating-signal strong{
+      display:block;
+      margin-bottom:7px;
+      color:#fff;
+      font-size:10px;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+
+    .operating-signal span{
+      color:#9fb0c3;
+      font-size:11px;
+      line-height:1.45;
+    }
+
+    .operating-band .work-list{
+      margin-top:54px;
+      border-top:1px solid rgba(255,255,255,.14);
+    }
+
+    .operating-band .work-item{
+      border-bottom:1px solid rgba(255,255,255,.14) !important;
+    }
+
+    .operating-band .work-number{
+      color:#8295aa !important;
+    }
+
+    .operating-band .work-item strong{
+      color:#fff !important;
+    }
+
+    .field-caption span:first-child{
+      font-weight:600;
+      color:var(--navy);
+    }
+
+    @media(max-width:900px){
+      .operating-grid{
+        grid-template-columns:1fr;
+        gap:36px;
+      }
+    }
+
+    @media(max-width:640px){
+      .project-case{
+        border-radius:22px !important;
+        padding:28px 22px !important;
+      }
+
+      .operating-band{
+        padding:58px 22px 52px !important;
+        margin-left:-22px;
+        margin-right:-22px;
+        margin-bottom:82px;
+      }
+
+      .operating-title{
+        font-size:clamp(48px,13vw,70px);
+        margin-bottom:38px;
+      }
+
+      .operating-media{
+        border-radius:16px;
+      }
+
+      .operating-signals{
+        grid-template-columns:1fr;
+      }
+
+      .operating-signal{
+        border-right:none;
+        border-bottom:1px solid rgba(255,255,255,.14);
+      }
+
+      .operating-signal:last-child{
+        border-bottom:none;
+      }
+    }
+
   </style>
 
 </head>
@@ -3835,6 +4332,34 @@
   </section>
 
 
+  <section class="impact-band">
+    <div class="impact-band-inner">
+      <div class="impact-band-label">My impact / Partnerships → adoption → scale</div>
+
+      <div class="impact-band-head">
+        <h2 class="impact-band-title">
+          From opening doors<br>
+          <span>to building reach.</span>
+        </h2>
+
+        <p class="impact-band-copy">
+          My role went beyond partnerships. I connected institutional relationships,
+          commercial execution, product feedback and implementation — helping turn
+          opportunities into adoption, measurable reach and systems that could scale.
+        </p>
+      </div>
+
+      <div class="impact-band-metrics">
+        <div class="impact-signal"><strong>14+</strong><span>Strategic organizations connected</span></div>
+        <div class="impact-signal"><strong>20K+</strong><span>Families reached</span></div>
+        <div class="impact-signal"><strong>100+</strong><span>Public schools reached in Chile</span></div>
+        <div class="impact-signal"><strong>20+</strong><span>Cross-functional collaborators across geographies</span></div>
+      </div>
+    </div>
+  </section>
+
+
+
 
   <!-- =====================================================
        MAIN CONTENT
@@ -4099,29 +4624,7 @@
 
           </div>
 
-          <div class="metrics">
-
-            <div class="metric">
-              <strong>14+</strong>
-              <span>Organizations connected</span>
-            </div>
-
-            <div class="metric">
-              <strong>20.000+</strong>
-              <span>Families reached</span>
-            </div>
-
-            <div class="metric">
-              <strong>1M+</strong>
-              <span>Applications handled by the platform in 2024</span>
-            </div>
-
-            <div class="metric">
-              <strong>5M+</strong>
-              <span>Profile views in 2024</span>
-            </div>
-
-          </div>
+          
 
         </section>
 
@@ -4162,7 +4665,7 @@
               The work included initiatives developed with
               <strong>OpenAI</strong> and, on specific projects,
               <strong>Columbia University</strong> and
-              <strong>SLEP del Pino</strong>, connecting research,
+              <strong>SLEP del Pino Public Accountability 2025</strong>, connecting research,
               institutional needs and implementation.
             </p>
 
@@ -4402,8 +4905,8 @@
               </div>
 
               <figcaption class="field-caption">
-                <span>Team in the field</span>
-                <span>Education · Partnerships · Santiago</span>
+                <span>FERMADI 2025 · Santiago</span>
+                <span>Education · Partnerships</span>
               </figcaption>
 
             </figure>
@@ -4424,7 +4927,7 @@
                 </div>
 
                 <figcaption class="field-caption">
-                  <span>TetherEd</span>
+                  <span>TetherEd · Santiago Team</span>
                   <span>Working session</span>
                 </figcaption>
 
@@ -4487,8 +4990,8 @@
                 </div>
 
                 <figcaption class="field-caption">
-                  <span>TetherEd</span>
-                  <span>Team · Santiago</span>
+                  <span>TetherEd · Santiago Team</span>
+                  <span>WeWork Apoquindo</span>
                 </figcaption>
 
               </figure>
@@ -4507,8 +5010,8 @@
                 </div>
 
                 <figcaption class="field-caption">
-                  <span>SLEP del Pino</span>
-                  <span>Public accountability · Public education</span>
+                  <span>SLEP del Pino Public Accountability 2025</span>
+                  <span>Public education · Santiago</span>
                 </figcaption>
 
               </figure>
@@ -4526,74 +5029,52 @@
 
         <!-- HOW I WORKED -->
 
-        <section class="section">
+        <section class="section operating-band">
 
-          <div class="section-label">
-            05 / Operating system
-          </div>
+          <div class="section-label">05 / Operating system</div>
 
-          <h2>
-            From opportunity
-            to implementation.
+          <h2 class="operating-title">
+            From opportunity<br>
+            <span>to execution.</span>
           </h2>
 
-          <div class="building-split">
-
-            <div>
-              <div class="building-media">
-                <img
-                  src="tether-building-ops.jpg"
-                  alt="Felipe Quiroz working at TetherEd"
-                  loading="lazy"
-                >
-              </div>
+          <div class="operating-grid">
+            <div class="operating-media">
+              <img src="/tether-building-ops.jpg" alt="Felipe Quiroz working at Tether Education" loading="lazy">
             </div>
 
-            <div class="building-copy">
+            <div class="operating-copy">
+              <h3>Turning relationships into execution.</h3>
               <p>
-                My role went beyond partnerships. I also worked across product,
-                growth and operations, turning opportunities into concrete initiatives
-                and coordinating teams to move them into execution.
+                I worked across product, growth and operations to move opportunities
+                from conversation to implementation — aligning teams, priorities and
+                execution across markets.
               </p>
-              <div class="building-meta">
-                Product · Growth · Operations
+
+              <div class="operating-signals">
+                <div class="operating-signal">
+                  <strong>Product</strong>
+                  <span>Market feedback → product decisions</span>
+                </div>
+                <div class="operating-signal">
+                  <strong>Growth</strong>
+                  <span>Opportunities → adoption</span>
+                </div>
+                <div class="operating-signal">
+                  <strong>Operations</strong>
+                  <span>Teams → execution</span>
+                </div>
               </div>
             </div>
-
           </div>
 
           <div class="work-list">
-
-            <div class="work-item">
-              <div class="work-number">01</div>
-              <strong>Partnership strategy and business development</strong>
-            </div>
-
-            <div class="work-item">
-              <div class="work-number">02</div>
-              <strong>Pipeline, prospecting and negotiation</strong>
-            </div>
-
-            <div class="work-item">
-              <div class="work-number">03</div>
-              <strong>Public- and private-sector relationships</strong>
-            </div>
-
-            <div class="work-item">
-              <div class="work-number">04</div>
-              <strong>Cross-functional execution across Sales, Product, Marketing and Operations</strong>
-            </div>
-
-            <div class="work-item">
-              <div class="work-number">05</div>
-              <strong>Market signals into product and AI improvements</strong>
-            </div>
-
-            <div class="work-item">
-              <div class="work-number">06</div>
-              <strong>CRM, dashboards, reporting and scalable processes</strong>
-            </div>
-
+            <div class="work-item"><div class="work-number">01</div><strong>Partnership strategy and business development</strong></div>
+            <div class="work-item"><div class="work-number">02</div><strong>Pipeline, prospecting and negotiation</strong></div>
+            <div class="work-item"><div class="work-number">03</div><strong>Public- and private-sector relationships</strong></div>
+            <div class="work-item"><div class="work-number">04</div><strong>Cross-functional execution across Sales, Marketing, Engineering, Data, Design and Research</strong></div>
+            <div class="work-item"><div class="work-number">05</div><strong>Market signals into product and AI improvements</strong></div>
+            <div class="work-item"><div class="work-number">06</div><strong>CRM, dashboards, reporting and scalable processes</strong></div>
           </div>
 
         </section>
