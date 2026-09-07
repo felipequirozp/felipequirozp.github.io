@@ -10,22 +10,22 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>lowsignal | Felipe Quiroz</title>
+  <title>GeoVictoria | Felipe Quiroz</title>
 
   <meta
     name="description"
-    content="Trabajo seleccionado en lowsignal — construyendo growth systems, productos digitales e infraestructura operativa para crecer."
+    content="Trabajo seleccionado en GeoVictoria — productos de workforce management, pilotos, validación y desarrollo de producto enterprise."
   >
 
 
   <!-- SEO / LANGUAGES -->
-  <link rel="canonical" href="https://felipequirozp.cl/es/lowsignal">
+  <link rel="canonical" href="https://felipequirozp.cl/es/geovictoria">
 
-  <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/lowsignal">
+  <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/geovictoria">
 
-  <link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/lowsignal">
+  <link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/geovictoria">
 
-  <link rel="alternate" hreflang="x-default" href="https://felipequirozp.cl/lowsignal">
+  <link rel="alternate" hreflang="x-default" href="https://felipequirozp.cl/geovictoria">
 
   <!-- FAVICON -->
   <link
@@ -362,7 +362,7 @@
       padding:
         58px 5vw 52px;
 
-      background: var(--navy-deep);
+      background: var(--steel);
 
       color: white;
 
@@ -382,12 +382,12 @@
 
       background-image:
         linear-gradient(
-          rgba(255,255,255,.045) 1px,
+          rgba(255,255,255,.05) 1px,
           transparent 1px
         ),
         linear-gradient(
           90deg,
-          rgba(255,255,255,.045) 1px,
+          rgba(255,255,255,.05) 1px,
           transparent 1px
         );
 
@@ -419,7 +419,7 @@
 
       gap: 20px;
 
-      color: var(--slate);
+      color: var(--slate-light);
 
       font-size: 9px;
       font-weight: 500;
@@ -439,77 +439,82 @@
 
 
     /* =====================================================
-       GROWTH SYSTEM VISUAL
+       SCHEDULE VISUAL
     ===================================================== */
 
-    .growth-map {
+    .schedule {
 
-      max-width: 560px;
+      max-width: 540px;
 
       margin:
-        42px 0 34px;
+        45px 0 35px;
 
     }
 
 
-    .growth-main {
+    .schedule-head {
+
+      margin-bottom: 18px;
 
       display: grid;
 
       grid-template-columns:
-        1fr 48px 1fr 48px 1fr;
+        82px repeat(5, 1fr);
 
-      align-items: center;
+      gap: 8px;
 
-      margin-bottom: 30px;
+      color: var(--slate-light);
+
+      font-size: 8px;
+
+      text-transform: uppercase;
+
+      letter-spacing: .05em;
 
     }
 
 
-    .growth-node {
+    .schedule-row {
 
-      min-height: 74px;
+      margin-bottom: 9px;
 
-      padding:
-        18px 15px;
+      display: grid;
 
-      display: flex;
+      grid-template-columns:
+        82px repeat(5, 1fr);
+
+      gap: 8px;
+
       align-items: center;
-      justify-content: center;
+
+    }
+
+
+    .schedule-name {
+
+      color: #d7dee6;
+
+      font-size: 9px;
+
+    }
+
+
+    .shift {
+
+      height: 32px;
 
       border:
         1px solid rgba(255,255,255,.18);
 
-      border-radius: 14px;
+      border-radius: 8px;
 
       background:
-        rgba(255,255,255,.04);
-
-      color: white;
-
-      font-family: "Manrope", sans-serif;
-
-      font-size: 13px;
-      font-weight: 500;
-
-      text-align: center;
-
-      letter-spacing: -.02em;
+        rgba(255,255,255,.06);
 
     }
 
 
-    .growth-node.main {
-
-      background:
-        rgba(255,255,255,.10);
-
-    }
-
-
-    .growth-line {
-
-      height: 1px;
+    .shift.active {
 
       background:
         rgba(255,255,255,.20);
@@ -517,51 +522,18 @@
     }
 
 
-    .growth-support {
+    .shift.medium {
 
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 14px;
+      background:
+        rgba(199,208,217,.13);
 
     }
 
 
-    .growth-support-block {
+    .shift.dark {
 
-      padding-top: 14px;
-
-      border-top:
-        1px solid rgba(255,255,255,.14);
-
-    }
-
-
-    .growth-support-title {
-
-      margin-bottom: 7px;
-
-      color: var(--slate-light);
-
-      font-size: 8px;
-      font-weight: 600;
-
-      letter-spacing: .07em;
-
-      text-transform: uppercase;
-
-    }
-
-
-    .growth-support-copy {
-
-      color: #b7c1cc;
-
-      font-size: 9px;
-
-      line-height: 1.6;
+      background:
+        rgba(13,23,36,.20);
 
     }
 
@@ -570,7 +542,7 @@
 
       margin-bottom: 18px;
 
-      color: var(--slate);
+      color: var(--slate-light);
 
       font-size: 9px;
       font-weight: 500;
@@ -586,12 +558,12 @@
 
       margin: 0;
 
-      max-width: 600px;
+      max-width: 580px;
 
       font-family: "Manrope", sans-serif;
 
       font-size:
-        clamp(40px, 4.2vw, 60px);
+        clamp(38px, 4vw, 58px);
 
       line-height: 1.08;
 
@@ -606,9 +578,9 @@
 
       display: block;
 
-      margin-top: 16px;
+      margin-top: 14px;
 
-      color: var(--slate);
+      color: var(--slate-light);
 
     }
 
@@ -641,7 +613,7 @@
 
 
     /* =====================================================
-       LOGO
+       COMPANY LOGO FIX
     ===================================================== */
 
     .company-logo {
@@ -681,7 +653,7 @@
 
     .case-label {
 
-      margin-bottom: 18px;
+      margin-bottom: 13px;
 
       color: var(--muted);
 
@@ -697,7 +669,7 @@
 
     .case-period {
 
-      margin-bottom: 44px;
+      margin-bottom: 35px;
 
       color: var(--steel-light);
 
@@ -714,7 +686,7 @@
     .hero-content h1 {
 
       margin:
-        0 0 24px;
+        0 0 12px;
 
       font-family: "Manrope", sans-serif;
 
@@ -793,7 +765,7 @@
 
 
     /* =====================================================
-       CONTENT
+       MAIN CONTENT
     ===================================================== */
 
     .content {
@@ -826,9 +798,7 @@
 
 
     .main-column {
-
       min-width: 0;
-
     }
 
 
@@ -841,9 +811,7 @@
 
 
     .section:last-child {
-
       padding-bottom: 0;
-
     }
 
 
@@ -865,7 +833,7 @@
 
     .section h2 {
 
-      max-width: 850px;
+      max-width: 820px;
 
       margin:
         0 0 35px;
@@ -907,69 +875,100 @@
     }
 
 
-
     /* =====================================================
-       SCALE / OPERATING PROOF
+       INITIATIVES
     ===================================================== */
 
-    .proof-grid {
-      margin-top: 34px;
+    .initiatives {
+
+      border-top:
+        1px solid var(--line);
+
+    }
+
+
+    .initiative {
+
+      padding:
+        30px 0;
+
       display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
+
+      grid-template-columns:
+        55px 1fr;
+
+      gap: 25px;
+
+      border-bottom:
+        1px solid var(--line);
+
     }
 
-    .proof-item {
-      min-height: 165px;
-      padding: 30px 28px;
-    }
 
-    .proof-item:nth-child(odd) {
-      border-right: 1px solid var(--line);
-    }
+    .initiative-number {
 
-    .proof-item:nth-child(-n+2) {
-      border-bottom: 1px solid var(--line);
-    }
+      padding-top: 5px;
 
-    .proof-item strong {
-      display: block;
-      margin-bottom: 9px;
-      color: var(--navy);
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(34px, 4vw, 56px);
-      font-weight: 500;
-      letter-spacing: -.05em;
-      line-height: 1;
-    }
-
-    .proof-item span {
       color: var(--muted);
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: .06em;
-      line-height: 1.5;
-      text-transform: uppercase;
+
+      font-size: 10px;
+
     }
 
-    @media (max-width: 600px) {
-      .proof-grid { grid-template-columns: 1fr; }
-      .proof-item {
-        min-height: auto;
-        padding: 24px 0;
-        border-right: 0 !important;
-        border-bottom: 1px solid var(--line);
-      }
-      .proof-item:last-child { border-bottom: 0; }
+
+    .initiative h3 {
+
+      margin:
+        0 0 8px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 23px;
+      font-weight: 500;
+
+      letter-spacing: -.035em;
+
+      color: var(--navy);
+
+    }
+
+
+    .initiative-type {
+
+      margin-bottom: 14px;
+
+      color: var(--steel-light);
+
+      font-size: 9px;
+      font-weight: 500;
+
+      letter-spacing: .06em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .initiative p {
+
+      max-width: 650px;
+
+      margin: 0;
+
+      color: #4c5864;
+
+      font-size: 13px;
+
+      line-height: 1.75;
+
     }
 
 
     /* =====================================================
-       ROLE LIST
+       HOW I WORK
     ===================================================== */
 
-    .role-list {
+    .work-list {
 
       margin-top: 40px;
 
@@ -979,7 +978,7 @@
     }
 
 
-    .role-item {
+    .work-item {
 
       padding:
         20px 0;
@@ -997,7 +996,7 @@
     }
 
 
-    .role-number {
+    .work-number {
 
       color: var(--muted);
 
@@ -1006,7 +1005,7 @@
     }
 
 
-    .role-item strong {
+    .work-item strong {
 
       color: var(--navy);
 
@@ -1015,326 +1014,6 @@
 
       line-height: 1.55;
 
-    }
-
-
-    /* =====================================================
-       SOLUTIONS
-    ===================================================== */
-
-    .solutions {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(2, 1fr);
-
-      border-top:
-        1px solid var(--line);
-
-    }
-
-
-    .solution {
-
-      min-height: 220px;
-
-      padding:
-        30px 34px 30px 0;
-
-      border-bottom:
-        1px solid var(--line);
-
-    }
-
-
-    .solution:nth-child(odd) {
-
-      border-right:
-        1px solid var(--line);
-
-      padding-right: 38px;
-
-    }
-
-
-    .solution:nth-child(even) {
-
-      padding-left: 38px;
-
-    }
-
-
-    .solution-number {
-
-      margin-bottom: 35px;
-
-      color: var(--muted);
-
-      font-size: 9px;
-
-      letter-spacing: .07em;
-
-    }
-
-
-    .solution h3 {
-
-      margin:
-        0 0 11px;
-
-      font-family: "Manrope", sans-serif;
-
-      font-size: 24px;
-      font-weight: 500;
-
-      letter-spacing: -.035em;
-
-      color: var(--navy);
-
-    }
-
-
-    .solution-type {
-
-      margin-bottom: 14px;
-
-      color: var(--steel-light);
-
-      font-size: 9px;
-      font-weight: 600;
-
-      letter-spacing: .06em;
-
-      text-transform: uppercase;
-
-    }
-
-
-    .solution p {
-
-      max-width: 380px;
-
-      margin: 0;
-
-      color: #4c5864;
-
-      font-size: 13px;
-
-      line-height: 1.72;
-
-    }
-
-
-    /* =====================================================
-       OPERATING MODEL
-    ===================================================== */
-
-    .operating-list {
-
-      margin-top: 40px;
-
-      border-top:
-        1px solid var(--line);
-
-    }
-
-
-    .operating-item {
-
-      padding:
-        24px 0;
-
-      display: grid;
-
-      grid-template-columns:
-        55px 1fr auto;
-
-      gap: 25px;
-
-      align-items: center;
-
-      border-bottom:
-        1px solid var(--line);
-
-    }
-
-
-    .operating-number {
-
-      color: var(--muted);
-
-      font-size: 9px;
-
-    }
-
-
-    .operating-item strong {
-
-      color: var(--navy);
-
-      font-family: "Manrope", sans-serif;
-
-      font-size: 19px;
-      font-weight: 500;
-
-      letter-spacing: -.025em;
-
-    }
-
-
-    .operating-item span {
-
-      color: var(--muted);
-
-      font-size: 9px;
-
-      letter-spacing: .06em;
-
-      text-transform: uppercase;
-
-    }
-
-
-
-    /* =====================================================
-       SELECTED CASES
-    ===================================================== */
-
-    .cases-section {
-      padding: 92px 0 20px;
-    }
-
-    .cases-intro {
-      max-width: 760px;
-      margin-bottom: 42px;
-    }
-
-    .cases-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 18px;
-    }
-
-    .case-card {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(280px, .7fr);
-      gap: 44px;
-      align-items: end;
-      padding: 34px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: rgba(255,255,255,.62);
-      text-decoration: none;
-      transition:
-        transform .22s ease,
-        border-color .22s ease,
-        background .22s ease;
-    }
-
-    .case-card:hover {
-      transform: translateY(-2px);
-      border-color: #bcc5ce;
-      background: #fff;
-    }
-
-    .case-card-topline {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
-    }
-
-    .case-card-number,
-    .case-card-type {
-      font-size: 10px;
-      line-height: 1;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    .case-card-number {
-      color: var(--navy);
-    }
-
-    .case-card-type {
-      color: var(--steel-light);
-    }
-
-    .case-card h3 {
-      margin: 0 0 16px;
-      color: var(--navy);
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(30px, 3.2vw, 46px);
-      font-weight: 500;
-      letter-spacing: -.04em;
-      line-height: 1.04;
-    }
-
-    .case-card p {
-      margin: 0;
-      max-width: 680px;
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.75;
-    }
-
-    .case-card-side {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      gap: 24px;
-    }
-
-    .case-card-layers {
-      display: grid;
-      gap: 14px;
-    }
-
-    .case-layer {
-      padding-top: 14px;
-      border-top: 1px solid var(--line);
-    }
-
-    .case-layer strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--navy);
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .case-layer span {
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.55;
-    }
-
-    .case-card-link {
-      color: var(--navy);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-    }
-
-    @media (max-width: 760px) {
-      .cases-section {
-        padding-top: 70px;
-      }
-
-      .case-card {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        padding: 26px;
-        border-radius: 14px;
-      }
-
-      .case-card h3 {
-        font-size: clamp(30px, 8vw, 40px);
-      }
     }
 
 
@@ -1408,9 +1087,7 @@
 
 
     .sidebar-value a:hover {
-
       opacity: .55;
-
     }
 
 
@@ -1445,7 +1122,7 @@
 
     .focus-dark {
 
-      background: var(--navy-deep);
+      background: var(--navy);
 
       color: white;
 
@@ -1454,7 +1131,7 @@
 
     .focus-light {
 
-      background: var(--steel);
+      background: var(--steel-light);
 
       color: white;
 
@@ -1474,6 +1151,10 @@
 
     }
 
+
+    /* =====================================================
+       FOCUS TITLE FIX
+    ===================================================== */
 
     .focus-title {
 
@@ -1510,31 +1191,6 @@
 
       color:
         rgba(255,255,255,.60);
-
-    }
-
-
-    /* =====================================================
-       LOWSIGNAL LEFT FOCUS SPACING
-    ===================================================== */
-
-    .focus-dark .focus-title {
-
-      max-width: 760px;
-
-      font-size:
-        clamp(42px, 4.35vw, 74px);
-
-      line-height: 1.12;
-
-    }
-
-
-    .focus-dark .focus-title span {
-
-      margin-top: 44px;
-
-      line-height: 1.12;
 
     }
 
@@ -1691,6 +1347,7 @@
       padding-bottom: 70px;
 
       display: flex;
+
       justify-content: space-between;
       align-items: flex-end;
 
@@ -1807,9 +1464,7 @@
 
 
     .footer-location {
-
       text-align: right;
-
     }
 
 
@@ -1906,374 +1561,6 @@
     /* =====================================================
        TABLET
     ===================================================== */
-
-
-    /* =====================================================
-       CO-FOUNDER
-    ===================================================== */
-
-    .cofounder-card {
-
-      margin-top:
-        34px;
-
-      padding-top:
-        0;
-
-      display:
-        grid;
-
-      grid-template-columns:
-        92px minmax(0,1fr);
-
-      gap:
-        24px;
-
-      align-items:
-        center;
-
-    }
-
-
-    .cofounder-photo {
-
-      width:
-        92px;
-
-      height:
-        112px;
-
-      display:
-        block;
-
-      object-fit:
-        cover;
-
-      object-position:
-        center 32%;
-
-      border-radius:
-        18px;
-
-      background:
-        var(--ice);
-
-    }
-
-
-    .cofounder-eyebrow {
-
-      margin-bottom:
-        8px;
-
-      color:
-        var(--steel-light);
-
-      font-size:
-        10px;
-
-      font-weight:
-        600;
-
-      letter-spacing:
-        .12em;
-
-      text-transform:
-        uppercase;
-
-    }
-
-
-    .cofounder-name {
-
-      margin:
-        0 0 6px;
-
-      color:
-        var(--navy);
-
-      font-family:
-        "Manrope", sans-serif;
-
-      font-size:
-        20px;
-
-      font-weight:
-        600;
-
-      letter-spacing:
-        -.025em;
-
-    }
-
-
-    .cofounder-meta {
-
-      margin:
-        0 0 11px;
-
-      color:
-        var(--muted);
-
-      font-size:
-        12px;
-
-      line-height:
-        1.55;
-
-    }
-
-
-    .cofounder-copy {
-
-      max-width:
-        620px;
-
-      margin:
-        0;
-
-      color:
-        #45505b;
-
-      font-size:
-        13px;
-
-      line-height:
-        1.75;
-
-    }
-
-    .cofounder-links {
-
-      margin-top:
-        14px;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      gap:
-        8px;
-
-    }
-
-
-    .cofounder-links a {
-
-      width:
-        36px;
-
-      height:
-        36px;
-
-      display:
-        inline-flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
-
-      border:
-        1px solid var(--line);
-
-      border-radius:
-        50%;
-
-      color:
-        var(--steel);
-
-      text-decoration:
-        none;
-
-      transition:
-        transform .2s ease,
-        color .2s ease,
-        border-color .2s ease,
-        background .2s ease;
-
-    }
-
-
-    .cofounder-links a:hover {
-
-      transform:
-        translateY(-2px);
-
-      color:
-        var(--navy);
-
-      border-color:
-        var(--steel-light);
-
-      background:
-        var(--white);
-
-    }
-
-
-    .cofounder-links svg {
-
-      width:
-        15px;
-
-      height:
-        15px;
-
-      display:
-        block;
-
-    }
-
-
-    /* =====================================================
-       CLIENT WORK
-    ===================================================== */
-
-    .client-work {
-
-      padding-bottom:
-        105px;
-
-    }
-
-
-    .client-work-copy {
-
-      max-width:
-        720px;
-
-      margin-bottom:
-        38px;
-
-    }
-
-
-    .client-work-copy p {
-
-      margin:
-        0;
-
-      color:
-        #45505b;
-
-      font-size:
-        14px;
-
-      line-height:
-        1.85;
-
-    }
-
-
-    .client-work-figure {
-
-      margin:
-        0;
-
-    }
-
-
-    .client-work-media {
-
-      width:
-        100%;
-
-      aspect-ratio:
-        16 / 10;
-
-      overflow:
-        hidden;
-
-      border-radius:
-        18px;
-
-      background:
-        var(--ice);
-
-    }
-
-
-    .client-work-media img {
-
-      width:
-        100%;
-
-      height:
-        100%;
-
-      display:
-        block;
-
-      object-fit:
-        cover;
-
-      object-position:
-        center 46%;
-
-      transition:
-        transform .6s cubic-bezier(.2,.7,.2,1);
-
-    }
-
-
-    .client-work-media:hover img {
-
-      transform:
-        scale(1.012);
-
-    }
-
-
-    .client-work-caption {
-
-      margin-top:
-        12px;
-
-      display:
-        flex;
-
-      align-items:
-        baseline;
-
-      justify-content:
-        space-between;
-
-      gap:
-        16px;
-
-      color:
-        var(--navy);
-
-      font-size:
-        11px;
-
-      font-weight:
-        550;
-
-    }
-
-
-    .client-work-caption span:last-child {
-
-      color:
-        var(--steel-light);
-
-      font-size:
-        10px;
-
-      font-weight:
-        500;
-
-      white-space:
-        nowrap;
-
-    }
-
-
 
     @media(max-width: 900px) {
 
@@ -2446,112 +1733,6 @@
 
     @media(max-width: 600px) {
 
-      .cofounder-card {
-
-        grid-template-columns:
-          72px minmax(0,1fr);
-
-        gap:
-          16px;
-
-        margin-top:
-          28px;
-
-        padding-top:
-          0;
-
-        align-items:
-          start;
-
-      }
-
-
-      .cofounder-photo {
-
-        width:
-          72px;
-
-        height:
-          88px;
-
-        border-radius:
-          14px;
-
-      }
-
-
-      .cofounder-name {
-
-        font-size:
-          18px;
-
-      }
-
-
-      .cofounder-copy {
-
-        font-size:
-          12px;
-
-      }
-
-
-      .client-work {
-
-        padding-bottom:
-          78px;
-
-      }
-
-
-      .client-work-copy {
-
-        margin-bottom:
-          26px;
-
-      }
-
-
-      .client-work-copy p {
-
-        font-size:
-          13px;
-
-      }
-
-
-      .client-work-media {
-
-        aspect-ratio:
-          4 / 3;
-
-        border-radius:
-          14px;
-
-      }
-
-
-      .client-work-caption {
-
-        margin-top:
-          9px;
-
-        font-size:
-          10px;
-
-      }
-
-
-      .client-work-caption span:last-child {
-
-        font-size:
-          9px;
-
-      }
-
-
-
-
       .nav {
 
         flex-direction: column;
@@ -2612,40 +1793,36 @@
       }
 
 
-      .growth-map {
+      .schedule {
 
         margin:
-          36px 0 34px;
+          35px 0 32px;
 
       }
 
 
-      .growth-main {
+      .schedule-head {
+
+        display: none;
+
+      }
+
+
+      .schedule-row {
 
         grid-template-columns:
-          1fr;
+          70px repeat(5, 1fr);
 
-        gap: 8px;
-
-      }
-
-
-      .growth-line {
-
-        width: 1px;
-        height: 18px;
-
-        justify-self: center;
+        gap: 5px;
 
       }
 
 
-      .growth-support {
+      .shift {
 
-        grid-template-columns:
-          1fr;
+        height: 28px;
 
-        gap: 18px;
+        border-radius: 6px;
 
       }
 
@@ -2718,39 +1895,12 @@
       }
 
 
-      .solutions {
+      .initiative {
 
         grid-template-columns:
-          1fr;
+          36px 1fr;
 
-      }
-
-
-      .solution,
-      .solution:nth-child(odd),
-      .solution:nth-child(even) {
-
-        min-height: auto;
-
-        padding:
-          28px 0;
-
-        border-right: 0;
-
-      }
-
-
-      .operating-item {
-
-        grid-template-columns:
-          34px 1fr;
-
-      }
-
-
-      .operating-item span {
-
-        grid-column: 2;
+        gap: 14px;
 
       }
 
@@ -2781,22 +1931,6 @@
       .focus-title span {
 
         margin-top: 20px;
-
-      }
-
-
-      .focus-dark .focus-title {
-
-        line-height: 1.12;
-
-      }
-
-
-      .focus-dark .focus-title span {
-
-        margin-top: 30px;
-
-        line-height: 1.12;
 
       }
 
@@ -2841,127 +1975,323 @@
 
   
     /* =====================================================
-       FOUNDERS + TESTIMONIAL + SELECTED CASES REFINEMENT
+       LEADERSHIP / SCALE
     ===================================================== */
 
-    .founders-editorial {
-      margin-top: 52px;
+    .leadership-card {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 112px 1fr;
+      gap: 22px;
+      align-items: center;
+      max-width: 620px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255,255,255,.62);
     }
 
-    .founders-editorial img {
+    .leadership-photo {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 16px;
+      background: var(--ice);
+    }
+
+    .leadership-photo img {
       width: 100%;
-      height: auto;
+      height: 100%;
       display: block;
-      border-radius: 18px;
+      object-fit: cover;
     }
 
-    .founders-editorial figcaption {
-      margin-top: 12px;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
+    .leadership-eyebrow {
+      margin-bottom: 8px;
       color: var(--steel-light);
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: .07em;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .08em;
       text-transform: uppercase;
     }
 
-    .testimonial {
-      margin-top: 70px;
-      padding: 58px 0 8px;
+    .leadership-name {
+      margin: 0 0 4px;
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-size: 23px;
+      font-weight: 500;
+      letter-spacing: -.03em;
+      line-height: 1.1;
+    }
+
+    .leadership-role {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+
+    .leadership-links {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .leadership-linkedin {
+      width: 32px;
+      height: 32px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .2s ease, border-color .2s ease;
+    }
+
+    .leadership-linkedin:hover {
+      background: var(--ice);
+      border-color: #bcc5ce;
+    }
+
+
+    .scale-grid {
+      margin-top: 36px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .scale-item {
+      min-height: 160px;
+      padding: 30px 28px;
+    }
+
+    .scale-item:nth-child(odd) {
+      border-right: 1px solid var(--line);
+    }
+
+    .scale-item:nth-child(-n+2) {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .scale-item strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(34px, 4vw, 54px);
+      font-weight: 500;
+      letter-spacing: -.05em;
+      line-height: 1;
+    }
+
+    .scale-item span {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 700px) {
+      .leadership-card {
+        grid-template-columns: 88px 1fr;
+        gap: 16px;
+        padding: 14px;
+        border-radius: 14px;
+      }
+
+      .leadership-photo {
+        border-radius: 12px;
+      }
+
+      .leadership-name {
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .scale-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .scale-item {
+        min-height: auto;
+        padding: 24px 0;
+        border-right: 0 !important;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .scale-item:last-child {
+        border-bottom: 0;
+      }
+    }
+
+
+
+    /* =====================================================
+       GEOVICTORIA — REFINED CASE
+    ===================================================== */
+
+    .editorial-quote {
+      margin-top: 54px;
+      padding-top: 34px;
       border-top: 1px solid var(--line);
     }
 
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: .75fr 1.25fr;
-      gap: 6vw;
-      align-items: center;
-    }
-
-    .testimonial-photo img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 18px;
-    }
-
-    .testimonial-quote {
+    .editorial-quote p {
+      max-width: 860px;
       margin: 0;
       font-family: "Manrope", sans-serif;
-      font-size: clamp(30px, 3.7vw, 52px);
-      line-height: 1.08;
-      letter-spacing: -.045em;
+      font-size: clamp(34px, 4.4vw, 60px);
+      line-height: 1.03;
+      letter-spacing: -.055em;
       font-weight: 500;
       color: var(--navy);
     }
 
-    .testimonial-person {
-      margin-top: 34px;
-    }
-
-    .testimonial-person strong {
-      display: block;
-      font-family: "Manrope", sans-serif;
-      font-size: 18px;
-      font-weight: 600;
-      letter-spacing: -.02em;
-      color: var(--navy);
-    }
-
-    .testimonial-person span {
-      display: block;
-      margin-top: 6px;
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.6;
-    }
-
-    .cases-intro {
-      max-width: 760px;
-      margin: 18px 0 44px;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.75;
-    }
-
-    .case-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 14px 0 18px;
-    }
-
-    .case-tags span {
-      display: inline-flex;
-      padding: 6px 9px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: var(--paper);
-      color: var(--steel);
-      font-size: 8px;
+    .initiative-note {
+      margin-top: 12px;
+      color: var(--steel-light);
+      font-size: 9px;
       font-weight: 700;
-      letter-spacing: .06em;
+      letter-spacing: .07em;
       text-transform: uppercase;
     }
 
-    @media(max-width:800px){
-      .testimonial-grid {
-        grid-template-columns: 1fr;
-        gap: 34px;
-      }
+  
+    /* =====================================================
+       PEOPLE — TETHER-STYLE OPEN ROWS
+    ===================================================== */
 
-      .founders-editorial figcaption {
-        flex-direction: column;
-        gap: 5px;
-      }
+    .people-block {
+      margin-top: 42px;
+    }
+
+    .people-heading {
+      margin-bottom: 4px;
+      color: var(--steel-light);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .leadership-card {
+      margin-top: 0;
+      padding: 28px 0;
+      border: 0;
+      border-top: 1px solid var(--line);
+      border-radius: 0;
+      background: transparent;
+      display: grid;
+      grid-template-columns: 78px minmax(0,1fr);
+      gap: 24px;
+      align-items: center;
+      max-width: none;
+    }
+
+    .leadership-card:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .leadership-photo {
+      width: 78px;
+      height: 78px;
+      aspect-ratio: auto;
+      overflow: hidden;
+      border-radius: 20px;
+      background: var(--ice);
+    }
+
+    .leadership-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .leadership-eyebrow {
+      margin-bottom: 7px;
+      color: var(--steel-light);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .leadership-name {
+      margin: 0 0 5px;
+      color: var(--ink);
+      font-family: "Manrope", sans-serif;
+      font-size: 18px;
+      font-weight: 650;
+      letter-spacing: -.02em;
+      line-height: 1.15;
+    }
+
+    .leadership-role {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .leadership-copy {
+      margin: 9px 0 0;
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    .leadership-links {
+      margin-top: 13px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .leadership-linkedin {
+      width: 34px;
+      height: 34px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--steel);
+      font-size: 11px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .2s ease, border-color .2s ease, transform .2s ease;
+    }
+
+    .leadership-linkedin:hover {
+      background: var(--white);
+      border-color: var(--steel-light);
+      transform: translateY(-2px);
     }
 
     @media(max-width:600px){
-      .founders-editorial img,
-      .testimonial-photo img {
-        border-radius: 14px;
+      .leadership-card {
+        grid-template-columns: 64px minmax(0,1fr);
+        gap: 16px;
+        padding: 24px 0;
+        align-items: start;
+      }
+
+      .leadership-photo {
+        width: 64px;
+        height: 64px;
+        border-radius: 16px;
       }
     }
 
@@ -2969,7 +2299,6 @@
     /* =====================================================
        FOOTER — NO DUPLICATE SOCIAL LINKS
     ===================================================== */
-
     .footer-socials {
       display: none !important;
     }
@@ -2985,291 +2314,742 @@
 
   
     /* =====================================================
-       TESTIMONIAL — VISIBLE TEXT-ONLY FEATURE
+       GEOVICTORIA — CULTURE / 4H
     ===================================================== */
-    .testimonial-visible {
-      margin: 10px 0 105px !important;
-      padding: 58px 56px 62px !important;
-      background: var(--navy) !important;
-      border-radius: 18px !important;
+    .culture-4h {
+      padding-top: 92px;
+      padding-bottom: 92px;
+      border-top: 1px solid var(--line);
     }
 
-    .testimonial-visible .section-label {
-      color: var(--slate) !important;
-      margin-bottom: 38px !important;
-    }
-
-    .testimonial-visible .testimonial {
-      margin-top: 0 !important;
-      padding: 0 !important;
-      border-top: 0 !important;
-    }
-
-    .testimonial-visible .testimonial-quote {
-      max-width: 900px !important;
-      color: var(--white) !important;
-      font-size: clamp(30px, 3.8vw, 54px) !important;
-    }
-
-    .testimonial-visible .testimonial-person strong {
-      color: var(--white) !important;
-    }
-
-    .testimonial-visible .testimonial-person span {
-      color: var(--slate-light) !important;
-    }
-
-    @media(max-width:600px) {
-      .testimonial-visible {
-        padding: 38px 26px 42px !important;
-        border-radius: 14px !important;
-      }
-    }
-
-  
-    /* =====================================================
-       FOUNDERS PHOTO — RESTORE SMALL EDITORIAL SIZE
-    ===================================================== */
-    .founders-editorial {
-      margin: 42px auto 0 !important;
-      max-width: 460px !important;
-    }
-
-    .founders-editorial img {
-      width: 100% !important;
-      height: auto !important;
-      display: block !important;
-      border-radius: 18px !important;
-    }
-
-    @media(max-width:600px){
-      .founders-editorial {
-        max-width: 100% !important;
-      }
-
-      .founders-editorial img {
-        border-radius: 14px !important;
-      }
-    }
-
-  
-    /* =====================================================
-       FOUNDERS CONTEXT — SMALL EDITORIAL SPLIT
-    ===================================================== */
-    .founders-editorial {
-      max-width: 980px !important;
-      margin: 46px 0 0 !important;
-      display: grid !important;
-      grid-template-columns: minmax(260px, 420px) minmax(0, 1fr) !important;
-      gap: 34px !important;
-      align-items: center !important;
-    }
-
-    .founders-editorial .founders-media {
-      overflow: hidden !important;
-      border-radius: 18px !important;
-      background: var(--ice) !important;
-    }
-
-    .founders-editorial .founders-media img {
-      width: 100% !important;
-      height: auto !important;
-      display: block !important;
-    }
-
-    .founders-editorial .founders-copy {
-      max-width: 430px !important;
-    }
-
-    .founders-editorial .founders-kicker {
-      margin-bottom: 12px !important;
-      color: var(--steel-light) !important;
-      font-size: 9px !important;
-      font-weight: 700 !important;
-      letter-spacing: .09em !important;
-      text-transform: uppercase !important;
-    }
-
-    .founders-editorial .founders-title {
-      margin: 0 0 14px !important;
-      font-family: "Manrope", sans-serif !important;
-      font-size: clamp(28px, 3vw, 42px) !important;
-      line-height: 1.08 !important;
-      letter-spacing: -.045em !important;
-      color: var(--navy) !important;
-    }
-
-    .founders-editorial .founders-text {
-      margin: 0 0 18px !important;
-      color: var(--muted) !important;
-      font-size: 13px !important;
-      line-height: 1.75 !important;
-    }
-
-    .founders-editorial .founders-meta {
-      color: var(--steel-light) !important;
-      font-size: 9px !important;
-      letter-spacing: .04em !important;
-    }
-
-    @media(max-width:760px) {
-      .founders-editorial {
-        grid-template-columns: 1fr !important;
-        gap: 22px !important;
-      }
-
-      .founders-editorial .founders-copy {
-        max-width: 100% !important;
-      }
-
-      .founders-editorial .founders-media {
-        border-radius: 14px !important;
-      }
-    }
-
-  
-    /* V7 — Editorial team section */
-    .team-section {
-      padding-top: 88px;
-      padding-bottom: 96px;
-    }
-
-    .team-section-inner {
-      max-width: 1080px;
-    }
-
-    .team-intro {
+    .culture-4h-inner {
       max-width: 980px;
-      margin-bottom: 42px;
     }
 
-    .team-title {
-      margin: 0 0 20px;
+    .culture-4h-title {
+      margin: 0 0 30px;
+      max-width: 760px;
       font-family: "Manrope", sans-serif;
-      font-size: clamp(44px, 5.2vw, 72px);
-      line-height: 1;
-      letter-spacing: -.05em;
+      font-size: clamp(44px, 5.4vw, 72px);
+      line-height: .98;
+      letter-spacing: -.055em;
       color: var(--navy);
     }
 
-    .team-copy {
-      margin: 0;
-      max-width: 920px;
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.8;
-    }
-
-    .team-grid {
+    .culture-4h-values {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
+      gap: 22px;
+      margin: 0 0 28px;
+      max-width: 900px;
     }
 
-    .team-member {
-      min-width: 0;
-    }
-
-    .team-photo {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      border-radius: 18px;
-      background: var(--ice);
-      display: block;
-    }
-
-    .team-meta {
-      padding-top: 14px;
-    }
-
-    .team-name {
-      margin: 0 0 4px;
+    .culture-4h-value {
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
       font-family: "Manrope", sans-serif;
-      font-size: 17px;
+      font-size: 18px;
       font-weight: 650;
       letter-spacing: -.02em;
       color: var(--navy);
     }
 
-    .team-role {
+    .culture-4h-copy {
       margin: 0;
+      max-width: 700px;
       color: var(--muted);
-      font-size: 11px;
-      line-height: 1.5;
+      font-size: 13px;
+      line-height: 1.75;
     }
 
-    @media(max-width:900px) {
-      .team-grid {
+    @media(max-width:760px) {
+      .culture-4h-values {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 28px 18px;
+        gap: 18px 22px;
       }
     }
 
-    @media(max-width:560px) {
-      .team-section {
-        padding-top: 68px;
-        padding-bottom: 76px;
+    @media(max-width:520px) {
+      .culture-4h {
+        padding-top: 72px;
+        padding-bottom: 72px;
       }
 
-      .team-grid {
+      .culture-4h-values {
         grid-template-columns: 1fr;
       }
-
-      .team-photo {
-        border-radius: 14px;
-      }
     }
-}
 
   
-    /* V9 — clean transition into Damián */
-    .cofounder-card {
-      margin-top: 48px;
+    /* =====================================================
+       GEOVICTORIA — COMPANY SIGNALS
+    ===================================================== */
+    .company-signals {
+      padding-top: 92px;
+      padding-bottom: 92px;
+      border-top: 0;
+    }
+
+    .company-signals-inner {
+      max-width: 980px;
+    }
+
+    .company-signals-title {
+      margin: 0 0 34px;
+      max-width: 760px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(44px, 5.4vw, 72px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      color: var(--navy);
+    }
+
+    .company-signals-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      max-width: 900px;
+    }
+
+    .company-signal {
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .company-signal-name {
+      margin: 0 0 10px;
+      font-family: "Manrope", sans-serif;
+      font-size: 21px;
+      font-weight: 650;
+      letter-spacing: -.025em;
+      color: var(--navy);
+    }
+
+    .company-signal-copy {
+      margin: 0;
+      max-width: 390px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.72;
     }
 
     @media(max-width:700px) {
-      .cofounder-card {
-        margin-top: 38px;
+      .company-signals-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    @media(max-width:520px) {
+      .company-signals {
+        padding-top: 72px;
+        padding-bottom: 72px;
       }
     }
 
   
-    /* V10 — team LinkedIn buttons */
-    .team-links {
-      margin-top: 10px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    /* =====================================================
+       GEOVICTORIA — OPERATIONS PRODUCT VISUAL
+    ===================================================== */
+    .operations-visual {
+      margin: 54px 0 92px;
+      max-width: 760px;
     }
 
-    .team-links a {
-      width: 36px;
-      height: 36px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--line);
-      border-radius: 50%;
-      color: var(--steel);
-      text-decoration: none;
-      transition: transform .2s ease, color .2s ease, border-color .2s ease, background .2s ease;
+    .operations-visual-card {
+      padding: 34px;
+      border-radius: 18px;
+      background: var(--navy);
+      overflow: hidden;
     }
 
-    .team-links a:hover {
-      transform: translateY(-2px);
-      color: var(--navy);
-      border-color: var(--steel-light);
-      background: var(--white);
-    }
-
-    .team-links svg {
-      width: 15px;
-      height: 15px;
+    .operations-visual-card img {
       display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
     }
 
-  </style>
+    .operations-visual-caption {
+      margin-top: 12px;
+      color: var(--steel-light);
+      font-size: 9px;
+      letter-spacing: .04em;
+    }
+
+    @media(max-width:700px) {
+      .operations-visual {
+        max-width: 100%;
+        margin-top: 40px;
+        margin-bottom: 72px;
+      }
+
+      .operations-visual-card {
+        padding: 22px;
+        border-radius: 14px;
+      }
+    }
+
+  
+    /* =====================================================
+       GEOVICTORIA — WFM INTRO
+    ===================================================== */
+    .wfm-intro {
+      padding-top: 92px;
+      padding-bottom: 92px;
+      border-top: 0;
+    }
+
+    .wfm-intro-inner {
+      max-width: 980px;
+    }
+
+    .wfm-intro-title {
+      margin: 0 0 18px;
+      max-width: 840px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(44px, 5.6vw, 76px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      color: var(--navy);
+    }
+
+    .wfm-intro-lead {
+      margin: 0 0 42px;
+      max-width: 700px;
+      color: var(--steel);
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .wfm-intro-split {
+      display: grid;
+      grid-template-columns: minmax(280px, 430px) minmax(0, 1fr);
+      gap: 56px;
+      align-items: center;
+      max-width: 920px;
+    }
+
+    .wfm-intro-media {
+      border-radius: 18px;
+      overflow: hidden;
+      background: var(--ice);
+    }
+
+    .wfm-intro-media img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .wfm-intro-copy {
+      max-width: 430px;
+    }
+
+    .wfm-intro-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    @media(max-width:760px) {
+      .wfm-intro {
+        padding-top: 72px;
+        padding-bottom: 72px;
+      }
+
+      .wfm-intro-split {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .wfm-intro-copy {
+        max-width: 100%;
+      }
+    }
+
+  
+    /* =====================================================
+       GEOVICTORIA — GEOCOFFEE / CLIENT COMMUNITY
+    ===================================================== */
+    .geocoffee {
+      padding-top: 92px;
+      padding-bottom: 92px;
+      border-top: 1px solid var(--line);
+    }
+
+    .geocoffee-inner {
+      max-width: 980px;
+    }
+
+    .geocoffee-title {
+      margin: 0 0 38px;
+      max-width: 780px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(44px, 5.4vw, 72px);
+      line-height: .99;
+      letter-spacing: -.055em;
+      color: var(--navy);
+    }
+
+    .geocoffee-split {
+      display: grid;
+      grid-template-columns: minmax(300px, 560px) minmax(0, 320px);
+      gap: 48px;
+      align-items: center;
+      max-width: 930px;
+    }
+
+    .geocoffee-media {
+      border-radius: 18px;
+      overflow: hidden;
+      background: var(--ice);
+      aspect-ratio: 4 / 3;
+    }
+
+    .geocoffee-media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .geocoffee-copy {
+      max-width: 320px;
+    }
+
+    .geocoffee-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.78;
+    }
+
+    .geocoffee-meta {
+      margin-top: 16px;
+      color: var(--steel-light);
+      font-size: 9px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    @media(max-width:760px) {
+      .geocoffee {
+        padding-top: 72px;
+        padding-bottom: 72px;
+      }
+
+      .geocoffee-split {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .geocoffee-copy {
+        max-width: 100%;
+      }
+
+      .geocoffee-media {
+        aspect-ratio: 4 / 3;
+      }
+    }
+
+  
+    /* V16 — balance spacing where dividers were removed */
+    .wfm-intro,
+    .company-signals {
+      padding-top: 64px !important;
+    }
+
+    @media(max-width:760px) {
+      .wfm-intro,
+      .company-signals {
+        padding-top: 52px !important;
+      }
+    }
+
+  
+    /* V17 — remove divider before Culture and tighten the transition */
+    .culture-4h {
+      border-top: 0 !important;
+      padding-top: 58px !important;
+    }
+
+    .company-signals {
+      padding-bottom: 66px !important;
+    }
+
+    @media(max-width:760px) {
+      .culture-4h {
+        padding-top: 48px !important;
+      }
+
+      .company-signals {
+        padding-bottom: 54px !important;
+      }
+    }
+
+  
+
+    /* V18 — remove divider before GeoCoffee and tighten Culture → GeoCoffee spacing */
+    .culture-4h {
+      padding-bottom: 68px !important;
+    }
+
+    .geocoffee {
+      border-top: 0 !important;
+      padding-top: 58px !important;
+    }
+
+    @media(max-width:760px) {
+      .culture-4h {
+        padding-bottom: 54px !important;
+      }
+
+      .geocoffee {
+        padding-top: 48px !important;
+      }
+    }
+
+  
+/* =========================================================
+   NEW PORTFOLIO CASE-STUDY SYSTEM
+   Matches the Tether publish-ready direction
+   ========================================================= */
+
+:root{
+  --case-navy:#182536;
+  --case-navy-deep:#0d1724;
+  --case-steel:#324963;
+  --case-steel-light:#71869c;
+  --case-ice:#eef1f4;
+  --case-paper:#f5f6f7;
+  --case-line:#d4d9de;
+  --page-gutter:7vw;
+  --page-max:1440px;
+  --interaction-navy:#182536;
+}
+
+/* Hero */
+.hero{
+  display:block !important;
+  min-height:auto !important;
+  padding:0 !important;
+  overflow:hidden !important;
+  position:relative !important;
+  color:#fff !important;
+  background:
+    radial-gradient(circle at 80% 58%, rgba(50,73,99,.34) 0%, rgba(50,73,99,0) 34%),
+    linear-gradient(135deg,var(--case-navy-deep) 0%,var(--case-navy) 62%,var(--case-steel) 100%) !important;
+  border-bottom:none !important;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(rgba(255,255,255,.032) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.032) 1px,transparent 1px);
+  background-size:120px 120px;
+  pointer-events:none;
+}
+.hero::after{display:none !important;content:none !important}
+
+.case-hero{
+  position:relative;
+  z-index:1;
+  width:min(var(--page-max),calc(100% - (2 * var(--page-gutter))));
+  margin:0 auto;
+  padding:88px 0 74px;
+}
+.case-hero-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+  margin-bottom:78px;
+}
+.case-hero-logo{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:160px;
+  min-height:60px;
+  padding:13px 18px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;
+  background:rgba(13,23,36,.68);
+  text-decoration:none !important;
+}
+.case-hero-logo img{
+  display:block;
+  width:auto;
+  max-width:140px;
+  max-height:38px;
+  object-fit:contain;
+}
+.case-hero-pills{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:10px;
+}
+.case-hero-pills span{
+  padding:9px 14px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:999px;
+  color:rgba(255,255,255,.72);
+  font-size:10px;
+  line-height:1;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.case-hero-kicker{
+  margin-bottom:24px;
+  color:#9fb0c3;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.045em;
+}
+.case-hero h1{
+  margin:0;
+  max-width:1240px;
+  font-family:"Manrope",sans-serif;
+  color:#fff;
+  font-size:clamp(70px,8.1vw,134px);
+  line-height:.91;
+  letter-spacing:-.064em;
+  font-weight:400;
+}
+.case-hero h1 span{
+  display:block;
+  color:#a8b7c8;
+  margin-top:.08em;
+}
+.case-hero-bottom{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(300px,.36fr);
+  gap:58px;
+  align-items:end;
+  margin-top:52px;
+  padding-top:32px;
+  border-top:1px solid rgba(255,255,255,.15);
+}
+.case-hero-copy{
+  margin:0;
+  max-width:960px;
+  color:rgba(255,255,255,.80);
+  font-size:17px;
+  line-height:1.75;
+}
+.case-hero-role{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:5px;
+  text-align:right;
+}
+.case-hero-role strong{
+  color:#fff;
+  font-family:"Manrope",sans-serif;
+  font-size:18px;
+  font-weight:500;
+}
+.case-hero-role .role{
+  color:rgba(255,255,255,.82);
+  font-size:13px;
+  font-weight:500;
+}
+.case-hero-role .context{
+  color:rgba(255,255,255,.56);
+  font-size:12px;
+  line-height:1.5;
+}
+
+/* Shared spacing */
+.content{
+  width:100% !important;
+  max-width:none !important;
+  padding-left:var(--page-gutter) !important;
+  padding-right:var(--page-gutter) !important;
+}
+.content-grid{
+  width:min(var(--page-max),100%) !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+.main-column > .section,
+.main-column > section,
+.main-column > .backing-block{
+  margin-left:0 !important;
+  margin-right:0 !important;
+}
+.project-nav{
+  width:100% !important;
+  padding-left:var(--page-gutter) !important;
+  padding-right:var(--page-gutter) !important;
+}
+.project-nav-inner{
+  width:min(var(--page-max),100%) !important;
+  max-width:none !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+.project-link{
+  width:calc(50% - 24px) !important;
+}
+.project-link.right{
+  margin-left:auto !important;
+  text-align:right !important;
+}
+
+/* Harmonize section heading weight */
+.main-column h2{
+  font-weight:400 !important;
+  letter-spacing:-.045em !important;
+}
+
+/* Light contact, like the new Tether format */
+.bottom{
+  background:var(--case-ice) !important;
+  color:var(--case-navy-deep) !important;
+  padding-left:var(--page-gutter) !important;
+  padding-right:var(--page-gutter) !important;
+}
+.bottom h2,
+.bottom .bottom-title,
+.bottom .contact-title{
+  color:var(--case-navy-deep) !important;
+}
+.bottom .bottom-label,
+.bottom .footer-copy,
+.bottom .footer-location{
+  color:var(--case-steel-light) !important;
+}
+.bottom a,
+.bottom a:link,
+.bottom a:visited{
+  color:var(--case-navy) !important;
+  border-color:rgba(24,37,54,.23) !important;
+  background:transparent !important;
+}
+.bottom a:hover,
+.bottom a:active,
+.bottom a:focus-visible{
+  color:#fff !important;
+  background:var(--case-navy) !important;
+  border-color:var(--case-navy) !important;
+}
+.contact-block,
+.footer-inner{
+  width:min(var(--page-max),100%) !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+/* All clickable text on light surfaces = navbar navy */
+.content a,
+.content a:link,
+.content a:visited,
+.content a:hover,
+.content a:active,
+.content a:focus-visible,
+.sidebar a,
+.sidebar a:link,
+.sidebar a:visited,
+.sidebar a:hover,
+.sidebar a:active,
+.backing-copy a,
+.backing-copy a:link,
+.backing-copy a:visited,
+.backing-copy a:hover,
+.backing-copy a:active,
+.leadership-links a,
+.leadership-links a:link,
+.leadership-links a:visited,
+.leadership-links a:hover,
+.leadership-links a:active{
+  color:var(--interaction-navy) !important;
+  text-decoration-color:var(--interaction-navy) !important;
+  opacity:1 !important;
+}
+.content a:hover,
+.sidebar a:hover,
+.backing-copy a:hover,
+.leadership-links a:hover{
+  color:var(--case-navy-deep) !important;
+  text-decoration-color:var(--case-navy-deep) !important;
+}
+
+/* Sidebar links remain compact */
+.sidebar .sidebar-value a,
+.sidebar .sidebar-value a:link,
+.sidebar .sidebar-value a:visited,
+.sidebar .sidebar-value a:hover,
+.sidebar .sidebar-value a:active{
+  display:inline !important;
+  color:var(--case-navy) !important;
+  font:inherit !important;
+  font-size:inherit !important;
+  line-height:inherit !important;
+  letter-spacing:inherit !important;
+  text-decoration:none !important;
+  border-bottom:1px solid rgba(24,37,54,.28) !important;
+  padding-bottom:2px !important;
+}
+
+/* Cleaner interactions */
+a:focus-visible,
+button:focus-visible{
+  outline:2px solid var(--case-navy) !important;
+  outline-offset:3px !important;
+}
+
+@media(max-width:900px){
+  .case-hero{
+    width:calc(100% - 48px);
+    padding:66px 0 58px;
+  }
+  .case-hero-top{
+    flex-direction:column;
+    align-items:flex-start;
+    margin-bottom:58px;
+  }
+  .case-hero-pills{justify-content:flex-start}
+  .case-hero-bottom{
+    grid-template-columns:1fr;
+    gap:26px;
+  }
+  .case-hero-role{
+    align-items:flex-start;
+    text-align:left;
+  }
+}
+@media(max-width:760px){
+  :root{--page-gutter:24px}
+  .case-hero{
+    width:calc(100% - 48px);
+    padding:52px 0 46px;
+  }
+  .case-hero h1{
+    font-size:clamp(52px,15vw,76px);
+    line-height:.94;
+  }
+  .case-hero-copy{
+    font-size:15px;
+    line-height:1.68;
+  }
+  .project-link{
+    width:100% !important;
+  }
+  .project-link.right{
+    margin-left:0 !important;
+    text-align:left !important;
+  }
+}
+
+</style>
 
 </head>
 
@@ -3320,7 +3100,7 @@
 
 
       <a
-        href="/lowsignal"
+        href="/geovictoria"
         class="lang-switch"
         aria-label="View site in English"
       >
@@ -3339,235 +3119,43 @@
        HERO
   ====================================================== -->
 
-  <section class="hero">
-
-
-    <!-- LEFT -->
-
-    <div class="hero-visual">
-
-
-      <div class="visual-top">
-
-        <span>
-          Sistemas de crecimiento
-        </span>
-
-        <span>
-          Compañía / 02
-        </span>
-
+  
+<section class="hero">
+  <div class="case-hero">
+    <div class="case-hero-top">
+      <div class="case-hero-logo" aria-label="GeoVictoria">
+        <img src="/geovictoria-logo.png" alt="GeoVictoria">
       </div>
-
-
-
-      <div class="visual-middle">
-
-
-        <div class="growth-map">
-
-
-          <div class="growth-main">
-
-
-            <div class="growth-node">
-              Estrategia
-            </div>
-
-
-            <div class="growth-line"></div>
-
-
-            <div class="growth-node main">
-              Sistemas
-            </div>
-
-
-            <div class="growth-line"></div>
-
-
-            <div class="growth-node">
-              Growth
-            </div>
-
-
-          </div>
-
-
-
-          <div class="growth-support">
-
-
-            <div class="growth-support-block">
-
-              <div class="growth-support-title">
-                Estrategia
-              </div>
-
-              <div class="growth-support-copy">
-                Posicionamiento<br>
-                GTM<br>
-                Brand
-              </div>
-
-            </div>
-
-
-
-            <div class="growth-support-block">
-
-              <div class="growth-support-title">
-                Sistemas
-              </div>
-
-              <div class="growth-support-copy">
-                Web<br>
-                AI<br>
-                Automatización
-              </div>
-
-            </div>
-
-
-
-            <div class="growth-support-block">
-
-              <div class="growth-support-title">
-                Growth
-              </div>
-
-              <div class="growth-support-copy">
-                Ads<br>
-                Contenido<br>
-                Producto
-              </div>
-
-            </div>
-
-
-          </div>
-
-
-        </div>
-
-
+      <div class="case-hero-pills">
+        <span>Trabajo seleccionado / 01</span>
+        <span>2026 — Presente</span>
+        <span>Product / B2B SaaS</span>
       </div>
-
-
-
-      <div class="visual-bottom">
-
-
-        <div class="visual-kicker">
-          Menos ruido. Más crecimiento.
-        </div>
-
-
-        <h2 class="visual-title">
-
-          Construyendo el sistema
-
-          <span>
-            detrás del crecimiento.
-          </span>
-
-        </h2>
-
-
-      </div>
-
-
     </div>
 
+    <div class="case-hero-kicker">Workforce Management / Producto / IA</div>
 
+    <h1>
+      Sistemas de producto
+      <span>para operaciones reales.</span>
+    </h1>
 
-    <!-- RIGHT -->
-
-    <div class="hero-content">
-
-
-      <div class="hero-content-inner">
-
-
-        <a
-          href="https://www.lowsignal.cl/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="company-logo"
-          aria-label="Visitar lowsignal"
-        >
-
-          <img
-            src="../lowsignal-logo.png"
-            alt="lowsignal"
-          >
-
-        </a>
-
-
-        <div class="case-label">
-          Trabajo seleccionado / 02
-        </div>
-
-
-        <div class="case-period">
-          Co-Founder & COO · 2025 — Presente
-        </div>
-
-
-        <h1>
-          lowsignal
-        </h1>
-
-
-        <div class="hero-role">
-          Co-Founder & COO · Sistemas de crecimiento
-        </div>
-
-
-        <p class="hero-description">
-
-          Lidero operaciones, estrategia comercial y entrega de producto,
-          construyendo sistemas de crecimiento que combinan estrategia, IA,
-          automatización, experiencias digitales y rendimiento
-          para generar crecimiento sostenible.
-
-        </p>
-
-
-        <div class="tags">
-
-          <div class="tag">
-            Growth
-          </div>
-
-          <div class="tag">
-            Operaciones
-          </div>
-
-          <div class="tag">
-            Construcción de compañía
-          </div>
-
-          <div class="tag">
-            Productos digitales
-          </div>
-
-        </div>
-
-
+    <div class="case-hero-bottom">
+      <p class="case-hero-copy">Lidero la estrategia y evolución de productos de Workforce Management para operaciones reales, conectando necesidades de clientes, oportunidades de negocio y tecnología desde planificación hasta adopción.</p>
+      <div class="case-hero-role">
+        <strong>GeoVictoria</strong>
+        <span class="role">Product Manager · Workforce Management</span>
+        <span class="context">20+ países · 10.000+ clientes</span>
       </div>
-
-
     </div>
+  </div>
+</section>
 
-
-  </section>
 
 
 
   <!-- =====================================================
-       CONTENT
+       MAIN CONTENT
   ====================================================== -->
 
   <main class="content">
@@ -3576,498 +3164,323 @@
     <div class="content-grid">
 
 
+      <!-- MAIN COLUMN -->
+
       <div class="main-column">
 
 
-        <!-- COMPANY -->
-
-        <section class="section">
-
-
-          <div class="section-label">
-            01 / Compañía
-          </div>
-
-
-          <h2>
-            Construyendo una compañía,
-            no solo campañas.
-          </h2>
-
-
-          <div class="section-copy">
-
-
-            <p>
-
-              lowsignal nació de una idea simple:
-              el crecimiento funciona mejor cuando estrategia,
-              tecnología, creatividad y operaciones están
-              conectadas, en vez de gestionarse como
-              piezas aisladas.
-
-            </p>
-
-
-            <p>
-
-              En vez de tratar el marketing como un conjunto
-              de campañas desconectadas, construimos sistemas
-              que conectan adquisición, contenido,
-              productos digitales, automatización y ejecución.
-
-            </p>
-
-
-          </div>
-
-
-        
-
-          <div class="proof-grid">
-
-            <div class="proof-item">
-              <strong>15+</strong>
-              <span>Organizaciones con las que hemos trabajado</span>
-            </div>
-
-            <div class="proof-item">
-              <strong>5+</strong>
-              <span>Industrias</span>
-            </div>
-
-            <div class="proof-item">
-              <strong>End-to-end</strong>
-              <span>Motor comercial</span>
-            </div>
-
-            <div class="proof-item">
-              <strong>Cross-functional</strong>
-              <span>Producto · Marketing · Diseño · Ventas · CS</span>
-            </div>
-
-          </div>
-
-          <div class="cofounder-card">
-
-            <img
-              src="/damian-aldunate.jpg"
-              alt="Damián Aldunate"
-              class="cofounder-photo"
-              loading="lazy"
-            >
-
-            <div>
-
-              <div class="cofounder-eyebrow">
-                Liderazgo
-              </div>
-
-              <h3 class="cofounder-name">
-                Damián Aldunate
-              </h3>
-
-              <p class="cofounder-meta">
-                Co-Founder &amp; CMO, lowsignal
-              </p>
-
-              <p class="cofounder-copy">
-                Junto a Damián, construimos lowsignal desde
-                roles complementarios entre marca, growth,
-                operación y desarrollo de negocio.
-              </p>
-
-              <div class="cofounder-links">
-
-                <a
-                  href="https://www.linkedin.com/in/damianaldunate/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn de Damián Aldunate"
-                  title="LinkedIn"
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
-                  </svg>
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-        
-
-          
-</section>
-
-
-
-        
-
-        <!-- MY ROLE -->
+        <!-- ROLE -->
 
         <section class="section">
 
           <div class="section-label">
-            02 / Mi rol
+            01 / Mi rol
           </div>
 
           <h2>
-            Operando el sistema
-            detrás de la compañía.
+            De estrategia
+            a adopción.
           </h2>
 
           <div class="section-copy">
 
             <p>
-              Como Co-Founder & COO, lidero operaciones,
-              estrategia comercial y entrega de producto.
-              Mi trabajo cruza cómo vendemos, cómo entregamos
-              y cómo escalamos — convirtiendo oportunidades,
-              procesos y aprendizajes en sistemas repetibles.
+              Como Product Manager, lidero la estrategia,
+              roadmap y priorización de tres productos de
+              Workforce Management, equilibrando necesidades
+              de clientes, impacto de negocio y factibilidad técnica.
+            </p>
+
+            <p>
+              Trabajo desde discovery y validación con clientes
+              hasta ejecución, pilotos y adopción, conectando
+              oportunidades de mercado con soluciones escalables
+              junto a equipos de Engineering, Design, Sales,
+              Customer Success, Operations y Support.
             </p>
 
           </div>
 
-          <div class="role-list">
 
-            <div class="role-item">
-              <div class="role-number">01</div>
-              <strong>Operaciones y ejecución de la compañía</strong>
-            </div>
 
-            <div class="role-item">
-              <div class="role-number">02</div>
-              <strong>Generación de demanda, propuestas y negociación</strong>
-            </div>
 
-            <div class="role-item">
-              <div class="role-number">03</div>
-              <strong>Crecimiento de cuentas y estrategia de salida al mercado</strong>
-            </div>
+        </section>
 
-            <div class="role-item">
-              <div class="role-number">04</div>
-              <strong>Entrega de producto y soluciones digitales</strong>
-            </div>
 
-            <div class="role-item">
-              <div class="role-number">05</div>
-              <strong>Liderazgo transversal entre Producto, Marketing, Diseño, Ventas y Customer Success</strong>
-            </div>
+        <section class="section">
+          <div class="section-label">02 / Personas · Liderazgo</div>
 
-            <div class="role-item">
-              <div class="role-number">06</div>
-              <strong>Dashboards, reportes y procesos escalables</strong>
-            </div>
+          <div class="people-block">
 
-          </div>
+            <div class="leadership-card">
 
-<div class="founders-editorial">
-              <div class="founders-media">
+              <div class="leadership-photo">
                 <img
-                  src="/lowsignal-founders.jpg"
-                  alt="Felipe Quiroz y Damián Aldunate, fundadores de lowsignal"
+                  src="../francisca-astudillo.jpg"
+                  alt="Francisca Astudillo"
                   loading="lazy"
                 >
               </div>
 
-              <div class="founders-copy">
-                <div class="founders-kicker">Construyendo juntos</div>
-                <h3 class="founders-title">Construyendo lowsignal desde cero.</h3>
-                <p class="founders-text">
-                  Construimos lowsignal como una apuesta por crear sistemas de crecimiento
-                  que conecten estrategia, ejecución, tecnología y resultados medibles.
-                  Junto a Damián, trabajamos desde roles complementarios entre operación,
-                  marca y crecimiento.
+              <div>
+                <div class="leadership-eyebrow">Liderazgo de compañía</div>
+                <h3 class="leadership-name">Francisca Astudillo</h3>
+                <div class="leadership-role">CEO · GeoVictoria</div>
+                <p class="leadership-copy">
+                  Liderazgo ejecutivo conectando estrategia de compañía,
+                  crecimiento de mercado y evolución de GeoVictoria.
                 </p>
-                <div class="founders-meta">
-                  Felipe Quiroz &amp; Damián Aldunate · Co-Founders
+
+                <div class="leadership-links">
+                  <a
+                    class="leadership-linkedin"
+                    href="https://www.linkedin.com/in/francisca-astudillo-bessi-200b2432/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn de Francisca Astudillo"
+                  >
+                    in
+                  </a>
                 </div>
               </div>
+
             </div>
 
+            <div class="leadership-card">
+
+              <div class="leadership-photo">
+                <img
+                  src="../nicolas-garcias.jpg"
+                  alt="Nicolás Garcías"
+                  loading="lazy"
+                >
+              </div>
+
+              <div>
+                <div class="leadership-eyebrow">Liderazgo de producto</div>
+                <h3 class="leadership-name">Nicolás Garcías</h3>
+                <div class="leadership-role">Chief Product Officer · GeoVictoria</div>
+                <p class="leadership-copy">
+                  Liderazgo de producto sobre estrategia, prioridades
+                  y evolución del portafolio de productos de GeoVictoria.
+                </p>
+                <div class="leadership-links">
+                  <a
+                    class="leadership-linkedin"
+                    href="https://www.linkedin.com/in/ngarcias/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn de Nicolás Garcías"
+                  >
+                    in
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="leadership-card">
+
+              <div class="leadership-photo">
+                <img
+                  src="/rodrigo-lewit.jpg"
+                  alt="Rodrigo Lewit"
+                  loading="lazy"
+                >
+              </div>
+
+              <div>
+                <div class="leadership-eyebrow">Liderazgo comercial</div>
+                <h3 class="leadership-name">Rodrigo Lewit</h3>
+                <div class="leadership-role">Co-Founder &amp; Chief Commercial Officer · GeoVictoria</div>
+                <p class="leadership-copy">
+                  Co-fundador y líder comercial de GeoVictoria, con foco en crecimiento,
+                  go-to-market y desarrollo de relaciones con clientes y mercados.
+                </p>
+                <div class="leadership-links">
+                  <a
+                    class="leadership-linkedin"
+                    href="https://www.linkedin.com/in/rodrigo-lewit-rozenfeld-05190118/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn de Rodrigo Lewit"
+                  >
+                    in
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
         </section>
-        <section class="section team-section">
-          <div class="team-section-inner">
-            <div class="section-label">Equipo</div>
 
-            <div class="team-intro">
-              <h2 class="team-title">Las personas con las que construimos lowsignal.</h2>
-              <p class="team-copy">
-                Trabajo con un equipo multidisciplinario que conecta estrategia, desarrollo comercial,
-                contenido y producción audiovisual para convertir ideas en sistemas, campañas y experiencias
-                que generan resultados reales.
-              </p>
-            </div>
 
-            <div class="team-grid">
-              <article class="team-member">
-                <img src="/marco-kroeger.jpg" alt="Marco Kroeger" class="team-photo" loading="lazy">
-                <div class="team-meta">
-                  <h3 class="team-name">Marco Kroeger</h3>
-                  <p class="team-role">Business Development</p>
-                  <div class="team-links">
-                    <a href="https://www.linkedin.com/in/marcokroeger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Marco Kroeger" title="LinkedIn">
-                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg>
-                    </a>
-                  </div>
-                </div>
-              </article>
+        <section class="section wfm-intro">
+          <div class="wfm-intro-inner">
+            <div class="section-label">03 / Workforce Management</div>
 
-              <article class="team-member">
-                <img src="/lia-morice.jpg" alt="Lía Morice" class="team-photo" loading="lazy">
-                <div class="team-meta">
-                  <h3 class="team-name">Lía Morice</h3>
-                  <p class="team-role">Content Creator</p>
-                  <div class="team-links">
-                    <a href="https://www.linkedin.com/in/l%C3%ADa-morice-b31521419/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Lía Morice" title="LinkedIn">
-                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg>
-                    </a>
-                  </div>
-                </div>
-              </article>
+            <h2 class="wfm-intro-title">
+              ¿Qué es Workforce Management (WFM)?
+            </h2>
 
-              <article class="team-member">
-                <img src="/martin-alvarado.jpg" alt="Martín Alvarado" class="team-photo" loading="lazy">
-                <div class="team-meta">
-                  <h3 class="team-name">Martín Alvarado</h3>
-                  <p class="team-role">Audiovisual Producer</p>
-                  <div class="team-links">
-                    <a href="https://www.linkedin.com/in/martin-alvaradod" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Martín" title="LinkedIn">
-                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg>
-                    </a>
-                  </div>
-                </div>
-              </article>
+            <p class="wfm-intro-lead">
+              De registrar qué pasó, a decidir qué debería pasar.
+            </p>
 
-              <article class="team-member">
-                <img src="/jorge-munoz.jpg" alt="Jorge Muñoz" class="team-photo" loading="lazy">
-                <div class="team-meta">
-                  <h3 class="team-name">Jorge Muñoz</h3>
-                  <p class="team-role">Audiovisual Producer</p>
-                  <div class="team-links">
-                    <a href="https://www.linkedin.com/in/jorgemunozve/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Jorge Muñoz" title="LinkedIn">
-                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg>
-                    </a>
-                  </div>
-                </div>
-              </article>
+            <div class="wfm-intro-split">
+              <div class="wfm-intro-media">
+                <img
+                  src="/geovictoria-workforce-management-es.jpg"
+                  alt="Visual sobre Workforce Management en GeoVictoria"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="wfm-intro-copy">
+                <p>
+                  Tener más personas de las necesarias cuesta dinero.
+                  Tener menos cuesta operación. Y tenerlas en el horario
+                  equivocado cuesta ambas.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
 
 
-
-
-        <!-- WHAT WE BUILD -->
+        <!-- INITIATIVES -->
 
         <section class="section">
 
 
           <div class="section-label">
-            03 / Qué construimos
+            04 / Productos
           </div>
 
 
           <h2>
-            Un sistema.
-            Múltiples capas de growth.
+            Tres productos.
+            Un mismo sistema operativo.
           </h2>
 
 
 
-          <div class="solutions">
+          <div class="initiatives">
 
 
-            <div class="solution">
+            <div class="initiative">
 
 
-              <div class="solution-number">
+              <div class="initiative-number">
                 01
               </div>
 
 
-              <h3>
-                Low Social
-              </h3>
+              <div>
 
 
-              <div class="solution-type">
-                Social Media
+                <h3>
+                  Planificador Inteligente
+                </h3>
+
+
+                <div class="initiative-type">
+                  Planificación
+                </div>
+
+                <div class="initiative-note">Planificación para operaciones complejas</div>
+
+
+                <p>
+
+                  Planificación de dotación y turnos para
+                  operaciones complejas, conectando reglas,
+                  necesidades de cobertura y decisiones de staffing.
+
+                </p>
+
+
               </div>
-
-
-              <p>
-
-                Sistemas de social media y contenido
-                diseñados para mantener consistencia de marca,
-                distribución y una ejecución repetible.
-
-              </p>
 
 
             </div>
 
 
 
-            <div class="solution">
+            <div class="initiative">
 
 
-              <div class="solution-number">
+              <div class="initiative-number">
                 02
               </div>
 
 
-              <h3>
-                Low Ads
-              </h3>
+              <div>
 
 
-              <div class="solution-type">
-                Performance
+                <h3>
+                  Optimizador de Turnos
+                </h3>
+
+
+                <div class="initiative-type">
+                  Optimización
+                </div>
+
+                <div class="initiative-note">Demanda · Disponibilidad · Restricciones operativas</div>
+
+
+                <p>
+
+                  MVP de optimización orientado a cruzar
+                  disponibilidad, demanda y restricciones operativas
+                  para apoyar decisiones de dotación más eficientes.
+
+                </p>
+
+
               </div>
-
-
-              <p>
-
-                Sistemas de adquisición pagada y rendimiento
-                enfocados en crecimiento medible
-                y optimización continua.
-
-              </p>
 
 
             </div>
 
 
 
-            <div class="solution">
+            <div class="initiative">
 
 
-              <div class="solution-number">
+              <div class="initiative-number">
                 03
               </div>
 
 
-              <h3>
-                Low Web
-              </h3>
+              <div>
 
 
-              <div class="solution-type">
-                Desarrollo web
+                <h3>
+                  Flujo de Cambio de Turno
+                </h3>
+
+
+                <div class="initiative-type">
+                  Workflow
+                </div>
+
+                <div class="initiative-note">Flexibilidad con control operacional</div>
+
+
+                <p>
+
+                  Workflow para cambios e intercambios de turno,
+                  con reglas configurables, aprobaciones y validaciones
+                  que entregan flexibilidad sin perder control operacional.
+
+                </p>
+
+
               </div>
-
-
-              <p>
-
-                Sitios web y experiencias digitales
-                construidos como parte de un sistema de
-                growth, no como activos aislados.
-
-              </p>
-
-
-            </div>
-
-
-
-            <div class="solution">
-
-
-              <div class="solution-number">
-                04
-              </div>
-
-
-              <h3>
-                Low Scale
-              </h3>
-
-
-              <div class="solution-type">
-                Sistemas de crecimiento
-              </div>
-
-
-              <p>
-
-                Infraestructura de growth que conecta
-                adquisición, posicionamiento, procesos
-                y ejecución escalable.
-
-              </p>
-
-
-            </div>
-
-
-
-            <div class="solution">
-
-
-              <div class="solution-number">
-                05
-              </div>
-
-
-              <h3>
-                Low Apps
-              </h3>
-
-
-              <div class="solution-type">
-                Productos y apps
-              </div>
-
-
-              <p>
-
-                Productos digitales, apps y herramientas
-                diseñados alrededor de problemas específicos
-                de operación o crecimiento.
-
-              </p>
-
-
-            </div>
-
-
-
-            <div class="solution">
-
-
-              <div class="solution-number">
-                06
-              </div>
-
-
-              <h3>
-                Low Flow
-              </h3>
-
-
-              <div class="solution-type">
-                IA y automatización
-              </div>
-
-
-              <p>
-
-                IA, automatización y flujos operativos
-                que eliminan trabajo repetitivo y crean
-                apalancamiento para los equipos.
-
-              </p>
 
 
             </div>
@@ -4080,364 +3493,212 @@
 
 
 
-        <!-- OPERATING MODEL -->
+        <!-- HOW I WORK -->
 
         <section class="section">
 
-
           <div class="section-label">
-            04 / Modelo operativo
+            05 / Cómo construyo producto
           </div>
 
-
           <h2>
-            La estrategia solo sirve
-            cuando se convierte en sistema.
+            Del problema
+            al producto escalable.
           </h2>
-
 
           <div class="section-copy">
 
             <p>
-              La estrategia solo sirve cuando se convierte en sistema.
-              Por eso construimos dashboards, marcos de reporte,
-              procesos de entrega y ciclos de revisión que mejoran
-              visibilidad, decisiones, eficiencia y valor de largo plazo.
+              Trabajo cerca de clientes y operaciones reales para
+              entender problemas, validar supuestos y decidir qué
+              vale la pena construir antes de escalar desarrollo.
             </p>
 
           </div>
 
+          <div class="work-list">
 
-
-          <div class="operating-list">
-
-
-            <div class="operating-item">
-
-              <div class="operating-number">
-                01
-              </div>
-
-              <strong>
-                Construir
-              </strong>
-
-              <span>
-                Infrastructure
-              </span>
-
+            <div class="work-item">
+              <div class="work-number">01</div>
+              <strong>Discovery directo con clientes y operaciones</strong>
             </div>
 
-
-            <div class="operating-item">
-
-              <div class="operating-number">
-                02
-              </div>
-
-              <strong>
-                Operar
-              </strong>
-
-              <span>
-                Ejecución
-              </span>
-
+            <div class="work-item">
+              <div class="work-number">02</div>
+              <strong>Roadmap, priorización y definición de oportunidades</strong>
             </div>
 
-
-            <div class="operating-item">
-
-              <div class="operating-number">
-                03
-              </div>
-
-              <strong>
-                Escalar
-              </strong>
-
-              <span>
-                Growth
-              </span>
-
+            <div class="work-item">
+              <div class="work-number">03</div>
+              <strong>MVPs habilitados por IA: concepto, piloto y validación</strong>
             </div>
 
+            <div class="work-item">
+              <div class="work-number">04</div>
+              <strong>Ejecución transversal con Engineering, Design, Sales y Customer Success</strong>
+            </div>
+
+            <div class="work-item">
+              <div class="work-number">05</div>
+              <strong>Métricas, feedback, experimentación y aprendizaje</strong>
+            </div>
+
+            <div class="work-item">
+              <div class="work-number">06</div>
+              <strong>Adopción, mejora continua y escalamiento</strong>
+            </div>
 
           </div>
-
 
         </section>
 
 
 
-        <!-- CLIENT WORK -->
+        <!-- CONTEXT -->
 
-        <section class="section client-work">
-
+        <section class="section">
 
           <div class="section-label">
-            05 / Trabajo con clientes
+            06 / Escalar
           </div>
-
 
           <h2>
-            Construyendo cerca
-            del problema.
+            Producto para operaciones
+            en múltiples mercados.
           </h2>
 
-
-          <div class="client-work-copy">
+          <div class="section-copy">
 
             <p>
-              El trabajo con clientes parte por entender
-              cómo operan, dónde se pierde tiempo y qué
-              necesita conectarse. Desde ahí, convertimos
-              estrategia en sistemas que los equipos pueden
-              usar, medir y mejorar.
+              GeoVictoria sirve a más de 10.000 clientes en 20+ países.
+              En ese contexto, construir Workforce Management implica
+              diseñar para escala, complejidad operacional y realidades
+              locales muy distintas.
             </p>
 
           </div>
 
+          <div class="scale-grid">
 
-          <figure class="client-work-figure">
-
-            <div class="client-work-media">
-
-              <img
-                src="../lowsignal-client-work.jpg"
-                alt="Sesión de trabajo de lowsignal con clientes"
-                loading="lazy"
-              >
-
+            <div class="scale-item">
+              <strong>3</strong>
+              <span>Productos que lidero</span>
             </div>
 
-            <figcaption class="client-work-caption">
-              <span>lowsignal</span>
-              <span>Sesión de trabajo con clientes</span>
-            </figcaption>
+            <div class="scale-item">
+              <strong>10.000+</strong>
+              <span>Clientes de GeoVictoria</span>
+            </div>
 
-          </figure>
+            <div class="scale-item">
+              <strong>20+</strong>
+              <span>Países</span>
+            </div>
 
+            <div class="scale-item">
+              <strong>Cross-functional</strong>
+              <span>Engineering · Design · Sales · CS · Ops</span>
+            </div>
+
+          </div>
 
         </section>
 
 
-      
         
-        <!-- TESTIMONIO CLIENTE -->
-        <section class="section testimonial-section testimonial-visible">
 
-          <div class="section-label">
-            06 / Testimonio de cliente
-          </div>
 
-          <div class="testimonial testimonial-text-only">
-            <p class="testimonial-quote">
-              “lowsignal se ha convertido en un aliado estratégico para nuestra red.
-              Entendieron nuestra visión y se involucraron de verdad en el proyecto.”
-            </p>
+        
+        
 
-            <div class="testimonial-person">
-              <strong>Nicolás Muñoz</strong>
-              <span>Director Ejecutivo · Red Educacional Camilo Henríquez</span>
-            </div>
-          </div>
 
-        </section>
+        <section class="section company-signals">
+          <div class="company-signals-inner">
+            <div class="section-label">07 / Company Signals</div>
 
-                <!-- SELECTED CASES -->
-        <section class="section cases-section">
-
-          <div class="section-label">
-            07 / Casos seleccionados
-          </div>
-
-          <div class="cases-intro">
-
-            <h2>
-              Sistemas aplicados
-              a negocios reales.
+            <h2 class="company-signals-title">
+              Señales de escala, ecosistema y madurez tecnológica.
             </h2>
 
-            <div class="section-copy">
-              <p>
-                Una selección de proyectos donde combinamos estrategia,
-                tecnología, contenido y ejecución para resolver problemas
-                distintos con sistemas de crecimiento concretos.
-              </p>
+            <div class="company-signals-grid">
+              <div class="company-signal">
+                <h3 class="company-signal-name">Endeavor</h3>
+                <p class="company-signal-copy">
+                  GeoVictoria forma parte de la comunidad global de emprendimiento
+                  de alto impacto impulsada por Endeavor.
+                </p>
+              </div>
+
+              <div class="company-signal">
+                <h3 class="company-signal-name">Microsoft Gold Partner</h3>
+                <p class="company-signal-copy">
+                  Una credencial que refleja capacidades técnicas, estándares de
+                  implementación y experiencia construyendo soluciones empresariales.
+                </p>
+              </div>
             </div>
-
           </div>
-
-          <div class="cases-grid">
-
-            <a
-              class="case-card"
-              href="https://www.lowsignal.cl/casos-de-exito/gets"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="case-card-main">
-
-                <div class="case-card-topline">
-                  <span class="case-card-number">01 / GETS Educación</span>
-                  <span class="case-card-type">Sistema de crecimiento · Contenido · Rendimiento · Web</span>
-                </div>
-
-                <h3>
-                  Fortaleciendo el crecimiento
-                  digital de GETS Educación.
-                </h3>
-<div class="case-tags"><span>Contenido</span><span>Social</span><span>Performance</span></div>
-
-                <p>
-Gestión continua de contenidos, campañas y ejecución digital para fortalecer consistencia, presencia y resultados.
-</p>
-
-              </div>
-
-              <div class="case-card-side">
-
-                <div class="case-card-layers">
-
-                  <div class="case-layer">
-                    <strong>Content system</strong>
-                    <span>Planificación, piezas, reels, stories y producción audiovisual.</span>
-                  </div>
-
-                  <div class="case-layer">
-                    <strong>Performance</strong>
-                    <span>Campañas para amplificar alcance y capturar demanda.</span>
-                  </div>
-
-                  <div class="case-layer">
-                    <strong>Web experience</strong>
-                    <span>Soporte digital para ordenar la propuesta y acompañar conversión.</span>
-                  </div>
-
-                </div>
-
-                <span class="case-card-link">
-                  Ver caso completo
-                </span>
-
-              </div>
-            </a>
-
-            <a
-              class="case-card"
-              href="https://www.lowsignal.cl/casos-de-exito/fcct"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="case-card-main">
-
-                <div class="case-card-topline">
-                  <span class="case-card-number">02 / Fundación Crecer con Todos</span>
-                  <span class="case-card-type">Experiencia digital · Plataforma web</span>
-                </div>
-
-                <h3>
-                  Una plataforma diseñada
-                  para amplificar su impacto.
-                </h3>
-
-                <p>
-                  Rediseñamos la experiencia digital de Fundación Crecer con Todos
-                  para fortalecer su presencia online, facilitar el acceso a sus
-                  recursos educativos y comunicar su impacto a una audiencia
-                  nacional e internacional.
-                </p>
-
-              </div>
-
-              <div class="case-card-side">
-
-                <div class="case-card-layers">
-
-                  <div class="case-layer">
-                    <strong>Digital experience</strong>
-                    <span>Una experiencia web más clara, navegable y coherente con la misión de la fundación.</span>
-                  </div>
-
-                  <div class="case-layer">
-                    <strong>Information architecture</strong>
-                    <span>Organización de contenidos y recursos para facilitar acceso y descubrimiento.</span>
-                  </div>
-
-                  <div class="case-layer">
-                    <strong>Impact communication</strong>
-                    <span>Estructura pensada para comunicar programas, alcance y propuesta de valor.</span>
-                  </div>
-
-                </div>
-
-                <span class="case-card-link">
-                  Ver caso completo
-                </span>
-
-              </div>
-            </a>
-
-            <a
-              class="case-card"
-              href="https://www.lowsignal.cl/casos-de-exito/dulce-reino"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="case-card-main">
-
-                <div class="case-card-topline">
-                  <span class="case-card-number">03 / DulceReino</span>
-                  <span class="case-card-type">Marca · Contenido · Estrategia digital</span>
-                </div>
-
-                <h3>
-                  Creando una marca que conquista
-                  a través de cada detalle.
-                </h3>
-
-                <p>
-                  Construimos una presencia digital coherente que combina contenido,
-                  identidad y estrategia para fortalecer la marca y sostener
-                  su crecimiento en el tiempo.
-                </p>
-
-              </div>
-
-              <div class="case-card-side">
-
-                <div class="case-card-layers">
-
-                  <div class="case-layer">
-                    <strong>Brand system</strong>
-                    <span>Una identidad consistente aplicada a los puntos de contacto digitales.</span>
-                  </div>
-
-                  <div class="case-layer">
-                    <strong>Estrategia de contenido</strong>
-                    <span>Contenido pensado para construir marca, mantener presencia y conectar con la audiencia.</span>
-                  </div>
-
-                  <div class="case-layer">
-                    <strong>Crecimiento digital</strong>
-                    <span>Una estrategia continua para transformar visibilidad en crecimiento sostenible.</span>
-                  </div>
-
-                </div>
-
-                <span class="case-card-link">
-                  Ver caso completo
-                </span>
-
-              </div>
-            </a>
-
-          </div>
-
         </section>
 
-</div>
+<section class="section culture-4h">
+          <div class="culture-4h-inner">
+            <div class="section-label">08 / Cultura · Las 4H</div>
+
+            <h2 class="culture-4h-title">
+              Una cultura construida alrededor de cuatro ideas simples.
+            </h2>
+
+            <div class="culture-4h-values">
+              <div class="culture-4h-value">Happy</div>
+              <div class="culture-4h-value">Honest</div>
+              <div class="culture-4h-value">Humble</div>
+              <div class="culture-4h-value">Hungry</div>
+            </div>
+
+            <p class="culture-4h-copy">
+              GeoVictoria articula su cultura alrededor de las 4H: trabajar con energía,
+              honestidad, humildad y ambición por seguir creciendo. Esa combinación también
+              se refleja en cómo los equipos colaboran, toman decisiones y construyen producto.
+            </p>
+          </div>
+        </section>
+
+
+
+        <section class="section geocoffee">
+          <div class="geocoffee-inner">
+            <div class="section-label">09 / Clientes &amp; comunidad</div>
+
+            <h2 class="geocoffee-title">
+              Aprender también pasa en conversación.
+            </h2>
+
+            <div class="geocoffee-split">
+              <div class="geocoffee-media">
+                <img
+                  src="/geocoffe.jpg"
+                  alt="Café con GeoVictoria junto a clientes de distintas industrias"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="geocoffee-copy">
+                <p>
+                  En espacios como Café con GeoVictoria reunimos a clientes de distintas
+                  industrias para compartir experiencias, resolver dudas y generar
+                  aprendizajes que aporten directamente a la gestión de personas.
+                </p>
+                <div class="geocoffee-meta">
+                  Café con GeoVictoria · Networking · Capacitación
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+      </div>
 
 
 
@@ -4455,7 +3716,7 @@ Gestión continua de contenidos, campañas y ejecución digital para fortalecer 
           </div>
 
           <div class="sidebar-value">
-            lowsignal
+            GeoVictoria
           </div>
 
         </div>
@@ -4471,11 +3732,11 @@ Gestión continua de contenidos, campañas y ejecución digital para fortalecer 
           <div class="sidebar-value">
 
             <a
-              href="https://www.lowsignal.cl/"
+              href="https://www.geovictoria.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              lowsignal.cl
+              geovictoria.com
             </a>
 
           </div>
@@ -4491,7 +3752,7 @@ Gestión continua de contenidos, campañas y ejecución digital para fortalecer 
           </div>
 
           <div class="sidebar-value">
-            Co-Founder & COO
+            Product Manager
           </div>
 
         </div>
@@ -4505,7 +3766,7 @@ Gestión continua de contenidos, campañas y ejecución digital para fortalecer 
           </div>
 
           <div class="sidebar-value">
-            Sistemas de crecimiento
+            Workforce Management
           </div>
 
         </div>
@@ -4515,11 +3776,28 @@ Gestión continua de contenidos, campañas y ejecución digital para fortalecer 
         <div class="sidebar-card">
 
           <div class="sidebar-label">
-            Base
+            Mercados
           </div>
 
           <div class="sidebar-value">
-            Santiago, Chile
+            Latinoamérica<br>
+            Estados Unidos<br>
+            España
+          </div>
+
+        </div>
+
+
+
+        <div class="sidebar-card">
+
+          <div class="sidebar-label">
+            Escala
+          </div>
+
+          <div class="sidebar-value">
+            10.000+ clientes<br>
+            20+ países
           </div>
 
         </div>
@@ -4533,7 +3811,7 @@ Gestión continua de contenidos, campañas y ejecución digital para fortalecer 
           </div>
 
           <div class="sidebar-value">
-            2025 — Presente
+            2026 — Presente
           </div>
 
         </div>
@@ -4548,10 +3826,10 @@ Gestión continua de contenidos, campañas y ejecución digital para fortalecer 
 
           <div class="sidebar-value">
 
-            Operaciones<br>
-            Estrategia comercial<br>
-            Sistemas de crecimiento<br>
-            Entrega de producto
+            Estrategia de producto<br>
+            Discovery & validación<br>
+            AI-powered MVPs<br>
+            Adopción & escala
 
           </div>
 
@@ -4579,16 +3857,16 @@ Gestión continua de contenidos, campañas y ejecución digital para fortalecer 
 
 
       <div class="focus-label">
-        Sistema operativo
+        Foco de producto
       </div>
 
 
       <h2 class="focus-title">
 
-        Primero el sistema.
+        Del problema
 
         <span>
-          Después, la escala.
+          a la adopción real.
         </span>
 
       </h2>
@@ -4597,15 +3875,15 @@ Gestión continua de contenidos, campañas y ejecución digital para fortalecer 
       <div class="focus-steps">
 
         <div class="focus-step">
-          Construir
+          Descubrir
         </div>
 
         <div class="focus-step">
-          Operar
+          Validar
         </div>
 
         <div class="focus-step">
-          Escalar
+          Escala
         </div>
 
       </div>
@@ -4619,16 +3897,16 @@ Gestión continua de contenidos, campañas y ejecución digital para fortalecer 
 
 
       <div class="focus-label">
-        Principio de growth
+        Principio operativo
       </div>
 
 
       <h2 class="focus-title">
 
-        Less noise.
+        Construir para
 
         <span>
-          Más crecimiento.
+          operaciones reales.
         </span>
 
       </h2>
@@ -4637,15 +3915,15 @@ Gestión continua de contenidos, campañas y ejecución digital para fortalecer 
       <div class="focus-steps">
 
         <div class="focus-step">
-          Estrategia
+          Cliente
         </div>
 
         <div class="focus-step">
-          Sistemas
+          Product
         </div>
 
         <div class="focus-step">
-          Ejecución
+          Adopción
         </div>
 
       </div>
@@ -4669,16 +3947,16 @@ Gestión continua de contenidos, campañas y ejecución digital para fortalecer 
 
 
       <a
-        href="/es/geovictoria"
+        href="/es/#work"
         class="project-link"
       >
 
         <div class="project-link-label">
-          Proyecto anterior
+          Trabajo seleccionado
         </div>
 
         <strong>
-          GeoVictoria
+          Todos los proyectos
         </strong>
 
       </a>
@@ -4686,7 +3964,7 @@ Gestión continua de contenidos, campañas y ejecución digital para fortalecer 
 
 
       <a
-        href="/es/tethereducation"
+        href="/es/lowsignal"
         class="project-link right"
       >
 
@@ -4695,7 +3973,7 @@ Gestión continua de contenidos, campañas y ejecución digital para fortalecer 
         </div>
 
         <strong>
-          TetherEd
+          lowsignal
         </strong>
 
       </a>
