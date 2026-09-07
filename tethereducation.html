@@ -1,55 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>TetherEd | Felipe Quiroz</title>
-
-  <meta
-    name="description"
-    content="Selected work at Tether Education — partnerships, public-sector transformation, AI-enabled education products and international expansion."
-  >
-
-
-  <!-- SEO / LANGUAGES -->
-  <link rel="canonical" href="https://felipequirozp.cl/tethereducation">
-
-  <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/tethereducation">
-
-  <link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/tethereducation">
-
-  <link rel="alternate" hreflang="x-default" href="https://felipequirozp.cl/tethereducation">
-
-  <!-- FAVICON -->
-  <link
-    rel="icon"
-    type="image/png"
-    href="favicon.png"
-  >
-
-  <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  >
-
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TetherEd | Felipe Quiroz</title>
+<meta content="Selected work at Tether Education — partnerships, public-sector transformation, AI-enabled education products and international expansion." name="description"/>
+<!-- SEO / LANGUAGES -->
+<link href="https://felipequirozp.cl/tethereducation" rel="canonical"/>
+<link href="https://felipequirozp.cl/tethereducation" hreflang="en" rel="alternate"/>
+<link href="https://felipequirozp.cl/es/tethereducation" hreflang="es" rel="alternate"/>
+<link href="https://felipequirozp.cl/tethereducation" hreflang="x-default" rel="alternate"/>
+<!-- FAVICON -->
+<link href="favicon.png" rel="icon" type="image/png"/>
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
 
     /* =====================================================
        COLORS
@@ -4208,263 +4176,454 @@
       }
     }
 
+  
+    /* =========================================================
+       V26 — Operating section: spacious editorial composition
+       ========================================================== */
+
+    .operating-band{
+      margin-top:0 !important;
+      margin-bottom:112px !important;
+      padding:96px 0 88px !important;
+      background:transparent !important;
+      color:var(--navy) !important;
+      border-top:1px solid var(--line) !important;
+      overflow:visible !important;
+    }
+
+    .operating-band::after{
+      display:none !important;
+    }
+
+    .operating-band .section-label{
+      margin-bottom:26px !important;
+      color:var(--steel-light) !important;
+    }
+
+    .operating-title{
+      margin:0 !important;
+      max-width:1050px !important;
+      font-family:"Manrope",sans-serif !important;
+      font-size:clamp(64px,6.8vw,108px) !important;
+      line-height:.93 !important;
+      letter-spacing:-.06em !important;
+      font-weight:500 !important;
+      color:var(--navy) !important;
+    }
+
+    .operating-title span{
+      color:var(--steel-light) !important;
+    }
+
+    .operating-intro{
+      margin-top:30px;
+      max-width:720px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.78;
+    }
+
+    .operating-media{
+      margin-top:54px !important;
+      width:100% !important;
+      aspect-ratio:16/9 !important;
+      border-radius:24px !important;
+      overflow:hidden !important;
+      background:#e9edf1 !important;
+    }
+
+    .operating-media img{
+      width:100% !important;
+      height:100% !important;
+      object-fit:cover !important;
+      display:block !important;
+    }
+
+    .operating-caption{
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      margin-top:12px;
+      color:var(--steel-light);
+      font-size:11px;
+      line-height:1.4;
+    }
+
+    .operating-caption strong{
+      color:var(--navy);
+      font-weight:600;
+    }
+
+    .operating-principles{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:44px;
+      margin-top:66px;
+    }
+
+    .operating-principle{
+      padding-top:20px;
+      border-top:1px solid var(--line);
+    }
+
+    .operating-principle-index{
+      display:block;
+      margin-bottom:18px;
+      color:var(--steel-light);
+      font-size:10px;
+      letter-spacing:.1em;
+    }
+
+    .operating-principle h3{
+      margin:0 0 10px;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(24px,2vw,32px);
+      line-height:1.08;
+      letter-spacing:-.035em;
+      font-weight:500;
+      color:var(--navy);
+    }
+
+    .operating-principle p{
+      margin:0;
+      max-width:280px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.65;
+    }
+
+    .operating-band .work-list{
+      margin-top:74px !important;
+      border-top:1px solid var(--line) !important;
+    }
+
+    .operating-band .work-item{
+      padding-top:21px !important;
+      padding-bottom:21px !important;
+      border-bottom:1px solid var(--line) !important;
+    }
+
+    .operating-band .work-number{
+      color:var(--steel-light) !important;
+    }
+
+    .operating-band .work-item strong{
+      color:var(--navy) !important;
+    }
+
+    @media(max-width:760px){
+      .operating-band{
+        padding:74px 0 68px !important;
+        margin-bottom:86px !important;
+      }
+
+      .operating-title{
+        font-size:clamp(48px,13vw,74px) !important;
+      }
+
+      .operating-intro{
+        margin-top:24px;
+        font-size:15px;
+      }
+
+      .operating-media{
+        margin-top:40px !important;
+        aspect-ratio:4/3 !important;
+        border-radius:18px !important;
+      }
+
+      .operating-caption{
+        flex-direction:column;
+        gap:4px;
+      }
+
+      .operating-principles{
+        grid-template-columns:1fr;
+        gap:34px;
+        margin-top:48px;
+      }
+
+      .operating-principle p{
+        max-width:none;
+      }
+    }
+
+  
+    /* =========================================================
+       V27 — keep impact headline on two intentional lines
+       ========================================================== */
+
+    .impact-band-title{
+      max-width:none !important;
+      font-size:clamp(54px,5.7vw,92px) !important;
+      line-height:.94 !important;
+      letter-spacing:-.055em !important;
+    }
+
+    .impact-band-title .impact-line{
+      display:block;
+      white-space:nowrap;
+    }
+
+    .impact-band-title .impact-line-accent{
+      color:var(--impact-accent);
+    }
+
+    @media(max-width:760px){
+      .impact-band-title{
+        font-size:clamp(34px,9.2vw,54px) !important;
+        line-height:.98 !important;
+      }
+
+      .impact-band-title .impact-line{
+        white-space:nowrap;
+      }
+    }
+
+  
+    /* =========================================================
+       V28 — stronger two-tone impact + better line spacing
+       ========================================================== */
+
+    .impact-band-title{
+      max-width:none !important;
+      font-size:clamp(54px,5.7vw,92px) !important;
+      line-height:1 !important;
+      letter-spacing:-.055em !important;
+    }
+
+    .impact-band-title .impact-line{
+      display:block !important;
+      white-space:nowrap !important;
+    }
+
+    .impact-band-title .impact-line:first-child{
+      color:#ffffff !important;
+    }
+
+    .impact-band-title .impact-line-accent{
+      color:var(--impact-accent) !important;
+      margin-top:.10em !important;
+    }
+
+    @media(max-width:760px){
+      .impact-band-title{
+        font-size:clamp(34px,9.2vw,54px) !important;
+        line-height:1.03 !important;
+      }
+
+      .impact-band-title .impact-line-accent{
+        margin-top:.12em !important;
+      }
+    }
+
+  
+    /* =========================================================
+       V31 — hero statement unified as one intentional block
+       ========================================================== */
+
+    .visual-title{
+      display:block;
+      margin:0;
+      max-width:760px;
+      font-size:clamp(46px,5.2vw,82px);
+      line-height:.98;
+      letter-spacing:-.055em;
+    }
+
+    .visual-title .hero-statement-line{
+      display:block;
+    }
+
+    .visual-title .hero-statement-line + .hero-statement-line{
+      margin-top:.14em;
+    }
+
+    .visual-title .hero-statement-primary{
+      color:#ffffff;
+    }
+
+    .visual-title .hero-statement-secondary{
+      color:var(--slate-light);
+    }
+
+    @media(max-width:760px){
+      .visual-title{
+        max-width:none;
+        font-size:clamp(38px,10.6vw,58px);
+        line-height:1.02;
+      }
+
+      .visual-title .hero-statement-line + .hero-statement-line{
+        margin-top:.16em;
+      }
+    }
+
+  
+    /* =========================================================
+       V32 — hero statement balanced
+       Smaller scale + tighter controlled wrapping
+       ========================================================== */
+
+    .visual-title{
+      display:block !important;
+      margin:0 !important;
+      max-width:660px !important;
+      font-size:clamp(40px,4.35vw,68px) !important;
+      line-height:1.00 !important;
+      letter-spacing:-.045em !important;
+    }
+
+    .visual-title .hero-statement-line{
+      display:block !important;
+      max-width:100% !important;
+    }
+
+    .visual-title .hero-statement-line + .hero-statement-line{
+      margin-top:.12em !important;
+    }
+
+    .visual-title .hero-statement-primary{
+      color:#ffffff !important;
+    }
+
+    .visual-title .hero-statement-secondary{
+      color:var(--slate-light) !important;
+    }
+
+    @media(max-width:760px){
+      .visual-title{
+        max-width:none !important;
+        font-size:clamp(34px,9.4vw,50px) !important;
+        line-height:1.02 !important;
+        letter-spacing:-.04em !important;
+      }
+
+      .visual-title .hero-statement-line + .hero-statement-line{
+        margin-top:.14em !important;
+      }
+    }
+
   </style>
-
 </head>
-
-
-
 <body>
-
-
-  <!-- =====================================================
+<!-- =====================================================
        NAV
   ====================================================== -->
-
-  <header class="nav">
-
-
-    <a
-      href="/"
-      class="brand"
-    >
+<header class="nav">
+<a class="brand" href="/">
       Felipe Quiroz
     </a>
-
-
-    <nav class="nav-links">
-
-
-      <a href="/#work">
+<nav class="nav-links">
+<a href="/#work">
         Work
       </a>
-
-
-      <a href="/about">
+<a href="/about">
         About
       </a>
-
-
-      <a href="/now">
+<a href="/now">
         Now
       </a>
-
-
-      <a
-        href="#contact"
-        class="contact-nav"
-      >
+<a class="contact-nav" href="#contact">
         Contact
       </a>
-
-
-      <a
-        href="/es/tethereducation"
-        class="lang-switch"
-        aria-label="View site in Spanish"
-      >
+<a aria-label="View site in Spanish" class="lang-switch" href="/es/tethereducation">
         ES
       </a>
-
-
-    </nav>
-
-
-  </header>
-
-
-
-  <!-- =====================================================
+</nav>
+</header>
+<!-- =====================================================
        HERO
   ====================================================== -->
-
-  <section class="hero">
-
-
-    <!-- LEFT -->
-
-    <div class="hero-visual">
-
-
-      <div class="visual-top">
-
-        <span>
+<section class="hero">
+<!-- LEFT -->
+<div class="hero-visual">
+<div class="visual-top">
+<span>
           EdTech / Education access
         </span>
-
-        <span>
+<span>
           Partnerships / 03
         </span>
-
-      </div>
-
-
-
-      <div class="visual-middle">
-
-
-        <div class="network">
-
-
-          <div class="network-main">
-
-
-            <div class="network-node">
+</div>
+<div class="visual-middle">
+<div class="network">
+<div class="network-main">
+<div class="network-node">
               Schools
             </div>
-
-
-            <div class="network-line"></div>
-
-
-            <div class="network-node center">
+<div class="network-line"></div>
+<div class="network-node center">
               Communities
             </div>
-
-
-            <div class="network-line"></div>
-
-
-            <div class="network-node">
+<div class="network-line"></div>
+<div class="network-node">
               Institutions
             </div>
-
-
-          </div>
-
-
-
-          <div class="network-meta">
-
-
-            <div class="network-meta-item">
-
-              <div class="network-meta-title">
+</div>
+<div class="network-meta">
+<div class="network-meta-item">
+<div class="network-meta-title">
                 Product
               </div>
-
-              <div class="network-meta-copy">
-                Explore<br>
-                Compare<br>
+<div class="network-meta-copy">
+                Explore<br/>
+                Compare<br/>
                 Apply
               </div>
-
-            </div>
-
-
-
-            <div class="network-meta-item">
-
-              <div class="network-meta-title">
+</div>
+<div class="network-meta-item">
+<div class="network-meta-title">
                 Partnerships
               </div>
-
-              <div class="network-meta-copy">
-                Governments<br>
-                School networks<br>
+<div class="network-meta-copy">
+                Governments<br/>
+                School networks<br/>
                 Institutions
               </div>
-
-            </div>
-
-
-
-            <div class="network-meta-item">
-
-              <div class="network-meta-title">
+</div>
+<div class="network-meta-item">
+<div class="network-meta-title">
                 Expansion
               </div>
-
-              <div class="network-meta-copy">
-                Adoption<br>
-                Markets<br>
+<div class="network-meta-copy">
+                Adoption<br/>
+                Markets<br/>
                 Scaler
               </div>
-
-            </div>
-
-
-          </div>
-
-
-        </div>
-
-
-      </div>
-
-
-
-      <div class="visual-bottom">
-
-
-        <div class="visual-kicker">
+</div>
+</div>
+</div>
+</div>
+<div class="visual-bottom">
+<div class="visual-kicker">
           Access, information and decisions
         </div>
-
-
-        <h2 class="visual-title">
-
-          Infrastructure for better choices.
-
-          <span>
-            And access with less friction.
-          </span>
-
-        </h2>
-
-
-      </div>
-
-
-    </div>
-
-
-
-    <!-- RIGHT -->
-
-    <div class="hero-content">
-
-
-      <div class="hero-content-inner">
-
-
-        <a
-          href="https://tether.education/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="company-logo"
-          aria-label="Visitar TetherEd"
-        >
-
-          <img
-            src="tethered-logo.svg"
-            alt="TetherEd"
-          >
-
-        </a>
-
-
-        <div class="case-label">
+<h2 class="visual-title">
+  <span class="hero-statement-line hero-statement-primary">Infrastructure for better choices.</span>
+  <span class="hero-statement-line hero-statement-secondary">And access with less friction.</span>
+</h2>
+</div>
+</div>
+<!-- RIGHT -->
+<div class="hero-content">
+<div class="hero-content-inner">
+<a aria-label="Visitar TetherEd" class="company-logo" href="https://tether.education/" rel="noopener noreferrer" target="_blank">
+<img alt="TetherEd" src="tethered-logo.svg"/>
+</a>
+<div class="case-label">
           Selected work / 03
         </div>
-
-
-        <div class="case-period">
+<div class="case-period">
           Head of Partnerships · 2024 — 2026
         </div>
-
-
-        <h1>
+<h1>
           TetherEd
         </h1>
-
-
-        <div class="hero-role">
+<div class="hero-role">
           Head of Partnerships · EdTech
         </div>
-
-
-        <p class="hero-description">
+<p class="hero-description">
 
           I led partnership strategy, business development
           and expansion across Latin America, connecting governments,
@@ -4472,102 +4631,67 @@
           AI-enabled digital admissions and enrollment infrastructure.
 
         </p>
-
-
-        <div class="tags">
-
-          <div class="tag">
+<div class="tags">
+<div class="tag">
             Partnerships
           </div>
-
-          <div class="tag">
+<div class="tag">
             GovTech
           </div>
-
-          <div class="tag">
+<div class="tag">
             AI &amp; Education
           </div>
-
-          <div class="tag">
+<div class="tag">
             LATAM Expansion
           </div>
-
-        </div>
-
-
-      </div>
-
-
-    </div>
-
-
-  </section>
-
-
-  <section class="impact-band">
-    <div class="impact-band-inner">
-      <div class="impact-band-label">My impact / Partnerships → adoption → scale</div>
-
-      <div class="impact-band-head">
-        <h2 class="impact-band-title">
-          From opening doors<br>
-          <span>to building reach.</span>
-        </h2>
-
-        <p class="impact-band-copy">
-          My role went beyond partnerships. I connected institutional relationships,
-          commercial execution, product feedback and implementation — helping turn
-          opportunities into adoption, measurable reach and systems that could scale.
+</div>
+</div>
+</div>
+</section>
+<section class="impact-band">
+<div class="impact-band-inner">
+<div class="impact-band-label">My impact / Partnerships → adoption → scale</div>
+<div class="impact-band-head">
+<h2 class="impact-band-title">
+<span class="impact-line">From opening doors</span>
+<span class="impact-line impact-line-accent">to building reach.</span>
+</h2>
+<p class="impact-band-copy">
+          I connected institutional relationships, commercial execution, product feedback
+          and implementation — turning opportunities into adoption, measurable reach
+          and systems that could scale.
         </p>
-      </div>
-
-      <div class="impact-band-metrics">
-        <div class="impact-signal"><strong>14+</strong><span>Strategic organizations connected</span></div>
-        <div class="impact-signal"><strong>20K+</strong><span>Families reached</span></div>
-        <div class="impact-signal"><strong>100+</strong><span>Public schools reached in Chile</span></div>
-        <div class="impact-signal"><strong>20+</strong><span>Cross-functional collaborators across geographies</span></div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-  <!-- =====================================================
+</div>
+<div class="impact-band-metrics">
+<div class="impact-signal"><strong>14+</strong><span>Strategic partnerships</span></div>
+<div class="impact-signal"><strong>20,000+</strong><span>Families reached through partnerships</span></div>
+<div class="impact-signal"><strong>100+</strong><span>Public schools reached in Chile</span></div>
+<div class="impact-signal"><strong>20+</strong><span>Cross-functional collaborators across geographies</span></div>
+</div>
+</div>
+</section>
+<!-- =====================================================
        MAIN CONTENT
   ====================================================== -->
-
-  <main class="content">
-
-
-    <div class="content-grid">
-
-
-      <div class="main-column">
-
-
-        <!-- ROLE -->
-
-        <section class="section">
-
-          <div class="section-label">
+<main class="content">
+<div class="content-grid">
+<div class="main-column">
+<!-- ROLE -->
+<section class="section">
+<div class="section-label">
             01 / Role
           </div>
-
-          <h2>
+<h2>
             Connecting market,
             product and execution.
           </h2>
-
-          <div class="section-copy">
-
-            <p>
+<div class="section-copy">
+<p>
               Tether Education is a U.S.-based GovTech company incubated
-              at <a href="https://www.consiliumbots.com/" target="_blank" rel="noopener noreferrer">ConsiliumBots</a>, focused on digital infrastructure
+              at <a href="https://www.consiliumbots.com/" rel="noopener noreferrer" target="_blank">ConsiliumBots</a>, focused on digital infrastructure
               for school choice, admissions and enrollment.
             </p>
-
-            <p>
+<p>
               As Head of Partnerships, I led partnership strategy,
               business development and expansion across Latin America.
               I worked with governments, school networks and education
@@ -4575,27 +4699,13 @@
               Engineering, Marketing and Operations to turn
               opportunities into real adoption.
             </p>
-
-          </div>
-
-          <div class="leadership-card">
-
-            <div class="leadership-photo-wrap">
-
-              <span
-                class="leadership-photo-fallback"
-                aria-hidden="true"
-              >
+</div>
+<div class="leadership-card">
+<div class="leadership-photo-wrap">
+<span aria-hidden="true" class="leadership-photo-fallback">
                 CN
               </span>
-
-              <img
-                src="christopher-neilson.jpg"
-                alt="Christopher Neilson"
-                class="leadership-photo"
-                loading="lazy"
-                data-chris-source="0"
-                onerror="
+<img alt="Christopher Neilson" class="leadership-photo" data-chris-source="0" loading="lazy" onerror="
                   const sources = [
                     'christopher-neilson.jpg',
                     'christopher-neilson.jpeg',
@@ -4607,454 +4717,305 @@
                     'christopher-neilson.png'
                   ];
                   const current = Number(this.dataset.chrisSource || 0) + 1;
-                  if (current < sources.length) {
+                  if (current &lt; sources.length) {
                     this.dataset.chrisSource = String(current);
                     this.src = sources[current];
                   } else {
                     this.style.display = 'none';
                   }
-                "
-              >
-
-            </div>
-
-            <div>
-
-              <div class="leadership-eyebrow">
+                " src="christopher-neilson.jpg"/>
+</div>
+<div>
+<div class="leadership-eyebrow">
                 Direct leadership
               </div>
-
-              <h3 class="leadership-name">
+<h3 class="leadership-name">
                 Christopher Neilson
               </h3>
-
-              <p class="leadership-meta">
-                Founder &amp; CEO, Tether Education<br>
+<p class="leadership-meta">
+                Founder &amp; CEO, Tether Education<br/>
                 Professor of Economics and Global Affairs · Yale University
               </p>
-
-              <p class="leadership-copy">
+<p class="leadership-copy">
                 I worked closely and directly with Christopher,
                 aligning partnerships, institutional relationships
                 and expansion initiatives with the evolution of the product.
               </p>
-
-              <div class="leadership-links">
-
-                <a
-                  href="https://christopher-neilson.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Christopher Neilson website"
-                  title="Website"
-                >
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="12" cy="12" r="9"></circle>
-                    <path d="M3 12h18"></path>
-                    <path d="M12 3c2.5 2.5 3.8 5.5 3.8 9S14.5 18.5 12 21"></path>
-                    <path d="M12 3C9.5 5.5 8.2 8.5 8.2 12S9.5 18.5 12 21"></path>
-                  </svg>
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/in/christopher-a-neilson/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Christopher Neilson on LinkedIn"
-                  title="LinkedIn"
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
-                  </svg>
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        
-          <div class="leadership-card">
-
-            <div class="leadership-photo-wrap">
-
-              <span
-                class="leadership-photo-fallback"
-                aria-hidden="true"
-              >
+<div class="leadership-links">
+<a aria-label="Christopher Neilson website" href="https://christopher-neilson.com/" rel="noopener noreferrer" target="_blank" title="Website">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="9"></circle>
+<path d="M3 12h18"></path>
+<path d="M12 3c2.5 2.5 3.8 5.5 3.8 9S14.5 18.5 12 21"></path>
+<path d="M12 3C9.5 5.5 8.2 8.5 8.2 12S9.5 18.5 12 21"></path>
+</svg>
+</a>
+<a aria-label="Christopher Neilson on LinkedIn" href="https://www.linkedin.com/in/christopher-a-neilson/" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24">
+<path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+<div class="leadership-card">
+<div class="leadership-photo-wrap">
+<span aria-hidden="true" class="leadership-photo-fallback">
                 ZT
               </span>
-
-              <img
-                src="/zack-tseng.jpg"
-                alt="Zack Tseng"
-                class="leadership-photo"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              >
-
-            </div>
-
-            <div>
-
-              <div class="leadership-eyebrow">
+<img alt="Zack Tseng" class="leadership-photo" loading="lazy" onerror="this.style.display='none';" src="/zack-tseng.jpg"/>
+</div>
+<div>
+<div class="leadership-eyebrow">
                 Go-to-market &amp; execution
               </div>
-
-              <h3 class="leadership-name">
+<h3 class="leadership-name">
                 Zack Tseng
               </h3>
-
-              <p class="leadership-meta">
+<p class="leadership-meta">
                 Chief of Staff · Tether Education
               </p>
-
-              <p class="leadership-copy">
+<p class="leadership-copy">
                 I worked with Zack on go-to-market initiatives and Stocktake performance,
                 connecting commercial execution, adoption and market learnings.
               </p>
-
-              <div class="leadership-links">
-                <a
-                  href="https://www.linkedin.com/in/zacharytseng/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Zack Tseng on LinkedIn"
-                  title="LinkedIn"
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
-                  </svg>
-                </a>
-              </div>
-
-            </div>
-
-          </div>
-
+<div class="leadership-links">
+<a aria-label="Zack Tseng on LinkedIn" href="https://www.linkedin.com/in/zacharytseng/" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24">
+<path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
 </section>
-
-
-
-
-        <!-- BACKING -->
-        <div class="backing-block">
-          <div class="backing-label">Backing</div>
-
-          <div class="backing-brand">
-            <a
-              class="backing-logo-wrap"
-              href="https://www.avalanche.vc/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Avalanche"
-            >
-              <img
-                class="backing-logo"
-                src="/avalanche-logo.png"
-                alt="Avalanche"
-                loading="lazy"
-              >
-            </a>
-          </div>
-
-          <div class="backing-row backing-row-copy-only">
-            <p class="backing-copy">
+<!-- BACKING -->
+<div class="backing-block">
+<div class="backing-label">Backing</div>
+<div class="backing-brand">
+<a aria-label="Avalanche" class="backing-logo-wrap" href="https://www.avalanche.vc/" rel="noopener noreferrer" target="_blank">
+<img alt="Avalanche" class="backing-logo" loading="lazy" src="/avalanche-logo.png"/>
+</a>
+</div>
+<div class="backing-row backing-row-copy-only">
+<p class="backing-copy">
               Tether Education is backed by Avalanche, a private investment firm
               led by
-              <a
-                href="https://katelyndonnelly.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >Katelyn Donnelly</a>.
+              <a href="https://katelyndonnelly.com/" rel="noopener noreferrer" target="_blank">Katelyn Donnelly</a>.
             </p>
+</div>
+</div>
+<!-- SCALE -->
+
+<!-- PRODUCT -->
+<section class="section">
+<div class="section-label">
+            02 / Product &amp; AI
           </div>
-        </div>
-
-        <!-- SCALE -->
-
-        <section class="section">
-
-          <div class="section-label">
-            02 / Scale
-          </div>
-
-          <h2>
-            Partnerships with
-            measurable reach.
-          </h2>
-
-          <div class="section-copy">
-
-            <p>
-              I built and scaled the partnership ecosystem across
-              multiple markets, combining public and private relationships
-              with a commercial operation focused on
-              adoption, visibility and growth.
-            </p>
-
-          </div>
-
-          
-
-        </section>
-
-
-
-        <!-- PRODUCT -->
-
-        <section class="section">
-
-          <div class="section-label">
-            03 / Product & AI
-          </div>
-
-          <h2>
+<h2>
             Bringing market signals
             back into product.
           </h2>
-
-          <div class="section-copy">
-
-            <p>
+<div class="section-copy">
+<p>
               I worked with Product and Engineering to translate
               the needs of clients, institutions and families
               into product improvements and AI-enabled initiatives.
               The logic was simple: use the market as a source of
               learning and turn that learning into product.
             </p>
-
-          </div>
-
-          <div class="product-collaboration">
-
-            <div class="product-collaboration-label">
+</div>
+<div class="product-collaboration">
+<div class="product-collaboration-label">
               Applied AI
             </div>
-
-            <p class="product-collaboration-copy">
+<p class="product-collaboration-copy">
               The work included initiatives developed with
               <strong>OpenAI</strong> and, on specific projects,
               <strong>Columbia University</strong> and
-              <strong>SLEP del Pino Public Accountability 2025</strong>, connecting research,
+              <strong>SLEP del Pino</strong>, connecting research,
               institutional needs and implementation.
             </p>
-
-          </div>
-
-          <div class="product-grid">
-
-            <div class="product-item">
-              <div class="product-number">01</div>
-              <h3>Market signals</h3>
-              <div class="product-type">Discovery</div>
-              <p>
+</div>
+<div class="product-grid">
+<div class="product-item">
+<div class="product-number">01</div>
+<h3>Market signals</h3>
+<div class="product-type">Discovery</div>
+<p>
                 Turning conversations with institutions and families
                 into useful signals for product prioritization and evolution.
               </p>
-            </div>
-
-            <div class="product-item">
-              <div class="product-number">02</div>
-              <h3>Product &amp; Engineering</h3>
-              <div class="product-type">Translation</div>
-              <p>
+</div>
+<div class="product-item">
+<div class="product-number">02</div>
+<h3>Product &amp; Engineering</h3>
+<div class="product-type">Translation</div>
+<p>
                 Translating commercial and operational requirements
                 into concrete problems technical teams
                 could design, build and validate.
               </p>
-            </div>
-
-            <div class="product-item">
-              <div class="product-number">03</div>
-              <h3>Applied AI</h3>
-              <div class="product-type">Innovation</div>
-              <p>
+</div>
+<div class="product-item">
+<div class="product-number">03</div>
+<h3>Applied AI</h3>
+<div class="product-type">Innovation</div>
+<p>
                 Connecting AI opportunities with real needs
                 around access, guidance and operations in education communities.
               </p>
-            </div>
-
-            <div class="product-item">
-              <div class="product-number">04</div>
-              <h3>Measurement</h3>
-              <div class="product-type">Learning</div>
-              <p>
+</div>
+<div class="product-item">
+<div class="product-number">04</div>
+<h3>Measurement</h3>
+<div class="product-type">Learning</div>
+<p>
                 Designing operations and processes to learn
                 from adoption, measure outcomes and iterate with evidence.
               </p>
-            </div>
-
+</div>
+</div>
+</section>
+<!-- SELECTED PROJECTS -->
+<section class="section">
+<div class="section-label">
+            03 / Selected projects
           </div>
-
-        </section>
-
-
-
-
-        <!-- SELECTED PROJECTS -->
-
-        <section class="section">
-
-          <div class="section-label">
-            04 / Selected projects
-          </div>
-
-          <h2>
+<h2>
             Product, implementation
             and transformation at scale.
           </h2>
-
-          <div class="section-copy">
-            <p>
+<div class="section-copy">
+<p>
               A selection of initiatives where I worked across
               product, institutions and execution — from education
               discovery tools to digital transformation
               and AI adoption in public education.
             </p>
-          </div>
-
-          <div class="project-cases">
-
-            <article class="project-case">
-              <div class="project-case-number">01</div>
-              <div>
-                <div class="project-case-type">Product · AI-powered discovery</div>
-                <h3>Virtual School Explorer</h3>
-                <p class="project-case-description">
+</div>
+<div class="project-cases">
+<article class="project-case">
+<div class="project-case-number">01</div>
+<div>
+<div class="project-case-type">Product · AI-powered discovery</div>
+<h3>Virtual School Explorer</h3>
+<p class="project-case-description">
                   An education discovery platform with maps,
                   personalized filters, enriched profiles,
                   availability, admission estimates and an AI assistant
                   that helps families explore and compare options.
                 </p>
-                <div class="project-case-metrics">
-                  <span class="project-case-metric">Map-based search</span>
-                  <span class="project-case-metric">Admission probability</span>
-                  <span class="project-case-metric">Real-time vacancies</span>
-                  <span class="project-case-metric">AI assistant</span>
-                </div>
-
-                <a
-                  href="https://explorador.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="project-case-link"
-                >
+<div class="project-case-metrics">
+<span class="project-case-metric">Map-based search</span>
+<span class="project-case-metric">Admission probability</span>
+<span class="project-case-metric">Real-time vacancies</span>
+<span class="project-case-metric">AI assistant</span>
+</div>
+<a class="project-case-link" href="https://explorador.com/" rel="noopener noreferrer" target="_blank">
                   View Explorer
                 </a>
-              </div>
-              <div class="project-case-side">
-                <div class="project-case-side-label">My role</div>
-                <p>
+</div>
+<div class="project-case-side">
+<div class="project-case-side-label">My role</div>
+<p>
                   I connected institutional and family needs
                   with product and adoption opportunities, bringing
                   market signals into partnership and
                   product development decisions.
                 </p>
-              </div>
-            </article>
-
-            <article class="project-case">
-              <div class="project-case-number">02</div>
-              <div>
-                <div class="project-case-type">Public education · Chile · Aug–Dec 2024</div>
-                <h3>Public Education Digital Transformation</h3>
-                <p class="project-case-description">
+</div>
+</article>
+<article class="project-case">
+<div class="project-case-number">02</div>
+<div>
+<div class="project-case-type">Public education · Chile · Aug–Dec 2024</div>
+<h3>Public Education Digital Transformation</h3>
+<p class="project-case-description">
                   I led strategic and implementation initiatives with SLEP del Pino
                   and CORMUN Rancagua to digitize admissions and expand access
                   to digital application infrastructure across public education.
                 </p>
-                <div class="project-case-metrics">
-                  <span class="project-case-metric">100+ public schools</span>
-                  <span class="project-case-metric">35,000+ students</span>
-                  <span class="project-case-metric">2 public education systems</span>
-                </div>
-              </div>
-              <div class="project-case-side">
-                <div class="project-case-side-label">My role</div>
-                <p>
+<div class="project-case-metrics">
+<span class="project-case-metric">100+ public schools</span>
+<span class="project-case-metric">35,000+ students</span>
+<span class="project-case-metric">2 public education systems</span>
+</div>
+</div>
+<div class="project-case-side">
+<div class="project-case-side-label">My role</div>
+<p>
                   I coordinated public-sector stakeholders, school leadership and internal
                   product teams, translating institutional and operational requirements
                   into scalable implementation strategies.
                 </p>
-              </div>
-            </article>
-
-            <article class="project-case">
-              <div class="project-case-number">03</div>
-              <div>
-                <div class="project-case-type">AI · Public education · Chile · Jul–Dec 2025</div>
-                <h3>AI-Powered Education Transformation</h3>
-                <p class="project-case-description">
+</div>
+</article>
+<article class="project-case">
+<div class="project-case-number">03</div>
+<div>
+<div class="project-case-type">AI · Public education · Chile · Jul–Dec 2025</div>
+<h3>AI-Powered Education Transformation</h3>
+<p class="project-case-description">
                   An international initiative developed with Columbia University,
                   OpenAI, Tether Education and SLEP del Pino to accelerate responsible
                   and equitable AI adoption across public schools in Chile.
                 </p>
-                <div class="project-case-metrics">
-                  <span class="project-case-metric">50+ institutions</span>
-                  <span class="project-case-metric">OpenAI</span>
-                  <span class="project-case-metric">Columbia University</span>
-                  <span class="project-case-metric">AI adoption at scale</span>
-                </div>
-              </div>
-              <div class="project-case-side">
-                <div class="project-case-side-label">My role</div>
-                <p>
+<div class="project-case-metrics">
+<span class="project-case-metric">50+ institutions</span>
+<span class="project-case-metric">OpenAI</span>
+<span class="project-case-metric">Columbia University</span>
+<span class="project-case-metric">AI adoption at scale</span>
+</div>
+</div>
+<div class="project-case-side">
+<div class="project-case-side-label">My role</div>
+<p>
                   I led implementation across participating schools, coordinating
                   execution, stakeholders and the connection between research,
                   institutional needs and AI-enabled solutions.
                 </p>
-              </div>
-            </article>
-
-            <article class="project-case">
-              <div class="project-case-number">04</div>
-              <div>
-                <div class="project-case-type">AI-enabled product · School operations</div>
-                <h3>Tether Studio</h3>
-                <p class="project-case-description">
+</div>
+</article>
+<article class="project-case">
+<div class="project-case-number">04</div>
+<div>
+<div class="project-case-type">AI-enabled product · School operations</div>
+<h3>Tether Studio</h3>
+<p class="project-case-description">
                   An AI-enabled school photography platform that centralizes portraits,
                   events, yearbooks, consent, family access and school administration
                   in one digital workflow.
                 </p>
-                <div class="project-case-metrics">
-                  <span class="project-case-metric">−82% operational hours</span>
-                  <span class="project-case-metric">6 weeks to launch</span>
-                  <span class="project-case-metric">1 platform · 5 stages</span>
-                  <span class="project-case-metric">100% auditable consent</span>
-                </div>
-                <a href="https://tetherstudio.ai/" target="_blank" rel="noopener noreferrer" class="project-case-link">
+<div class="project-case-metrics">
+<span class="project-case-metric">−82% operational hours</span>
+<span class="project-case-metric">6 weeks to launch</span>
+<span class="project-case-metric">1 platform · 5 stages</span>
+<span class="project-case-metric">100% auditable consent</span>
+</div>
+<a class="project-case-link" href="https://tetherstudio.ai/" rel="noopener noreferrer" target="_blank">
                   View Tether Studio
                 </a>
-              </div>
-              <div class="project-case-side">
-                <div class="project-case-side-label">My role</div>
-                <p>
+</div>
+<div class="project-case-side">
+<div class="project-case-side-label">My role</div>
+<p>
                   I worked on product development and positioning, connecting
                   schools’ operational needs with a simpler digital experience
                   for teams and families.
                 </p>
-              </div>
-            </article>
-
-          </div>
-
-          <div class="field-block">
-
-
-            <div class="field-kicker">
+</div>
+</article>
+</div>
+<div class="field-block">
+<div class="field-kicker">
               Work in context
             </div>
-
-
-            <h3 class="field-heading">
+<h3 class="field-heading">
               Adoption is built
               with people.
             </h3>
-
-
-            <p class="field-copy">
+<p class="field-copy">
 
               A large part of the role happened outside the pipeline:
               sessions with internal teams, education leaders and
@@ -5062,554 +5023,240 @@
               product, implementation and adoption decisions.
 
             </p>
-
-
-
-
-            <figure class="field-event-feature">
-
-              <div class="field-photo-media">
-                <img
-                  src="tether-team-event.jpg"
-                  alt="TetherEd and Nivel4 team at an education event"
-                  loading="lazy"
-                >
-              </div>
-
-              <figcaption class="field-caption">
-                <span>FERMADI 2025 · Santiago</span>
-                <span>Education · Partnerships</span>
-              </figcaption>
-
-            </figure>
-
-            <div class="field-gallery">
-
-
-              <figure class="field-photo featured">
-
-                <div class="field-photo-media">
-
-                  <img
-                    src="tether-team-meeting.jpg"
-                    alt="Working session del equipo de TetherEd"
-                    loading="lazy"
-                  >
-
-                </div>
-
-                <figcaption class="field-caption">
-                  <span>TetherEd · Santiago Team</span>
-                  <span>Working session</span>
-                </figcaption>
-
-              </figure>
-
-
-
-              <figure class="field-photo">
-
-                <div class="field-photo-media">
-
-                  <img
-                    src="tether-partnerships-crecer.jpg"
-                    alt="Work con Crecer con Todos en Santiago"
-                    loading="lazy"
-                  >
-
-                </div>
-
-                <figcaption class="field-caption">
-                  <span>Crecer con Todos</span>
-                  <span>Partnership</span>
-                </figcaption>
-
-              </figure>
-
-
-
-              <figure class="field-photo">
-
-                <div class="field-photo-media">
-
-                  <img
-                    src="tether-partnerships-kiri.jpg"
-                    alt="Encuentro de trabajo con Kiri"
-                    loading="lazy"
-                  >
-
-                </div>
-
-                <figcaption class="field-caption">
-                  <span>Kiri</span>
-                  <span>Partnership</span>
-                </figcaption>
-
-              </figure>
-
-
-
-              <figure class="field-photo wide">
-
-                <div class="field-photo-media">
-
-                  <img
-                    src="tether-team-santiago.jpg"
-                    alt="Equipo de TetherEd reunido en Santiago"
-                    loading="lazy"
-                  >
-
-                </div>
-
-                <figcaption class="field-caption">
-                  <span>TetherEd · Santiago Team</span>
-                  <span>WeWork Apoquindo</span>
-                </figcaption>
-
-              </figure>
-
-
-              <figure class="field-photo wide">
-
-                <div class="field-photo-media">
-
-                  <img
-                    src="tether-slep-del-pino.jpg"
-                    alt="SLEP del Pino Participatory Public Accountability event"
-                    loading="lazy"
-                  >
-
-                </div>
-
-                <figcaption class="field-caption">
-                  <span>SLEP del Pino Public Accountability 2025</span>
-                  <span>Public education · Santiago</span>
-                </figcaption>
-
-              </figure>
-
-
-
-            </div>
-
-          </div>
-
-
-        </section>
-
-
-
-        <!-- HOW I WORKED -->
-
-        <section class="section operating-band">
-
-          <div class="section-label">05 / Operating system</div>
-
-          <h2 class="operating-title">
-            From opportunity<br>
-            <span>to execution.</span>
-          </h2>
-
-          <div class="operating-grid">
-            <div class="operating-media">
-              <img src="/tether-building-ops.jpg" alt="Felipe Quiroz working at Tether Education" loading="lazy">
-            </div>
-
-            <div class="operating-copy">
-              <h3>Turning relationships into execution.</h3>
-              <p>
-                I worked across product, growth and operations to move opportunities
-                from conversation to implementation — aligning teams, priorities and
-                execution across markets.
-              </p>
-
-              <div class="operating-signals">
-                <div class="operating-signal">
-                  <strong>Product</strong>
-                  <span>Market feedback → product decisions</span>
-                </div>
-                <div class="operating-signal">
-                  <strong>Growth</strong>
-                  <span>Opportunities → adoption</span>
-                </div>
-                <div class="operating-signal">
-                  <strong>Operations</strong>
-                  <span>Teams → execution</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="work-list">
-            <div class="work-item"><div class="work-number">01</div><strong>Partnership strategy and business development</strong></div>
-            <div class="work-item"><div class="work-number">02</div><strong>Pipeline, prospecting and negotiation</strong></div>
-            <div class="work-item"><div class="work-number">03</div><strong>Public- and private-sector relationships</strong></div>
-            <div class="work-item"><div class="work-number">04</div><strong>Cross-functional execution across Sales, Marketing, Engineering, Data, Design and Research</strong></div>
-            <div class="work-item"><div class="work-number">05</div><strong>Market signals into product and AI improvements</strong></div>
-            <div class="work-item"><div class="work-number">06</div><strong>CRM, dashboards, reporting and scalable processes</strong></div>
-          </div>
-
-        </section>
-
-
-      </div>
-
-
-
-      <!-- SIDEBAR -->
-
-      <aside class="sidebar">
-
-
-        <div class="sidebar-card">
-
-          <div class="sidebar-label">
+<figure class="field-event-feature">
+<div class="field-photo-media">
+<img alt="TetherEd and Nivel4 team at an education event" loading="lazy" src="tether-team-event.jpg"/>
+</div>
+<figcaption class="field-caption">
+<span>FERMADI 2025 · Santiago</span>
+<span>Education · Partnerships</span>
+</figcaption>
+</figure>
+<div class="field-gallery">
+<figure class="field-photo featured">
+<div class="field-photo-media">
+<img alt="TetherEd team working session in Santiago" loading="lazy" src="tether-team-meeting.jpg"/>
+</div>
+<figcaption class="field-caption">
+<span>TetherEd · Santiago Team</span>
+<span>Working session</span>
+</figcaption>
+</figure>
+<figure class="field-photo">
+<div class="field-photo-media">
+<img alt="Partnership work with Crecer con Todos in Santiago" loading="lazy" src="tether-partnerships-crecer.jpg"/>
+</div>
+<figcaption class="field-caption">
+<span>Crecer con Todos</span>
+<span>Partnership</span>
+</figcaption>
+</figure>
+<figure class="field-photo">
+<div class="field-photo-media">
+<img alt="Working session with Kiri" loading="lazy" src="tether-partnerships-kiri.jpg"/>
+</div>
+<figcaption class="field-caption">
+<span>Kiri</span>
+<span>Partnership</span>
+</figcaption>
+</figure>
+<figure class="field-photo wide">
+<div class="field-photo-media">
+<img alt="TetherEd team gathered in Santiago" loading="lazy" src="tether-team-santiago.jpg"/>
+</div>
+<figcaption class="field-caption">
+<span>TetherEd · Santiago Team</span>
+<span>WeWork Apoquindo</span>
+</figcaption>
+</figure>
+<figure class="field-photo wide">
+<div class="field-photo-media">
+<img alt="SLEP del Pino Participatory Public Accountability event" loading="lazy" src="tether-slep-del-pino.jpg"/>
+</div>
+<figcaption class="field-caption">
+<span>SLEP del Pino Public Accountability 2025</span>
+<span>Public education · Santiago</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<!-- HOW I WORKED -->
+<section class="section operating-band">
+<div class="section-label">04 / Operating system</div>
+<h2 class="operating-title">
+            Turning relationships<br/>
+<span>into execution.</span>
+</h2>
+<p class="operating-intro">
+            I worked across product, growth and operations to move opportunities
+            from conversation to implementation — aligning teams, priorities and
+            execution across markets.
+          </p>
+<div class="operating-media">
+<img alt="Felipe Quiroz working at Tether Education" loading="lazy" src="/tether-building-ops.jpg"/>
+</div>
+<div class="operating-caption">
+<strong>Working session · Santiago</strong>
+<span>Product · Growth · Operations</span>
+</div>
+<div class="operating-principles">
+<div class="operating-principle">
+<span class="operating-principle-index">01 / PRODUCT</span>
+<h3>Listen to the market.</h3>
+<p>Turn institutional and user feedback into clearer product decisions.</p>
+</div>
+<div class="operating-principle">
+<span class="operating-principle-index">02 / GROWTH</span>
+<h3>Move from interest to adoption.</h3>
+<p>Convert opportunities and partnerships into implementation and usage.</p>
+</div>
+<div class="operating-principle">
+<span class="operating-principle-index">03 / OPERATIONS</span>
+<h3>Build the path to execution.</h3>
+<p>Align teams, priorities and systems so initiatives can actually move.</p>
+</div>
+</div>
+<div class="work-list">
+<div class="work-item"><div class="work-number">01</div><strong>Partnership strategy and business development</strong></div>
+<div class="work-item"><div class="work-number">02</div><strong>Pipeline, prospecting and negotiation</strong></div>
+<div class="work-item"><div class="work-number">03</div><strong>Public- and private-sector relationships</strong></div>
+<div class="work-item"><div class="work-number">04</div><strong>Cross-functional execution across Sales, Marketing, Engineering, Data, Design and Research</strong></div>
+<div class="work-item"><div class="work-number">05</div><strong>Market signals into product and AI improvements</strong></div>
+<div class="work-item"><div class="work-number">06</div><strong>CRM, dashboards, reporting and scalable processes</strong></div>
+</div>
+</section>
+</div>
+<!-- SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-card">
+<div class="sidebar-label">
             Company
           </div>
-
-          <div class="sidebar-value">
+<div class="sidebar-value">
             Tether Education
           </div>
-
-        </div>
-
-
-
-        <div class="sidebar-card">
-
-          <div class="sidebar-label">
+</div>
+<div class="sidebar-card">
+<div class="sidebar-label">
             Website
           </div>
-
-          <div class="sidebar-value">
-
-            <a
-              href="https://tether.education/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+<div class="sidebar-value">
+<a href="https://tether.education/" rel="noopener noreferrer" target="_blank">
               tether.education
             </a>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="sidebar-card">
-
-          <div class="sidebar-label">
+</div>
+</div>
+<div class="sidebar-card">
+<div class="sidebar-label">
             Role
           </div>
-
-          <div class="sidebar-value">
+<div class="sidebar-value">
             Head of Partnerships
           </div>
-
-        </div>
-
-
-
-        <div class="sidebar-card">
-
-          <div class="sidebar-label">
+</div>
+<div class="sidebar-card">
+<div class="sidebar-label">
             Category
           </div>
-
-          <div class="sidebar-value">
+<div class="sidebar-value">
             GovTech / EdTech
           </div>
-
-        </div>
-
-
-
-        <div class="sidebar-card">
-
-          <div class="sidebar-label">
+</div>
+<div class="sidebar-card">
+<div class="sidebar-label">
             Markets
           </div>
-
-          <div class="sidebar-value">
-            Latin America<br>
-            United States<br>
-            Denmark<br>
+<div class="sidebar-value">
+            Latin America<br/>
+            United States<br/>
+            Denmark<br/>
             Spain
           </div>
-
-        </div>
-
-
-
-        <div class="sidebar-card">
-
-          <div class="sidebar-label">
-            Periodo
+</div>
+<div class="sidebar-card">
+<div class="sidebar-label">
+            Period
           </div>
-
-          <div class="sidebar-value">
+<div class="sidebar-value">
             2024 — 2026
           </div>
-
-        </div>
-
-
-
-        <div class="sidebar-card">
-
-          <div class="sidebar-label">
+</div>
+<div class="sidebar-card">
+<div class="sidebar-label">
             Focus
           </div>
-
-          <div class="sidebar-value">
-            Partnerships<br>
-            Business development<br>
-            Expansion<br>
+<div class="sidebar-value">
+            Partnerships<br/>
+            Business development<br/>
+            Expansion<br/>
             Product adoption
           </div>
-
-        </div>
-
-
-      </aside>
-
-
-    </div>
-
-
-  </main>
-
-
-
-  <!-- =====================================================
+</div>
+</aside>
+</div>
+</main>
+<!-- =====================================================
        FOCUS
   ====================================================== -->
 
-  <section class="focus">
-
-
-    <div class="focus-dark">
-
-
-      <div class="focus-label">
-        Partnership principle
-      </div>
-
-
-      <h2 class="focus-title">
-
-        Connect stakeholders.
-
-        <span>
-          Turn relationships into adoption.
-        </span>
-
-      </h2>
-
-
-      <div class="focus-steps">
-
-        <div class="focus-step">
-          Understand
-        </div>
-
-        <div class="focus-step">
-          Align
-        </div>
-
-        <div class="focus-step">
-          Implement
-        </div>
-
-      </div>
-
-
-    </div>
-
-
-
-    <div class="focus-light">
-
-
-      <div class="focus-label">
-        Product principle
-      </div>
-
-
-      <h2 class="focus-title">
-
-        Listen to the market.
-
-        <span>
-          Build better.
-        </span>
-
-      </h2>
-
-
-      <div class="focus-steps">
-
-        <div class="focus-step">
-          Signals
-        </div>
-
-        <div class="focus-step">
-          Product
-        </div>
-
-        <div class="focus-step">
-          Learning
-        </div>
-
-      </div>
-
-
-    </div>
-
-
-  </section>
-
-
-
-  <!-- =====================================================
+<!-- =====================================================
        PROJECT NAVIGATION
   ====================================================== -->
-
-  <section class="project-nav">
-
-
-    <div class="project-nav-inner">
-
-
-      <a
-        href="/lowsignal"
-        class="project-link"
-      >
-
-        <div class="project-link-label">
+<section class="project-nav">
+<div class="project-nav-inner">
+<a class="project-link" href="/lowsignal">
+<div class="project-link-label">
           Previous project
         </div>
-
-        <strong>
+<strong>
           lowsignal
         </strong>
-
-      </a>
-
-
-
-      <a
-        href="/geovictoria"
-        class="project-link right"
-      >
-
-        <div class="project-link-label">
+</a>
+<a class="project-link right" href="/geovictoria">
+<div class="project-link-label">
           Next project
         </div>
-
-        <strong>
+<strong>
           GeoVictoria
         </strong>
-
-      </a>
-
-
-    </div>
-
-
-  </section>
-
-
-
-  <!-- =====================================================
+</a>
+</div>
+</section>
+<!-- =====================================================
        CONTACT
   ====================================================== -->
-
-  <section
-    class="bottom"
-    id="contact"
-  >
-
-
-    <div class="contact-block">
-
-
-      <div class="contact-copy">
-
-
-        <div class="section-label">
+<section class="bottom" id="contact">
+<div class="contact-block">
+<div class="contact-copy">
+<div class="section-label">
           Contact
         </div>
-
-
-        <h3>
+<h3>
           Let’s talk.
         </h3>
-
-
-      </div>
-
-
-
-      <div class="contact-links">
-
-
-        <a
-          href="https://www.linkedin.com/in/felipequirozp"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="contact-link"
-        >
+</div>
+<div class="contact-links">
+<a class="contact-link" href="https://www.linkedin.com/in/felipequirozp" rel="noopener noreferrer" target="_blank">
           LinkedIn
         </a>
-
-
-        <a
-          href="https://www.instagram.com/felipe_quirozp/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="contact-link"
-        >
+<a class="contact-link" href="https://www.instagram.com/felipe_quirozp/" rel="noopener noreferrer" target="_blank">
           Instagram
         </a>
-
-
-        <a
-          href="mailto:felipe@lowsignal.cl"
-          class="contact-link"
-        >
+<a class="contact-link" href="mailto:felipe@lowsignal.cl">
           Email
         </a>
-
-
-      </div>
-
-
-    </div>
-
-
-
-    <!-- FOOTER -->
-
-    <footer class="footer">
-
-
-      <div>
+</div>
+</div>
+<!-- FOOTER -->
+<footer class="footer">
+<div>
         © 2026 Felipe Quiroz
       </div>
-
 <div class="footer-location">
         Santiago / CL
       </div>
-
-
-    </footer>
-
-
-  </section>
-
-
+</footer>
+</section>
 </body>
-
 </html>
