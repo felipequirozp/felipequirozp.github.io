@@ -1,55 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="es">
-
 <head>
-
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>TetherEd | Felipe Quiroz</title>
-
-  <meta
-    name="description"
-    content="Trabajo seleccionado en TetherEd — tecnología educativa, partnerships, colaboración con el sector público y expansión internacional."
-  >
-
-
-  <!-- SEO / LANGUAGES -->
-  <link rel="canonical" href="https://felipequirozp.cl/es/tethereducation">
-
-  <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/tethereducation">
-
-  <link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/tethereducation">
-
-  <link rel="alternate" hreflang="x-default" href="https://felipequirozp.cl/tethereducation">
-
-  <!-- FAVICON -->
-  <link
-    rel="icon"
-    type="image/png"
-    href="../favicon.png"
-  >
-
-  <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  >
-
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TetherEd | Felipe Quiroz</title>
+<meta content="Trabajo seleccionado en TetherEd — tecnología educativa, partnerships, colaboración con el sector público y expansión internacional." name="description"/>
+<!-- SEO / LANGUAGES -->
+<link href="https://felipequirozp.cl/es/tethereducation" rel="canonical"/>
+<link href="https://felipequirozp.cl/tethereducation" hreflang="en" rel="alternate"/>
+<link href="https://felipequirozp.cl/es/tethereducation" hreflang="es" rel="alternate"/>
+<link href="https://felipequirozp.cl/tethereducation" hreflang="x-default" rel="alternate"/>
+<!-- FAVICON -->
+<link href="../favicon.png" rel="icon" type="image/png"/>
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
 
     /* =====================================================
        COLORS
@@ -3539,366 +3507,3363 @@
       margin-top: 28px;
     }
 
-  </style>
+  
+    /* =========================================================
+       V23 — impact direction, rebuilt from the stable V21 source
+       ========================================================= */
 
+    :root{
+      --impact-accent:#8fa4bb;
+      --impact-dark:#0b1522;
+      --impact-dark-2:#101d2d;
+    }
+
+    .impact-band{
+      background:var(--impact-dark-2);
+      color:#fff;
+      padding:104px 6vw 96px;
+    }
+
+    .impact-band-inner{
+      max-width:1500px;
+      margin:0 auto;
+    }
+
+    .impact-band-label{
+      margin-bottom:24px;
+      color:var(--slate-light);
+      font-size:10px;
+      font-weight:600;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .impact-band-head{
+      display:grid;
+      grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);
+      gap:7vw;
+      align-items:end;
+      margin-bottom:72px;
+    }
+
+    .impact-band-title{
+      margin:0;
+      max-width:980px;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(58px,7vw,110px);
+      line-height:.92;
+      letter-spacing:-.06em;
+      font-weight:500;
+    }
+
+    .impact-band-title span{ color:var(--impact-accent); }
+
+    .impact-band-copy{
+      margin:0;
+      max-width:500px;
+      color:rgba(255,255,255,.72);
+      font-size:15px;
+      line-height:1.75;
+    }
+
+    .impact-band-metrics{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:1px;
+      background:rgba(255,255,255,.12);
+      border-top:1px solid rgba(255,255,255,.12);
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+
+    .impact-signal{
+      background:var(--impact-dark-2);
+      padding:34px 28px 32px;
+    }
+
+    .impact-signal strong{
+      display:block;
+      margin-bottom:8px;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(36px,4vw,58px);
+      line-height:1;
+      letter-spacing:-.045em;
+      font-weight:500;
+      color:#fff;
+    }
+
+    .impact-signal span{
+      color:var(--slate-light);
+      font-size:10px;
+      line-height:1.5;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    /* Softer project cards */
+    .project-case{
+      border:1px solid var(--line) !important;
+      border-radius:28px !important;
+      background:#f4f6f8 !important;
+      padding:38px 32px !important;
+      box-shadow:none !important;
+      transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease,
+        background-color .22s ease !important;
+    }
+
+    .project-case:hover{
+      transform:translateY(-2px) !important;
+      background:#f4f6f8 !important;
+      border-color:#c7d2de !important;
+      box-shadow:0 16px 34px rgba(15,23,42,.05) !important;
+    }
+
+    .project-case:active{
+      transform:translateY(0) !important;
+      background:#eef2f6 !important;
+      border-color:#b9c6d3 !important;
+      box-shadow:0 8px 20px rgba(15,23,42,.04) !important;
+    }
+
+    .project-case:focus-within{
+      outline:none !important;
+      border-color:#9aaec4 !important;
+      box-shadow:0 0 0 4px rgba(143,164,187,.13) !important;
+    }
+
+    /* Cool execution feature, still inside the original section */
+    .execution-feature{
+      margin-top:34px;
+      padding:50px;
+      border-radius:30px;
+      background:#0f1b2b;
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .execution-feature::after{
+      content:"";
+      position:absolute;
+      top:0;
+      right:0;
+      width:4px;
+      height:32%;
+      background:#8fa4bb;
+    }
+
+    .execution-feature-title{
+      margin:0 0 38px;
+      max-width:900px;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(50px,5.6vw,86px);
+      line-height:.94;
+      letter-spacing:-.055em;
+      font-weight:500;
+      color:#fff;
+    }
+
+    .execution-feature-title span{ color:#8fa4bb; }
+
+    .execution-feature-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr);
+      gap:48px;
+      align-items:center;
+    }
+
+    .execution-feature-media{
+      aspect-ratio:4/3;
+      border-radius:20px;
+      overflow:hidden;
+      background:#17263a;
+    }
+
+    .execution-feature-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .execution-feature-copy h3{
+      margin:0 0 14px;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(28px,2.8vw,42px);
+      line-height:1.06;
+      letter-spacing:-.035em;
+      font-weight:500;
+      color:#fff;
+    }
+
+    .execution-feature-copy p{
+      margin:0;
+      color:rgba(255,255,255,.74);
+      font-size:14px;
+      line-height:1.72;
+    }
+
+    .execution-signals{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:1px;
+      margin-top:30px;
+      background:rgba(255,255,255,.12);
+      border-top:1px solid rgba(255,255,255,.12);
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+
+    .execution-signal{
+      background:#0f1b2b;
+      padding:20px 16px;
+    }
+
+    .execution-signal strong{
+      display:block;
+      margin-bottom:6px;
+      color:#fff;
+      font-size:10px;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+
+    .execution-signal span{
+      color:#9fb0c3;
+      font-size:11px;
+      line-height:1.4;
+    }
+
+    @media(max-width:900px){
+      .impact-band-head{ grid-template-columns:1fr; gap:28px; }
+      .impact-band-metrics{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .execution-feature-grid{ grid-template-columns:1fr; gap:30px; }
+    }
+
+    @media(max-width:640px){
+      .impact-band{ padding:78px 22px 72px; }
+      .impact-band-title{ font-size:clamp(50px,14vw,76px); }
+      .impact-band-metrics{ grid-template-columns:1fr 1fr; }
+      .impact-signal{ padding:24px 18px; }
+
+      .project-case{
+        border-radius:22px !important;
+        padding:26px 20px !important;
+      }
+
+      .execution-feature{
+        padding:32px 20px;
+        border-radius:22px;
+      }
+
+      .execution-feature-title{
+        font-size:clamp(44px,13vw,64px);
+        margin-bottom:28px;
+      }
+
+      .execution-feature-media{ border-radius:16px; }
+      .execution-signals{ grid-template-columns:1fr; }
+    }
+
+  
+    /* =========================================================
+       V24 — renewed case-study system
+       ========================================================== */
+
+    .project-case{
+      border:1px solid var(--line) !important;
+      border-radius:30px !important;
+      background:#f3f5f7 !important;
+      padding:42px 36px !important;
+      box-shadow:none !important;
+      transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease,
+        background-color .22s ease !important;
+    }
+
+    .project-case:hover{
+      transform:translateY(-2px) !important;
+      background:#f3f5f7 !important;
+      border-color:#c5d0db !important;
+      box-shadow:0 18px 40px rgba(15,23,42,.055) !important;
+    }
+
+    .project-case:active{
+      transform:translateY(0) !important;
+      background:#edf1f5 !important;
+      border-color:#b8c5d2 !important;
+      box-shadow:0 9px 22px rgba(15,23,42,.045) !important;
+    }
+
+    .project-case:focus-within{
+      outline:none !important;
+      border-color:#9aaec4 !important;
+      box-shadow:0 0 0 4px rgba(143,164,187,.13) !important;
+    }
+
+    .project-case-metric{
+      border-radius:999px !important;
+      background:#eef2f5 !important;
+      border-color:#d3dce4 !important;
+    }
+
+    .leadership-card{
+      border-radius:0 !important;
+      background:transparent !important;
+      box-shadow:none !important;
+      border:none !important;
+      border-top:1px solid var(--line) !important;
+      padding:34px 0 0 !important;
+    }
+
+    .leadership-photo-wrap{
+      border-radius:18px !important;
+      overflow:hidden;
+    }
+
+    .operating-band{
+      margin-top:8px;
+      margin-bottom:105px;
+      padding:74px 58px 64px !important;
+      background:#0f1b2b;
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+      border-radius:0;
+    }
+
+    .operating-band::after{
+      content:"";
+      position:absolute;
+      top:0;
+      right:0;
+      width:4px;
+      height:26%;
+      background:#8fa4bb;
+    }
+
+    .operating-band .section-label{
+      color:#9fb0c3 !important;
+      margin-bottom:24px;
+    }
+
+    .operating-title{
+      margin:0 0 54px;
+      max-width:920px;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(58px,6.4vw,98px);
+      line-height:.92;
+      letter-spacing:-.06em;
+      font-weight:500;
+      color:#fff;
+    }
+
+    .operating-title span{
+      color:#8fa4bb;
+    }
+
+    .operating-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);
+      gap:54px;
+      align-items:center;
+    }
+
+    .operating-media{
+      aspect-ratio:4/3;
+      overflow:hidden;
+      border-radius:20px;
+      background:#17263a;
+    }
+
+    .operating-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .operating-copy{
+      max-width:560px;
+    }
+
+    .operating-copy h3{
+      margin:0 0 16px;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(30px,3.1vw,48px);
+      line-height:1.04;
+      letter-spacing:-.04em;
+      font-weight:500;
+      color:#fff;
+    }
+
+    .operating-copy p{
+      margin:0;
+      color:rgba(255,255,255,.74);
+      font-size:15px;
+      line-height:1.75;
+    }
+
+    .operating-signals{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      margin-top:34px;
+      border-top:1px solid rgba(255,255,255,.14);
+      border-bottom:1px solid rgba(255,255,255,.14);
+    }
+
+    .operating-signal{
+      padding:22px 18px 24px;
+      border-right:1px solid rgba(255,255,255,.14);
+    }
+
+    .operating-signal:last-child{
+      border-right:none;
+    }
+
+    .operating-signal strong{
+      display:block;
+      margin-bottom:7px;
+      color:#fff;
+      font-size:10px;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+
+    .operating-signal span{
+      color:#9fb0c3;
+      font-size:11px;
+      line-height:1.45;
+    }
+
+    .operating-band .work-list{
+      margin-top:54px;
+      border-top:1px solid rgba(255,255,255,.14);
+    }
+
+    .operating-band .work-item{
+      border-bottom:1px solid rgba(255,255,255,.14) !important;
+    }
+
+    .operating-band .work-number{
+      color:#8295aa !important;
+    }
+
+    .operating-band .work-item strong{
+      color:#fff !important;
+    }
+
+    .field-caption span:first-child{
+      font-weight:600;
+      color:var(--navy);
+    }
+
+    @media(max-width:900px){
+      .operating-grid{
+        grid-template-columns:1fr;
+        gap:36px;
+      }
+    }
+
+    @media(max-width:640px){
+      .project-case{
+        border-radius:22px !important;
+        padding:28px 22px !important;
+      }
+
+      .operating-band{
+        padding:58px 22px 52px !important;
+        margin-left:-22px;
+        margin-right:-22px;
+        margin-bottom:82px;
+      }
+
+      .operating-title{
+        font-size:clamp(48px,13vw,70px);
+        margin-bottom:38px;
+      }
+
+      .operating-media{
+        border-radius:16px;
+      }
+
+      .operating-signals{
+        grid-template-columns:1fr;
+      }
+
+      .operating-signal{
+        border-right:none;
+        border-bottom:1px solid rgba(255,255,255,.14);
+      }
+
+      .operating-signal:last-child{
+        border-bottom:none;
+      }
+    }
+
+  
+    /* =========================================================
+       V25 — Operating section: editorial, light, integrated
+       ========================================================== */
+
+    .operating-band{
+      margin-top:0 !important;
+      margin-bottom:110px !important;
+      padding:96px 0 86px !important;
+      background:transparent !important;
+      color:var(--navy) !important;
+      position:relative;
+      overflow:visible !important;
+      border-radius:0 !important;
+      border-top:1px solid var(--line);
+    }
+
+    .operating-band::after{
+      display:none !important;
+    }
+
+    .operating-band .section-label{
+      color:var(--steel-light) !important;
+      margin-bottom:24px !important;
+    }
+
+    .operating-title{
+      margin:0 0 58px !important;
+      max-width:980px !important;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(62px,6.6vw,104px) !important;
+      line-height:.93 !important;
+      letter-spacing:-.06em !important;
+      font-weight:500 !important;
+      color:var(--navy) !important;
+    }
+
+    .operating-title span{
+      color:var(--steel-light) !important;
+    }
+
+    .operating-grid{
+      display:grid !important;
+      grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr) !important;
+      gap:64px !important;
+      align-items:center !important;
+    }
+
+    .operating-media{
+      aspect-ratio:4/3 !important;
+      overflow:hidden !important;
+      border-radius:22px !important;
+      background:#e9edf1 !important;
+    }
+
+    .operating-media img{
+      width:100% !important;
+      height:100% !important;
+      object-fit:cover !important;
+      display:block !important;
+    }
+
+    .operating-copy{
+      max-width:560px !important;
+    }
+
+    .operating-copy h3{
+      margin:0 0 16px !important;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(30px,3vw,46px) !important;
+      line-height:1.05 !important;
+      letter-spacing:-.04em !important;
+      font-weight:500 !important;
+      color:var(--navy) !important;
+    }
+
+    .operating-copy p{
+      margin:0 !important;
+      color:var(--muted) !important;
+      font-size:15px !important;
+      line-height:1.75 !important;
+    }
+
+    .operating-signals{
+      display:grid !important;
+      grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+      margin-top:34px !important;
+      border-top:1px solid var(--line) !important;
+      border-bottom:1px solid var(--line) !important;
+    }
+
+    .operating-signal{
+      padding:22px 18px 24px !important;
+      border-right:1px solid var(--line) !important;
+    }
+
+    .operating-signal:last-child{
+      border-right:none !important;
+    }
+
+    .operating-signal strong{
+      display:block !important;
+      margin-bottom:7px !important;
+      color:var(--navy) !important;
+      font-size:10px !important;
+      letter-spacing:.1em !important;
+      text-transform:uppercase !important;
+    }
+
+    .operating-signal span{
+      color:var(--steel-light) !important;
+      font-size:11px !important;
+      line-height:1.45 !important;
+    }
+
+    .operating-band .work-list{
+      margin-top:58px !important;
+      border-top:1px solid var(--line) !important;
+    }
+
+    .operating-band .work-item{
+      border-bottom:1px solid var(--line) !important;
+      padding-top:20px !important;
+      padding-bottom:20px !important;
+    }
+
+    .operating-band .work-number{
+      color:var(--steel-light) !important;
+    }
+
+    .operating-band .work-item strong{
+      color:var(--navy) !important;
+    }
+
+    @media(max-width:900px){
+      .operating-grid{
+        grid-template-columns:1fr !important;
+        gap:36px !important;
+      }
+    }
+
+    @media(max-width:640px){
+      .operating-band{
+        padding:72px 0 68px !important;
+        margin-left:0 !important;
+        margin-right:0 !important;
+        margin-bottom:84px !important;
+      }
+
+      .operating-title{
+        font-size:clamp(48px,13vw,72px) !important;
+        margin-bottom:38px !important;
+      }
+
+      .operating-media{
+        border-radius:16px !important;
+      }
+
+      .operating-signals{
+        grid-template-columns:1fr !important;
+      }
+
+      .operating-signal{
+        border-right:none !important;
+        border-bottom:1px solid var(--line) !important;
+      }
+
+      .operating-signal:last-child{
+        border-bottom:none !important;
+      }
+    }
+
+  
+    /* =========================================================
+       V26 — Operating section: spacious editorial composition
+       ========================================================== */
+
+    .operating-band{
+      margin-top:0 !important;
+      margin-bottom:112px !important;
+      padding:96px 0 88px !important;
+      background:transparent !important;
+      color:var(--navy) !important;
+      border-top:1px solid var(--line) !important;
+      overflow:visible !important;
+    }
+
+    .operating-band::after{
+      display:none !important;
+    }
+
+    .operating-band .section-label{
+      margin-bottom:26px !important;
+      color:var(--steel-light) !important;
+    }
+
+    .operating-title{
+      margin:0 !important;
+      max-width:1050px !important;
+      font-family:"Manrope",sans-serif !important;
+      font-size:clamp(64px,6.8vw,108px) !important;
+      line-height:.93 !important;
+      letter-spacing:-.06em !important;
+      font-weight:500 !important;
+      color:var(--navy) !important;
+    }
+
+    .operating-title span{
+      color:var(--steel-light) !important;
+    }
+
+    .operating-intro{
+      margin-top:30px;
+      max-width:720px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.78;
+    }
+
+    .operating-media{
+      margin-top:54px !important;
+      width:100% !important;
+      aspect-ratio:16/9 !important;
+      border-radius:24px !important;
+      overflow:hidden !important;
+      background:#e9edf1 !important;
+    }
+
+    .operating-media img{
+      width:100% !important;
+      height:100% !important;
+      object-fit:cover !important;
+      display:block !important;
+    }
+
+    .operating-caption{
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      margin-top:12px;
+      color:var(--steel-light);
+      font-size:11px;
+      line-height:1.4;
+    }
+
+    .operating-caption strong{
+      color:var(--navy);
+      font-weight:600;
+    }
+
+    .operating-principles{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:44px;
+      margin-top:66px;
+    }
+
+    .operating-principle{
+      padding-top:20px;
+      border-top:1px solid var(--line);
+    }
+
+    .operating-principle-index{
+      display:block;
+      margin-bottom:18px;
+      color:var(--steel-light);
+      font-size:10px;
+      letter-spacing:.1em;
+    }
+
+    .operating-principle h3{
+      margin:0 0 10px;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(24px,2vw,32px);
+      line-height:1.08;
+      letter-spacing:-.035em;
+      font-weight:500;
+      color:var(--navy);
+    }
+
+    .operating-principle p{
+      margin:0;
+      max-width:280px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.65;
+    }
+
+    .operating-band .work-list{
+      margin-top:74px !important;
+      border-top:1px solid var(--line) !important;
+    }
+
+    .operating-band .work-item{
+      padding-top:21px !important;
+      padding-bottom:21px !important;
+      border-bottom:1px solid var(--line) !important;
+    }
+
+    .operating-band .work-number{
+      color:var(--steel-light) !important;
+    }
+
+    .operating-band .work-item strong{
+      color:var(--navy) !important;
+    }
+
+    @media(max-width:760px){
+      .operating-band{
+        padding:74px 0 68px !important;
+        margin-bottom:86px !important;
+      }
+
+      .operating-title{
+        font-size:clamp(48px,13vw,74px) !important;
+      }
+
+      .operating-intro{
+        margin-top:24px;
+        font-size:15px;
+      }
+
+      .operating-media{
+        margin-top:40px !important;
+        aspect-ratio:4/3 !important;
+        border-radius:18px !important;
+      }
+
+      .operating-caption{
+        flex-direction:column;
+        gap:4px;
+      }
+
+      .operating-principles{
+        grid-template-columns:1fr;
+        gap:34px;
+        margin-top:48px;
+      }
+
+      .operating-principle p{
+        max-width:none;
+      }
+    }
+
+  
+    /* =========================================================
+       V27 — keep impact headline on two intentional lines
+       ========================================================== */
+
+    .impact-band-title{
+      max-width:none !important;
+      font-size:clamp(54px,5.7vw,92px) !important;
+      line-height:.94 !important;
+      letter-spacing:-.055em !important;
+    }
+
+    .impact-band-title .impact-line{
+      display:block;
+      white-space:nowrap;
+    }
+
+    .impact-band-title .impact-line-accent{
+      color:var(--impact-accent);
+    }
+
+    @media(max-width:760px){
+      .impact-band-title{
+        font-size:clamp(34px,9.2vw,54px) !important;
+        line-height:.98 !important;
+      }
+
+      .impact-band-title .impact-line{
+        white-space:nowrap;
+      }
+    }
+
+  
+    /* =========================================================
+       V28 — stronger two-tone impact + better line spacing
+       ========================================================== */
+
+    .impact-band-title{
+      max-width:none !important;
+      font-size:clamp(54px,5.7vw,92px) !important;
+      line-height:1 !important;
+      letter-spacing:-.055em !important;
+    }
+
+    .impact-band-title .impact-line{
+      display:block !important;
+      white-space:nowrap !important;
+    }
+
+    .impact-band-title .impact-line:first-child{
+      color:#ffffff !important;
+    }
+
+    .impact-band-title .impact-line-accent{
+      color:var(--impact-accent) !important;
+      margin-top:.10em !important;
+    }
+
+    @media(max-width:760px){
+      .impact-band-title{
+        font-size:clamp(34px,9.2vw,54px) !important;
+        line-height:1.03 !important;
+      }
+
+      .impact-band-title .impact-line-accent{
+        margin-top:.12em !important;
+      }
+    }
+
+  
+    /* =========================================================
+       V31 — hero statement unified as one intentional block
+       ========================================================== */
+
+    .visual-title{
+      display:block;
+      margin:0;
+      max-width:760px;
+      font-size:clamp(46px,5.2vw,82px);
+      line-height:.98;
+      letter-spacing:-.055em;
+    }
+
+    .visual-title .hero-statement-line{
+      display:block;
+    }
+
+    .visual-title .hero-statement-line + .hero-statement-line{
+      margin-top:.14em;
+    }
+
+    .visual-title .hero-statement-primary{
+      color:#ffffff;
+    }
+
+    .visual-title .hero-statement-secondary{
+      color:var(--slate-light);
+    }
+
+    @media(max-width:760px){
+      .visual-title{
+        max-width:none;
+        font-size:clamp(38px,10.6vw,58px);
+        line-height:1.02;
+      }
+
+      .visual-title .hero-statement-line + .hero-statement-line{
+        margin-top:.16em;
+      }
+    }
+
+  
+    /* =========================================================
+       V32 — hero statement balanced
+       Smaller scale + tighter controlled wrapping
+       ========================================================== */
+
+    .visual-title{
+      display:block !important;
+      margin:0 !important;
+      max-width:660px !important;
+      font-size:clamp(40px,4.35vw,68px) !important;
+      line-height:1.00 !important;
+      letter-spacing:-.045em !important;
+    }
+
+    .visual-title .hero-statement-line{
+      display:block !important;
+      max-width:100% !important;
+    }
+
+    .visual-title .hero-statement-line + .hero-statement-line{
+      margin-top:.12em !important;
+    }
+
+    .visual-title .hero-statement-primary{
+      color:#ffffff !important;
+    }
+
+    .visual-title .hero-statement-secondary{
+      color:var(--slate-light) !important;
+    }
+
+    @media(max-width:760px){
+      .visual-title{
+        max-width:none !important;
+        font-size:clamp(34px,9.4vw,50px) !important;
+        line-height:1.02 !important;
+        letter-spacing:-.04em !important;
+      }
+
+      .visual-title .hero-statement-line + .hero-statement-line{
+        margin-top:.14em !important;
+      }
+    }
+
+  
+    /* =========================================================
+       V33 — contained operating photo + closing principles
+       ========================================================== */
+
+    /* Contain the operating photo so it supports the section,
+       rather than dominating the entire page. */
+    .operating-media{
+      width:min(76%, 980px) !important;
+      margin:50px auto 0 !important;
+      aspect-ratio:16/9 !important;
+    }
+
+    .operating-caption{
+      width:min(76%, 980px) !important;
+      margin:12px auto 0 !important;
+    }
+
+    /* Closing principles */
+    .closing-principles{
+      margin-top:14px;
+      margin-bottom:92px;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .closing-principles-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      min-height:560px;
+    }
+
+    .closing-principle{
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      padding:72px 7vw;
+      overflow:hidden;
+    }
+
+    .closing-principle:first-child{
+      background:var(--navy-deep);
+      color:#fff;
+    }
+
+    .closing-principle:last-child{
+      background:#8296aa;
+      color:#fff;
+    }
+
+    .closing-principle-label{
+      margin-bottom:44px;
+      font-size:10px;
+      font-weight:600;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.68);
+    }
+
+    .closing-principle h2{
+      margin:0;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(48px,4.7vw,78px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+      font-weight:500;
+      max-width:650px;
+    }
+
+    .closing-principle h2 span{
+      display:block;
+      margin-top:.18em;
+      color:#9fb0c3;
+    }
+
+    .closing-principle:last-child h2 span{
+      color:rgba(255,255,255,.58);
+    }
+
+    .closing-principle-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:44px;
+    }
+
+    .closing-principle-tags span{
+      padding:9px 15px;
+      border:1px solid rgba(255,255,255,.24);
+      border-radius:999px;
+      font-size:9px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.8);
+    }
+
+    .closing-operating-note{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:28px;
+      align-items:center;
+      padding:24px 0;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.5;
+    }
+
+    .closing-operating-note strong{
+      color:var(--navy);
+      font-size:10px;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+
+    @media(max-width:760px){
+      .operating-media,
+      .operating-caption{
+        width:100% !important;
+      }
+
+      .closing-principles{
+        margin-bottom:72px;
+      }
+
+      .closing-principles-grid{
+        grid-template-columns:1fr;
+        min-height:0;
+      }
+
+      .closing-principle{
+        min-height:440px;
+        padding:56px 24px;
+      }
+
+      .closing-principle h2{
+        font-size:clamp(44px,12vw,62px);
+      }
+
+      .closing-operating-note{
+        grid-template-columns:1fr;
+        gap:8px;
+      }
+    }
+
+  
+
+    /* =========================================================
+       V34 — operating section: photo left, principles stacked right
+       ========================================================== */
+
+    .operating-showcase{
+      display:grid;
+      grid-template-columns:minmax(0, 1.12fr) minmax(300px, .88fr);
+      gap:56px;
+      align-items:start;
+      margin-top:46px;
+    }
+
+    .operating-visual{
+      min-width:0;
+    }
+
+    .operating-media{
+      margin-top:0 !important;
+      width:100% !important;
+      aspect-ratio:5/4 !important;
+      max-height:680px;
+      border-radius:26px !important;
+      overflow:hidden !important;
+      background:#e9edf1 !important;
+    }
+
+    .operating-media img{
+      width:100% !important;
+      height:100% !important;
+      object-fit:cover !important;
+      display:block !important;
+    }
+
+    .operating-caption{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:20px;
+      margin-top:14px;
+      color:var(--steel-light);
+      font-size:11px;
+      line-height:1.45;
+    }
+
+    .operating-principles{
+      display:flex !important;
+      flex-direction:column !important;
+      gap:18px !important;
+      margin-top:0 !important;
+      padding-top:0 !important;
+    }
+
+    .operating-principle{
+      padding:22px 24px 24px !important;
+      border:1px solid var(--line) !important;
+      border-radius:22px !important;
+      background:rgba(255,255,255,.52) !important;
+      backdrop-filter:blur(2px);
+    }
+
+    .operating-principle h3{
+      margin:0 0 10px !important;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(24px,2.2vw,34px) !important;
+      line-height:1.08 !important;
+      letter-spacing:-.038em !important;
+      font-weight:500 !important;
+      color:var(--navy) !important;
+    }
+
+    .operating-principle p{
+      margin:0 !important;
+      max-width:none !important;
+      color:var(--muted) !important;
+      font-size:13.5px !important;
+      line-height:1.68 !important;
+    }
+
+    .operating-principle-index{
+      display:block !important;
+      margin-bottom:16px !important;
+      color:var(--steel-light) !important;
+      font-size:10px !important;
+      letter-spacing:.1em !important;
+      text-transform:uppercase;
+    }
+
+    @media(max-width:980px){
+      .operating-showcase{
+        grid-template-columns:1fr;
+        gap:34px;
+      }
+    }
+
+    @media(max-width:760px){
+      .operating-showcase{
+        gap:28px;
+        margin-top:34px;
+      }
+
+      .operating-media{
+        aspect-ratio:4/3 !important;
+        border-radius:18px !important;
+      }
+
+      .operating-principle{
+        padding:18px 18px 20px !important;
+        border-radius:18px !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       V35 — backing single-line + premium operating principles
+       ========================================================== */
+
+    .backing-block > .backing-label,
+    .backing-block > .backing-brand,
+    .backing-block > .backing-row {
+      max-width: 1000px !important;
+    }
+
+    .backing-row-copy-only,
+    .backing-row-copy-only .backing-copy {
+      max-width: none !important;
+    }
+
+    .backing-copy {
+      font-size: 13.5px !important;
+      line-height: 1.6 !important;
+      white-space: nowrap;
+    }
+
+    .operating-showcase {
+      grid-template-columns: minmax(0, 1fr) minmax(340px, 0.92fr) !important;
+      gap: 52px !important;
+      align-items: start !important;
+    }
+
+    .operating-principles {
+      gap: 16px !important;
+      align-self: start !important;
+    }
+
+    .operating-principle {
+      position: relative;
+      padding: 22px 24px 22px 28px !important;
+      border-radius: 24px !important;
+      border: 1px solid rgba(25, 47, 76, 0.10) !important;
+      background: linear-gradient(180deg, rgba(255,255,255,0.78) 0%, rgba(255,255,255,0.56) 100%) !important;
+      box-shadow: 0 12px 30px rgba(22, 37, 58, 0.05);
+      overflow: hidden;
+      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease, background-color .22s ease;
+    }
+
+    .operating-principle::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 18px;
+      bottom: 18px;
+      width: 4px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--navy) 0%, var(--steel) 100%);
+      opacity: .92;
+    }
+
+    .operating-principle:hover {
+      transform: translateY(-2px);
+      border-color: rgba(25, 47, 76, 0.16) !important;
+      background: linear-gradient(180deg, rgba(255,255,255,0.82) 0%, rgba(255,255,255,0.62) 100%) !important;
+      box-shadow: 0 18px 34px rgba(22, 37, 58, 0.08);
+    }
+
+    .operating-principle-index {
+      display: inline-flex !important;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px !important;
+      padding: 7px 11px !important;
+      border-radius: 999px;
+      border: 1px solid rgba(25, 47, 76, 0.10);
+      background: rgba(255,255,255,.6);
+      color: var(--steel-light) !important;
+      font-size: 10px !important;
+      letter-spacing: .12em !important;
+      line-height: 1 !important;
+    }
+
+    .operating-principle h3 {
+      margin: 0 0 8px !important;
+      font-size: clamp(26px, 2.15vw, 34px) !important;
+      line-height: 1.02 !important;
+      letter-spacing: -0.04em !important;
+      max-width: 12ch;
+    }
+
+    .operating-principle p {
+      margin: 0 !important;
+      font-size: 14px !important;
+      line-height: 1.68 !important;
+      color: var(--muted) !important;
+      max-width: 30ch;
+    }
+
+    @media (max-width: 1100px) {
+      .backing-copy {
+        white-space: normal;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .operating-showcase {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+      }
+
+      .operating-principles {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .operating-principle {
+        padding: 18px 18px 18px 22px !important;
+        border-radius: 18px !important;
+      }
+
+      .operating-principle::before {
+        top: 14px;
+        bottom: 14px;
+      }
+
+      .operating-principle h3 {
+        max-width: none;
+      }
+
+      .operating-principle p {
+        max-width: none;
+      }
+    }
+
+
+    /* =========================================================
+       V36 — sticky operating image + cleaner closing
+       ========================================================== */
+
+    .operating-showcase{
+      grid-template-columns:minmax(0,.96fr) minmax(360px,.84fr) !important;
+      gap:60px !important;
+      align-items:start !important;
+    }
+
+    .operating-visual{
+      position:sticky;
+      top:118px;
+      align-self:start;
+      min-width:0;
+    }
+
+    .operating-media{
+      width:100% !important;
+      margin:0 !important;
+      aspect-ratio:5/4 !important;
+      max-height:none !important;
+      border-radius:24px !important;
+    }
+
+    .operating-caption{
+      width:100% !important;
+      margin:14px 0 0 !important;
+    }
+
+    .operating-principles{
+      gap:18px !important;
+    }
+
+    @media(max-width:980px){
+      .operating-showcase{
+        grid-template-columns:1fr !important;
+        gap:34px !important;
+      }
+
+      .operating-visual{
+        position:relative;
+        top:auto;
+      }
+    }
+
+    @media(max-width:760px){
+      .operating-media{
+        aspect-ratio:4/3 !important;
+      }
+    }
+
+
+    /* =========================================================
+       V37 — tighten bottom spacing before closing principles
+       ========================================================== */
+
+    .operating-band{
+      margin-bottom:72px !important;
+      padding-bottom:54px !important;
+    }
+
+    .operating-band .work-list{
+      margin-top:58px !important;
+    }
+
+    .closing-principles{
+      margin-top:0 !important;
+    }
+
+    @media(max-width:760px){
+      .operating-band{
+        margin-bottom:58px !important;
+        padding-bottom:46px !important;
+      }
+    }
+
+
+    /* =========================================================
+       V38 — Product/Growth/Operations cards moved into Section 03
+       ========================================================== */
+
+    .project-principles-wrap{
+      margin-top:72px;
+      padding-top:28px;
+      border-top:1px solid var(--line);
+    }
+
+    .project-principles-kicker{
+      margin-bottom:24px;
+      color:var(--steel-light);
+      font-size:10px;
+      font-weight:600;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .project-principles{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .project-principle{
+      position:relative;
+      padding:24px 24px 26px 28px;
+      border:1px solid rgba(25,47,76,.10);
+      border-radius:24px;
+      background:linear-gradient(180deg,rgba(255,255,255,.80) 0%,rgba(255,255,255,.58) 100%);
+      box-shadow:0 12px 30px rgba(22,37,58,.05);
+      overflow:hidden;
+      transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;
+    }
+
+    .project-principle::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:18px;
+      bottom:18px;
+      width:4px;
+      border-radius:999px;
+      background:linear-gradient(180deg,var(--navy) 0%,var(--steel) 100%);
+    }
+
+    .project-principle:hover{
+      transform:translateY(-2px);
+      border-color:rgba(25,47,76,.16);
+      box-shadow:0 18px 34px rgba(22,37,58,.08);
+    }
+
+    .project-principle-index{
+      display:inline-flex;
+      margin-bottom:16px;
+      padding:7px 11px;
+      border:1px solid rgba(25,47,76,.10);
+      border-radius:999px;
+      background:rgba(255,255,255,.62);
+      color:var(--steel-light);
+      font-size:10px;
+      line-height:1;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+    }
+
+    .project-principle h3{
+      margin:0 0 10px;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(24px,2.1vw,32px);
+      line-height:1.05;
+      letter-spacing:-.04em;
+      font-weight:500;
+      color:var(--navy);
+    }
+
+    .project-principle p{
+      margin:0;
+      color:var(--muted);
+      font-size:13.5px;
+      line-height:1.68;
+    }
+
+    /* Section 04 becomes simpler: image + responsibilities */
+    .operating-showcase{
+      display:block !important;
+      margin-top:46px !important;
+    }
+
+    .operating-visual{
+      position:relative !important;
+      top:auto !important;
+      width:min(78%,980px) !important;
+      margin:0 auto !important;
+    }
+
+    .operating-media{
+      width:100% !important;
+      margin:0 !important;
+      aspect-ratio:16/9 !important;
+      border-radius:24px !important;
+    }
+
+    .operating-caption{
+      width:100% !important;
+      margin:14px 0 0 !important;
+    }
+
+    .operating-showcase > .operating-principles{
+      display:none !important;
+    }
+
+    .operating-band .work-list{
+      margin-top:62px !important;
+    }
+
+    @media(max-width:900px){
+      .project-principles{
+        grid-template-columns:1fr;
+      }
+
+      .operating-visual{
+        width:100% !important;
+      }
+    }
+
+    @media(max-width:760px){
+      .project-principles-wrap{
+        margin-top:54px;
+      }
+
+      .project-principle{
+        border-radius:18px;
+        padding:20px 20px 22px 24px;
+      }
+
+      .operating-media{
+        aspect-ratio:4/3 !important;
+        border-radius:18px !important;
+      }
+    }
+
+
+    /* =========================================================
+       V39 — full-width editorial hero preview
+       Inspired by the reference, but kept in Felipe's system
+       ========================================================== */
+
+    .hero{
+      display:block !important;
+      min-height:auto !important;
+      background:
+        radial-gradient(circle at 76% 58%, rgba(82,104,164,.34) 0%, rgba(82,104,164,0) 35%),
+        linear-gradient(135deg,#0b1424 0%,#111b3d 56%,#182a5a 100%) !important;
+      color:#fff !important;
+      border-bottom:none !important;
+      padding:0 !important;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+      background-size:120px 120px;
+      mask-image:linear-gradient(to bottom,rgba(0,0,0,.55),transparent 88%);
+      pointer-events:none;
+    }
+
+    .hero-editorial{
+      position:relative;
+      z-index:1;
+      width:min(1520px,calc(100% - 9vw));
+      margin:0 auto;
+      padding:92px 0 76px;
+    }
+
+    .hero-editorial-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:28px;
+      margin-bottom:86px;
+    }
+
+    .hero-editorial-logo{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:164px;
+      padding:14px 20px;
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:18px;
+      background:rgba(9,19,34,.70);
+      text-decoration:none;
+      backdrop-filter:blur(10px);
+    }
+
+    .hero-editorial-logo img{
+      display:block;
+      max-width:132px;
+      max-height:34px;
+      width:auto;
+      height:auto;
+    }
+
+    .hero-editorial-meta{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      gap:10px;
+    }
+
+    .hero-editorial-meta span{
+      padding:9px 14px;
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:999px;
+      color:rgba(255,255,255,.72);
+      font-size:9px;
+      line-height:1;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+
+    .hero-editorial-kicker{
+      margin-bottom:24px;
+      color:#8fb1ff;
+      font-size:12px;
+      font-weight:600;
+      letter-spacing:.04em;
+    }
+
+    .hero-editorial h1{
+      margin:0;
+      max-width:1240px;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(70px,8.6vw,142px);
+      line-height:.90;
+      letter-spacing:-.065em;
+      font-weight:400;
+      color:#fff;
+    }
+
+    .hero-editorial h1 .hero-accent{
+      display:block;
+      color:#aebbd0;
+      margin-top:.10em;
+    }
+
+    .hero-editorial-bottom{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(280px,.36fr);
+      gap:60px;
+      align-items:end;
+      margin-top:54px;
+      padding-top:34px;
+      border-top:1px solid rgba(255,255,255,.14);
+    }
+
+    .hero-editorial-description{
+      margin:0;
+      max-width:980px;
+      color:rgba(255,255,255,.80);
+      font-size:17px;
+      line-height:1.75;
+    }
+
+    .hero-editorial-role{
+      text-align:right;
+    }
+
+    .hero-editorial-role strong{
+      display:block;
+      margin-bottom:8px;
+      color:#fff;
+      font-family:"Manrope",sans-serif;
+      font-size:18px;
+      font-weight:500;
+    }
+
+    .hero-editorial-role span{
+      color:rgba(255,255,255,.58);
+      font-size:12px;
+      line-height:1.5;
+    }
+
+    @media(max-width:900px){
+      .hero-editorial{
+        width:min(100% - 44px,900px);
+        padding:72px 0 62px;
+      }
+
+      .hero-editorial-top{
+        align-items:flex-start;
+        flex-direction:column;
+        margin-bottom:66px;
+      }
+
+      .hero-editorial-meta{
+        justify-content:flex-start;
+      }
+
+      .hero-editorial-bottom{
+        grid-template-columns:1fr;
+        gap:28px;
+      }
+
+      .hero-editorial-role{
+        text-align:left;
+      }
+    }
+
+    @media(max-width:600px){
+      .hero-editorial{
+        width:calc(100% - 36px);
+        padding:54px 0 48px;
+      }
+
+      .hero-editorial-top{
+        margin-bottom:52px;
+      }
+
+      .hero-editorial-logo{
+        min-width:144px;
+        padding:12px 16px;
+        border-radius:15px;
+      }
+
+      .hero-editorial-logo img{
+        max-width:118px;
+      }
+
+      .hero-editorial h1{
+        font-size:clamp(54px,15.2vw,78px);
+        line-height:.94;
+      }
+
+      .hero-editorial-description{
+        font-size:15px;
+        line-height:1.68;
+      }
+
+      .hero-editorial-bottom{
+        margin-top:38px;
+        padding-top:26px;
+      }
+    }
+
+
+    /* =========================================================
+       V40 — unified case-study color system
+       Navy / steel / slate / ice. No stray purple tones.
+       ========================================================== */
+
+    :root{
+      --case-navy:#0d1724;
+      --case-navy-2:#132235;
+      --case-steel:#324963;
+      --case-steel-soft:#71869c;
+      --case-accent:#9aadc0;
+      --case-ice:#eef1f4;
+      --case-paper:#f5f6f7;
+      --case-line:#d4d9de;
+    }
+
+    /* HERO — same visual language as the rest of the portfolio */
+    .hero{
+      background:
+        radial-gradient(circle at 78% 58%, rgba(50,73,99,.42) 0%, rgba(50,73,99,0) 34%),
+        linear-gradient(135deg,var(--case-navy) 0%,var(--case-navy-2) 58%,var(--case-steel) 100%) !important;
+    }
+
+    .hero-editorial-kicker{
+      color:var(--case-accent) !important;
+    }
+
+    .hero-editorial h1 .hero-accent{
+      color:var(--case-accent) !important;
+    }
+
+    .hero-editorial-logo{
+      background:rgba(13,23,36,.76) !important;
+      border-color:rgba(255,255,255,.10) !important;
+    }
+
+    .hero-editorial-meta span{
+      color:rgba(255,255,255,.70) !important;
+      border-color:rgba(255,255,255,.15) !important;
+      background:rgba(255,255,255,.018);
+    }
+
+    /* IMPACT — dark, but clearly related to the hero */
+    .impact-band{
+      background:
+        radial-gradient(circle at 18% 50%, rgba(50,73,99,.34) 0%, rgba(50,73,99,0) 34%),
+        var(--case-navy-2) !important;
+    }
+
+    .impact-band-title .impact-line:first-child{
+      color:#fff !important;
+    }
+
+    .impact-band-title .impact-line-accent{
+      color:var(--case-accent) !important;
+    }
+
+    .impact-band-label,
+    .impact-band-copy,
+    .impact-signal span{
+      color:rgba(238,241,244,.70) !important;
+    }
+
+    .impact-band-metrics{
+      background:rgba(255,255,255,.10) !important;
+      border-color:rgba(255,255,255,.10) !important;
+    }
+
+    .impact-signal{
+      background:var(--case-navy-2) !important;
+    }
+
+    /* LIGHT CONTENT */
+    .project-case,
+    .project-principle,
+    .operating-principle{
+      background:linear-gradient(180deg,#f7f8f9 0%,#f2f4f6 100%) !important;
+      border-color:var(--case-line) !important;
+    }
+
+    .project-case:hover,
+    .project-principle:hover,
+    .operating-principle:hover{
+      border-color:#bdc8d3 !important;
+      box-shadow:0 16px 34px rgba(13,23,36,.06) !important;
+    }
+
+    .project-principle::before,
+    .operating-principle::before{
+      background:linear-gradient(180deg,var(--case-steel) 0%,var(--case-accent) 100%) !important;
+    }
+
+    .project-principle-index,
+    .operating-principle-index{
+      color:var(--case-steel-soft) !important;
+      border-color:#d5dce3 !important;
+      background:#fff !important;
+    }
+
+    /* PHOTO / OPERATING */
+    .operating-media{
+      background:var(--case-ice) !important;
+    }
+
+    .operating-caption span{
+      color:var(--case-steel-soft) !important;
+    }
+
+    /* CLOSING PRINCIPLES — strong contrast, still same palette */
+    .closing-principle:first-child{
+      background:var(--case-navy) !important;
+    }
+
+    .closing-principle:last-child{
+      background:var(--case-steel) !important;
+    }
+
+    .closing-principle h2 span{
+      color:var(--case-accent) !important;
+    }
+
+    .closing-principle:last-child h2 span{
+      color:#c5d0db !important;
+    }
+
+    .closing-principle-tags span{
+      border-color:rgba(255,255,255,.22) !important;
+      color:rgba(255,255,255,.82) !important;
+    }
+
+    /* SIDEBAR / DIVIDERS */
+    .sidebar-card,
+    .work-item,
+    .field-block,
+    .project-nav{
+      border-color:var(--case-line) !important;
+    }
+
+    .sidebar-label,
+    .section-label,
+    .field-kicker,
+    .project-principles-kicker{
+      color:var(--case-steel-soft) !important;
+    }
+
+    /* BACKING */
+    .backing-logo-wrap{
+      background:var(--case-navy-2) !important;
+      border-color:rgba(255,255,255,.06) !important;
+    }
+
+    .backing-copy{
+      color:var(--muted) !important;
+    }
+
+    /* CONTACT */
+    .bottom{
+      background:var(--case-navy) !important;
+    }
+
+    /* Keep transitions subtle and consistent */
+    .project-case,
+    .project-principle,
+    .operating-principle,
+    .backing-logo-wrap{
+      transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease,opacity .22s ease !important;
+    }
+
+
+    /* =========================================================
+       V41 — remove redundant operating photo + fix dark contact contrast
+       ========================================================== */
+
+    /* Operating section without the redundant photo */
+    .operating-showcase{
+      display:block !important;
+      margin-top:38px !important;
+    }
+
+    .operating-visual{
+      display:none !important;
+    }
+
+    .operating-band .work-list{
+      margin-top:44px !important;
+    }
+
+    /* Contact/footer contrast */
+    .bottom{
+      background:var(--case-navy) !important;
+      color:#fff !important;
+    }
+
+    .bottom .bottom-label,
+    .bottom .footer-copy,
+    .bottom .footer-location{
+      color:rgba(255,255,255,.58) !important;
+    }
+
+    .bottom h2,
+    .bottom .bottom-title,
+    .bottom .contact-title{
+      color:#fff !important;
+    }
+
+    .bottom a{
+      color:#fff !important;
+      border-color:rgba(255,255,255,.22) !important;
+      background:transparent !important;
+    }
+
+    .bottom a:hover{
+      color:#fff !important;
+      border-color:rgba(255,255,255,.42) !important;
+      background:rgba(255,255,255,.05) !important;
+    }
+
+    .bottom .social-pill,
+    .bottom .contact-pill,
+    .bottom .social-link{
+      color:#fff !important;
+      border-color:rgba(255,255,255,.22) !important;
+    }
+
+    .bottom hr,
+    .bottom .bottom-divider,
+    .bottom .footer-line{
+      border-color:rgba(255,255,255,.18) !important;
+      background:rgba(255,255,255,.18) !important;
+    }
+
+    @media(max-width:760px){
+      .operating-band .work-list{
+        margin-top:34px !important;
+      }
+    }
+
+
+    /* =========================================================
+       V45 — clean palette, single cyan accent
+       Executive base + restrained tech signal
+       ========================================================== */
+
+    :root{
+      --case-navy:#0D1724;
+      --case-navy-2:#182536;
+      --case-steel:#324963;
+      --case-steel-soft:#71869C;
+      --case-ice:#EFF0F6;
+      --case-paper:#F7F8FA;
+      --case-line:#D4D9DE;
+      --case-accent:#38E9E9;
+    }
+
+    /* HERO */
+    .hero{
+      background:
+        radial-gradient(circle at 78% 58%, rgba(50,73,99,.28) 0%, rgba(50,73,99,0) 34%),
+        linear-gradient(135deg,var(--case-navy) 0%,var(--case-navy-2) 62%,var(--case-steel) 100%) !important;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      top:0;
+      right:0;
+      width:4px;
+      height:22%;
+      background:var(--case-accent);
+      opacity:.92;
+    }
+
+    .hero-editorial-kicker{
+      color:var(--case-accent) !important;
+    }
+
+    .hero-editorial h1 .hero-accent{
+      color:#A8B7C8 !important;
+    }
+
+    .hero-editorial-meta span{
+      color:rgba(255,255,255,.72) !important;
+      border-color:rgba(255,255,255,.14) !important;
+      background:transparent !important;
+    }
+
+    .hero-editorial-logo{
+      background:rgba(13,23,36,.78) !important;
+      border-color:rgba(255,255,255,.10) !important;
+    }
+
+    /* IMPACT */
+    .impact-band{
+      background:
+        radial-gradient(circle at 16% 46%, rgba(50,73,99,.24) 0%, rgba(50,73,99,0) 34%),
+        var(--case-navy-2) !important;
+    }
+
+    .impact-band-label{
+      color:var(--case-accent) !important;
+    }
+
+    .impact-band-title .impact-line:first-child{
+      color:#fff !important;
+    }
+
+    .impact-band-title .impact-line-accent{
+      color:#9FB0C3 !important;
+    }
+
+    .impact-band-copy,
+    .impact-signal span{
+      color:rgba(239,240,246,.70) !important;
+    }
+
+    .impact-band-metrics{
+      background:rgba(255,255,255,.07) !important;
+      border-color:rgba(255,255,255,.10) !important;
+    }
+
+    .impact-signal{
+      background:rgba(13,23,36,.52) !important;
+    }
+
+    /* LIGHT SURFACES */
+    .project-case,
+    .project-principle{
+      background:linear-gradient(180deg,#FAFBFC 0%,#F4F6F8 100%) !important;
+      border-color:var(--case-line) !important;
+    }
+
+    .project-case:hover,
+    .project-principle:hover{
+      border-color:#C4CDD6 !important;
+      box-shadow:0 16px 34px rgba(13,23,36,.06) !important;
+    }
+
+    .project-principle::before{
+      background:linear-gradient(180deg,var(--case-steel) 0%,var(--case-accent) 100%) !important;
+    }
+
+    .project-principle-index,
+    .operating-principle-index{
+      color:var(--case-steel-soft) !important;
+      border-color:#D8DEE5 !important;
+      background:#fff !important;
+    }
+
+    .project-case-metric{
+      background:#F1F4F6 !important;
+      border-color:#D9E0E6 !important;
+      color:var(--case-steel) !important;
+    }
+
+    /* LABELS */
+    .section-label,
+    .field-kicker,
+    .project-principles-kicker,
+    .sidebar-label,
+    .backing-label{
+      color:var(--case-steel-soft) !important;
+    }
+
+    /* LINKS — cyan only on interaction, not everywhere */
+    .project-case-link,
+    .backing-copy a,
+    .content a:not(.social-link):not(.contact-pill){
+      text-decoration-color:rgba(56,233,233,.22) !important;
+    }
+
+    .project-case-link:hover,
+    .backing-copy a:hover,
+    .content a:not(.social-link):not(.contact-pill):hover{
+      color:#1F6E76 !important;
+      text-decoration-color:var(--case-accent) !important;
+    }
+
+    /* BACKING */
+    .backing-logo-wrap{
+      background:var(--case-navy-2) !important;
+      border-color:rgba(255,255,255,.06) !important;
+    }
+
+    /* CLOSING PRINCIPLES */
+    .closing-principle:first-child{
+      background:var(--case-navy) !important;
+    }
+
+    .closing-principle:last-child{
+      background:var(--case-steel) !important;
+    }
+
+    .closing-principle h2 span{
+      color:#AAB8C8 !important;
+    }
+
+    .closing-principle-tags span{
+      border-color:rgba(255,255,255,.22) !important;
+      color:rgba(255,255,255,.82) !important;
+    }
+
+    .closing-principle:first-child::after,
+    .closing-principle:last-child::after{
+      content:"";
+      position:absolute;
+      top:0;
+      right:0;
+      width:4px;
+      height:20%;
+      background:var(--case-accent);
+      opacity:.78;
+    }
+
+    /* CONTACT */
+    .bottom{
+      background:var(--case-navy) !important;
+    }
+
+    .bottom h2,
+    .bottom .bottom-title,
+    .bottom .contact-title,
+    .bottom a{
+      color:#fff !important;
+    }
+
+    .bottom .bottom-label,
+    .bottom .footer-copy,
+    .bottom .footer-location{
+      color:rgba(255,255,255,.58) !important;
+    }
+
+    .bottom a{
+      border-color:rgba(255,255,255,.20) !important;
+    }
+
+    .bottom a:hover{
+      border-color:rgba(56,233,233,.46) !important;
+      background:rgba(56,233,233,.06) !important;
+    }
+
+
+
+    /* =========================================================
+       V46 — principle cards refreshed
+       Dark premium cards instead of light cards with side bar
+       ========================================================== */
+
+    .project-principles-wrap,
+    .operating-showcase > .operating-principles,
+    .operating-principles{
+      margin-top: 42px !important;
+    }
+
+    .project-principles,
+    .operating-principles{
+      display:grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      gap: 24px !important;
+      align-items: stretch !important;
+    }
+
+    .project-principle,
+    .operating-principle{
+      position: relative !important;
+      display:flex !important;
+      flex-direction:column !important;
+      justify-content:flex-start !important;
+      gap: 18px !important;
+      min-height: 320px !important;
+      padding: 34px 34px 32px !important;
+      border-radius: 28px !important;
+      border: 1px solid rgba(255,255,255,.08) !important;
+      background: linear-gradient(180deg, #111A46 0%, #0A1236 100%) !important;
+      box-shadow: 0 14px 34px rgba(6,12,34,.18) !important;
+      overflow:hidden !important;
+    }
+
+    .project-principle::before,
+    .operating-principle::before{
+      display:none !important;
+      content:none !important;
+    }
+
+    .project-principle::after,
+    .operating-principle::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      border-radius: inherit;
+      background: radial-gradient(circle at 88% 16%, rgba(56,233,233,.10) 0%, rgba(56,233,233,0) 28%);
+      pointer-events:none;
+    }
+
+    .project-principle:hover,
+    .operating-principle:hover{
+      transform: translateY(-4px) !important;
+      border-color: rgba(56,233,233,.20) !important;
+      box-shadow: 0 22px 48px rgba(6,12,34,.24) !important;
+    }
+
+    .project-principle-index,
+    .operating-principle-index{
+      position: relative !important;
+      z-index: 1 !important;
+      align-self:flex-start !important;
+      margin: 0 0 10px 0 !important;
+      padding: 10px 16px !important;
+      border-radius: 999px !important;
+      border: 1px solid rgba(255,255,255,.16) !important;
+      background: rgba(255,255,255,.04) !important;
+      color: #A9B7C7 !important;
+      letter-spacing: .12em !important;
+      font-size: 14px !important;
+      font-weight: 600 !important;
+    }
+
+    .project-principle h3,
+    .operating-principle h3{
+      position: relative !important;
+      z-index: 1 !important;
+      margin: 0 !important;
+      color: #F5F7FB !important;
+      font-size: clamp(28px, 2.1vw, 38px) !important;
+      line-height: 1.06 !important;
+      letter-spacing: -0.04em !important;
+      max-width: 12ch !important;
+      text-wrap: balance !important;
+    }
+
+    .project-principle p,
+    .operating-principle p{
+      position: relative !important;
+      z-index: 1 !important;
+      margin: 0 !important;
+      color: rgba(239,240,246,.76) !important;
+      font-size: 17px !important;
+      line-height: 1.75 !important;
+      max-width: 34ch !important;
+    }
+
+    .project-principles-kicker,
+    .field-kicker,
+    .section-label{
+      text-transform: uppercase !important;
+      letter-spacing: .14em !important;
+    }
+
+    @media (max-width: 1100px){
+      .project-principles,
+      .operating-principles{
+        grid-template-columns: 1fr !important;
+      }
+
+      .project-principle,
+      .operating-principle{
+        min-height: unset !important;
+        padding: 28px 24px 26px !important;
+      }
+
+      .project-principle h3,
+      .operating-principle h3{
+        max-width: none !important;
+        font-size: 32px !important;
+      }
+
+      .project-principle p,
+      .operating-principle p{
+        max-width: none !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       V47 — principle cards balanced
+       Same palette, smaller scale, calmer composition
+       ========================================================== */
+
+    .project-principles-wrap,
+    .operating-showcase > .operating-principles,
+    .operating-principles{
+      margin-top: 32px !important;
+    }
+
+    .project-principles,
+    .operating-principles{
+      display:grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      gap: 22px !important;
+      align-items: stretch !important;
+    }
+
+    .project-principle,
+    .operating-principle{
+      position: relative !important;
+      display:flex !important;
+      flex-direction:column !important;
+      justify-content:flex-start !important;
+      gap: 16px !important;
+      min-height: 252px !important;
+      padding: 28px 28px 26px !important;
+      border-radius: 24px !important;
+      border: 1px solid rgba(255,255,255,.07) !important;
+      background: linear-gradient(180deg, var(--case-navy-2) 0%, var(--case-navy) 100%) !important;
+      box-shadow: 0 10px 24px rgba(13,23,36,.10) !important;
+      overflow: hidden !important;
+      transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease !important;
+    }
+
+    .project-principle:nth-child(2),
+    .operating-principle:nth-child(2){
+      background: linear-gradient(180deg, #14213A 0%, #0F1C31 100%) !important;
+    }
+
+    .project-principle:nth-child(3),
+    .operating-principle:nth-child(3){
+      background: linear-gradient(180deg, #17263A 0%, #111D30 100%) !important;
+    }
+
+    .project-principle::before,
+    .operating-principle::before{
+      display:none !important;
+      content:none !important;
+    }
+
+    .project-principle::after,
+    .operating-principle::after{
+      content:"";
+      position:absolute;
+      top:-20%;
+      right:-6%;
+      width:44%;
+      height:52%;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(56,233,233,.08) 0%, rgba(56,233,233,0) 68%);
+      pointer-events:none;
+    }
+
+    .project-principle:hover,
+    .operating-principle:hover{
+      transform: translateY(-3px) !important;
+      border-color: rgba(56,233,233,.14) !important;
+      box-shadow: 0 16px 32px rgba(13,23,36,.14) !important;
+    }
+
+    .project-principle-index,
+    .operating-principle-index{
+      position: relative !important;
+      z-index: 1 !important;
+      align-self:flex-start !important;
+      margin: 0 0 6px 0 !important;
+      padding: 10px 16px !important;
+      border-radius: 999px !important;
+      border: 1px solid rgba(255,255,255,.14) !important;
+      background: rgba(255,255,255,.04) !important;
+      color: #A9B7C7 !important;
+      letter-spacing: .12em !important;
+      font-size: 12px !important;
+      font-weight: 600 !important;
+    }
+
+    .project-principle h3,
+    .operating-principle h3{
+      position: relative !important;
+      z-index: 1 !important;
+      margin: 0 !important;
+      color: #F5F7FB !important;
+      font-size: clamp(24px, 1.9vw, 32px) !important;
+      line-height: 1.08 !important;
+      letter-spacing: -0.045em !important;
+      max-width: 11ch !important;
+      text-wrap: balance !important;
+    }
+
+    .project-principle p,
+    .operating-principle p{
+      position: relative !important;
+      z-index: 1 !important;
+      margin: 0 !important;
+      color: rgba(239,240,246,.76) !important;
+      font-size: 15px !important;
+      line-height: 1.65 !important;
+      max-width: 28ch !important;
+    }
+
+    @media (max-width: 1180px){
+      .project-principles,
+      .operating-principles{
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+      }
+
+      .project-principle,
+      .operating-principle{
+        min-height: unset !important;
+        padding: 24px 22px 22px !important;
+      }
+
+      .project-principle h3,
+      .operating-principle h3{
+        max-width: none !important;
+        font-size: 28px !important;
+      }
+
+      .project-principle p,
+      .operating-principle p{
+        max-width: none !important;
+      }
+    }
+
+
+
+    /* V48 — remove closing principle divider lines */
+    .closing-principles{
+      border-top: none !important;
+    }
+
+    .closing-principle:first-child::after,
+    .closing-principle:last-child::after{
+      content: none !important;
+      display: none !important;
+      background: none !important;
+    }
+
+
+
+    /* =========================================================
+       V49 — editorial principle matrix + light contact
+       ========================================================== */
+
+    /* Remove cyan decorative hero line */
+    .hero::after{
+      content:none !important;
+      display:none !important;
+      background:none !important;
+    }
+
+    /* HOW THE WORK CONNECTED — editorial, not SaaS cards */
+    .project-principles-wrap{
+      margin-top:68px !important;
+      padding-top:30px !important;
+      border-top:1px solid var(--case-line) !important;
+    }
+
+    .project-principles-kicker{
+      margin-bottom:34px !important;
+      color:var(--case-steel-soft) !important;
+      font-size:11px !important;
+      font-weight:600 !important;
+      letter-spacing:.15em !important;
+      text-transform:uppercase !important;
+    }
+
+    .project-principles{
+      display:grid !important;
+      grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+      gap:34px !important;
+      align-items:start !important;
+    }
+
+    .project-principle{
+      position:relative !important;
+      display:block !important;
+      min-height:0 !important;
+      padding:22px 0 10px !important;
+      border:0 !important;
+      border-top:1px solid rgba(50,73,99,.18) !important;
+      border-radius:0 !important;
+      background:transparent !important;
+      box-shadow:none !important;
+      overflow:visible !important;
+      transform:none !important;
+    }
+
+    .project-principle::before,
+    .project-principle::after{
+      content:none !important;
+      display:none !important;
+      background:none !important;
+    }
+
+    .project-principle:hover{
+      transform:none !important;
+      border-color:rgba(50,73,99,.28) !important;
+      box-shadow:none !important;
+      background:transparent !important;
+    }
+
+    .project-principle-index{
+      display:block !important;
+      margin:0 0 24px !important;
+      padding:0 !important;
+      border:0 !important;
+      border-radius:0 !important;
+      background:transparent !important;
+      color:var(--case-steel-soft) !important;
+      font-size:11px !important;
+      line-height:1 !important;
+      letter-spacing:.14em !important;
+      font-weight:600 !important;
+      text-transform:uppercase !important;
+    }
+
+    .project-principle h3{
+      margin:0 0 16px !important;
+      max-width:9ch !important;
+      color:var(--navy) !important;
+      font-family:"Manrope",sans-serif !important;
+      font-size:clamp(30px,2.7vw,46px) !important;
+      line-height:1.01 !important;
+      letter-spacing:-.05em !important;
+      font-weight:500 !important;
+      text-wrap:balance !important;
+    }
+
+    .project-principle p{
+      margin:0 !important;
+      max-width:30ch !important;
+      color:var(--muted) !important;
+      font-size:15px !important;
+      line-height:1.72 !important;
+    }
+
+    /* CONTACT — light editorial footer */
+    .bottom{
+      background:var(--case-ice) !important;
+      color:var(--ink) !important;
+      border-top:1px solid var(--case-line) !important;
+    }
+
+    .bottom .section-label,
+    .bottom .bottom-label,
+    .bottom .footer-copy,
+    .bottom .footer-location{
+      color:var(--case-steel-soft) !important;
+    }
+
+    .bottom h2,
+    .bottom h3,
+    .bottom .bottom-title,
+    .bottom .contact-title{
+      color:var(--ink) !important;
+    }
+
+    .bottom a,
+    .bottom .contact-link,
+    .bottom .social-link,
+    .bottom .contact-pill{
+      color:var(--navy) !important;
+      border-color:#C7CFD8 !important;
+      background:transparent !important;
+    }
+
+    .bottom a:hover,
+    .bottom .contact-link:hover,
+    .bottom .social-link:hover,
+    .bottom .contact-pill:hover{
+      color:var(--navy) !important;
+      border-color:#9DAAB8 !important;
+      background:#E6EBF0 !important;
+      box-shadow:none !important;
+    }
+
+    .bottom hr,
+    .bottom .bottom-divider,
+    .bottom .footer-line{
+      border-color:var(--case-line) !important;
+      background:var(--case-line) !important;
+    }
+
+    @media(max-width:980px){
+      .project-principles{
+        grid-template-columns:1fr !important;
+        gap:28px !important;
+      }
+
+      .project-principle h3,
+      .project-principle p{
+        max-width:none !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       V50 — contact refinement
+       Thinner dividers + hover uses the same navy as the top bar
+       ========================================================== */
+
+    .bottom{
+      border-top:0.5px solid rgba(24,37,54,.16) !important;
+    }
+
+    .bottom hr,
+    .bottom .bottom-divider,
+    .bottom .footer-line{
+      height:0.5px !important;
+      border:0 !important;
+      background:rgba(24,37,54,.18) !important;
+    }
+
+    .bottom a,
+    .bottom .contact-link,
+    .bottom .social-link,
+    .bottom .contact-pill{
+      transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .2s ease !important;
+    }
+
+    .bottom a:hover,
+    .bottom .contact-link:hover,
+    .bottom .social-link:hover,
+    .bottom .contact-pill:hover,
+    .bottom a:focus-visible,
+    .bottom .contact-link:focus-visible,
+    .bottom .social-link:focus-visible,
+    .bottom .contact-pill:focus-visible{
+      color:#fff !important;
+      border-color:var(--navy) !important;
+      background:var(--navy) !important;
+      box-shadow:none !important;
+      transform:translateY(-1px);
+    }
+
+    .bottom a:active,
+    .bottom .contact-link:active,
+    .bottom .social-link:active,
+    .bottom .contact-pill:active{
+      color:#fff !important;
+      border-color:var(--navy-deep) !important;
+      background:var(--navy-deep) !important;
+      transform:translateY(0);
+    }
+
+
+
+    /* =========================================================
+       V51 — fix editorial principle cards specificity
+       ========================================================== */
+    .project-principles .project-principle,
+    .project-principles .project-principle:nth-child(2),
+    .project-principles .project-principle:nth-child(3){
+      min-height:0 !important;
+      padding:22px 0 10px !important;
+      border:0 !important;
+      border-top:1px solid rgba(50,73,99,.18) !important;
+      border-radius:0 !important;
+      background:transparent !important;
+      box-shadow:none !important;
+      overflow:visible !important;
+      transform:none !important;
+    }
+
+    .project-principles .project-principle::before,
+    .project-principles .project-principle::after,
+    .project-principles .project-principle:nth-child(2)::before,
+    .project-principles .project-principle:nth-child(2)::after,
+    .project-principles .project-principle:nth-child(3)::before,
+    .project-principles .project-principle:nth-child(3)::after{
+      content:none !important;
+      display:none !important;
+      background:none !important;
+    }
+
+    .project-principles .project-principle:hover,
+    .project-principles .project-principle:nth-child(2):hover,
+    .project-principles .project-principle:nth-child(3):hover{
+      background:transparent !important;
+      box-shadow:none !important;
+      transform:none !important;
+      border-top-color:rgba(50,73,99,.28) !important;
+    }
+
+
+
+    /* =========================================================
+       V52 — rounded metrics + section 04 title aligned
+       ========================================================== */
+
+    .impact-band-metrics{
+      border:1px solid rgba(255,255,255,.12) !important;
+      border-radius:28px !important;
+      overflow:hidden !important;
+      gap:1px !important;
+      background:rgba(255,255,255,.12) !important;
+    }
+
+    .impact-signal{
+      border:0 !important;
+    }
+
+    .operating-title{
+      max-width:860px !important;
+      margin:0 0 35px !important;
+      font-family:"Manrope",sans-serif !important;
+      font-size:clamp(40px,5vw,72px) !important;
+      line-height:1.10 !important;
+      letter-spacing:-.055em !important;
+      font-weight:500 !important;
+    }
+
+    @media(max-width:760px){
+      .impact-band-metrics{
+        border-radius:20px !important;
+      }
+
+      .operating-title{
+        font-size:clamp(40px,12vw,58px) !important;
+        line-height:1.12 !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       V53 — smaller editorial principle titles
+       ========================================================== */
+
+    .project-principle h3{
+      font-size:clamp(26px,2.15vw,36px) !important;
+      line-height:1.05 !important;
+      letter-spacing:-.045em !important;
+      max-width:11ch !important;
+      margin-bottom:14px !important;
+    }
+
+    @media(max-width:980px){
+      .project-principle h3{
+        font-size:30px !important;
+        max-width:none !important;
+      }
+    }
+
+
+    /* =========================================================
+       V54 — unified horizontal margins across all sections
+       One shared content width / gutter system
+       ========================================================== */
+
+    :root{
+      --page-gutter: 5vw;
+      --page-max: 1520px;
+    }
+
+    /* Core content containers */
+    .content,
+    .content-grid,
+    .main-column,
+    .section,
+    .field-block,
+    .project-principles-wrap,
+    .project-nav-inner,
+    .contact-block,
+    .footer-inner,
+    .backing-block,
+    .impact-band-inner,
+    .hero-editorial{
+      box-sizing: border-box;
+    }
+
+    /* Main white-content sections: same left/right start */
+    .content{
+      width: 100% !important;
+      max-width: none !important;
+      padding-left: var(--page-gutter) !important;
+      padding-right: var(--page-gutter) !important;
+    }
+
+    .content-grid{
+      width: min(var(--page-max), 100%) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* Sections inside main column should not add extra horizontal offsets */
+    .main-column > .section,
+    .main-column > .backing-block,
+    .main-column .field-block,
+    .main-column .project-principles-wrap{
+      width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    /* Impact band */
+    .impact-band{
+      padding-left: var(--page-gutter) !important;
+      padding-right: var(--page-gutter) !important;
+    }
+
+    .impact-band-inner{
+      width: min(var(--page-max), 100%) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* Closing principles should align with the same outer gutter */
+    .closing-principles{
+      width: calc(100% - (2 * var(--page-gutter))) !important;
+      max-width: var(--page-max) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* Previous / next */
+    .project-nav{
+      padding-left: var(--page-gutter) !important;
+      padding-right: var(--page-gutter) !important;
+    }
+
+    .project-nav-inner{
+      width: min(var(--page-max), 100%) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* Contact + footer */
+    .bottom{
+      padding-left: var(--page-gutter) !important;
+      padding-right: var(--page-gutter) !important;
+    }
+
+    .contact-block,
+    .footer-inner{
+      width: min(var(--page-max), 100%) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* Hero uses same global horizontal rhythm */
+    .hero-editorial{
+      width: min(var(--page-max), calc(100% - (2 * var(--page-gutter)))) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* Remove legacy left/right offsets that visually break alignment */
+    .section-copy,
+    .leadership-card,
+    .product-collaboration,
+    .product-grid,
+    .project-cases,
+    .work-list{
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    @media (max-width: 760px){
+      :root{
+        --page-gutter: 22px;
+      }
+
+      .closing-principles{
+        width: calc(100% - 44px) !important;
+      }
+    }
+
+
+    /* =========================================================
+       V55 — smaller editorial titles + role moved next to company
+       ========================================================== */
+
+    .project-principle h3{
+      font-size:clamp(22px,1.75vw,30px) !important;
+      line-height:1.08 !important;
+      letter-spacing:-.04em !important;
+      max-width:12ch !important;
+      margin-bottom:12px !important;
+    }
+
+    .project-principle p{
+      font-size:15px !important;
+      line-height:1.62 !important;
+      max-width:31ch !important;
+    }
+
+    .hero-editorial-role{
+      display:flex !important;
+      flex-direction:column !important;
+      align-items:flex-end !important;
+      gap:5px !important;
+    }
+
+    .hero-editorial-role strong{
+      margin:0 !important;
+    }
+
+    .hero-editorial-role .hero-role-title{
+      color:rgba(255,255,255,.82) !important;
+      font-size:13px !important;
+      font-weight:500 !important;
+      letter-spacing:.01em !important;
+    }
+
+    .hero-editorial-role .hero-role-markets{
+      color:rgba(255,255,255,.55) !important;
+      font-size:12px !important;
+      line-height:1.5 !important;
+    }
+
+    @media(max-width:980px){
+      .project-principle h3{
+        font-size:26px !important;
+        max-width:none !important;
+      }
+
+      .hero-editorial-role{
+        align-items:flex-start !important;
+      }
+    }
+
+    @media(max-width:600px){
+      .project-principle h3{
+        font-size:24px !important;
+      }
+    }
+
+
+    /* =========================================================
+       V56 — publish-ready QA pass
+       Full-bleed closing principles + final rhythm cleanup
+       ========================================================== */
+
+    /* Closing principles: true edge-to-edge block */
+    .closing-principles{
+      width:100% !important;
+      max-width:none !important;
+      margin-left:0 !important;
+      margin-right:0 !important;
+      margin-top:0 !important;
+      margin-bottom:72px !important;
+      border:none !important;
+    }
+
+    .closing-principles-grid{
+      width:100% !important;
+      min-height:520px !important;
+      margin:0 !important;
+    }
+
+    .closing-principle{
+      padding:68px 7vw !important;
+    }
+
+    /* Keep both panels clean — no cyan edge bars */
+    .closing-principle::before,
+    .closing-principle::after{
+      content:none !important;
+      display:none !important;
+    }
+
+    /* Editorial matrix: secondary hierarchy, not hero-sized */
+    .project-principle h3{
+      font-size:clamp(22px,1.65vw,29px) !important;
+      line-height:1.08 !important;
+      letter-spacing:-.035em !important;
+    }
+
+    .project-principle p{
+      font-size:15px !important;
+      line-height:1.62 !important;
+    }
+
+    /* Section 04 matches the rest */
+    .operating-title{
+      font-weight:400 !important;
+      letter-spacing:-.045em !important;
+    }
+
+    /* Hero and ending should not carry leftover cyan bars */
+    .hero::after{
+      content:none !important;
+      display:none !important;
+    }
+
+    /* Slightly tighter transition into project navigation */
+    .project-nav{
+      margin-top:0 !important;
+    }
+
+    @media(max-width:760px){
+      .closing-principles{
+        margin-bottom:56px !important;
+      }
+
+      .closing-principles-grid{
+        min-height:0 !important;
+      }
+
+      .closing-principle{
+        padding:54px 22px !important;
+      }
+
+      .project-principle h3{
+        font-size:24px !important;
+      }
+    }
+
+
+    /* =========================================================
+       V57 — project navigation aligned to global page gutters
+       ========================================================== */
+
+    .project-nav{
+      width:100% !important;
+      padding-left:var(--page-gutter) !important;
+      padding-right:var(--page-gutter) !important;
+    }
+
+    .project-nav-inner{
+      width:100% !important;
+      max-width:none !important;
+      margin-left:0 !important;
+      margin-right:0 !important;
+      padding-left:0 !important;
+      padding-right:0 !important;
+    }
+
+    .project-link{
+      width:calc(50% - 24px) !important;
+    }
+
+    .project-link.right{
+      margin-left:auto !important;
+      text-align:right !important;
+    }
+
+    @media(max-width:760px){
+      .project-link{
+        width:100% !important;
+      }
+
+      .project-link.right{
+        margin-left:0 !important;
+        text-align:left !important;
+      }
+    }
+
+
+    /* =========================================================
+       V58 — wider editorial gutters
+       More breathing room across the entire landing
+       ========================================================== */
+
+    :root{
+      --page-gutter: 7vw;
+      --page-max: 1440px;
+    }
+
+    .content{
+      padding-left:var(--page-gutter) !important;
+      padding-right:var(--page-gutter) !important;
+    }
+
+    .content-grid,
+    .impact-band-inner,
+    .project-nav-inner,
+    .contact-block,
+    .footer-inner{
+      width:min(var(--page-max),100%) !important;
+      margin-left:auto !important;
+      margin-right:auto !important;
+    }
+
+    .hero-editorial{
+      width:min(var(--page-max),calc(100% - (2 * var(--page-gutter)))) !important;
+      margin-left:auto !important;
+      margin-right:auto !important;
+    }
+
+    .impact-band,
+    .project-nav,
+    .bottom{
+      padding-left:var(--page-gutter) !important;
+      padding-right:var(--page-gutter) !important;
+    }
+
+    .closing-principles{
+      width:100% !important;
+      max-width:none !important;
+    }
+
+    @media(max-width:760px){
+      :root{
+        --page-gutter:24px;
+      }
+
+      .content,
+      .impact-band,
+      .project-nav,
+      .bottom{
+        padding-left:var(--page-gutter) !important;
+        padding-right:var(--page-gutter) !important;
+      }
+
+      .hero-editorial{
+        width:calc(100% - 48px) !important;
+      }
+    }
+
+</style>
 </head>
-
-
-
 <body>
-
-
-  <!-- =====================================================
+<!-- =====================================================
        NAV
   ====================================================== -->
-
-  <header class="nav">
-
-
-    <a
-      href="/es/"
-      class="brand"
-    >
+<header class="nav">
+<a class="brand" href="/es/">
       Felipe Quiroz
     </a>
-
-
-    <nav class="nav-links">
-
-
-      <a href="/es/#work">
+<nav class="nav-links">
+<a href="/es/#work">
         Trabajo
       </a>
-
-
-      <a href="/es/about">
+<a href="/es/about">
         Sobre mí
       </a>
-
-
-      <a href="/es/now">
+<a href="/es/now">
         Ahora
       </a>
-
-
-      <a
-        href="#contact"
-        class="contact-nav"
-      >
+<a class="contact-nav" href="#contact">
         Contacto
       </a>
-
-
-      <a
-        href="/tethereducation"
-        class="lang-switch"
-        aria-label="View site in English"
-      >
+<a aria-label="View site in English" class="lang-switch" href="/tethereducation">
         EN
       </a>
-
-
-    </nav>
-
-
-  </header>
-
-
-
-  <!-- =====================================================
+</nav>
+</header>
+<!-- =====================================================
        HERO
   ====================================================== -->
 
-  <section class="hero">
+<section class="hero">
+  <div class="hero-editorial">
 
+    <div class="hero-editorial-top">
+      <a class="hero-editorial-logo"
+         href="https://tether.education/"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Visitar Tether Education">
+        <img src="/tethered-logo.svg" alt="TetherEd">
+      </a>
 
-    <!-- LEFT -->
-
-    <div class="hero-visual">
-
-
-      <div class="visual-top">
-
-        <span>
-          EdTech / Acceso a la educación
-        </span>
-
-        <span>
-          Partnerships / 03
-        </span>
-
+      <div class="hero-editorial-meta">
+        <span>Trabajo seleccionado / 03</span>
+                <span>2024 — 2026</span>
+        <span>GovTech / EdTech</span>
       </div>
-
-
-
-      <div class="visual-middle">
-
-
-        <div class="network">
-
-
-          <div class="network-main">
-
-
-            <div class="network-node">
-              Colegios
-            </div>
-
-
-            <div class="network-line"></div>
-
-
-            <div class="network-node center">
-              Comunidades
-            </div>
-
-
-            <div class="network-line"></div>
-
-
-            <div class="network-node">
-              Instituciones
-            </div>
-
-
-          </div>
-
-
-
-          <div class="network-meta">
-
-
-            <div class="network-meta-item">
-
-              <div class="network-meta-title">
-                Producto
-              </div>
-
-              <div class="network-meta-copy">
-                Explorar<br>
-                Comparar<br>
-                Postular
-              </div>
-
-            </div>
-
-
-
-            <div class="network-meta-item">
-
-              <div class="network-meta-title">
-                Partnerships
-              </div>
-
-              <div class="network-meta-copy">
-                Gobiernos<br>
-                Redes escolares<br>
-                Instituciones
-              </div>
-
-            </div>
-
-
-
-            <div class="network-meta-item">
-
-              <div class="network-meta-title">
-                Expansión
-              </div>
-
-              <div class="network-meta-copy">
-                Adopción<br>
-                Mercados<br>
-                Escalar
-              </div>
-
-            </div>
-
-
-          </div>
-
-
-        </div>
-
-
-      </div>
-
-
-
-      <div class="visual-bottom">
-
-
-        <div class="visual-kicker">
-          Acceso, información y decisiones
-        </div>
-
-
-        <h2 class="visual-title">
-
-          Infraestructura para elegir mejor.
-
-          <span>
-            Y acceder con menos fricción.
-          </span>
-
-        </h2>
-
-
-      </div>
-
-
     </div>
 
+    <div class="hero-editorial-kicker">
+      Acceso a la educación / Partnerships / IA
+    </div>
 
+    <h1>
+      Construyendo infraestructura
+      <span class="hero-accent">para elegir mejor.</span>
+    </h1>
 
-    <!-- RIGHT -->
+    <div class="hero-editorial-bottom">
+      <p class="hero-editorial-description">
+        Lideré la estrategia de partnerships, desarrollo de negocio y expansión en Latinoamérica,
+        conectando gobiernos, redes escolares y organizaciones educativas con infraestructura
+        digital de admisión y matrícula habilitada por IA.
+      </p>
 
-    <div class="hero-content">
+      <div class="hero-editorial-role">
+        <strong>TetherEd</strong>
+        <span class="hero-role-title">Head of Partnerships</span>
+        <span class="hero-role-markets">Latinoamérica · Estados Unidos · Dinamarca · España</span>
+      </div>
+    </div>
 
+  </div>
+</section>
 
-      <div class="hero-content-inner">
-
-
-        <a
-          href="https://tether.education/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="company-logo"
-          aria-label="Visitar TetherEd"
-        >
-
-          <img
-            src="../tethered-logo.svg"
-            alt="TetherEd"
-          >
-
-        </a>
-
-
-        <div class="case-label">
-          Trabajo seleccionado / 03
-        </div>
-
-
-        <div class="case-period">
-          Head of Partnerships · 2024 — 2026
-        </div>
-
-
-        <h1>
-          TetherEd
-        </h1>
-
-
-        <div class="hero-role">
-          Head of Partnerships · EdTech
-        </div>
-
-
-        <p class="hero-description">
-
-          Lideré la estrategia de partnerships, desarrollo de negocio
-          y expansión en Latinoamérica, conectando gobiernos,
-          redes escolares y organizaciones educativas con
-          infraestructura digital de admisión y matrícula habilitada por IA.
-
+<section class="impact-band">
+<div class="impact-band-inner">
+<div class="impact-band-label">Mi impacto / Alianzas → adopción → escala</div>
+<div class="impact-band-head">
+<h2 class="impact-band-title">
+<span class="impact-line">De abrir puertas</span>
+<span class="impact-line impact-line-accent">a construir alcance.</span>
+</h2>
+<p class="impact-band-copy">
+          Conecté relaciones institucionales, ejecución comercial, señales de producto
+          e implementación para convertir oportunidades en adopción, alcance medible
+          y sistemas capaces de escalar.
         </p>
-
-
-        <div class="tags">
-
-          <div class="tag">
-            Partnerships
-          </div>
-
-          <div class="tag">
-            GovTech
-          </div>
-
-          <div class="tag">
-            IA &amp; Educación
-          </div>
-
-          <div class="tag">
-            Expansión LATAM
-          </div>
-
-        </div>
-
-
-      </div>
-
-
-    </div>
-
-
-  </section>
-
-
-
-  <!-- =====================================================
+</div>
+<div class="impact-band-metrics">
+<div class="impact-signal"><strong>14+</strong><span>Alianzas estratégicas</span></div>
+<div class="impact-signal"><strong>20.000+</strong><span>Familias alcanzadas mediante partnerships</span></div>
+<div class="impact-signal"><strong>100+</strong><span>Colegios públicos alcanzados en Chile</span></div>
+<div class="impact-signal"><strong>20+</strong><span>Colaboradores multifuncionales en distintas geografías</span></div>
+</div>
+</div>
+</section>
+<!-- =====================================================
        MAIN CONTENT
   ====================================================== -->
-
-  <main class="content">
-
-
-    <div class="content-grid">
-
-
-      <div class="main-column">
-
-
-        <!-- ROLE -->
-
-        <section class="section">
-
-          <div class="section-label">
+<main class="content">
+<div class="content-grid">
+<div class="main-column">
+<!-- ROLE -->
+<section class="section">
+<div class="section-label">
             01 / Rol
           </div>
-
-          <h2>
+<h2>
             Conectar mercado,
             producto y ejecución.
           </h2>
-
-          <div class="section-copy">
-
-            <p>
-              Tether Education es una GovTech estadounidense incubada
-              en <a href="https://www.consiliumbots.com/" target="_blank" rel="noopener noreferrer">ConsiliumBots</a>, enfocada en infraestructura digital
+<div class="section-copy">
+<p>
+              Tether Education es una empresa GovTech estadounidense incubada
+              en <a href="https://www.consiliumbots.com/" rel="noopener noreferrer" target="_blank">ConsiliumBots</a>, enfocada en infraestructura digital
               para elección escolar, admisión y matrícula.
             </p>
-
-            <p>
-              Como Head of Partnerships, lideré estrategia de alianzas,
+<p>
+              Como Head of Partnerships, lideré la estrategia de alianzas,
               desarrollo de negocio y expansión en Latinoamérica.
               Trabajé con gobiernos, redes escolares y organizaciones
-              educativas, coordinando iniciativas con Sales, Product,
-              Engineering, Marketing y Operations para convertir
+              educativas, coordinando iniciativas con Ventas, Producto,
+              Ingeniería, Marketing y Operaciones para convertir
               oportunidades en adopción real.
             </p>
-
-          </div>
-
-          <div class="leadership-card">
-
-            <div class="leadership-photo-wrap">
-
-              <span
-                class="leadership-photo-fallback"
-                aria-hidden="true"
-              >
+</div>
+<div class="leadership-card">
+<div class="leadership-photo-wrap">
+<span aria-hidden="true" class="leadership-photo-fallback">
                 CN
               </span>
-
-              <img
-                src="/christopher-neilson.jpg"
-                alt="Christopher Neilson"
-                class="leadership-photo"
-                loading="lazy"
-                data-chris-source="0"
-                onerror="
+<img alt="Christopher Neilson" class="leadership-photo" data-chris-source="0" loading="lazy" onerror="
                   const sources = [
                     '/christopher-neilson.jpg',
                     '/christopher-neilson.jpeg',
@@ -3910,477 +6875,329 @@
                     '../christopher-neilson.png'
                   ];
                   const current = Number(this.dataset.chrisSource || 0) + 1;
-                  if (current < sources.length) {
+                  if (current &lt; sources.length) {
                     this.dataset.chrisSource = String(current);
                     this.src = sources[current];
                   } else {
                     this.style.display = 'none';
                   }
-                "
-              >
-
-            </div>
-
-            <div>
-
-              <div class="leadership-eyebrow">
+                " src="/christopher-neilson.jpg"/>
+</div>
+<div>
+<div class="leadership-eyebrow">
                 Liderazgo directo
               </div>
-
-              <h3 class="leadership-name">
+<h3 class="leadership-name">
                 Christopher Neilson
               </h3>
-
-              <p class="leadership-meta">
-                Founder &amp; CEO, Tether Education<br>
+<p class="leadership-meta">
+                Founder &amp; CEO, Tether Education<br/>
                 Professor of Economics and Global Affairs · Yale University
               </p>
-
-              <p class="leadership-copy">
+<p class="leadership-copy">
                 Trabajé de forma directa y cercana con Christopher,
                 alineando partnerships, relaciones institucionales
                 e iniciativas de expansión con la evolución del producto.
               </p>
-
-              <div class="leadership-links">
-
-                <a
-                  href="https://christopher-neilson.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Sitio web de Christopher Neilson"
-                  title="Sitio web"
-                >
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="12" cy="12" r="9"></circle>
-                    <path d="M3 12h18"></path>
-                    <path d="M12 3c2.5 2.5 3.8 5.5 3.8 9S14.5 18.5 12 21"></path>
-                    <path d="M12 3C9.5 5.5 8.2 8.5 8.2 12S9.5 18.5 12 21"></path>
-                  </svg>
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/in/christopher-a-neilson/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn de Christopher Neilson"
-                  title="LinkedIn"
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
-                  </svg>
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        
-          <div class="leadership-card">
-
-            <div class="leadership-photo-wrap">
-
-              <span
-                class="leadership-photo-fallback"
-                aria-hidden="true"
-              >
+<div class="leadership-links">
+<a aria-label="Sitio web de Christopher Neilson" href="https://christopher-neilson.com/" rel="noopener noreferrer" target="_blank" title="Sitio web">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="9"></circle>
+<path d="M3 12h18"></path>
+<path d="M12 3c2.5 2.5 3.8 5.5 3.8 9S14.5 18.5 12 21"></path>
+<path d="M12 3C9.5 5.5 8.2 8.5 8.2 12S9.5 18.5 12 21"></path>
+</svg>
+</a>
+<a aria-label="LinkedIn de Christopher Neilson" href="https://www.linkedin.com/in/christopher-a-neilson/" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24">
+<path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+<div class="leadership-card">
+<div class="leadership-photo-wrap">
+<span aria-hidden="true" class="leadership-photo-fallback">
                 ZT
               </span>
-
-              <img
-                src="/zack-tseng.jpg"
-                alt="Zack Tseng"
-                class="leadership-photo"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              >
-
-            </div>
-
-            <div>
-
-              <div class="leadership-eyebrow">
+<img alt="Zack Tseng" class="leadership-photo" loading="lazy" onerror="this.style.display='none';" src="/zack-tseng.jpg"/>
+</div>
+<div>
+<div class="leadership-eyebrow">
                 Go-to-market &amp; ejecución
               </div>
-
-              <h3 class="leadership-name">
+<h3 class="leadership-name">
                 Zack Tseng
               </h3>
-
-              <p class="leadership-meta">
+<p class="leadership-meta">
                 Chief of Staff · Tether Education
               </p>
-
-              <p class="leadership-copy">
+<p class="leadership-copy">
                 Trabajé junto a Zack en iniciativas de go-to-market y en el seguimiento
                 de resultados de Stocktake, conectando ejecución comercial, adopción
                 y aprendizajes del mercado.
               </p>
-
-              <div class="leadership-links">
-                <a
-                  href="https://www.linkedin.com/in/zacharytseng/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn de Zack Tseng"
-                  title="LinkedIn"
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
-                  </svg>
-                </a>
-              </div>
-
-            </div>
-
-          </div>
-
+<div class="leadership-links">
+<a aria-label="LinkedIn de Zack Tseng" href="https://www.linkedin.com/in/zacharytseng/" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24">
+<path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
 </section>
-
-
-
-
-        <!-- BACKING -->
-        <div class="backing-block">
-          <div class="backing-label">Respaldo</div>
-
-          <div class="backing-brand">
-            <a
-              class="backing-logo-wrap"
-              href="https://www.avalanche.vc/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Avalanche"
-            >
-              <img
-                class="backing-logo"
-                src="/avalanche-logo.png"
-                alt="Avalanche"
-                loading="lazy"
-              >
-            </a>
-          </div>
-
-          <div class="backing-row backing-row-copy-only">
-            <p class="backing-copy">
+<!-- BACKING -->
+<div class="backing-block">
+<div class="backing-label">Respaldo</div>
+<div class="backing-brand">
+<a aria-label="Avalanche" class="backing-logo-wrap" href="https://www.avalanche.vc/" rel="noopener noreferrer" target="_blank">
+<img alt="Avalanche" class="backing-logo" loading="lazy" src="/avalanche-logo.png"/>
+</a>
+</div>
+<div class="backing-row backing-row-copy-only">
+<p class="backing-copy">
               Tether Education está respaldada por Avalanche, una firma de inversión
               privada liderada por
-              <a
-                href="https://katelyndonnelly.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >Katelyn Donnelly</a>.
+              <a href="https://katelyndonnelly.com/" rel="noopener noreferrer" target="_blank">Katelyn Donnelly</a>.
             </p>
+</div>
+</div>
+<!-- SCALE -->
+
+<!-- PRODUCT -->
+<section class="section">
+<div class="section-label">
+            02 / Producto e IA
           </div>
-        </div>
-
-        <!-- SCALE -->
-
-        <section class="section">
-
-          <div class="section-label">
-            02 / Escala
-          </div>
-
-          <h2>
-            Partnerships con
-            alcance medible.
-          </h2>
-
-          <div class="section-copy">
-
-            <p>
-              Construí y escalé el ecosistema de partnerships en
-              múltiples mercados, combinando relaciones públicas
-              y privadas con una operación comercial orientada
-              a adopción, visibilidad y crecimiento.
-            </p>
-
-          </div>
-
-          <div class="metrics">
-
-            <div class="metric">
-              <strong>14+</strong>
-              <span>Organizaciones conectadas</span>
-            </div>
-
-            <div class="metric">
-              <strong>20.000+</strong>
-              <span>Familias alcanzadas</span>
-            </div>
-
-            <div class="metric">
-              <strong>1M+</strong>
-              <span>Postulaciones gestionadas por la plataforma en 2024</span>
-            </div>
-
-            <div class="metric">
-              <strong>5M+</strong>
-              <span>Vistas de perfiles en 2024</span>
-            </div>
-
-          </div>
-
-        </section>
-
-
-
-        <!-- PRODUCT -->
-
-        <section class="section">
-
-          <div class="section-label">
-            03 / Producto e IA
-          </div>
-
-          <h2>
+<h2>
             Llevar señales del mercado
             de vuelta al producto.
           </h2>
-
-          <div class="section-copy">
-
-            <p>
-              Trabajé con Product y Engineering para traducir
+<div class="section-copy">
+<p>
+              Trabajé con Producto e Ingeniería para traducir
               necesidades de clientes, instituciones y familias
               en mejoras de producto e iniciativas habilitadas por IA.
               La lógica era simple: usar el mercado como fuente de
               aprendizaje y convertir ese aprendizaje en producto.
             </p>
-
-          </div>
-
-          <div class="product-collaboration">
-
-            <div class="product-collaboration-label">
+</div>
+<div class="product-collaboration">
+<div class="product-collaboration-label">
               IA aplicada
             </div>
-
-            <p class="product-collaboration-copy">
+<p class="product-collaboration-copy">
               El trabajo incluyó iniciativas desarrolladas junto a
               <strong>OpenAI</strong> y, en proyectos específicos,
               <strong>Columbia University</strong> y
               <strong>SLEP del Pino</strong>, conectando investigación,
               necesidades institucionales e implementación.
             </p>
-
-          </div>
-
-          <div class="product-grid">
-
-            <div class="product-item">
-              <div class="product-number">01</div>
-              <h3>Señales de mercado</h3>
-              <div class="product-type">Descubrimiento</div>
-              <p>
+</div>
+<div class="product-grid">
+<div class="product-item">
+<div class="product-number">01</div>
+<h3>Señales de mercado</h3>
+<div class="product-type">Descubrimiento</div>
+<p>
                 Convertir conversaciones con instituciones y familias
                 en señales útiles para priorización y evolución del producto.
               </p>
-            </div>
-
-            <div class="product-item">
-              <div class="product-number">02</div>
-              <h3>Producto &amp; Ingeniería</h3>
-              <div class="product-type">Traducción</div>
-              <p>
+</div>
+<div class="product-item">
+<div class="product-number">02</div>
+<h3>Producto e Ingeniería</h3>
+<div class="product-type">Traducción</div>
+<p>
                 Traducir requerimientos comerciales y operativos
                 en problemas concretos que los equipos técnicos
                 pudieran diseñar, construir y validar.
               </p>
-            </div>
-
-            <div class="product-item">
-              <div class="product-number">03</div>
-              <h3>IA aplicada</h3>
-              <div class="product-type">Innovación</div>
-              <p>
+</div>
+<div class="product-item">
+<div class="product-number">03</div>
+<h3>IA aplicada</h3>
+<div class="product-type">Innovación</div>
+<p>
                 Conectar oportunidades de IA con necesidades reales
                 de acceso, orientación y operación dentro de comunidades educativas.
               </p>
-            </div>
-
-            <div class="product-item">
-              <div class="product-number">04</div>
-              <h3>Medición</h3>
-              <div class="product-type">Aprendizaje</div>
-              <p>
+</div>
+<div class="product-item">
+<div class="product-number">04</div>
+<h3>Medición</h3>
+<div class="product-type">Aprendizaje</div>
+<p>
                 Diseñar la operación y los procesos para aprender
                 desde la adopción, medir resultados e iterar con evidencia.
               </p>
-            </div>
-
+</div>
+</div>
+</section>
+<!-- SELECTED PROJECTS -->
+<section class="section">
+<div class="section-label">
+            03 / Proyectos seleccionados
           </div>
-
-        </section>
-
-
-
-
-        <!-- SELECTED PROJECTS -->
-
-        <section class="section">
-
-          <div class="section-label">
-            04 / Proyectos seleccionados
-          </div>
-
-          <h2>
+<h2>
             Producto, implementación
             y transformación a escala.
           </h2>
-
-          <div class="section-copy">
-            <p>
+<div class="section-copy">
+<p>
               Una selección de iniciativas donde participé conectando
               producto, instituciones y ejecución: desde herramientas
               de descubrimiento educativo hasta transformación digital
               y adopción de IA en educación pública.
             </p>
-          </div>
-
-          <div class="project-cases">
-
-            <article class="project-case">
-              <div class="project-case-number">01</div>
-              <div>
-                <div class="project-case-type">Producto · Descubrimiento con IA</div>
-                <h3>Explorador Virtual de Colegios</h3>
-                <p class="project-case-description">
+</div>
+<div class="project-cases">
+<article class="project-case">
+<div class="project-case-number">01</div>
+<div>
+<div class="project-case-type">Producto · Descubrimiento con IA</div>
+<h3>Explorador Virtual de Colegios</h3>
+<p class="project-case-description">
                   Plataforma de descubrimiento educativo con mapa,
                   filtros personalizados, perfiles enriquecidos,
                   disponibilidad, estimación de admisión y un asistente
                   de IA que ayuda a las familias a explorar y comparar opciones.
                 </p>
-                <div class="project-case-metrics">
-                  <span class="project-case-metric">Búsqueda por mapa</span>
-                  <span class="project-case-metric">Probabilidad de admisión</span>
-                  <span class="project-case-metric">Vacantes en tiempo real</span>
-                  <span class="project-case-metric">Asistente de IA</span>
-                </div>
-
-                <a
-                  href="https://explorador.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="project-case-link"
-                >
+<div class="project-case-metrics">
+<span class="project-case-metric">Búsqueda por mapa</span>
+<span class="project-case-metric">Probabilidad de admisión</span>
+<span class="project-case-metric">Vacantes en tiempo real</span>
+<span class="project-case-metric">Asistente de IA</span>
+</div>
+<a class="project-case-link" href="https://explorador.com/" rel="noopener noreferrer" target="_blank">
                   Ver Explorador
                 </a>
-              </div>
-              <div class="project-case-side">
-                <div class="project-case-side-label">Mi aporte</div>
-                <p>
+</div>
+<div class="project-case-side">
+<div class="project-case-side-label">Mi aporte</div>
+<p>
                   Conecté necesidades de instituciones y familias
                   con oportunidades de producto y adopción, llevando
                   señales del mercado hacia decisiones de partnership
                   y desarrollo.
                 </p>
-              </div>
-            </article>
-
-            <article class="project-case">
-              <div class="project-case-number">02</div>
-              <div>
-                <div class="project-case-type">Educación pública · Chile · ago.–dic. 2024</div>
-                <h3>Transformación Digital de la Educación Pública</h3>
-                <p class="project-case-description">
+</div>
+</article>
+<article class="project-case">
+<div class="project-case-number">02</div>
+<div>
+<div class="project-case-type">Educación pública · Chile · ago.–dic. 2024</div>
+<h3>Transformación Digital de la Educación Pública</h3>
+<p class="project-case-description">
                   Lideré iniciativas estratégicas y de implementación junto a SLEP del Pino
                   y CORMUN Rancagua para digitalizar procesos de admisión y ampliar el acceso
                   a infraestructura digital de postulación en educación pública.
                 </p>
-                <div class="project-case-metrics">
-                  <span class="project-case-metric">100+ colegios públicos</span>
-                  <span class="project-case-metric">35.000+ estudiantes</span>
-                  <span class="project-case-metric">2 sistemas públicos</span>
-                </div>
-              </div>
-              <div class="project-case-side">
-                <div class="project-case-side-label">Mi aporte</div>
-                <p>
+<div class="project-case-metrics">
+<span class="project-case-metric">100+ colegios públicos</span>
+<span class="project-case-metric">35.000+ estudiantes</span>
+<span class="project-case-metric">2 sistemas públicos</span>
+</div>
+</div>
+<div class="project-case-side">
+<div class="project-case-side-label">Mi aporte</div>
+<p>
                   Coordiné stakeholders públicos, equipos directivos y equipos internos
                   de producto, traduciendo requerimientos institucionales y operativos
                   en estrategias de implementación escalables.
                 </p>
-              </div>
-            </article>
-
-            <article class="project-case">
-              <div class="project-case-number">03</div>
-              <div>
-                <div class="project-case-type">IA · Educación pública · Chile · jul.–dic. 2025</div>
-                <h3>Transformación Educativa impulsada por IA</h3>
-                <p class="project-case-description">
+</div>
+</article>
+<article class="project-case">
+<div class="project-case-number">03</div>
+<div>
+<div class="project-case-type">IA · Educación pública · Chile · jul.–dic. 2025</div>
+<h3>Transformación Educativa impulsada por IA</h3>
+<p class="project-case-description">
                   Iniciativa internacional desarrollada junto a Columbia University,
                   OpenAI, Tether Education y SLEP del Pino para acelerar una adopción
                   responsable y equitativa de IA en escuelas públicas de Chile.
                 </p>
-                <div class="project-case-metrics">
-                  <span class="project-case-metric">50+ instituciones</span>
-                  <span class="project-case-metric">OpenAI</span>
-                  <span class="project-case-metric">Columbia University</span>
-                  <span class="project-case-metric">Adopción de IA a escala</span>
-                </div>
-              </div>
-              <div class="project-case-side">
-                <div class="project-case-side-label">Mi aporte</div>
-                <p>
+<div class="project-case-metrics">
+<span class="project-case-metric">50+ instituciones</span>
+<span class="project-case-metric">OpenAI</span>
+<span class="project-case-metric">Columbia University</span>
+<span class="project-case-metric">Adopción de IA a escala</span>
+</div>
+</div>
+<div class="project-case-side">
+<div class="project-case-side-label">Mi aporte</div>
+<p>
                   Lideré la implementación en establecimientos participantes, coordinando
                   ejecución, stakeholders y la conexión entre investigación, necesidades
                   institucionales y soluciones habilitadas por IA.
                 </p>
-              </div>
-            </article>
-
-            <article class="project-case">
-              <div class="project-case-number">04</div>
-              <div>
-                <div class="project-case-type">Producto con IA · Operaciones escolares</div>
-                <h3>Tether Studio</h3>
-                <p class="project-case-description">
+</div>
+</article>
+<article class="project-case">
+<div class="project-case-number">04</div>
+<div>
+<div class="project-case-type">Producto con IA · Operaciones escolares</div>
+<h3>Tether Studio</h3>
+<p class="project-case-description">
                   Plataforma de fotografía escolar con IA que centraliza retratos,
                   eventos, anuarios, consentimiento, portal de familias y administración
                   escolar en un solo flujo digital.
                 </p>
-                <div class="project-case-metrics">
-                  <span class="project-case-metric">−82% horas operativas</span>
-                  <span class="project-case-metric">6 semanas hasta operar</span>
-                  <span class="project-case-metric">1 plataforma · 5 etapas</span>
-                  <span class="project-case-metric">100% consentimiento auditable</span>
-                </div>
-                <a href="https://tetherstudio.ai/" target="_blank" rel="noopener noreferrer" class="project-case-link">
+<div class="project-case-metrics">
+<span class="project-case-metric">−82% horas operativas</span>
+<span class="project-case-metric">6 semanas hasta operar</span>
+<span class="project-case-metric">1 plataforma · 5 etapas</span>
+<span class="project-case-metric">100% consentimiento auditable</span>
+</div>
+<a class="project-case-link" href="https://tetherstudio.ai/" rel="noopener noreferrer" target="_blank">
                   Ver Tether Studio
                 </a>
-              </div>
-              <div class="project-case-side">
-                <div class="project-case-side-label">Mi aporte</div>
-                <p>
+</div>
+<div class="project-case-side">
+<div class="project-case-side-label">Mi aporte</div>
+<p>
                   Trabajé en la construcción y posicionamiento del producto, conectando
                   necesidades operativas de colegios con una experiencia digital más
                   simple para equipos y familias.
                 </p>
-              </div>
-            </article>
+</div>
+</article>
+</div>
 
-          </div>
+<div class="project-principles-wrap">
+  <div class="project-principles-kicker">Cómo se conectaba el trabajo</div>
+  <div class="project-principles">
 
-          <div class="field-block">
+<div class="project-principle">
+<span class="project-principle-index">01 / PRODUCTO</span>
+<h3>Escuchar al mercado.</h3>
+<p>Convertir señales de instituciones y usuarios en decisiones de producto más claras.</p>
+</div>
+<div class="project-principle">
+<span class="project-principle-index">02 / GROWTH</span>
+<h3>Pasar del interés a la adopción.</h3>
+<p>Transformar oportunidades y alianzas en implementación y uso.</p>
+</div>
+<div class="project-principle">
+<span class="project-principle-index">03 / OPERACIONES</span>
+<h3>Construir el camino a la ejecución.</h3>
+<p>Alinear equipos, prioridades y sistemas para que las iniciativas realmente avancen.</p>
+</div>
 
-
-            <div class="field-kicker">
+  </div>
+</div>
+<div class="field-block">
+<div class="field-kicker">
               Trabajo en contexto
             </div>
-
-
-            <h3 class="field-heading">
+<h3 class="field-heading">
               La adopción se construye
               con personas.
             </h3>
-
-
-            <p class="field-copy">
+<p class="field-copy">
 
               Gran parte del rol ocurrió fuera del pipeline:
               sesiones con equipos internos, líderes educativos e
@@ -4388,576 +7205,249 @@
               en decisiones de producto, implementación y adopción.
 
             </p>
-
-
-
-
-            <figure class="field-event-feature">
-
-              <div class="field-photo-media">
-                <img
-                  src="../tether-team-event.jpg"
-                  alt="Equipo de TetherEd y Nivel4 en un evento de educación"
-                  loading="lazy"
-                >
-              </div>
-
-              <figcaption class="field-caption">
-                <span>Equipo en terreno</span>
-                <span>Educación · Partnerships · Santiago</span>
-              </figcaption>
-
-            </figure>
-
-            <div class="field-gallery">
-
-
-              <figure class="field-photo featured">
-
-                <div class="field-photo-media">
-
-                  <img
-                    src="../tether-team-meeting.jpg"
-                    alt="Sesión de trabajo del equipo de TetherEd"
-                    loading="lazy"
-                  >
-
-                </div>
-
-                <figcaption class="field-caption">
-                  <span>TetherEd</span>
-                  <span>Sesión de trabajo</span>
-                </figcaption>
-
-              </figure>
-
-
-
-              <figure class="field-photo">
-
-                <div class="field-photo-media">
-
-                  <img
-                    src="../tether-partnerships-crecer.jpg"
-                    alt="Trabajo con Crecer con Todos en Santiago"
-                    loading="lazy"
-                  >
-
-                </div>
-
-                <figcaption class="field-caption">
-                  <span>Crecer con Todos</span>
-                  <span>Partnership</span>
-                </figcaption>
-
-              </figure>
-
-
-
-              <figure class="field-photo">
-
-                <div class="field-photo-media">
-
-                  <img
-                    src="../tether-partnerships-kiri.jpg"
-                    alt="Encuentro de trabajo con Kiri"
-                    loading="lazy"
-                  >
-
-                </div>
-
-                <figcaption class="field-caption">
-                  <span>Kiri</span>
-                  <span>Partnership</span>
-                </figcaption>
-
-              </figure>
-
-
-
-              <figure class="field-photo wide">
-
-                <div class="field-photo-media">
-
-                  <img
-                    src="../tether-team-santiago.jpg"
-                    alt="Equipo de TetherEd reunido en Santiago"
-                    loading="lazy"
-                  >
-
-                </div>
-
-                <figcaption class="field-caption">
-                  <span>TetherEd</span>
-                  <span>Equipo · Santiago</span>
-                </figcaption>
-
-              </figure>
-
-
-              <figure class="field-photo wide">
-
-                <div class="field-photo-media">
-
-                  <img
-                    src="../tether-slep-del-pino.jpg"
-                    alt="Cuenta Pública Participativa del SLEP del Pino"
-                    loading="lazy"
-                  >
-
-                </div>
-
-                <figcaption class="field-caption">
-                  <span>SLEP del Pino</span>
-                  <span>Cuenta Pública · Educación pública</span>
-                </figcaption>
-
-              </figure>
-
-
-
-            </div>
-
-          </div>
-
-
-        </section>
-
-
-
-        <!-- HOW I WORKED -->
-
-        <section class="section">
-
-          <div class="section-label">
-            05 / Sistema operativo
-          </div>
-
-          <h2>
-            De la oportunidad
-            a la implementación.
-          </h2>
-
-          <div class="building-split">
-
-            <div>
-              <div class="building-media">
-                <img
-                  src="../tether-building-ops.jpg"
-                  alt="Felipe Quiroz trabajando en TetherEd"
-                  loading="lazy"
-                >
-              </div>
-            </div>
-
-            <div class="building-copy">
-              <p>
-                Mi rol fue más allá de partnerships. También trabajé entre producto,
-                growth y operaciones, transformando oportunidades en iniciativas concretas
-                y coordinando equipos para llevarlas a ejecución.
-              </p>
-              <div class="building-meta">
-                Producto · Growth · Operaciones
-              </div>
-            </div>
-
-          </div>
-
-          <div class="work-list">
-
-            <div class="work-item">
-              <div class="work-number">01</div>
-              <strong>Estrategia de partnerships y desarrollo de negocio</strong>
-            </div>
-
-            <div class="work-item">
-              <div class="work-number">02</div>
-              <strong>Pipeline, prospección y negociación</strong>
-            </div>
-
-            <div class="work-item">
-              <div class="work-number">03</div>
-              <strong>Relaciones con sector público y privado</strong>
-            </div>
-
-            <div class="work-item">
-              <div class="work-number">04</div>
-              <strong>Ejecución transversal con Sales, Product, Marketing y Operations</strong>
-            </div>
-
-            <div class="work-item">
-              <div class="work-number">05</div>
-              <strong>Señales de mercado hacia mejoras de producto e IA</strong>
-            </div>
-
-            <div class="work-item">
-              <div class="work-number">06</div>
-              <strong>CRM, tableros, reportes y procesos escalables</strong>
-            </div>
-
-          </div>
-
-        </section>
-
-
-      </div>
-
-
-
-      <!-- SIDEBAR -->
-
-      <aside class="sidebar">
-
-
-        <div class="sidebar-card">
-
-          <div class="sidebar-label">
+<figure class="field-event-feature">
+<div class="field-photo-media">
+<img alt="Equipo de TetherEd y Nivel4 en un evento de educación" loading="lazy" src="../tether-team-event.jpg"/>
+</div>
+<figcaption class="field-caption">
+<span>Equipo en terreno</span>
+<span>Educación · Partnerships · Santiago</span>
+</figcaption>
+</figure>
+<div class="field-gallery">
+<figure class="field-photo featured">
+<div class="field-photo-media">
+<img alt="Sesión de trabajo del equipo de TetherEd" loading="lazy" src="../tether-team-meeting.jpg"/>
+</div>
+<figcaption class="field-caption">
+<span>TetherEd · Equipo Santiago</span>
+<span>Sesión de trabajo</span>
+</figcaption>
+</figure>
+<figure class="field-photo">
+<div class="field-photo-media">
+<img alt="Trabajo con Crecer con Todos en Santiago" loading="lazy" src="../tether-partnerships-crecer.jpg"/>
+</div>
+<figcaption class="field-caption">
+<span>Crecer con Todos</span>
+<span>Partnership</span>
+</figcaption>
+</figure>
+<figure class="field-photo">
+<div class="field-photo-media">
+<img alt="Encuentro de trabajo con Kiri" loading="lazy" src="../tether-partnerships-kiri.jpg"/>
+</div>
+<figcaption class="field-caption">
+<span>Kiri</span>
+<span>Partnership</span>
+</figcaption>
+</figure>
+<figure class="field-photo wide">
+<div class="field-photo-media">
+<img alt="Equipo de TetherEd reunido en Santiago" loading="lazy" src="../tether-team-santiago.jpg"/>
+</div>
+<figcaption class="field-caption">
+<span>TetherEd</span>
+<span>Equipo · Santiago</span>
+</figcaption>
+</figure>
+<figure class="field-photo wide">
+<div class="field-photo-media">
+<img alt="Cuenta Pública Participativa del SLEP del Pino" loading="lazy" src="../tether-slep-del-pino.jpg"/>
+</div>
+<figcaption class="field-caption">
+<span>Cuenta Pública SLEP del Pino 2025</span>
+<span>Educación pública · Santiago</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<!-- HOW I WORKED -->
+<section class="section operating-band">
+<div class="section-label">04 / Sistema operativo</div>
+<h2 class="operating-title">
+            Convertir relaciones<br/>
+<span>en ejecución.</span>
+</h2>
+<p class="operating-intro">
+            Trabajé entre producto, growth y operaciones para mover oportunidades
+            desde la conversación hasta la implementación — alineando equipos,
+            prioridades y ejecución en distintos mercados.
+          </p>
+<div class="work-list">
+<div class="work-item"><div class="work-number">01</div><strong>Estrategia de alianzas y desarrollo de negocios</strong></div>
+<div class="work-item"><div class="work-number">02</div><strong>Pipeline comercial, prospección y negociación</strong></div>
+<div class="work-item"><div class="work-number">03</div><strong>Relaciones con sector público y privado</strong></div>
+<div class="work-item"><div class="work-number">04</div><strong>Ejecución multifuncional entre Ventas, Marketing, Ingeniería, Datos, Diseño e Investigación</strong></div>
+<div class="work-item"><div class="work-number">05</div><strong>Señales de mercado hacia mejoras de producto e IA</strong></div>
+<div class="work-item"><div class="work-number">06</div><strong>CRM, dashboards, reportes y procesos escalables</strong></div>
+</div>
+</section>
+</div>
+<!-- SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-card">
+<div class="sidebar-label">
             Compañía
           </div>
-
-          <div class="sidebar-value">
+<div class="sidebar-value">
             Tether Education
           </div>
-
-        </div>
-
-
-
-        <div class="sidebar-card">
-
-          <div class="sidebar-label">
+</div>
+<div class="sidebar-card">
+<div class="sidebar-label">
             Sitio web
           </div>
-
-          <div class="sidebar-value">
-
-            <a
-              href="https://tether.education/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+<div class="sidebar-value">
+<a href="https://tether.education/" rel="noopener noreferrer" target="_blank">
               tether.education
             </a>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="sidebar-card">
-
-          <div class="sidebar-label">
+</div>
+</div>
+<div class="sidebar-card">
+<div class="sidebar-label">
             Rol
           </div>
-
-          <div class="sidebar-value">
+<div class="sidebar-value">
             Head of Partnerships
           </div>
-
-        </div>
-
-
-
-        <div class="sidebar-card">
-
-          <div class="sidebar-label">
+</div>
+<div class="sidebar-card">
+<div class="sidebar-label">
             Categoría
           </div>
-
-          <div class="sidebar-value">
+<div class="sidebar-value">
             GovTech / EdTech
           </div>
-
-        </div>
-
-
-
-        <div class="sidebar-card">
-
-          <div class="sidebar-label">
+</div>
+<div class="sidebar-card">
+<div class="sidebar-label">
             Mercados
           </div>
-
-          <div class="sidebar-value">
-            Latinoamérica<br>
-            Estados Unidos<br>
-            Dinamarca<br>
+<div class="sidebar-value">
+            Latinoamérica<br/>
+            Estados Unidos<br/>
+            Dinamarca<br/>
             España
           </div>
-
-        </div>
-
-
-
-        <div class="sidebar-card">
-
-          <div class="sidebar-label">
+</div>
+<div class="sidebar-card">
+<div class="sidebar-label">
             Periodo
           </div>
-
-          <div class="sidebar-value">
+<div class="sidebar-value">
             2024 — 2026
           </div>
-
-        </div>
-
-
-
-        <div class="sidebar-card">
-
-          <div class="sidebar-label">
+</div>
+<div class="sidebar-card">
+<div class="sidebar-label">
             Foco
           </div>
-
-          <div class="sidebar-value">
-            Partnerships<br>
-            Desarrollo de negocio<br>
-            Expansión<br>
+<div class="sidebar-value">
+            Partnerships<br/>
+            Desarrollo de negocio<br/>
+            Expansión<br/>
             Adopción de producto
           </div>
-
-        </div>
-
-
-      </aside>
-
-
-    </div>
-
-
-  </main>
-
-
-
-  <!-- =====================================================
+</div>
+</aside>
+</div>
+</main>
+<!-- =====================================================
        FOCUS
   ====================================================== -->
 
-  <section class="focus">
-
-
-    <div class="focus-dark">
-
-
-      <div class="focus-label">
-        Principio de partnerships
-      </div>
-
-
-      <h2 class="focus-title">
-
-        Conecta actores.
-
-        <span>
-          Convierte relaciones en adopción.
-        </span>
-
-      </h2>
-
-
-      <div class="focus-steps">
-
-        <div class="focus-step">
-          Entender
-        </div>
-
-        <div class="focus-step">
-          Alinear
-        </div>
-
-        <div class="focus-step">
-          Implementar
-        </div>
-
-      </div>
-
-
-    </div>
-
-
-
-    <div class="focus-light">
-
-
-      <div class="focus-label">
-        Principio de producto
-      </div>
-
-
-      <h2 class="focus-title">
-
-        Escucha el mercado.
-
-        <span>
-          Construye mejor.
-        </span>
-
-      </h2>
-
-
-      <div class="focus-steps">
-
-        <div class="focus-step">
-          Señales
-        </div>
-
-        <div class="focus-step">
-          Producto
-        </div>
-
-        <div class="focus-step">
-          Aprendizaje
-        </div>
-
-      </div>
-
-
-    </div>
-
-
-  </section>
-
-
-
-  <!-- =====================================================
+<!-- =====================================================
        PROJECT NAVIGATION
   ====================================================== -->
 
-  <section class="project-nav">
+        <section class="closing-principles">
+          <div class="closing-principles-grid">
 
+            <div class="closing-principle">
+              <div class="closing-principle-label">Principio de partnerships</div>
+              <h2>
+                Conecta actores.
+                <span>Convierte relaciones en adopción.</span>
+              </h2>
+              <div class="closing-principle-tags">
+                <span>Entender</span>
+                <span>Alinear</span>
+                <span>Implementar</span>
+              </div>
+            </div>
 
-    <div class="project-nav-inner">
+            <div class="closing-principle">
+              <div class="closing-principle-label">Principio de producto</div>
+              <h2>
+                Escucha el mercado.
+                <span>Construye mejor.</span>
+              </h2>
+              <div class="closing-principle-tags">
+                <span>Señales</span>
+                <span>Producto</span>
+                <span>Aprendizaje</span>
+              </div>
+            </div>
 
+          </div>
+</section>
 
-      <a
-        href="/es/lowsignal"
-        class="project-link"
-      >
-
-        <div class="project-link-label">
+<section class="project-nav">
+<div class="project-nav-inner">
+<a class="project-link" href="/es/lowsignal">
+<div class="project-link-label">
           Proyecto anterior
         </div>
-
-        <strong>
+<strong>
           lowsignal
         </strong>
-
-      </a>
-
-
-
-      <a
-        href="/es/geovictoria"
-        class="project-link right"
-      >
-
-        <div class="project-link-label">
+</a>
+<a class="project-link right" href="/es/geovictoria">
+<div class="project-link-label">
           Siguiente proyecto
         </div>
-
-        <strong>
+<strong>
           GeoVictoria
         </strong>
-
-      </a>
-
-
-    </div>
-
-
-  </section>
-
-
-
-  <!-- =====================================================
+</a>
+</div>
+</section>
+<!-- =====================================================
        CONTACT
   ====================================================== -->
-
-  <section
-    class="bottom"
-    id="contact"
-  >
-
-
-    <div class="contact-block">
-
-
-      <div class="contact-copy">
-
-
-        <div class="section-label">
+<section class="bottom" id="contact">
+<div class="contact-block">
+<div class="contact-copy">
+<div class="section-label">
           Contacto
         </div>
-
-
-        <h3>
+<h3>
           Conversemos.
         </h3>
-
-
-      </div>
-
-
-
-      <div class="contact-links">
-
-
-        <a
-          href="https://www.linkedin.com/in/felipequirozp"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="contact-link"
-        >
+</div>
+<div class="contact-links">
+<a class="contact-link" href="https://www.linkedin.com/in/felipequirozp" rel="noopener noreferrer" target="_blank">
           LinkedIn
         </a>
-
-
-        <a
-          href="https://www.instagram.com/felipe_quirozp/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="contact-link"
-        >
+<a class="contact-link" href="https://www.instagram.com/felipe_quirozp/" rel="noopener noreferrer" target="_blank">
           Instagram
         </a>
-
-
-        <a
-          href="mailto:felipe@lowsignal.cl"
-          class="contact-link"
-        >
+<a class="contact-link" href="mailto:felipe@lowsignal.cl">
           Email
         </a>
-
-
-      </div>
-
-
-    </div>
-
-
-
-    <!-- FOOTER -->
-
-    <footer class="footer">
-
-
-      <div>
+</div>
+</div>
+<!-- FOOTER -->
+<footer class="footer">
+<div>
         © 2026 Felipe Quiroz
       </div>
-
 <div class="footer-location">
         Santiago / CL
       </div>
-
-
-    </footer>
-
-
-  </section>
-
-
+</footer>
+</section>
 </body>
-
 </html>
