@@ -11478,6 +11478,117 @@ html body .content a.case-card:hover .case-card-link {
       }
     }
   </style>
+
+  <style>
+    /* LOWSIGNAL — mobile impact refinement */
+    @media (max-width: 760px){
+      .impact-band{
+        padding:72px 24px 68px !important;
+      }
+
+      .impact-band-inner,
+      .impact-band-head,
+      .impact-band-title,
+      .impact-band-copy,
+      .impact-band-metrics,
+      .impact-signal{
+        min-width:0 !important;
+        max-width:100% !important;
+      }
+
+      .impact-band-label{
+        margin-bottom:22px !important;
+        line-height:1.45 !important;
+      }
+
+      .impact-band-head{
+        display:block !important;
+        margin-bottom:48px !important;
+      }
+
+      .impact-band-title{
+        font-size:34px !important;
+        line-height:1.03 !important;
+        letter-spacing:-.045em !important;
+      }
+
+      .impact-band-title .impact-line{
+        display:block !important;
+        white-space:normal !important;
+      }
+
+      .impact-band-title .impact-line-accent{
+        margin-top:.12em !important;
+      }
+
+      .impact-band-copy{
+        margin-top:26px !important;
+        font-size:14px !important;
+        line-height:1.72 !important;
+      }
+
+      .impact-band-metrics{
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+        gap:1px !important;
+        overflow:hidden !important;
+        border:1px solid rgba(255,255,255,.18) !important;
+        border-radius:20px !important;
+        background:rgba(255,255,255,.14) !important;
+      }
+
+      .impact-signal{
+        min-height:132px !important;
+        padding:22px 18px !important;
+      }
+
+      .impact-signal strong{
+        font-size:clamp(34px,10vw,42px) !important;
+        line-height:1 !important;
+      }
+
+      .impact-signal span{
+        display:block !important;
+        font-size:9px !important;
+        line-height:1.55 !important;
+        overflow-wrap:anywhere !important;
+      }
+
+      .impact-signal:nth-child(3),
+      .impact-signal:nth-child(4){
+        grid-column:1 / -1 !important;
+        min-height:112px !important;
+        padding:22px 20px !important;
+      }
+
+      .impact-signal:nth-child(3) strong,
+      .impact-signal:nth-child(4) strong{
+        font-size:clamp(30px,8.6vw,36px) !important;
+        white-space:nowrap !important;
+        letter-spacing:-.04em !important;
+      }
+    }
+
+    @media (max-width: 360px){
+      .impact-band{
+        padding-top:64px !important;
+        padding-bottom:62px !important;
+      }
+
+      .impact-band-title{
+        font-size:34px !important;
+      }
+
+      .impact-signal{
+        padding-left:16px !important;
+        padding-right:16px !important;
+      }
+
+      .impact-signal:nth-child(3) strong,
+      .impact-signal:nth-child(4) strong{
+        font-size:27px !important;
+      }
+    }
+  </style>
 </head>
 <body>
 <!-- =====================================================
