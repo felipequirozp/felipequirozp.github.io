@@ -4036,6 +4036,178 @@
       }
     }
 
+  
+    /* =========================================================
+       V25 — Operating section: editorial, light, integrated
+       ========================================================== */
+
+    .operating-band{
+      margin-top:0 !important;
+      margin-bottom:110px !important;
+      padding:96px 0 86px !important;
+      background:transparent !important;
+      color:var(--navy) !important;
+      position:relative;
+      overflow:visible !important;
+      border-radius:0 !important;
+      border-top:1px solid var(--line);
+    }
+
+    .operating-band::after{
+      display:none !important;
+    }
+
+    .operating-band .section-label{
+      color:var(--steel-light) !important;
+      margin-bottom:24px !important;
+    }
+
+    .operating-title{
+      margin:0 0 58px !important;
+      max-width:980px !important;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(62px,6.6vw,104px) !important;
+      line-height:.93 !important;
+      letter-spacing:-.06em !important;
+      font-weight:500 !important;
+      color:var(--navy) !important;
+    }
+
+    .operating-title span{
+      color:var(--steel-light) !important;
+    }
+
+    .operating-grid{
+      display:grid !important;
+      grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr) !important;
+      gap:64px !important;
+      align-items:center !important;
+    }
+
+    .operating-media{
+      aspect-ratio:4/3 !important;
+      overflow:hidden !important;
+      border-radius:22px !important;
+      background:#e9edf1 !important;
+    }
+
+    .operating-media img{
+      width:100% !important;
+      height:100% !important;
+      object-fit:cover !important;
+      display:block !important;
+    }
+
+    .operating-copy{
+      max-width:560px !important;
+    }
+
+    .operating-copy h3{
+      margin:0 0 16px !important;
+      font-family:"Manrope",sans-serif;
+      font-size:clamp(30px,3vw,46px) !important;
+      line-height:1.05 !important;
+      letter-spacing:-.04em !important;
+      font-weight:500 !important;
+      color:var(--navy) !important;
+    }
+
+    .operating-copy p{
+      margin:0 !important;
+      color:var(--muted) !important;
+      font-size:15px !important;
+      line-height:1.75 !important;
+    }
+
+    .operating-signals{
+      display:grid !important;
+      grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+      margin-top:34px !important;
+      border-top:1px solid var(--line) !important;
+      border-bottom:1px solid var(--line) !important;
+    }
+
+    .operating-signal{
+      padding:22px 18px 24px !important;
+      border-right:1px solid var(--line) !important;
+    }
+
+    .operating-signal:last-child{
+      border-right:none !important;
+    }
+
+    .operating-signal strong{
+      display:block !important;
+      margin-bottom:7px !important;
+      color:var(--navy) !important;
+      font-size:10px !important;
+      letter-spacing:.1em !important;
+      text-transform:uppercase !important;
+    }
+
+    .operating-signal span{
+      color:var(--steel-light) !important;
+      font-size:11px !important;
+      line-height:1.45 !important;
+    }
+
+    .operating-band .work-list{
+      margin-top:58px !important;
+      border-top:1px solid var(--line) !important;
+    }
+
+    .operating-band .work-item{
+      border-bottom:1px solid var(--line) !important;
+      padding-top:20px !important;
+      padding-bottom:20px !important;
+    }
+
+    .operating-band .work-number{
+      color:var(--steel-light) !important;
+    }
+
+    .operating-band .work-item strong{
+      color:var(--navy) !important;
+    }
+
+    @media(max-width:900px){
+      .operating-grid{
+        grid-template-columns:1fr !important;
+        gap:36px !important;
+      }
+    }
+
+    @media(max-width:640px){
+      .operating-band{
+        padding:72px 0 68px !important;
+        margin-left:0 !important;
+        margin-right:0 !important;
+        margin-bottom:84px !important;
+      }
+
+      .operating-title{
+        font-size:clamp(48px,13vw,72px) !important;
+        margin-bottom:38px !important;
+      }
+
+      .operating-media{
+        border-radius:16px !important;
+      }
+
+      .operating-signals{
+        grid-template-columns:1fr !important;
+      }
+
+      .operating-signal{
+        border-right:none !important;
+        border-bottom:1px solid var(--line) !important;
+      }
+
+      .operating-signal:last-child{
+        border-bottom:none !important;
+      }
+    }
+
   </style>
 
 </head>
