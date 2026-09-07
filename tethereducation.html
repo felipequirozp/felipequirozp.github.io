@@ -6300,6 +6300,373 @@
       border-top-color:rgba(50,73,99,.28) !important;
     }
 
+
+
+    /* =========================================================
+       V52 — rounded metrics + section 04 title aligned
+       ========================================================== */
+
+    .impact-band-metrics{
+      border:1px solid rgba(255,255,255,.12) !important;
+      border-radius:28px !important;
+      overflow:hidden !important;
+      gap:1px !important;
+      background:rgba(255,255,255,.12) !important;
+    }
+
+    .impact-signal{
+      border:0 !important;
+    }
+
+    .operating-title{
+      max-width:860px !important;
+      margin:0 0 35px !important;
+      font-family:"Manrope",sans-serif !important;
+      font-size:clamp(40px,5vw,72px) !important;
+      line-height:1.10 !important;
+      letter-spacing:-.055em !important;
+      font-weight:500 !important;
+    }
+
+    @media(max-width:760px){
+      .impact-band-metrics{
+        border-radius:20px !important;
+      }
+
+      .operating-title{
+        font-size:clamp(40px,12vw,58px) !important;
+        line-height:1.12 !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       V53 — smaller editorial principle titles
+       ========================================================== */
+
+    .project-principle h3{
+      font-size:clamp(26px,2.15vw,36px) !important;
+      line-height:1.05 !important;
+      letter-spacing:-.045em !important;
+      max-width:11ch !important;
+      margin-bottom:14px !important;
+    }
+
+    @media(max-width:980px){
+      .project-principle h3{
+        font-size:30px !important;
+        max-width:none !important;
+      }
+    }
+
+
+    /* =========================================================
+       V54 — unified horizontal margins across all sections
+       One shared content width / gutter system
+       ========================================================== */
+
+    :root{
+      --page-gutter: 5vw;
+      --page-max: 1520px;
+    }
+
+    /* Core content containers */
+    .content,
+    .content-grid,
+    .main-column,
+    .section,
+    .field-block,
+    .project-principles-wrap,
+    .project-nav-inner,
+    .contact-block,
+    .footer-inner,
+    .backing-block,
+    .impact-band-inner,
+    .hero-editorial{
+      box-sizing: border-box;
+    }
+
+    /* Main white-content sections: same left/right start */
+    .content{
+      width: 100% !important;
+      max-width: none !important;
+      padding-left: var(--page-gutter) !important;
+      padding-right: var(--page-gutter) !important;
+    }
+
+    .content-grid{
+      width: min(var(--page-max), 100%) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* Sections inside main column should not add extra horizontal offsets */
+    .main-column > .section,
+    .main-column > .backing-block,
+    .main-column .field-block,
+    .main-column .project-principles-wrap{
+      width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    /* Impact band */
+    .impact-band{
+      padding-left: var(--page-gutter) !important;
+      padding-right: var(--page-gutter) !important;
+    }
+
+    .impact-band-inner{
+      width: min(var(--page-max), 100%) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* Closing principles should align with the same outer gutter */
+    .closing-principles{
+      width: calc(100% - (2 * var(--page-gutter))) !important;
+      max-width: var(--page-max) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* Previous / next */
+    .project-nav{
+      padding-left: var(--page-gutter) !important;
+      padding-right: var(--page-gutter) !important;
+    }
+
+    .project-nav-inner{
+      width: min(var(--page-max), 100%) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* Contact + footer */
+    .bottom{
+      padding-left: var(--page-gutter) !important;
+      padding-right: var(--page-gutter) !important;
+    }
+
+    .contact-block,
+    .footer-inner{
+      width: min(var(--page-max), 100%) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* Hero uses same global horizontal rhythm */
+    .hero-editorial{
+      width: min(var(--page-max), calc(100% - (2 * var(--page-gutter)))) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* Remove legacy left/right offsets that visually break alignment */
+    .section-copy,
+    .leadership-card,
+    .product-collaboration,
+    .product-grid,
+    .project-cases,
+    .work-list{
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    @media (max-width: 760px){
+      :root{
+        --page-gutter: 22px;
+      }
+
+      .closing-principles{
+        width: calc(100% - 44px) !important;
+      }
+    }
+
+
+    /* =========================================================
+       V55 — smaller editorial titles + role moved next to company
+       ========================================================== */
+
+    .project-principle h3{
+      font-size:clamp(22px,1.75vw,30px) !important;
+      line-height:1.08 !important;
+      letter-spacing:-.04em !important;
+      max-width:12ch !important;
+      margin-bottom:12px !important;
+    }
+
+    .project-principle p{
+      font-size:15px !important;
+      line-height:1.62 !important;
+      max-width:31ch !important;
+    }
+
+    .hero-editorial-role{
+      display:flex !important;
+      flex-direction:column !important;
+      align-items:flex-end !important;
+      gap:5px !important;
+    }
+
+    .hero-editorial-role strong{
+      margin:0 !important;
+    }
+
+    .hero-editorial-role .hero-role-title{
+      color:rgba(255,255,255,.82) !important;
+      font-size:13px !important;
+      font-weight:500 !important;
+      letter-spacing:.01em !important;
+    }
+
+    .hero-editorial-role .hero-role-markets{
+      color:rgba(255,255,255,.55) !important;
+      font-size:12px !important;
+      line-height:1.5 !important;
+    }
+
+    @media(max-width:980px){
+      .project-principle h3{
+        font-size:26px !important;
+        max-width:none !important;
+      }
+
+      .hero-editorial-role{
+        align-items:flex-start !important;
+      }
+    }
+
+    @media(max-width:600px){
+      .project-principle h3{
+        font-size:24px !important;
+      }
+    }
+
+
+    /* =========================================================
+       V56 — publish-ready QA pass
+       Full-bleed closing principles + final rhythm cleanup
+       ========================================================== */
+
+    /* Closing principles: true edge-to-edge block */
+    .closing-principles{
+      width:100% !important;
+      max-width:none !important;
+      margin-left:0 !important;
+      margin-right:0 !important;
+      margin-top:0 !important;
+      margin-bottom:72px !important;
+      border:none !important;
+    }
+
+    .closing-principles-grid{
+      width:100% !important;
+      min-height:520px !important;
+      margin:0 !important;
+    }
+
+    .closing-principle{
+      padding:68px 7vw !important;
+    }
+
+    /* Keep both panels clean — no cyan edge bars */
+    .closing-principle::before,
+    .closing-principle::after{
+      content:none !important;
+      display:none !important;
+    }
+
+    /* Editorial matrix: secondary hierarchy, not hero-sized */
+    .project-principle h3{
+      font-size:clamp(22px,1.65vw,29px) !important;
+      line-height:1.08 !important;
+      letter-spacing:-.035em !important;
+    }
+
+    .project-principle p{
+      font-size:15px !important;
+      line-height:1.62 !important;
+    }
+
+    /* Section 04 matches the rest */
+    .operating-title{
+      font-weight:400 !important;
+      letter-spacing:-.045em !important;
+    }
+
+    /* Hero and ending should not carry leftover cyan bars */
+    .hero::after{
+      content:none !important;
+      display:none !important;
+    }
+
+    /* Slightly tighter transition into project navigation */
+    .project-nav{
+      margin-top:0 !important;
+    }
+
+    @media(max-width:760px){
+      .closing-principles{
+        margin-bottom:56px !important;
+      }
+
+      .closing-principles-grid{
+        min-height:0 !important;
+      }
+
+      .closing-principle{
+        padding:54px 22px !important;
+      }
+
+      .project-principle h3{
+        font-size:24px !important;
+      }
+    }
+
+
+    /* =========================================================
+       V57 — project navigation aligned to global page gutters
+       ========================================================== */
+
+    .project-nav{
+      width:100% !important;
+      padding-left:var(--page-gutter) !important;
+      padding-right:var(--page-gutter) !important;
+    }
+
+    .project-nav-inner{
+      width:100% !important;
+      max-width:none !important;
+      margin-left:0 !important;
+      margin-right:0 !important;
+      padding-left:0 !important;
+      padding-right:0 !important;
+    }
+
+    .project-link{
+      width:calc(50% - 24px) !important;
+    }
+
+    .project-link.right{
+      margin-left:auto !important;
+      text-align:right !important;
+    }
+
+    @media(max-width:760px){
+      .project-link{
+        width:100% !important;
+      }
+
+      .project-link.right{
+        margin-left:0 !important;
+        text-align:left !important;
+      }
+    }
+
 </style>
 </head>
 <body>
@@ -6346,8 +6713,7 @@
 
       <div class="hero-editorial-meta">
         <span>Selected work / 03</span>
-        <span>Head of Partnerships</span>
-        <span>2024 — 2026</span>
+                <span>2024 — 2026</span>
         <span>GovTech / EdTech</span>
       </div>
     </div>
@@ -6370,7 +6736,8 @@
 
       <div class="hero-editorial-role">
         <strong>TetherEd</strong>
-        <span>Latin America · United States · Denmark · Spain</span>
+        <span class="hero-role-title">Head of Partnerships</span>
+        <span class="hero-role-markets">Latin America · United States · Denmark · Spain</span>
       </div>
     </div>
 
