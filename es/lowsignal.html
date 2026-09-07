@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
 
@@ -10,32 +10,12 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>GeoVictoria | Felipe Quiroz</title>
+  <title>USM — Felipe Quiroz</title>
 
-  <meta
-    name="description"
-    content="Trabajo seleccionado en GeoVictoria — productos de workforce management, pilotos, validación y desarrollo de producto enterprise."
-  >
+  <meta name="description" content="Felipe Quiroz's experience at USM across admissions promotion, CRM, partnerships, events and program operations.">
 
+  <link rel="icon" type="image/png" href="favicon.png">
 
-  <!-- SEO / LANGUAGES -->
-  <link rel="canonical" href="https://felipequirozp.cl/es/geovictoria">
-
-  <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/geovictoria">
-
-  <link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/geovictoria">
-
-  <link rel="alternate" hreflang="x-default" href="https://felipequirozp.cl/geovictoria">
-
-  <!-- FAVICON -->
-  <link
-    rel="icon"
-    type="image/png"
-    href="../favicon.png"
-  >
-
-  <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <link
     rel="preconnect"
@@ -362,7 +342,7 @@
       padding:
         58px 5vw 52px;
 
-      background: var(--steel);
+      background: var(--navy-deep);
 
       color: white;
 
@@ -382,12 +362,12 @@
 
       background-image:
         linear-gradient(
-          rgba(255,255,255,.05) 1px,
+          rgba(255,255,255,.045) 1px,
           transparent 1px
         ),
         linear-gradient(
           90deg,
-          rgba(255,255,255,.05) 1px,
+          rgba(255,255,255,.045) 1px,
           transparent 1px
         );
 
@@ -419,7 +399,7 @@
 
       gap: 20px;
 
-      color: var(--slate-light);
+      color: var(--slate);
 
       font-size: 9px;
       font-weight: 500;
@@ -439,82 +419,77 @@
 
 
     /* =====================================================
-       SCHEDULE VISUAL
+       GROWTH SYSTEM VISUAL
     ===================================================== */
 
-    .schedule {
+    .growth-map {
 
-      max-width: 540px;
+      max-width: 560px;
 
       margin:
-        45px 0 35px;
+        42px 0 34px;
 
     }
 
 
-    .schedule-head {
-
-      margin-bottom: 18px;
+    .growth-main {
 
       display: grid;
 
       grid-template-columns:
-        82px repeat(5, 1fr);
-
-      gap: 8px;
-
-      color: var(--slate-light);
-
-      font-size: 8px;
-
-      text-transform: uppercase;
-
-      letter-spacing: .05em;
-
-    }
-
-
-    .schedule-row {
-
-      margin-bottom: 9px;
-
-      display: grid;
-
-      grid-template-columns:
-        82px repeat(5, 1fr);
-
-      gap: 8px;
+        1fr 48px 1fr 48px 1fr;
 
       align-items: center;
 
-    }
-
-
-    .schedule-name {
-
-      color: #d7dee6;
-
-      font-size: 9px;
+      margin-bottom: 30px;
 
     }
 
 
-    .shift {
+    .growth-node {
 
-      height: 32px;
+      min-height: 74px;
+
+      padding:
+        18px 15px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       border:
         1px solid rgba(255,255,255,.18);
 
-      border-radius: 8px;
+      border-radius: 14px;
 
       background:
-        rgba(255,255,255,.06);
+        rgba(255,255,255,.04);
+
+      color: white;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 13px;
+      font-weight: 500;
+
+      text-align: center;
+
+      letter-spacing: -.02em;
 
     }
 
 
-    .shift.active {
+    .growth-node.main {
+
+      background:
+        rgba(255,255,255,.10);
+
+    }
+
+
+    .growth-line {
+
+      height: 1px;
 
       background:
         rgba(255,255,255,.20);
@@ -522,18 +497,51 @@
     }
 
 
-    .shift.medium {
+    .growth-support {
 
-      background:
-        rgba(199,208,217,.13);
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 14px;
 
     }
 
 
-    .shift.dark {
+    .growth-support-block {
 
-      background:
-        rgba(13,23,36,.20);
+      padding-top: 14px;
+
+      border-top:
+        1px solid rgba(255,255,255,.14);
+
+    }
+
+
+    .growth-support-title {
+
+      margin-bottom: 7px;
+
+      color: var(--slate-light);
+
+      font-size: 8px;
+      font-weight: 600;
+
+      letter-spacing: .07em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .growth-support-copy {
+
+      color: #b7c1cc;
+
+      font-size: 9px;
+
+      line-height: 1.6;
 
     }
 
@@ -542,7 +550,7 @@
 
       margin-bottom: 18px;
 
-      color: var(--slate-light);
+      color: var(--slate);
 
       font-size: 9px;
       font-weight: 500;
@@ -558,12 +566,12 @@
 
       margin: 0;
 
-      max-width: 580px;
+      max-width: 600px;
 
       font-family: "Manrope", sans-serif;
 
       font-size:
-        clamp(38px, 4vw, 58px);
+        clamp(40px, 4.2vw, 60px);
 
       line-height: 1.08;
 
@@ -578,9 +586,9 @@
 
       display: block;
 
-      margin-top: 14px;
+      margin-top: 16px;
 
-      color: var(--slate-light);
+      color: var(--slate);
 
     }
 
@@ -613,7 +621,7 @@
 
 
     /* =====================================================
-       COMPANY LOGO FIX
+       LOGO
     ===================================================== */
 
     .company-logo {
@@ -653,7 +661,7 @@
 
     .case-label {
 
-      margin-bottom: 13px;
+      margin-bottom: 18px;
 
       color: var(--muted);
 
@@ -669,7 +677,7 @@
 
     .case-period {
 
-      margin-bottom: 35px;
+      margin-bottom: 44px;
 
       color: var(--steel-light);
 
@@ -686,7 +694,7 @@
     .hero-content h1 {
 
       margin:
-        0 0 12px;
+        0 0 24px;
 
       font-family: "Manrope", sans-serif;
 
@@ -765,7 +773,7 @@
 
 
     /* =====================================================
-       MAIN CONTENT
+       CONTENT
     ===================================================== */
 
     .content {
@@ -798,7 +806,9 @@
 
 
     .main-column {
+
       min-width: 0;
+
     }
 
 
@@ -811,7 +821,9 @@
 
 
     .section:last-child {
+
       padding-bottom: 0;
+
     }
 
 
@@ -833,7 +845,7 @@
 
     .section h2 {
 
-      max-width: 820px;
+      max-width: 850px;
 
       margin:
         0 0 35px;
@@ -875,100 +887,69 @@
     }
 
 
+
     /* =====================================================
-       INITIATIVES
+       SCALE / OPERATING PROOF
     ===================================================== */
 
-    .initiatives {
-
-      border-top:
-        1px solid var(--line);
-
-    }
-
-
-    .initiative {
-
-      padding:
-        30px 0;
-
+    .proof-grid {
+      margin-top: 34px;
       display: grid;
-
-      grid-template-columns:
-        55px 1fr;
-
-      gap: 25px;
-
-      border-bottom:
-        1px solid var(--line);
-
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
     }
 
-
-    .initiative-number {
-
-      padding-top: 5px;
-
-      color: var(--muted);
-
-      font-size: 10px;
-
+    .proof-item {
+      min-height: 165px;
+      padding: 30px 28px;
     }
 
+    .proof-item:nth-child(odd) {
+      border-right: 1px solid var(--line);
+    }
 
-    .initiative h3 {
+    .proof-item:nth-child(-n+2) {
+      border-bottom: 1px solid var(--line);
+    }
 
-      margin:
-        0 0 8px;
-
-      font-family: "Manrope", sans-serif;
-
-      font-size: 23px;
-      font-weight: 500;
-
-      letter-spacing: -.035em;
-
+    .proof-item strong {
+      display: block;
+      margin-bottom: 9px;
       color: var(--navy);
-
-    }
-
-
-    .initiative-type {
-
-      margin-bottom: 14px;
-
-      color: var(--steel-light);
-
-      font-size: 9px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(34px, 4vw, 56px);
       font-weight: 500;
-
-      letter-spacing: .06em;
-
-      text-transform: uppercase;
-
+      letter-spacing: -.05em;
+      line-height: 1;
     }
 
+    .proof-item span {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
 
-    .initiative p {
-
-      max-width: 650px;
-
-      margin: 0;
-
-      color: #4c5864;
-
-      font-size: 13px;
-
-      line-height: 1.75;
-
+    @media (max-width: 600px) {
+      .proof-grid { grid-template-columns: 1fr; }
+      .proof-item {
+        min-height: auto;
+        padding: 24px 0;
+        border-right: 0 !important;
+        border-bottom: 1px solid var(--line);
+      }
+      .proof-item:last-child { border-bottom: 0; }
     }
 
 
     /* =====================================================
-       HOW I WORK
+       ROLE LIST
     ===================================================== */
 
-    .work-list {
+    .role-list {
 
       margin-top: 40px;
 
@@ -978,7 +959,7 @@
     }
 
 
-    .work-item {
+    .role-item {
 
       padding:
         20px 0;
@@ -996,7 +977,7 @@
     }
 
 
-    .work-number {
+    .role-number {
 
       color: var(--muted);
 
@@ -1005,7 +986,7 @@
     }
 
 
-    .work-item strong {
+    .role-item strong {
 
       color: var(--navy);
 
@@ -1014,6 +995,326 @@
 
       line-height: 1.55;
 
+    }
+
+
+    /* =====================================================
+       SOLUTIONS
+    ===================================================== */
+
+    .solutions {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      border-top:
+        1px solid var(--line);
+
+    }
+
+
+    .solution {
+
+      min-height: 220px;
+
+      padding:
+        30px 34px 30px 0;
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .solution:nth-child(odd) {
+
+      border-right:
+        1px solid var(--line);
+
+      padding-right: 38px;
+
+    }
+
+
+    .solution:nth-child(even) {
+
+      padding-left: 38px;
+
+    }
+
+
+    .solution-number {
+
+      margin-bottom: 35px;
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      letter-spacing: .07em;
+
+    }
+
+
+    .solution h3 {
+
+      margin:
+        0 0 11px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 24px;
+      font-weight: 500;
+
+      letter-spacing: -.035em;
+
+      color: var(--navy);
+
+    }
+
+
+    .solution-type {
+
+      margin-bottom: 14px;
+
+      color: var(--steel-light);
+
+      font-size: 9px;
+      font-weight: 600;
+
+      letter-spacing: .06em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .solution p {
+
+      max-width: 380px;
+
+      margin: 0;
+
+      color: #4c5864;
+
+      font-size: 13px;
+
+      line-height: 1.72;
+
+    }
+
+
+    /* =====================================================
+       OPERATING MODEL
+    ===================================================== */
+
+    .operating-list {
+
+      margin-top: 40px;
+
+      border-top:
+        1px solid var(--line);
+
+    }
+
+
+    .operating-item {
+
+      padding:
+        24px 0;
+
+      display: grid;
+
+      grid-template-columns:
+        55px 1fr auto;
+
+      gap: 25px;
+
+      align-items: center;
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .operating-number {
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+    }
+
+
+    .operating-item strong {
+
+      color: var(--navy);
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 19px;
+      font-weight: 500;
+
+      letter-spacing: -.025em;
+
+    }
+
+
+    .operating-item span {
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      letter-spacing: .06em;
+
+      text-transform: uppercase;
+
+    }
+
+
+
+    /* =====================================================
+       SELECTED CASES
+    ===================================================== */
+
+    .cases-section {
+      padding: 92px 0 20px;
+    }
+
+    .cases-intro {
+      max-width: 760px;
+      margin-bottom: 42px;
+    }
+
+    .cases-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .case-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(280px, .7fr);
+      gap: 44px;
+      align-items: end;
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.62);
+      text-decoration: none;
+      transition:
+        transform .22s ease,
+        border-color .22s ease,
+        background .22s ease;
+    }
+
+    .case-card:hover {
+      transform: translateY(-2px);
+      border-color: #bcc5ce;
+      background: #fff;
+    }
+
+    .case-card-topline {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .case-card-number,
+    .case-card-type {
+      font-size: 10px;
+      line-height: 1;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .case-card-number {
+      color: var(--navy);
+    }
+
+    .case-card-type {
+      color: var(--steel-light);
+    }
+
+    .case-card h3 {
+      margin: 0 0 16px;
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(30px, 3.2vw, 46px);
+      font-weight: 500;
+      letter-spacing: -.04em;
+      line-height: 1.04;
+    }
+
+    .case-card p {
+      margin: 0;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .case-card-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 24px;
+    }
+
+    .case-card-layers {
+      display: grid;
+      gap: 14px;
+    }
+
+    .case-layer {
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .case-layer strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .case-layer span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .case-card-link {
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 760px) {
+      .cases-section {
+        padding-top: 70px;
+      }
+
+      .case-card {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 26px;
+        border-radius: 14px;
+      }
+
+      .case-card h3 {
+        font-size: clamp(30px, 8vw, 40px);
+      }
     }
 
 
@@ -1087,7 +1388,9 @@
 
 
     .sidebar-value a:hover {
+
       opacity: .55;
+
     }
 
 
@@ -1122,7 +1425,7 @@
 
     .focus-dark {
 
-      background: var(--navy);
+      background: var(--navy-deep);
 
       color: white;
 
@@ -1131,7 +1434,7 @@
 
     .focus-light {
 
-      background: var(--steel-light);
+      background: var(--steel);
 
       color: white;
 
@@ -1151,10 +1454,6 @@
 
     }
 
-
-    /* =====================================================
-       FOCUS TITLE FIX
-    ===================================================== */
 
     .focus-title {
 
@@ -1191,6 +1490,31 @@
 
       color:
         rgba(255,255,255,.60);
+
+    }
+
+
+    /* =====================================================
+       LOWSIGNAL LEFT FOCUS SPACING
+    ===================================================== */
+
+    .focus-dark .focus-title {
+
+      max-width: 760px;
+
+      font-size:
+        clamp(42px, 4.35vw, 74px);
+
+      line-height: 1.12;
+
+    }
+
+
+    .focus-dark .focus-title span {
+
+      margin-top: 44px;
+
+      line-height: 1.12;
 
     }
 
@@ -1347,7 +1671,6 @@
       padding-bottom: 70px;
 
       display: flex;
-
       justify-content: space-between;
       align-items: flex-end;
 
@@ -1464,7 +1787,9 @@
 
 
     .footer-location {
+
       text-align: right;
+
     }
 
 
@@ -1561,6 +1886,374 @@
     /* =====================================================
        TABLET
     ===================================================== */
+
+
+    /* =====================================================
+       CO-FOUNDER
+    ===================================================== */
+
+    .cofounder-card {
+
+      margin-top:
+        34px;
+
+      padding-top:
+        0;
+
+      display:
+        grid;
+
+      grid-template-columns:
+        92px minmax(0,1fr);
+
+      gap:
+        24px;
+
+      align-items:
+        center;
+
+    }
+
+
+    .cofounder-photo {
+
+      width:
+        92px;
+
+      height:
+        112px;
+
+      display:
+        block;
+
+      object-fit:
+        cover;
+
+      object-position:
+        center 32%;
+
+      border-radius:
+        18px;
+
+      background:
+        var(--ice);
+
+    }
+
+
+    .cofounder-eyebrow {
+
+      margin-bottom:
+        8px;
+
+      color:
+        var(--steel-light);
+
+      font-size:
+        10px;
+
+      font-weight:
+        600;
+
+      letter-spacing:
+        .12em;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+    .cofounder-name {
+
+      margin:
+        0 0 6px;
+
+      color:
+        var(--navy);
+
+      font-family:
+        "Manrope", sans-serif;
+
+      font-size:
+        20px;
+
+      font-weight:
+        600;
+
+      letter-spacing:
+        -.025em;
+
+    }
+
+
+    .cofounder-meta {
+
+      margin:
+        0 0 11px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        12px;
+
+      line-height:
+        1.55;
+
+    }
+
+
+    .cofounder-copy {
+
+      max-width:
+        620px;
+
+      margin:
+        0;
+
+      color:
+        #45505b;
+
+      font-size:
+        13px;
+
+      line-height:
+        1.75;
+
+    }
+
+    .cofounder-links {
+
+      margin-top:
+        14px;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      gap:
+        8px;
+
+    }
+
+
+    .cofounder-links a {
+
+      width:
+        36px;
+
+      height:
+        36px;
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      border:
+        1px solid var(--line);
+
+      border-radius:
+        50%;
+
+      color:
+        var(--steel);
+
+      text-decoration:
+        none;
+
+      transition:
+        transform .2s ease,
+        color .2s ease,
+        border-color .2s ease,
+        background .2s ease;
+
+    }
+
+
+    .cofounder-links a:hover {
+
+      transform:
+        translateY(-2px);
+
+      color:
+        var(--navy);
+
+      border-color:
+        var(--steel-light);
+
+      background:
+        var(--white);
+
+    }
+
+
+    .cofounder-links svg {
+
+      width:
+        15px;
+
+      height:
+        15px;
+
+      display:
+        block;
+
+    }
+
+
+    /* =====================================================
+       CLIENT WORK
+    ===================================================== */
+
+    .client-work {
+
+      padding-bottom:
+        105px;
+
+    }
+
+
+    .client-work-copy {
+
+      max-width:
+        720px;
+
+      margin-bottom:
+        38px;
+
+    }
+
+
+    .client-work-copy p {
+
+      margin:
+        0;
+
+      color:
+        #45505b;
+
+      font-size:
+        14px;
+
+      line-height:
+        1.85;
+
+    }
+
+
+    .client-work-figure {
+
+      margin:
+        0;
+
+    }
+
+
+    .client-work-media {
+
+      width:
+        100%;
+
+      aspect-ratio:
+        16 / 10;
+
+      overflow:
+        hidden;
+
+      border-radius:
+        18px;
+
+      background:
+        var(--ice);
+
+    }
+
+
+    .client-work-media img {
+
+      width:
+        100%;
+
+      height:
+        100%;
+
+      display:
+        block;
+
+      object-fit:
+        cover;
+
+      object-position:
+        center 46%;
+
+      transition:
+        transform .6s cubic-bezier(.2,.7,.2,1);
+
+    }
+
+
+    .client-work-media:hover img {
+
+      transform:
+        scale(1.012);
+
+    }
+
+
+    .client-work-caption {
+
+      margin-top:
+        12px;
+
+      display:
+        flex;
+
+      align-items:
+        baseline;
+
+      justify-content:
+        space-between;
+
+      gap:
+        16px;
+
+      color:
+        var(--navy);
+
+      font-size:
+        11px;
+
+      font-weight:
+        550;
+
+    }
+
+
+    .client-work-caption span:last-child {
+
+      color:
+        var(--steel-light);
+
+      font-size:
+        10px;
+
+      font-weight:
+        500;
+
+      white-space:
+        nowrap;
+
+    }
+
+
 
     @media(max-width: 900px) {
 
@@ -1733,6 +2426,112 @@
 
     @media(max-width: 600px) {
 
+      .cofounder-card {
+
+        grid-template-columns:
+          72px minmax(0,1fr);
+
+        gap:
+          16px;
+
+        margin-top:
+          28px;
+
+        padding-top:
+          0;
+
+        align-items:
+          start;
+
+      }
+
+
+      .cofounder-photo {
+
+        width:
+          72px;
+
+        height:
+          88px;
+
+        border-radius:
+          14px;
+
+      }
+
+
+      .cofounder-name {
+
+        font-size:
+          18px;
+
+      }
+
+
+      .cofounder-copy {
+
+        font-size:
+          12px;
+
+      }
+
+
+      .client-work {
+
+        padding-bottom:
+          78px;
+
+      }
+
+
+      .client-work-copy {
+
+        margin-bottom:
+          26px;
+
+      }
+
+
+      .client-work-copy p {
+
+        font-size:
+          13px;
+
+      }
+
+
+      .client-work-media {
+
+        aspect-ratio:
+          4 / 3;
+
+        border-radius:
+          14px;
+
+      }
+
+
+      .client-work-caption {
+
+        margin-top:
+          9px;
+
+        font-size:
+          10px;
+
+      }
+
+
+      .client-work-caption span:last-child {
+
+        font-size:
+          9px;
+
+      }
+
+
+
+
       .nav {
 
         flex-direction: column;
@@ -1793,36 +2592,40 @@
       }
 
 
-      .schedule {
+      .growth-map {
 
         margin:
-          35px 0 32px;
+          36px 0 34px;
 
       }
 
 
-      .schedule-head {
-
-        display: none;
-
-      }
-
-
-      .schedule-row {
+      .growth-main {
 
         grid-template-columns:
-          70px repeat(5, 1fr);
+          1fr;
 
-        gap: 5px;
+        gap: 8px;
 
       }
 
 
-      .shift {
+      .growth-line {
 
-        height: 28px;
+        width: 1px;
+        height: 18px;
 
-        border-radius: 6px;
+        justify-self: center;
+
+      }
+
+
+      .growth-support {
+
+        grid-template-columns:
+          1fr;
+
+        gap: 18px;
 
       }
 
@@ -1895,12 +2698,39 @@
       }
 
 
-      .initiative {
+      .solutions {
 
         grid-template-columns:
-          36px 1fr;
+          1fr;
 
-        gap: 14px;
+      }
+
+
+      .solution,
+      .solution:nth-child(odd),
+      .solution:nth-child(even) {
+
+        min-height: auto;
+
+        padding:
+          28px 0;
+
+        border-right: 0;
+
+      }
+
+
+      .operating-item {
+
+        grid-template-columns:
+          34px 1fr;
+
+      }
+
+
+      .operating-item span {
+
+        grid-column: 2;
 
       }
 
@@ -1931,6 +2761,22 @@
       .focus-title span {
 
         margin-top: 20px;
+
+      }
+
+
+      .focus-dark .focus-title {
+
+        line-height: 1.12;
+
+      }
+
+
+      .focus-dark .focus-title span {
+
+        margin-top: 30px;
+
+        line-height: 1.12;
 
       }
 
@@ -1975,323 +2821,191 @@
 
   
     /* =====================================================
-       LEADERSHIP / SCALE
+       USM CASE-SPECIFIC
     ===================================================== */
-
-    .leadership-card {
-      margin-top: 30px;
-      display: grid;
-      grid-template-columns: 112px 1fr;
-      gap: 22px;
+    .usm-wordmark {
+      width: auto;
+      height: auto;
+      min-height: 72px;
+      display: inline-flex;
       align-items: center;
-      max-width: 620px;
-      padding: 18px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: rgba(255,255,255,.62);
+      justify-content: flex-start;
+      margin-bottom: 42px;
+      font-family: "Manrope", sans-serif;
+      font-size: 48px;
+      line-height: 1;
+      letter-spacing: -.06em;
+      font-weight: 700;
+      color: var(--navy);
     }
 
-    .leadership-photo {
-      aspect-ratio: 1 / 1;
+    .usm-wordmark:hover { opacity: .6; }
+
+    .usm-map {
+      margin: 52px 0 48px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .usm-track {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .usm-node {
+      min-height: 92px;
+      padding: 18px;
+      border: 1px solid rgba(255,255,255,.20);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: white;
+    }
+
+    .usm-node strong {
+      font-family: "Manrope", sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: -.025em;
+    }
+
+    .usm-node span {
+      color: var(--slate);
+      font-size: 9px;
+      line-height: 1.6;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+    }
+
+    .usm-connector {
+      width: 42px;
+      height: 1px;
+      background: rgba(255,255,255,.30);
+    }
+
+    .usm-photo-block {
+      padding-bottom: 105px;
+    }
+
+    .usm-photo-media {
+      width: 100%;
       overflow: hidden;
-      border-radius: 16px;
+      border-radius: 18px;
       background: var(--ice);
     }
 
-    .leadership-photo img {
+    .usm-photo-media.landscape { aspect-ratio: 16 / 10; }
+    .usm-photo-media.portrait {
+      max-width: 610px;
+      aspect-ratio: 4 / 5;
+    }
+
+    .usm-photo-media img {
       width: 100%;
       height: 100%;
       display: block;
       object-fit: cover;
+      transition: transform .6s cubic-bezier(.2,.7,.2,1);
     }
 
-    .leadership-eyebrow {
-      margin-bottom: 8px;
-      color: var(--steel-light);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
+    .usm-photo-media:hover img { transform: scale(1.012); }
 
-    .leadership-name {
-      margin: 0 0 4px;
-      color: var(--navy);
-      font-family: "Manrope", sans-serif;
-      font-size: 23px;
-      font-weight: 500;
-      letter-spacing: -.03em;
-      line-height: 1.1;
-    }
-
-    .leadership-role {
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
-
-    .leadership-links {
+    .usm-photo-caption {
       margin-top: 12px;
       display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .leadership-linkedin {
-      width: 32px;
-      height: 32px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--line);
-      border-radius: 50%;
+      justify-content: space-between;
+      gap: 16px;
       color: var(--navy);
-      font-size: 12px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: background .2s ease, border-color .2s ease;
-    }
-
-    .leadership-linkedin:hover {
-      background: var(--ice);
-      border-color: #bcc5ce;
-    }
-
-
-    .scale-grid {
-      margin-top: 36px;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .scale-item {
-      min-height: 160px;
-      padding: 30px 28px;
-    }
-
-    .scale-item:nth-child(odd) {
-      border-right: 1px solid var(--line);
-    }
-
-    .scale-item:nth-child(-n+2) {
-      border-bottom: 1px solid var(--line);
-    }
-
-    .scale-item strong {
-      display: block;
-      margin-bottom: 10px;
-      color: var(--navy);
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(34px, 4vw, 54px);
-      font-weight: 500;
-      letter-spacing: -.05em;
-      line-height: 1;
-    }
-
-    .scale-item span {
-      color: var(--muted);
       font-size: 11px;
-      font-weight: 600;
-      letter-spacing: .06em;
-      line-height: 1.5;
-      text-transform: uppercase;
+      font-weight: 550;
     }
 
-    @media (max-width: 700px) {
-      .leadership-card {
-        grid-template-columns: 88px 1fr;
-        gap: 16px;
-        padding: 14px;
+    .usm-photo-caption span:last-child {
+      color: var(--steel-light);
+      font-size: 10px;
+      font-weight: 500;
+      text-align: right;
+    }
+
+    @media(max-width: 600px) {
+      .usm-wordmark { font-size: 40px; min-height: 56px; margin-bottom: 34px; }
+      .usm-track { grid-template-columns: 1fr; }
+      .usm-connector { width: 1px; height: 18px; justify-self: center; }
+      .usm-photo-block { padding-bottom: 78px; }
+      .usm-photo-media,
+      .usm-photo-media.landscape,
+      .usm-photo-media.portrait {
+        max-width: 100%;
+        aspect-ratio: 4 / 3;
         border-radius: 14px;
       }
-
-      .leadership-photo {
-        border-radius: 12px;
-      }
-
-      .leadership-name {
-        font-size: 22px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .scale-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .scale-item {
-        min-height: auto;
-        padding: 24px 0;
-        border-right: 0 !important;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .scale-item:last-child {
-        border-bottom: 0;
-      }
-    }
-
-
-
-    /* =====================================================
-       GEOVICTORIA — REFINED CASE
-    ===================================================== */
-
-    .editorial-quote {
-      margin-top: 54px;
-      padding-top: 34px;
-      border-top: 1px solid var(--line);
-    }
-
-    .editorial-quote p {
-      max-width: 860px;
-      margin: 0;
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(34px, 4.4vw, 60px);
-      line-height: 1.03;
-      letter-spacing: -.055em;
-      font-weight: 500;
-      color: var(--navy);
-    }
-
-    .initiative-note {
-      margin-top: 12px;
-      color: var(--steel-light);
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: .07em;
-      text-transform: uppercase;
+      .usm-photo-caption { font-size: 10px; margin-top: 9px; }
+      .usm-photo-caption span:last-child { font-size: 9px; }
     }
 
   
     /* =====================================================
-       PEOPLE — TETHER-STYLE OPEN ROWS
+       USM LEADERSHIP
     ===================================================== */
 
-    .people-block {
+    .leadership-list {
+      max-width: 760px;
+    }
+
+    .leadership-list .cofounder-card + .cofounder-card {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+    }
+
+    .leadership-list .cofounder-photo.karen {
+      object-position: center center;
+    }
+
+    .leadership-list .cofounder-photo.javier {
+      object-position: center 26%;
+    }
+
+  
+    /* USM focus spacing refinement */
+    .focus-title {
+      line-height: 1.12;
+    }
+
+    .focus-title span {
+      margin-top: 34px;
+      line-height: 1.12;
+    }
+
+    .focus-dark .focus-title span,
+    .focus-light .focus-title span {
       margin-top: 42px;
     }
 
-    .people-heading {
-      margin-bottom: 4px;
-      color: var(--steel-light);
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-    }
-
-    .leadership-card {
-      margin-top: 0;
-      padding: 28px 0;
-      border: 0;
-      border-top: 1px solid var(--line);
-      border-radius: 0;
-      background: transparent;
-      display: grid;
-      grid-template-columns: 78px minmax(0,1fr);
-      gap: 24px;
-      align-items: center;
-      max-width: none;
-    }
-
-    .leadership-card:last-child {
-      border-bottom: 1px solid var(--line);
-    }
-
-    .leadership-photo {
-      width: 78px;
-      height: 78px;
-      aspect-ratio: auto;
-      overflow: hidden;
-      border-radius: 20px;
-      background: var(--ice);
-    }
-
-    .leadership-photo img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .leadership-eyebrow {
-      margin-bottom: 7px;
-      color: var(--steel-light);
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-
-    .leadership-name {
-      margin: 0 0 5px;
-      color: var(--ink);
-      font-family: "Manrope", sans-serif;
-      font-size: 18px;
-      font-weight: 650;
-      letter-spacing: -.02em;
-      line-height: 1.15;
-    }
-
-    .leadership-role {
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.55;
-    }
-
-    .leadership-copy {
-      margin: 9px 0 0;
-      max-width: 650px;
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.65;
-    }
-
-    .leadership-links {
-      margin-top: 13px;
-      display: flex;
-      align-items: center;
-      gap: 9px;
-    }
-
-    .leadership-linkedin {
-      width: 34px;
-      height: 34px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--line);
-      border-radius: 50%;
-      color: var(--steel);
-      font-size: 11px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: background .2s ease, border-color .2s ease, transform .2s ease;
-    }
-
-    .leadership-linkedin:hover {
-      background: var(--white);
-      border-color: var(--steel-light);
-      transform: translateY(-2px);
-    }
-
-    @media(max-width:600px){
-      .leadership-card {
-        grid-template-columns: 64px minmax(0,1fr);
-        gap: 16px;
-        padding: 24px 0;
-        align-items: start;
+    @media(max-width: 600px) {
+      .focus-title {
+        line-height: 1.10;
       }
 
-      .leadership-photo {
-        width: 64px;
-        height: 64px;
-        border-radius: 16px;
+      .focus-title span,
+      .focus-dark .focus-title span,
+      .focus-light .focus-title span {
+        margin-top: 26px;
+        line-height: 1.12;
+      }
+    }
+
+  
+    /* USM focus bullets spacing */
+    .focus-steps {
+      margin-top: 34px;
+    }
+
+    @media(max-width: 600px) {
+      .focus-steps {
+        margin-top: 24px;
       }
     }
 
@@ -2299,6 +3013,7 @@
     /* =====================================================
        FOOTER — NO DUPLICATE SOCIAL LINKS
     ===================================================== */
+
     .footer-socials {
       display: none !important;
     }
@@ -2314,401 +3029,212 @@
 
   
     /* =====================================================
-       GEOVICTORIA — CULTURE / 4H
+       USM — FOUR-PHOTO EDITORIAL FLOW
     ===================================================== */
-    .culture-4h {
-      padding-top: 92px;
-      padding-bottom: 92px;
-      border-top: 1px solid var(--line);
-    }
-
-    .culture-4h-inner {
-      max-width: 980px;
-    }
-
-    .culture-4h-title {
-      margin: 0 0 30px;
+    .usm-photo-media.institutional {
       max-width: 760px;
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(44px, 5.4vw, 72px);
-      line-height: .98;
-      letter-spacing: -.055em;
-      color: var(--navy);
+      aspect-ratio: 4 / 3;
     }
 
-    .culture-4h-values {
+    .usm-photo-media.institutional img {
+      object-position: center 42%;
+    }
+
+    .usm-photo-media.community {
+      max-width: 920px;
+      aspect-ratio: 3 / 2;
+    }
+
+    .usm-photo-media.community img {
+      object-position: center center;
+    }
+
+    @media(max-width:600px) {
+      .usm-photo-media.institutional,
+      .usm-photo-media.community {
+        max-width: 100%;
+        aspect-ratio: 4 / 3;
+      }
+    }
+
+  
+    /* =====================================================
+       USM — REFINED PHOTO SCALE & EDITORIAL SPLITS
+    ===================================================== */
+
+    /* Never let editorial photos dominate the page */
+    .usm-photo-block .client-work-figure {
+      margin-top: 38px;
+    }
+
+    .usm-photo-media.landscape {
+      max-width: 820px;
+      aspect-ratio: 16 / 10;
+    }
+
+    .usm-photo-media.community {
+      max-width: 760px !important;
+      aspect-ratio: 3 / 2 !important;
+    }
+
+    /* Vertical / institutional images work better with copy beside them */
+    .usm-photo-split {
+      margin-top: 42px;
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 22px;
-      margin: 0 0 28px;
+      grid-template-columns: minmax(260px, 390px) minmax(0, 420px);
+      gap: 52px;
+      align-items: center;
       max-width: 900px;
     }
 
-    .culture-4h-value {
-      padding-top: 16px;
-      border-top: 1px solid var(--line);
+    .usm-photo-split .client-work-figure {
+      margin: 0;
+    }
+
+    .usm-photo-split .usm-photo-media.portrait,
+    .usm-photo-split .usm-photo-media.institutional {
+      width: 100%;
+      max-width: 390px !important;
+      aspect-ratio: 4 / 5 !important;
+    }
+
+    .usm-photo-split .usm-photo-media.institutional img {
+      object-position: center 42%;
+    }
+
+    .usm-photo-sidecopy {
+      max-width: 390px;
+    }
+
+    .usm-photo-sidecopy .eyebrow {
+      margin-bottom: 14px;
+      color: var(--steel-light);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .usm-photo-sidecopy h3 {
+      margin: 0 0 16px;
+      max-width: 360px;
       font-family: "Manrope", sans-serif;
-      font-size: 18px;
-      font-weight: 650;
-      letter-spacing: -.02em;
+      font-size: clamp(27px, 3vw, 40px);
+      line-height: 1.08;
+      letter-spacing: -.04em;
       color: var(--navy);
     }
 
-    .culture-4h-copy {
+    .usm-photo-sidecopy p {
       margin: 0;
-      max-width: 700px;
+      max-width: 380px;
       color: var(--muted);
       font-size: 13px;
       line-height: 1.75;
     }
 
     @media(max-width:760px) {
-      .culture-4h-values {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px 22px;
-      }
-    }
-
-    @media(max-width:520px) {
-      .culture-4h {
-        padding-top: 72px;
-        padding-bottom: 72px;
+      .usm-photo-media.landscape,
+      .usm-photo-media.community {
+        max-width: 100% !important;
       }
 
-      .culture-4h-values {
-        grid-template-columns: 1fr;
-      }
-    }
-
-  
-    /* =====================================================
-       GEOVICTORIA — COMPANY SIGNALS
-    ===================================================== */
-    .company-signals {
-      padding-top: 92px;
-      padding-bottom: 92px;
-      border-top: 0;
-    }
-
-    .company-signals-inner {
-      max-width: 980px;
-    }
-
-    .company-signals-title {
-      margin: 0 0 34px;
-      max-width: 760px;
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(44px, 5.4vw, 72px);
-      line-height: .98;
-      letter-spacing: -.055em;
-      color: var(--navy);
-    }
-
-    .company-signals-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 28px;
-      max-width: 900px;
-    }
-
-    .company-signal {
-      padding-top: 18px;
-      border-top: 1px solid var(--line);
-    }
-
-    .company-signal-name {
-      margin: 0 0 10px;
-      font-family: "Manrope", sans-serif;
-      font-size: 21px;
-      font-weight: 650;
-      letter-spacing: -.025em;
-      color: var(--navy);
-    }
-
-    .company-signal-copy {
-      margin: 0;
-      max-width: 390px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.72;
-    }
-
-    @media(max-width:700px) {
-      .company-signals-grid {
+      .usm-photo-split {
         grid-template-columns: 1fr;
         gap: 24px;
-      }
-    }
-
-    @media(max-width:520px) {
-      .company-signals {
-        padding-top: 72px;
-        padding-bottom: 72px;
-      }
-    }
-
-  
-    /* =====================================================
-       GEOVICTORIA — OPERATIONS PRODUCT VISUAL
-    ===================================================== */
-    .operations-visual {
-      margin: 54px 0 92px;
-      max-width: 760px;
-    }
-
-    .operations-visual-card {
-      padding: 34px;
-      border-radius: 18px;
-      background: var(--navy);
-      overflow: hidden;
-    }
-
-    .operations-visual-card img {
-      display: block;
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-    }
-
-    .operations-visual-caption {
-      margin-top: 12px;
-      color: var(--steel-light);
-      font-size: 9px;
-      letter-spacing: .04em;
-    }
-
-    @media(max-width:700px) {
-      .operations-visual {
         max-width: 100%;
-        margin-top: 40px;
-        margin-bottom: 72px;
       }
 
-      .operations-visual-card {
-        padding: 22px;
-        border-radius: 14px;
-      }
-    }
-
-  
-    /* =====================================================
-       GEOVICTORIA — WFM INTRO
-    ===================================================== */
-    .wfm-intro {
-      padding-top: 92px;
-      padding-bottom: 92px;
-      border-top: 0;
-    }
-
-    .wfm-intro-inner {
-      max-width: 980px;
-    }
-
-    .wfm-intro-title {
-      margin: 0 0 18px;
-      max-width: 840px;
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(44px, 5.6vw, 76px);
-      line-height: .98;
-      letter-spacing: -.055em;
-      color: var(--navy);
-    }
-
-    .wfm-intro-lead {
-      margin: 0 0 42px;
-      max-width: 700px;
-      color: var(--steel);
-      font-size: 18px;
-      line-height: 1.5;
-    }
-
-    .wfm-intro-split {
-      display: grid;
-      grid-template-columns: minmax(280px, 430px) minmax(0, 1fr);
-      gap: 56px;
-      align-items: center;
-      max-width: 920px;
-    }
-
-    .wfm-intro-media {
-      border-radius: 18px;
-      overflow: hidden;
-      background: var(--ice);
-    }
-
-    .wfm-intro-media img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    .wfm-intro-copy {
-      max-width: 430px;
-    }
-
-    .wfm-intro-copy p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.8;
-    }
-
-    @media(max-width:760px) {
-      .wfm-intro {
-        padding-top: 72px;
-        padding-bottom: 72px;
+      .usm-photo-split .usm-photo-media.portrait,
+      .usm-photo-split .usm-photo-media.institutional {
+        max-width: 100% !important;
+        aspect-ratio: 4 / 3 !important;
       }
 
-      .wfm-intro-split {
-        grid-template-columns: 1fr;
-        gap: 28px;
-      }
-
-      .wfm-intro-copy {
+      .usm-photo-sidecopy,
+      .usm-photo-sidecopy h3,
+      .usm-photo-sidecopy p {
         max-width: 100%;
       }
     }
 
   
     /* =====================================================
-       GEOVICTORIA — GEOCOFFEE / CLIENT COMMUNITY
+       USM — PHOTO BALANCE V7
+       Smaller media, tighter hierarchy, cleaner captions
     ===================================================== */
-    .geocoffee {
-      padding-top: 92px;
-      padding-bottom: 92px;
-      border-top: 1px solid var(--line);
+    .usm-photo-block > h2 {
+      max-width: 900px !important;
+      font-size: clamp(44px, 5.6vw, 76px) !important;
+      line-height: .99 !important;
     }
 
-    .geocoffee-inner {
-      max-width: 980px;
+    .usm-photo-media.landscape {
+      max-width: 720px !important;
     }
 
-    .geocoffee-title {
-      margin: 0 0 38px;
-      max-width: 780px;
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(44px, 5.4vw, 72px);
-      line-height: .99;
-      letter-spacing: -.055em;
-      color: var(--navy);
+    .usm-photo-media.community {
+      max-width: 680px !important;
     }
 
-    .geocoffee-split {
-      display: grid;
-      grid-template-columns: minmax(300px, 560px) minmax(0, 320px);
-      gap: 48px;
-      align-items: center;
-      max-width: 930px;
+    .usm-photo-split {
+      grid-template-columns: minmax(240px, 330px) minmax(0, 390px) !important;
+      gap: 44px !important;
+      max-width: 790px !important;
+      align-items: center !important;
     }
 
-    .geocoffee-media {
-      border-radius: 18px;
-      overflow: hidden;
-      background: var(--ice);
-      aspect-ratio: 4 / 3;
+    .usm-photo-split .usm-photo-media.portrait,
+    .usm-photo-split .usm-photo-media.institutional {
+      max-width: 330px !important;
     }
 
-    .geocoffee-media img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
+    .usm-photo-split .usm-photo-sidecopy {
+      max-width: 390px !important;
     }
 
-    .geocoffee-copy {
-      max-width: 320px;
+    .usm-photo-caption.solo {
+      justify-content: flex-start !important;
     }
 
-    .geocoffee-copy p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.78;
-    }
-
-    .geocoffee-meta {
-      margin-top: 16px;
-      color: var(--steel-light);
-      font-size: 9px;
-      letter-spacing: .04em;
-      text-transform: uppercase;
+    .usm-photo-caption.solo span {
+      color: var(--steel-light) !important;
+      font-size: 10px !important;
+      font-weight: 500 !important;
+      text-align: left !important;
     }
 
     @media(max-width:760px) {
-      .geocoffee {
-        padding-top: 72px;
-        padding-bottom: 72px;
+      .usm-photo-block > h2 {
+        font-size: clamp(38px, 11vw, 58px) !important;
       }
 
-      .geocoffee-split {
-        grid-template-columns: 1fr;
-        gap: 28px;
+      .usm-photo-media.landscape,
+      .usm-photo-media.community {
+        max-width: 100% !important;
       }
 
-      .geocoffee-copy {
-        max-width: 100%;
+      .usm-photo-split {
+        grid-template-columns: 1fr !important;
+        max-width: 100% !important;
+        gap: 22px !important;
       }
 
-      .geocoffee-media {
-        aspect-ratio: 4 / 3;
+      .usm-photo-split .usm-photo-media.portrait,
+      .usm-photo-split .usm-photo-media.institutional {
+        max-width: 100% !important;
       }
     }
 
   
-    /* V16 — balance spacing where dividers were removed */
-    .wfm-intro,
-    .company-signals {
-      padding-top: 64px !important;
+    /* V11 — USM narrative order: role/context → leadership → field work */
+    .main-column > .section:nth-of-type(2) {
+      padding-top: 4px;
     }
 
     @media(max-width:760px) {
-      .wfm-intro,
-      .company-signals {
-        padding-top: 52px !important;
-      }
-    }
-
-  
-    /* V17 — remove divider before Culture and tighten the transition */
-    .culture-4h {
-      border-top: 0 !important;
-      padding-top: 58px !important;
-    }
-
-    .company-signals {
-      padding-bottom: 66px !important;
-    }
-
-    @media(max-width:760px) {
-      .culture-4h {
-        padding-top: 48px !important;
-      }
-
-      .company-signals {
-        padding-bottom: 54px !important;
-      }
-    }
-
-  
-
-    /* V18 — remove divider before GeoCoffee and tighten Culture → GeoCoffee spacing */
-    .culture-4h {
-      padding-bottom: 68px !important;
-    }
-
-    .geocoffee {
-      border-top: 0 !important;
-      padding-top: 58px !important;
-    }
-
-    @media(max-width:760px) {
-      .culture-4h {
-        padding-bottom: 54px !important;
-      }
-
-      .geocoffee {
-        padding-top: 48px !important;
+      .main-column > .section:nth-of-type(2) {
+        padding-top: 0;
       }
     }
 
@@ -3049,6 +3575,299 @@ button:focus-visible{
   }
 }
 
+
+    /* Match Tether hero kicker accent */
+    .case-hero-kicker{
+      color:#38E9E9 !important;
+    }
+
+
+    /* Match Tether's subtler hero grid */
+    .hero::before{
+      background:
+        linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px) !important;
+      background-size:140px 140px !important;
+      opacity:.72 !important;
+    }
+
+
+    /* =========================================================
+       MATCH TETHER — typography + links + section rhythm
+       ========================================================== */
+
+    /* Same section-heading system used on Tether */
+    html body .main-column .section h2,
+    html body .main-column section h2,
+    html body .section h2{
+      max-width:860px !important;
+      margin:0 0 35px !important;
+      font-family:"Manrope",sans-serif !important;
+      font-size:clamp(40px,5vw,72px) !important;
+      line-height:1.10 !important;
+      letter-spacing:-.055em !important;
+      font-weight:500 !important;
+      color:#182536 !important;
+    }
+
+    /* Same supporting title hierarchy */
+    html body .main-column .section h3,
+    html body .main-column section h3{
+      font-family:"Manrope",sans-serif !important;
+      letter-spacing:-.035em !important;
+      font-weight:500 !important;
+    }
+
+    /* Same section labels as Tether */
+    html body .section-label,
+    html body .eyebrow,
+    html body .kicker,
+    html body .sidebar-label,
+    html body .field-kicker{
+      color:#71869c !important;
+      font-weight:600 !important;
+      letter-spacing:.12em !important;
+      text-transform:uppercase !important;
+    }
+
+    /* Exact Tether link behavior on light surfaces */
+    html body .content a,
+    html body .content a:link,
+    html body .content a:visited,
+    html body .content a:hover,
+    html body .content a:active,
+    html body .content a:focus,
+    html body .content a:focus-visible,
+    html body .backing-copy a,
+    html body .backing-copy a:link,
+    html body .backing-copy a:visited,
+    html body .backing-copy a:hover,
+    html body .backing-copy a:active,
+    html body .leadership-links a,
+    html body .leadership-links a:link,
+    html body .leadership-links a:visited,
+    html body .leadership-links a:hover,
+    html body .leadership-links a:active{
+      color:#182536 !important;
+      text-decoration-line:underline !important;
+      text-decoration-color:#182536 !important;
+      text-decoration-thickness:1px !important;
+      text-underline-offset:4px !important;
+      -webkit-text-decoration-color:#182536 !important;
+      opacity:1 !important;
+      background:transparent !important;
+    }
+
+    html body .content a:hover,
+    html body .backing-copy a:hover,
+    html body .leadership-links a:hover{
+      color:#0d1724 !important;
+      text-decoration-color:#0d1724 !important;
+      -webkit-text-decoration-color:#0d1724 !important;
+      opacity:1 !important;
+    }
+
+    /* Sidebar website links stay compact, exactly like Tether */
+    html body .sidebar .sidebar-value a,
+    html body .sidebar .sidebar-value a:link,
+    html body .sidebar .sidebar-value a:visited,
+    html body .sidebar .sidebar-value a:hover,
+    html body .sidebar .sidebar-value a:active,
+    html body .sidebar .sidebar-value a:focus,
+    html body .sidebar .sidebar-value a:focus-visible{
+      display:inline !important;
+      color:#182536 !important;
+      font:inherit !important;
+      font-size:inherit !important;
+      line-height:inherit !important;
+      letter-spacing:inherit !important;
+      text-decoration:none !important;
+      -webkit-text-decoration:none !important;
+      border-bottom:1px solid rgba(24,37,54,.28) !important;
+      padding-bottom:2px !important;
+      opacity:1 !important;
+      background:transparent !important;
+    }
+
+    html body .sidebar .sidebar-value a:hover,
+    html body .sidebar .sidebar-value a:active,
+    html body .sidebar .sidebar-value a:focus-visible{
+      color:#0d1724 !important;
+      border-bottom-color:#0d1724 !important;
+    }
+
+    /* Same focus state */
+    html body a:focus-visible,
+    html body button:focus-visible{
+      outline:2px solid #182536 !important;
+      outline-offset:3px !important;
+    }
+
+    /* Same contact buttons as Tether */
+    html body .bottom a,
+    html body .bottom a:link,
+    html body .bottom a:visited{
+      color:#182536 !important;
+      border-color:rgba(24,37,54,.23) !important;
+      background:transparent !important;
+      text-decoration:none !important;
+    }
+
+    html body .bottom a:hover,
+    html body .bottom a:active,
+    html body .bottom a:focus-visible{
+      color:#fff !important;
+      background:#182536 !important;
+      border-color:#182536 !important;
+      text-decoration:none !important;
+    }
+
+    @media(max-width:760px){
+      html body .main-column .section h2,
+      html body .main-column section h2,
+      html body .section h2{
+        font-size:clamp(40px,12vw,58px) !important;
+        line-height:1.12 !important;
+      }
+    }
+
+
+    /* =========================================================
+       FINAL MATCH — Tether spacing + social/icon interactions
+       ========================================================== */
+
+    /* Main sections align to the exact same outer gutter as Tether */
+    html body .content{
+      padding-left:var(--page-gutter) !important;
+      padding-right:var(--page-gutter) !important;
+    }
+
+    html body .content-grid{
+      width:100% !important;
+      max-width:var(--page-max) !important;
+      margin-left:auto !important;
+      margin-right:auto !important;
+    }
+
+    html body .main-column,
+    html body .main-column > .section,
+    html body .main-column > section{
+      width:100% !important;
+      max-width:none !important;
+      margin-left:0 !important;
+      margin-right:0 !important;
+      padding-left:0 !important;
+      padding-right:0 !important;
+    }
+
+    /* Remove extra legacy inner offsets */
+    html body .section-inner,
+    html body .section-copy,
+    html body .leadership-card,
+    html body .leadership-block,
+    html body .leadership-grid,
+    html body .product-grid,
+    html body .product-collaboration,
+    html body .work-list,
+    html body .field-block{
+      margin-left:0 !important;
+      margin-right:0 !important;
+    }
+
+    /* Social / LinkedIn icon links: no underline at all */
+    html body a.social-icon,
+    html body a.social-icon:link,
+    html body a.social-icon:visited,
+    html body a.social-icon:hover,
+    html body a.social-icon:active,
+    html body a.social-icon:focus-visible,
+    html body .social-icon a,
+    html body .social-icon a:link,
+    html body .social-icon a:visited,
+    html body .social-icon a:hover,
+    html body .social-icon a:active,
+    html body .social-icon a:focus-visible,
+    html body .person-social,
+    html body .person-social:link,
+    html body .person-social:visited,
+    html body .person-social:hover,
+    html body .person-social:active,
+    html body .person-social:focus-visible,
+    html body .leadership-social,
+    html body .leadership-social:link,
+    html body .leadership-social:visited,
+    html body .leadership-social:hover,
+    html body .leadership-social:active,
+    html body .leadership-social:focus-visible{
+      text-decoration:none !important;
+      -webkit-text-decoration:none !important;
+      border-bottom:none !important;
+      box-shadow:none !important;
+    }
+
+    /* Catch circular icon-only links inside people/leadership blocks */
+    html body .leadership-card a[aria-label],
+    html body .people-card a[aria-label],
+    html body .person-card a[aria-label],
+    html body .leadership-card a[target="_blank"],
+    html body .people-card a[target="_blank"],
+    html body .person-card a[target="_blank"]{
+      text-decoration:none !important;
+      -webkit-text-decoration:none !important;
+      border-bottom:none !important;
+    }
+
+    /* Same interaction behavior everywhere: navbar navy, never green/cyan */
+    html body .leadership-card a[aria-label]:hover,
+    html body .people-card a[aria-label]:hover,
+    html body .person-card a[aria-label]:hover,
+    html body .leadership-card a[target="_blank"]:hover,
+    html body .people-card a[target="_blank"]:hover,
+    html body .person-card a[target="_blank"]:hover,
+    html body .leadership-card a[aria-label]:active,
+    html body .people-card a[aria-label]:active,
+    html body .person-card a[aria-label]:active{
+      color:#fff !important;
+      background:#182536 !important;
+      border-color:#182536 !important;
+      text-decoration:none !important;
+      opacity:1 !important;
+    }
+
+    html body .leadership-card a[aria-label]:visited,
+    html body .people-card a[aria-label]:visited,
+    html body .person-card a[aria-label]:visited{
+      color:#182536 !important;
+    }
+
+    /* Generic circular LinkedIn "in" glyph fix */
+    html body a[href*="linkedin.com"]{
+      text-decoration-color:#182536 !important;
+    }
+
+    html body a[href*="linkedin.com"].social-icon,
+    html body .leadership-card a[href*="linkedin.com"],
+    html body .people-card a[href*="linkedin.com"],
+    html body .person-card a[href*="linkedin.com"]{
+      text-decoration:none !important;
+      border-bottom:none !important;
+    }
+
+    html body a[href*="linkedin.com"].social-icon:hover,
+    html body .leadership-card a[href*="linkedin.com"]:hover,
+    html body .people-card a[href*="linkedin.com"]:hover,
+    html body .person-card a[href*="linkedin.com"]:hover{
+      background:#182536 !important;
+      color:#fff !important;
+    }
+
+    @media(max-width:760px){
+      html body .content{
+        padding-left:24px !important;
+        padding-right:24px !important;
+      }
+    }
+
 </style>
 
 </head>
@@ -3066,7 +3885,7 @@ button:focus-visible{
 
 
     <a
-      href="/es/"
+      href="/"
       class="brand"
     >
       Felipe Quiroz
@@ -3076,18 +3895,18 @@ button:focus-visible{
     <nav class="nav-links">
 
 
-      <a href="/es/#work">
-        Trabajo
+      <a href="/#work">
+        Work
       </a>
 
 
-      <a href="/es/about">
-        Sobre mí
+      <a href="/about">
+        About
       </a>
 
 
-      <a href="/es/now">
-        Ahora
+      <a href="/now">
+        Now
       </a>
 
 
@@ -3095,16 +3914,16 @@ button:focus-visible{
         href="#contact"
         class="contact-nav"
       >
-        Contacto
+        Contact
       </a>
 
 
       <a
-        href="/geovictoria"
+        href="/es/usm"
         class="lang-switch"
-        aria-label="View site in English"
+        aria-label="View site in Spanish"
       >
-        EN
+        ES
       </a>
 
 
@@ -3112,6 +3931,7 @@ button:focus-visible{
 
 
   </header>
+
 
 
 
@@ -3123,29 +3943,29 @@ button:focus-visible{
 <section class="hero">
   <div class="case-hero">
     <div class="case-hero-top">
-      <div class="case-hero-logo" aria-label="GeoVictoria">
-        <img src="/geovictoria-logo.png" alt="GeoVictoria">
+      <div class="case-hero-logo" aria-label="USM">
+        <img src="/logo-usm.png" alt="Universidad Técnica Federico Santa María">
       </div>
       <div class="case-hero-pills">
-        <span>Trabajo seleccionado / 01</span>
-        <span>2026 — Presente</span>
-        <span>Product / B2B SaaS</span>
+        <span>Selected work / 04</span>
+        <span>2023 — 2025</span>
+        <span>Higher education</span>
       </div>
     </div>
 
-    <div class="case-hero-kicker">Workforce Management / Producto / IA</div>
+    <div class="case-hero-kicker">Admissions / Operations / Growth</div>
 
     <h1>
-      Sistemas de producto
-      <span>para operaciones reales.</span>
+      Growth & operations
+      <span>inside higher education.</span>
     </h1>
 
     <div class="case-hero-bottom">
-      <p class="case-hero-copy">Lidero la estrategia y evolución de productos de Workforce Management para operaciones reales, conectando necesidades de clientes, oportunidades de negocio y tecnología desde planificación hasta adopción.</p>
+      <p class="case-hero-copy">I worked across two complementary fronts at USM: admissions promotion and operations. I combined marketing, CRM, partnerships, events, coordination, reporting and process design to improve acquisition, consistency and execution.</p>
       <div class="case-hero-role">
-        <strong>GeoVictoria</strong>
-        <span class="role">Product Manager · Workforce Management</span>
-        <span class="context">20+ países · 10.000+ clientes</span>
+        <strong>USM</strong>
+        <span class="role">Admissions Promotion Coordinator · Assistant Coordinator</span>
+        <span class="context">Universidad Técnica Federico Santa María · Chile</span>
       </div>
     </div>
   </div>
@@ -3155,694 +3975,368 @@ button:focus-visible{
 
 
   <!-- =====================================================
-       MAIN CONTENT
+       CONTENT
   ====================================================== -->
 
   <main class="content">
 
-
     <div class="content-grid">
-
-
-      <!-- MAIN COLUMN -->
 
       <div class="main-column">
 
-
-        <!-- ROLE -->
-
         <section class="section">
 
-          <div class="section-label">
-            01 / Mi rol
-          </div>
+          <div class="section-label">01 / Context</div>
 
           <h2>
-            De estrategia
-            a adopción.
+            Two roles. One pattern: making the system work.
           </h2>
 
           <div class="section-copy">
-
             <p>
-              Como Product Manager, lidero la estrategia,
-              roadmap y priorización de tres productos de
-              Workforce Management, equilibrando necesidades
-              de clientes, impacto de negocio y factibilidad técnica.
+              Between 2023 and 2025, I held responsibilities across two different areas at USM. In admissions promotion, I worked on acquisition, positioning and applicant follow-up. In parallel, as Assistant Coordinator, I supported the operation of a large university course.
             </p>
-
-            <p>
-              Trabajo desde discovery y validación con clientes
-              hasta ejecución, pilotos y adopción, conectando
-              oportunidades de mercado con soluciones escalables
-              junto a equipos de Engineering, Design, Sales,
-              Customer Success, Operations y Support.
-            </p>
-
           </div>
 
-
-
+          <div class="proof-grid">
+            <div class="proof-item"><strong>12+</strong><span>Course sections coordinated</span></div>
+            <div class="proof-item"><strong>400+</strong><span>Students in operation</span></div>
+            <div class="proof-item"><strong>1.000+</strong><span>Prospective students reached</span></div>
+            <div class="proof-item"><strong>2</strong><span>Areas of responsibility</span></div>
+          </div>
 
         </section>
 
+<section class="section">
 
-        <section class="section">
-          <div class="section-label">02 / Personas · Liderazgo</div>
-
-          <div class="people-block">
-
-            <div class="leadership-card">
-
-              <div class="leadership-photo">
-                <img
-                  src="../francisca-astudillo.jpg"
-                  alt="Francisca Astudillo"
-                  loading="lazy"
-                >
-              </div>
-
-              <div>
-                <div class="leadership-eyebrow">Liderazgo de compañía</div>
-                <h3 class="leadership-name">Francisca Astudillo</h3>
-                <div class="leadership-role">CEO · GeoVictoria</div>
-                <p class="leadership-copy">
-                  Liderazgo ejecutivo conectando estrategia de compañía,
-                  crecimiento de mercado y evolución de GeoVictoria.
-                </p>
-
-                <div class="leadership-links">
-                  <a
-                    class="leadership-linkedin"
-                    href="https://www.linkedin.com/in/francisca-astudillo-bessi-200b2432/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn de Francisca Astudillo"
-                  >
-                    in
-                  </a>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="leadership-card">
-
-              <div class="leadership-photo">
-                <img
-                  src="../nicolas-garcias.jpg"
-                  alt="Nicolás Garcías"
-                  loading="lazy"
-                >
-              </div>
-
-              <div>
-                <div class="leadership-eyebrow">Liderazgo de producto</div>
-                <h3 class="leadership-name">Nicolás Garcías</h3>
-                <div class="leadership-role">Chief Product Officer · GeoVictoria</div>
-                <p class="leadership-copy">
-                  Liderazgo de producto sobre estrategia, prioridades
-                  y evolución del portafolio de productos de GeoVictoria.
-                </p>
-                <div class="leadership-links">
-                  <a
-                    class="leadership-linkedin"
-                    href="https://www.linkedin.com/in/ngarcias/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn de Nicolás Garcías"
-                  >
-                    in
-                  </a>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="leadership-card">
-
-              <div class="leadership-photo">
-                <img
-                  src="/rodrigo-lewit.jpg"
-                  alt="Rodrigo Lewit"
-                  loading="lazy"
-                >
-              </div>
-
-              <div>
-                <div class="leadership-eyebrow">Liderazgo comercial</div>
-                <h3 class="leadership-name">Rodrigo Lewit</h3>
-                <div class="leadership-role">Co-Founder &amp; Chief Commercial Officer · GeoVictoria</div>
-                <p class="leadership-copy">
-                  Co-fundador y líder comercial de GeoVictoria, con foco en crecimiento,
-                  go-to-market y desarrollo de relaciones con clientes y mercados.
-                </p>
-                <div class="leadership-links">
-                  <a
-                    class="leadership-linkedin"
-                    href="https://www.linkedin.com/in/rodrigo-lewit-rozenfeld-05190118/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn de Rodrigo Lewit"
-                  >
-                    in
-                  </a>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </section>
-
-
-        <section class="section wfm-intro">
-          <div class="wfm-intro-inner">
-            <div class="section-label">03 / Workforce Management</div>
-
-            <h2 class="wfm-intro-title">
-              ¿Qué es Workforce Management (WFM)?
-            </h2>
-
-            <p class="wfm-intro-lead">
-              De registrar qué pasó, a decidir qué debería pasar.
-            </p>
-
-            <div class="wfm-intro-split">
-              <div class="wfm-intro-media">
-                <img
-                  src="/geovictoria-workforce-management-es.jpg"
-                  alt="Visual sobre Workforce Management en GeoVictoria"
-                  loading="lazy"
-                >
-              </div>
-
-              <div class="wfm-intro-copy">
-                <p>
-                  Tener más personas de las necesarias cuesta dinero.
-                  Tener menos cuesta operación. Y tenerlas en el horario
-                  equivocado cuesta ambas.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-
-
-        <!-- INITIATIVES -->
-
-        <section class="section">
-
-
-          <div class="section-label">
-            04 / Productos
-          </div>
+          <div class="section-label">02 / People · Leadership</div>
 
 
           <h2>
-            Tres productos.
-            Un mismo sistema operativo.
-          </h2>
-
-
-
-          <div class="initiatives">
-
-
-            <div class="initiative">
-
-
-              <div class="initiative-number">
-                01
-              </div>
-
-
-              <div>
-
-
-                <h3>
-                  Planificador Inteligente
-                </h3>
-
-
-                <div class="initiative-type">
-                  Planificación
-                </div>
-
-                <div class="initiative-note">Planificación para operaciones complejas</div>
-
-
-                <p>
-
-                  Planificación de dotación y turnos para
-                  operaciones complejas, conectando reglas,
-                  necesidades de cobertura y decisiones de staffing.
-
-                </p>
-
-
-              </div>
-
-
-            </div>
-
-
-
-            <div class="initiative">
-
-
-              <div class="initiative-number">
-                02
-              </div>
-
-
-              <div>
-
-
-                <h3>
-                  Optimizador de Turnos
-                </h3>
-
-
-                <div class="initiative-type">
-                  Optimización
-                </div>
-
-                <div class="initiative-note">Demanda · Disponibilidad · Restricciones operativas</div>
-
-
-                <p>
-
-                  MVP de optimización orientado a cruzar
-                  disponibilidad, demanda y restricciones operativas
-                  para apoyar decisiones de dotación más eficientes.
-
-                </p>
-
-
-              </div>
-
-
-            </div>
-
-
-
-            <div class="initiative">
-
-
-              <div class="initiative-number">
-                03
-              </div>
-
-
-              <div>
-
-
-                <h3>
-                  Flujo de Cambio de Turno
-                </h3>
-
-
-                <div class="initiative-type">
-                  Workflow
-                </div>
-
-                <div class="initiative-note">Flexibilidad con control operacional</div>
-
-
-                <p>
-
-                  Workflow para cambios e intercambios de turno,
-                  con reglas configurables, aprobaciones y validaciones
-                  que entregan flexibilidad sin perder control operacional.
-
-                </p>
-
-
-              </div>
-
-
-            </div>
-
-
-          </div>
-
-
-        </section>
-
-
-
-        <!-- HOW I WORK -->
-
-        <section class="section">
-
-          <div class="section-label">
-            05 / Cómo construyo producto
-          </div>
-
-          <h2>
-            Del problema
-            al producto escalable.
+            Working directly with the leaders behind each area.
           </h2>
 
           <div class="section-copy">
-
             <p>
-              Trabajo cerca de clientes y operaciones reales para
-              entender problemas, validar supuestos y decidir qué
-              vale la pena construir antes de escalar desarrollo.
+              My two roles at USM gave me the opportunity to work directly with leaders across admissions and programming, connecting strategy, coordination and execution in two different operating contexts.
             </p>
-
           </div>
 
-          <div class="work-list">
+          <div class="leadership-list">
 
-            <div class="work-item">
-              <div class="work-number">01</div>
-              <strong>Discovery directo con clientes y operaciones</strong>
+            <div class="cofounder-card">
+
+              <img
+                class="cofounder-photo karen"
+                src="karen-radonich.jpg"
+                alt="Karen Radonich"
+                loading="lazy"
+              >
+
+              <div>
+
+                <div class="cofounder-eyebrow">
+                  Leadership · Admissions
+                </div>
+
+                <h3 class="cofounder-name">
+                  Karen Radonich
+                </h3>
+
+                <p class="cofounder-meta">
+                  Director General of Admissions
+                </p>
+
+                <p class="cofounder-copy">
+                  I worked directly with Karen on admissions strategy, recruitment initiatives and execution across the applicant funnel.
+                </p>
+
+                <div class="cofounder-links">
+                  <a
+                    href="https://cl.linkedin.com/in/karen-radonich-36114a2b0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Karen Radonich LinkedIn"
+                    title="LinkedIn"
+                  >
+                    <span class="linkedin-mark">in</span>
+                  </a>
+                </div>
+
+              </div>
+
             </div>
 
-            <div class="work-item">
-              <div class="work-number">02</div>
-              <strong>Roadmap, priorización y definición de oportunidades</strong>
-            </div>
+            <div class="cofounder-card">
 
-            <div class="work-item">
-              <div class="work-number">03</div>
-              <strong>MVPs habilitados por IA: concepto, piloto y validación</strong>
-            </div>
+              <img
+                class="cofounder-photo javier"
+                src="javier-robledo.jpg"
+                alt="Javier Robledo"
+                loading="lazy"
+              >
 
-            <div class="work-item">
-              <div class="work-number">04</div>
-              <strong>Ejecución transversal con Engineering, Design, Sales y Customer Success</strong>
-            </div>
+              <div>
 
-            <div class="work-item">
-              <div class="work-number">05</div>
-              <strong>Métricas, feedback, experimentación y aprendizaje</strong>
-            </div>
+                <div class="cofounder-eyebrow">
+                  Leadership · Programming
+                </div>
 
-            <div class="work-item">
-              <div class="work-number">06</div>
-              <strong>Adopción, mejora continua y escalamiento</strong>
+                <h3 class="cofounder-name">
+                  Javier Robledo
+                </h3>
+
+                <p class="cofounder-meta">
+                  Programming Coordinator
+                </p>
+
+                <p class="cofounder-copy">
+                  I worked directly with Javier on course operations, coordination, reporting and execution across multiple sections.
+                </p>
+
+                <div class="cofounder-links">
+                  <a
+                    href="https://www.linkedin.com/in/javierrobledo/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Javier Robledo LinkedIn"
+                    title="LinkedIn"
+                  >
+                    <span class="linkedin-mark">in</span>
+                  </a>
+                </div>
+
+              </div>
+
             </div>
 
           </div>
 
         </section>
 
+<section class="section">
 
-
-        <!-- CONTEXT -->
-
-        <section class="section">
-
-          <div class="section-label">
-            06 / Escalar
-          </div>
+          <div class="section-label">03 / Admissions promotion</div>
 
           <h2>
-            Producto para operaciones
-            en múltiples mercados.
+            Admissions as an acquisition system, not just promotion.
           </h2>
 
           <div class="section-copy">
-
             <p>
-              GeoVictoria sirve a más de 10.000 clientes en 20+ países.
-              En ese contexto, construir Workforce Management implica
-              diseñar para escala, complejidad operacional y realidades
-              locales muy distintas.
-            </p>
-
-          </div>
-
-          <div class="scale-grid">
-
-            <div class="scale-item">
-              <strong>3</strong>
-              <span>Productos que lidero</span>
-            </div>
-
-            <div class="scale-item">
-              <strong>10.000+</strong>
-              <span>Clientes de GeoVictoria</span>
-            </div>
-
-            <div class="scale-item">
-              <strong>20+</strong>
-              <span>Países</span>
-            </div>
-
-            <div class="scale-item">
-              <strong>Cross-functional</strong>
-              <span>Engineering · Design · Sales · CS · Ops</span>
-            </div>
-
-          </div>
-
-        </section>
-
-
-        
-
-
-        
-        
-
-
-        <section class="section company-signals">
-          <div class="company-signals-inner">
-            <div class="section-label">07 / Company Signals</div>
-
-            <h2 class="company-signals-title">
-              Señales de escala, ecosistema y madurez tecnológica.
-            </h2>
-
-            <div class="company-signals-grid">
-              <div class="company-signal">
-                <h3 class="company-signal-name">Endeavor</h3>
-                <p class="company-signal-copy">
-                  GeoVictoria forma parte de la comunidad global de emprendimiento
-                  de alto impacto impulsada por Endeavor.
-                </p>
-              </div>
-
-              <div class="company-signal">
-                <h3 class="company-signal-name">Microsoft Gold Partner</h3>
-                <p class="company-signal-copy">
-                  Una credencial que refleja capacidades técnicas, estándares de
-                  implementación y experiencia construyendo soluciones empresariales.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-<section class="section culture-4h">
-          <div class="culture-4h-inner">
-            <div class="section-label">08 / Cultura · Las 4H</div>
-
-            <h2 class="culture-4h-title">
-              Una cultura construida alrededor de cuatro ideas simples.
-            </h2>
-
-            <div class="culture-4h-values">
-              <div class="culture-4h-value">Happy</div>
-              <div class="culture-4h-value">Honest</div>
-              <div class="culture-4h-value">Humble</div>
-              <div class="culture-4h-value">Hungry</div>
-            </div>
-
-            <p class="culture-4h-copy">
-              GeoVictoria articula su cultura alrededor de las 4H: trabajar con energía,
-              honestidad, humildad y ambición por seguir creciendo. Esa combinación también
-              se refleja en cómo los equipos colaboran, toman decisiones y construyen producto.
+              I led student acquisition and outreach initiatives for the Business School, combining marketing, CRM, partnerships and events to strengthen program positioning and applicant engagement.
             </p>
           </div>
+
+          <div class="role-list">
+            <div class="role-item"><div class="role-number">01</div><strong>Integrated recruitment and marketing campaigns</strong></div>
+            <div class="role-item"><div class="role-number">02</div><strong>CRM tools and standardized follow-up processes</strong></div>
+            <div class="role-item"><div class="role-number">03</div><strong>Recruitment events, webinars and school visits</strong></div>
+            <div class="role-item"><div class="role-number">04</div><strong>Partnerships with schools and student organizations</strong></div>
+            <div class="role-item"><div class="role-number">05</div><strong>Cross-functional work with faculty, communications and admissions</strong></div>
+          </div>
+
         </section>
 
+<section class="section usm-photo-block">
 
+          <div class="section-label">04 / In the field</div>
 
-        <section class="section geocoffee">
-          <div class="geocoffee-inner">
-            <div class="section-label">09 / Clientes &amp; comunidad</div>
+          <h2>Close to students, teams and stakeholders.</h2>
 
-            <h2 class="geocoffee-title">
-              Aprender también pasa en conversación.
-            </h2>
+          <figure class="client-work-figure">
+            <div class="usm-photo-media landscape">
+              <img src="usm-admissions-team-san.jpg" alt="Team and participants at a USM admissions activity" loading="lazy">
+            </div>
+            <figcaption class="usm-photo-caption">
+              <span>USM</span>
+              <span>Admissions · Outreach · Team</span>
+            </figcaption>
+          </figure>
 
-            <div class="geocoffee-split">
-              <div class="geocoffee-media">
+        </section>
+
+<section class="section">
+
+          <div class="section-label">05 / Operations</div>
+
+          <h2>
+            Operating consistency at scale.
+          </h2>
+
+          <div class="section-copy">
+            <p>
+              As Assistant Coordinator, I oversaw the operation of a university-level course with 12+ sections and 400+ students, coordinating instructors and teaching assistants to improve execution, consistency and outcomes.
+            </p>
+          </div>
+
+          <div class="role-list">
+            <div class="role-item"><div class="role-number">01</div><strong>Cross-section coordination of instructors and teaching assistants</strong></div>
+            <div class="role-item"><div class="role-number">02</div><strong>Tracking and reporting tools for student progress</strong></div>
+            <div class="role-item"><div class="role-number">03</div><strong>Grading frameworks and quality standards</strong></div>
+            <div class="role-item"><div class="role-number">04</div><strong>Communication and coordination protocols</strong></div>
+            <div class="role-item"><div class="role-number">05</div><strong>Streamlined administrative and academic workflows</strong></div>
+          </div>
+
+        </section>
+
+<section class="section usm-photo-block">
+
+          <div class="section-label">06 / Team &amp; community</div>
+
+          <h2>The work also happens outside the desk.</h2>
+
+          <div class="section-copy">
+            <p>
+              During my time in Admissions, I took part in activities, fairs and events
+              alongside the team, connecting directly with students, families and the
+              university community.
+            </p>
+          </div>
+
+          <figure class="client-work-figure">
+            <div class="usm-photo-media community">
+              <img
+                src="usm-admissions-community.jpg"
+                alt="Felipe Quiroz with the Admissions team at Universidad Técnica Federico Santa María"
+                loading="lazy"
+              >
+            </div>
+            <figcaption class="usm-photo-caption solo">
+              <span>Admissions Team · Universidad Técnica Federico Santa María</span>
+            </figcaption>
+          </figure>
+
+        </section>
+
+<section class="section usm-photo-block">
+
+          <div class="section-label">07 / Environment</div>
+
+          <h2>Building from inside the institution.</h2>
+
+          <div class="usm-photo-split">
+            <figure class="client-work-figure">
+              <div class="usm-photo-media portrait">
+                <img src="usm-campus-opening.jpg" alt="Institutional event at USM" loading="lazy">
+              </div>
+              <figcaption class="usm-photo-caption">
+                <span>USM</span>
+                <span>Institutional event</span>
+              </figcaption>
+            </figure>
+
+            <div class="usm-photo-sidecopy">
+              <p>
+                Working inside the university also meant taking part in its milestones,
+                activities and institutional spaces, gaining a closer view of how
+                community, student experience and operations come together.
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+<section class="section usm-photo-block">
+
+          <div class="section-label">08 / Institutional context</div>
+
+          <h2>A closer look at the institution and its leadership.</h2>
+
+          <div class="usm-photo-split">
+            <figure class="client-work-figure">
+              <div class="usm-photo-media institutional">
                 <img
-                  src="/geocoffe.jpg"
-                  alt="Café con GeoVictoria junto a clientes de distintas industrias"
+                  src="usm-rector.jpg"
+                  alt="Felipe Quiroz with the Rector of Universidad Técnica Federico Santa María"
                   loading="lazy"
                 >
               </div>
+              <figcaption class="usm-photo-caption solo">
+                <span>Institutional meeting · Santiago, Chile</span>
+              </figcaption>
+            </figure>
 
-              <div class="geocoffee-copy">
-                <p>
-                  En espacios como Café con GeoVictoria reunimos a clientes de distintas
-                  industrias para compartir experiencias, resolver dudas y generar
-                  aprendizajes que aporten directamente a la gestión de personas.
-                </p>
-                <div class="geocoffee-meta">
-                  Café con GeoVictoria · Networking · Capacitación
-                </div>
-              </div>
+            <div class="usm-photo-sidecopy">
+              <p>
+                My experience at USM allowed me to move between day-to-day operations
+                and institutional spaces, while also engaging with university leadership,
+                including Juan Yuz, Rector of USM. That gave me a broader view of how
+                different teams, decisions and leadership layers connect around a shared
+                university experience.
+              </p>
             </div>
           </div>
+
         </section>
 
+<section class="section">
 
+          <div class="section-label">09 / Throughline</div>
+
+          <h2>
+            Building systems before I called them systems.
+          </h2>
+
+          <div class="section-copy">
+            <p>
+              Looking back, USM was an early stage where several ideas that still shape my work were already present: using data to make decisions, designing clear processes, coordinating different teams and turning complex operations into more repeatable and scalable systems.
+            </p>
+          </div>
+
+        </section>
 
       </div>
 
-
-
-      <!-- =================================================
-           SIDEBAR
-      ================================================== -->
-
       <aside class="sidebar">
 
-
         <div class="sidebar-card">
-
-          <div class="sidebar-label">
-            Compañía
-          </div>
-
-          <div class="sidebar-value">
-            GeoVictoria
-          </div>
-
+          <div class="sidebar-label">Institution</div>
+          <div class="sidebar-value">USM</div>
         </div>
 
-
-
         <div class="sidebar-card">
-
-          <div class="sidebar-label">
-            Sitio web
-          </div>
-
+          <div class="sidebar-label">Website</div>
           <div class="sidebar-value">
-
-            <a
-              href="https://www.geovictoria.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              geovictoria.com
-            </a>
-
+            <a href="https://usm.cl/" target="_blank" rel="noopener noreferrer">usm.cl</a>
           </div>
-
         </div>
 
-
-
         <div class="sidebar-card">
-
-          <div class="sidebar-label">
-            Rol
-          </div>
-
+          <div class="sidebar-label">Roles</div>
           <div class="sidebar-value">
-            Product Manager
+            Admissions Promotion Coordinator<br>Assistant Coordinator
           </div>
-
         </div>
 
-
-
         <div class="sidebar-card">
-
-          <div class="sidebar-label">
-            Categoría
-          </div>
-
-          <div class="sidebar-value">
-            Workforce Management
-          </div>
-
+          <div class="sidebar-label">Category</div>
+          <div class="sidebar-value">Higher Education</div>
         </div>
 
-
-
         <div class="sidebar-card">
-
-          <div class="sidebar-label">
-            Mercados
-          </div>
-
-          <div class="sidebar-value">
-            Latinoamérica<br>
-            Estados Unidos<br>
-            España
-          </div>
-
+          <div class="sidebar-label">Base</div>
+          <div class="sidebar-value">Santiago, Chile</div>
         </div>
 
-
-
         <div class="sidebar-card">
-
-          <div class="sidebar-label">
-            Escala
-          </div>
-
-          <div class="sidebar-value">
-            10.000+ clientes<br>
-            20+ países
-          </div>
-
+          <div class="sidebar-label">Period</div>
+          <div class="sidebar-value">2023 — 2025</div>
         </div>
 
-
-
         <div class="sidebar-card">
-
-          <div class="sidebar-label">
-            Periodo
-          </div>
-
+          <div class="sidebar-label">Focus</div>
           <div class="sidebar-value">
-            2026 — Presente
+            Marketing & acquisition<br>CRM & reporting<br>Partnerships & events<br>Operations & processes
           </div>
-
         </div>
-
-
-
-        <div class="sidebar-card">
-
-          <div class="sidebar-label">
-            Foco
-          </div>
-
-          <div class="sidebar-value">
-
-            Estrategia de producto<br>
-            Discovery & validación<br>
-            AI-powered MVPs<br>
-            Adopción & escala
-
-          </div>
-
-        </div>
-
 
       </aside>
 
-
     </div>
 
-
   </main>
+
 
 
 
@@ -3852,87 +4346,46 @@ button:focus-visible{
 
   <section class="focus">
 
-
     <div class="focus-dark">
 
-
       <div class="focus-label">
-        Foco de producto
+        Operating principle
       </div>
-
 
       <h2 class="focus-title">
-
-        Del problema
-
-        <span>
-          a la adopción real.
-        </span>
-
+        Data to decide.
+        <span>Systems to execute.</span>
       </h2>
 
-
       <div class="focus-steps">
-
-        <div class="focus-step">
-          Descubrir
-        </div>
-
-        <div class="focus-step">
-          Validar
-        </div>
-
-        <div class="focus-step">
-          Escala
-        </div>
-
+        <div class="focus-step">Measure</div>
+        <div class="focus-step">Coordinate</div>
+        <div class="focus-step">Improve</div>
       </div>
 
-
     </div>
-
-
 
     <div class="focus-light">
 
-
       <div class="focus-label">
-        Principio operativo
+        What connected both roles
       </div>
-
 
       <h2 class="focus-title">
-
-        Construir para
-
-        <span>
-          operaciones reales.
-        </span>
-
+        People and processes.
+        <span>Operating as a system.</span>
       </h2>
 
-
       <div class="focus-steps">
-
-        <div class="focus-step">
-          Cliente
-        </div>
-
-        <div class="focus-step">
-          Product
-        </div>
-
-        <div class="focus-step">
-          Adopción
-        </div>
-
+        <div class="focus-step">CRM</div>
+        <div class="focus-step">Reporting</div>
+        <div class="focus-step">Operations</div>
       </div>
-
 
     </div>
 
-
   </section>
+
 
 
 
@@ -3942,45 +4395,23 @@ button:focus-visible{
 
   <section class="project-nav">
 
-
     <div class="project-nav-inner">
 
-
-      <a
-        href="/es/#work"
-        class="project-link"
-      >
-
+      <a href="/tethereducation" class="project-link">
         <div class="project-link-label">
-          Trabajo seleccionado
+          Previous project
         </div>
-
-        <strong>
-          Todos los proyectos
-        </strong>
-
+        <strong>TetherEd</strong>
       </a>
 
-
-
-      <a
-        href="/es/lowsignal"
-        class="project-link right"
-      >
-
+      <a href="/#work" class="project-link right">
         <div class="project-link-label">
-          Siguiente proyecto
+          Selected work
         </div>
-
-        <strong>
-          lowsignal
-        </strong>
-
+        <strong>All projects</strong>
       </a>
-
 
     </div>
-
 
   </section>
 
@@ -4003,12 +4434,12 @@ button:focus-visible{
 
 
         <div class="section-label">
-          Contacto
+          Contact
         </div>
 
 
         <h3>
-          Conversemos.
+          Let’s talk.
         </h3>
 
 
