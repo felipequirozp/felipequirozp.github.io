@@ -5695,14 +5695,14 @@
     .project-case-link,
     .backing-copy a,
     .content a:not(.social-link):not(.contact-pill){
-      text-decoration-color:rgba(56,233,233,.22) !important;
+      text-decoration-color:#182536 !important;
     }
 
     .project-case-link:hover,
     .backing-copy a:hover,
     .content a:not(.social-link):not(.contact-pill):hover{
       color:#1F6E76 !important;
-      text-decoration-color:var(--case-accent) !important;
+      text-decoration-color:#182536 !important;
     }
 
     /* BACKING */
@@ -6729,6 +6729,196 @@
       }
     }
 
+
+    /* V59 — clearer ConsiliumBots link */
+    .consiliumbots-link{
+      color:inherit !important;
+      text-decoration:underline !important;
+      text-decoration-thickness:1px !important;
+      text-underline-offset:4px !important;
+      text-decoration-color:rgba(24,37,54,.55) !important;
+    }
+
+    .consiliumbots-link:hover{
+      color:var(--navy) !important;
+      text-decoration-color:var(--navy) !important;
+    }
+
+
+    /* V60 — ConsiliumBots link uses the same navy as the top bar */
+    .consiliumbots-link{
+      color:var(--navy-deep) !important;
+      text-decoration:underline !important;
+      text-decoration-thickness:1px !important;
+      text-underline-offset:4px !important;
+      text-decoration-color:var(--navy-deep) !important;
+    }
+
+    .consiliumbots-link:hover{
+      color:var(--navy-deep) !important;
+      text-decoration-color:var(--navy-deep) !important;
+      opacity:.72;
+    }
+
+
+    /* =========================================================
+       V61 — unified interaction color
+       Every clickable state uses the same navy as the top bar.
+       ========================================================== */
+
+    :root{
+      --interaction-navy:#182536;
+      --interaction-navy-deep:#0d1724;
+    }
+
+    /* Text links on light surfaces */
+    .content a,
+    .content a:link,
+    .content a:visited,
+    .content a:hover,
+    .content a:active,
+    .content a:focus,
+    .content a:focus-visible,
+    .sidebar a,
+    .sidebar a:link,
+    .sidebar a:visited,
+    .sidebar a:hover,
+    .sidebar a:active,
+    .sidebar a:focus-visible,
+    .backing-copy a,
+    .backing-copy a:link,
+    .backing-copy a:visited,
+    .backing-copy a:hover,
+    .backing-copy a:active,
+    .backing-copy a:focus-visible,
+    .leadership-links a,
+    .leadership-links a:link,
+    .leadership-links a:visited,
+    .leadership-links a:hover,
+    .leadership-links a:active,
+    .leadership-links a:focus-visible,
+    .content a.consiliumbots-link,
+    .content a.consiliumbots-link:link,
+    .content a.consiliumbots-link:visited,
+    .content a.consiliumbots-link:hover,
+    .content a.consiliumbots-link:active,
+    .content a.consiliumbots-link:focus-visible{
+      color:var(--interaction-navy) !important;
+      text-decoration-color:var(--interaction-navy) !important;
+      accent-color:var(--interaction-navy) !important;
+    }
+
+    .content a:hover,
+    .sidebar a:hover,
+    .backing-copy a:hover,
+    .leadership-links a:hover,
+    .content a.consiliumbots-link:hover{
+      color:var(--interaction-navy-deep) !important;
+      text-decoration-color:var(--interaction-navy-deep) !important;
+      opacity:1 !important;
+    }
+
+    /* Make visited links visually identical to unvisited links */
+    a:visited{
+      color:inherit;
+    }
+
+    /* Pills / buttons on light backgrounds */
+    .bottom a,
+    .bottom a:link,
+    .bottom a:visited{
+      color:var(--interaction-navy) !important;
+      border-color:rgba(24,37,54,.24) !important;
+      background:transparent !important;
+    }
+
+    .bottom a:hover,
+    .bottom a:active,
+    .bottom a:focus-visible{
+      color:#fff !important;
+      background:var(--interaction-navy) !important;
+      border-color:var(--interaction-navy) !important;
+    }
+
+    /* Other clickable outlines/cards: no cyan/green interaction */
+    .project-case:hover,
+    .project-principle:hover,
+    .operating-principle:hover,
+    .backing-logo-wrap:hover{
+      border-color:rgba(24,37,54,.28) !important;
+      box-shadow:0 16px 34px rgba(13,23,36,.08) !important;
+    }
+
+    /* Focus ring also uses navbar navy */
+    a:focus-visible,
+    button:focus-visible{
+      outline:2px solid var(--interaction-navy) !important;
+      outline-offset:3px !important;
+    }
+
+
+    /* =========================================================
+       V62 — HARD FIX: all text links use navbar navy
+       ========================================================== */
+
+    html body .content a,
+    html body .content a:link,
+    html body .content a:visited,
+    html body .content a:hover,
+    html body .content a:active,
+    html body .content a:focus,
+    html body .content a:focus-visible,
+    html body .sidebar a,
+    html body .sidebar a:link,
+    html body .sidebar a:visited,
+    html body .sidebar a:hover,
+    html body .sidebar a:active,
+    html body .backing-copy a,
+    html body .backing-copy a:link,
+    html body .backing-copy a:visited,
+    html body .backing-copy a:hover,
+    html body .backing-copy a:active,
+    html body .leadership-links a,
+    html body .leadership-links a:link,
+    html body .leadership-links a:visited,
+    html body .leadership-links a:hover,
+    html body .leadership-links a:active,
+    html body a.consiliumbots-link,
+    html body a.consiliumbots-link:link,
+    html body a.consiliumbots-link:visited,
+    html body a.consiliumbots-link:hover,
+    html body a.consiliumbots-link:active,
+    html body a.consiliumbots-link:focus,
+    html body a.consiliumbots-link:focus-visible{
+      color:#182536 !important;
+      text-decoration-line:underline !important;
+      text-decoration-color:#182536 !important;
+      text-decoration-thickness:1px !important;
+      text-underline-offset:4px !important;
+      -webkit-text-decoration-color:#182536 !important;
+      opacity:1 !important;
+    }
+
+    html body .content a:hover,
+    html body .sidebar a:hover,
+    html body .backing-copy a:hover,
+    html body .leadership-links a:hover,
+    html body a.consiliumbots-link:hover{
+      color:#0d1724 !important;
+      text-decoration-color:#0d1724 !important;
+      -webkit-text-decoration-color:#0d1724 !important;
+    }
+
+    html body .content a:active,
+    html body .sidebar a:active,
+    html body .backing-copy a:active,
+    html body .leadership-links a:active,
+    html body a.consiliumbots-link:active{
+      color:#182536 !important;
+      text-decoration-color:#182536 !important;
+      -webkit-text-decoration-color:#182536 !important;
+    }
+
 </style>
 </head>
 <body>
@@ -6845,8 +7035,8 @@
           </h2>
 <div class="section-copy">
 <p>
-              Tether Education es una empresa GovTech estadounidense incubada
-              en <a href="https://www.consiliumbots.com/" rel="noopener noreferrer" target="_blank">ConsiliumBots</a>, enfocada en infraestructura digital
+              Tether Education es una startup GovTech estadounidense incubada
+              en <a class="consiliumbots-link" style="color:#182536;text-decoration:underline;text-decoration-color:#182536;text-underline-offset:4px;" href="https://www.consiliumbots.com/" rel="noopener noreferrer" target="_blank">ConsiliumBots</a>, enfocada en infraestructura digital
               para elección escolar, admisión y matrícula.
             </p>
 <p>
