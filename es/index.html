@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Felipe Quiroz | Producto, Growth & Operaciones</title>
 <meta name="theme-color" content="#05070a">
-<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="icon" type="image/png" href="favicon.png">
 <meta name="description" content="Felipe Quiroz — producto, growth y operaciones. Construyendo productos, sistemas y compañías entre tecnología y negocio.">
 <link rel="canonical" href="https://felipequirozp.cl/es/">
 <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/">
@@ -1928,7 +1928,932 @@ header.nav{
   }
 }
 
+
+
+/* HOME BOOM V12 — remove thesis arc */
+.home-thesis::before{
+  content:none !important;
+  display:none !important;
+}
+
+
+/* HOME BOOM V13 — hero vertical balance + navbar color parity */
+.nav,
+header.nav{
+  background:#05070a !important;
+}
+
+/* Keep the air under the navbar, but lift the portrait slightly */
+@media(min-width:961px){
+  .hero-photo-wrap{
+    margin-top:0 !important;
+    transform:translateY(-26px) !important;
+  }
+}
+@media(min-width:761px) and (max-width:960px){
+  .hero-photo-wrap{
+    margin-top:0 !important;
+    transform:translateY(-16px) !important;
+  }
+}
+@media(max-width:760px){
+  .hero-photo-wrap{
+    transform:none !important;
+  }
+}
+
+
+/* HOME BOOM V14 — selected work cards with more air */
+@media(min-width:961px){
+  .work-card{
+    grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr) !important;
+    min-height:520px !important;
+  }
+  .work-content{
+    padding:54px 54px 52px !important;
+  }
+  .work-role,
+  .work-main p{
+    max-width:610px !important;
+  }
+  .work-main{
+    margin-top:34px !important;
+  }
+  .work-main h3{
+    max-width:620px !important;
+  }
+  .work-signals{
+    margin-top:28px !important;
+    padding-top:20px !important;
+  }
+  .work-photo,
+  .work-photo img{
+    min-height:520px !important;
+  }
+}
+
+@media(min-width:761px) and (max-width:960px){
+  .work-card{
+    min-height:470px !important;
+  }
+  .work-content{
+    padding:42px 38px 40px !important;
+  }
+  .work-photo,
+  .work-photo img{
+    min-height:470px !important;
+  }
+}
+
+@media(max-width:760px){
+  .work-content{
+    padding:30px 24px 28px !important;
+  }
+}
+
 </style>
+
+<style id="home-v16-selected-work-fixes">
+/* HOME V16 — selected work cards: more breathing room, visible labels, full-height images */
+.selected-head{overflow:visible !important;}
+.work-list{gap:28px !important;}
+.work-card{
+  display:grid !important;
+  grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr) !important;
+  align-items:stretch !important;
+  min-height:0 !important;
+  height:auto !important;
+  max-height:none !important;
+  overflow:hidden !important;
+}
+.work-card:nth-child(even){
+  grid-template-columns:minmax(360px,.92fr) minmax(0,1.08fr) !important;
+}
+.work-content{
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  justify-content:flex-start !important;
+  align-self:stretch !important;
+  padding:46px 48px 42px !important;
+  overflow:visible !important;
+}
+.work-meta{
+  padding-top:2px !important;
+}
+.work-index{
+  display:block !important;
+  margin:0 0 16px !important;
+  line-height:1.25 !important;
+}
+.work-brand{
+  margin:0 0 16px !important;
+}
+.work-role{
+  line-height:1.6 !important;
+}
+.work-main{
+  margin-top:26px !important;
+}
+.work-main h3{
+  max-width:660px !important;
+}
+.work-main p{
+  max-width:640px !important;
+}
+.work-signals{
+  margin-top:20px !important;
+}
+.work-cta{
+  margin-top:20px !important;
+}
+.work-photo-wrap{
+  display:flex !important;
+  align-self:stretch !important;
+  min-width:0 !important;
+  min-height:100% !important;
+  height:auto !important;
+}
+.work-photo{
+  flex:1 1 auto !important;
+  width:100% !important;
+  height:auto !important;
+  min-height:100% !important;
+  max-height:none !important;
+  background:#edf2f6 !important;
+}
+.work-photo img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  min-height:100% !important;
+  max-height:none !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+}
+
+@media (min-width: 961px){
+  .work-card{min-height:500px !important;}
+  .work-content,.work-photo-wrap,.work-photo,.work-photo img{
+    min-height:500px !important;
+    max-height:none !important;
+    height:auto !important;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 960px){
+  .work-card{
+    grid-template-columns:minmax(0,1.02fr) minmax(300px,.98fr) !important;
+    min-height:430px !important;
+  }
+  .work-card:nth-child(even){
+    grid-template-columns:minmax(300px,.98fr) minmax(0,1.02fr) !important;
+  }
+  .work-content{padding:38px 34px 34px !important;}
+  .work-content,.work-photo-wrap,.work-photo,.work-photo img{
+    min-height:430px !important;
+    max-height:none !important;
+    height:auto !important;
+  }
+  .work-main h3{font-size:clamp(32px,4vw,42px) !important;}
+}
+
+@media (max-width: 760px){
+  .work-card,
+  .work-card:nth-child(even){
+    grid-template-columns:1fr !important;
+    min-height:0 !important;
+    height:auto !important;
+  }
+  .work-content{
+    order:2 !important;
+    padding:26px 22px 28px !important;
+  }
+  .work-photo-wrap,
+  .work-card:nth-child(even) .work-photo-wrap{
+    grid-column:1 !important;
+    order:1 !important;
+    min-height:240px !important;
+  }
+  .work-photo,
+  .work-photo img{
+    min-height:240px !important;
+    height:240px !important;
+  }
+  .work-index{margin-bottom:14px !important;}
+  .work-brand{margin-bottom:14px !important;}
+  .work-main{margin-top:20px !important;}
+  .work-main h3{font-size:31px !important;}
+}
+</style>
+
+
+<style id="home-v17-nico-photo-balance">
+/* HOME V17 — reduce Nico/about photo visual weight */
+.about-bridge-inner{
+  grid-template-columns:minmax(0,1.08fr) minmax(340px,.78fr) !important;
+  gap:56px !important;
+  align-items:center !important;
+}
+.about-bridge-visual{
+  width:100% !important;
+  max-width:520px !important;
+  justify-self:end !important;
+}
+.about-bridge-visual img{
+  width:100% !important;
+  aspect-ratio:4 / 5 !important;
+  object-fit:cover !important;
+  object-position:center 42% !important;
+}
+@media (max-width: 1200px){
+  .about-bridge-inner{
+    grid-template-columns:minmax(0,1fr) minmax(320px,.82fr) !important;
+    gap:48px !important;
+  }
+  .about-bridge-visual{max-width:470px !important;}
+}
+@media (max-width: 960px){
+  .about-bridge-inner{
+    grid-template-columns:1fr !important;
+    gap:40px !important;
+  }
+  .about-bridge-visual{
+    max-width:560px !important;
+    justify-self:start !important;
+  }
+}
+@media (max-width: 760px){
+  .about-bridge-visual{max-width:100% !important;}
+  .about-bridge-visual img{aspect-ratio:4 / 5 !important;}
+}
+</style>
+
+
+<style id="home-v18-selected-work-editorial">
+/* =========================================================
+   HOME V18 — Selected Work rebuilt as editorial case bands
+   Same visual system as About / Now / case-study pages.
+   ========================================================= */
+
+.selected{
+  padding:138px var(--page-gutter) 124px !important;
+  background:#f7f8fa !important;
+}
+.selected-inner{
+  width:min(1440px,100%) !important;
+  margin:0 auto !important;
+}
+.selected-head{
+  display:grid !important;
+  grid-template-columns:minmax(0,1.25fr) minmax(330px,.55fr) !important;
+  gap:clamp(60px,8vw,128px) !important;
+  align-items:end !important;
+  margin:0 0 72px !important;
+  padding:0 0 46px !important;
+  border-bottom:1px solid #d9dfe6 !important;
+  overflow:visible !important;
+}
+.selected-head h2{
+  margin:22px 0 0 !important;
+  max-width:980px !important;
+  font-family:Inter,sans-serif !important;
+  font-size:clamp(58px,6.6vw,100px) !important;
+  line-height:.96 !important;
+  letter-spacing:-.072em !important;
+  font-weight:400 !important;
+  color:#0a1018 !important;
+}
+.selected-head p{
+  margin:0 0 8px !important;
+  max-width:510px !important;
+  color:#6c7888 !important;
+  font-size:14px !important;
+  line-height:1.78 !important;
+}
+
+.work-list{
+  display:block !important;
+  margin:0 !important;
+  border-top:1px solid #d9dfe6 !important;
+}
+
+.work-card,
+.work-card:nth-child(even){
+  position:relative !important;
+  display:grid !important;
+  grid-template-columns:minmax(0,1.02fr) minmax(380px,.98fr) !important;
+  gap:0 !important;
+  align-items:stretch !important;
+  width:100% !important;
+  min-height:530px !important;
+  height:auto !important;
+  max-height:none !important;
+  margin:0 !important;
+  padding:0 !important;
+  border:0 !important;
+  border-bottom:1px solid #d9dfe6 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  overflow:visible !important;
+  transform:none !important;
+  transition:background-color .24s ease !important;
+}
+
+/* Give the newest case more presence */
+.work-card:first-child{
+  min-height:610px !important;
+}
+
+/* Alternating reading rhythm */
+.work-card:nth-child(even) .work-content{
+  grid-column:2 !important;
+  grid-row:1 !important;
+}
+.work-card:nth-child(even) .work-photo-wrap{
+  grid-column:1 !important;
+  grid-row:1 !important;
+}
+.work-card:nth-child(odd) .work-content{
+  grid-column:1 !important;
+  grid-row:1 !important;
+}
+.work-card:nth-child(odd) .work-photo-wrap{
+  grid-column:2 !important;
+  grid-row:1 !important;
+}
+
+/* One high-contrast interruption instead of four identical cards */
+.work-card:nth-child(3){
+  margin-left:calc(var(--page-gutter) * -0.35) !important;
+  margin-right:calc(var(--page-gutter) * -0.35) !important;
+  width:calc(100% + (var(--page-gutter) * .70)) !important;
+  padding-left:calc(var(--page-gutter) * .35) !important;
+  padding-right:calc(var(--page-gutter) * .35) !important;
+  background:#05070a !important;
+  border-bottom-color:#05070a !important;
+}
+.work-card:nth-child(3) .work-index{
+  color:#69b5ff !important;
+}
+.work-card:nth-child(3) .work-role,
+.work-card:nth-child(3) .work-main p{
+  color:#9ba7b6 !important;
+}
+.work-card:nth-child(3) .work-main h3{
+  color:#fff !important;
+}
+.work-card:nth-child(3) .work-signals{
+  color:#a8bfd9 !important;
+  border-top-color:rgba(255,255,255,.14) !important;
+}
+.work-card:nth-child(3) .work-cta{
+  color:#fff !important;
+  border-bottom-color:rgba(255,255,255,.34) !important;
+}
+
+/* Content now reads like an editorial project summary */
+.work-content{
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  align-self:stretch !important;
+  min-width:0 !important;
+  min-height:530px !important;
+  height:auto !important;
+  max-height:none !important;
+  padding:70px 70px 68px 8px !important;
+  overflow:visible !important;
+}
+.work-card:nth-child(even) .work-content{
+  padding:70px 8px 68px 70px !important;
+}
+.work-card:first-child .work-content{
+  min-height:610px !important;
+}
+
+.work-meta{
+  min-width:0 !important;
+  overflow:visible !important;
+}
+.work-index{
+  display:block !important;
+  margin:0 0 26px !important;
+  color:#708298 !important;
+  font-family:Inter,sans-serif !important;
+  font-size:10px !important;
+  line-height:1.2 !important;
+  font-weight:700 !important;
+  letter-spacing:.13em !important;
+  text-transform:uppercase !important;
+  overflow:visible !important;
+}
+
+/* Logo is an identifier, not a card-within-a-card */
+.work-brand{
+  width:max-content !important;
+  min-width:184px !important;
+  height:72px !important;
+  margin:0 0 22px !important;
+  padding:14px 18px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  border:1px solid rgba(255,255,255,.08) !important;
+  border-radius:16px !important;
+  background:#05070a !important;
+  box-shadow:none !important;
+  transform:none !important;
+}
+.work-card:nth-child(3) .work-brand{
+  background:#10151d !important;
+  border-color:rgba(255,255,255,.13) !important;
+}
+.work-brand img{
+  width:auto !important;
+  max-width:158px !important;
+  max-height:35px !important;
+  object-fit:contain !important;
+  filter:brightness(0) invert(1) !important;
+  opacity:1 !important;
+}
+
+.work-role{
+  max-width:620px !important;
+  color:#6b798b !important;
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.65 !important;
+}
+
+.work-main{
+  margin-top:34px !important;
+}
+.work-main h3{
+  margin:0 !important;
+  max-width:700px !important;
+  color:#0a1018 !important;
+  font-family:Inter,sans-serif !important;
+  font-size:clamp(42px,4.1vw,64px) !important;
+  line-height:1.01 !important;
+  letter-spacing:-.062em !important;
+  font-weight:400 !important;
+}
+.work-main p{
+  margin:22px 0 0 !important;
+  max-width:650px !important;
+  color:#6b7888 !important;
+  font-family:Inter,sans-serif !important;
+  font-size:13px !important;
+  line-height:1.78 !important;
+}
+.work-signals{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:8px 22px !important;
+  margin:30px 0 0 !important;
+  padding:20px 0 0 !important;
+  border-top:1px solid #dce2e8 !important;
+  color:#54697f !important;
+  font-family:Inter,sans-serif !important;
+  font-size:9.5px !important;
+  letter-spacing:.02em !important;
+}
+.work-cta{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  width:max-content !important;
+  margin:27px 0 0 !important;
+  padding:0 0 5px !important;
+  color:#0a1018 !important;
+  border-bottom:1px solid rgba(10,16,24,.28) !important;
+  font-family:Inter,sans-serif !important;
+  font-size:9.5px !important;
+  line-height:1 !important;
+  font-weight:700 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+  transition:gap .2s ease,border-color .2s ease !important;
+}
+.work-card:hover .work-cta{
+  gap:15px !important;
+  border-bottom-color:#1683ff !important;
+}
+.work-cta em{
+  font-style:normal !important;
+  transition:transform .2s ease !important;
+}
+.work-card:hover .work-cta em{
+  transform:translate(3px,-2px) !important;
+}
+
+/* Image is a strong editorial visual, but no longer a giant card half */
+.work-photo-wrap{
+  display:flex !important;
+  align-self:stretch !important;
+  min-width:0 !important;
+  min-height:530px !important;
+  height:auto !important;
+  padding:54px 0 54px 42px !important;
+  overflow:visible !important;
+}
+.work-card:nth-child(even) .work-photo-wrap{
+  padding:54px 42px 54px 0 !important;
+}
+.work-card:first-child .work-photo-wrap{
+  min-height:610px !important;
+}
+.work-photo{
+  flex:1 1 auto !important;
+  width:100% !important;
+  min-height:100% !important;
+  height:auto !important;
+  max-height:none !important;
+  border:0 !important;
+  border-radius:22px !important;
+  background:#e9eef3 !important;
+  overflow:hidden !important;
+}
+.work-photo img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  min-height:100% !important;
+  max-height:none !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+  border-radius:22px !important;
+  transition:transform .45s cubic-bezier(.2,.7,.2,1) !important;
+}
+.work-card:hover .work-photo img{
+  transform:scale(1.018) !important;
+}
+
+/* Different focal points for the real project photos */
+.photo-geo img{object-position:center 45% !important;}
+.photo-low img{object-position:center 48% !important;}
+.photo-tether img{object-position:center 42% !important;}
+.photo-usm img{object-position:center 43% !important;}
+
+@media(max-width:1100px){
+  .selected-head{
+    grid-template-columns:1fr !important;
+    gap:28px !important;
+  }
+  .work-card,
+  .work-card:nth-child(even){
+    grid-template-columns:minmax(0,1fr) minmax(330px,.86fr) !important;
+  }
+  .work-card:nth-child(even){
+    grid-template-columns:minmax(330px,.86fr) minmax(0,1fr) !important;
+  }
+  .work-content{
+    padding:58px 48px 56px 0 !important;
+  }
+  .work-card:nth-child(even) .work-content{
+    padding:58px 0 56px 48px !important;
+  }
+  .work-main h3{
+    font-size:clamp(38px,4.3vw,54px) !important;
+  }
+}
+
+@media(max-width:760px){
+  .selected{
+    padding:92px 20px 88px !important;
+  }
+  .selected-head{
+    margin-bottom:36px !important;
+    padding-bottom:30px !important;
+  }
+  .selected-head h2{
+    font-size:clamp(46px,12.5vw,62px) !important;
+  }
+  .work-list{
+    border-top:1px solid #d9dfe6 !important;
+  }
+  .work-card,
+  .work-card:nth-child(even),
+  .work-card:nth-child(3){
+    width:100% !important;
+    margin:0 !important;
+    padding:0 !important;
+    grid-template-columns:1fr !important;
+    min-height:0 !important;
+    border-bottom:1px solid #d9dfe6 !important;
+  }
+  .work-card:nth-child(3){
+    padding:0 20px !important;
+    margin-left:-20px !important;
+    margin-right:-20px !important;
+    width:calc(100% + 40px) !important;
+  }
+  .work-content,
+  .work-card:nth-child(even) .work-content,
+  .work-card:first-child .work-content{
+    grid-column:1 !important;
+    grid-row:2 !important;
+    min-height:0 !important;
+    padding:38px 0 54px !important;
+  }
+  .work-photo-wrap,
+  .work-card:nth-child(even) .work-photo-wrap,
+  .work-card:first-child .work-photo-wrap{
+    grid-column:1 !important;
+    grid-row:1 !important;
+    min-height:0 !important;
+    height:300px !important;
+    padding:42px 0 0 !important;
+  }
+  .work-photo,
+  .work-photo img{
+    min-height:300px !important;
+    height:300px !important;
+    border-radius:18px !important;
+  }
+  .work-index{
+    margin-bottom:18px !important;
+  }
+  .work-brand{
+    height:62px !important;
+    margin-bottom:17px !important;
+  }
+  .work-main{
+    margin-top:26px !important;
+  }
+  .work-main h3{
+    font-size:clamp(36px,10vw,48px) !important;
+  }
+  .work-signals{
+    gap:8px 15px !important;
+  }
+}
+</style>
+
+
+<style id="home-v19-tether-low-fixes">
+/* HOME V19 — Tether logo path + more compact LowSignal block */
+
+/* LowSignal is intentionally more compact than the lead GeoVictoria case */
+@media(min-width:961px){
+  .work-card:nth-child(2){
+    min-height:455px !important;
+  }
+  .work-card:nth-child(2) .work-content{
+    min-height:455px !important;
+    padding-top:54px !important;
+    padding-bottom:52px !important;
+  }
+  .work-card:nth-child(2) .work-photo-wrap{
+    min-height:455px !important;
+    padding-top:44px !important;
+    padding-bottom:44px !important;
+  }
+  .work-card:nth-child(2) .work-photo,
+  .work-card:nth-child(2) .work-photo img{
+    min-height:367px !important;
+    height:367px !important;
+  }
+  .work-card:nth-child(2) .work-main{
+    margin-top:28px !important;
+  }
+  .work-card:nth-child(2) .work-main h3{
+    font-size:clamp(40px,3.6vw,56px) !important;
+  }
+}
+
+/* If the repository SVG is unavailable, keep the brand visible rather than a broken image */
+.logo-tether .tether-fallback{
+  display:none;
+  color:#fff;
+  font-family:Inter,sans-serif;
+  font-size:22px;
+  font-weight:500;
+  letter-spacing:-.04em;
+}
+</style>
+
+
+<style id="home-v20-hero-title-leading">
+/* HOME V20 — more breathing room between hero title lines */
+.hero h1{
+  line-height:.98 !important;
+}
+@media(max-width:760px){
+  .hero h1{
+    line-height:1.02 !important;
+  }
+}
+</style>
+
+
+<style id="home-v22-mobile-selected-work">
+/* =========================================================
+   HOME V22 — Mobile QA for Selected Work
+   Compact, stacked, no overflow, consistent image crops.
+   ========================================================= */
+
+@media(max-width:760px){
+
+  /* prevent any old alternating/full-bleed rules from creating horizontal scroll */
+  .selected{
+    overflow:hidden !important;
+  }
+
+  .work-list{
+    display:block !important;
+    width:100% !important;
+    margin:0 !important;
+  }
+
+  .work-card,
+  .work-card:nth-child(even),
+  .work-card:nth-child(odd),
+  .work-card:nth-child(3){
+    display:flex !important;
+    flex-direction:column !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-height:0 !important;
+    height:auto !important;
+    margin:0 !important;
+    padding:0 !important;
+    border-radius:0 !important;
+    overflow:visible !important;
+    transform:none !important;
+  }
+
+  /* Tether remains the dark interruption, but without the old negative-width behavior */
+  .work-card:nth-child(3){
+    background:#05070a !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+  }
+
+  /* image first on every case */
+  .work-photo-wrap,
+  .work-card:nth-child(even) .work-photo-wrap,
+  .work-card:nth-child(odd) .work-photo-wrap,
+  .work-card:first-child .work-photo-wrap{
+    order:1 !important;
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-height:0 !important;
+    height:auto !important;
+    margin:0 !important;
+    padding:26px 0 0 !important;
+    overflow:hidden !important;
+  }
+
+  .work-photo{
+    width:100% !important;
+    height:260px !important;
+    min-height:260px !important;
+    max-height:260px !important;
+    margin:0 !important;
+    border-radius:18px !important;
+    overflow:hidden !important;
+    background:#e9eef3 !important;
+  }
+
+  .work-photo img{
+    display:block !important;
+    width:100% !important;
+    height:260px !important;
+    min-height:260px !important;
+    max-height:260px !important;
+    object-fit:cover !important;
+    border-radius:18px !important;
+    transform:none !important;
+  }
+
+  /* preserve useful focal points */
+  .photo-geo img{object-position:center 48% !important;}
+  .photo-low img{object-position:center 50% !important;}
+  .photo-tether img{object-position:center 44% !important;}
+  .photo-usm img{object-position:center 46% !important;}
+
+  /* content follows, with enough room for labels and no clipping */
+  .work-content,
+  .work-card:nth-child(even) .work-content,
+  .work-card:nth-child(odd) .work-content,
+  .work-card:first-child .work-content{
+    order:2 !important;
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-height:0 !important;
+    height:auto !important;
+    margin:0 !important;
+    padding:28px 24px 34px !important;
+    overflow:visible !important;
+  }
+
+  .work-index{
+    display:block !important;
+    margin:0 0 16px !important;
+    padding:0 !important;
+    line-height:1.35 !important;
+    overflow:visible !important;
+  }
+
+  .work-brand{
+    width:170px !important;
+    min-width:0 !important;
+    max-width:100% !important;
+    height:60px !important;
+    margin:0 0 16px !important;
+    padding:11px 14px !important;
+    border-radius:14px !important;
+  }
+
+  .work-brand img{
+    max-width:142px !important;
+    max-height:30px !important;
+  }
+
+  .logo-tether .tether-fallback{
+    font-size:20px !important;
+  }
+
+  .work-role{
+    max-width:100% !important;
+    font-size:11px !important;
+    line-height:1.6 !important;
+  }
+
+  .work-main{
+    margin-top:22px !important;
+  }
+
+  .work-main h3{
+    max-width:100% !important;
+    font-size:35px !important;
+    line-height:1.04 !important;
+    letter-spacing:-.055em !important;
+    overflow-wrap:anywhere !important;
+  }
+
+  .work-main p{
+    max-width:100% !important;
+    margin-top:16px !important;
+    font-size:12.5px !important;
+    line-height:1.7 !important;
+  }
+
+  .work-signals{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:8px 14px !important;
+    margin-top:22px !important;
+    padding-top:17px !important;
+    font-size:9px !important;
+    line-height:1.5 !important;
+  }
+
+  .work-cta{
+    margin-top:22px !important;
+  }
+
+  /* dark case spacing stays equal to the rest */
+  .work-card:nth-child(3) .work-photo-wrap{
+    padding-left:20px !important;
+    padding-right:20px !important;
+  }
+  .work-card:nth-child(3) .work-content{
+    padding-left:20px !important;
+    padding-right:20px !important;
+  }
+}
+
+/* small phones */
+@media(max-width:390px){
+  .work-photo,
+  .work-photo img{
+    height:235px !important;
+    min-height:235px !important;
+    max-height:235px !important;
+  }
+  .work-content,
+  .work-card:nth-child(even) .work-content,
+  .work-card:nth-child(odd) .work-content{
+    padding-left:18px !important;
+    padding-right:18px !important;
+  }
+  .work-main h3{
+    font-size:32px !important;
+  }
+  .work-card:nth-child(3) .work-photo-wrap,
+  .work-card:nth-child(3) .work-content{
+    padding-left:18px !important;
+    padding-right:18px !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="nav">
@@ -1954,7 +2879,7 @@ header.nav{
       </div>
     </div>
     <div class="hero-photo-wrap">
-      <div class="hero-photo"><img src="/images/profile.jpg" onerror="this.onerror=null;this.src='/profile.jpg'" alt="Felipe Quiroz"></div>
+      <div class="hero-photo"><img src="/images/profile.jpg" onerror="this.onerror=null;this.src='/images/profile.jpg'" alt="Felipe Quiroz"></div>
       <div class="photo-meta"><span>Producto · Growth · Operaciones</span><span>CL</span></div>
     </div>
   </div>
@@ -2009,7 +2934,7 @@ header.nav{
   <div class="work-content">
     <div class="work-meta">
       <div class="work-index">01 / Producto</div>
-      <div class="work-brand logo-geo"><img src="/logos/geovictoria-logo.png" alt="GeoVictoria" loading="lazy"></div>
+      <div class="work-brand logo-geo"><img src="/logos/geovictoria-logo.png" alt="GeoVictoria" onerror="this.onerror=null;this.src='/logos/geovictoria-logo.png'" loading="lazy"></div>
       <div class="work-role">Product Management · Workforce Management · B2B SaaS</div>
     </div>
     <div class="work-main">
@@ -2021,14 +2946,14 @@ header.nav{
   </div>
   <div class="work-photo-wrap">
     <div class="work-photo photo-geo">
-      <img src="/images/geocoffe.jpg" alt="GeoVictoria con clientes de distintas industrias" loading="lazy">
+      <img src="/images/geocoffe.jpg" alt="GeoVictoria con clientes de distintas industrias" onerror="this.onerror=null;this.src='geocoffe.jpg'" loading="lazy">
     </div>
   </div>
 </a><a class="work-card" href="/es/lowsignal">
   <div class="work-content">
     <div class="work-meta">
-      <div class="work-index">02 / Company building</div>
-      <div class="work-brand logo-low"><img src="/logos/lowsignal-logo.png" alt="lowsignal" loading="lazy"></div>
+      <div class="work-index">02 / Construcción de empresa</div>
+      <div class="work-brand logo-low"><img src="/logos/lowsignal-logo.png" alt="lowsignal" onerror="this.onerror=null;this.src='/logos/lowsignal-logo.png'" loading="lazy"></div>
       <div class="work-role">Co-Founder & COO · Growth Systems</div>
     </div>
     <div class="work-main">
@@ -2040,14 +2965,14 @@ header.nav{
   </div>
   <div class="work-photo-wrap">
     <div class="work-photo photo-low">
-      <img src="/images/lowsignal-client-work.jpg" alt="Trabajo con clientes de lowsignal" loading="lazy">
+      <img src="/images/lowsignal-client-work.jpg" alt="Trabajo con clientes de lowsignal" onerror="this.onerror=null;this.src='lowsignal-client-work.jpg'" loading="lazy">
     </div>
   </div>
 </a><a class="work-card" href="/es/tethereducation">
   <div class="work-content">
     <div class="work-meta">
-      <div class="work-index">03 / Partnerships</div>
-      <div class="work-brand logo-tether"><img src="/logos/tethered-logo.svg" alt="TetherEd" loading="lazy"></div>
+      <div class="work-index">03 / Alianzas</div>
+      <div class="work-brand logo-tether"><img src="/logos/tethered-logo.svg" alt="TetherEd" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" loading="lazy"><span class="tether-fallback">TetherEd</span></div>
       <div class="work-role">Head of Partnerships · EdTech · Expansión internacional</div>
     </div>
     <div class="work-main">
@@ -2059,14 +2984,14 @@ header.nav{
   </div>
   <div class="work-photo-wrap">
     <div class="work-photo photo-tether">
-      <img src="/images/tether-team-event.jpg" alt="Equipo de TetherEd en un evento" loading="lazy">
+      <img src="/images/tether-team-event.jpg" alt="Equipo de TetherEd en un evento" onerror="this.onerror=null;this.src='tether-team-event.jpg'" loading="lazy">
     </div>
   </div>
 </a><a class="work-card" href="/es/usm">
   <div class="work-content">
     <div class="work-meta">
       <div class="work-index">04 / Estrategia y operaciones</div>
-      <div class="work-brand logo-usm"><img src="/logos/logo-usm.png" alt="Universidad Técnica Federico Santa María" loading="lazy"></div>
+      <div class="work-brand logo-usm"><img src="/logos/logo-usm.png" alt="Universidad Técnica Federico Santa María" onerror="this.onerror=null;this.src='/logos/logo-usm.png'" loading="lazy"></div>
       <div class="work-role">Higher Education · Admisión · Operaciones</div>
     </div>
     <div class="work-main">
@@ -2078,7 +3003,7 @@ header.nav{
   </div>
   <div class="work-photo-wrap">
     <div class="work-photo photo-usm">
-      <img src="/images/usm-admissions-community.jpg" alt="Equipo de Admisión de la Universidad Técnica Federico Santa María" loading="lazy">
+      <img src="/images/usm-admissions-community.jpg" alt="Equipo de Admisión de la Universidad Técnica Federico Santa María" onerror="this.onerror=null;this.src='usm-admissions-community.jpg'" loading="lazy">
     </div>
   </div>
 </a>
@@ -2095,7 +3020,7 @@ header.nav{
 <a class="about-bridge-link" href="/es/about">Ver mi recorrido <span>↗</span></a>
     </div>
     <figure class="about-bridge-visual">
-      <img src="/images/building-in-the-field.jpg" alt="Felipe Quiroz trabajando en terreno y conversando con personas" loading="lazy">
+      <img src="/images/building-in-the-field.jpg" alt="Felipe Quiroz trabajando en terreno y conversando con personas" onerror="this.onerror=null;this.src='building-in-the-field.jpg'" loading="lazy">
       <figcaption><span>En terreno / Producto, personas y conversaciones reales</span><span>Santiago / CL</span></figcaption>
     </figure>
   </div>
