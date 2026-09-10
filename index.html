@@ -68,7 +68,7 @@ img{display:block;width:100%;max-width:100%}
 .proof{padding:0 var(--page-gutter);background:var(--paper)}
 .proof-inner{width:min(var(--page-max),100%);margin:0 auto;padding:74px 0 82px}
 .section-label{font-size:9px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--steel-light)}
-.proof-grid{margin-top:28px;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(255,255,255,.10);border-radius:22px;overflow:hidden;background:linear-gradient(90deg,rgba(13,23,36,.82) 0%,rgba(24,37,54,.72) 48%,rgba(47,70,97,.78) 100%),linear-gradient(0deg,rgba(13,23,36,.52),rgba(13,23,36,.28)),url('images/building-in-the-field.jpg') center 48%/cover no-repeat;box-shadow:0 20px 44px rgba(13,23,36,.08)}
+.proof-grid{margin-top:28px;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(255,255,255,.10);border-radius:22px;overflow:hidden;background:linear-gradient(90deg,rgba(13,23,36,.82) 0%,rgba(24,37,54,.72) 48%,rgba(47,70,97,.78) 100%),linear-gradient(0deg,rgba(13,23,36,.52),rgba(13,23,36,.28)),url('/images/building-in-the-field.jpg') center 48%/cover no-repeat;box-shadow:0 20px 44px rgba(13,23,36,.08)}
 .proof-item{min-height:190px;padding:34px 36px 36px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(255,255,255,.11)}
 .proof-item:not(:first-child){padding-left:36px}
 .proof-item:last-child{border-right:0}
@@ -513,7 +513,7 @@ header.nav{
   margin-top:28px;
   background:
     linear-gradient(90deg,rgba(4,8,14,.91),rgba(7,17,31,.82) 52%,rgba(10,35,67,.72)),
-    url('images/building-in-the-field.jpg') center 46%/cover no-repeat;
+    url('/images/building-in-the-field.jpg') center 46%/cover no-repeat;
   border:1px solid rgba(8,17,29,.10);
   border-radius:22px;
   box-shadow:none
@@ -2592,6 +2592,268 @@ header.nav{
 }
 </style>
 
+
+<style id="home-v19-tether-low-fixes">
+/* HOME V19 — Tether logo path + more compact LowSignal block */
+
+/* LowSignal is intentionally more compact than the lead GeoVictoria case */
+@media(min-width:961px){
+  .work-card:nth-child(2){
+    min-height:455px !important;
+  }
+  .work-card:nth-child(2) .work-content{
+    min-height:455px !important;
+    padding-top:54px !important;
+    padding-bottom:52px !important;
+  }
+  .work-card:nth-child(2) .work-photo-wrap{
+    min-height:455px !important;
+    padding-top:44px !important;
+    padding-bottom:44px !important;
+  }
+  .work-card:nth-child(2) .work-photo,
+  .work-card:nth-child(2) .work-photo img{
+    min-height:367px !important;
+    height:367px !important;
+  }
+  .work-card:nth-child(2) .work-main{
+    margin-top:28px !important;
+  }
+  .work-card:nth-child(2) .work-main h3{
+    font-size:clamp(40px,3.6vw,56px) !important;
+  }
+}
+
+/* If the repository SVG is unavailable, keep the brand visible rather than a broken image */
+.logo-tether .tether-fallback{
+  display:none;
+  color:#fff;
+  font-family:Inter,sans-serif;
+  font-size:22px;
+  font-weight:500;
+  letter-spacing:-.04em;
+}
+</style>
+
+
+<style id="home-v20-hero-title-leading">
+/* HOME V20 — more breathing room between hero title lines */
+.hero h1{
+  line-height:.98 !important;
+}
+@media(max-width:760px){
+  .hero h1{
+    line-height:1.02 !important;
+  }
+}
+</style>
+
+
+<style id="home-v22-mobile-selected-work">
+/* =========================================================
+   HOME V22 — Mobile QA for Selected Work
+   Compact, stacked, no overflow, consistent image crops.
+   ========================================================= */
+
+@media(max-width:760px){
+
+  /* prevent any old alternating/full-bleed rules from creating horizontal scroll */
+  .selected{
+    overflow:hidden !important;
+  }
+
+  .work-list{
+    display:block !important;
+    width:100% !important;
+    margin:0 !important;
+  }
+
+  .work-card,
+  .work-card:nth-child(even),
+  .work-card:nth-child(odd),
+  .work-card:nth-child(3){
+    display:flex !important;
+    flex-direction:column !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-height:0 !important;
+    height:auto !important;
+    margin:0 !important;
+    padding:0 !important;
+    border-radius:0 !important;
+    overflow:visible !important;
+    transform:none !important;
+  }
+
+  /* Tether remains the dark interruption, but without the old negative-width behavior */
+  .work-card:nth-child(3){
+    background:#05070a !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+  }
+
+  /* image first on every case */
+  .work-photo-wrap,
+  .work-card:nth-child(even) .work-photo-wrap,
+  .work-card:nth-child(odd) .work-photo-wrap,
+  .work-card:first-child .work-photo-wrap{
+    order:1 !important;
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-height:0 !important;
+    height:auto !important;
+    margin:0 !important;
+    padding:26px 0 0 !important;
+    overflow:hidden !important;
+  }
+
+  .work-photo{
+    width:100% !important;
+    height:260px !important;
+    min-height:260px !important;
+    max-height:260px !important;
+    margin:0 !important;
+    border-radius:18px !important;
+    overflow:hidden !important;
+    background:#e9eef3 !important;
+  }
+
+  .work-photo img{
+    display:block !important;
+    width:100% !important;
+    height:260px !important;
+    min-height:260px !important;
+    max-height:260px !important;
+    object-fit:cover !important;
+    border-radius:18px !important;
+    transform:none !important;
+  }
+
+  /* preserve useful focal points */
+  .photo-geo img{object-position:center 48% !important;}
+  .photo-low img{object-position:center 50% !important;}
+  .photo-tether img{object-position:center 44% !important;}
+  .photo-usm img{object-position:center 46% !important;}
+
+  /* content follows, with enough room for labels and no clipping */
+  .work-content,
+  .work-card:nth-child(even) .work-content,
+  .work-card:nth-child(odd) .work-content,
+  .work-card:first-child .work-content{
+    order:2 !important;
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-height:0 !important;
+    height:auto !important;
+    margin:0 !important;
+    padding:28px 24px 34px !important;
+    overflow:visible !important;
+  }
+
+  .work-index{
+    display:block !important;
+    margin:0 0 16px !important;
+    padding:0 !important;
+    line-height:1.35 !important;
+    overflow:visible !important;
+  }
+
+  .work-brand{
+    width:170px !important;
+    min-width:0 !important;
+    max-width:100% !important;
+    height:60px !important;
+    margin:0 0 16px !important;
+    padding:11px 14px !important;
+    border-radius:14px !important;
+  }
+
+  .work-brand img{
+    max-width:142px !important;
+    max-height:30px !important;
+  }
+
+  .logo-tether .tether-fallback{
+    font-size:20px !important;
+  }
+
+  .work-role{
+    max-width:100% !important;
+    font-size:11px !important;
+    line-height:1.6 !important;
+  }
+
+  .work-main{
+    margin-top:22px !important;
+  }
+
+  .work-main h3{
+    max-width:100% !important;
+    font-size:35px !important;
+    line-height:1.04 !important;
+    letter-spacing:-.055em !important;
+    overflow-wrap:anywhere !important;
+  }
+
+  .work-main p{
+    max-width:100% !important;
+    margin-top:16px !important;
+    font-size:12.5px !important;
+    line-height:1.7 !important;
+  }
+
+  .work-signals{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:8px 14px !important;
+    margin-top:22px !important;
+    padding-top:17px !important;
+    font-size:9px !important;
+    line-height:1.5 !important;
+  }
+
+  .work-cta{
+    margin-top:22px !important;
+  }
+
+  /* dark case spacing stays equal to the rest */
+  .work-card:nth-child(3) .work-photo-wrap{
+    padding-left:20px !important;
+    padding-right:20px !important;
+  }
+  .work-card:nth-child(3) .work-content{
+    padding-left:20px !important;
+    padding-right:20px !important;
+  }
+}
+
+/* small phones */
+@media(max-width:390px){
+  .work-photo,
+  .work-photo img{
+    height:235px !important;
+    min-height:235px !important;
+    max-height:235px !important;
+  }
+  .work-content,
+  .work-card:nth-child(even) .work-content,
+  .work-card:nth-child(odd) .work-content{
+    padding-left:18px !important;
+    padding-right:18px !important;
+  }
+  .work-main h3{
+    font-size:32px !important;
+  }
+  .work-card:nth-child(3) .work-photo-wrap,
+  .work-card:nth-child(3) .work-content{
+    padding-left:18px !important;
+    padding-right:18px !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="nav">
@@ -2617,7 +2879,7 @@ header.nav{
       </div>
     </div>
     <div class="hero-photo-wrap">
-      <div class="hero-photo"><img src="images/profile.jpg" onerror="this.onerror=null;this.src='profile.jpg'" alt="Felipe Quiroz"></div>
+      <div class="hero-photo"><img src="/images/profile.jpg" onerror="this.onerror=null;this.src='/images/profile.jpg'" alt="Felipe Quiroz"></div>
       <div class="photo-meta"><span>Product · Growth · Operations</span><span>CL</span></div>
     </div>
   </div>
@@ -2672,7 +2934,7 @@ header.nav{
   <div class="work-content">
     <div class="work-meta">
       <div class="work-index">01 / Product</div>
-      <div class="work-brand logo-geo"><img src="logos/geovictoria-logo.png" alt="GeoVictoria" onerror="this.onerror=null;this.src='geovictoria-logo.png'" loading="lazy"></div>
+      <div class="work-brand logo-geo"><img src="/logos/geovictoria-logo.png" alt="GeoVictoria" onerror="this.onerror=null;this.src='/logos/geovictoria-logo.png'" loading="lazy"></div>
       <div class="work-role">Product Management · Workforce Management · B2B SaaS</div>
     </div>
     <div class="work-main">
@@ -2684,14 +2946,14 @@ header.nav{
   </div>
   <div class="work-photo-wrap">
     <div class="work-photo photo-geo">
-      <img src="images/geocoffe.jpg" alt="GeoVictoria with clients from different industries" onerror="this.onerror=null;this.src='geocoffe.jpg'" loading="lazy">
+      <img src="/images/geocoffe.jpg" alt="GeoVictoria with clients from different industries" onerror="this.onerror=null;this.src='geocoffe.jpg'" loading="lazy">
     </div>
   </div>
 </a><a class="work-card" href="/lowsignal">
   <div class="work-content">
     <div class="work-meta">
       <div class="work-index">02 / Company building</div>
-      <div class="work-brand logo-low"><img src="logos/lowsignal-logo.png" alt="lowsignal" onerror="this.onerror=null;this.src='lowsignal-logo.png'" loading="lazy"></div>
+      <div class="work-brand logo-low"><img src="/logos/lowsignal-logo.png" alt="lowsignal" onerror="this.onerror=null;this.src='/logos/lowsignal-logo.png'" loading="lazy"></div>
       <div class="work-role">Co-Founder & COO · Growth Systems</div>
     </div>
     <div class="work-main">
@@ -2703,14 +2965,14 @@ header.nav{
   </div>
   <div class="work-photo-wrap">
     <div class="work-photo photo-low">
-      <img src="images/lowsignal-client-work.jpg" alt="lowsignal client work" onerror="this.onerror=null;this.src='lowsignal-client-work.jpg'" loading="lazy">
+      <img src="/images/lowsignal-client-work.jpg" alt="lowsignal client work" onerror="this.onerror=null;this.src='lowsignal-client-work.jpg'" loading="lazy">
     </div>
   </div>
 </a><a class="work-card" href="/tethereducation">
   <div class="work-content">
     <div class="work-meta">
       <div class="work-index">03 / Partnerships</div>
-      <div class="work-brand logo-tether"><img src="logos/tethered-logo.png" alt="TetherEd" onerror="this.onerror=null;this.src='tethered-logo.png'" loading="lazy"></div>
+      <div class="work-brand logo-tether"><img src="/logos/tethered-logo.svg" alt="TetherEd" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" loading="lazy"><span class="tether-fallback">TetherEd</span></div>
       <div class="work-role">Head of Partnerships · EdTech · International Expansion</div>
     </div>
     <div class="work-main">
@@ -2722,14 +2984,14 @@ header.nav{
   </div>
   <div class="work-photo-wrap">
     <div class="work-photo photo-tether">
-      <img src="images/tether-team-event.jpg" alt="TetherEd team at an event" onerror="this.onerror=null;this.src='tether-team-event.jpg'" loading="lazy">
+      <img src="/images/tether-team-event.jpg" alt="TetherEd team at an event" onerror="this.onerror=null;this.src='tether-team-event.jpg'" loading="lazy">
     </div>
   </div>
 </a><a class="work-card" href="/usm">
   <div class="work-content">
     <div class="work-meta">
       <div class="work-index">04 / Strategy and operations</div>
-      <div class="work-brand logo-usm"><img src="logos/logo-usm.png" alt="Universidad Técnica Federico Santa María" onerror="this.onerror=null;this.src='logo-usm.png'" loading="lazy"></div>
+      <div class="work-brand logo-usm"><img src="/logos/logo-usm.png" alt="Universidad Técnica Federico Santa María" onerror="this.onerror=null;this.src='/logos/logo-usm.png'" loading="lazy"></div>
       <div class="work-role">Higher Education · Admissions · Operations</div>
     </div>
     <div class="work-main">
@@ -2741,7 +3003,7 @@ header.nav{
   </div>
   <div class="work-photo-wrap">
     <div class="work-photo photo-usm">
-      <img src="images/usm-admissions-community.jpg" alt="Admissions team at Universidad Técnica Federico Santa María" onerror="this.onerror=null;this.src='usm-admissions-community.jpg'" loading="lazy">
+      <img src="/images/usm-admissions-community.jpg" alt="Admissions team at Universidad Técnica Federico Santa María" onerror="this.onerror=null;this.src='usm-admissions-community.jpg'" loading="lazy">
     </div>
   </div>
 </a>
@@ -2758,7 +3020,7 @@ header.nav{
 <a class="about-bridge-link" href="/about">Explore my background <span>↗</span></a>
     </div>
     <figure class="about-bridge-visual">
-      <img src="images/building-in-the-field.jpg" alt="Felipe Quiroz working in the field and talking with people" onerror="this.onerror=null;this.src='building-in-the-field.jpg'" loading="lazy">
+      <img src="/images/building-in-the-field.jpg" alt="Felipe Quiroz working in the field and talking with people" onerror="this.onerror=null;this.src='building-in-the-field.jpg'" loading="lazy">
       <figcaption><span>In the field / Product, people and real conversations</span><span>Santiago / CL</span></figcaption>
     </figure>
   </div>
