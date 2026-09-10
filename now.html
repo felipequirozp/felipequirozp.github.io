@@ -383,40 +383,36 @@ a.build-card:hover{background:#f3f7fb;transform:translateY(-2px)}
   letter-spacing:.06em;
   text-transform:uppercase;
 }
-.arc{
+.arc-svg{
   position:absolute;
   left:50%;
-  top:54%;
-  width:min(1380px,105vw);
-  aspect-ratio:2 / 1;
-  transform:translate(-50%,-78%);
-  border-radius:50% 50% 0 0 / 100% 100% 0 0;
-  border-top:10px solid rgba(87,170,255,.90);
-  filter:drop-shadow(0 0 18px rgba(56,147,255,.55))
-         drop-shadow(0 0 42px rgba(35,111,255,.24));
-  opacity:.95;
+  top:50%;
+  width:min(1500px,118vw);
+  height:auto;
+  transform:translate(-50%,-58%);
+  z-index:1;
+  overflow:visible;
   pointer-events:none;
 }
-.arc::before{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:-34px;
-  width:92%;
-  height:40px;
-  transform:translateX(-50%);
-  background:radial-gradient(ellipse at center, rgba(39,132,255,.24) 0%, rgba(39,132,255,.11) 38%, transparent 72%);
-  filter:blur(20px);
+.arc-svg .arc-glow{
+  fill:none;
+  stroke:#1683ff;
+  stroke-width:26;
+  opacity:.18;
+  filter:url(#arcGlow);
 }
-.arc::after{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:8px;
-  width:100%;
-  height:1px;
-  transform:translateX(-50%);
-  background:linear-gradient(90deg,transparent,rgba(137,199,255,.35),transparent);
+.arc-svg .arc-main{
+  fill:none;
+  stroke:url(#arcStroke);
+  stroke-width:7;
+  stroke-linecap:round;
+  opacity:.98;
+}
+.arc-svg .arc-soft{
+  fill:none;
+  stroke:rgba(126,190,255,.22);
+  stroke-width:1.4;
+  opacity:.72;
 }
 
 
@@ -526,7 +522,7 @@ a.build-card:hover{background:#f3f7fb;transform:translateY(-2px)}
   .system-moment{min-height:560px;padding:82px var(--page)}
   .system-moment h2{font-size:46px;max-width:95%}
   .system-moment p{font-size:14px;max-width:92%}
-  .arc{width:150vw;top:51%;border-top-width:7px}
+  .arc-svg{width:170vw;top:48%;transform:translate(-50%,-54%)}
 
 @media(max-width:390px){
   .nav-links{font-size:8px}
@@ -635,7 +631,22 @@ a.build-card:hover{background:#f3f7fb;transform:translateY(-2px)}
 </section>
 
 <section class="system-moment">
-  <div class="arc" aria-hidden="true"></div>
+  <svg class="arc-svg" viewBox="0 0 1200 620" aria-hidden="true">
+    <defs>
+      <linearGradient id="arcStroke" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#0b66dc"/>
+        <stop offset="42%" stop-color="#78c3ff"/>
+        <stop offset="58%" stop-color="#a9dcff"/>
+        <stop offset="100%" stop-color="#147cff"/>
+      </linearGradient>
+      <filter id="arcGlow" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="15"/>
+      </filter>
+    </defs>
+    <path class="arc-glow" d="M -70 520 Q 600 -90 1270 520"/>
+    <path class="arc-main" d="M -70 520 Q 600 -90 1270 520"/>
+    <path class="arc-soft" d="M 25 545 Q 600 40 1175 545"/>
+  </svg>
   <div class="wrap">
     <div class="eyebrow">06 / Working principle</div>
     <h2>Building better means connecting<span>clarity, systems and execution.</span></h2>
