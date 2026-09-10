@@ -534,7 +534,93 @@ body{padding-top:var(--persistent-nav-h)}
   }
 }
 
-</style></head><body>
+</style>
+<style id="geovictoria-v7-mobile-product-grid">
+/* =========================================================
+   GEOVICTORIA V7 — fix Workforce Management cards on mobile
+   The .geo-grid desktop rule was overriding the responsive grid.
+   ========================================================= */
+
+@media (max-width:1080px){
+  .product-grid.geo-grid{
+    grid-template-columns:repeat(2, minmax(0,1fr)) !important;
+  }
+}
+
+@media (max-width:760px){
+  .product-grid.geo-grid{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) !important;
+    width:100% !important;
+    max-width:100% !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+
+  .product-grid.geo-grid .product-item{
+    width:100% !important;
+    min-width:0 !important;
+    max-width:100% !important;
+    min-height:0 !important;
+    height:auto !important;
+    padding:26px 22px 30px !important;
+    border-right:0 !important;
+    border-bottom:1px solid var(--line-dark) !important;
+    overflow:visible !important;
+  }
+
+  .product-grid.geo-grid .product-item:last-child{
+    border-bottom:0 !important;
+  }
+
+  .product-grid.geo-grid .product-item h3{
+    margin-top:62px !important;
+    font-size:28px !important;
+    line-height:1.08 !important;
+  }
+
+  .product-grid.geo-grid .product-type{
+    max-width:100% !important;
+    line-height:1.45 !important;
+  }
+
+  .product-grid.geo-grid .product-item p{
+    width:100% !important;
+    max-width:31ch !important;
+    font-size:13px !important;
+    line-height:1.72 !important;
+    white-space:normal !important;
+    word-break:normal !important;
+    overflow-wrap:normal !important;
+  }
+
+  .product-grid.geo-grid .product-icon{
+    right:22px !important;
+    top:24px !important;
+  }
+}
+
+@media (max-width:390px){
+  .product-grid.geo-grid .product-item{
+    padding-left:20px !important;
+    padding-right:20px !important;
+  }
+
+  .product-grid.geo-grid .product-item h3{
+    font-size:26px !important;
+  }
+
+  .product-grid.geo-grid .product-item p{
+    max-width:29ch !important;
+  }
+
+  .product-grid.geo-grid .product-icon{
+    right:20px !important;
+  }
+}
+</style>
+
+</head><body>
 <header class="nav"><a class="brand" href="/">Felipe Quiroz</a><nav class="nav-links"><a class="active" href="/#work">Work</a><a href="/about">About</a><a href="/now">Now</a><a class="contact-nav" href="#contact">Contact</a><a aria-label="Switch language" class="lang-switch" href="/es/geovictoria">ES</a></nav></header>
 <section class="hero"><div class="hero-inner"><div class="hero-top"><a aria-label="Visit GeoVictoria" class="geo-mark geo-mark" href="https://www.geovictoria.com/" rel="noopener noreferrer" target="_blank"><img alt="GeoVictoria" class="geo-logo geo-logo" onerror="this.onerror=null;this.src='/geovictoria-logo.png';" src="/logos/geovictoria-logo.png"/></a><div class="hero-meta"><span>Selected work / 01</span><span>2026 — Present</span><span>WFM / B2B SaaS</span></div></div><div class="hero-kicker">Product / Workforce Management / AI</div><h1>Product systems<span>for real-world operations.</span></h1><div class="hero-bottom"><p class="hero-description">I lead the strategy and evolution of Workforce Management products, connecting customer problems, operational needs and technology from discovery through pilots, adoption and continuous improvement.</p><div class="hero-role"><strong>GeoVictoria</strong><span>Product Manager · Workforce Management</span><span>B2B SaaS · Product · Operations</span><a class="hero-site" href="https://www.geovictoria.com/" rel="noopener noreferrer" target="_blank">geovictoria.com ↗</a></div></div></div></section>
 <section class="impact"><div class="impact-head"><div><div class="section-label">01 / Impact</div><h2>From operational problems to<span>adopted product.</span></h2></div><p class="impact-copy">I connect customer, operational and business signals to turn complex workforce constraints into products that can be tested, measured and scaled.</p></div><div class="impact-grid"><div class="impact-item"><strong>3</strong><span>Workforce Management products under my responsibility</span></div><div class="impact-item"><strong>10K+</strong><span>Customers across the GeoVictoria ecosystem</span></div><div class="impact-item"><strong>20+</strong><span>Countries where the company operates</span></div><div class="impact-item"><strong>6</strong><span>Functions connected to move product into operation</span></div></div></section>
