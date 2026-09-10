@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Ahora | Felipe Quiroz</title>
 <meta name="description" content="Lo que Felipe Quiroz está construyendo y explorando actualmente en producto, growth, IA y construcción de compañías.">
-<meta name="theme-color" content="#07090c">
+<meta name="theme-color" content="#05070a">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="canonical" href="https://felipequirozp.cl/es/now">
 <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/now">
@@ -15,7 +15,7 @@
 <meta property="og:title" content="Ahora | Felipe Quiroz">
 <meta property="og:description" content="Lo que Felipe Quiroz está construyendo y explorando actualmente en producto, growth, IA y construcción de compañías.">
 <meta property="og:url" content="https://felipequirozp.cl/es/now">
-<meta property="og:image" content="https://felipequirozp.cl/now-santiago-workspace.jpg">
+<meta property="og:image" content="https://felipequirozp.cl/images/now-santiago-workspace.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -433,7 +433,7 @@ a.build-card:hover{background:#f3f7fb;transform:translateY(-2px)}
   display:flex;align-items:center;text-align:left;
   background:
     linear-gradient(90deg,rgba(4,10,18,.94) 0%,rgba(6,16,28,.82) 55%,rgba(10,25,43,.58) 100%),
-    url('/now-santiago-workspace.jpg') center 48%/cover no-repeat;
+    url('/images/now-santiago-workspace.jpg') center 48%/cover no-repeat;
   color:#fff
 }
 .closing .wrap{position:relative;z-index:1}
@@ -649,6 +649,119 @@ a.build-card:hover{background:#f3f7fb;transform:translateY(-2px)}
 }
 
 </style>
+
+<style id="now-v13-final-polish">
+/* =========================================================
+   NOW V13 — final consistency pass
+   ========================================================= */
+
+/* Same navbar tone used across Home / About / case studies */
+.nav{
+  background:#05070a !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+}
+
+/* More breathing room in the main headline */
+.hero h1{
+  line-height:.98 !important;
+}
+
+/* Restore the intended desktop scale of the working-principle section.
+   A previous mobile rule was leaking into desktop. */
+.system-moment{
+  min-height:680px !important;
+  padding:110px var(--page) !important;
+}
+.system-moment h2{
+  max-width:1080px !important;
+  font-size:clamp(52px,5.7vw,86px) !important;
+  line-height:.98 !important;
+}
+.system-moment p{
+  max-width:650px !important;
+  font-size:15px !important;
+}
+.arc-svg{
+  top:50% !important;
+  width:min(1500px,118vw) !important;
+  transform:translate(-50%,-58%) !important;
+}
+
+/* CSS-drawn arrow so it never turns into an emoji on mobile */
+.icon-box .now-arrow{
+  position:relative;
+  display:inline-block;
+  width:15px;
+  height:15px;
+  color:currentColor;
+}
+.icon-box .now-arrow::before{
+  content:"";
+  position:absolute;
+  left:1px;
+  bottom:2px;
+  width:14px;
+  height:1px;
+  background:currentColor;
+  transform:rotate(-45deg);
+  transform-origin:left center;
+}
+.icon-box .now-arrow::after{
+  content:"";
+  position:absolute;
+  top:0;
+  right:0;
+  width:8px;
+  height:8px;
+  border-top:1px solid currentColor;
+  border-right:1px solid currentColor;
+}
+
+/* Mobile */
+@media(max-width:760px){
+  .hero h1{
+    line-height:1.03 !important;
+  }
+
+  .system-moment{
+    min-height:auto !important;
+    padding:74px 24px 88px !important;
+    align-items:flex-start !important;
+  }
+  .system-moment h2{
+    max-width:100% !important;
+    font-size:clamp(39px,10.8vw,46px) !important;
+    line-height:1.02 !important;
+  }
+  .system-moment p{
+    max-width:34ch !important;
+    font-size:14px !important;
+  }
+  .arc-svg{
+    top:-12px !important;
+    width:185vw !important;
+    max-width:none !important;
+    transform:translate(-50%,-55%) !important;
+  }
+}
+
+@media(max-width:430px){
+  .system-moment{
+    padding-top:70px !important;
+    padding-bottom:82px !important;
+  }
+  .system-moment h2{
+    font-size:clamp(37px,10.6vw,44px) !important;
+  }
+  .arc-svg{
+    top:-4px !important;
+    width:205vw !important;
+    transform:translate(-50%,-56%) !important;
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -691,7 +804,7 @@ a.build-card:hover{background:#f3f7fb;transform:translateY(-2px)}
       <h2>Tres focos. Un mismo impulso: construir mejor.</h2>
       <p>Trabajo cerca de problemas reales, donde producto, operación y negocio necesitan conectarse.</p>
     </div>
-    <div class="build-grid"><a class="build-card" href="/es/geovictoria"><div class="icon-box">⌁</div><div class="num">01</div><h3>GeoVictoria</h3><span class="tag">Producto · Workforce Management</span><p>Construyendo productos para planificación, optimización y operación de turnos en equipos enterprise.</p></a><a class="build-card" href="/es/lowsignal"><div class="icon-box">◇</div><div class="num">02</div><h3>lowsignal</h3><span class="tag">Company Building · Growth Systems</span><p>Construyendo sistemas, producto e infraestructura operativa para una growth company más ágil y repetible.</p></a><div class="build-card"><div class="icon-box">↗</div><div class="num">03</div><h3>Explorando</h3><span class="tag">AI-native · Nuevos modelos</span><p>Explorando cómo la IA, la automatización y equipos pequeños están cambiando lo que una compañía puede construir y operar.</p></div></div>
+    <div class="build-grid"><a class="build-card" href="/es/geovictoria"><div class="icon-box">⌁</div><div class="num">01</div><h3>GeoVictoria</h3><span class="tag">Producto · Workforce Management</span><p>Construyendo productos para planificación, optimización y operación de turnos en equipos enterprise.</p></a><a class="build-card" href="/es/lowsignal"><div class="icon-box">◇</div><div class="num">02</div><h3>lowsignal</h3><span class="tag">Company Building · Growth Systems</span><p>Construyendo sistemas, producto e infraestructura operativa para una growth company más ágil y repetible.</p></a><div class="build-card"><div class="icon-box"><span class="now-arrow" aria-hidden="true"></span></div><div class="num">03</div><h3>Explorando</h3><span class="tag">AI-native · Nuevos modelos</span><p>Explorando cómo la IA, la automatización y equipos pequeños están cambiando lo que una compañía puede construir y operar.</p></div></div>
   </div>
 </section>
 
@@ -716,13 +829,13 @@ a.build-card:hover{background:#f3f7fb;transform:translateY(-2px)}
     <div class="photo-grid">
       <figure class="photo-card">
         <div class="photo-box">
-          <img src="/platanus-ai-native.jpg" alt="Evento AI Native Startups de Platanus en Santiago" loading="lazy">
+          <img src="/images/platanus-ai-native.jpg" alt="Evento AI Native Startups de Platanus en Santiago" loading="lazy">
         </div>
         <figcaption class="photo-cap"><span>Platanus</span><span>AI Native Startups · Santiago</span></figcaption>
       </figure>
       <figure class="photo-card">
         <div class="photo-box">
-          <img src="/felipe-ecosystem-team.jpg" alt="Felipe Quiroz junto a un equipo del ecosistema de startups y tecnología" loading="lazy">
+          <img src="/images/felipe-ecosystem-team.jpg" alt="Felipe Quiroz junto a un equipo del ecosistema de startups y tecnología" loading="lazy">
         </div>
         <figcaption class="photo-cap"><span>En el ecosistema</span><span>Equipos · Conversaciones · Nuevas ideas</span></figcaption>
       </figure>
