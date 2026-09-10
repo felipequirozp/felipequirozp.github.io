@@ -22,10 +22,115 @@
 @media(max-width:760px){:root{--page:24px}.nav{min-height:auto;padding:18px 20px;flex-direction:column;align-items:flex-start;gap:14px}.brand{font-size:18px}.nav-links{width:100%;justify-content:space-between;gap:8px;font-size:9px}.contact-nav{padding:8px 10px}.lang-switch{width:34px;height:34px}.hero{min-height:auto;padding:78px var(--page) 64px}.hero-top{align-items:flex-start;flex-direction:column;gap:20px;margin-bottom:62px}.hero-meta{justify-content:flex-start}.hero h1{font-size:clamp(52px,13vw,72px);line-height:1}.hero-bottom{margin-top:42px}.hero-mark{min-height:60px;min-width:200px}.hero-mark img{height:24px}.impact,.company,.operating,.solutions,.system,.cases{padding:82px var(--page)}.impact h2,.company-main h2,.operating h2,.solutions h2,.system h2,.cases h2{font-size:43px}.impact-grid,.solution-grid{grid-template-columns:1fr}.impact-item,.solution-card{border-right:0!important;border-bottom:1px solid var(--line)}.impact-item:last-child{border-bottom:0}.company-grid{gap:36px}.founder-row{grid-template-columns:68px 1fr;gap:18px}.founder-photo{width:64px;height:64px}.founder-copy,.founder-row>a{grid-column:1/-1}.work-item strong{font-size:18px}.people-head{grid-template-columns:1fr;gap:14px}.person{grid-template-columns:62px 1fr;gap:16px}.person-photo{width:58px;height:58px}.person-context,.person>a{grid-column:1/-1}.solution-card{min-height:240px}.solution-card h3{margin-top:30px}.field{padding:0 var(--page) 82px}.field-card{border-radius:20px}.field-copy{padding:54px 28px}.field-copy h2{font-size:41px;line-height:1.08}.field-photo,.field-photo img{min-height:340px}.case-row{grid-template-columns:34px 1fr;gap:18px}.case-main h3{font-size:25px}.testimonial{padding:78px var(--page)}.principle{min-height:600px;padding:118px var(--page) 82px}.principle-arc{top:28px;height:190px}.principle h2{font-size:48px}.principle-grid{margin-top:42px}.project-nav-inner{grid-template-columns:1fr}.project-nav a:last-child{text-align:left;border-left:0;border-top:1px solid var(--line);padding-left:0}.project-nav a:hover{padding-left:12px;padding-right:12px}.contact-block{flex-direction:column;align-items:flex-start;gap:34px}.footer{flex-direction:column;align-items:flex-start;gap:8px}}
 @media(max-width:390px){.nav-links{font-size:8px}.hero h1{font-size:48px}.impact h2,.company-main h2,.operating h2,.solutions h2,.system h2,.cases h2{font-size:40px}.field-copy h2{font-size:36px}.principle h2{font-size:44px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* V27 — smaller Work in Context photo */
+@media(min-width:901px){
+  .field-card{
+    grid-template-columns:minmax(0,1.28fr) minmax(340px,.62fr);
+  }
+  .field-photo{
+    align-self:center;
+    justify-self:end;
+    width:min(88%,470px);
+    height:500px;
+    min-height:0;
+    margin:56px 56px 56px 0;
+    border-radius:22px;
+  }
+  .field-photo img{
+    width:100%;
+    height:100%;
+    min-height:0;
+    object-fit:cover;
+  }
+}
+@media(max-width:900px){
+  .field-photo{
+    width:auto;
+    max-width:none;
+    height:420px;
+    min-height:0;
+    margin:0 32px 32px;
+    border-radius:18px;
+  }
+  .field-photo img{height:100%;min-height:0}
+}
+@media(max-width:760px){
+  .field-photo{
+    height:320px;
+    min-height:0;
+    margin:0 18px 18px;
+    border-radius:16px;
+  }
+  .field-photo img{height:100%;min-height:0}
+}
+
+
+/* V28 — mobile QA / responsive hardening */
+html,body{max-width:100%;overflow-x:hidden}
+@media(max-width:760px){
+  .nav{padding:18px 20px 16px}
+  .nav-links{flex-wrap:nowrap;overflow:visible}
+  .nav-links>a{white-space:nowrap}
+  .hero{padding-top:68px}
+  .hero-mark{min-width:0;width:min(220px,100%);padding:0 20px}
+  .hero-meta{gap:8px;width:100%}
+  .hero-meta span{padding:8px 10px;font-size:8px;line-height:1.25}
+  .hero h1{max-width:100%;overflow-wrap:normal;word-break:normal}
+  .hero-description,.impact-copy,.company-main>p,.operating-head p,.solutions-head p,.system-head p,.cases-head p{font-size:14px}
+  .impact-item{min-height:150px;padding:26px 22px}
+  .impact-item strong{font-size:46px}
+  .impact-item span{margin-top:12px}
+  .founder-row{margin-top:44px;padding-top:26px}
+  .founder-row h3{font-size:24px}
+  .people{margin-top:62px}
+  .person h3{font-size:23px}
+  .person-context{font-size:12px;line-height:1.72}
+  .solution-card{min-height:220px;padding:24px 22px}
+  .solution-card h3{font-size:24px;margin-top:28px}
+  .system-steps{margin-top:42px}
+  .system-step{padding:24px 0;border-right:0}
+  .system-step strong{font-size:24px}
+  .field-copy{padding:50px 24px 46px}
+  .field-copy h2{font-size:39px;line-height:1.08}
+  .field-photo{height:280px;min-height:0;margin:0 14px 14px;border-radius:16px}
+  .field-photo img{height:100%;min-height:0;object-position:center}
+  .field-photo::after{display:none}
+  .case-row{padding:26px 0}
+  .case-main h3{font-size:24px;line-height:1.22}
+  .case-copy{font-size:12px}
+  .testimonial blockquote{font-size:34px;line-height:1.16}
+  .principle{padding-top:146px}
+  .principle h2{line-height:1.05}
+  .principle-item{padding:24px 0;min-height:0}
+  .principle-item strong{font-size:23px}
+  .project-nav{padding:58px var(--page)}
+  .project-nav strong{font-size:24px}
+  .bottom{padding-top:64px}
+  .contact-links{width:100%}
+  .contact-link{padding:10px 14px}
+}
+@media(max-width:390px){
+  :root{--page:20px}
+  .nav{padding-left:16px;padding-right:16px}
+  .nav-links{gap:6px;font-size:7.5px}
+  .contact-nav{padding:7px 9px}
+  .lang-switch{width:32px;height:32px}
+  .hero{padding-top:60px}
+  .hero h1{font-size:46px;line-height:1.01}
+  .hero-meta span{font-size:7.5px}
+  .impact h2,.company-main h2,.operating h2,.solutions h2,.system h2,.cases h2{font-size:38px;line-height:1.04}
+  .field-copy h2{font-size:35px}
+  .field-photo{height:240px;margin:0 12px 12px}
+  .testimonial blockquote{font-size:31px}
+  .principle{padding-top:138px}
+  .principle h2{font-size:42px}
+}
+
 </style></head><body>
 <header class="nav"><a class="brand" href="/">Felipe Quiroz</a><nav class="nav-links"><a class="active" href="/#work">Work</a><a href="/about">About</a><a href="/now">Now</a><a class="contact-nav" href="#contact">Contact</a><a class="lang-switch" href="/es/lowsignal" aria-label="Switch language">ES</a></nav></header>
 <section class="hero"><div class="hero-inner"><div class="hero-top"><a class="hero-mark" href="https://www.lowsignal.cl/" target="_blank" rel="noopener noreferrer"><img src="/logos/lowsignal-logo.png" alt="lowsignal"></a><div class="hero-meta"><span>Selected work / 02</span><span>2025 — Present</span><span>Growth / Company Building</span></div></div><div class="hero-kicker">Growth systems / AI / Operations</div><h1>Building the system<span>behind growth.</span></h1><div class="hero-bottom"><p class="hero-description">I lead operations, commercial strategy and product delivery, building growth systems that connect strategy, AI, automation, digital experiences and execution.</p><div class="hero-role"><strong>lowsignal</strong><span>Co-Founder & COO · Growth Systems</span><span>Santiago · Chile</span><a class="hero-site" href="https://www.lowsignal.cl/" target="_blank" rel="noopener noreferrer">lowsignal.cl ↗</a></div></div></div></section>
-<section class="impact"><div class="impact-head"><div><div class="section-label">01 / Impact</div><h2>From opportunities<span>to repeatable growth.</span></h2></div><p class="impact-copy">I connect commercial strategy, operations, product and execution to turn growth opportunities into systems that can be operated, measured and improved.</p></div><div class="impact-grid"><div class="impact-item"><strong>15+</strong><span>organizations worked with</span></div><div class="impact-item"><strong>6</strong><span>growth solutions</span></div><div class="impact-item"><strong>5+</strong><span>industries</span></div><div class="impact-item"><strong>End-to-end</strong><span>commercial engine</span></div></div></section>
+<section class="impact"><div class="impact-head"><div><div class="section-label">01 / Impact</div><h2>From opportunities<span>to repeatable growth.</span></h2></div><p class="impact-copy">I connect commercial strategy, operations, product and execution to turn growth opportunities into systems that can be operated, measured and improved.</p></div><div class="impact-grid"><div class="impact-item"><strong>15+</strong><span>Organizations worked with</span></div><div class="impact-item"><strong>6</strong><span>Growth solutions</span></div><div class="impact-item"><strong>5+</strong><span>Industries</span></div><div class="impact-item"><strong>End-to-end</strong><span>Commercial engine</span></div></div></section>
 <section class="company"><div class="company-grid"><div class="section-label">02 / Company building</div><div class="company-main"><h2>Building a company, not just campaigns.</h2><p>lowsignal started from a simple idea: growth works better when strategy, technology, creativity and operations are connected instead of managed as isolated pieces.</p><p>We build systems that connect acquisition, content, digital products, automation and execution — so growth becomes an operating model, not a collection of campaigns.</p><div class="founder-row"><div class="founder-photo"><img src="/images/damian-aldunate.jpg" alt="Damián Aldunate" loading="lazy"></div><div><div class="eyebrow">Leadership</div><h3>Damián Aldunate</h3><div class="founder-meta">Co-Founder & CMO · lowsignal</div></div><p class="founder-copy">Together with Damián, we build lowsignal through complementary roles across brand, growth, operations and business development.</p><a class="icon-link" href="https://www.linkedin.com/in/damianaldunate/" target="_blank" rel="noopener noreferrer" aria-label="Damián Aldunate LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg></a></div></div></div></section>
 <section class="operating"><div class="operating-inner"><div class="operating-head"><div><div class="section-label">03 / Operating system</div><h2>Operating the system<span>behind the company.</span></h2></div><p>My work spans how we sell, how we deliver and how we scale — turning opportunities, processes and learnings into repeatable systems.</p></div><div class="work-list"><div class="work-item"><div class="work-num">01</div><strong>Company operations and execution</strong></div><div class="work-item"><div class="work-num">02</div><strong>Demand generation, proposals and negotiation</strong></div><div class="work-item"><div class="work-num">03</div><strong>Account growth and go-to-market strategy</strong></div><div class="work-item"><div class="work-num">04</div><strong>Product delivery and digital solutions</strong></div><div class="work-item"><div class="work-num">05</div><strong>Cross-functional leadership across Product, Marketing, Design, Sales and Customer Success</strong></div><div class="work-item"><div class="work-num">06</div><strong>Dashboards, reporting and scalable processes</strong></div></div><div class="people"><div class="people-head"><div class="section-label">People</div><p>A multidisciplinary team connecting strategy, business development, content and audiovisual production.</p></div><div class="people-list"><article class="person"><div class="person-photo"><img src="/images/marco-kroeger.jpg" alt="Marco Kroeger" loading="lazy"></div><div><h3>Marco Kroeger</h3><div class="person-role">Business Development</div></div><p class="person-context">Opens new business conversations, identifies opportunities and connects client needs with lowsignal’s growth systems.</p><a class="icon-link" href="https://www.linkedin.com/in/marcokroeger/" target="_blank" rel="noopener noreferrer" aria-label="Marco Kroeger LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg></a></article><article class="person"><div class="person-photo"><img src="/images/lia-morice.jpg" alt="Lía Morice" loading="lazy"></div><div><h3>Lía Morice</h3><div class="person-role">Content Creator</div></div><p class="person-context">Turns strategy, trends and digital culture into relevant content for brands and communities.</p><a class="icon-link" href="https://www.linkedin.com/in/l%C3%ADa-morice-b31521419/" target="_blank" rel="noopener noreferrer" aria-label="Lía Morice LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg></a></article><article class="person"><div class="person-photo"><img src="/images/martin-alvarado.jpg" alt="Martín Alvarado" loading="lazy"></div><div><h3>Martín Alvarado</h3><div class="person-role">Audiovisual Producer</div></div><p class="person-context">Builds audiovisual pieces through production, editing and narrative, translating each project’s identity into video.</p><a class="icon-link" href="https://www.linkedin.com/in/martin-alvaradod" target="_blank" rel="noopener noreferrer" aria-label="Martín Alvarado LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg></a></article><article class="person"><div class="person-photo"><img src="/images/jorge-munoz.jpg" alt="Jorge Muñoz" loading="lazy"></div><div><h3>Jorge Muñoz</h3><div class="person-role">Audiovisual Producer</div></div><p class="person-context">Works across audiovisual production, storytelling and creative direction to shape content for brands and projects.</p><a class="icon-link" href="https://www.linkedin.com/in/jorgemunozve/" target="_blank" rel="noopener noreferrer" aria-label="Jorge Muñoz LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg></a></article></div></div></div></section>
 <section class="solutions"><div class="solutions-head"><div><div class="section-label">04 / What we build</div><h2>One system.<span>Six layers of growth.</span></h2></div><p>Each solution solves a different part of the same problem: connecting growth strategy with repeatable execution.</p></div><div class="solution-grid"><article class="solution-card"><div class="solution-num">01</div><div class="solution-icon">01</div><h3>Low Social</h3><div class="solution-type">Social Media</div><p>Social media and content systems designed for consistency, distribution and repeatable execution.</p></article><article class="solution-card"><div class="solution-num">02</div><div class="solution-icon">02</div><h3>Low Ads</h3><div class="solution-type">Performance</div><p>Paid acquisition systems focused on measurable growth and continuous optimization.</p></article><article class="solution-card"><div class="solution-num">03</div><div class="solution-icon">03</div><h3>Low Web</h3><div class="solution-type">Web Development</div><p>Websites and digital experiences built as part of a broader growth system.</p></article><article class="solution-card"><div class="solution-num">04</div><div class="solution-icon">04</div><h3>Low Scale</h3><div class="solution-type">Growth Systems</div><p>Infrastructure connecting acquisition, positioning, processes and scalable execution.</p></article><article class="solution-card"><div class="solution-num">05</div><div class="solution-icon">05</div><h3>Low Apps</h3><div class="solution-type">Products & Apps</div><p>Digital products and tools designed around specific operational or growth challenges.</p></article><article class="solution-card"><div class="solution-num">06</div><div class="solution-icon">06</div><h3>Low Flow</h3><div class="solution-type">AI & Automation</div><p>AI, automation and workflows that remove repetitive work and create leverage for teams.</p></article></div></section>
