@@ -1149,6 +1149,118 @@ header.nav{
   }
 }
 
+
+/* =========================================================
+   HOME BOOM V5 — Selected Work more compact
+   ========================================================= */
+.selected-inner{
+  width:min(1280px,100%) !important;
+}
+.work-list{
+  gap:22px !important;
+}
+.work-card{
+  min-height:390px !important;
+  border-radius:20px !important;
+}
+.work-content{
+  padding:36px 40px 34px !important;
+}
+.work-index{
+  margin-bottom:14px !important;
+}
+.work-brand{
+  width:172px !important;
+  height:62px !important;
+  margin-bottom:14px !important;
+  padding:11px 14px !important;
+  border-radius:12px !important;
+}
+.work-brand img{
+  max-width:142px !important;
+  max-height:29px !important;
+}
+.work-role{
+  font-size:11px !important;
+}
+.work-main{
+  margin-top:24px !important;
+}
+.work-main h3{
+  max-width:520px !important;
+  font-size:clamp(30px,2.55vw,41px) !important;
+  line-height:1.04 !important;
+}
+.work-main p{
+  margin-top:14px !important;
+  max-width:520px !important;
+  font-size:12px !important;
+  line-height:1.68 !important;
+}
+.work-signals{
+  margin-top:18px !important;
+  padding-top:14px !important;
+  gap:8px 16px !important;
+  font-size:9px !important;
+}
+.work-cta{
+  margin-top:18px !important;
+  font-size:9px !important;
+}
+.work-photo,
+.work-photo img{
+  min-height:390px !important;
+}
+
+/* Slightly favor text over image so the case feels less like a giant photo */
+.work-card{
+  grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr) !important;
+}
+.work-card:nth-child(even){
+  grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr) !important;
+}
+
+@media(max-width:960px){
+  .work-card{
+    min-height:360px !important;
+  }
+  .work-content{
+    padding:32px 30px !important;
+  }
+  .work-photo,
+  .work-photo img{
+    min-height:360px !important;
+  }
+  .work-main h3{
+    font-size:34px !important;
+  }
+}
+
+@media(max-width:760px){
+  .selected-inner{
+    width:100% !important;
+  }
+  .work-card{
+    min-height:0 !important;
+    border-radius:17px !important;
+  }
+  .work-photo,
+  .work-photo img{
+    height:220px !important;
+    min-height:220px !important;
+  }
+  .work-content{
+    padding:24px 22px 26px !important;
+  }
+  .work-brand{
+    width:160px !important;
+    height:56px !important;
+  }
+  .work-main h3{
+    font-size:31px !important;
+  }
+}
+
 </style>
 </head>
 <body>
