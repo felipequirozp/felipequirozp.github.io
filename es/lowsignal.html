@@ -126,6 +126,34 @@ body{padding-top:var(--persistent-nav-h)}
   }
 }
 
+
+/* V32 — Work in Context: shorter card, image still spans top-to-bottom */
+@media(min-width:901px){
+  .field-card{
+    height:clamp(520px,38vw,610px);
+    min-height:0;
+  }
+  .field-copy{
+    padding:58px 56px;
+  }
+  .field-photo{
+    height:100%;
+    min-height:0;
+  }
+  .field-photo img{
+    height:100%;
+    min-height:0;
+    object-fit:cover;
+    object-position:center;
+  }
+}
+@media(max-width:900px){
+  .field-card{
+    height:auto;
+    min-height:0;
+  }
+}
+
 </style></head><body>
 <header class="nav"><a class="brand" href="/es/">Felipe Quiroz</a><nav class="nav-links"><a class="active" href="/es/#work">Trabajo</a><a href="/es/about">Sobre mí</a><a href="/es/now">Ahora</a><a class="contact-nav" href="#contact">Contacto</a><a class="lang-switch" href="/lowsignal" aria-label="Switch language">EN</a></nav></header>
 <section class="hero"><div class="hero-inner"><div class="hero-top"><a class="hero-mark" href="https://www.lowsignal.cl/" target="_blank" rel="noopener noreferrer"><img src="/logos/lowsignal-logo.png" alt="lowsignal"></a><div class="hero-meta"><span>Trabajo seleccionado / 02</span><span>2025 — Presente</span><span>Growth / Company Building</span></div></div><div class="hero-kicker">Growth systems / IA / Operaciones</div><h1>Construyendo el sistema<span>detrás del crecimiento.</span></h1><div class="hero-bottom"><p class="hero-description">Lidero operaciones, estrategia comercial y delivery de producto, construyendo growth systems que conectan estrategia, IA, automatización, experiencias digitales y ejecución.</p><div class="hero-role"><strong>lowsignal</strong><span>Co-Founder & COO · Growth Systems</span><span>Santiago · Chile</span><a class="hero-site" href="https://www.lowsignal.cl/" target="_blank" rel="noopener noreferrer">lowsignal.cl ↗</a></div></div></div></section>
