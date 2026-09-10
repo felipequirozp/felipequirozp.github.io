@@ -4,9 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Felipe Quiroz | Product, Growth & Operations</title>
-<meta name="theme-color" content="#182536">
-<!-- FAVICON -->
-<link href="favicon.png" rel="icon" type="image/png"/>
+<meta name="theme-color" content="#05070a">
+<link rel="icon" type="image/png" href="/favicon.png">
 <meta name="description" content="Felipe Quiroz — product, growth and operations. Building products, growth systems and operating models across technology and business.">
 <link rel="canonical" href="https://felipequirozp.cl/">
 <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/">
@@ -30,8 +29,8 @@
   --muted:#66717d;
   --line:#d4d9de;
   --cyan:#35e7ea;
-  --page-gutter:5vw;
-  --page-max:1520px;
+  --page-gutter:7vw;
+  --page-max:1440px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -39,7 +38,6 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:"Inter",syste
 a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
 img{display:block;width:100%;max-width:100%}
 ::selection{background:var(--navy);color:#fff}
-#work,#about,#contact{scroll-margin-top:110px}
 
 /* SAME NAV SYSTEM AS CASE PAGES */
 .nav{min-height:84px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;gap:30px;background:var(--navy);color:#fff;border-bottom:1px solid rgba(255,255,255,.12)}
@@ -156,7 +154,22 @@ img{display:block;width:100%;max-width:100%}
   line-height:1.72;
 }
 
+.about-bridge-personal{
+  margin:18px 0 0;
+  max-width:680px;
+  color:#aebbd0;
+  font-size:13px;
+  line-height:1.7;
+}
 
+.about-bridge-meta{
+  margin-top:28px;
+  color:#c7d0d9;
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
 .about-bridge-link{
   display:inline-flex;
   align-items:center;
@@ -196,7 +209,7 @@ img{display:block;width:100%;max-width:100%}
 .now .section-label{color:#86a0b8}
 .now h2{max-width:760px;color:#fff;margin:18px 0 0;font-family:"Manrope",sans-serif;font-size:clamp(54px,6vw,92px);line-height:.94;letter-spacing:-.065em;font-weight:400}
 .now h2 span{display:block;color:#aebbd0}
-.now-copy{margin:26px 0 0;max-width:620px;color:#e3e8ef;font-size:15px;line-height:1.68}
+.now-copy{margin:26px 0 0;max-width:760px;color:#e3e8ef;font-size:15px;line-height:1.68}
 .now-link{align-self:end;display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border:1px solid rgba(255,255,255,.22);border-radius:999px;font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:.2s ease}
 .now-link:hover{background:#fff;color:var(--navy)}
 
@@ -341,10 +354,7 @@ header.nav{
   color:#fff;
   transition:background .2s ease,color .2s ease,border-color .2s ease;
 }
-.contact-nav:visited{color:#fff}
-.contact-nav:hover,
-.contact-nav:focus-visible,
-.contact-nav:active{background:#fff;color:var(--navy);border-color:#fff;opacity:1;outline:none;box-shadow:none}
+.contact-nav:hover{background:#fff;color:var(--navy);border-color:#fff;opacity:1}
 .lang-switch{
   width:38px;
   height:38px;
@@ -405,16 +415,252 @@ header.nav{
 }
 
 
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+/* =========================================================
+   HOME BOOM V1 — aligned with About / Now
+   ========================================================= */
+:root{
+  --navy:#08111d;
+  --navy-deep:#05070a;
+  --steel:#33465e;
+  --steel-light:#78899d;
+  --slate:#99a8ba;
+  --slate-light:#c7d0da;
+  --ice:#f2f4f7;
+  --paper:#f6f7f9;
+  --white:#fff;
+  --ink:#090d12;
+  --muted:#687382;
+  --line:#dce1e7;
+  --cyan:#1683ff;
+  --blue:#1683ff;
 }
+
+/* Global rhythm */
+body{background:#fff}
+.section-label{color:#718297;letter-spacing:.12em}
+::selection{background:#1683ff;color:#fff}
+
+/* NAV — same dark system as About / Now */
+header.nav{
+  position:sticky;top:0;z-index:1000;
+  min-height:84px;padding:0 5vw;
+  background:rgba(5,7,10,.95);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+}
+.brand{color:#fff}
+.nav-links>a:not(.contact-nav):not(.lang-switch){color:#b9c2cc}
+.nav-links>a:not(.contact-nav):not(.lang-switch):hover{color:#fff}
+.contact-nav{
+  border-color:rgba(255,255,255,.26);
+  transition:background .22s ease,color .22s ease,border-color .22s ease,transform .18s ease;
+}
+.contact-nav:hover{
+  background:#fff!important;color:#07101b!important;border-color:#fff!important;
+  transform:translateY(-1px)
+}
+.contact-nav:active{transform:translateY(0) scale(.98)}
+.lang-switch{border-color:rgba(255,255,255,.22)}
+.lang-switch:hover{background:rgba(255,255,255,.08)!important}
+
+/* HERO — deeper, simpler, more editorial */
+.hero{
+  position:relative;
+  padding:78px var(--page-gutter) 96px;
+  background:
+    radial-gradient(circle at 83% 42%,rgba(22,131,255,.16),transparent 26%),
+    linear-gradient(108deg,#05070a 0%,#07101b 52%,#102844 100%);
+  overflow:hidden;
+}
+.hero::after{
+  content:"";
+  position:absolute;right:-8%;bottom:-44%;
+  width:52vw;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,rgba(22,131,255,.12),transparent 62%);
+  filter:blur(12px);pointer-events:none
+}
+.hero-inner{position:relative;z-index:2;align-items:center}
+.hero-label{color:#69b5ff;letter-spacing:.13em}
+.hero h1{
+  max-width:880px;
+  font-size:clamp(62px,7vw,108px);
+  line-height:.92;letter-spacing:-.072em
+}
+.hero h1 .accent{color:#a8bdd7}
+.hero-desc{
+  max-width:670px;
+  margin-top:34px;padding-top:24px;
+  color:#d6dde6;border-color:rgba(255,255,255,.14);
+  font-size:16px;line-height:1.68
+}
+.hero-roles{margin-top:26px;gap:20px}
+.hero-role{border-color:rgba(255,255,255,.11)}
+.hero-role span{color:#7f90a5}
+.hero-role strong{font-size:12px}
+.hero-photo{
+  min-height:540px;border-radius:22px;
+  border:1px solid rgba(255,255,255,.09);
+  box-shadow:0 24px 70px rgba(0,0,0,.24)
+}
+.hero-photo img{min-height:540px;filter:saturate(.98) contrast(1.02)}
+.photo-meta{color:#8797aa}
+
+/* NUMBERS — keep real-photo energy, cleaner black overlay */
+.proof{background:#fff}
+.proof-inner{padding:74px 0 88px}
+.proof-grid{
+  margin-top:28px;
+  background:
+    linear-gradient(90deg,rgba(4,8,14,.91),rgba(7,17,31,.82) 52%,rgba(10,35,67,.72)),
+    url('/building-in-the-field.jpg') center 46%/cover no-repeat;
+  border:1px solid rgba(8,17,29,.10);
+  border-radius:22px;
+  box-shadow:none
+}
+.proof-item{min-height:184px}
+.proof-item strong{font-size:clamp(42px,4vw,62px)}
+.proof-item span{color:#ccd5df}
+
+/* SELECTED WORK — more editorial, less SaaS */
+.selected{padding:112px var(--page-gutter) 122px;background:#fff}
+.selected-head{margin-bottom:58px}
+.selected-head h2{
+  max-width:980px;color:#0a111c;
+  font-size:clamp(48px,5.15vw,76px);
+  line-height:1.02;letter-spacing:-.058em
+}
+.selected-head p{color:#6d7886}
+.work-list{border-color:#dce1e7}
+.work-card{
+  padding:48px 0;
+  border-color:#dce1e7;
+  transition:transform .22s ease,background .22s ease
+}
+.work-card:hover{
+  transform:translateY(-3px);
+  background:linear-gradient(90deg,rgba(22,131,255,.018),rgba(22,131,255,.008));
+  box-shadow:none
+}
+.work-brand{
+  background:#07101b;
+  border-color:#07101b;
+  border-radius:12px
+}
+.work-card:hover .work-brand{
+  background:#0b1a2b;border-color:#17375d;transform:translateY(-2px)
+}
+.work-main h3{color:#0a111c}
+.work-signals{color:#52667e}
+.work-cta{color:#0a111c}
+.work-photo{
+  border-radius:18px;border-color:#e0e4e9;background:#f3f5f7
+}
+.work-card:hover .work-photo img{transform:scale(1.014)}
+
+/* ABOUT PREVIEW — clean dark panel, no decorative arcs */
+.about-bridge{
+  padding:112px var(--page-gutter);
+  background:#05070a;
+}
+.about-bridge-inner{align-items:center}
+.about-bridge-copy .section-label{color:#69b5ff}
+.about-bridge h2{
+  max-width:840px;
+  font-size:clamp(52px,5.4vw,80px);
+  line-height:.99;letter-spacing:-.062em
+}
+.about-bridge h2 span{color:#a7b9cf}
+.about-bridge-lead{color:#c9d1db;max-width:690px}
+.about-bridge-link{
+  margin-top:30px;
+  border-bottom-color:rgba(255,255,255,.32);
+  transition:color .2s ease,border-color .2s ease,transform .18s ease
+}
+.about-bridge-link:hover{color:#78b9ff;border-color:#78b9ff;transform:translateY(-1px)}
+.about-bridge-visual img{
+  border-radius:22px;
+  filter:saturate(.96) contrast(1.03)
+}
+
+/* NOW PREVIEW — city stays important */
+.now{
+  position:relative;
+  padding:110px var(--page-gutter);
+  background:
+    linear-gradient(90deg,rgba(4,9,16,.95) 0%,rgba(5,14,26,.82) 48%,rgba(12,34,62,.60) 100%),
+    url('/now-santiago-workspace.jpg') center 47%/cover no-repeat;
+}
+.now::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 68%,rgba(4,9,16,.20));
+  pointer-events:none
+}
+.now-inner{position:relative;z-index:2;min-height:430px}
+.now .section-label{color:#7ebcff}
+.now h2{
+  max-width:800px;
+  font-size:clamp(56px,6vw,90px);
+  line-height:.95;letter-spacing:-.064em
+}
+.now h2 span{color:#a9bbd0}
+.now-copy{max-width:620px;color:#dce3eb}
+.now-link{
+  min-height:48px;padding:0 20px;
+  background:#1683ff;border-color:#1683ff;color:#fff;
+  border-radius:11px;
+  transition:background .22s ease,color .22s ease,border-color .22s ease,transform .18s ease,box-shadow .22s ease
+}
+.now-link:hover{
+  background:#fff;color:#07101b;border-color:#fff;
+  transform:translateY(-2px);
+  box-shadow:0 12px 30px rgba(22,131,255,.20)
+}
+.now-link:active{transform:translateY(0) scale(.98)}
+
+/* CONTACT */
+.bottom{background:#f6f7f9;border-top:1px solid #e0e4e9}
+.contact-copy h3{color:#08111d}
+.contact-link{border-color:rgba(8,17,29,.18);color:#08111d}
+.contact-link:hover{background:#08111d;border-color:#08111d;color:#fff}
+
+/* Mobile */
+@media(max-width:900px){
+  .hero-photo{min-height:500px}
+  .hero-photo img{min-height:500px}
+  .about-bridge-inner{gap:46px}
+}
+@media(max-width:760px){
+  header.nav{background:rgba(5,7,10,.97)}
+  .hero{padding:52px var(--page-gutter) 72px}
+  .hero::after{display:none}
+  .hero h1{font-size:clamp(52px,15vw,72px)}
+  .hero-desc{font-size:15px}
+  .hero-photo{min-height:420px;border-radius:18px}
+  .hero-photo img{min-height:420px}
+  .proof-inner{padding:60px 0 68px}
+  .proof-grid{border-radius:18px}
+  .selected{padding:82px var(--page-gutter) 92px}
+  .selected-head h2{font-size:clamp(42px,12vw,56px)}
+  .about-bridge{padding:86px var(--page-gutter)}
+  .about-bridge h2{font-size:clamp(44px,12vw,56px)}
+  .now{padding:86px var(--page-gutter)}
+  .now-inner{min-height:390px}
+  .now h2{font-size:clamp(46px,13vw,62px)}
+  .now-link{justify-self:start}
+}
+@media(max-width:390px){
+  .hero h1{font-size:50px}
+  .hero-photo{min-height:380px}
+  .hero-photo img{min-height:380px}
+}
+
 </style>
 </head>
 <body>
 <header class="nav">
   <a class="brand" href="/">Felipe Quiroz</a>
-  <nav class="nav-links" aria-label="Primary navigation">
+  <nav class="nav-links">
     <a href="#work">Work</a>
     <a href="/about">About</a>
     <a href="/now">Now</a>
@@ -423,7 +669,6 @@ header.nav{
   </nav>
 </header>
 
-<main>
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-copy">
@@ -436,7 +681,7 @@ header.nav{
       </div>
     </div>
     <div class="hero-photo-wrap">
-      <div class="hero-photo"><img src="/profile.jpg" alt="Felipe Quiroz" fetchpriority="high" decoding="async"></div>
+      <div class="hero-photo"><img src="/profile.jpg" alt="Felipe Quiroz"></div>
       <div class="photo-meta"><span>Product · Growth · Operations</span><span>CL</span></div>
     </div>
   </div>
@@ -495,11 +740,10 @@ header.nav{
 
 <section class="now">
   <div class="now-inner">
-    <div><div class="section-label">Now</div><h2>Building<br><span>what’s next.</span></h2><p class="now-copy">I like working close to the problem and turning ambiguity into systems, products and operating models that teams can actually use.</p></div>
+    <div><div class="section-label">Now</div><h2>Building<br><span>what’s next.</span></h2><p class="now-copy">I like working close to the problem, turning ambiguity into systems, products and operating models that teams can actually use.</p></div>
     <a class="now-link" href="/now">See what I’m working on ↗</a>
   </div>
 </section>
-</main>
 
 <section class="bottom" id="contact">
   <div class="contact-block">
