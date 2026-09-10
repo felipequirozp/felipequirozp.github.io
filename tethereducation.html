@@ -6954,37 +6954,661 @@
       opacity:1 !important;
     }
 
-</style>
 
-<style>
 /* =========================================================
-   FINAL TYPOGRAPHY FIX — Section 04 matches all sections
+   TETHER BOOM V1 — aligned with the new portfolio system
    ========================================================= */
-.operating-title{
-  max-width:860px !important;
-  margin:0 0 35px !important;
-  font-family:"Manrope",sans-serif !important;
-  font-size:clamp(40px,5vw,72px) !important;
-  line-height:1.10 !important;
-  letter-spacing:-.055em !important;
+:root{
+  --boom-black:#05070a;
+  --boom-navy:#08111d;
+  --boom-blue:#1683ff;
+  --boom-steel:#a7b8cd;
+  --boom-paper:#f6f7f9;
+  --boom-ink:#0a111c;
+  --boom-muted:#687482;
+  --boom-line:#dde3ea;
+}
+
+/* NAV */
+.nav{
+  position:sticky !important;
+  top:0 !important;
+  z-index:1000 !important;
+  min-height:84px !important;
+  padding:0 5vw !important;
+  background:rgba(5,7,10,.94) !important;
+  border-bottom:1px solid rgba(255,255,255,.08) !important;
+  backdrop-filter:blur(18px) !important;
+  -webkit-backdrop-filter:blur(18px) !important;
+}
+.brand{color:#fff !important}
+.nav-links > a:not(.contact-nav){color:#bcc4ce !important}
+.contact-nav{
+  border-color:rgba(255,255,255,.25) !important;
+  color:#fff !important;
+}
+.contact-nav:hover,
+.contact-nav:focus-visible{
+  background:#fff !important;
+  color:#07101b !important;
+  border-color:#fff !important;
+}
+.lang-switch{
+  border:1px solid rgba(255,255,255,.20) !important;
+  border-radius:50% !important;
+}
+
+/* HERO — remove old grid, keep it editorial */
+.hero{
+  position:relative !important;
+  min-height:calc(100svh - 84px) !important;
+  display:flex !important;
+  align-items:center !important;
+  overflow:hidden !important;
+  background:
+    radial-gradient(circle at 86% 30%,rgba(22,131,255,.16),transparent 28%),
+    linear-gradient(108deg,#05070a 0%,#07101b 57%,#102844 100%) !important;
+}
+.hero::before{display:none !important}
+.hero::after{
+  content:"";
+  position:absolute;
+  right:-10%;
+  bottom:-42%;
+  width:56vw;
+  aspect-ratio:1;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(22,131,255,.12),transparent 66%);
+  pointer-events:none;
+}
+.hero-editorial{
+  position:relative !important;
+  z-index:2 !important;
+  width:min(1440px,calc(100% - 10vw)) !important;
+  padding:76px 0 74px !important;
+}
+.hero-editorial-top{margin-bottom:64px !important}
+.hero-editorial-logo{
+  min-width:0 !important;
+  width:max-content !important;
+  padding:12px 16px !important;
+  border-radius:13px !important;
+  background:#05070a !important;
+  border:1px solid rgba(255,255,255,.10) !important;
+  box-shadow:none !important;
+}
+.hero-editorial-kicker{
+  color:#69b5ff !important;
+  text-transform:uppercase !important;
+  letter-spacing:.11em !important;
+  font-size:10px !important;
+  font-weight:700 !important;
+}
+.hero-editorial h1{
+  max-width:1100px !important;
+  font-size:clamp(70px,7.7vw,118px) !important;
+  line-height:.92 !important;
+  letter-spacing:-.07em !important;
+}
+.hero-editorial h1 .hero-accent{color:#a8bdd7 !important}
+.hero-editorial-bottom{
+  grid-template-columns:minmax(0,1fr) minmax(270px,.38fr) !important;
+  margin-top:46px !important;
+  padding-top:28px !important;
+}
+.hero-editorial-description{
+  max-width:780px !important;
+  font-size:16px !important;
+  line-height:1.7 !important;
+  color:#d4dce5 !important;
+}
+
+/* IMPACT — cleaner, less legacy landing-page */
+.impact-band{
+  background:#fff !important;
+  color:var(--boom-ink) !important;
+  padding:96px 5vw 104px !important;
+}
+.impact-band-inner{
+  width:min(1320px,100%) !important;
+  margin:0 auto !important;
+}
+.impact-band-label{
+  color:#71849a !important;
+  font-size:10px !important;
+  letter-spacing:.11em !important;
+  text-transform:uppercase !important;
+}
+.impact-band-head{
+  grid-template-columns:minmax(0,1fr) minmax(320px,.46fr) !important;
+  gap:50px !important;
+  margin-top:18px !important;
+}
+.impact-band-title{
+  max-width:760px !important;
+  color:var(--boom-ink) !important;
+  font-size:clamp(52px,5.3vw,80px) !important;
+  line-height:1 !important;
+  letter-spacing:-.06em !important;
+}
+.impact-band-title .impact-line:first-child{color:var(--boom-ink) !important}
+.impact-band-title .impact-line-accent{color:#7890aa !important}
+.impact-band-copy{
+  color:var(--boom-muted) !important;
+  max-width:440px !important;
+}
+.impact-band-metrics{
+  margin-top:44px !important;
+  display:grid !important;
+  grid-template-columns:repeat(4,1fr) !important;
+  background:linear-gradient(105deg,#05070a,#07101b 70%,#0a1829) !important;
+  border:1px solid rgba(8,17,29,.12) !important;
+  border-radius:20px !important;
+  overflow:hidden !important;
+}
+.impact-signal{
+  min-height:150px !important;
+  padding:28px 26px !important;
+  border-right:1px solid rgba(255,255,255,.10) !important;
+  border-top:0 !important;
+  border-bottom:0 !important;
+}
+.impact-signal:last-child{border-right:0 !important}
+.impact-signal strong{
+  color:#fff !important;
+  font-size:42px !important;
+  font-weight:400 !important;
+  letter-spacing:-.05em !important;
+}
+.impact-signal span{
+  color:#aeb9c7 !important;
+  font-size:10px !important;
+  line-height:1.5 !important;
+}
+
+/* MAIN */
+.content{
+  background:#fff !important;
+}
+.content-grid{
+  width:min(1320px,calc(100% - 10vw)) !important;
+  margin:0 auto !important;
+  grid-template-columns:minmax(0,1fr) 290px !important;
+  gap:70px !important;
+}
+.main-column > .section{
+  padding-top:92px !important;
+  padding-bottom:92px !important;
+}
+.main-column > .section .section-label{
+  color:#71849a !important;
+}
+.main-column > .section h2{
+  color:var(--boom-ink) !important;
+  font-size:clamp(46px,4.8vw,72px) !important;
+  line-height:1 !important;
+  letter-spacing:-.06em !important;
+}
+.section-copy p{
+  color:var(--boom-muted) !important;
+  font-size:15px !important;
+  line-height:1.78 !important;
+}
+
+/* NEW PEOPLE BLOCK */
+.leadership-card{display:none !important}
+
+.people-block{
+  margin-top:48px;
+  padding-top:34px;
+  border-top:1px solid var(--boom-line);
+}
+.people-block-head{
+  display:grid;
+  grid-template-columns:160px minmax(0,1fr);
+  gap:28px;
+  align-items:start;
+  margin-bottom:26px;
+}
+.people-block-label{
+  color:#71849a;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+}
+.people-block-head p{
+  margin:0;
+  max-width:680px;
+  color:var(--boom-muted);
+  font-size:13px;
+  line-height:1.68;
+}
+.people-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+.person-card{
+  padding:18px;
+  border:1px solid var(--boom-line);
+  border-radius:20px;
+  background:#fff;
+  transition:border-color .22s ease,box-shadow .22s ease;
+}
+.person-card:hover{
+  border-color:rgba(22,131,255,.35);
+  box-shadow:0 14px 34px rgba(8,17,29,.06);
+}
+.person-pill{
+  min-height:94px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:10px 18px 10px 10px;
+  border:1px solid #d7dde5;
+  border-radius:999px;
+  background:#f6f7f9;
+}
+.person-photo-wrap{
+  position:relative;
+  width:74px;
+  height:74px;
+  flex:0 0 74px;
+  border-radius:50%;
+  overflow:hidden;
+  background:linear-gradient(135deg,#dbe8f7,#b6d5f8);
+}
+.person-photo-fallback{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  color:#18304c;
+  font-family:"Manrope",sans-serif;
+  font-size:20px;
+  font-weight:600;
+}
+.person-photo{
+  position:relative;
+  z-index:2;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.person-pill-copy{
+  min-width:0;
+}
+.person-kicker{
+  margin-bottom:5px;
+  color:#6d82a0;
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+.person-pill h3{
+  margin:0;
+  color:#151927;
+  font-family:"Manrope",sans-serif;
+  font-size:24px;
+  line-height:1.06;
+  font-weight:500;
+  letter-spacing:-.045em;
+}
+.person-body{
+  padding:20px 10px 8px;
+}
+.person-role{
+  margin:0 0 14px;
+  color:#536173;
+  font-size:11px;
+  line-height:1.55;
+}
+.person-context{
+  margin:0;
+  color:#687482;
+  font-size:12.5px;
+  line-height:1.7;
+}
+.person-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:18px;
+}
+.person-links a{
+  display:inline-flex;
+  align-items:center;
+  padding:8px 10px;
+  border:1px solid #d8dee6;
+  border-radius:999px;
+  color:#0a111c !important;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+.person-links a:hover{
+  background:#05070a;
+  color:#fff !important;
+  border-color:#05070a;
+}
+
+/* BACKING / SIDEBAR */
+.backing-block{
+  border-radius:18px !important;
+  border:1px solid var(--boom-line) !important;
+  background:#f7f8fa !important;
+}
+.sidebar{
+  border-left:1px solid var(--boom-line) !important;
+}
+.sidebar-card{
+  border-bottom:1px solid var(--boom-line) !important;
+}
+
+/* FIELD PHOTOS */
+.field-block img{
+  border-radius:18px !important;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .hero{min-height:auto !important}
+  .hero-editorial{width:calc(100% - 44px) !important;padding:68px 0 62px !important}
+  .hero-editorial-bottom{grid-template-columns:1fr !important}
+  .impact-band-head{grid-template-columns:1fr !important}
+  .impact-band-copy{max-width:680px !important}
+  .impact-band-metrics{grid-template-columns:1fr 1fr !important}
+  .impact-signal:nth-child(2){border-right:0 !important}
+  .impact-signal:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.10) !important}
+  .content-grid{
+    width:min(100% - 44px,900px) !important;
+    grid-template-columns:1fr !important;
+  }
+  .sidebar{
+    border-left:0 !important;
+    border-top:1px solid var(--boom-line) !important;
+  }
+  .people-grid{grid-template-columns:1fr !important}
+}
+@media(max-width:600px){
+  .nav{
+    min-height:auto !important;
+    padding:18px 20px !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:14px !important;
+  }
+  .nav-links{
+    width:100% !important;
+    justify-content:space-between !important;
+    gap:8px !important;
+    font-size:9px !important;
+  }
+  .contact-nav{padding:8px 10px !important}
+  .lang-switch{width:34px !important;height:34px !important}
+  .hero-editorial{width:calc(100% - 36px) !important;padding:54px 0 50px !important}
+  .hero-editorial-top{margin-bottom:46px !important}
+  .hero-editorial h1{font-size:clamp(52px,14.8vw,74px) !important}
+  .impact-band{padding:76px 22px 80px !important}
+  .impact-band-title{font-size:48px !important}
+  .impact-band-metrics{grid-template-columns:1fr !important}
+  .impact-signal{
+    min-height:122px !important;
+    border-right:0 !important;
+    border-bottom:1px solid rgba(255,255,255,.10) !important;
+  }
+  .impact-signal:last-child{border-bottom:0 !important}
+  .people-block-head{grid-template-columns:1fr !important;gap:8px !important}
+  .person-pill{
+    min-height:84px;
+    padding:8px 14px 8px 8px;
+  }
+  .person-photo-wrap{
+    width:66px;height:66px;flex-basis:66px;
+  }
+  .person-pill h3{font-size:21px}
+}
+
+
+/* =========================================================
+   TETHER BOOM V2 — visual cleanup to match home/about/now
+   ========================================================= */
+
+/* Slightly calmer content width / rhythm */
+.content-grid{
+  width:min(1280px,calc(100% - 8vw)) !important;
+  gap:56px !important;
+}
+.main-column > .section{
+  padding-top:84px !important;
+  padding-bottom:84px !important;
+}
+
+/* Key people — tighter and cleaner */
+.people-block{
+  margin-top:52px !important;
+  padding-top:30px !important;
+  border-top:1px solid var(--boom-line) !important;
+}
+.people-block-head{
+  grid-template-columns:140px minmax(0,1fr) !important;
+  gap:24px !important;
+  margin-bottom:22px !important;
+}
+.people-block-label{
+  color:#6e84a0 !important;
+}
+.people-block-head p{
+  max-width:640px !important;
+  font-size:13px !important;
+  line-height:1.7 !important;
+  color:#6b7889 !important;
+}
+.people-grid{
+  gap:16px !important;
+}
+.person-card{
+  border-radius:22px !important;
+  background:linear-gradient(180deg,#ffffff 0%,#fbfcfd 100%) !important;
+  border:1px solid #d9e0e8 !important;
+  box-shadow:none !important;
+}
+.person-card:hover{
+  border-color:rgba(22,131,255,.28) !important;
+  box-shadow:0 14px 30px rgba(8,17,29,.06) !important;
+}
+.person-pill{
+  background:#ffffff !important;
+  border:1px solid #dce3eb !important;
+}
+.person-pill h3{
+  font-size:23px !important;
+}
+.person-role{
+  color:#526174 !important;
+}
+.person-context{
+  color:#6a7686 !important;
+}
+.person-links a{
+  background:#fff !important;
+  border-color:#d6dde6 !important;
+}
+.person-links a:hover{
+  background:#05070a !important;
+  color:#fff !important;
+  border-color:#05070a !important;
+}
+
+/* Closing principles — fully redesigned */
+.closing-principles{
+  background:#f6f7f9 !important;
+  padding:96px 5vw 108px !important;
+  border-top:1px solid #e0e5eb !important;
+}
+.closing-principles-grid{
+  width:min(1280px,100%) !important;
+  margin:0 auto !important;
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:18px !important;
+}
+.closing-principle{
+  position:relative !important;
+  min-height:430px !important;
+  padding:34px 34px 30px !important;
+  border-radius:30px !important;
+  background:
+    radial-gradient(circle at 84% 24%, rgba(22,131,255,.18), transparent 24%),
+    linear-gradient(135deg,#05070a 0%,#07101b 56%,#123255 100%) !important;
+  border:1px solid rgba(255,255,255,.06) !important;
+  overflow:hidden !important;
+}
+.closing-principle:first-child,
+.closing-principle:last-child{
+  background:
+    radial-gradient(circle at 84% 24%, rgba(22,131,255,.18), transparent 24%),
+    linear-gradient(135deg,#05070a 0%,#07101b 56%,#123255 100%) !important;
+}
+.closing-principle::before{
+  content:"" !important;
+  position:absolute !important;
+  left:-5% !important;
+  right:-5% !important;
+  top:-20% !important;
+  height:72% !important;
+  border-top:2px solid rgba(105,181,255,.85) !important;
+  border-radius:50% !important;
+  opacity:.95 !important;
+  pointer-events:none !important;
+}
+.closing-principle::after{
+  content:"" !important;
+  position:absolute !important;
+  inset:auto auto 0 0 !important;
+  width:48% !important;
+  height:1px !important;
+  background:linear-gradient(90deg,rgba(105,181,255,.32),transparent) !important;
+  pointer-events:none !important;
+}
+.closing-principle-label{
+  position:relative !important;
+  z-index:2 !important;
+  color:#78b8ff !important;
+  font-size:11px !important;
+  font-weight:700 !important;
+  letter-spacing:.12em !important;
+  text-transform:uppercase !important;
+}
+.closing-principle h2{
+  position:relative !important;
+  z-index:2 !important;
+  margin:18px 0 24px !important;
+  max-width:640px !important;
+  color:#ffffff !important;
+  font-size:clamp(52px,4.8vw,82px) !important;
+  line-height:.94 !important;
+  letter-spacing:-.07em !important;
   font-weight:500 !important;
-  color:var(--navy) !important;
+}
+.closing-principle h2 span{
+  display:block !important;
+  margin-top:10px !important;
+  color:#b2c7df !important;
+}
+.closing-principle:last-child h2 span{
+  color:#b2c7df !important;
+}
+.closing-principle-tags{
+  position:relative !important;
+  z-index:2 !important;
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:10px !important;
+}
+.closing-principle-tags span{
+  padding:10px 16px !important;
+  border-radius:999px !important;
+  border:1px solid rgba(255,255,255,.18) !important;
+  color:#d7dfeb !important;
+  background:rgba(255,255,255,.04) !important;
+  font-size:10px !important;
+  font-weight:700 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
 }
 
-.operating-title span{
-  font:inherit !important;
-  letter-spacing:inherit !important;
-  line-height:inherit !important;
-  font-weight:inherit !important;
-  color:var(--steel-light) !important;
+/* Project nav cleaner */
+.project-nav{
+  padding:0 5vw 110px !important;
+  background:#f6f7f9 !important;
+}
+.project-nav-inner{
+  width:min(1280px,100%) !important;
+  margin:0 auto !important;
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:16px !important;
+}
+.project-link{
+  padding:24px 26px !important;
+  border:1px solid #dce2ea !important;
+  border-radius:22px !important;
+  background:#ffffff !important;
+}
+.project-link:hover{
+  border-color:rgba(22,131,255,.28) !important;
+  box-shadow:0 14px 28px rgba(8,17,29,.06) !important;
 }
 
-@media(max-width:760px){
-  .operating-title{
-    font-size:clamp(40px,12vw,58px) !important;
-    line-height:1.12 !important;
+/* Mobile */
+@media (max-width: 1100px){
+  .closing-principles-grid{
+    grid-template-columns:1fr !important;
+  }
+  .closing-principle{
+    min-height:unset !important;
   }
 }
+@media (max-width: 900px){
+  .people-block-head{
+    grid-template-columns:1fr !important;
+    gap:10px !important;
+  }
+  .people-grid{
+    grid-template-columns:1fr !important;
+  }
+}
+@media (max-width: 600px){
+  .content-grid{
+    width:min(100% - 32px,900px) !important;
+  }
+  .closing-principles{
+    padding:74px 16px 84px !important;
+  }
+  .closing-principle{
+    padding:28px 22px 26px !important;
+    border-radius:24px !important;
+  }
+  .closing-principle h2{
+    font-size:clamp(38px,12vw,56px) !important;
+    line-height:.98 !important;
+  }
+  .closing-principle::before{
+    top:-10% !important;
+    height:46% !important;
+  }
+  .project-nav{
+    padding:0 16px 80px !important;
+  }
+  .project-nav-inner{
+    grid-template-columns:1fr !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -7114,94 +7738,59 @@
               opportunities into real adoption.
             </p>
 </div>
-<div class="leadership-card">
-<div class="leadership-photo-wrap">
-<span aria-hidden="true" class="leadership-photo-fallback">
-                CN
-              </span>
-<img alt="Christopher Neilson" class="leadership-photo" data-chris-source="0" loading="lazy" onerror="
-                  const sources = [
-                    'christopher-neilson.jpg',
-                    'christopher-neilson.jpeg',
-                    'christopher-neilson.JPG',
-                    'christopher-neilson.png',
-                    'christopher-neilson.jpg',
-                    'christopher-neilson.jpeg',
-                    'christopher-neilson.JPG',
-                    'christopher-neilson.png'
-                  ];
-                  const current = Number(this.dataset.chrisSource || 0) + 1;
-                  if (current &lt; sources.length) {
-                    this.dataset.chrisSource = String(current);
-                    this.src = sources[current];
-                  } else {
-                    this.style.display = 'none';
-                  }
-                " src="christopher-neilson.jpg"/>
+
+<div class="people-block">
+  <div class="people-block-head">
+    <div class="people-block-label">Key people</div>
+    <p>Two working relationships that help explain how I operated inside TetherEd: close to leadership, go-to-market and the decisions connecting market, product and execution.</p>
+  </div>
+
+  <div class="people-grid">
+    <article class="person-card">
+      <div class="person-pill">
+        <div class="person-photo-wrap">
+          <span class="person-photo-fallback" aria-hidden="true">CN</span>
+          <img class="person-photo" src="/christopher-neilson.jpg" alt="Christopher Neilson" loading="lazy"
+               onerror="this.style.display='none';">
+        </div>
+        <div class="person-pill-copy">
+          <div class="person-kicker">Direct leadership</div>
+          <h3>Christopher Neilson</h3>
+        </div>
+      </div>
+      <div class="person-body">
+        <p class="person-role">Founder &amp; CEO, Tether Education<br>Professor of Economics and Global Affairs · Yale University</p>
+        <p class="person-context">I worked closely and directly with Christopher, aligning partnerships, institutional relationships and expansion initiatives with the evolution of the product.</p>
+        <div class="person-links">
+          <a href="https://christopher-neilson.com/" target="_blank" rel="noopener noreferrer">Website ↗</a>
+          <a href="https://www.linkedin.com/in/christopher-a-neilson/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="person-card">
+      <div class="person-pill">
+        <div class="person-photo-wrap">
+          <span class="person-photo-fallback" aria-hidden="true">ZT</span>
+          <img class="person-photo" src="/zack-tseng.jpg" alt="Zack Tseng" loading="lazy"
+               onerror="this.style.display='none';">
+        </div>
+        <div class="person-pill-copy">
+          <div class="person-kicker">Go-to-market &amp; execution</div>
+          <h3>Zack Tseng</h3>
+        </div>
+      </div>
+      <div class="person-body">
+        <p class="person-role">Chief of Staff · Tether Education</p>
+        <p class="person-context">I worked with Zack on go-to-market initiatives and Stocktake performance, connecting commercial execution, adoption and market learnings.</p>
+        <div class="person-links">
+          <a href="https://www.linkedin.com/in/zacharytseng/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+    </article>
+  </div>
 </div>
-<div>
-<div class="leadership-eyebrow">
-                Direct leadership
-              </div>
-<h3 class="leadership-name">
-                Christopher Neilson
-              </h3>
-<p class="leadership-meta">
-                Founder &amp; CEO, Tether Education<br/>
-                Professor of Economics and Global Affairs · Yale University
-              </p>
-<p class="leadership-copy">
-                I worked closely and directly with Christopher,
-                aligning partnerships, institutional relationships
-                and expansion initiatives with the evolution of the product.
-              </p>
-<div class="leadership-links">
-<a aria-label="Christopher Neilson website" href="https://christopher-neilson.com/" rel="noopener noreferrer" target="_blank" title="Website">
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24">
-<circle cx="12" cy="12" r="9"></circle>
-<path d="M3 12h18"></path>
-<path d="M12 3c2.5 2.5 3.8 5.5 3.8 9S14.5 18.5 12 21"></path>
-<path d="M12 3C9.5 5.5 8.2 8.5 8.2 12S9.5 18.5 12 21"></path>
-</svg>
-</a>
-<a aria-label="Christopher Neilson on LinkedIn" href="https://www.linkedin.com/in/christopher-a-neilson/" rel="noopener noreferrer" target="_blank" title="LinkedIn">
-<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24">
-<path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
-</svg>
-</a>
-</div>
-</div>
-</div>
-<div class="leadership-card">
-<div class="leadership-photo-wrap">
-<span aria-hidden="true" class="leadership-photo-fallback">
-                ZT
-              </span>
-<img alt="Zack Tseng" class="leadership-photo" loading="lazy" onerror="this.style.display='none';" src="/zack-tseng.jpg"/>
-</div>
-<div>
-<div class="leadership-eyebrow">
-                Go-to-market &amp; execution
-              </div>
-<h3 class="leadership-name">
-                Zack Tseng
-              </h3>
-<p class="leadership-meta">
-                Chief of Staff · Tether Education
-              </p>
-<p class="leadership-copy">
-                I worked with Zack on go-to-market initiatives and Stocktake performance,
-                connecting commercial execution, adoption and market learnings.
-              </p>
-<div class="leadership-links">
-<a aria-label="Zack Tseng on LinkedIn" href="https://www.linkedin.com/in/zacharytseng/" rel="noopener noreferrer" target="_blank" title="LinkedIn">
-<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24">
-<path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"></path>
-</svg>
-</a>
-</div>
-</div>
-</div>
+
 </section>
 <!-- BACKING -->
 <div class="backing-block">
