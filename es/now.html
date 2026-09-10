@@ -1250,6 +1250,293 @@ a.build-card:hover{background:#f3f7fb;transform:translateY(-2px)}
 }
 </style>
 
+
+<style id="now-v18-mobile-visible">
+/* NOW V18 — bulletproof mobile rendering for Working Principle */
+@media(max-width:760px){
+
+  .system-moment{
+    display:block !important;
+    position:relative !important;
+    width:100% !important;
+    min-height:0 !important;
+    height:auto !important;
+    padding:72px 20px 78px !important;
+    background:#05070a !important;
+    color:#fff !important;
+    overflow:hidden !important;
+  }
+
+  .system-moment .wrap{
+    display:block !important;
+    position:relative !important;
+    z-index:5 !important;
+    width:100% !important;
+    max-width:100% !important;
+    margin:0 auto !important;
+    padding:0 !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    transform:none !important;
+    text-align:center !important;
+  }
+
+  .system-moment .eyebrow{
+    display:block !important;
+    margin:0 0 20px !important;
+    color:#63aaff !important;
+    opacity:1 !important;
+    visibility:visible !important;
+  }
+
+  .system-moment h2{
+    display:block !important;
+    width:100% !important;
+    max-width:360px !important;
+    margin:0 auto !important;
+    padding:0 !important;
+    font-size:38px !important;
+    line-height:1.08 !important;
+    letter-spacing:-.035em !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    transform:none !important;
+    overflow:visible !important;
+  }
+
+  .system-moment h2 .principle-line,
+  .system-moment h2 .principle-accent{
+    display:block !important;
+    width:auto !important;
+    max-width:none !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    white-space:normal !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    transform:none !important;
+  }
+
+  .system-moment h2 .principle-line{
+    color:#f7f8fa !important;
+  }
+
+  .system-moment h2 .principle-accent{
+    margin-top:5px !important;
+    color:#a8bfd9 !important;
+  }
+
+  .system-moment p{
+    display:block !important;
+    max-width:330px !important;
+    margin:24px auto 0 !important;
+    color:#929ca8 !important;
+    font-size:14px !important;
+    line-height:1.65 !important;
+    opacity:1 !important;
+    visibility:visible !important;
+  }
+
+  .statement-track{
+    display:flex !important;
+    justify-content:center !important;
+    flex-wrap:wrap !important;
+    gap:8px !important;
+    max-width:340px !important;
+    margin:24px auto 0 !important;
+    opacity:1 !important;
+    visibility:visible !important;
+  }
+
+  .statement-track span{
+    display:inline-flex !important;
+    opacity:1 !important;
+    visibility:visible !important;
+  }
+
+  /* The curve was the source of mobile instability; keep mobile clean. */
+  .system-moment .arc-svg{
+    display:none !important;
+  }
+}
+
+@media(max-width:390px){
+  .system-moment{
+    padding:66px 18px 72px !important;
+  }
+
+  .system-moment h2{
+    max-width:320px !important;
+    font-size:34px !important;
+    line-height:1.1 !important;
+  }
+
+  .system-moment p{
+    max-width:300px !important;
+    font-size:13.5px !important;
+  }
+}
+</style>
+
+
+<style id="now-v19-mobile-curve-return">
+/* NOW V19 — keep the mobile curve, but make the principle block stable and readable */
+@media (max-width: 760px){
+  .system-moment{
+    display:block !important;
+    position:relative !important;
+    isolation:isolate !important;
+    width:100% !important;
+    min-height:auto !important;
+    height:auto !important;
+    padding:76px 20px 84px !important;
+    overflow:hidden !important;
+    background:#05070a !important;
+  }
+
+  .system-moment .wrap{
+    position:relative !important;
+    z-index:3 !important;
+    width:100% !important;
+    max-width:340px !important;
+    margin:0 auto !important;
+    text-align:center !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    transform:none !important;
+  }
+
+  .system-moment .eyebrow{
+    position:relative !important;
+    z-index:3 !important;
+    margin:0 0 18px !important;
+    color:#63aaff !important;
+    opacity:1 !important;
+    visibility:visible !important;
+  }
+
+  .system-moment h2{
+    position:relative !important;
+    z-index:3 !important;
+    width:100% !important;
+    max-width:340px !important;
+    margin:0 auto !important;
+    font-size:clamp(32px, 8.8vw, 38px) !important;
+    line-height:1.1 !important;
+    letter-spacing:-.034em !important;
+    text-wrap:balance !important;
+    overflow:visible !important;
+    opacity:1 !important;
+    visibility:visible !important;
+  }
+
+  .system-moment h2 .principle-line,
+  .system-moment h2 .principle-accent{
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    white-space:normal !important;
+    overflow-wrap:normal !important;
+    word-break:normal !important;
+  }
+
+  .system-moment h2 .principle-line{
+    color:#f6f8fb !important;
+  }
+
+  .system-moment h2 .principle-accent{
+    margin-top:.12em !important;
+    color:#a8c4e4 !important;
+  }
+
+  .system-moment p{
+    position:relative !important;
+    z-index:3 !important;
+    max-width:320px !important;
+    margin:22px auto 0 !important;
+    font-size:14px !important;
+    line-height:1.65 !important;
+    color:#96a1ae !important;
+    opacity:1 !important;
+    visibility:visible !important;
+  }
+
+  .statement-track{
+    position:relative !important;
+    z-index:3 !important;
+    display:flex !important;
+    flex-wrap:wrap !important;
+    justify-content:center !important;
+    gap:8px !important;
+    max-width:340px !important;
+    margin:22px auto 0 !important;
+    opacity:1 !important;
+    visibility:visible !important;
+  }
+
+  .statement-track span{
+    display:inline-flex !important;
+    opacity:1 !important;
+    visibility:visible !important;
+  }
+
+  .system-moment .arc-svg{
+    display:block !important;
+    position:absolute !important;
+    left:50% !important;
+    top:30% !important;
+    width:210vw !important;
+    max-width:none !important;
+    transform:translate(-50%, -50%) !important;
+    opacity:.18 !important;
+    z-index:1 !important;
+    pointer-events:none !important;
+  }
+
+  .system-moment .arc-svg .arc-main{
+    opacity:.42 !important;
+    stroke-width:5 !important;
+  }
+
+  .system-moment .arc-svg .arc-glow{
+    opacity:.02 !important;
+  }
+}
+
+@media (max-width: 390px){
+  .system-moment{
+    padding:70px 18px 78px !important;
+  }
+
+  .system-moment .wrap{
+    max-width:306px !important;
+  }
+
+  .system-moment h2{
+    max-width:306px !important;
+    font-size:clamp(29px, 9vw, 34px) !important;
+    line-height:1.11 !important;
+  }
+
+  .system-moment p{
+    max-width:292px !important;
+    font-size:13.5px !important;
+  }
+
+  .statement-track{
+    max-width:306px !important;
+  }
+
+  .system-moment .arc-svg{
+    width:230vw !important;
+    top:29% !important;
+    opacity:.16 !important;
+  }
+}
+</style>
+
 </head>
 <body>
 
