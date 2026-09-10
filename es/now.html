@@ -762,6 +762,162 @@ a.build-card:hover{background:#f3f7fb;transform:translateY(-2px)}
 }
 </style>
 
+
+<style id="now-v14-principle-fix">
+/* =========================================================
+   NOW V14 — Working principle: contained typography + quieter arc
+   ========================================================= */
+
+.system-moment{
+  min-height:620px !important;
+  padding:96px var(--page) 102px !important;
+  display:flex !important;
+  align-items:center !important;
+  overflow:hidden !important;
+}
+
+.system-moment .wrap{
+  width:min(1240px,100%) !important;
+  max-width:1240px !important;
+  margin:0 auto !important;
+  padding:0 !important;
+  text-align:center !important;
+}
+
+.system-moment .eyebrow{
+  margin-bottom:30px !important;
+}
+
+.system-moment h2{
+  width:100% !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  font-size:clamp(48px,4.75vw,74px) !important;
+  line-height:1.02 !important;
+  letter-spacing:-.055em !important;
+  text-wrap:balance !important;
+}
+
+.system-moment h2 .principle-main,
+.system-moment h2 .principle-accent{
+  display:block !important;
+}
+
+.system-moment h2 .principle-main{
+  color:#fff !important;
+}
+
+.system-moment h2 .principle-accent{
+  max-width:1120px !important;
+  margin:.08em auto 0 !important;
+  color:#a9c7eb !important;
+}
+
+.system-moment p{
+  max-width:680px !important;
+  margin-top:30px !important;
+  font-size:15px !important;
+  line-height:1.72 !important;
+}
+
+.statement-track{
+  margin-top:32px !important;
+}
+
+/* Keep the arc as atmosphere, not as a competing foreground element */
+.arc-svg{
+  top:44% !important;
+  width:min(1480px,112vw) !important;
+  transform:translate(-50%,-60%) !important;
+  opacity:.58 !important;
+}
+.arc-svg .arc-main{
+  stroke-width:5 !important;
+  opacity:.72 !important;
+}
+.arc-svg .arc-glow{
+  stroke-width:18 !important;
+  opacity:.08 !important;
+}
+
+/* Tablet */
+@media(max-width:980px){
+  .system-moment{
+    min-height:560px !important;
+    padding:84px 6vw 92px !important;
+  }
+  .system-moment h2{
+    max-width:900px !important;
+    font-size:clamp(44px,6.4vw,64px) !important;
+  }
+  .arc-svg{
+    width:138vw !important;
+    top:42% !important;
+  }
+}
+
+/* Mobile */
+@media(max-width:760px){
+  .system-moment{
+    min-height:auto !important;
+    padding:72px 22px 82px !important;
+    align-items:flex-start !important;
+  }
+
+  .system-moment .wrap{
+    width:100% !important;
+  }
+
+  .system-moment .eyebrow{
+    margin-bottom:24px !important;
+  }
+
+  .system-moment h2{
+    max-width:100% !important;
+    font-size:clamp(38px,10.4vw,46px) !important;
+    line-height:1.04 !important;
+    letter-spacing:-.05em !important;
+  }
+
+  .system-moment h2 .principle-accent{
+    max-width:100% !important;
+    margin-top:.12em !important;
+  }
+
+  .system-moment p{
+    max-width:34ch !important;
+    margin-top:24px !important;
+    font-size:14px !important;
+  }
+
+  .statement-track{
+    margin-top:26px !important;
+    gap:8px !important;
+  }
+
+  .arc-svg{
+    top:23% !important;
+    width:190vw !important;
+    max-width:none !important;
+    transform:translate(-50%,-56%) !important;
+    opacity:.42 !important;
+  }
+}
+
+@media(max-width:430px){
+  .system-moment{
+    padding:68px 18px 78px !important;
+  }
+  .system-moment h2{
+    font-size:clamp(36px,10vw,42px) !important;
+  }
+  .arc-svg{
+    width:215vw !important;
+    top:21% !important;
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -872,7 +1028,7 @@ a.build-card:hover{background:#f3f7fb;transform:translateY(-2px)}
 </svg>
   <div class="wrap">
     <div class="eyebrow">06 / Principio de trabajo</div>
-    <h2>Construir mejor significa conectar<span>claridad, sistemas y ejecución.</span></h2>
+    <h2><span class="principle-main">Construir mejor es conectar</span><span class="principle-accent">claridad, sistemas y ejecución.</span></h2>
     <p>No se trata de sumar capas por sumar. Se trata de diseñar una forma de operar que haga el trabajo más claro y permita aprender más rápido.</p>
     <div class="statement-track">
       <span>Claridad</span>
