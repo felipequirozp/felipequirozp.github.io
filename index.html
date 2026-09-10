@@ -68,7 +68,7 @@ img{display:block;width:100%;max-width:100%}
 .proof{padding:0 var(--page-gutter);background:var(--paper)}
 .proof-inner{width:min(var(--page-max),100%);margin:0 auto;padding:74px 0 82px}
 .section-label{font-size:9px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--steel-light)}
-.proof-grid{margin-top:28px;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(255,255,255,.10);border-radius:22px;overflow:hidden;background:linear-gradient(90deg,rgba(13,23,36,.82) 0%,rgba(24,37,54,.72) 48%,rgba(47,70,97,.78) 100%),linear-gradient(0deg,rgba(13,23,36,.52),rgba(13,23,36,.28)),url('/building-in-the-field.jpg') center 48%/cover no-repeat;box-shadow:0 20px 44px rgba(13,23,36,.08)}
+.proof-grid{margin-top:28px;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(255,255,255,.10);border-radius:22px;overflow:hidden;background:linear-gradient(90deg,rgba(13,23,36,.82) 0%,rgba(24,37,54,.72) 48%,rgba(47,70,97,.78) 100%),linear-gradient(0deg,rgba(13,23,36,.52),rgba(13,23,36,.28)),url('building-in-the-field.jpg') center 48%/cover no-repeat;box-shadow:0 20px 44px rgba(13,23,36,.08)}
 .proof-item{min-height:190px;padding:34px 36px 36px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(255,255,255,.11)}
 .proof-item:not(:first-child){padding-left:36px}
 .proof-item:last-child{border-right:0}
@@ -204,7 +204,7 @@ img{display:block;width:100%;max-width:100%}
 }
 
 /* NOW */
-.now{padding:108px var(--page-gutter);background:linear-gradient(90deg,rgba(6,18,34,.90) 0%,rgba(17,32,53,.76) 52%,rgba(28,48,75,.78) 100%),url('/now-santiago-workspace.jpg') center center/cover no-repeat;color:#fff}
+.now{padding:108px var(--page-gutter);background:linear-gradient(90deg,rgba(6,18,34,.90) 0%,rgba(17,32,53,.76) 52%,rgba(28,48,75,.78) 100%),url('now-santiago-workspace.jpg') center center/cover no-repeat;color:#fff}
 .now-inner{width:min(var(--page-max),100%);margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:50px;align-items:end;min-height:420px}
 .now .section-label{color:#86a0b8}
 .now h2{max-width:760px;color:#fff;margin:18px 0 0;font-family:"Manrope",sans-serif;font-size:clamp(54px,6vw,92px);line-height:.94;letter-spacing:-.065em;font-weight:400}
@@ -513,7 +513,7 @@ header.nav{
   margin-top:28px;
   background:
     linear-gradient(90deg,rgba(4,8,14,.91),rgba(7,17,31,.82) 52%,rgba(10,35,67,.72)),
-    url('/building-in-the-field.jpg') center 46%/cover no-repeat;
+    url('building-in-the-field.jpg') center 46%/cover no-repeat;
   border:1px solid rgba(8,17,29,.10);
   border-radius:22px;
   box-shadow:none
@@ -589,7 +589,7 @@ header.nav{
   padding:110px var(--page-gutter);
   background:
     linear-gradient(90deg,rgba(4,9,16,.95) 0%,rgba(5,14,26,.82) 48%,rgba(12,34,62,.60) 100%),
-    url('/now-santiago-workspace.jpg') center 47%/cover no-repeat;
+    url('now-santiago-workspace.jpg') center 47%/cover no-repeat;
 }
 .now::after{
   content:"";position:absolute;inset:0;
@@ -1261,6 +1261,439 @@ header.nav{
   }
 }
 
+
+/* =========================================================
+   HOME BOOM V6 — force identical Selected Work card heights
+   ========================================================= */
+@media(min-width:961px){
+  .work-card{
+    height:390px !important;
+    min-height:390px !important;
+    max-height:390px !important;
+  }
+  .work-content,
+  .work-photo-wrap,
+  .work-photo,
+  .work-photo img{
+    height:390px !important;
+    min-height:390px !important;
+    max-height:390px !important;
+  }
+  .work-content{
+    overflow:hidden !important;
+  }
+  .work-photo-wrap,
+  .work-photo{
+    overflow:hidden !important;
+  }
+}
+
+@media(min-width:761px) and (max-width:960px){
+  .work-card{
+    height:360px !important;
+    min-height:360px !important;
+    max-height:360px !important;
+  }
+  .work-content,
+  .work-photo-wrap,
+  .work-photo,
+  .work-photo img{
+    height:360px !important;
+    min-height:360px !important;
+    max-height:360px !important;
+  }
+  .work-content{
+    overflow:hidden !important;
+  }
+}
+
+@media(max-width:760px){
+  .work-card{
+    height:auto !important;
+    max-height:none !important;
+  }
+  .work-content{
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+    overflow:visible !important;
+  }
+  .work-photo-wrap,
+  .work-photo,
+  .work-photo img{
+    height:220px !important;
+    min-height:220px !important;
+    max-height:220px !important;
+  }
+}
+
+
+/* =========================================================
+   HOME BOOM V7 — brand/logo boxes sized to each logo
+   ========================================================= */
+.work-brand{
+  width:auto !important;
+  min-width:0 !important;
+  max-width:max-content !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  padding:11px 16px !important;
+}
+
+.work-brand img{
+  width:auto !important;
+  display:block !important;
+}
+
+/* Per-logo tuning so each pill hugs the mark better */
+.work-brand.logo-geo img{max-width:146px !important; max-height:29px !important;}
+.work-brand.logo-low img{max-width:132px !important; max-height:25px !important;}
+.work-brand.logo-tether img{max-width:126px !important; max-height:28px !important;}
+.work-brand.logo-usm img{max-width:150px !important; max-height:31px !important;}
+
+@media(max-width:760px){
+  .work-brand{
+    width:auto !important;
+    max-width:max-content !important;
+    padding:10px 14px !important;
+    height:54px !important;
+  }
+  .work-brand.logo-usm img{max-width:132px !important; max-height:28px !important;}
+}
+
+
+/* =========================================================
+   HOME BOOM V8 — Numbers, aligned with the new system
+   ========================================================= */
+.proof{
+  padding:0 var(--page-gutter) !important;
+  background:#fff !important;
+}
+.proof-inner{
+  width:min(var(--page-max),100%) !important;
+  margin:0 auto !important;
+  padding:74px 0 88px !important;
+}
+.proof .section-label{
+  color:#718297 !important;
+}
+.proof-grid{
+  position:relative !important;
+  margin-top:28px !important;
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  overflow:hidden !important;
+  border:1px solid rgba(8,17,29,.12) !important;
+  border-radius:22px !important;
+  background:
+    radial-gradient(circle at 92% 18%,rgba(22,131,255,.11),transparent 26%),
+    linear-gradient(105deg,#05070a 0%,#07101b 66%,#0a1829 100%) !important;
+  box-shadow:none !important;
+}
+.proof-grid::after{
+  content:"" !important;
+  position:absolute !important;
+  right:-9% !important;
+  bottom:-48% !important;
+  width:34% !important;
+  aspect-ratio:1 !important;
+  border-radius:50% !important;
+  background:radial-gradient(circle,rgba(22,131,255,.15),transparent 66%) !important;
+  pointer-events:none !important;
+}
+.proof-item{
+  position:relative !important;
+  z-index:1 !important;
+  min-height:176px !important;
+  padding:31px 34px 32px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  border-right:1px solid rgba(255,255,255,.10) !important;
+  transition:background .22s ease !important;
+}
+.proof-item:not(:first-child){
+  padding-left:34px !important;
+}
+.proof-item:last-child{
+  border-right:0 !important;
+}
+.proof-item:hover{
+  background:rgba(22,131,255,.045) !important;
+}
+.proof-item strong{
+  display:block !important;
+  margin:0 !important;
+  font-family:"Manrope",sans-serif !important;
+  font-size:clamp(42px,4vw,60px) !important;
+  font-weight:400 !important;
+  line-height:1 !important;
+  letter-spacing:-.062em !important;
+  color:#fff !important;
+}
+.proof-item span{
+  display:block !important;
+  margin-top:12px !important;
+  max-width:210px !important;
+  color:#aeb9c7 !important;
+  font-size:10.5px !important;
+  line-height:1.55 !important;
+}
+
+/* tiny blue cue, but not another decorative illustration */
+.proof-item::before{
+  content:"" !important;
+  position:absolute !important;
+  left:34px !important;
+  top:27px !important;
+  width:18px !important;
+  height:1px !important;
+  background:#1683ff !important;
+  opacity:.0 !important;
+  transform:scaleX(.4) !important;
+  transform-origin:left center !important;
+  transition:opacity .22s ease,transform .22s ease !important;
+}
+.proof-item:hover::before{
+  opacity:.9 !important;
+  transform:scaleX(1) !important;
+}
+
+@media(max-width:900px){
+  .proof-grid{
+    grid-template-columns:1fr 1fr !important;
+  }
+  .proof-item{
+    min-height:154px !important;
+    padding:26px 24px 27px !important;
+  }
+  .proof-item:not(:first-child){
+    padding-left:24px !important;
+  }
+  .proof-item:nth-child(2){
+    border-right:0 !important;
+  }
+  .proof-item:nth-child(-n+2){
+    border-bottom:1px solid rgba(255,255,255,.10) !important;
+  }
+  .proof-item::before{
+    left:24px !important;
+    top:22px !important;
+  }
+}
+
+@media(max-width:560px){
+  .proof-inner{
+    padding:60px 0 68px !important;
+  }
+  .proof-grid{
+    grid-template-columns:1fr !important;
+    border-radius:18px !important;
+  }
+  .proof-item,
+  .proof-item:not(:first-child){
+    min-height:132px !important;
+    padding:23px 22px 24px !important;
+    border-right:0 !important;
+    border-bottom:1px solid rgba(255,255,255,.10) !important;
+  }
+  .proof-item:last-child{
+    border-bottom:0 !important;
+  }
+  .proof-item strong{
+    font-size:46px !important;
+  }
+  .proof-item span{
+    max-width:260px !important;
+    margin-top:8px !important;
+  }
+  .proof-item::before{
+    display:none !important;
+  }
+}
+
+
+/* =========================================================
+   HOME BOOM V9 — card cleanup + local assets + small polish
+   ========================================================= */
+.nav{
+  background:linear-gradient(90deg,#0b1119 0%,#121925 35%,#151d28 50%,#121925 65%,#0b1119 100%) !important;
+  border-bottom:1px solid rgba(255,255,255,.10) !important;
+}
+
+.selected{
+  padding:108px var(--page-gutter) 118px !important;
+}
+.selected-inner{
+  width:min(1320px,100%) !important;
+}
+.selected-head{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) minmax(280px,460px) !important;
+  gap:28px 40px !important;
+  align-items:end !important;
+  margin-bottom:38px !important;
+}
+.selected-head h2{
+  max-width:760px !important;
+}
+.selected-head p{
+  max-width:430px !important;
+  justify-self:end !important;
+}
+
+.work-list{
+  gap:24px !important;
+}
+.work-card,
+.work-card:nth-child(even){
+  grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr) !important;
+  min-height:430px !important;
+  height:auto !important;
+  max-height:none !important;
+  align-items:stretch !important;
+  border-radius:22px !important;
+}
+.work-card:nth-child(even) .work-content{grid-column:2 !important;}
+.work-card:nth-child(even) .work-photo-wrap{grid-column:1 !important;}
+.work-content,
+.work-photo-wrap{
+  height:auto !important;
+  min-height:430px !important;
+  max-height:none !important;
+}
+.work-content{
+  padding:40px 42px 38px !important;
+  justify-content:center !important;
+}
+.work-meta{align-self:start !important;}
+.work-brand{
+  min-height:58px !important;
+  padding:10px 16px !important;
+  border-radius:13px !important;
+}
+.work-role{
+  max-width:520px !important;
+}
+.work-main{
+  margin-top:24px !important;
+}
+.work-main h3{
+  max-width:540px !important;
+  font-size:clamp(31px,2.6vw,43px) !important;
+}
+.work-main p{
+  max-width:540px !important;
+  font-size:12.5px !important;
+  line-height:1.7 !important;
+}
+.work-signals{
+  margin-top:18px !important;
+  padding-top:14px !important;
+}
+.work-photo-wrap{
+  display:block !important;
+  overflow:hidden !important;
+}
+.work-photo{
+  height:100% !important;
+  min-height:430px !important;
+  border-radius:0 !important;
+  border:0 !important;
+  background:#e8edf3 !important;
+}
+.work-photo img{
+  width:100% !important;
+  height:100% !important;
+  min-height:430px !important;
+  object-fit:cover !important;
+}
+.work-card:hover .work-photo img{
+  transform:scale(1.012) !important;
+}
+.work-photo.photo-geo img{object-position:center 42% !important;}
+.work-photo.photo-low img{object-position:center 56% !important;}
+.work-photo.photo-tether img{object-position:center 44% !important;}
+.work-photo.photo-usm img{object-position:center 42% !important;}
+
+.brand-wordmark{
+  display:inline-block !important;
+  color:#ffffff !important;
+  font-family:"Manrope",sans-serif !important;
+  font-weight:600 !important;
+  letter-spacing:-.03em !important;
+  line-height:1 !important;
+}
+.brand-wordmark-tether{
+  font-size:27px !important;
+}
+
+.proof-inner{
+  padding-top:68px !important;
+}
+
+@media(max-width:980px){
+  .selected-head{
+    grid-template-columns:1fr !important;
+    gap:14px !important;
+    margin-bottom:30px !important;
+  }
+  .selected-head p{
+    justify-self:start !important;
+    max-width:640px !important;
+  }
+  .work-card,
+  .work-card:nth-child(even){
+    min-height:380px !important;
+  }
+  .work-content,
+  .work-photo-wrap,
+  .work-photo,
+  .work-photo img{
+    min-height:380px !important;
+  }
+  .work-content{
+    padding:34px 30px 32px !important;
+  }
+}
+
+@media(max-width:760px){
+  .selected{
+    padding:84px var(--page-gutter) 94px !important;
+  }
+  .work-list{gap:18px !important;}
+  .work-card,
+  .work-card:nth-child(even){
+    grid-template-columns:1fr !important;
+    min-height:0 !important;
+    border-radius:18px !important;
+  }
+  .work-content,
+  .work-card:nth-child(even) .work-content,
+  .work-photo-wrap,
+  .work-card:nth-child(even) .work-photo-wrap{
+    grid-column:1 !important;
+    min-height:0 !important;
+  }
+  .work-photo-wrap{order:1 !important;}
+  .work-content{order:2 !important; padding:24px 22px 26px !important;}
+  .work-photo,
+  .work-photo img{
+    min-height:240px !important;
+    height:240px !important;
+  }
+  .work-brand{
+    min-height:54px !important;
+    padding:9px 14px !important;
+  }
+  .work-main{margin-top:20px !important;}
+  .work-main h3{font-size:30px !important;}
+  .work-role{font-size:11px !important;}
+  .work-main p{font-size:12px !important;}
+  .brand-wordmark-tether{font-size:24px !important;}
+}
+
 </style>
 </head>
 <body>
@@ -1287,7 +1720,7 @@ header.nav{
       </div>
     </div>
     <div class="hero-photo-wrap">
-      <div class="hero-photo"><img src="/profile.jpg" alt="Felipe Quiroz"></div>
+      <div class="hero-photo"><img src="profile.jpg" alt="Felipe Quiroz"></div>
       <div class="photo-meta"><span>Product · Growth · Operations</span><span>CL</span></div>
     </div>
   </div>
@@ -1314,8 +1747,8 @@ header.nav{
   <div class="work-content">
     <div class="work-meta">
       <div class="work-index">01 / Product</div>
-      <div class="work-brand logo-geo"><img src="/geovictoria-logo.png" alt="GeoVictoria" loading="lazy"></div>
-      <div class="work-role">Product Manager · Workforce Management · B2B SaaS</div>
+      <div class="work-brand logo-geo"><img src="geovictoria-logo.png" alt="GeoVictoria" loading="lazy"></div>
+      <div class="work-role">Product Management · Workforce Management · B2B SaaS</div>
     </div>
     <div class="work-main">
       <h3>Building workforce products for real operations at scale.</h3>
@@ -1326,14 +1759,14 @@ header.nav{
   </div>
   <div class="work-photo-wrap">
     <div class="work-photo photo-geo">
-      <img src="/geocoffe.jpg" alt="GeoVictoria with clients from different industries" loading="lazy">
+      <img src="geocoffe.jpg" alt="GeoVictoria with clients from different industries" loading="lazy">
     </div>
   </div>
 </a><a class="work-card" href="/lowsignal">
   <div class="work-content">
     <div class="work-meta">
       <div class="work-index">02 / Company building</div>
-      <div class="work-brand logo-low"><img src="/lowsignal-logo.png" alt="lowsignal" loading="lazy"></div>
+      <div class="work-brand logo-low"><img src="lowsignal-logo.png" alt="lowsignal" loading="lazy"></div>
       <div class="work-role">Co-Founder & COO · Growth Systems</div>
     </div>
     <div class="work-main">
@@ -1345,14 +1778,14 @@ header.nav{
   </div>
   <div class="work-photo-wrap">
     <div class="work-photo photo-low">
-      <img src="/lowsignal-client-work.jpg" alt="lowsignal client work" loading="lazy">
+      <img src="lowsignal-client-work.jpg" alt="lowsignal client work" loading="lazy">
     </div>
   </div>
 </a><a class="work-card" href="/tethereducation">
   <div class="work-content">
     <div class="work-meta">
       <div class="work-index">03 / Partnerships</div>
-      <div class="work-brand logo-tether"><img src="/tethered-logo.svg" alt="TetherEd" loading="lazy"></div>
+      <div class="work-brand logo-tether"><span class="brand-wordmark brand-wordmark-tether">TetherEd</span></div>
       <div class="work-role">Head of Partnerships · EdTech · International Expansion</div>
     </div>
     <div class="work-main">
@@ -1364,14 +1797,14 @@ header.nav{
   </div>
   <div class="work-photo-wrap">
     <div class="work-photo photo-tether">
-      <img src="/tether-team-event.jpg" alt="TetherEd team at an event" loading="lazy">
+      <img src="tether-team-event.jpg" alt="TetherEd team at an event" loading="lazy">
     </div>
   </div>
 </a><a class="work-card" href="/usm">
   <div class="work-content">
     <div class="work-meta">
       <div class="work-index">04 / Strategy and operations</div>
-      <div class="work-brand logo-usm"><img src="/logo-usm.png" alt="Universidad Técnica Federico Santa María" loading="lazy"></div>
+      <div class="work-brand logo-usm"><img src="logo-usm.png" alt="Universidad Técnica Federico Santa María" loading="lazy"></div>
       <div class="work-role">Higher Education · Admissions · Operations</div>
     </div>
     <div class="work-main">
@@ -1383,7 +1816,7 @@ header.nav{
   </div>
   <div class="work-photo-wrap">
     <div class="work-photo photo-usm">
-      <img src="/usm-admissions-community.jpg" alt="Admissions team at Universidad Técnica Federico Santa María" loading="lazy">
+      <img src="usm-admissions-community.jpg" alt="Admissions team at Universidad Técnica Federico Santa María" loading="lazy">
     </div>
   </div>
 </a>
@@ -1400,7 +1833,7 @@ header.nav{
 <a class="about-bridge-link" href="/about">Explore my background <span>↗</span></a>
     </div>
     <figure class="about-bridge-visual">
-      <img src="/building-in-the-field.jpg" alt="Felipe Quiroz working in the field and talking with people" loading="lazy">
+      <img src="building-in-the-field.jpg" alt="Felipe Quiroz working in the field and talking with people" loading="lazy">
       <figcaption><span>In the field / Product, people and real conversations</span><span>Santiago / CL</span></figcaption>
     </figure>
   </div>
