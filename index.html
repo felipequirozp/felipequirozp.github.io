@@ -655,6 +655,56 @@ header.nav{
   .hero-photo img{min-height:380px}
 }
 
+
+/* =========================================================
+   HOME BOOM V2 — nav + brand tiles aligned with About
+   ========================================================= */
+
+/* Nav: exact same dark system feel as About */
+.nav,
+header.nav{
+  background: rgba(5,7,10,.94) !important;
+  border-bottom: 1px solid rgba(255,255,255,.08) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* Brand tiles: remove the older bluish block and move to the newer black / deep navy range */
+.work-brand{
+  background: linear-gradient(135deg,#05070a 0%,#07101b 68%,#0b1a2b 100%) !important;
+  border: 1px solid rgba(18,131,255,.10) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.03),
+    0 8px 24px rgba(3,8,16,.10);
+}
+
+.work-card:hover .work-brand{
+  background: linear-gradient(135deg,#07101b 0%,#0b1a2b 64%,#102844 100%) !important;
+  border-color: rgba(22,131,255,.22) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.04),
+    0 14px 30px rgba(8,17,29,.12);
+}
+
+/* Keep logos crisp inside the darker chip */
+.work-brand img{
+  filter: brightness(0) invert(1);
+  opacity: .98;
+}
+
+/* Slightly cleaner selected-work meta tone under the brand tile */
+.work-role{
+  color:#6a7889 !important;
+}
+
+/* Mobile: preserve same feel */
+@media(max-width:760px){
+  .nav,
+  header.nav{
+    background: rgba(5,7,10,.97) !important;
+  }
+}
+
 </style>
 </head>
 <body>
