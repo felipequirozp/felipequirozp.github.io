@@ -23,48 +23,15 @@
 @media(max-width:390px){.nav-links{font-size:8px}.hero h1{font-size:48px}.impact h2,.company-main h2,.operating h2,.solutions h2,.system h2,.cases h2{font-size:40px}.field-copy h2{font-size:36px}.principle h2{font-size:44px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 
-/* V27 — smaller Work in Context photo */
+/* V29 — Work in Context image spans the card top-to-bottom */
 @media(min-width:901px){
-  .field-card{
-    grid-template-columns:minmax(0,1.28fr) minmax(340px,.62fr);
-  }
-  .field-photo{
-    align-self:center;
-    justify-self:end;
-    width:min(88%,470px);
-    height:500px;
-    min-height:0;
-    margin:56px 56px 56px 0;
-    border-radius:22px;
-  }
-  .field-photo img{
-    width:100%;
-    height:100%;
-    min-height:0;
-    object-fit:cover;
-  }
+  .field-card{align-items:stretch}
+  .field-photo{align-self:stretch;justify-self:stretch;width:100%;height:auto;min-height:620px;margin:0;border-radius:0}
+  .field-photo img{width:100%;height:100%;min-height:620px;object-fit:cover;object-position:center}
 }
 @media(max-width:900px){
-  .field-photo{
-    width:auto;
-    max-width:none;
-    height:420px;
-    min-height:0;
-    margin:0 32px 32px;
-    border-radius:18px;
-  }
-  .field-photo img{height:100%;min-height:0}
+  .field-photo{width:100%;margin:0;border-radius:0}
 }
-@media(max-width:760px){
-  .field-photo{
-    height:320px;
-    min-height:0;
-    margin:0 18px 18px;
-    border-radius:16px;
-  }
-  .field-photo img{height:100%;min-height:0}
-}
-
 
 /* V28 — mobile QA / responsive hardening */
 html,body{max-width:100%;overflow-x:hidden}
@@ -93,7 +60,7 @@ html,body{max-width:100%;overflow-x:hidden}
   .system-step strong{font-size:24px}
   .field-copy{padding:50px 24px 46px}
   .field-copy h2{font-size:39px;line-height:1.08}
-  .field-photo{height:280px;min-height:0;margin:0 14px 14px;border-radius:16px}
+  .field-photo{width:100%;height:340px;min-height:0;margin:0;border-radius:0}
   .field-photo img{height:100%;min-height:0;object-position:center}
   .field-photo::after{display:none}
   .case-row{padding:26px 0}
@@ -121,7 +88,7 @@ html,body{max-width:100%;overflow-x:hidden}
   .hero-meta span{font-size:7.5px}
   .impact h2,.company-main h2,.operating h2,.solutions h2,.system h2,.cases h2{font-size:38px;line-height:1.04}
   .field-copy h2{font-size:35px}
-  .field-photo{height:240px;margin:0 12px 12px}
+  .field-photo{width:100%;height:300px;margin:0;border-radius:0}
   .testimonial blockquote{font-size:31px}
   .principle{padding-top:138px}
   .principle h2{font-size:42px}
@@ -137,7 +104,7 @@ html,body{max-width:100%;overflow-x:hidden}
 <section class="system"><div class="system-inner"><div class="system-head"><div><div class="section-label">05 / How we operate</div><h2>Strategy only works<span>when it becomes a system.</span></h2></div><p>Dashboards, review cycles, delivery processes and automation create visibility, faster learning and better execution.</p></div><div class="system-steps"><div class="system-step"><small>01</small><strong>Build</strong><span>Turn the problem into a clear operating model.</span></div><div class="system-step"><small>02</small><strong>Operate</strong><span>Run the system with visibility, ownership and cadence.</span></div><div class="system-step"><small>03</small><strong>Scale</strong><span>Automate what repeats and strengthen what compounds.</span></div></div></div></section>
 <section class="field"><div class="field-card"><div class="field-copy"><div class="section-label">06 / Work in context</div><h2>Building close<span>to the problem.</span></h2><p>Client work starts by understanding how teams operate, where time is lost and what needs to be connected. From there, strategy becomes a system teams can actually use, measure and improve.</p><div class="field-meta"><span>Clients</span><span>Growth systems</span><span>Santiago</span></div></div><div class="field-photo"><img src="/images/lowsignal-client-work.jpg" alt="lowsignal working session with clients" loading="lazy"></div></div></section>
 <section class="testimonial"><div class="testimonial-inner"><div class="section-label">Client signal</div><blockquote>“lowsignal has become a strategic partner for our network. They understood our vision and truly got involved in the project.”</blockquote><cite>Nicolás Muñoz · Executive Director · Red Educacional Camilo Henríquez</cite></div></section>
-<section class="cases"><div class="cases-head"><div><div class="section-label">07 / Selected cases</div><h2>Systems applied<span>to real businesses.</span></h2></div><p>A selection of projects where strategy, technology, content and execution come together around a concrete business problem.</p></div><div class="case-list"><a class="case-row" href="https://www.lowsignal.cl/casos-de-exito/gets" target="_blank" rel="noopener noreferrer"><div class="case-num">01</div><div class="case-main"><small>GETS Educación · Growth System · Content · Performance · Web</small><h3>Strengthening GETS Educación’s digital growth.</h3></div><p class="case-copy">Ongoing content, campaigns and digital execution built to strengthen consistency, presence and results.</p><span class="case-link">View case ↗</span></a><a class="case-row" href="https://www.lowsignal.cl/casos-de-exito/fcct" target="_blank" rel="noopener noreferrer"><div class="case-num">02</div><div class="case-main"><small>Fundación Crecer con Todos · Digital Experience · Web Platform</small><h3>A platform designed to amplify its impact.</h3></div><p class="case-copy">We redesigned the digital experience to make educational resources easier to access and communicate impact more clearly.</p><span class="case-link">View case ↗</span></a><a class="case-row" href="https://www.lowsignal.cl/casos-de-exito/dulce-reino" target="_blank" rel="noopener noreferrer"><div class="case-num">03</div><div class="case-main"><small>Dulce Reino · Brand · Content · Digital Strategy</small><h3>Building a brand that wins through every detail.</h3></div><p class="case-copy">A coherent digital presence combining content, identity and strategy to strengthen the brand and sustain growth over time.</p><span class="case-link">View case ↗</span></a></div></section>
+<section class="cases"><div class="cases-head"><div><div class="section-label">07 / Selected cases</div><h2>Systems applied<span>to real businesses.</span></h2></div><p>A selection of projects where strategy, technology, content and execution come together around a concrete business problem.</p></div><div class="case-list"><a class="case-row" href="https://www.lowsignal.cl/casos-de-exito/gets" target="_blank" rel="noopener noreferrer"><div class="case-num">01</div><div class="case-main"><small>GETS Educación · Growth System · Content · Performance · Web</small><h3>Strengthening digital growth at GETS Educación.</h3></div><p class="case-copy">Ongoing content, campaigns and digital execution built to strengthen consistency, presence and results.</p><span class="case-link">View case ↗</span></a><a class="case-row" href="https://www.lowsignal.cl/casos-de-exito/fcct" target="_blank" rel="noopener noreferrer"><div class="case-num">02</div><div class="case-main"><small>Fundación Crecer con Todos · Digital Experience · Web Platform</small><h3>A platform designed to amplify its impact.</h3></div><p class="case-copy">We redesigned the digital experience to make educational resources easier to access and communicate impact more clearly.</p><span class="case-link">View case ↗</span></a><a class="case-row" href="https://www.lowsignal.cl/casos-de-exito/dulce-reino" target="_blank" rel="noopener noreferrer"><div class="case-num">03</div><div class="case-main"><small>Dulce Reino · Brand · Content · Digital Strategy</small><h3>Building a brand that wins through every detail.</h3></div><p class="case-copy">A coherent digital presence combining content, identity and strategy to strengthen the brand and sustain growth over time.</p><span class="case-link">View case ↗</span></a></div></section>
 <section class="principle"><svg class="principle-arc" viewBox="0 0 1600 260" preserveAspectRatio="none" aria-hidden="true"><path class="arc-glow" d="M-80 240 Q800 -60 1680 240"></path><path class="arc-line" d="M-80 240 Q800 -60 1680 240"></path></svg><div class="principle-inner"><div class="section-label">08 / Working principles</div><h2>System first.<span>Then, scale.</span></h2><div class="principle-grid"><div class="principle-item"><small>01 / Operating principle</small><strong>Build for clarity.</strong><p>A system should make ownership, decisions and execution easier to see.</p></div><div class="principle-item"><small>02 / Growth principle</small><strong>Less noise. More growth.</strong><p>Focus on the few things that create leverage, learning and compounding value.</p></div></div></div></section>
 <section class="project-nav"><div class="project-nav-inner"><a href="/geovictoria"><div class="project-nav-label">Previous project</div><strong>GeoVictoria</strong></a><a href="/tethereducation"><div class="project-nav-label">Next project</div><strong>TetherEd</strong></a></div></section>
 <section class="bottom" id="contact"><div class="contact-block"><div class="contact-copy"><div class="section-label">Contact</div><h3>Let's talk.</h3></div><div class="contact-links"><a class="contact-link" href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="contact-link" href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a><a class="contact-link" href="mailto:felipe@lowsignal.cl">Email</a></div></div><footer class="footer"><div>© 2026 Felipe Quiroz</div><div>Santiago / CL</div></footer></section>
