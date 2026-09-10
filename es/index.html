@@ -2854,6 +2854,107 @@ header.nav{
 }
 </style>
 
+
+<style id="home-v23-css-arrow">
+/* HOME V23 — use a CSS-drawn arrow so mobile never renders an emoji glyph */
+.work-cta{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:10px !important;
+}
+.work-arrow{
+  position:relative !important;
+  display:inline-block !important;
+  width:12px !important;
+  height:12px !important;
+  flex:0 0 12px !important;
+  margin-left:1px !important;
+  transform:translateY(-1px) !important;
+  transition:transform .2s ease !important;
+}
+.work-arrow::before{
+  content:"" !important;
+  position:absolute !important;
+  left:1px !important;
+  bottom:1px !important;
+  width:11px !important;
+  height:1px !important;
+  background:currentColor !important;
+  transform:rotate(-45deg) !important;
+  transform-origin:left center !important;
+}
+.work-arrow::after{
+  content:"" !important;
+  position:absolute !important;
+  top:0 !important;
+  right:0 !important;
+  width:7px !important;
+  height:7px !important;
+  border-top:1px solid currentColor !important;
+  border-right:1px solid currentColor !important;
+}
+.work-card:hover .work-arrow{
+  transform:translate(3px,-3px) !important;
+}
+
+/* neutralize the old unicode-arrow rules */
+.work-cta em{
+  display:none !important;
+}
+</style>
+
+
+<style id="home-v25-low-photo-scale">
+/* Slightly enlarge the lowsignal card image without breaking the layout */
+.work-card:nth-of-type(2) .work-photo{
+  overflow:hidden;
+}
+.work-card:nth-of-type(2) .work-photo img{
+  transform:scale(1.08);
+  transform-origin:center center;
+  object-position:50% 42% !important;
+}
+.work-card:nth-of-type(2):hover .work-photo img{
+  transform:scale(1.11);
+}
+@media (max-width: 900px){
+  .work-card:nth-of-type(2) .work-photo img{
+    transform:scale(1.04);
+    object-position:50% 38% !important;
+  }
+  .work-card:nth-of-type(2):hover .work-photo img{
+    transform:scale(1.06);
+  }
+}
+</style>
+
+
+<style id="home-v26-heading-leading-usm-path">
+/* HOME V26 — more breathing room in the two oversized headings */
+.hero h1{
+  line-height:1.04 !important;
+}
+.home-thesis h2{
+  line-height:1.06 !important;
+}
+.home-thesis h2 span{
+  margin-top:.08em !important;
+}
+
+/* Mobile: keep them compact but never colliding */
+@media(max-width:760px){
+  .hero h1{
+    line-height:1.07 !important;
+  }
+  .home-thesis h2{
+    line-height:1.08 !important;
+  }
+  .home-thesis h2 span{
+    margin-top:.10em !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="nav">
@@ -2879,7 +2980,7 @@ header.nav{
       </div>
     </div>
     <div class="hero-photo-wrap">
-      <div class="hero-photo"><img src="/images/profile.jpg" onerror="this.onerror=null;this.src='/images/profile.jpg'" alt="Felipe Quiroz"></div>
+      <div class="hero-photo"><img src="/profile.jpg" onerror="this.onerror=null;this.src='/profile.jpg'" alt="Felipe Quiroz"></div>
       <div class="photo-meta"><span>Producto · Growth · Operaciones</span><span>CL</span></div>
     </div>
   </div>
@@ -2941,7 +3042,7 @@ header.nav{
       <h3>Construyendo productos de workforce para operaciones reales a escala.</h3>
       <p>Estrategia de producto, discovery, pilotos y MVPs con IA en Smart Scheduler, Shift Optimizer y Shift Change Workflow.</p>
       <div class="work-signals"><span>10K+ clientes</span><span>3 productos</span><span>IA · SaaS · Ops</span></div>
-      <div class="work-cta">Ver caso<em>↗</em></div>
+      <div class="work-cta">Ver caso<span class="work-arrow" aria-hidden="true"></span></div>
     </div>
   </div>
   <div class="work-photo-wrap">
@@ -2960,7 +3061,7 @@ header.nav{
       <h3>Construyendo el sistema detrás del crecimiento.</h3>
       <p>Estrategia comercial, delivery, automatización y sistemas de growth diseñados para convertir oportunidades en ejecución repetible.</p>
       <div class="work-signals"><span>15+ organizaciones</span><span>5+ industrias</span><span>End-to-end</span></div>
-      <div class="work-cta">Ver caso<em>↗</em></div>
+      <div class="work-cta">Ver caso<span class="work-arrow" aria-hidden="true"></span></div>
     </div>
   </div>
   <div class="work-photo-wrap">
@@ -2979,7 +3080,7 @@ header.nav{
       <h3>Escalando acceso a educación mediante producto, partnerships y tecnología.</h3>
       <p>Transformación del sector público, expansión internacional e iniciativas de IA conectando instituciones y sistemas educativos.</p>
       <div class="work-signals"><span>1M+ postulaciones</span><span>LATAM · US · EU</span><span>Sector público</span></div>
-      <div class="work-cta">Ver caso<em>↗</em></div>
+      <div class="work-cta">Ver caso<span class="work-arrow" aria-hidden="true"></span></div>
     </div>
   </div>
   <div class="work-photo-wrap">
@@ -2998,7 +3099,7 @@ header.nav{
       <h3>De la captación a operar con consistencia a escala.</h3>
       <p>Admisión, CRM, coordinación académica y diseño de procesos en dos contextos complementarios dentro de educación superior.</p>
       <div class="work-signals"><span>1.000+ prospectos</span><span>400+ estudiantes</span><span>12+ secciones</span></div>
-      <div class="work-cta">Ver caso<em>↗</em></div>
+      <div class="work-cta">Ver caso<span class="work-arrow" aria-hidden="true"></span></div>
     </div>
   </div>
   <div class="work-photo-wrap">
