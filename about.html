@@ -410,6 +410,58 @@ img{display:block;width:100%;max-width:100%}
   *{scroll-behavior:auto!important;transition:none!important}
 }
 </style>
+
+<style id="about-v5-final-polish">
+/* ABOUT V5 — final consistency polish */
+
+/* Match Home / Now / case-study navbar exactly in tone */
+.nav{
+  background:#05070a !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+}
+
+/* Give the large hero a little more breathing room */
+.hero h1{
+  line-height:.98 !important;
+}
+@media(max-width:760px){
+  .hero h1{
+    line-height:1.02 !important;
+  }
+}
+
+/* CSS-drawn arrow: avoids emoji rendering on mobile */
+.lens-arrow{
+  position:relative;
+  display:inline-block;
+  width:12px;
+  height:12px;
+  color:currentColor;
+}
+.lens-arrow::before{
+  content:"";
+  position:absolute;
+  left:1px;
+  bottom:1px;
+  width:11px;
+  height:1px;
+  background:currentColor;
+  transform:rotate(-45deg);
+  transform-origin:left center;
+}
+.lens-arrow::after{
+  content:"";
+  position:absolute;
+  top:0;
+  right:0;
+  width:7px;
+  height:7px;
+  border-top:1px solid currentColor;
+  border-right:1px solid currentColor;
+}
+</style>
+
 </head>
 <body>
 
@@ -456,9 +508,9 @@ img{display:block;width:100%;max-width:100%}
 <section class="lenses">
   <div class="lenses-head">
     <div class="section-label">03 / How I think</div>
-    <h2>Three focus areas.<span> One operating mindset.</span></h2>
+    <h2>Three focus areas.<span>One operating mindset.</span></h2>
   </div>
-  <div class="lens-grid"><div class="lens"><div class="lens-num">01</div><div class="lens-icon">↗</div><h3>Product</h3><p>Build close to the real problem: understand operations, validate assumptions and design products that can be adopted and scaled.</p></div><div class="lens"><div class="lens-num">02</div><div class="lens-icon">⌁</div><h3>Growth</h3><p>Turn strategy and execution into systems: distribution, content, automation and continuous learning around growth.</p></div><div class="lens"><div class="lens-num">03</div><div class="lens-icon">◇</div><h3>Business</h3><p>Connect product with market, business and partnerships so a strong solution can also sustain itself and grow.</p></div></div>
+  <div class="lens-grid"><div class="lens"><div class="lens-num">01</div><div class="lens-icon"><span class="lens-arrow" aria-hidden="true"></span></div><h3>Product</h3><p>Build close to the real problem: understand operations, validate assumptions and design products that can be adopted and scaled.</p></div><div class="lens"><div class="lens-num">02</div><div class="lens-icon">⌁</div><h3>Growth</h3><p>Turn strategy and execution into systems: distribution, content, automation and continuous learning around growth.</p></div><div class="lens"><div class="lens-num">03</div><div class="lens-icon">◇</div><h3>Business</h3><p>Connect product with market, business and partnerships so a strong solution can also sustain itself and grow.</p></div></div>
 </section>
 
 <section class="value">
@@ -480,7 +532,7 @@ img{display:block;width:100%;max-width:100%}
       <p>I like working where decisions meet real people, processes and operations. That is where the frictions worth solving — and the signals needed to build something useful — become visible.</p>
     </div>
     <div class="field-photo">
-      <img src="/building-in-the-field.jpg" alt="Felipe Quiroz working in the field" loading="lazy">
+      <img src="/images/building-in-the-field.jpg" alt="Felipe Quiroz working in the field" loading="lazy">
     </div>
   </div>
 </section>
