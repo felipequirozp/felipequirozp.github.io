@@ -3,10 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Felipe Quiroz | Producto, Growth y Operaciones</title>
-<meta name="theme-color" content="#182536">
-<!-- FAVICON -->
-<link href="../favicon.png" rel="icon" type="image/png"/>
+<title>Felipe Quiroz | Producto, Growth & Operaciones</title>
+<meta name="theme-color" content="#05070a">
+<link rel="icon" type="image/png" href="/favicon.png">
 <meta name="description" content="Felipe Quiroz — producto, growth y operaciones. Construyendo productos, sistemas y compañías entre tecnología y negocio.">
 <link rel="canonical" href="https://felipequirozp.cl/es/">
 <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/">
@@ -30,8 +29,8 @@
   --muted:#66717d;
   --line:#d4d9de;
   --cyan:#35e7ea;
-  --page-gutter:5vw;
-  --page-max:1520px;
+  --page-gutter:7vw;
+  --page-max:1440px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -39,7 +38,6 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:"Inter",syste
 a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
 img{display:block;width:100%;max-width:100%}
 ::selection{background:var(--navy);color:#fff}
-#work,#about,#contact{scroll-margin-top:110px}
 
 /* SAME NAV SYSTEM AS CASE PAGES */
 .nav{min-height:84px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;gap:30px;background:var(--navy);color:#fff;border-bottom:1px solid rgba(255,255,255,.12)}
@@ -70,7 +68,7 @@ img{display:block;width:100%;max-width:100%}
 .proof{padding:0 var(--page-gutter);background:var(--paper)}
 .proof-inner{width:min(var(--page-max),100%);margin:0 auto;padding:74px 0 82px}
 .section-label{font-size:9px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--steel-light)}
-.proof-grid{margin-top:28px;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(255,255,255,.10);border-radius:22px;overflow:hidden;background:linear-gradient(90deg,rgba(13,23,36,.82) 0%,rgba(24,37,54,.72) 48%,rgba(47,70,97,.78) 100%),linear-gradient(0deg,rgba(13,23,36,.52),rgba(13,23,36,.28)),url('/building-in-the-field.jpg') center 48%/cover no-repeat;box-shadow:0 20px 44px rgba(13,23,36,.08)}
+.proof-grid{margin-top:28px;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(255,255,255,.10);border-radius:22px;overflow:hidden;background:linear-gradient(90deg,rgba(13,23,36,.82) 0%,rgba(24,37,54,.72) 48%,rgba(47,70,97,.78) 100%),linear-gradient(0deg,rgba(13,23,36,.52),rgba(13,23,36,.28)),url('building-in-the-field.jpg') center 48%/cover no-repeat;box-shadow:0 20px 44px rgba(13,23,36,.08)}
 .proof-item{min-height:190px;padding:34px 36px 36px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(255,255,255,.11)}
 .proof-item:not(:first-child){padding-left:36px}
 .proof-item:last-child{border-right:0}
@@ -156,7 +154,22 @@ img{display:block;width:100%;max-width:100%}
   line-height:1.72;
 }
 
+.about-bridge-personal{
+  margin:18px 0 0;
+  max-width:680px;
+  color:#aebbd0;
+  font-size:13px;
+  line-height:1.7;
+}
 
+.about-bridge-meta{
+  margin-top:28px;
+  color:#c7d0d9;
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
 .about-bridge-link{
   display:inline-flex;
   align-items:center;
@@ -191,12 +204,12 @@ img{display:block;width:100%;max-width:100%}
 }
 
 /* NOW */
-.now{padding:108px var(--page-gutter);background:linear-gradient(90deg,rgba(6,18,34,.90) 0%,rgba(17,32,53,.76) 52%,rgba(28,48,75,.78) 100%),url('/now-santiago-workspace.jpg') center center/cover no-repeat;color:#fff}
+.now{padding:108px var(--page-gutter);background:linear-gradient(90deg,rgba(6,18,34,.90) 0%,rgba(17,32,53,.76) 52%,rgba(28,48,75,.78) 100%),url('now-santiago-workspace.jpg') center center/cover no-repeat;color:#fff}
 .now-inner{width:min(var(--page-max),100%);margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:50px;align-items:end;min-height:420px}
 .now .section-label{color:#86a0b8}
 .now h2{max-width:760px;color:#fff;margin:18px 0 0;font-family:"Manrope",sans-serif;font-size:clamp(54px,6vw,92px);line-height:.94;letter-spacing:-.065em;font-weight:400}
 .now h2 span{display:block;color:#aebbd0}
-.now-copy{margin:26px 0 0;max-width:620px;color:#e3e8ef;font-size:15px;line-height:1.68}
+.now-copy{margin:26px 0 0;max-width:760px;color:#e3e8ef;font-size:15px;line-height:1.68}
 .now-link{align-self:end;display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border:1px solid rgba(255,255,255,.22);border-radius:999px;font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:.2s ease}
 .now-link:hover{background:#fff;color:var(--navy)}
 
@@ -341,10 +354,7 @@ header.nav{
   color:#fff;
   transition:background .2s ease,color .2s ease,border-color .2s ease;
 }
-.contact-nav:visited{color:#fff}
-.contact-nav:hover,
-.contact-nav:focus-visible,
-.contact-nav:active{background:#fff;color:var(--navy);border-color:#fff;opacity:1;outline:none;box-shadow:none}
+.contact-nav:hover{background:#fff;color:var(--navy);border-color:#fff;opacity:1}
 .lang-switch{
   width:38px;
   height:38px;
@@ -405,16 +415,1291 @@ header.nav{
 }
 
 
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+/* =========================================================
+   HOME BOOM V1 — aligned with About / Now
+   ========================================================= */
+:root{
+  --navy:#08111d;
+  --navy-deep:#05070a;
+  --steel:#33465e;
+  --steel-light:#78899d;
+  --slate:#99a8ba;
+  --slate-light:#c7d0da;
+  --ice:#f2f4f7;
+  --paper:#f6f7f9;
+  --white:#fff;
+  --ink:#090d12;
+  --muted:#687382;
+  --line:#dce1e7;
+  --cyan:#1683ff;
+  --blue:#1683ff;
 }
+
+/* Global rhythm */
+body{background:#fff}
+.section-label{color:#718297;letter-spacing:.12em}
+::selection{background:#1683ff;color:#fff}
+
+/* NAV — same dark system as About / Now */
+header.nav{
+  position:sticky;top:0;z-index:1000;
+  min-height:84px;padding:0 5vw;
+  background:rgba(5,7,10,.95);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+}
+.brand{color:#fff}
+.nav-links>a:not(.contact-nav):not(.lang-switch){color:#b9c2cc}
+.nav-links>a:not(.contact-nav):not(.lang-switch):hover{color:#fff}
+.contact-nav{
+  border-color:rgba(255,255,255,.26);
+  transition:background .22s ease,color .22s ease,border-color .22s ease,transform .18s ease;
+}
+.contact-nav:hover{
+  background:#fff!important;color:#07101b!important;border-color:#fff!important;
+  transform:translateY(-1px)
+}
+.contact-nav:active{transform:translateY(0) scale(.98)}
+.lang-switch{border-color:rgba(255,255,255,.22)}
+.lang-switch:hover{background:rgba(255,255,255,.08)!important}
+
+/* HERO — deeper, simpler, more editorial */
+.hero{
+  position:relative;
+  padding:78px var(--page-gutter) 96px;
+  background:
+    radial-gradient(circle at 83% 42%,rgba(22,131,255,.16),transparent 26%),
+    linear-gradient(108deg,#05070a 0%,#07101b 52%,#102844 100%);
+  overflow:hidden;
+}
+.hero::after{
+  content:"";
+  position:absolute;right:-8%;bottom:-44%;
+  width:52vw;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,rgba(22,131,255,.12),transparent 62%);
+  filter:blur(12px);pointer-events:none
+}
+.hero-inner{position:relative;z-index:2;align-items:center}
+.hero-label{color:#69b5ff;letter-spacing:.13em}
+.hero h1{
+  max-width:880px;
+  font-size:clamp(62px,7vw,108px);
+  line-height:.92;letter-spacing:-.072em
+}
+.hero h1 .accent{color:#a8bdd7}
+.hero-desc{
+  max-width:670px;
+  margin-top:34px;padding-top:24px;
+  color:#d6dde6;border-color:rgba(255,255,255,.14);
+  font-size:16px;line-height:1.68
+}
+.hero-roles{margin-top:26px;gap:20px}
+.hero-role{border-color:rgba(255,255,255,.11)}
+.hero-role span{color:#7f90a5}
+.hero-role strong{font-size:12px}
+.hero-photo{
+  min-height:540px;border-radius:22px;
+  border:1px solid rgba(255,255,255,.09);
+  box-shadow:0 24px 70px rgba(0,0,0,.24)
+}
+.hero-photo img{min-height:540px;filter:saturate(.98) contrast(1.02)}
+.photo-meta{color:#8797aa}
+
+/* NUMBERS — keep real-photo energy, cleaner black overlay */
+.proof{background:#fff}
+.proof-inner{padding:74px 0 88px}
+.proof-grid{
+  margin-top:28px;
+  background:
+    linear-gradient(90deg,rgba(4,8,14,.91),rgba(7,17,31,.82) 52%,rgba(10,35,67,.72)),
+    url('building-in-the-field.jpg') center 46%/cover no-repeat;
+  border:1px solid rgba(8,17,29,.10);
+  border-radius:22px;
+  box-shadow:none
+}
+.proof-item{min-height:184px}
+.proof-item strong{font-size:clamp(42px,4vw,62px)}
+.proof-item span{color:#ccd5df}
+
+/* SELECTED WORK — more editorial, less SaaS */
+.selected{padding:112px var(--page-gutter) 122px;background:#fff}
+.selected-head{margin-bottom:58px}
+.selected-head h2{
+  max-width:980px;color:#0a111c;
+  font-size:clamp(48px,5.15vw,76px);
+  line-height:1.02;letter-spacing:-.058em
+}
+.selected-head p{color:#6d7886}
+.work-list{border-color:#dce1e7}
+.work-card{
+  padding:48px 0;
+  border-color:#dce1e7;
+  transition:transform .22s ease,background .22s ease
+}
+.work-card:hover{
+  transform:translateY(-3px);
+  background:linear-gradient(90deg,rgba(22,131,255,.018),rgba(22,131,255,.008));
+  box-shadow:none
+}
+.work-brand{
+  background:#07101b;
+  border-color:#07101b;
+  border-radius:12px
+}
+.work-card:hover .work-brand{
+  background:#0b1a2b;border-color:#17375d;transform:translateY(-2px)
+}
+.work-main h3{color:#0a111c}
+.work-signals{color:#52667e}
+.work-cta{color:#0a111c}
+.work-photo{
+  border-radius:18px;border-color:#e0e4e9;background:#f3f5f7
+}
+.work-card:hover .work-photo img{transform:scale(1.014)}
+
+/* ABOUT PREVIEW — clean dark panel, no decorative arcs */
+.about-bridge{
+  padding:112px var(--page-gutter);
+  background:#05070a;
+}
+.about-bridge-inner{align-items:center}
+.about-bridge-copy .section-label{color:#69b5ff}
+.about-bridge h2{
+  max-width:840px;
+  font-size:clamp(52px,5.4vw,80px);
+  line-height:.99;letter-spacing:-.062em
+}
+.about-bridge h2 span{color:#a7b9cf}
+.about-bridge-lead{color:#c9d1db;max-width:690px}
+.about-bridge-link{
+  margin-top:30px;
+  border-bottom-color:rgba(255,255,255,.32);
+  transition:color .2s ease,border-color .2s ease,transform .18s ease
+}
+.about-bridge-link:hover{color:#78b9ff;border-color:#78b9ff;transform:translateY(-1px)}
+.about-bridge-visual img{
+  border-radius:22px;
+  filter:saturate(.96) contrast(1.03)
+}
+
+/* NOW PREVIEW — city stays important */
+.now{
+  position:relative;
+  padding:110px var(--page-gutter);
+  background:
+    linear-gradient(90deg,rgba(4,9,16,.95) 0%,rgba(5,14,26,.82) 48%,rgba(12,34,62,.60) 100%),
+    url('now-santiago-workspace.jpg') center 47%/cover no-repeat;
+}
+.now::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 68%,rgba(4,9,16,.20));
+  pointer-events:none
+}
+.now-inner{position:relative;z-index:2;min-height:430px}
+.now .section-label{color:#7ebcff}
+.now h2{
+  max-width:800px;
+  font-size:clamp(56px,6vw,90px);
+  line-height:.95;letter-spacing:-.064em
+}
+.now h2 span{color:#a9bbd0}
+.now-copy{max-width:620px;color:#dce3eb}
+.now-link{
+  min-height:48px;padding:0 20px;
+  background:#1683ff;border-color:#1683ff;color:#fff;
+  border-radius:11px;
+  transition:background .22s ease,color .22s ease,border-color .22s ease,transform .18s ease,box-shadow .22s ease
+}
+.now-link:hover{
+  background:#fff;color:#07101b;border-color:#fff;
+  transform:translateY(-2px);
+  box-shadow:0 12px 30px rgba(22,131,255,.20)
+}
+.now-link:active{transform:translateY(0) scale(.98)}
+
+/* CONTACT */
+.bottom{background:#f6f7f9;border-top:1px solid #e0e4e9}
+.contact-copy h3{color:#08111d}
+.contact-link{border-color:rgba(8,17,29,.18);color:#08111d}
+.contact-link:hover{background:#08111d;border-color:#08111d;color:#fff}
+
+/* Mobile */
+@media(max-width:900px){
+  .hero-photo{min-height:500px}
+  .hero-photo img{min-height:500px}
+  .about-bridge-inner{gap:46px}
+}
+@media(max-width:760px){
+  header.nav{background:rgba(5,7,10,.97)}
+  .hero{padding:52px var(--page-gutter) 72px}
+  .hero::after{display:none}
+  .hero h1{font-size:clamp(52px,15vw,72px)}
+  .hero-desc{font-size:15px}
+  .hero-photo{min-height:420px;border-radius:18px}
+  .hero-photo img{min-height:420px}
+  .proof-inner{padding:60px 0 68px}
+  .proof-grid{border-radius:18px}
+  .selected{padding:82px var(--page-gutter) 92px}
+  .selected-head h2{font-size:clamp(42px,12vw,56px)}
+  .about-bridge{padding:86px var(--page-gutter)}
+  .about-bridge h2{font-size:clamp(44px,12vw,56px)}
+  .now{padding:86px var(--page-gutter)}
+  .now-inner{min-height:390px}
+  .now h2{font-size:clamp(46px,13vw,62px)}
+  .now-link{justify-self:start}
+}
+@media(max-width:390px){
+  .hero h1{font-size:50px}
+  .hero-photo{min-height:380px}
+  .hero-photo img{min-height:380px}
+}
+
+
+/* =========================================================
+   HOME BOOM V2 — nav + brand tiles aligned with About
+   ========================================================= */
+
+/* Nav: exact same dark system feel as About */
+.nav,
+header.nav{
+  background: rgba(5,7,10,.94) !important;
+  border-bottom: 1px solid rgba(255,255,255,.08) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* Brand tiles: remove the older bluish block and move to the newer black / deep navy range */
+.work-brand{
+  background: linear-gradient(135deg,#05070a 0%,#07101b 68%,#0b1a2b 100%) !important;
+  border: 1px solid rgba(18,131,255,.10) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.03),
+    0 8px 24px rgba(3,8,16,.10);
+}
+
+.work-card:hover .work-brand{
+  background: linear-gradient(135deg,#07101b 0%,#0b1a2b 64%,#102844 100%) !important;
+  border-color: rgba(22,131,255,.22) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.04),
+    0 14px 30px rgba(8,17,29,.12);
+}
+
+/* Keep logos crisp inside the darker chip */
+.work-brand img{
+  filter: brightness(0) invert(1);
+  opacity: .98;
+}
+
+/* Slightly cleaner selected-work meta tone under the brand tile */
+.work-role{
+  color:#6a7889 !important;
+}
+
+/* Mobile: preserve same feel */
+@media(max-width:760px){
+  .nav,
+  header.nav{
+    background: rgba(5,7,10,.97) !important;
+  }
+}
+
+
+/* =========================================================
+   HOME BOOM V3 — exact About navbar + restored hero height
+   ========================================================= */
+
+/* The Home used a white body underneath a translucent nav, which made the
+   same rgba nav look visibly lighter than About. Use the same dark base. */
+body{
+  background:#05070a !important;
+}
+
+/* NAV — match About exactly */
+.nav,
+header.nav{
+  position:sticky !important;
+  top:0 !important;
+  z-index:1000 !important;
+  min-height:84px !important;
+  padding:0 5vw !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:30px !important;
+  flex-direction:row !important;
+  flex-wrap:nowrap !important;
+  background:rgba(5,7,10,.94) !important;
+  border-bottom:1px solid rgba(255,255,255,.08) !important;
+  backdrop-filter:blur(18px) !important;
+  -webkit-backdrop-filter:blur(18px) !important;
+}
+
+.brand{
+  font-family:Manrope,sans-serif !important;
+  font-size:17px !important;
+  font-weight:600 !important;
+  letter-spacing:-.04em !important;
+  color:#fff !important;
+  white-space:nowrap !important;
+}
+
+.nav-links{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  width:auto !important;
+  gap:30px !important;
+  font-size:10px !important;
+  font-weight:500 !important;
+  letter-spacing:.07em !important;
+  text-transform:uppercase !important;
+  white-space:normal !important;
+  order:initial !important;
+}
+
+.nav-links>a{
+  position:relative !important;
+  color:#bcc4ce !important;
+}
+
+.nav-links>a:not(.contact-nav):not(.lang-switch)::after{
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;
+  bottom:-7px !important;
+  width:0 !important;
+  height:1px !important;
+  background:#fff !important;
+  transition:width .22s ease !important;
+}
+
+.nav-links>a:not(.contact-nav):not(.lang-switch):hover{
+  color:#fff !important;
+}
+
+.nav-links>a:not(.contact-nav):not(.lang-switch):hover::after{
+  width:100% !important;
+}
+
+.contact-nav{
+  padding:9px 15px !important;
+  border:1px solid rgba(255,255,255,.25) !important;
+  border-radius:999px !important;
+  color:#fff !important;
+}
+
+.contact-nav:hover,
+.contact-nav:focus-visible,
+.contact-nav:active{
+  background:#fff !important;
+  color:#07101b !important;
+  border-color:#fff !important;
+  outline:none !important;
+}
+
+.lang-switch{
+  width:38px !important;
+  height:38px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  flex-shrink:0 !important;
+  border:1px solid rgba(255,255,255,.20) !important;
+  border-radius:50% !important;
+  color:#b7c0ca !important;
+}
+
+.lang-switch:hover{
+  background:rgba(255,255,255,.08) !important;
+  color:#fff !important;
+}
+
+/* HERO — recover the full opening-screen presence */
+.hero{
+  min-height:calc(100svh - 84px) !important;
+  padding:76px var(--page-gutter) 72px !important;
+  display:flex !important;
+  align-items:center !important;
+  background:
+    linear-gradient(90deg,rgba(5,7,10,.99) 0%,rgba(7,12,20,.97) 52%,rgba(9,25,46,.93) 100%) !important;
+}
+
+.hero-inner{
+  width:min(var(--page-max),100%) !important;
+  margin:0 auto !important;
+  align-items:center !important;
+}
+
+/* MOBILE — exactly the same navbar rhythm used on About */
+@media(max-width:760px){
+  .nav,
+  header.nav{
+    min-height:auto !important;
+    padding:18px 20px !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    justify-content:flex-start !important;
+    gap:14px !important;
+    flex-wrap:nowrap !important;
+    background:rgba(5,7,10,.97) !important;
+  }
+
+  .brand{
+    font-size:18px !important;
+  }
+
+  .nav-links{
+    order:initial !important;
+    width:100% !important;
+    justify-content:space-between !important;
+    gap:8px !important;
+    font-size:9px !important;
+    letter-spacing:.07em !important;
+  }
+
+  .contact-nav{
+    padding:8px 10px !important;
+  }
+
+  .lang-switch{
+    width:34px !important;
+    height:34px !important;
+  }
+
+  .hero{
+    min-height:auto !important;
+    padding:70px var(--page-gutter) 64px !important;
+    align-items:flex-start !important;
+  }
+
+  .hero-inner{
+    gap:38px !important;
+  }
+
+  .hero-photo{
+    min-height:390px !important;
+  }
+
+  .hero-photo img{
+    min-height:390px !important;
+  }
+}
+
+@media(max-width:390px){
+  .nav-links{
+    font-size:8px !important;
+  }
+}
+
+
+/* =========================================================
+   HOME BOOM V4 — Selected Work as alternating 50/50 cases
+   ========================================================= */
+.selected{
+  padding:112px var(--page-gutter) 122px !important;
+  background:#fff !important;
+}
+.selected-inner{
+  width:min(1380px,100%) !important;
+  margin:0 auto !important;
+}
+.selected-head{
+  margin-bottom:54px !important;
+}
+.work-list{
+  display:flex !important;
+  flex-direction:column !important;
+  gap:28px !important;
+  border:0 !important;
+}
+.work-card{
+  position:relative !important;
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+  gap:0 !important;
+  align-items:stretch !important;
+  min-height:470px !important;
+  padding:0 !important;
+  overflow:hidden !important;
+  border:1px solid #dfe4ea !important;
+  border-radius:22px !important;
+  background:#fff !important;
+  box-shadow:none !important;
+  transform:none !important;
+  transition:border-color .22s ease,box-shadow .22s ease !important;
+}
+.work-card:hover{
+  transform:none !important;
+  background:#fff !important;
+  border-color:rgba(22,131,255,.42) !important;
+  box-shadow:0 18px 46px rgba(9,21,38,.07) !important;
+}
+.work-card:active{
+  transform:none !important;
+}
+.work-content{
+  grid-column:1;
+  grid-row:1;
+  padding:46px 48px 44px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-width:0;
+}
+.work-card:nth-child(even) .work-content{
+  grid-column:2;
+}
+.work-card:nth-child(even) .work-photo-wrap{
+  grid-column:1;
+}
+.work-meta{
+  min-width:0;
+}
+.work-index{
+  margin:0 0 18px !important;
+  color:#71849a !important;
+  font-size:10px !important;
+  font-weight:700 !important;
+  letter-spacing:.11em !important;
+  text-transform:uppercase !important;
+}
+.work-brand{
+  width:188px !important;
+  height:70px !important;
+  margin:0 0 18px !important;
+  padding:13px 16px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  border-radius:14px !important;
+  background:linear-gradient(135deg,#05070a 0%,#07101b 72%,#0b1a2b 100%) !important;
+  border:1px solid rgba(22,131,255,.11) !important;
+  box-shadow:none !important;
+  transform:none !important;
+}
+.work-card:hover .work-brand{
+  transform:none !important;
+  background:linear-gradient(135deg,#05070a 0%,#07101b 72%,#0b1a2b 100%) !important;
+  border-color:rgba(22,131,255,.20) !important;
+}
+.work-brand img{
+  max-width:155px !important;
+  max-height:34px !important;
+  filter:brightness(0) invert(1) !important;
+  opacity:.98 !important;
+}
+.work-role{
+  max-width:470px;
+  color:#6c7887 !important;
+  font-size:12px !important;
+  line-height:1.55 !important;
+}
+.work-main{
+  margin-top:30px;
+}
+.work-main h3{
+  margin:0 !important;
+  max-width:560px;
+  color:#0a111c !important;
+  font-family:"Manrope",sans-serif !important;
+  font-size:clamp(34px,3.1vw,48px) !important;
+  line-height:1.03 !important;
+  letter-spacing:-.055em !important;
+  font-weight:400 !important;
+}
+.work-main p{
+  margin:18px 0 0 !important;
+  max-width:560px !important;
+  color:#687482 !important;
+  font-size:13px !important;
+  line-height:1.72 !important;
+}
+.work-signals{
+  margin-top:24px !important;
+  padding-top:18px !important;
+  border-top:1px solid #e1e6eb !important;
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:9px 18px !important;
+  color:#50647b !important;
+  font-size:10px !important;
+  letter-spacing:.02em !important;
+}
+.work-cta{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:9px !important;
+  width:max-content !important;
+  margin-top:24px !important;
+  color:#0a111c !important;
+  font-size:10px !important;
+  font-weight:700 !important;
+  letter-spacing:.06em !important;
+  text-transform:uppercase !important;
+  border-bottom:1px solid rgba(10,17,28,.24) !important;
+  padding-bottom:4px !important;
+}
+.work-cta em{
+  font-style:normal !important;
+  transition:transform .22s ease !important;
+}
+.work-card:hover .work-cta em{
+  transform:translate(4px,-2px) !important;
+}
+.work-photo-wrap{
+  grid-column:2;
+  grid-row:1;
+  min-width:0;
+  margin:0 !important;
+}
+.work-photo{
+  width:100% !important;
+  height:100% !important;
+  min-height:470px !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:#eef2f6 !important;
+  overflow:hidden !important;
+}
+.work-photo img{
+  width:100% !important;
+  height:100% !important;
+  min-height:470px !important;
+  object-fit:cover !important;
+  transition:transform .4s cubic-bezier(.2,.7,.2,1) !important;
+}
+.work-card:hover .work-photo img{
+  transform:scale(1.015) !important;
+}
+.work-photo-caption{
+  display:none !important;
+}
+
+/* Image framing by case */
+.photo-geo img{object-position:center 48% !important}
+.photo-low img{object-position:center 50% !important}
+.photo-tether img{object-position:center 44% !important}
+.photo-usm img{object-position:center 46% !important}
+
+@media(max-width:960px){
+  .work-card{
+    min-height:430px !important;
+  }
+  .work-content{
+    padding:38px 34px 36px;
+  }
+  .work-photo,
+  .work-photo img{
+    min-height:430px !important;
+  }
+  .work-main h3{
+    font-size:clamp(31px,4vw,42px) !important;
+  }
+}
+
+@media(max-width:760px){
+  .selected{
+    padding:82px var(--page-gutter) 92px !important;
+  }
+  .work-list{
+    gap:22px !important;
+  }
+  .work-card{
+    display:flex !important;
+    flex-direction:column !important;
+    min-height:0 !important;
+    border-radius:18px !important;
+  }
+  .work-photo-wrap,
+  .work-card:nth-child(even) .work-photo-wrap{
+    order:1 !important;
+    width:100% !important;
+  }
+  .work-content,
+  .work-card:nth-child(even) .work-content{
+    order:2 !important;
+    width:100% !important;
+    padding:28px 24px 30px !important;
+  }
+  .work-photo,
+  .work-photo img{
+    min-height:260px !important;
+    height:260px !important;
+  }
+  .work-brand{
+    width:170px !important;
+    height:60px !important;
+    border-radius:12px !important;
+  }
+  .work-brand img{
+    max-width:142px !important;
+    max-height:30px !important;
+  }
+  .work-main{
+    margin-top:24px !important;
+  }
+  .work-main h3{
+    font-size:35px !important;
+    line-height:1.04 !important;
+  }
+  .work-main p{
+    font-size:13px !important;
+  }
+}
+
+
+/* =========================================================
+   HOME BOOM V5 — Selected Work more compact
+   ========================================================= */
+.selected-inner{
+  width:min(1280px,100%) !important;
+}
+.work-list{
+  gap:22px !important;
+}
+.work-card{
+  min-height:390px !important;
+  border-radius:20px !important;
+}
+.work-content{
+  padding:36px 40px 34px !important;
+}
+.work-index{
+  margin-bottom:14px !important;
+}
+.work-brand{
+  width:172px !important;
+  height:62px !important;
+  margin-bottom:14px !important;
+  padding:11px 14px !important;
+  border-radius:12px !important;
+}
+.work-brand img{
+  max-width:142px !important;
+  max-height:29px !important;
+}
+.work-role{
+  font-size:11px !important;
+}
+.work-main{
+  margin-top:24px !important;
+}
+.work-main h3{
+  max-width:520px !important;
+  font-size:clamp(30px,2.55vw,41px) !important;
+  line-height:1.04 !important;
+}
+.work-main p{
+  margin-top:14px !important;
+  max-width:520px !important;
+  font-size:12px !important;
+  line-height:1.68 !important;
+}
+.work-signals{
+  margin-top:18px !important;
+  padding-top:14px !important;
+  gap:8px 16px !important;
+  font-size:9px !important;
+}
+.work-cta{
+  margin-top:18px !important;
+  font-size:9px !important;
+}
+.work-photo,
+.work-photo img{
+  min-height:390px !important;
+}
+
+/* Slightly favor text over image so the case feels less like a giant photo */
+.work-card{
+  grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr) !important;
+}
+.work-card:nth-child(even){
+  grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr) !important;
+}
+
+@media(max-width:960px){
+  .work-card{
+    min-height:360px !important;
+  }
+  .work-content{
+    padding:32px 30px !important;
+  }
+  .work-photo,
+  .work-photo img{
+    min-height:360px !important;
+  }
+  .work-main h3{
+    font-size:34px !important;
+  }
+}
+
+@media(max-width:760px){
+  .selected-inner{
+    width:100% !important;
+  }
+  .work-card{
+    min-height:0 !important;
+    border-radius:17px !important;
+  }
+  .work-photo,
+  .work-photo img{
+    height:220px !important;
+    min-height:220px !important;
+  }
+  .work-content{
+    padding:24px 22px 26px !important;
+  }
+  .work-brand{
+    width:160px !important;
+    height:56px !important;
+  }
+  .work-main h3{
+    font-size:31px !important;
+  }
+}
+
+
+/* =========================================================
+   HOME BOOM V6 — force identical Selected Work card heights
+   ========================================================= */
+@media(min-width:961px){
+  .work-card{
+    height:390px !important;
+    min-height:390px !important;
+    max-height:390px !important;
+  }
+  .work-content,
+  .work-photo-wrap,
+  .work-photo,
+  .work-photo img{
+    height:390px !important;
+    min-height:390px !important;
+    max-height:390px !important;
+  }
+  .work-content{
+    overflow:hidden !important;
+  }
+  .work-photo-wrap,
+  .work-photo{
+    overflow:hidden !important;
+  }
+}
+
+@media(min-width:761px) and (max-width:960px){
+  .work-card{
+    height:360px !important;
+    min-height:360px !important;
+    max-height:360px !important;
+  }
+  .work-content,
+  .work-photo-wrap,
+  .work-photo,
+  .work-photo img{
+    height:360px !important;
+    min-height:360px !important;
+    max-height:360px !important;
+  }
+  .work-content{
+    overflow:hidden !important;
+  }
+}
+
+@media(max-width:760px){
+  .work-card{
+    height:auto !important;
+    max-height:none !important;
+  }
+  .work-content{
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+    overflow:visible !important;
+  }
+  .work-photo-wrap,
+  .work-photo,
+  .work-photo img{
+    height:220px !important;
+    min-height:220px !important;
+    max-height:220px !important;
+  }
+}
+
+
+/* =========================================================
+   HOME BOOM V7 — brand/logo boxes sized to each logo
+   ========================================================= */
+.work-brand{
+  width:auto !important;
+  min-width:0 !important;
+  max-width:max-content !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  padding:11px 16px !important;
+}
+
+.work-brand img{
+  width:auto !important;
+  display:block !important;
+}
+
+/* Per-logo tuning so each pill hugs the mark better */
+.work-brand.logo-geo img{max-width:146px !important; max-height:29px !important;}
+.work-brand.logo-low img{max-width:132px !important; max-height:25px !important;}
+.work-brand.logo-tether img{max-width:126px !important; max-height:28px !important;}
+.work-brand.logo-usm img{max-width:150px !important; max-height:31px !important;}
+
+@media(max-width:760px){
+  .work-brand{
+    width:auto !important;
+    max-width:max-content !important;
+    padding:10px 14px !important;
+    height:54px !important;
+  }
+  .work-brand.logo-usm img{max-width:132px !important; max-height:28px !important;}
+}
+
+
+/* =========================================================
+   HOME BOOM V8 — Numbers, aligned with the new system
+   ========================================================= */
+.proof{
+  padding:0 var(--page-gutter) !important;
+  background:#fff !important;
+}
+.proof-inner{
+  width:min(var(--page-max),100%) !important;
+  margin:0 auto !important;
+  padding:74px 0 88px !important;
+}
+.proof .section-label{
+  color:#718297 !important;
+}
+.proof-grid{
+  position:relative !important;
+  margin-top:28px !important;
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  overflow:hidden !important;
+  border:1px solid rgba(8,17,29,.12) !important;
+  border-radius:22px !important;
+  background:
+    radial-gradient(circle at 92% 18%,rgba(22,131,255,.11),transparent 26%),
+    linear-gradient(105deg,#05070a 0%,#07101b 66%,#0a1829 100%) !important;
+  box-shadow:none !important;
+}
+.proof-grid::after{
+  content:"" !important;
+  position:absolute !important;
+  right:-9% !important;
+  bottom:-48% !important;
+  width:34% !important;
+  aspect-ratio:1 !important;
+  border-radius:50% !important;
+  background:radial-gradient(circle,rgba(22,131,255,.15),transparent 66%) !important;
+  pointer-events:none !important;
+}
+.proof-item{
+  position:relative !important;
+  z-index:1 !important;
+  min-height:176px !important;
+  padding:31px 34px 32px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  border-right:1px solid rgba(255,255,255,.10) !important;
+  transition:background .22s ease !important;
+}
+.proof-item:not(:first-child){
+  padding-left:34px !important;
+}
+.proof-item:last-child{
+  border-right:0 !important;
+}
+.proof-item:hover{
+  background:rgba(22,131,255,.045) !important;
+}
+.proof-item strong{
+  display:block !important;
+  margin:0 !important;
+  font-family:"Manrope",sans-serif !important;
+  font-size:clamp(42px,4vw,60px) !important;
+  font-weight:400 !important;
+  line-height:1 !important;
+  letter-spacing:-.062em !important;
+  color:#fff !important;
+}
+.proof-item span{
+  display:block !important;
+  margin-top:12px !important;
+  max-width:210px !important;
+  color:#aeb9c7 !important;
+  font-size:10.5px !important;
+  line-height:1.55 !important;
+}
+
+/* tiny blue cue, but not another decorative illustration */
+.proof-item::before{
+  content:"" !important;
+  position:absolute !important;
+  left:34px !important;
+  top:27px !important;
+  width:18px !important;
+  height:1px !important;
+  background:#1683ff !important;
+  opacity:.0 !important;
+  transform:scaleX(.4) !important;
+  transform-origin:left center !important;
+  transition:opacity .22s ease,transform .22s ease !important;
+}
+.proof-item:hover::before{
+  opacity:.9 !important;
+  transform:scaleX(1) !important;
+}
+
+@media(max-width:900px){
+  .proof-grid{
+    grid-template-columns:1fr 1fr !important;
+  }
+  .proof-item{
+    min-height:154px !important;
+    padding:26px 24px 27px !important;
+  }
+  .proof-item:not(:first-child){
+    padding-left:24px !important;
+  }
+  .proof-item:nth-child(2){
+    border-right:0 !important;
+  }
+  .proof-item:nth-child(-n+2){
+    border-bottom:1px solid rgba(255,255,255,.10) !important;
+  }
+  .proof-item::before{
+    left:24px !important;
+    top:22px !important;
+  }
+}
+
+@media(max-width:560px){
+  .proof-inner{
+    padding:60px 0 68px !important;
+  }
+  .proof-grid{
+    grid-template-columns:1fr !important;
+    border-radius:18px !important;
+  }
+  .proof-item,
+  .proof-item:not(:first-child){
+    min-height:132px !important;
+    padding:23px 22px 24px !important;
+    border-right:0 !important;
+    border-bottom:1px solid rgba(255,255,255,.10) !important;
+  }
+  .proof-item:last-child{
+    border-bottom:0 !important;
+  }
+  .proof-item strong{
+    font-size:46px !important;
+  }
+  .proof-item span{
+    max-width:260px !important;
+    margin-top:8px !important;
+  }
+  .proof-item::before{
+    display:none !important;
+  }
+}
+
+
+/* =========================================================
+   HOME BOOM V9 — card cleanup + local assets + small polish
+   ========================================================= */
+.nav{
+  background:linear-gradient(90deg,#0b1119 0%,#121925 35%,#151d28 50%,#121925 65%,#0b1119 100%) !important;
+  border-bottom:1px solid rgba(255,255,255,.10) !important;
+}
+
+.selected{
+  padding:108px var(--page-gutter) 118px !important;
+}
+.selected-inner{
+  width:min(1320px,100%) !important;
+}
+.selected-head{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) minmax(280px,460px) !important;
+  gap:28px 40px !important;
+  align-items:end !important;
+  margin-bottom:38px !important;
+}
+.selected-head h2{
+  max-width:760px !important;
+}
+.selected-head p{
+  max-width:430px !important;
+  justify-self:end !important;
+}
+
+.work-list{
+  gap:24px !important;
+}
+.work-card,
+.work-card:nth-child(even){
+  grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr) !important;
+  min-height:430px !important;
+  height:auto !important;
+  max-height:none !important;
+  align-items:stretch !important;
+  border-radius:22px !important;
+}
+.work-card:nth-child(even) .work-content{grid-column:2 !important;}
+.work-card:nth-child(even) .work-photo-wrap{grid-column:1 !important;}
+.work-content,
+.work-photo-wrap{
+  height:auto !important;
+  min-height:430px !important;
+  max-height:none !important;
+}
+.work-content{
+  padding:40px 42px 38px !important;
+  justify-content:center !important;
+}
+.work-meta{align-self:start !important;}
+.work-brand{
+  min-height:58px !important;
+  padding:10px 16px !important;
+  border-radius:13px !important;
+}
+.work-role{
+  max-width:520px !important;
+}
+.work-main{
+  margin-top:24px !important;
+}
+.work-main h3{
+  max-width:540px !important;
+  font-size:clamp(31px,2.6vw,43px) !important;
+}
+.work-main p{
+  max-width:540px !important;
+  font-size:12.5px !important;
+  line-height:1.7 !important;
+}
+.work-signals{
+  margin-top:18px !important;
+  padding-top:14px !important;
+}
+.work-photo-wrap{
+  display:block !important;
+  overflow:hidden !important;
+}
+.work-photo{
+  height:100% !important;
+  min-height:430px !important;
+  border-radius:0 !important;
+  border:0 !important;
+  background:#e8edf3 !important;
+}
+.work-photo img{
+  width:100% !important;
+  height:100% !important;
+  min-height:430px !important;
+  object-fit:cover !important;
+}
+.work-card:hover .work-photo img{
+  transform:scale(1.012) !important;
+}
+.work-photo.photo-geo img{object-position:center 42% !important;}
+.work-photo.photo-low img{object-position:center 56% !important;}
+.work-photo.photo-tether img{object-position:center 44% !important;}
+.work-photo.photo-usm img{object-position:center 42% !important;}
+
+.brand-wordmark{
+  display:inline-block !important;
+  color:#ffffff !important;
+  font-family:"Manrope",sans-serif !important;
+  font-weight:600 !important;
+  letter-spacing:-.03em !important;
+  line-height:1 !important;
+}
+.brand-wordmark-tether{
+  font-size:27px !important;
+}
+
+.proof-inner{
+  padding-top:68px !important;
+}
+
+@media(max-width:980px){
+  .selected-head{
+    grid-template-columns:1fr !important;
+    gap:14px !important;
+    margin-bottom:30px !important;
+  }
+  .selected-head p{
+    justify-self:start !important;
+    max-width:640px !important;
+  }
+  .work-card,
+  .work-card:nth-child(even){
+    min-height:380px !important;
+  }
+  .work-content,
+  .work-photo-wrap,
+  .work-photo,
+  .work-photo img{
+    min-height:380px !important;
+  }
+  .work-content{
+    padding:34px 30px 32px !important;
+  }
+}
+
+@media(max-width:760px){
+  .selected{
+    padding:84px var(--page-gutter) 94px !important;
+  }
+  .work-list{gap:18px !important;}
+  .work-card,
+  .work-card:nth-child(even){
+    grid-template-columns:1fr !important;
+    min-height:0 !important;
+    border-radius:18px !important;
+  }
+  .work-content,
+  .work-card:nth-child(even) .work-content,
+  .work-photo-wrap,
+  .work-card:nth-child(even) .work-photo-wrap{
+    grid-column:1 !important;
+    min-height:0 !important;
+  }
+  .work-photo-wrap{order:1 !important;}
+  .work-content{order:2 !important; padding:24px 22px 26px !important;}
+  .work-photo,
+  .work-photo img{
+    min-height:240px !important;
+    height:240px !important;
+  }
+  .work-brand{
+    min-height:54px !important;
+    padding:9px 14px !important;
+  }
+  .work-main{margin-top:20px !important;}
+  .work-main h3{font-size:30px !important;}
+  .work-role{font-size:11px !important;}
+  .work-main p{font-size:12px !important;}
+  .brand-wordmark-tether{font-size:24px !important;}
+}
+
 </style>
 </head>
 <body>
 <header class="nav">
   <a class="brand" href="/es/">Felipe Quiroz</a>
-  <nav class="nav-links" aria-label="Primary navigation">
+  <nav class="nav-links">
     <a href="#work">Trabajo</a>
     <a href="/es/about">Sobre mí</a>
     <a href="/es/now">Ahora</a>
@@ -423,7 +1708,6 @@ header.nav{
   </nav>
 </header>
 
-<main>
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-copy">
@@ -436,7 +1720,7 @@ header.nav{
       </div>
     </div>
     <div class="hero-photo-wrap">
-      <div class="hero-photo"><img src="/profile.jpg" alt="Felipe Quiroz" fetchpriority="high" decoding="async"></div>
+      <div class="hero-photo"><img src="profile.jpg" alt="Felipe Quiroz"></div>
       <div class="photo-meta"><span>Producto · Growth · Operaciones</span><span>CL</span></div>
     </div>
   </div>
@@ -452,29 +1736,91 @@ header.nav{
 <section class="selected" id="work">
   <div class="selected-inner">
     <div class="selected-head">
-      <div><div class="section-label">Trabajo seleccionado</div><h2>Productos, compañías y sistemas que he ayudado a construir.</h2></div>
-      <p>Una selección de roles donde trabajé cerca del problema — definiendo producto, construyendo sistemas y convirtiendo estrategia en ejecución.</p>
+      <div>
+        <div class="section-label">Trabajo seleccionado</div>
+        <h2>Productos, compañías y sistemas que he ayudado a construir.</h2>
+      </div>
+      <p>Una selección de roles donde trabajé cerca del problema — definiendo producto, construyendo sistemas y llevando estrategia a ejecución.</p>
     </div>
-    <div class="work-list"><a class="work-card" href="/es/geovictoria">
-  <div class="work-meta"><div class="work-index">01 / Producto</div><div class="work-brand logo-geo"><img src="/geovictoria-logo.png" alt="GeoVictoria" loading="lazy"></div><div class="work-role">Product Management · Workforce Management · B2B SaaS</div></div>
-  <div class="work-main"><h3>Construyendo productos de workforce para operaciones reales a escala.</h3><p>Estrategia de producto, discovery, pilotos y MVPs con IA en Smart Scheduler, Shift Optimizer y Shift Change Workflow.</p><div class="work-signals"><span>10K+ clientes</span><span>3 productos</span><span>IA · SaaS · Ops</span></div><div class="work-cta">Ver caso<em>↗</em></div></div>
-  <div class="work-photo-wrap"><div class="work-photo photo-geo"><img src="/geocoffe.jpg" alt="Coffee with GeoVictoria con clientes de distintas industrias" loading="lazy"></div><div class="work-photo-caption"><span>GeoVictoria</span><span>Clientes · Producto · Operaciones</span></div></div>
+    <div class="work-list">
+      <a class="work-card" href="/es/geovictoria">
+  <div class="work-content">
+    <div class="work-meta">
+      <div class="work-index">01 / Producto</div>
+      <div class="work-brand logo-geo"><img src="geovictoria-logo.png" alt="GeoVictoria" loading="lazy"></div>
+      <div class="work-role">Product Management · Workforce Management · B2B SaaS</div>
+    </div>
+    <div class="work-main">
+      <h3>Construyendo productos de workforce para operaciones reales a escala.</h3>
+      <p>Estrategia de producto, discovery, pilotos y MVPs con IA en Smart Scheduler, Shift Optimizer y Shift Change Workflow.</p>
+      <div class="work-signals"><span>10K+ clientes</span><span>3 productos</span><span>IA · SaaS · Ops</span></div>
+      <div class="work-cta">Ver caso<em>↗</em></div>
+    </div>
+  </div>
+  <div class="work-photo-wrap">
+    <div class="work-photo photo-geo">
+      <img src="geocoffe.jpg" alt="GeoVictoria con clientes de distintas industrias" loading="lazy">
+    </div>
+  </div>
+</a><a class="work-card" href="/es/lowsignal">
+  <div class="work-content">
+    <div class="work-meta">
+      <div class="work-index">02 / Company building</div>
+      <div class="work-brand logo-low"><img src="lowsignal-logo.png" alt="lowsignal" loading="lazy"></div>
+      <div class="work-role">Co-Founder & COO · Growth Systems</div>
+    </div>
+    <div class="work-main">
+      <h3>Construyendo el sistema detrás del crecimiento.</h3>
+      <p>Estrategia comercial, delivery, automatización y sistemas de growth diseñados para convertir oportunidades en ejecución repetible.</p>
+      <div class="work-signals"><span>15+ organizaciones</span><span>5+ industrias</span><span>End-to-end</span></div>
+      <div class="work-cta">Ver caso<em>↗</em></div>
+    </div>
+  </div>
+  <div class="work-photo-wrap">
+    <div class="work-photo photo-low">
+      <img src="lowsignal-client-work.jpg" alt="Trabajo con clientes de lowsignal" loading="lazy">
+    </div>
+  </div>
+</a><a class="work-card" href="/es/tethereducation">
+  <div class="work-content">
+    <div class="work-meta">
+      <div class="work-index">03 / Partnerships</div>
+      <div class="work-brand logo-tether"><span class="brand-wordmark brand-wordmark-tether">TetherEd</span></div>
+      <div class="work-role">Head of Partnerships · EdTech · Expansión internacional</div>
+    </div>
+    <div class="work-main">
+      <h3>Escalando acceso a educación mediante producto, partnerships y tecnología.</h3>
+      <p>Transformación del sector público, expansión internacional e iniciativas de IA conectando instituciones y sistemas educativos.</p>
+      <div class="work-signals"><span>1M+ postulaciones</span><span>LATAM · US · EU</span><span>Sector público</span></div>
+      <div class="work-cta">Ver caso<em>↗</em></div>
+    </div>
+  </div>
+  <div class="work-photo-wrap">
+    <div class="work-photo photo-tether">
+      <img src="tether-team-event.jpg" alt="Equipo de TetherEd en un evento" loading="lazy">
+    </div>
+  </div>
+</a><a class="work-card" href="/es/usm">
+  <div class="work-content">
+    <div class="work-meta">
+      <div class="work-index">04 / Estrategia y operaciones</div>
+      <div class="work-brand logo-usm"><img src="logo-usm.png" alt="Universidad Técnica Federico Santa María" loading="lazy"></div>
+      <div class="work-role">Higher Education · Admisión · Operaciones</div>
+    </div>
+    <div class="work-main">
+      <h3>De la captación a operar con consistencia a escala.</h3>
+      <p>Admisión, CRM, coordinación académica y diseño de procesos en dos contextos complementarios dentro de educación superior.</p>
+      <div class="work-signals"><span>1.000+ prospectos</span><span>400+ estudiantes</span><span>12+ secciones</span></div>
+      <div class="work-cta">Ver caso<em>↗</em></div>
+    </div>
+  </div>
+  <div class="work-photo-wrap">
+    <div class="work-photo photo-usm">
+      <img src="usm-admissions-community.jpg" alt="Equipo de Admisión de la Universidad Técnica Federico Santa María" loading="lazy">
+    </div>
+  </div>
 </a>
-<a class="work-card" href="/es/lowsignal">
-  <div class="work-meta"><div class="work-index">02 / Company building</div><div class="work-brand logo-low"><img src="/lowsignal-logo.png" alt="lowsignal" loading="lazy"></div><div class="work-role">Co-Founder & COO · Growth Systems</div></div>
-  <div class="work-main"><h3>Construyendo el sistema detrás del crecimiento.</h3><p>Estrategia comercial, delivery, automatización y sistemas de growth diseñados para convertir oportunidades en ejecución repetible.</p><div class="work-signals"><span>15+ organizaciones</span><span>5+ industrias</span><span>End-to-end</span></div><div class="work-cta">Ver caso<em>↗</em></div></div>
-  <div class="work-photo-wrap"><div class="work-photo photo-low"><img src="/lowsignal-client-work.jpg" alt="Trabajo con clientes de lowsignal" loading="lazy"></div><div class="work-photo-caption"><span>lowsignal</span><span>Strategy · Delivery · Growth</span></div></div>
-</a>
-<a class="work-card" href="/es/tethereducation">
-  <div class="work-meta"><div class="work-index">03 / Partnerships</div><div class="work-brand logo-tether"><img src="/tethered-logo.svg" alt="TetherEd" loading="lazy"></div><div class="work-role">Head of Partnerships · EdTech · Expansión internacional</div></div>
-  <div class="work-main"><h3>Escalando acceso a educación mediante producto, partnerships y tecnología.</h3><p>Transformación del sector público, expansión internacional e iniciativas de IA conectando instituciones y sistemas educativos.</p><div class="work-signals"><span>1M+ postulaciones</span><span>LATAM · US · EU</span><span>Sector público</span></div><div class="work-cta">Ver caso<em>↗</em></div></div>
-  <div class="work-photo-wrap"><div class="work-photo photo-tether"><img src="/tether-team-event.jpg" alt="Equipo de TetherEd en un evento" loading="lazy"></div><div class="work-photo-caption"><span>TetherEd</span><span>Partnerships · Expansión · EdTech</span></div></div>
-</a>
-<a class="work-card" href="/es/usm">
-  <div class="work-meta"><div class="work-index">04 / Estrategia & operaciones</div><div class="work-brand logo-usm"><img src="/logo-usm.png" alt="Universidad Técnica Federico Santa María" loading="lazy"></div><div class="work-role">Educación superior · Admisión · Operaciones</div></div>
-  <div class="work-main"><h3>De la captación a operar con consistencia a escala.</h3><p>Admisión, CRM, coordinación académica y diseño de procesos en dos contextos complementarios dentro de educación superior.</p><div class="work-signals"><span>1.000+ prospectos</span><span>400+ estudiantes</span><span>12+ secciones</span></div><div class="work-cta">Ver caso<em>↗</em></div></div>
-  <div class="work-photo-wrap"><div class="work-photo photo-usm"><img src="/usm-admissions-community.jpg" alt="Equipo de Admisión de la Universidad Técnica Federico Santa María" loading="lazy"></div><div class="work-photo-caption"><span>USM</span><span>Admisión · Comunidad · Operaciones</span></div></div>
-</a></div>
+    </div>
   </div>
 </section>
 
@@ -487,7 +1833,7 @@ header.nav{
 <a class="about-bridge-link" href="/es/about">Ver mi recorrido <span>↗</span></a>
     </div>
     <figure class="about-bridge-visual">
-      <img src="/building-in-the-field.jpg" alt="Felipe Quiroz trabajando en terreno y conversando con personas" loading="lazy">
+      <img src="building-in-the-field.jpg" alt="Felipe Quiroz trabajando en terreno y conversando con personas" loading="lazy">
       <figcaption><span>En terreno / Producto, personas y conversaciones reales</span><span>Santiago / CL</span></figcaption>
     </figure>
   </div>
@@ -495,11 +1841,10 @@ header.nav{
 
 <section class="now">
   <div class="now-inner">
-    <div><div class="section-label">Ahora</div><h2>Construyendo<br><span>lo que viene.</span></h2><p class="now-copy">Me gusta trabajar cerca del problema y convertir la ambigüedad en sistemas, productos y modelos operativos que los equipos realmente puedan usar.</p></div>
+    <div><div class="section-label">Ahora</div><h2>Construyendo<br><span>lo que viene.</span></h2><p class="now-copy">Me gusta trabajar cerca del problema, convertir ambigüedad en sistemas, productos y modelos operativos que los equipos realmente puedan usar.</p></div>
     <a class="now-link" href="/es/now">Ver en qué estoy trabajando ↗</a>
   </div>
 </section>
-</main>
 
 <section class="bottom" id="contact">
   <div class="contact-block">
