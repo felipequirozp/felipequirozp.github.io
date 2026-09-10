@@ -705,6 +705,450 @@ header.nav{
   }
 }
 
+
+/* =========================================================
+   HOME BOOM V3 — exact About navbar + restored hero height
+   ========================================================= */
+
+/* The Home used a white body underneath a translucent nav, which made the
+   same rgba nav look visibly lighter than About. Use the same dark base. */
+body{
+  background:#05070a !important;
+}
+
+/* NAV — match About exactly */
+.nav,
+header.nav{
+  position:sticky !important;
+  top:0 !important;
+  z-index:1000 !important;
+  min-height:84px !important;
+  padding:0 5vw !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:30px !important;
+  flex-direction:row !important;
+  flex-wrap:nowrap !important;
+  background:rgba(5,7,10,.94) !important;
+  border-bottom:1px solid rgba(255,255,255,.08) !important;
+  backdrop-filter:blur(18px) !important;
+  -webkit-backdrop-filter:blur(18px) !important;
+}
+
+.brand{
+  font-family:Manrope,sans-serif !important;
+  font-size:17px !important;
+  font-weight:600 !important;
+  letter-spacing:-.04em !important;
+  color:#fff !important;
+  white-space:nowrap !important;
+}
+
+.nav-links{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  width:auto !important;
+  gap:30px !important;
+  font-size:10px !important;
+  font-weight:500 !important;
+  letter-spacing:.07em !important;
+  text-transform:uppercase !important;
+  white-space:normal !important;
+  order:initial !important;
+}
+
+.nav-links>a{
+  position:relative !important;
+  color:#bcc4ce !important;
+}
+
+.nav-links>a:not(.contact-nav):not(.lang-switch)::after{
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;
+  bottom:-7px !important;
+  width:0 !important;
+  height:1px !important;
+  background:#fff !important;
+  transition:width .22s ease !important;
+}
+
+.nav-links>a:not(.contact-nav):not(.lang-switch):hover{
+  color:#fff !important;
+}
+
+.nav-links>a:not(.contact-nav):not(.lang-switch):hover::after{
+  width:100% !important;
+}
+
+.contact-nav{
+  padding:9px 15px !important;
+  border:1px solid rgba(255,255,255,.25) !important;
+  border-radius:999px !important;
+  color:#fff !important;
+}
+
+.contact-nav:hover,
+.contact-nav:focus-visible,
+.contact-nav:active{
+  background:#fff !important;
+  color:#07101b !important;
+  border-color:#fff !important;
+  outline:none !important;
+}
+
+.lang-switch{
+  width:38px !important;
+  height:38px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  flex-shrink:0 !important;
+  border:1px solid rgba(255,255,255,.20) !important;
+  border-radius:50% !important;
+  color:#b7c0ca !important;
+}
+
+.lang-switch:hover{
+  background:rgba(255,255,255,.08) !important;
+  color:#fff !important;
+}
+
+/* HERO — recover the full opening-screen presence */
+.hero{
+  min-height:calc(100svh - 84px) !important;
+  padding:76px var(--page-gutter) 72px !important;
+  display:flex !important;
+  align-items:center !important;
+  background:
+    linear-gradient(90deg,rgba(5,7,10,.99) 0%,rgba(7,12,20,.97) 52%,rgba(9,25,46,.93) 100%) !important;
+}
+
+.hero-inner{
+  width:min(var(--page-max),100%) !important;
+  margin:0 auto !important;
+  align-items:center !important;
+}
+
+/* MOBILE — exactly the same navbar rhythm used on About */
+@media(max-width:760px){
+  .nav,
+  header.nav{
+    min-height:auto !important;
+    padding:18px 20px !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    justify-content:flex-start !important;
+    gap:14px !important;
+    flex-wrap:nowrap !important;
+    background:rgba(5,7,10,.97) !important;
+  }
+
+  .brand{
+    font-size:18px !important;
+  }
+
+  .nav-links{
+    order:initial !important;
+    width:100% !important;
+    justify-content:space-between !important;
+    gap:8px !important;
+    font-size:9px !important;
+    letter-spacing:.07em !important;
+  }
+
+  .contact-nav{
+    padding:8px 10px !important;
+  }
+
+  .lang-switch{
+    width:34px !important;
+    height:34px !important;
+  }
+
+  .hero{
+    min-height:auto !important;
+    padding:70px var(--page-gutter) 64px !important;
+    align-items:flex-start !important;
+  }
+
+  .hero-inner{
+    gap:38px !important;
+  }
+
+  .hero-photo{
+    min-height:390px !important;
+  }
+
+  .hero-photo img{
+    min-height:390px !important;
+  }
+}
+
+@media(max-width:390px){
+  .nav-links{
+    font-size:8px !important;
+  }
+}
+
+
+/* =========================================================
+   HOME BOOM V4 — Selected Work as alternating 50/50 cases
+   ========================================================= */
+.selected{
+  padding:112px var(--page-gutter) 122px !important;
+  background:#fff !important;
+}
+.selected-inner{
+  width:min(1380px,100%) !important;
+  margin:0 auto !important;
+}
+.selected-head{
+  margin-bottom:54px !important;
+}
+.work-list{
+  display:flex !important;
+  flex-direction:column !important;
+  gap:28px !important;
+  border:0 !important;
+}
+.work-card{
+  position:relative !important;
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+  gap:0 !important;
+  align-items:stretch !important;
+  min-height:470px !important;
+  padding:0 !important;
+  overflow:hidden !important;
+  border:1px solid #dfe4ea !important;
+  border-radius:22px !important;
+  background:#fff !important;
+  box-shadow:none !important;
+  transform:none !important;
+  transition:border-color .22s ease,box-shadow .22s ease !important;
+}
+.work-card:hover{
+  transform:none !important;
+  background:#fff !important;
+  border-color:rgba(22,131,255,.42) !important;
+  box-shadow:0 18px 46px rgba(9,21,38,.07) !important;
+}
+.work-card:active{
+  transform:none !important;
+}
+.work-content{
+  grid-column:1;
+  grid-row:1;
+  padding:46px 48px 44px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-width:0;
+}
+.work-card:nth-child(even) .work-content{
+  grid-column:2;
+}
+.work-card:nth-child(even) .work-photo-wrap{
+  grid-column:1;
+}
+.work-meta{
+  min-width:0;
+}
+.work-index{
+  margin:0 0 18px !important;
+  color:#71849a !important;
+  font-size:10px !important;
+  font-weight:700 !important;
+  letter-spacing:.11em !important;
+  text-transform:uppercase !important;
+}
+.work-brand{
+  width:188px !important;
+  height:70px !important;
+  margin:0 0 18px !important;
+  padding:13px 16px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  border-radius:14px !important;
+  background:linear-gradient(135deg,#05070a 0%,#07101b 72%,#0b1a2b 100%) !important;
+  border:1px solid rgba(22,131,255,.11) !important;
+  box-shadow:none !important;
+  transform:none !important;
+}
+.work-card:hover .work-brand{
+  transform:none !important;
+  background:linear-gradient(135deg,#05070a 0%,#07101b 72%,#0b1a2b 100%) !important;
+  border-color:rgba(22,131,255,.20) !important;
+}
+.work-brand img{
+  max-width:155px !important;
+  max-height:34px !important;
+  filter:brightness(0) invert(1) !important;
+  opacity:.98 !important;
+}
+.work-role{
+  max-width:470px;
+  color:#6c7887 !important;
+  font-size:12px !important;
+  line-height:1.55 !important;
+}
+.work-main{
+  margin-top:30px;
+}
+.work-main h3{
+  margin:0 !important;
+  max-width:560px;
+  color:#0a111c !important;
+  font-family:"Manrope",sans-serif !important;
+  font-size:clamp(34px,3.1vw,48px) !important;
+  line-height:1.03 !important;
+  letter-spacing:-.055em !important;
+  font-weight:400 !important;
+}
+.work-main p{
+  margin:18px 0 0 !important;
+  max-width:560px !important;
+  color:#687482 !important;
+  font-size:13px !important;
+  line-height:1.72 !important;
+}
+.work-signals{
+  margin-top:24px !important;
+  padding-top:18px !important;
+  border-top:1px solid #e1e6eb !important;
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:9px 18px !important;
+  color:#50647b !important;
+  font-size:10px !important;
+  letter-spacing:.02em !important;
+}
+.work-cta{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:9px !important;
+  width:max-content !important;
+  margin-top:24px !important;
+  color:#0a111c !important;
+  font-size:10px !important;
+  font-weight:700 !important;
+  letter-spacing:.06em !important;
+  text-transform:uppercase !important;
+  border-bottom:1px solid rgba(10,17,28,.24) !important;
+  padding-bottom:4px !important;
+}
+.work-cta em{
+  font-style:normal !important;
+  transition:transform .22s ease !important;
+}
+.work-card:hover .work-cta em{
+  transform:translate(4px,-2px) !important;
+}
+.work-photo-wrap{
+  grid-column:2;
+  grid-row:1;
+  min-width:0;
+  margin:0 !important;
+}
+.work-photo{
+  width:100% !important;
+  height:100% !important;
+  min-height:470px !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:#eef2f6 !important;
+  overflow:hidden !important;
+}
+.work-photo img{
+  width:100% !important;
+  height:100% !important;
+  min-height:470px !important;
+  object-fit:cover !important;
+  transition:transform .4s cubic-bezier(.2,.7,.2,1) !important;
+}
+.work-card:hover .work-photo img{
+  transform:scale(1.015) !important;
+}
+.work-photo-caption{
+  display:none !important;
+}
+
+/* Image framing by case */
+.photo-geo img{object-position:center 48% !important}
+.photo-low img{object-position:center 50% !important}
+.photo-tether img{object-position:center 44% !important}
+.photo-usm img{object-position:center 46% !important}
+
+@media(max-width:960px){
+  .work-card{
+    min-height:430px !important;
+  }
+  .work-content{
+    padding:38px 34px 36px;
+  }
+  .work-photo,
+  .work-photo img{
+    min-height:430px !important;
+  }
+  .work-main h3{
+    font-size:clamp(31px,4vw,42px) !important;
+  }
+}
+
+@media(max-width:760px){
+  .selected{
+    padding:82px var(--page-gutter) 92px !important;
+  }
+  .work-list{
+    gap:22px !important;
+  }
+  .work-card{
+    display:flex !important;
+    flex-direction:column !important;
+    min-height:0 !important;
+    border-radius:18px !important;
+  }
+  .work-photo-wrap,
+  .work-card:nth-child(even) .work-photo-wrap{
+    order:1 !important;
+    width:100% !important;
+  }
+  .work-content,
+  .work-card:nth-child(even) .work-content{
+    order:2 !important;
+    width:100% !important;
+    padding:28px 24px 30px !important;
+  }
+  .work-photo,
+  .work-photo img{
+    min-height:260px !important;
+    height:260px !important;
+  }
+  .work-brand{
+    width:170px !important;
+    height:60px !important;
+    border-radius:12px !important;
+  }
+  .work-brand img{
+    max-width:142px !important;
+    max-height:30px !important;
+  }
+  .work-main{
+    margin-top:24px !important;
+  }
+  .work-main h3{
+    font-size:35px !important;
+    line-height:1.04 !important;
+  }
+  .work-main p{
+    font-size:13px !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -747,29 +1191,91 @@ header.nav{
 <section class="selected" id="work">
   <div class="selected-inner">
     <div class="selected-head">
-      <div><div class="section-label">Selected work</div><h2>Products, companies and systems I’ve helped build.</h2></div>
+      <div>
+        <div class="section-label">Selected work</div>
+        <h2>Products, companies and systems I’ve helped build.</h2>
+      </div>
       <p>A selection of roles where I worked close to the problem — shaping products, building systems and turning strategy into execution.</p>
     </div>
-    <div class="work-list"><a class="work-card" href="/geovictoria">
-  <div class="work-meta"><div class="work-index">01 / Product</div><div class="work-brand logo-geo"><img src="/geovictoria-logo.png" alt="GeoVictoria" loading="lazy"></div><div class="work-role">Product Management · Workforce Management · B2B SaaS</div></div>
-  <div class="work-main"><h3>Building workforce products for real operations at scale.</h3><p>Product strategy, discovery, pilots and AI-enabled MVPs across Smart Scheduler, Shift Optimizer and Shift Change Workflow.</p><div class="work-signals"><span>10K+ customers</span><span>3 products</span><span>AI · SaaS · Ops</span></div><div class="work-cta">View case<em>↗</em></div></div>
-  <div class="work-photo-wrap"><div class="work-photo photo-geo"><img src="/geocoffe.jpg" alt="Coffee with GeoVictoria and clients from different industries" loading="lazy"></div><div class="work-photo-caption"><span>GeoVictoria</span><span>Customers · Product · Operations</span></div></div>
+    <div class="work-list">
+      <a class="work-card" href="/geovictoria">
+  <div class="work-content">
+    <div class="work-meta">
+      <div class="work-index">01 / Product</div>
+      <div class="work-brand logo-geo"><img src="/geovictoria-logo.png" alt="GeoVictoria" loading="lazy"></div>
+      <div class="work-role">Product Management · Workforce Management · B2B SaaS</div>
+    </div>
+    <div class="work-main">
+      <h3>Building workforce products for real operations at scale.</h3>
+      <p>Product strategy, discovery, pilots and AI-enabled MVPs across Smart Scheduler, Shift Optimizer and Shift Change Workflow.</p>
+      <div class="work-signals"><span>10K+ customers</span><span>3 products</span><span>AI · SaaS · Ops</span></div>
+      <div class="work-cta">View case<em>↗</em></div>
+    </div>
+  </div>
+  <div class="work-photo-wrap">
+    <div class="work-photo photo-geo">
+      <img src="/geocoffe.jpg" alt="GeoVictoria with clients from different industries" loading="lazy">
+    </div>
+  </div>
+</a><a class="work-card" href="/lowsignal">
+  <div class="work-content">
+    <div class="work-meta">
+      <div class="work-index">02 / Company building</div>
+      <div class="work-brand logo-low"><img src="/lowsignal-logo.png" alt="lowsignal" loading="lazy"></div>
+      <div class="work-role">Co-Founder & COO · Growth Systems</div>
+    </div>
+    <div class="work-main">
+      <h3>Building the system behind growth.</h3>
+      <p>Commercial strategy, delivery, automation and growth systems designed to turn opportunities into repeatable execution.</p>
+      <div class="work-signals"><span>15+ organizations</span><span>5+ industries</span><span>End-to-end</span></div>
+      <div class="work-cta">View case<em>↗</em></div>
+    </div>
+  </div>
+  <div class="work-photo-wrap">
+    <div class="work-photo photo-low">
+      <img src="/lowsignal-client-work.jpg" alt="lowsignal client work" loading="lazy">
+    </div>
+  </div>
+</a><a class="work-card" href="/tethereducation">
+  <div class="work-content">
+    <div class="work-meta">
+      <div class="work-index">03 / Partnerships</div>
+      <div class="work-brand logo-tether"><img src="/tethered-logo.svg" alt="TetherEd" loading="lazy"></div>
+      <div class="work-role">Head of Partnerships · EdTech · International Expansion</div>
+    </div>
+    <div class="work-main">
+      <h3>Scaling access to education through product, partnerships and technology.</h3>
+      <p>Public-sector transformation, international expansion and AI initiatives connecting institutions and education systems.</p>
+      <div class="work-signals"><span>1M+ applications</span><span>LATAM · US · EU</span><span>Public sector</span></div>
+      <div class="work-cta">View case<em>↗</em></div>
+    </div>
+  </div>
+  <div class="work-photo-wrap">
+    <div class="work-photo photo-tether">
+      <img src="/tether-team-event.jpg" alt="TetherEd team at an event" loading="lazy">
+    </div>
+  </div>
+</a><a class="work-card" href="/usm">
+  <div class="work-content">
+    <div class="work-meta">
+      <div class="work-index">04 / Strategy and operations</div>
+      <div class="work-brand logo-usm"><img src="/logo-usm.png" alt="Universidad Técnica Federico Santa María" loading="lazy"></div>
+      <div class="work-role">Higher Education · Admissions · Operations</div>
+    </div>
+    <div class="work-main">
+      <h3>From acquisition to operating consistently at scale.</h3>
+      <p>Admissions, CRM, academic coordination and process design across two complementary contexts inside higher education.</p>
+      <div class="work-signals"><span>1,000+ prospects</span><span>400+ students</span><span>12+ sections</span></div>
+      <div class="work-cta">View case<em>↗</em></div>
+    </div>
+  </div>
+  <div class="work-photo-wrap">
+    <div class="work-photo photo-usm">
+      <img src="/usm-admissions-community.jpg" alt="Admissions team at Universidad Técnica Federico Santa María" loading="lazy">
+    </div>
+  </div>
 </a>
-<a class="work-card" href="/lowsignal">
-  <div class="work-meta"><div class="work-index">02 / Company building</div><div class="work-brand logo-low"><img src="/lowsignal-logo.png" alt="lowsignal" loading="lazy"></div><div class="work-role">Co-Founder & COO · Growth Systems</div></div>
-  <div class="work-main"><h3>Building the system behind growth.</h3><p>Commercial strategy, delivery, automation and growth systems designed to turn opportunities into repeatable execution.</p><div class="work-signals"><span>15+ organizations</span><span>5+ industries</span><span>End-to-end</span></div><div class="work-cta">View case<em>↗</em></div></div>
-  <div class="work-photo-wrap"><div class="work-photo photo-low"><img src="/lowsignal-client-work.jpg" alt="lowsignal client work" loading="lazy"></div><div class="work-photo-caption"><span>lowsignal</span><span>Strategy · Delivery · Growth</span></div></div>
-</a>
-<a class="work-card" href="/tethereducation">
-  <div class="work-meta"><div class="work-index">03 / Partnerships</div><div class="work-brand logo-tether"><img src="/tethered-logo.svg" alt="TetherEd" loading="lazy"></div><div class="work-role">Head of Partnerships · EdTech · International Expansion</div></div>
-  <div class="work-main"><h3>Scaling access to education through product, partnerships and technology.</h3><p>Public-sector transformation, international expansion and AI initiatives connecting institutions and education systems.</p><div class="work-signals"><span>1M+ applications</span><span>LATAM · US · EU</span><span>Public sector</span></div><div class="work-cta">View case<em>↗</em></div></div>
-  <div class="work-photo-wrap"><div class="work-photo photo-tether"><img src="/tether-team-event.jpg" alt="TetherEd team at an event" loading="lazy"></div><div class="work-photo-caption"><span>TetherEd</span><span>Partnerships · Expansion · EdTech</span></div></div>
-</a>
-<a class="work-card" href="/usm">
-  <div class="work-meta"><div class="work-index">04 / Strategy & operations</div><div class="work-brand logo-usm"><img src="/logo-usm.png" alt="Universidad Técnica Federico Santa María" loading="lazy"></div><div class="work-role">Higher Education · Admissions · Operations</div></div>
-  <div class="work-main"><h3>From acquisition to operating consistently at scale.</h3><p>Admissions, CRM, academic coordination and process design across two complementary contexts inside higher education.</p><div class="work-signals"><span>1,000+ prospects</span><span>400+ students</span><span>12+ sections</span></div><div class="work-cta">View case<em>↗</em></div></div>
-  <div class="work-photo-wrap"><div class="work-photo photo-usm"><img src="/usm-admissions-community.jpg" alt="Admissions team at Universidad Técnica Federico Santa María" loading="lazy"></div><div class="work-photo-caption"><span>USM</span><span>Admissions · Community · Operations</span></div></div>
-</a></div>
+    </div>
   </div>
 </section>
 
