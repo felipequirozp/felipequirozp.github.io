@@ -94,6 +94,38 @@ html,body{max-width:100%;overflow-x:hidden}
   .principle h2{font-size:42px}
 }
 
+
+
+/* =========================================================
+   PERSISTENT NAV — fixed on scroll across desktop + mobile
+   ========================================================= */
+:root{--persistent-nav-h:84px}
+html{scroll-padding-top:calc(var(--persistent-nav-h) + 16px)}
+body{padding-top:var(--persistent-nav-h)}
+.nav{
+  position:fixed !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  width:100% !important;
+  z-index:9999 !important;
+  transform:none !important;
+  visibility:visible !important;
+  opacity:1 !important;
+}
+@media(max-width:760px){
+  :root{--persistent-nav-h:104px}
+  .nav{
+    min-height:104px !important;
+  }
+}
+@media(max-width:390px){
+  :root{--persistent-nav-h:102px}
+  .nav{
+    min-height:102px !important;
+  }
+}
+
 </style></head><body>
 <header class="nav"><a class="brand" href="/es/">Felipe Quiroz</a><nav class="nav-links"><a class="active" href="/es/#work">Trabajo</a><a href="/es/about">Sobre mí</a><a href="/es/now">Ahora</a><a class="contact-nav" href="#contact">Contacto</a><a class="lang-switch" href="/lowsignal" aria-label="Switch language">EN</a></nav></header>
 <section class="hero"><div class="hero-inner"><div class="hero-top"><a class="hero-mark" href="https://www.lowsignal.cl/" target="_blank" rel="noopener noreferrer"><img src="/logos/lowsignal-logo.png" alt="lowsignal"></a><div class="hero-meta"><span>Trabajo seleccionado / 02</span><span>2025 — Presente</span><span>Growth / Company Building</span></div></div><div class="hero-kicker">Growth systems / IA / Operaciones</div><h1>Construyendo el sistema<span>detrás del crecimiento.</span></h1><div class="hero-bottom"><p class="hero-description">Lidero operaciones, estrategia comercial y delivery de producto, construyendo growth systems que conectan estrategia, IA, automatización, experiencias digitales y ejecución.</p><div class="hero-role"><strong>lowsignal</strong><span>Co-Founder & COO · Growth Systems</span><span>Santiago · Chile</span><a class="hero-site" href="https://www.lowsignal.cl/" target="_blank" rel="noopener noreferrer">lowsignal.cl ↗</a></div></div></div></section>
