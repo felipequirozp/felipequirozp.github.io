@@ -317,95 +317,108 @@ a.build-card:hover{background:#f3f7fb;transform:translateY(-2px)}
 }
 .mode p{margin:0;color:#8e97a3;font-size:13px;line-height:1.65}
 
-/* STATEMENT — VIVID ELECTRIC BLUE */
+
+/* STATEMENT — LUMINOUS ARC */
 .system-moment{
   position:relative;
-  min-height:640px;
+  min-height:680px;
   padding:110px var(--page);
   display:flex;
   align-items:center;
-  background:
-    radial-gradient(circle at 88% 46%, rgba(72,164,255,.60) 0%, rgba(30,132,255,.38) 18%, rgba(14,91,210,.20) 34%, transparent 54%),
-    radial-gradient(circle at 70% 78%, rgba(0,97,255,.18), transparent 42%),
-    linear-gradient(108deg,#05080d 0%,#07111f 34%,#0a2450 64%,#0f55b6 100%);
+  justify-content:center;
+  background:#05070a;
   color:#fff;
   overflow:hidden;
-}
-.system-moment::before{
-  content:"";
-  position:absolute;
-  inset:-18% -8% -18% 48%;
-  background:
-    radial-gradient(circle at 55% 50%, rgba(34,145,255,.32), transparent 48%);
-  filter:blur(22px);
-  pointer-events:none;
-}
-.system-moment::after{
-  content:"";
-  position:absolute;
-  right:-11%;
-  top:50%;
-  width:min(44vw,620px);
-  aspect-ratio:1;
-  transform:translateY(-50%);
-  border:1px solid rgba(168,214,255,.22);
-  border-radius:50%;
-  box-shadow:
-    0 0 0 96px rgba(168,214,255,.10),
-    0 0 0 192px rgba(168,214,255,.055);
-  pointer-events:none;
+  border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.06);
 }
 .system-moment .wrap{
   position:relative;
-  z-index:2;
+  z-index:3;
+  text-align:center;
 }
 .system-moment .eyebrow{
-  margin-bottom:24px;
-  color:#7ec0ff;
+  margin-bottom:26px;
+  color:#6caeff;
   font-size:10px;
   font-weight:700;
   letter-spacing:.12em;
   text-transform:uppercase;
 }
 .system-moment h2{
-  margin:0;
-  max-width:1120px;
+  margin:0 auto;
+  max-width:1080px;
   font-family:Manrope,sans-serif;
-  font-size:clamp(52px,5.8vw,86px);
+  font-size:clamp(52px,5.7vw,86px);
   font-weight:400;
   line-height:.98;
   letter-spacing:-.06em;
 }
 .system-moment h2 span{
   display:block;
-  color:#a9d3ff;
+  color:#a9c7eb;
 }
 .system-moment p{
-  margin:28px 0 0;
+  margin:28px auto 0;
   max-width:650px;
-  color:#d3deea;
+  color:#8f98a4;
   font-size:15px;
   line-height:1.72;
 }
 .statement-track{
-  margin-top:44px;
+  margin-top:34px;
   display:flex;
+  justify-content:center;
   gap:10px;
   flex-wrap:wrap;
 }
 .statement-track span{
   padding:9px 12px;
-  border:1px solid rgba(150,203,255,.30);
+  border:1px solid rgba(255,255,255,.14);
   border-radius:999px;
-  background:rgba(8,24,48,.20);
-  color:#e5f1ff;
+  background:rgba(255,255,255,.015);
+  color:#d8e1eb;
   font-size:9px;
   font-weight:600;
   letter-spacing:.06em;
   text-transform:uppercase;
-  backdrop-filter:blur(8px);
-  -webkit-backdrop-filter:blur(8px);
 }
+.arc{
+  position:absolute;
+  left:50%;
+  top:54%;
+  width:min(1380px,105vw);
+  aspect-ratio:2 / 1;
+  transform:translate(-50%,-78%);
+  border-radius:50% 50% 0 0 / 100% 100% 0 0;
+  border-top:10px solid rgba(87,170,255,.90);
+  filter:drop-shadow(0 0 18px rgba(56,147,255,.55))
+         drop-shadow(0 0 42px rgba(35,111,255,.24));
+  opacity:.95;
+  pointer-events:none;
+}
+.arc::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:-34px;
+  width:92%;
+  height:40px;
+  transform:translateX(-50%);
+  background:radial-gradient(ellipse at center, rgba(39,132,255,.24) 0%, rgba(39,132,255,.11) 38%, transparent 72%);
+  filter:blur(20px);
+}
+.arc::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:8px;
+  width:100%;
+  height:1px;
+  transform:translateX(-50%);
+  background:linear-gradient(90deg,transparent,rgba(137,199,255,.35),transparent);
+}
+
 
 /* CLOSING — PERSONAL */
 .closing{
@@ -509,6 +522,12 @@ a.build-card:hover{background:#f3f7fb;transform:translateY(-2px)}
   .contact-block{flex-direction:column;align-items:flex-start;gap:34px}
   .footer{flex-direction:column;align-items:flex-start;gap:8px}
 }
+
+  .system-moment{min-height:560px;padding:82px var(--page)}
+  .system-moment h2{font-size:46px;max-width:95%}
+  .system-moment p{font-size:14px;max-width:92%}
+  .arc{width:150vw;top:51%;border-top-width:7px}
+
 @media(max-width:390px){
   .nav-links{font-size:8px}
   .hero h1{font-size:50px}
@@ -616,11 +635,17 @@ a.build-card:hover{background:#f3f7fb;transform:translateY(-2px)}
 </section>
 
 <section class="system-moment">
+  <div class="arc" aria-hidden="true"></div>
   <div class="wrap">
     <div class="eyebrow">06 / Working principle</div>
     <h2>Building better means connecting<span>clarity, systems and execution.</span></h2>
     <p>It is not about adding layers for the sake of it. It is about designing a way of operating that makes the work clearer and helps teams learn faster.</p>
-    <div class="statement-track"><span>Clarity</span><span>Systems</span><span>Execution</span><span>Growth</span></div>
+    <div class="statement-track">
+      <span>Clarity</span>
+      <span>Systems</span>
+      <span>Execution</span>
+      <span>Growth</span>
+    </div>
   </div>
 </section>
 
