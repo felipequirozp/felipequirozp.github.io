@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Felipe Quiroz | Product, Growth & Operations</title>
 <meta name="theme-color" content="#05070a">
-<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="icon" type="image/png" href="favicon.png">
 <meta name="description" content="Felipe Quiroz — product, growth and operations. Building products, growth systems and operating models across technology and business.">
 <link rel="canonical" href="https://felipequirozp.cl/">
 <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/">
@@ -68,7 +68,7 @@ img{display:block;width:100%;max-width:100%}
 .proof{padding:0 var(--page-gutter);background:var(--paper)}
 .proof-inner{width:min(var(--page-max),100%);margin:0 auto;padding:74px 0 82px}
 .section-label{font-size:9px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--steel-light)}
-.proof-grid{margin-top:28px;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(255,255,255,.10);border-radius:22px;overflow:hidden;background:linear-gradient(90deg,rgba(13,23,36,.82) 0%,rgba(24,37,54,.72) 48%,rgba(47,70,97,.78) 100%),linear-gradient(0deg,rgba(13,23,36,.52),rgba(13,23,36,.28)),url('/images/building-in-the-field.jpg') center 48%/cover no-repeat;box-shadow:0 20px 44px rgba(13,23,36,.08)}
+.proof-grid{margin-top:28px;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(255,255,255,.10);border-radius:22px;overflow:hidden;background:linear-gradient(90deg,rgba(13,23,36,.82) 0%,rgba(24,37,54,.72) 48%,rgba(47,70,97,.78) 100%),linear-gradient(0deg,rgba(13,23,36,.52),rgba(13,23,36,.28)),url('images/building-in-the-field.jpg') center 48%/cover no-repeat;box-shadow:0 20px 44px rgba(13,23,36,.08)}
 .proof-item{min-height:190px;padding:34px 36px 36px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(255,255,255,.11)}
 .proof-item:not(:first-child){padding-left:36px}
 .proof-item:last-child{border-right:0}
@@ -513,7 +513,7 @@ header.nav{
   margin-top:28px;
   background:
     linear-gradient(90deg,rgba(4,8,14,.91),rgba(7,17,31,.82) 52%,rgba(10,35,67,.72)),
-    url('/images/building-in-the-field.jpg') center 46%/cover no-repeat;
+    url('images/building-in-the-field.jpg') center 46%/cover no-repeat;
   border:1px solid rgba(8,17,29,.10);
   border-radius:22px;
   box-shadow:none
@@ -1928,7 +1928,225 @@ header.nav{
   }
 }
 
+
+
+/* HOME BOOM V12 — remove thesis arc */
+.home-thesis::before{
+  content:none !important;
+  display:none !important;
+}
+
+
+/* HOME BOOM V13 — hero vertical balance + navbar color parity */
+.nav,
+header.nav{
+  background:#05070a !important;
+}
+
+/* Keep the air under the navbar, but lift the portrait slightly */
+@media(min-width:961px){
+  .hero-photo-wrap{
+    margin-top:0 !important;
+    transform:translateY(-26px) !important;
+  }
+}
+@media(min-width:761px) and (max-width:960px){
+  .hero-photo-wrap{
+    margin-top:0 !important;
+    transform:translateY(-16px) !important;
+  }
+}
+@media(max-width:760px){
+  .hero-photo-wrap{
+    transform:none !important;
+  }
+}
+
+
+/* HOME BOOM V14 — selected work cards with more air */
+@media(min-width:961px){
+  .work-card{
+    grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr) !important;
+    min-height:520px !important;
+  }
+  .work-content{
+    padding:54px 54px 52px !important;
+  }
+  .work-role,
+  .work-main p{
+    max-width:610px !important;
+  }
+  .work-main{
+    margin-top:34px !important;
+  }
+  .work-main h3{
+    max-width:620px !important;
+  }
+  .work-signals{
+    margin-top:28px !important;
+    padding-top:20px !important;
+  }
+  .work-photo,
+  .work-photo img{
+    min-height:520px !important;
+  }
+}
+
+@media(min-width:761px) and (max-width:960px){
+  .work-card{
+    min-height:470px !important;
+  }
+  .work-content{
+    padding:42px 38px 40px !important;
+  }
+  .work-photo,
+  .work-photo img{
+    min-height:470px !important;
+  }
+}
+
+@media(max-width:760px){
+  .work-content{
+    padding:30px 24px 28px !important;
+  }
+}
+
 </style>
+
+<style id="home-v16-selected-work-fixes">
+/* HOME V16 — selected work cards: more breathing room, visible labels, full-height images */
+.selected-head{overflow:visible !important;}
+.work-list{gap:28px !important;}
+.work-card{
+  display:grid !important;
+  grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr) !important;
+  align-items:stretch !important;
+  min-height:0 !important;
+  height:auto !important;
+  max-height:none !important;
+  overflow:hidden !important;
+}
+.work-card:nth-child(even){
+  grid-template-columns:minmax(360px,.92fr) minmax(0,1.08fr) !important;
+}
+.work-content{
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  justify-content:flex-start !important;
+  align-self:stretch !important;
+  padding:46px 48px 42px !important;
+  overflow:visible !important;
+}
+.work-meta{
+  padding-top:2px !important;
+}
+.work-index{
+  display:block !important;
+  margin:0 0 16px !important;
+  line-height:1.25 !important;
+}
+.work-brand{
+  margin:0 0 16px !important;
+}
+.work-role{
+  line-height:1.6 !important;
+}
+.work-main{
+  margin-top:26px !important;
+}
+.work-main h3{
+  max-width:660px !important;
+}
+.work-main p{
+  max-width:640px !important;
+}
+.work-signals{
+  margin-top:20px !important;
+}
+.work-cta{
+  margin-top:20px !important;
+}
+.work-photo-wrap{
+  display:flex !important;
+  align-self:stretch !important;
+  min-width:0 !important;
+  min-height:100% !important;
+  height:auto !important;
+}
+.work-photo{
+  flex:1 1 auto !important;
+  width:100% !important;
+  height:auto !important;
+  min-height:100% !important;
+  max-height:none !important;
+  background:#edf2f6 !important;
+}
+.work-photo img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  min-height:100% !important;
+  max-height:none !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+}
+
+@media (min-width: 961px){
+  .work-card{min-height:500px !important;}
+  .work-content,.work-photo-wrap,.work-photo,.work-photo img{
+    min-height:500px !important;
+    max-height:none !important;
+    height:auto !important;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 960px){
+  .work-card{
+    grid-template-columns:minmax(0,1.02fr) minmax(300px,.98fr) !important;
+    min-height:430px !important;
+  }
+  .work-card:nth-child(even){
+    grid-template-columns:minmax(300px,.98fr) minmax(0,1.02fr) !important;
+  }
+  .work-content{padding:38px 34px 34px !important;}
+  .work-content,.work-photo-wrap,.work-photo,.work-photo img{
+    min-height:430px !important;
+    max-height:none !important;
+    height:auto !important;
+  }
+  .work-main h3{font-size:clamp(32px,4vw,42px) !important;}
+}
+
+@media (max-width: 760px){
+  .work-card,
+  .work-card:nth-child(even){
+    grid-template-columns:1fr !important;
+    min-height:0 !important;
+    height:auto !important;
+  }
+  .work-content{
+    order:2 !important;
+    padding:26px 22px 28px !important;
+  }
+  .work-photo-wrap,
+  .work-card:nth-child(even) .work-photo-wrap{
+    grid-column:1 !important;
+    order:1 !important;
+    min-height:240px !important;
+  }
+  .work-photo,
+  .work-photo img{
+    min-height:240px !important;
+    height:240px !important;
+  }
+  .work-index{margin-bottom:14px !important;}
+  .work-brand{margin-bottom:14px !important;}
+  .work-main{margin-top:20px !important;}
+  .work-main h3{font-size:31px !important;}
+}
+</style>
+
 </head>
 <body>
 <header class="nav">
@@ -1954,7 +2172,7 @@ header.nav{
       </div>
     </div>
     <div class="hero-photo-wrap">
-      <div class="hero-photo"><img src="/images/profile.jpg" onerror="this.onerror=null;this.src='/profile.jpg'" alt="Felipe Quiroz"></div>
+      <div class="hero-photo"><img src="images/profile.jpg" onerror="this.onerror=null;this.src='profile.jpg'" alt="Felipe Quiroz"></div>
       <div class="photo-meta"><span>Product · Growth · Operations</span><span>CL</span></div>
     </div>
   </div>
@@ -2009,7 +2227,7 @@ header.nav{
   <div class="work-content">
     <div class="work-meta">
       <div class="work-index">01 / Product</div>
-      <div class="work-brand logo-geo"><img src="/logos/geovictoria-logo.png" alt="GeoVictoria" loading="lazy"></div>
+      <div class="work-brand logo-geo"><img src="logos/geovictoria-logo.png" alt="GeoVictoria" onerror="this.onerror=null;this.src='geovictoria-logo.png'" loading="lazy"></div>
       <div class="work-role">Product Management · Workforce Management · B2B SaaS</div>
     </div>
     <div class="work-main">
@@ -2021,14 +2239,14 @@ header.nav{
   </div>
   <div class="work-photo-wrap">
     <div class="work-photo photo-geo">
-      <img src="/images/geocoffe.jpg" alt="GeoVictoria with clients from different industries" loading="lazy">
+      <img src="images/geocoffe.jpg" alt="GeoVictoria with clients from different industries" onerror="this.onerror=null;this.src='geocoffe.jpg'" loading="lazy">
     </div>
   </div>
 </a><a class="work-card" href="/lowsignal">
   <div class="work-content">
     <div class="work-meta">
       <div class="work-index">02 / Company building</div>
-      <div class="work-brand logo-low"><img src="/logos/lowsignal-logo.png" alt="lowsignal" loading="lazy"></div>
+      <div class="work-brand logo-low"><img src="logos/lowsignal-logo.png" alt="lowsignal" onerror="this.onerror=null;this.src='lowsignal-logo.png'" loading="lazy"></div>
       <div class="work-role">Co-Founder & COO · Growth Systems</div>
     </div>
     <div class="work-main">
@@ -2040,14 +2258,14 @@ header.nav{
   </div>
   <div class="work-photo-wrap">
     <div class="work-photo photo-low">
-      <img src="/images/lowsignal-client-work.jpg" alt="lowsignal client work" loading="lazy">
+      <img src="images/lowsignal-client-work.jpg" alt="lowsignal client work" onerror="this.onerror=null;this.src='lowsignal-client-work.jpg'" loading="lazy">
     </div>
   </div>
 </a><a class="work-card" href="/tethereducation">
   <div class="work-content">
     <div class="work-meta">
       <div class="work-index">03 / Partnerships</div>
-      <div class="work-brand logo-tether"><img src="/logos/tethered-logo.svg" alt="TetherEd" loading="lazy"></div>
+      <div class="work-brand logo-tether"><img src="logos/tethered-logo.png" alt="TetherEd" onerror="this.onerror=null;this.src='tethered-logo.png'" loading="lazy"></div>
       <div class="work-role">Head of Partnerships · EdTech · International Expansion</div>
     </div>
     <div class="work-main">
@@ -2059,14 +2277,14 @@ header.nav{
   </div>
   <div class="work-photo-wrap">
     <div class="work-photo photo-tether">
-      <img src="/images/tether-team-event.jpg" alt="TetherEd team at an event" loading="lazy">
+      <img src="images/tether-team-event.jpg" alt="TetherEd team at an event" onerror="this.onerror=null;this.src='tether-team-event.jpg'" loading="lazy">
     </div>
   </div>
 </a><a class="work-card" href="/usm">
   <div class="work-content">
     <div class="work-meta">
       <div class="work-index">04 / Strategy and operations</div>
-      <div class="work-brand logo-usm"><img src="/logos/logo-usm.png" alt="Universidad Técnica Federico Santa María" loading="lazy"></div>
+      <div class="work-brand logo-usm"><img src="logos/logo-usm.png" alt="Universidad Técnica Federico Santa María" onerror="this.onerror=null;this.src='logo-usm.png'" loading="lazy"></div>
       <div class="work-role">Higher Education · Admissions · Operations</div>
     </div>
     <div class="work-main">
@@ -2078,7 +2296,7 @@ header.nav{
   </div>
   <div class="work-photo-wrap">
     <div class="work-photo photo-usm">
-      <img src="/images/usm-admissions-community.jpg" alt="Admissions team at Universidad Técnica Federico Santa María" loading="lazy">
+      <img src="images/usm-admissions-community.jpg" alt="Admissions team at Universidad Técnica Federico Santa María" onerror="this.onerror=null;this.src='usm-admissions-community.jpg'" loading="lazy">
     </div>
   </div>
 </a>
@@ -2095,7 +2313,7 @@ header.nav{
 <a class="about-bridge-link" href="/about">Explore my background <span>↗</span></a>
     </div>
     <figure class="about-bridge-visual">
-      <img src="/images/building-in-the-field.jpg" alt="Felipe Quiroz working in the field and talking with people" loading="lazy">
+      <img src="images/building-in-the-field.jpg" alt="Felipe Quiroz working in the field and talking with people" onerror="this.onerror=null;this.src='building-in-the-field.jpg'" loading="lazy">
       <figcaption><span>In the field / Product, people and real conversations</span><span>Santiago / CL</span></figcaption>
     </figure>
   </div>
