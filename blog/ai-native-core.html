@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The next product leap is built with AI at the core — Felipe Quiroz</title>
+<title>The next product leap is built with AI at the core | Felipe Quiroz</title>
 <meta name="theme-color" content="#05070a">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -82,15 +82,53 @@ blockquote{margin:40px 0;padding-left:22px;border-left:3px solid var(--blue);col
   padding:0 var(--page) 96px;
 }
 .article-nav-inner{
-  display:grid;grid-template-columns:1fr 1fr;
-  border-top:1px solid var(--line);border-bottom:1px solid var(--line)
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
 }
-.back-card,.next-card{padding:34px 0;min-height:160px}
-.back-card{border-right:1px solid var(--line);padding-right:40px}
-.next-card{padding-left:40px}
-.article-nav small{display:block;color:#728090;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
-.article-nav h3{margin:36px 0 0;font:500 28px/1.08 Manrope;letter-spacing:-.04em;max-width:560px}
-.article-nav a:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+.article-nav .project-link{
+  display:block;
+  min-height:160px;
+  padding:34px 0;
+  transition:padding .2s ease;
+}
+.article-nav .project-link.left{
+  padding-right:40px;
+  border-right:1px solid var(--line);
+}
+.article-nav .project-link.right{
+  padding-left:40px;
+  text-align:right;
+}
+.article-nav .project-link.left:hover{
+  padding-left:10px;
+  padding-right:30px;
+}
+.article-nav .project-link.right:hover{
+  padding-left:30px;
+  padding-right:10px;
+}
+.article-nav .project-link-label{
+  margin-bottom:12px;
+  color:#728090;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.article-nav .project-link strong{
+  display:block;
+  margin:0;
+  font:500 28px/1.08 Manrope, sans-serif;
+  letter-spacing:-.04em;
+  color:var(--ink);
+  max-width:560px;
+}
+.article-nav .project-link.right strong{
+  margin-left:auto;
+}
+
 
 .bottom{padding:78px 0 34px;background:#fff;border-top:1px solid #dde2e8}
 .contact-block{
@@ -129,6 +167,783 @@ blockquote{margin:40px 0;padding-left:22px;border-left:3px solid var(--blue);col
   .footer{padding:24px 20px 0;flex-direction:column;align-items:flex-start;gap:8px}
 }
 </style>
+
+<style id="article-nav-case-parity">
+/* Article navigation aligned with case-study project navigation */
+.article-nav{
+  padding:0 !important;
+  background:#eef1f4 !important;
+  border-top:1px solid #d9dfe5 !important;
+  border-bottom:1px solid #d9dfe5 !important;
+}
+
+.article-nav-inner{
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  width:100% !important;
+  margin:0 !important;
+  border:0 !important;
+}
+
+.back-card,
+.next-card{
+  min-height:160px !important;
+  padding:34px 5vw 38px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  background:transparent !important;
+  transition:background .22s ease,color .22s ease !important;
+}
+
+.back-card{
+  border-right:1px solid #d9dfe5 !important;
+}
+
+.next-card{
+  text-align:right !important;
+  align-items:flex-end !important;
+}
+
+.article-nav small{
+  display:block !important;
+  color:#8290a0 !important;
+  font-size:9px !important;
+  font-weight:600 !important;
+  letter-spacing:.12em !important;
+  text-transform:uppercase !important;
+  transition:color .22s ease !important;
+}
+
+.article-nav h3{
+  margin:18px 0 0 !important;
+  max-width:620px !important;
+  font:400 clamp(28px,2.5vw,40px)/1.08 Manrope,sans-serif !important;
+  letter-spacing:-.045em !important;
+  color:#07101b !important;
+  text-decoration:none !important;
+  transition:color .22s ease,transform .22s ease !important;
+}
+
+/* Same hover language as the case-study navigation */
+.back-card:hover,
+.next-card:hover{
+  background:#05070a !important;
+}
+
+.back-card:hover small,
+.next-card:hover small{
+  color:#8fb9e6 !important;
+}
+
+.back-card:hover h3,
+.next-card:hover h3{
+  color:#fff !important;
+  text-decoration:none !important;
+}
+
+.back-card:hover h3{
+  transform:translateX(4px) !important;
+}
+
+.next-card:hover h3{
+  transform:translateX(-4px) !important;
+}
+
+.back-card:focus-visible,
+.next-card:focus-visible{
+  outline:2px solid #07101b !important;
+  outline-offset:-2px !important;
+}
+
+@media(max-width:760px){
+  .article-nav-inner{
+    grid-template-columns:1fr !important;
+  }
+
+  .back-card,
+  .next-card{
+    min-height:132px !important;
+    padding:28px 20px 30px !important;
+    text-align:left !important;
+    align-items:flex-start !important;
+  }
+
+  .back-card{
+    border-right:0 !important;
+    border-bottom:1px solid #d9dfe5 !important;
+  }
+
+  .article-nav h3{
+    font-size:30px !important;
+    margin-top:14px !important;
+  }
+
+  .back-card:hover h3,
+  .next-card:hover h3{
+    transform:none !important;
+  }
+}
+</style>
+
+
+<style id="article-nav-tether-exact">
+/* =========================================================
+   ARTICLE NAV — exact Tether case interaction
+   ========================================================= */
+
+.article-nav{
+  padding:0 5vw 0 !important;
+  background:#eef1f4 !important;
+  border-top:0 !important;
+  border-bottom:1px solid #d9dfe5 !important;
+}
+
+.article-nav-inner{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+  padding:42px 0 !important;
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  gap:40px !important;
+  border:0 !important;
+}
+
+/* Same project-link treatment as Tether:
+   only a top rule + slight directional movement on hover */
+.back-card,
+.next-card{
+  min-height:auto !important;
+  padding:16px 0 0 !important;
+  display:block !important;
+  border-top:1px solid #d9dfe5 !important;
+  border-right:0 !important;
+  border-bottom:0 !important;
+  background:transparent !important;
+  transition:padding .2s ease !important;
+}
+
+.back-card{
+  text-align:left !important;
+}
+
+.next-card{
+  margin-left:auto !important;
+  text-align:right !important;
+  align-items:initial !important;
+}
+
+/* Exact hover behavior: no black fill, no inversion */
+.back-card:hover{
+  padding-left:10px !important;
+  background:transparent !important;
+}
+
+.next-card:hover{
+  padding-left:0 !important;
+  padding-right:10px !important;
+  background:transparent !important;
+}
+
+.article-nav small{
+  display:block !important;
+  margin-bottom:8px !important;
+  color:#8290a0 !important;
+  font-size:8px !important;
+  font-weight:600 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+  transition:none !important;
+}
+
+.article-nav h3{
+  margin:0 !important;
+  max-width:none !important;
+  font-family:Manrope,sans-serif !important;
+  font-size:20px !important;
+  font-weight:500 !important;
+  line-height:1.15 !important;
+  letter-spacing:-.03em !important;
+  color:#182536 !important;
+  text-decoration:none !important;
+  transform:none !important;
+  transition:none !important;
+}
+
+/* Cancel previous v2 hover overrides completely */
+.back-card:hover small,
+.next-card:hover small{
+  color:#8290a0 !important;
+}
+
+.back-card:hover h3,
+.next-card:hover h3{
+  color:#182536 !important;
+  text-decoration:none !important;
+  transform:none !important;
+}
+
+.back-card:focus-visible,
+.next-card:focus-visible{
+  outline:2px solid #182536 !important;
+  outline-offset:3px !important;
+}
+
+@media(max-width:760px){
+  .article-nav{
+    padding-left:20px !important;
+    padding-right:20px !important;
+  }
+
+  .article-nav-inner{
+    grid-template-columns:1fr !important;
+    gap:28px !important;
+    padding:36px 0 !important;
+  }
+
+  .back-card,
+  .next-card{
+    width:100% !important;
+    text-align:left !important;
+    margin-left:0 !important;
+  }
+
+  .next-card:hover{
+    padding-right:0 !important;
+    padding-left:10px !important;
+  }
+}
+</style>
+
+
+<style id="article-v4-type-avatar-polish">
+/* =========================================================
+   ARTICLE V4 — typography + author portrait polish
+   ========================================================= */
+
+html{
+  -webkit-font-smoothing:antialiased !important;
+  -moz-osx-font-smoothing:grayscale !important;
+}
+
+body{
+  font-family:Inter, sans-serif !important;
+  font-weight:400 !important;
+}
+
+/* Author portrait: crop into the face, not the torso */
+.author-avatar{
+  width:46px !important;
+  height:46px !important;
+  flex:0 0 46px !important;
+  display:block !important;
+  overflow:hidden !important;
+  border-radius:50% !important;
+  background:#dfe4e8 !important;
+}
+
+.author-avatar img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:50% 18% !important;
+  transform:scale(1.55) !important;
+  transform-origin:50% 22% !important;
+  border-radius:0 !important;
+}
+
+/* Author metadata closer to the case-study typography */
+.author{
+  gap:13px !important;
+}
+
+.author strong{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.25 !important;
+  font-weight:600 !important;
+  letter-spacing:-.015em !important;
+  color:#07101b !important;
+}
+
+.author span{
+  margin-top:4px !important;
+  font-family:Inter,sans-serif !important;
+  font-size:10px !important;
+  line-height:1.35 !important;
+  font-weight:400 !important;
+  letter-spacing:0 !important;
+  color:#7a8590 !important;
+}
+
+.article-meta{
+  font-family:Inter,sans-serif !important;
+  font-size:9px !important;
+  line-height:1.4 !important;
+  font-weight:500 !important;
+  letter-spacing:.045em !important;
+  color:#7a8590 !important;
+}
+
+/* Editorial labels */
+.breadcrumb,
+.toc-label,
+.callout span{
+  font-family:Inter,sans-serif !important;
+  font-weight:600 !important;
+}
+
+/* Main title = same light editorial feeling as the rest of the site */
+.article-head h1{
+  font-family:Manrope,sans-serif !important;
+  font-weight:400 !important;
+  letter-spacing:-.064em !important;
+}
+
+/* Intro and article copy: remove the slightly heavy feel */
+.dek{
+  font-family:Inter,sans-serif !important;
+  font-weight:400 !important;
+  font-size:16px !important;
+  line-height:1.72 !important;
+}
+
+.prose{
+  font-family:Inter,sans-serif !important;
+  font-size:16px !important;
+  line-height:1.78 !important;
+  font-weight:400 !important;
+  letter-spacing:-.005em !important;
+  color:#5e6974 !important;
+}
+
+.prose .lead{
+  font-family:Inter,sans-serif !important;
+  font-size:19px !important;
+  line-height:1.68 !important;
+  font-weight:400 !important;
+  letter-spacing:-.012em !important;
+  color:#1b2733 !important;
+}
+
+.prose h2{
+  font-family:Manrope,sans-serif !important;
+  font-size:32px !important;
+  line-height:1.12 !important;
+  font-weight:400 !important;
+  letter-spacing:-.043em !important;
+  color:#07101b !important;
+}
+
+blockquote{
+  font-family:Manrope,sans-serif !important;
+  font-weight:400 !important;
+}
+
+/* Navigation titles remain exactly in the Tether system */
+.article-nav h3{
+  font-family:Manrope,sans-serif !important;
+  font-weight:500 !important;
+}
+
+@media(max-width:760px){
+  .author-avatar{
+    width:44px !important;
+    height:44px !important;
+    flex-basis:44px !important;
+  }
+
+  .prose{
+    font-size:15.5px !important;
+    line-height:1.76 !important;
+  }
+
+  .prose .lead{
+    font-size:18px !important;
+  }
+
+  .prose h2{
+    font-size:29px !important;
+  }
+}
+</style>
+
+
+<style id="article-nav-v5-exact-box">
+/* =========================================================
+   ARTICLE NAV V5 — match case-study project navigation box
+   ========================================================= */
+
+.article-nav{
+  padding:0 5vw 96px !important;
+  background:#eef1f4 !important;
+  border:0 !important;
+}
+
+.article-nav-inner{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+  padding:0 !important;
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  gap:0 !important;
+  border-top:1px solid #d9dfe5 !important;
+  border-bottom:1px solid #d9dfe5 !important;
+}
+
+.back-card,
+.next-card{
+  min-height:160px !important;
+  padding:34px 0 36px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  background:transparent !important;
+  border:0 !important;
+  transition:padding .2s ease !important;
+}
+
+.back-card{
+  text-align:left !important;
+  align-items:flex-start !important;
+  border-right:1px solid #d9dfe5 !important;
+}
+
+.next-card{
+  text-align:right !important;
+  align-items:flex-end !important;
+  margin-left:0 !important;
+}
+
+.article-nav small{
+  display:block !important;
+  margin:0 0 10px !important;
+  color:#8290a0 !important;
+  font-family:Inter,sans-serif !important;
+  font-size:9px !important;
+  line-height:1.2 !important;
+  font-weight:600 !important;
+  letter-spacing:.10em !important;
+  text-transform:uppercase !important;
+}
+
+.article-nav h3{
+  margin:0 !important;
+  max-width:90% !important;
+  color:#07101b !important;
+  font-family:Manrope,sans-serif !important;
+  font-size:clamp(28px,2.2vw,40px) !important;
+  line-height:1.08 !important;
+  font-weight:400 !important;
+  letter-spacing:-.045em !important;
+  text-decoration:none !important;
+  transform:none !important;
+}
+
+/* Same subtle directional hover as the case studies */
+.back-card:hover{
+  padding-left:10px !important;
+  background:transparent !important;
+}
+
+.next-card:hover{
+  padding-right:10px !important;
+  background:transparent !important;
+}
+
+.back-card:hover small,
+.next-card:hover small{
+  color:#8290a0 !important;
+}
+
+.back-card:hover h3,
+.next-card:hover h3{
+  color:#07101b !important;
+  text-decoration:none !important;
+  transform:none !important;
+}
+
+@media(max-width:760px){
+  .article-nav{
+    padding:0 20px 72px !important;
+  }
+
+  .article-nav-inner{
+    grid-template-columns:1fr !important;
+  }
+
+  .back-card,
+  .next-card{
+    min-height:132px !important;
+    padding:28px 0 30px !important;
+    text-align:left !important;
+    align-items:flex-start !important;
+  }
+
+  .back-card{
+    border-right:0 !important;
+    border-bottom:1px solid #d9dfe5 !important;
+  }
+
+  .next-card:hover{
+    padding-right:0 !important;
+    padding-left:10px !important;
+  }
+
+  .article-nav h3{
+    max-width:100% !important;
+    font-size:30px !important;
+  }
+}
+</style>
+
+
+<style id="article-v8-site-parity">
+/* =========================================================
+   ARTICLE V8 — exact Low/Tether navbar + project-nav behavior
+   ========================================================= */
+
+/* NAVBAR — same system as Low / Tether */
+.nav{
+  position:sticky !important;
+  top:0 !important;
+  z-index:1000 !important;
+  min-height:84px !important;
+  padding:0 var(--page) !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:30px !important;
+  background:rgba(5,7,10,.94) !important;
+  border-bottom:1px solid rgba(255,255,255,.08) !important;
+  backdrop-filter:blur(18px) !important;
+  -webkit-backdrop-filter:blur(18px) !important;
+}
+
+.brand{
+  font-family:Manrope,sans-serif !important;
+  font-size:17px !important;
+  font-weight:600 !important;
+  letter-spacing:-.04em !important;
+  color:#fff !important;
+  white-space:nowrap !important;
+}
+
+.nav-links{
+  display:flex !important;
+  align-items:center !important;
+  gap:30px !important;
+  font-size:10px !important;
+  font-weight:500 !important;
+  letter-spacing:.07em !important;
+  text-transform:uppercase !important;
+}
+
+.nav-links>a{
+  position:relative !important;
+  color:#bcc4ce !important;
+  transition:.2s ease !important;
+}
+
+.nav-links>a:not(.contact-nav):not(.lang-switch)::after{
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;
+  bottom:-7px !important;
+  width:0 !important;
+  height:1px !important;
+  background:#fff !important;
+  transition:width .22s ease !important;
+}
+
+.nav-links>a:not(.contact-nav):not(.lang-switch):hover,
+.nav-links>a.active{
+  color:#fff !important;
+}
+
+.nav-links>a:not(.contact-nav):not(.lang-switch):hover::after,
+.nav-links>a.active:not(.contact-nav):not(.lang-switch)::after{
+  width:100% !important;
+}
+
+.contact-nav{
+  padding:9px 15px !important;
+  border:1px solid rgba(255,255,255,.25) !important;
+  border-radius:999px !important;
+  color:#fff !important;
+  transition:.22s ease !important;
+}
+
+.contact-nav:hover,
+.contact-nav:focus-visible,
+.contact-nav:active{
+  background:#fff !important;
+  color:#07101b !important;
+  border-color:#fff !important;
+  outline:none !important;
+}
+
+.lang-switch{
+  width:38px !important;
+  height:38px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  border:1px solid rgba(255,255,255,.20) !important;
+  border-radius:50% !important;
+  color:#b7c0ca !important;
+  font-size:9px !important;
+  font-weight:600 !important;
+  letter-spacing:.06em !important;
+}
+
+.lang-switch:hover{
+  background:rgba(255,255,255,.08) !important;
+  color:#fff !important;
+}
+
+/* PROJECT NAV — same visible behavior as Low / Tether */
+.article-nav{
+  padding:74px var(--page) !important;
+  background:#eef1f4 !important;
+  color:#07101b !important;
+  border-bottom:1px solid var(--line) !important;
+}
+
+.article-nav-inner{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  border-top:1px solid var(--line) !important;
+  border-bottom:1px solid var(--line) !important;
+}
+
+.article-nav .project-link{
+  min-height:158px !important;
+  padding:28px 0 !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  transition:.2s ease !important;
+  background:transparent !important;
+}
+
+.article-nav .project-link:first-child{
+  padding-right:30px !important;
+  border-right:0 !important;
+  text-align:left !important;
+  align-items:flex-start !important;
+}
+
+.article-nav .project-link:last-child{
+  padding-left:30px !important;
+  border-left:1px solid var(--line) !important;
+  text-align:right !important;
+  align-items:flex-end !important;
+}
+
+/* exact hover language from Low/Tether */
+.article-nav .project-link:hover{
+  background:#fff !important;
+  padding-left:18px !important;
+  padding-right:18px !important;
+}
+
+.article-nav .project-link-label{
+  margin-bottom:8px !important;
+  color:#85919f !important;
+  font-family:Inter,sans-serif !important;
+  font-size:9px !important;
+  font-weight:700 !important;
+  letter-spacing:.1em !important;
+  text-transform:uppercase !important;
+}
+
+.article-nav .project-link strong{
+  display:block !important;
+  margin-top:8px !important;
+  max-width:620px !important;
+  font-family:Manrope,sans-serif !important;
+  font-size:28px !important;
+  line-height:1.08 !important;
+  font-weight:500 !important;
+  letter-spacing:-.04em !important;
+  color:#07101b !important;
+}
+
+/* cancel older nav-card hover leftovers */
+.article-nav .project-link:hover strong{
+  color:#07101b !important;
+  transform:none !important;
+  text-decoration:none !important;
+}
+
+@media(max-width:760px){
+  .nav{
+    min-height:auto !important;
+    padding:18px 20px 16px !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:14px !important;
+  }
+
+  .nav-links{
+    width:100% !important;
+    justify-content:space-between !important;
+    gap:8px !important;
+    font-size:8px !important;
+  }
+
+  .contact-nav{
+    padding:8px 10px !important;
+  }
+
+  .lang-switch{
+    width:34px !important;
+    height:34px !important;
+  }
+
+  .article-nav{
+    padding:56px 20px !important;
+  }
+
+  .article-nav-inner{
+    grid-template-columns:1fr !important;
+  }
+
+  .article-nav .project-link{
+    min-height:132px !important;
+    padding:24px 0 !important;
+  }
+
+  .article-nav .project-link:first-child{
+    padding-right:0 !important;
+    border-bottom:1px solid var(--line) !important;
+  }
+
+  .article-nav .project-link:last-child{
+    padding-left:0 !important;
+    border-left:0 !important;
+    text-align:left !important;
+    align-items:flex-start !important;
+  }
+
+  .article-nav .project-link:hover{
+    padding-left:14px !important;
+    padding-right:14px !important;
+  }
+
+  .article-nav .project-link strong{
+    font-size:26px !important;
+    max-width:100% !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="nav">
@@ -152,7 +967,7 @@ blockquote{margin:40px 0;padding-left:22px;border-left:3px solid var(--blue);col
 
     <div class="author-line">
       <div class="author">
-        <img src="/felipe-portrait.jpg" alt="Felipe Quiroz">
+        <span class="author-avatar"><img src="/felipe-portrait.jpg" alt="Felipe Quiroz"></span>
         <div>
           <strong>Felipe Quiroz</strong>
           <span>Product, Growth & Operations</span>
@@ -211,13 +1026,13 @@ blockquote{margin:40px 0;padding-left:22px;border-left:3px solid var(--blue);col
 
 <section class="article-nav">
   <div class="article-nav-inner">
-    <a class="back-card" href="/blog">
-      <small>Back to Blog</small>
-      <h3>Blog</h3>
+    <a class="project-link left" href="/blog">
+      <div class="project-link-label">Back to Blog</div>
+      <strong>Blog</strong>
     </a>
-    <a class="next-card" href="/blog/building-lowsignal">
-      <small>Next article</small>
-      <h3>What building lowsignal taught me about starting before you’re ready</h3>
+    <a class="project-link right" href="/blog/building-lowsignal">
+      <div class="project-link-label">Next article</div>
+      <strong>What building lowsignal taught me about starting before you’re ready</strong>
     </a>
   </div>
 </section>
