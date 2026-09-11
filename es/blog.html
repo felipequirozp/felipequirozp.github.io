@@ -1212,6 +1212,200 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 }
 </style>
 
+
+<style id="blog-v12-home-parity">
+/* =========================================================
+   BLOG V12 — align geometry with Home / main site system
+   ========================================================= */
+:root{
+  --page-gutter:7vw !important;
+  --page-max:1440px !important;
+  --ice:#eef1f4 !important;
+  --navy:#182536 !important;
+  --line:#d7dde4 !important;
+}
+
+/* Main blog rails */
+.blog-hero{
+  padding-left:var(--page-gutter) !important;
+  padding-right:var(--page-gutter) !important;
+}
+.blog-hero-inner{
+  width:min(var(--page-max),100%) !important;
+  max-width:var(--page-max) !important;
+  margin:0 auto !important;
+}
+
+.editorial{
+  padding-left:var(--page-gutter) !important;
+  padding-right:var(--page-gutter) !important;
+}
+.editorial-inner{
+  width:min(var(--page-max),100%) !important;
+  max-width:var(--page-max) !important;
+  margin:0 auto !important;
+}
+
+.blog-themes{
+  padding-left:var(--page-gutter) !important;
+  padding-right:var(--page-gutter) !important;
+}
+.blog-themes-inner{
+  width:min(var(--page-max),100%) !important;
+  max-width:var(--page-max) !important;
+  margin:0 auto !important;
+}
+
+/* EXACT Home contact/footer system */
+.bottom{
+  padding:85px var(--page-gutter) 42px !important;
+  background:var(--ice) !important;
+  color:var(--navy) !important;
+  border-top:.5px solid rgba(24,37,54,.16) !important;
+}
+.contact-block{
+  width:min(var(--page-max),100%) !important;
+  max-width:var(--page-max) !important;
+  margin:0 auto !important;
+  padding-bottom:70px !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:flex-end !important;
+  gap:50px !important;
+  border-bottom:1px solid var(--line) !important;
+}
+.contact-copy .section-label{
+  margin-bottom:18px !important;
+  color:#6f8196 !important;
+  font-size:10px !important;
+  font-weight:600 !important;
+  letter-spacing:.13em !important;
+  text-transform:uppercase !important;
+}
+.contact-copy h3{
+  margin:0 !important;
+  color:var(--navy) !important;
+  font-family:Manrope,sans-serif !important;
+  font-size:clamp(40px,5vw,72px) !important;
+  line-height:1 !important;
+  letter-spacing:-.055em !important;
+  font-weight:500 !important;
+}
+.contact-links{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:10px !important;
+}
+.contact-link{
+  padding:11px 16px !important;
+  border:1px solid rgba(24,37,54,.20) !important;
+  border-radius:999px !important;
+  color:var(--navy) !important;
+  background:transparent !important;
+  font-size:10px !important;
+  font-weight:500 !important;
+  text-transform:uppercase !important;
+  letter-spacing:.05em !important;
+  transition:background .2s ease,color .2s ease,border-color .2s ease !important;
+}
+.contact-link:hover{
+  background:var(--navy) !important;
+  color:#fff !important;
+  border-color:var(--navy) !important;
+}
+.footer{
+  width:min(var(--page-max),100%) !important;
+  max-width:var(--page-max) !important;
+  margin:0 auto !important;
+  padding-top:32px !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:20px !important;
+  color:#687382 !important;
+  font-size:9px !important;
+  font-weight:500 !important;
+  letter-spacing:.07em !important;
+  text-transform:uppercase !important;
+  background:transparent !important;
+  border:0 !important;
+}
+
+@media(max-width:900px){
+  :root{
+    --page-gutter:24px !important;
+  }
+
+  .blog-hero,
+  .editorial,
+  .blog-themes,
+  .bottom{
+    padding-left:var(--page-gutter) !important;
+    padding-right:var(--page-gutter) !important;
+  }
+
+  .contact-block{
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:35px !important;
+  }
+
+  .footer{
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:8px !important;
+  }
+}
+</style>
+
+
+<style id="blog-v13-edge-to-edge">
+/* BLOG V13 — edge-to-edge section geometry */
+.blog-hero-inner,
+.editorial-inner,
+.blog-themes-inner,
+.contact-block,
+.footer{
+  width:100% !important;
+  max-width:none !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
+}
+
+/* Keep only the shared outer gutter; no centered inner box */
+.blog-hero,
+.editorial,
+.blog-themes,
+.bottom{
+  width:100% !important;
+  max-width:none !important;
+}
+
+/* Full usable width between the page gutters */
+.editorial-grid,
+.top-label,
+.blog-themes-head,
+.blog-themes-grid{
+  width:100% !important;
+  max-width:none !important;
+}
+
+/* Contact/footer line spans from gutter to gutter */
+.contact-block{
+  border-bottom:1px solid var(--line) !important;
+}
+.footer{
+  justify-content:space-between !important;
+}
+
+/* Mobile keeps the same logic with 20px edge gutters */
+@media(max-width:760px){
+  :root{
+    --page-gutter:20px !important;
+  }
+}
+</style>
+
 </head><body>
 
 <header class="nav">
