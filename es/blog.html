@@ -1,0 +1,1320 @@
+<!doctype html><html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blog — Felipe Quiroz</title><link rel="icon" href="/favicon.png"><meta name="theme-color" content="#05070a">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--dark:#05070a;--ink:#07101b;--paper:#f6f7f8;--muted:#6d7883;--line:#dfe4e8;--blue:#63aaff;--page:5vw;--max:1240px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:Inter,sans-serif}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.nav{position:sticky;top:0;z-index:1000;min-height:84px;padding:0 var(--page);display:flex;align-items:center;justify-content:space-between;gap:30px;background:#05070a;border-bottom:1px solid rgba(255,255,255,.08)}
+.brand{color:#fff;font:600 17px/1 Manrope;letter-spacing:-.04em;white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:30px;color:#bcc4ce;font-size:10px;font-weight:500;letter-spacing:.07em;text-transform:uppercase}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-links a.active{position:relative}
+.nav-links a.active:after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:1px;background:#fff}
+.contact-nav{padding:9px 15px;border:1px solid rgba(255,255,255,.25);border-radius:999px;color:#fff!important}
+.lang-switch{width:38px;height:38px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.2);border-radius:50%}
+.contact-band{background:#05070a;color:#fff;padding:92px var(--page)}
+.contact-inner{max-width:var(--max);margin:auto;display:grid;grid-template-columns:1fr .6fr;gap:60px;align-items:end}
+.contact-inner h2{margin:0;font:400 clamp(48px,5vw,78px)/.98 Manrope;letter-spacing:-.06em}
+.contact-side p{margin:0;color:#98a3ae;line-height:1.7}
+.contact-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.contact-links a{padding:10px 14px;border:1px solid rgba(255,255,255,.16);border-radius:999px;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.footer{background:#05070a;color:#7f8994;border-top:1px solid rgba(255,255,255,.08);padding:28px var(--page);display:flex;justify-content:space-between;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:760px){
+.nav{min-height:auto;padding:18px 20px 16px;flex-direction:column;align-items:flex-start;gap:14px}
+.nav-links{width:100%;justify-content:space-between;gap:8px;font-size:8px}
+.contact-nav{padding:8px 10px}.lang-switch{width:34px;height:34px}
+.contact-band{padding:72px 20px}.contact-inner{grid-template-columns:1fr;gap:28px}
+.footer{padding:24px 20px;gap:20px;flex-wrap:wrap}
+}
+
+.blog-hero{background:#eef3f7;padding:92px var(--page) 76px;border-bottom:1px solid var(--line)}
+.blog-hero-inner{max-width:var(--max);margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:80px;align-items:end}
+.blog-kicker{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#6382a0;margin-bottom:24px}
+.blog-hero h1{margin:0;max-width:820px;font:400 clamp(62px,7.5vw,108px)/.95 Manrope;letter-spacing:-.068em}
+.blog-hero p{margin:0 0 8px;max-width:480px;color:#687582;font-size:15px;line-height:1.72}
+
+.editorial{padding:64px var(--page) 120px;background:#fff}
+.editorial-inner{max-width:var(--max);margin:auto}
+.top-label{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.top-label span{font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#72808c}
+.editorial-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:18px;align-items:start}
+.lead-card{border-right:1px solid var(--line);padding-right:28px}
+.lead-image{height:560px;border-radius:16px;overflow:hidden;background:#e7ebef}
+.lead-meta{margin-top:22px;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6b8198}
+.lead-card h2{margin:16px 0 12px;font:500 clamp(42px,4.3vw,64px)/1.02 Manrope;letter-spacing:-.055em}
+.lead-card p{margin:0;max-width:720px;color:#66727d;font-size:14px;line-height:1.67}
+
+.side-stack{display:grid;gap:18px}
+.side-card{display:grid;grid-template-columns:140px 1fr;gap:18px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.side-card:last-child{border-bottom:0}
+.side-image{height:122px;border-radius:12px;overflow:hidden;background:#eef1f3}
+.side-copy small{font-size:8px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#748291}
+.side-copy h3{margin:10px 0 0;font:500 24px/1.08 Manrope;letter-spacing:-.045em}
+.side-copy p{margin:10px 0 0;color:#7a8590;font-size:12px;line-height:1.55}
+
+.archive{margin-top:74px}
+.archive-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.archive-head h2{margin:0;font:500 18px/1 Manrope}
+.archive-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.archive-card{padding:28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:260px;display:flex;flex-direction:column}
+.archive-card small{font-size:8px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#748291}
+.archive-card h3{margin:52px 0 12px;font:500 30px/1.08 Manrope;letter-spacing:-.048em}
+.archive-card p{margin:0;color:#72808a;font-size:13px;line-height:1.6}
+.read-link{margin-top:auto;padding-top:24px;display:inline-flex;gap:8px;align-items:center;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+
+@media(max-width:900px){
+.blog-hero-inner{grid-template-columns:1fr;gap:28px}
+.editorial-grid{grid-template-columns:1fr}
+.lead-card{border-right:0;padding-right:0}
+.lead-image{height:460px}
+.side-stack{grid-template-columns:1fr 1fr}.side-card{grid-template-columns:1fr}.side-image{height:220px}
+}
+@media(max-width:760px){
+.blog-hero{padding:72px 20px 58px}.blog-hero h1{font-size:clamp(54px,15vw,72px)}
+.editorial{padding:42px 20px 80px}
+.lead-image{height:320px;border-radius:14px}
+.lead-card h2{font-size:40px}
+.side-stack{grid-template-columns:1fr}.side-card{grid-template-columns:120px 1fr}.side-image{height:105px}
+.archive-grid{grid-template-columns:1fr}.archive-card{min-height:230px}
+}
+</style>
+<style id="blog-v2-featured-layout">
+.blog-hero{
+  background:#f4f7f9 !important;
+  padding:86px var(--page) 62px !important;
+}
+.blog-hero-inner{
+  grid-template-columns:1.05fr .7fr !important;
+  gap:70px !important;
+}
+.blog-hero h1{
+  max-width:800px !important;
+  font-size:clamp(58px,6.8vw,96px) !important;
+  line-height:.97 !important;
+}
+.editorial{
+  padding-top:44px !important;
+  background:#f4f7f9 !important;
+}
+.top-label{
+  margin-bottom:16px !important;
+}
+.editorial-grid{
+  grid-template-columns:1.25fr .85fr !important;
+  gap:18px !important;
+  align-items:stretch !important;
+}
+.lead-card{
+  background:#fff !important;
+  border:1px solid var(--line) !important;
+  border-radius:18px !important;
+  overflow:hidden !important;
+  padding:0 !important;
+  display:flex !important;
+  flex-direction:column !important;
+}
+.lead-image{
+  height:520px !important;
+  border-radius:0 !important;
+}
+.lead-meta{
+  margin:24px 30px 0 !important;
+}
+.lead-card h2{
+  margin:14px 30px 12px !important;
+  max-width:760px !important;
+  font-size:clamp(40px,4vw,58px) !important;
+}
+.lead-card p{
+  margin:0 30px 30px !important;
+  max-width:700px !important;
+  font-size:14px !important;
+}
+.side-stack{
+  display:grid !important;
+  grid-template-rows:repeat(3,1fr) !important;
+  gap:18px !important;
+}
+.side-card{
+  position:relative !important;
+  display:block !important;
+  min-height:0 !important;
+  padding:0 !important;
+  border:0 !important;
+  border-radius:16px !important;
+  overflow:hidden !important;
+  background:#0b0f14 !important;
+}
+.side-image{
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  border-radius:0 !important;
+}
+.side-image img{
+  filter:brightness(.58) !important;
+  transition:transform .25s ease, filter .25s ease !important;
+}
+.side-card:hover .side-image img{
+  transform:scale(1.02) !important;
+  filter:brightness(.64) !important;
+}
+.side-copy{
+  position:relative !important;
+  z-index:2 !important;
+  height:100% !important;
+  min-height:0 !important;
+  padding:22px 24px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:flex-end !important;
+  background:linear-gradient(to top,rgba(5,7,10,.88) 0%,rgba(5,7,10,.25) 55%,rgba(5,7,10,.08) 100%) !important;
+}
+.side-copy small{
+  color:#b8c5d1 !important;
+}
+.side-copy h3{
+  margin-top:10px !important;
+  color:#fff !important;
+  font-size:25px !important;
+  line-height:1.04 !important;
+}
+.side-copy p{
+  display:none !important;
+}
+.archive{
+  margin-top:86px !important;
+}
+.archive-grid{
+  grid-template-columns:repeat(4,1fr) !important;
+  border-left:0 !important;
+  border-top:1px solid var(--line) !important;
+}
+.archive-card{
+  border-left:0 !important;
+  min-height:310px !important;
+}
+.archive-card:first-child{
+  border-left:1px solid var(--line) !important;
+}
+.archive-card h3{
+  margin-top:44px !important;
+  font-size:26px !important;
+}
+@media(max-width:1050px){
+  .editorial-grid{
+    grid-template-columns:1fr !important;
+  }
+  .side-stack{
+    grid-template-columns:repeat(3,1fr) !important;
+    grid-template-rows:none !important;
+  }
+  .side-card{
+    min-height:260px !important;
+  }
+  .archive-grid{
+    grid-template-columns:repeat(2,1fr) !important;
+  }
+}
+@media(max-width:760px){
+  .blog-hero{
+    padding:70px 20px 54px !important;
+  }
+  .blog-hero-inner{
+    grid-template-columns:1fr !important;
+    gap:24px !important;
+  }
+  .blog-hero h1{
+    font-size:clamp(52px,14vw,68px) !important;
+  }
+  .editorial{
+    padding:34px 20px 76px !important;
+  }
+  .lead-image{
+    height:310px !important;
+  }
+  .lead-meta{
+    margin:20px 22px 0 !important;
+  }
+  .lead-card h2{
+    margin:12px 22px 10px !important;
+    font-size:36px !important;
+  }
+  .lead-card p{
+    margin:0 22px 24px !important;
+  }
+  .side-stack{
+    grid-template-columns:1fr !important;
+  }
+  .side-card{
+    min-height:240px !important;
+  }
+  .archive-grid{
+    grid-template-columns:1fr !important;
+  }
+  .archive-card,
+  .archive-card:first-child{
+    border-left:1px solid var(--line) !important;
+  }
+}
+</style>
+
+
+<style id="blog-v4-shared-site-parity">
+/* =========================================================
+   BLOG V4 — Shared site parity
+   Navbar interactions + About-style contact/footer
+   ========================================================= */
+
+/* Navbar: same interaction language as About / Now / cases */
+.nav{
+  background:#05070a !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+}
+.nav-links > a{
+  position:relative !important;
+  color:#bcc4ce !important;
+  transition:.2s ease !important;
+}
+.nav-links > a:not(.contact-nav):not(.lang-switch)::after{
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;
+  bottom:-7px !important;
+  width:0 !important;
+  height:1px !important;
+  background:#fff !important;
+  transition:width .22s ease !important;
+}
+.nav-links > a:not(.contact-nav):not(.lang-switch):hover,
+.nav-links > a.active{
+  color:#fff !important;
+}
+.nav-links > a:not(.contact-nav):not(.lang-switch):hover::after,
+.nav-links > a.active:not(.contact-nav):not(.lang-switch)::after{
+  width:100% !important;
+}
+
+.contact-nav{
+  padding:9px 15px !important;
+  border:1px solid rgba(255,255,255,.25) !important;
+  border-radius:999px !important;
+  color:#fff !important;
+  transition:background .2s ease,color .2s ease,border-color .2s ease !important;
+}
+.contact-nav:hover,
+.contact-nav:focus-visible,
+.contact-nav:active{
+  background:#fff !important;
+  color:#07101b !important;
+  border-color:#fff !important;
+  outline:none !important;
+}
+.lang-switch{
+  color:#b7c0ca !important;
+  transition:background .2s ease,color .2s ease !important;
+}
+.lang-switch:hover{
+  background:rgba(255,255,255,.08) !important;
+  color:#fff !important;
+}
+
+/* Contact / footer: same light editorial system used elsewhere */
+.site-bottom{
+  padding:80px var(--page) 40px !important;
+  background:#fff !important;
+  color:#07101b !important;
+  border-top:1px solid var(--line) !important;
+}
+.site-contact-block{
+  width:min(var(--max),100%) !important;
+  margin:0 auto !important;
+  padding-bottom:66px !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:flex-end !important;
+  gap:50px !important;
+  border-bottom:1px solid var(--line) !important;
+}
+.site-contact-label{
+  font-size:10px !important;
+  font-weight:700 !important;
+  letter-spacing:.12em !important;
+  text-transform:uppercase !important;
+  color:#7f8a98 !important;
+}
+.site-contact-copy h3{
+  margin:14px 0 0 !important;
+  font-family:Manrope,sans-serif !important;
+  font-size:clamp(42px,5vw,72px) !important;
+  line-height:1 !important;
+  letter-spacing:-.055em !important;
+  font-weight:500 !important;
+}
+.site-contact-links{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:10px !important;
+}
+.site-contact-link{
+  padding:11px 16px !important;
+  border:1px solid rgba(11,13,16,.18) !important;
+  border-radius:999px !important;
+  background:transparent !important;
+  color:#07101b !important;
+  font-size:10px !important;
+  font-weight:600 !important;
+  letter-spacing:.05em !important;
+  text-transform:uppercase !important;
+  transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease !important;
+}
+.site-contact-link:hover{
+  background:#05070a !important;
+  color:#fff !important;
+  border-color:#05070a !important;
+  transform:translateY(-2px) !important;
+}
+.site-contact-link:focus-visible{
+  outline:2px solid #07101b !important;
+  outline-offset:3px !important;
+}
+.site-footer{
+  width:min(var(--max),100%) !important;
+  margin:0 auto !important;
+  padding-top:30px !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  gap:20px !important;
+  color:#727b86 !important;
+  font-size:9px !important;
+  letter-spacing:.07em !important;
+  text-transform:uppercase !important;
+}
+
+@media(max-width:760px){
+  .site-bottom{
+    padding:64px 20px 34px !important;
+  }
+  .site-contact-block{
+    padding-bottom:48px !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:28px !important;
+  }
+  .site-contact-copy h3{
+    font-size:clamp(42px,12vw,58px) !important;
+  }
+  .site-footer{
+    padding-top:26px !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:8px !important;
+  }
+}
+</style>
+
+
+<style id="blog-v5-card-interactions">
+/* BLOG V5 — cleaner metadata + obvious click affordance */
+
+.lead-card,
+.side-card{
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease !important;
+}
+
+/* Main feature */
+.lead-card:hover{
+  transform:translateY(-4px) !important;
+  box-shadow:0 18px 42px rgba(10,18,28,.10) !important;
+  border-color:#cfd7de !important;
+}
+.lead-card .lead-image{
+  overflow:hidden !important;
+}
+.lead-card .lead-image img{
+  transition:transform .32s ease !important;
+}
+.lead-card:hover .lead-image img{
+  transform:scale(1.025) !important;
+}
+.lead-card h2 a{
+  position:relative !important;
+  display:inline !important;
+}
+.lead-card h2 a::after{
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;
+  bottom:-4px !important;
+  width:0 !important;
+  height:1px !important;
+  background:currentColor !important;
+  transition:width .24s ease !important;
+}
+.lead-card:hover h2 a::after{
+  width:100% !important;
+}
+
+/* Secondary cards */
+.side-card{
+  cursor:pointer !important;
+}
+.side-card:hover{
+  transform:translateY(-3px) !important;
+  box-shadow:0 14px 32px rgba(5,7,10,.16) !important;
+}
+.side-card .side-image{
+  overflow:hidden !important;
+}
+.side-card .side-image img{
+  transition:transform .3s ease, filter .3s ease !important;
+}
+.side-card:hover .side-image img{
+  transform:scale(1.035) !important;
+  filter:brightness(.68) !important;
+}
+.side-card h3{
+  transition:transform .22s ease !important;
+}
+.side-card:hover h3{
+  transform:translateX(3px) !important;
+}
+
+/* Small visual cue without adding another text CTA */
+.side-card::after{
+  content:"" !important;
+  position:absolute !important;
+  right:22px !important;
+  top:22px !important;
+  z-index:3 !important;
+  width:11px !important;
+  height:11px !important;
+  border-top:1px solid rgba(255,255,255,.9) !important;
+  border-right:1px solid rgba(255,255,255,.9) !important;
+  opacity:0 !important;
+  transform:translate(-3px,3px) !important;
+  transition:opacity .2s ease, transform .2s ease !important;
+}
+.side-card:hover::after{
+  opacity:1 !important;
+  transform:translate(0,0) !important;
+}
+
+/* Metadata: category only; no reading-time clutter */
+.lead-meta,
+.side-copy small{
+  letter-spacing:.12em !important;
+}
+
+/* Keyboard focus */
+.lead-card a:focus-visible,
+.side-card a:focus-visible{
+  outline:2px solid #07101b !important;
+  outline-offset:4px !important;
+}
+.side-card a:focus-visible{
+  outline-color:#fff !important;
+}
+
+@media (hover:none){
+  .lead-card:hover,
+  .side-card:hover{
+    transform:none !important;
+    box-shadow:none !important;
+  }
+  .side-card::after{
+    opacity:.65 !important;
+    transform:none !important;
+  }
+}
+</style>
+
+
+<style id="blog-v6-hero-and-aiweek-image">
+/* BLOG V6 — simpler hero label + better AI Week crop */
+
+/* Hero: keep it simple */
+.blog-kicker{
+  letter-spacing:.14em !important;
+}
+
+/* AI Week is the third card in the right-hand stack.
+   Bias the crop upward so faces remain visible. */
+.side-stack .side-card:nth-child(3) .side-image img{
+  object-position:50% 24% !important;
+}
+
+/* Give this specific card a touch more image presence */
+.side-stack .side-card:nth-child(3) .side-copy{
+  background:
+    linear-gradient(
+      to top,
+      rgba(5,7,10,.82) 0%,
+      rgba(5,7,10,.24) 48%,
+      rgba(5,7,10,.02) 100%
+    ) !important;
+}
+
+@media(max-width:1050px){
+  .side-stack .side-card:nth-child(3) .side-image img{
+    object-position:50% 22% !important;
+  }
+}
+
+@media(max-width:760px){
+  .side-stack .side-card:nth-child(3){
+    min-height:275px !important;
+  }
+  .side-stack .side-card:nth-child(3) .side-image img{
+    object-position:50% 20% !important;
+  }
+}
+</style>
+
+
+<style id="blog-v7-exact-site-bottom">
+/* BLOG V7 — exact About/Now footer + navbar parity */
+:root{
+  --site-max:1520px;
+}
+
+/* Exact navbar interactions */
+.nav-links>a{
+  position:relative !important;
+  color:#bcc4ce !important;
+  transition:.2s ease !important;
+}
+.nav-links>a:not(.contact-nav):not(.lang-switch)::after{
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;
+  bottom:-7px !important;
+  width:0 !important;
+  height:1px !important;
+  background:#fff !important;
+  transition:width .22s ease !important;
+}
+.nav-links>a:not(.contact-nav):not(.lang-switch):hover,
+.nav-links>a.active{
+  color:#fff !important;
+}
+.nav-links>a:not(.contact-nav):not(.lang-switch):hover::after,
+.nav-links>a.active:not(.contact-nav):not(.lang-switch)::after{
+  width:100% !important;
+}
+.contact-nav{
+  padding:9px 15px !important;
+  border:1px solid rgba(255,255,255,.25) !important;
+  border-radius:999px !important;
+  color:#fff !important;
+  transition:.2s ease !important;
+}
+.contact-nav:hover,
+.contact-nav:focus-visible,
+.contact-nav:active{
+  background:#fff !important;
+  color:#07101b !important;
+  border-color:#fff !important;
+  outline:none !important;
+}
+.lang-switch{
+  width:38px !important;
+  height:38px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  border:1px solid rgba(255,255,255,.20) !important;
+  border-radius:50% !important;
+  color:#b7c0ca !important;
+}
+.lang-switch:hover{
+  background:rgba(255,255,255,.08) !important;
+  color:#fff !important;
+}
+
+/* Exact bottom proportions used by About */
+.bottom{
+  padding:80px var(--page) 40px !important;
+  background:#fff !important;
+  color:#07101b !important;
+  border-top:1px solid #dde2e8 !important;
+}
+.contact-block{
+  width:min(var(--site-max),100%) !important;
+  margin:0 auto !important;
+  padding-bottom:66px !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:flex-end !important;
+  gap:50px !important;
+  border-bottom:1px solid #dde2e8 !important;
+}
+.section-label{
+  font-size:10px !important;
+  font-weight:600 !important;
+  letter-spacing:.13em !important;
+  text-transform:uppercase !important;
+  color:#6f8196 !important;
+}
+.contact-copy h3{
+  margin:14px 0 0 !important;
+  font-family:Manrope,sans-serif !important;
+  font-size:clamp(42px,5vw,72px) !important;
+  line-height:1 !important;
+  letter-spacing:-.055em !important;
+  font-weight:500 !important;
+}
+.contact-links{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:10px !important;
+}
+.contact-link{
+  padding:11px 16px !important;
+  border:1px solid rgba(11,13,16,.18) !important;
+  border-radius:999px !important;
+  color:#07101b !important;
+  font-size:10px !important;
+  font-weight:600 !important;
+  letter-spacing:.05em !important;
+  text-transform:uppercase !important;
+  transition:.2s ease !important;
+}
+.contact-link:hover{
+  background:#05070a !important;
+  color:#fff !important;
+  border-color:#05070a !important;
+}
+.footer{
+  width:min(var(--site-max),100%) !important;
+  margin:0 auto !important;
+  padding-top:30px !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  gap:20px !important;
+  color:#727b86 !important;
+  font-size:9px !important;
+  letter-spacing:.07em !important;
+  text-transform:uppercase !important;
+  background:transparent !important;
+  border:0 !important;
+}
+
+@media(max-width:760px){
+  .bottom{
+    padding:64px 20px 34px !important;
+  }
+  .contact-block{
+    padding-bottom:48px !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:34px !important;
+  }
+  .footer{
+    padding-top:26px !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:8px !important;
+  }
+  .contact-nav{
+    padding:8px 10px !important;
+  }
+  .lang-switch{
+    width:34px !important;
+    height:34px !important;
+  }
+}
+</style>
+
+
+<style id="blog-v8-final-polish">
+/* =========================================================
+   BLOG V8 — final card polish + themes strip
+   ========================================================= */
+
+/* Remove the odd title underline from previous hover treatment */
+.lead-card h2 a::after{
+  display:none !important;
+  content:none !important;
+}
+
+/* Main feature: subtle, card-level hover */
+.lead-card{
+  cursor:pointer !important;
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease !important;
+}
+.lead-card:hover{
+  transform:translateY(-3px) !important;
+  box-shadow:0 16px 34px rgba(10,18,28,.08) !important;
+  border-color:#cfd7de !important;
+}
+.lead-image{
+  overflow:hidden !important;
+}
+.lead-image img{
+  transition:transform .32s ease !important;
+  object-position:center 42% !important;
+}
+.lead-card:hover .lead-image img{
+  transform:scale(1.018) !important;
+}
+
+/* Side cards: clearer interaction without decorative noise */
+.side-card{
+  cursor:pointer !important;
+  transition:transform .22s ease, box-shadow .22s ease !important;
+}
+.side-card:hover{
+  transform:translateY(-3px) !important;
+  box-shadow:0 14px 28px rgba(5,7,10,.14) !important;
+}
+.side-card::after{
+  display:none !important;
+  content:none !important;
+}
+.side-card .side-image img{
+  transition:transform .3s ease, filter .3s ease !important;
+}
+.side-card:hover .side-image img{
+  transform:scale(1.025) !important;
+  filter:brightness(.65) !important;
+}
+.side-card h3{
+  transition:transform .2s ease !important;
+}
+.side-card:hover h3{
+  transform:translateX(2px) !important;
+}
+
+/* Better image crops */
+.side-stack .side-card:nth-child(1) .side-image img{
+  object-position:center 42% !important; /* lowsignal */
+}
+.side-stack .side-card:nth-child(2) .side-image img{
+  object-position:center 38% !important; /* Tether */
+}
+.side-stack .side-card:nth-child(3) .side-image img{
+  object-position:center 18% !important; /* AI Week */
+}
+
+/* A light editorial strip: useful, but not another giant section */
+.blog-themes{
+  background:#fff;
+  padding:0 var(--page) 92px;
+}
+.blog-themes-inner{
+  max-width:var(--max);
+  margin:0 auto;
+  border-top:1px solid var(--line);
+}
+.blog-themes-head{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  padding:24px 0 34px;
+}
+.blog-themes-label{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:#718091;
+}
+.blog-themes-copy{
+  max-width:520px;
+  margin:0;
+  color:#7a8590;
+  font-size:12px;
+  line-height:1.6;
+}
+.blog-themes-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line);
+  border-left:1px solid var(--line);
+}
+.blog-theme{
+  min-height:180px;
+  padding:24px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.blog-theme span{
+  display:block;
+  font-size:9px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#7890a8;
+}
+.blog-theme h3{
+  margin:42px 0 0;
+  font:500 24px/1.05 Manrope,sans-serif;
+  letter-spacing:-.045em;
+}
+.blog-theme p{
+  margin:12px 0 0;
+  color:#7a8590;
+  font-size:12px;
+  line-height:1.55;
+}
+
+/* Keep card layout clean on tablet/mobile */
+@media(max-width:1050px){
+  .lead-card:hover,
+  .side-card:hover{
+    transform:none !important;
+  }
+  .blog-themes-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+@media(max-width:760px){
+  .lead-card{
+    border-radius:14px !important;
+  }
+  .lead-image{
+    height:300px !important;
+  }
+  .side-card{
+    min-height:250px !important;
+  }
+  .side-copy h3{
+    font-size:23px !important;
+  }
+  .side-stack .side-card:nth-child(3) .side-image img{
+    object-position:center 16% !important;
+  }
+  .blog-themes{
+    padding:0 20px 72px;
+  }
+  .blog-themes-head{
+    flex-direction:column;
+    gap:12px;
+  }
+  .blog-themes-grid{
+    grid-template-columns:1fr;
+  }
+  .blog-theme{
+    min-height:150px;
+    padding:22px;
+  }
+  .blog-theme h3{
+    margin-top:34px;
+  }
+}
+</style>
+
+
+<style id="blog-v9-dark-themes">
+/* BLOG V9 — dark editorial themes section */
+.blog-themes{
+  background:#05070a !important;
+  color:#fff !important;
+  padding:86px var(--page) 92px !important;
+}
+.blog-themes-inner{
+  max-width:var(--max) !important;
+  margin:0 auto !important;
+  border-top:1px solid rgba(255,255,255,.10) !important;
+}
+.blog-themes-head{
+  padding:24px 0 34px !important;
+}
+.blog-themes-label{
+  color:#63aaff !important;
+}
+.blog-themes-copy{
+  color:#919ca8 !important;
+}
+.blog-themes-grid{
+  border-top:1px solid rgba(255,255,255,.10) !important;
+  border-left:1px solid rgba(255,255,255,.10) !important;
+}
+.blog-theme{
+  border-right:1px solid rgba(255,255,255,.10) !important;
+  border-bottom:1px solid rgba(255,255,255,.10) !important;
+  background:transparent !important;
+}
+.blog-theme span{
+  color:#7fb7ef !important;
+}
+.blog-theme h3{
+  color:#f7f8fa !important;
+}
+.blog-theme p{
+  color:#8e99a5 !important;
+}
+
+/* keep separation into the white contact/footer area */
+.blog-themes + .bottom{
+  border-top:0 !important;
+}
+
+@media(max-width:760px){
+  .blog-themes{
+    padding:68px 20px 72px !important;
+  }
+}
+</style>
+
+
+<style id="blog-v10-fullwidth-parity">
+/* =========================================================
+   BLOG V10 — full-width section geometry + exact footer feel
+   ========================================================= */
+
+/* Use the same page gutters as the rest of the site.
+   No centered max-width box inside the sections. */
+.blog-hero-inner,
+.editorial-inner,
+.blog-themes-inner,
+.contact-block,
+.footer{
+  width:100% !important;
+  max-width:none !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
+}
+
+/* Hero */
+.blog-hero{
+  padding-left:var(--page) !important;
+  padding-right:var(--page) !important;
+}
+.blog-hero-inner{
+  grid-template-columns:minmax(0,1.15fr) minmax(340px,.65fr) !important;
+  gap:clamp(56px,7vw,130px) !important;
+}
+
+/* Featured content */
+.editorial{
+  padding-left:var(--page) !important;
+  padding-right:var(--page) !important;
+}
+.editorial-inner{
+  width:100% !important;
+}
+.editorial-grid{
+  width:100% !important;
+  grid-template-columns:minmax(0,1.35fr) minmax(360px,.65fr) !important;
+}
+
+/* Dark themes section */
+.blog-themes{
+  padding-left:var(--page) !important;
+  padding-right:var(--page) !important;
+}
+.blog-themes-inner{
+  width:100% !important;
+}
+
+/* Exact contact/footer width: same gutter-to-gutter line as other pages */
+.bottom{
+  padding-left:var(--page) !important;
+  padding-right:var(--page) !important;
+}
+.contact-block{
+  width:100% !important;
+}
+.footer{
+  width:100% !important;
+}
+
+/* Buttons: lighter typography, closer to other site sections */
+.contact-link{
+  font-weight:500 !important;
+  letter-spacing:.04em !important;
+  padding:11px 18px !important;
+}
+.contact-link:hover{
+  font-weight:500 !important;
+}
+
+/* Footer type is also slightly lighter */
+.footer{
+  font-weight:400 !important;
+}
+
+/* Keep the card grid visually balanced on wide screens */
+@media(min-width:1500px){
+  .lead-image{
+    height:560px !important;
+  }
+  .side-card{
+    min-height:0 !important;
+  }
+}
+
+@media(max-width:1050px){
+  .blog-hero-inner{
+    grid-template-columns:1fr !important;
+    gap:28px !important;
+  }
+  .editorial-grid{
+    grid-template-columns:1fr !important;
+  }
+}
+
+@media(max-width:760px){
+  .blog-hero,
+  .editorial,
+  .blog-themes,
+  .bottom{
+    padding-left:20px !important;
+    padding-right:20px !important;
+  }
+  .contact-link{
+    font-size:9px !important;
+    padding:10px 14px !important;
+  }
+}
+</style>
+
+
+<style id="blog-v11-margin-parity">
+/* =========================================================
+   BLOG V11 — exact shared geometry
+   Same 5vw page gutter + 1520px content system as About.
+   ========================================================= */
+
+:root{
+  --page:5vw !important;
+  --max:1520px !important;
+}
+
+/* Main sections: same centered content width used across the site */
+.blog-hero-inner,
+.editorial-inner,
+.blog-themes-inner{
+  width:min(var(--max),100%) !important;
+  max-width:var(--max) !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+/* Bottom: restore EXACT About geometry */
+.bottom{
+  padding:80px var(--page) 40px !important;
+  background:#fff !important;
+  color:#0b0f14 !important;
+  border-top:1px solid #dde2e8 !important;
+}
+.contact-block{
+  width:min(var(--max),100%) !important;
+  max-width:var(--max) !important;
+  margin:0 auto !important;
+  padding-bottom:66px !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:flex-end !important;
+  gap:50px !important;
+  border-bottom:1px solid #dde2e8 !important;
+}
+.contact-copy h3{
+  margin:14px 0 0 !important;
+  font-family:Manrope,sans-serif !important;
+  font-size:clamp(42px,5vw,72px) !important;
+  line-height:1 !important;
+  letter-spacing:-.055em !important;
+  font-weight:500 !important;
+}
+.contact-links{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:10px !important;
+}
+.contact-link{
+  padding:11px 16px !important;
+  border:1px solid rgba(11,13,16,.18) !important;
+  border-radius:999px !important;
+  font-size:10px !important;
+  font-weight:600 !important;
+  letter-spacing:.05em !important;
+  text-transform:uppercase !important;
+  transition:background .2s ease,color .2s ease,border-color .2s ease !important;
+}
+.contact-link:hover{
+  background:#05070a !important;
+  color:#fff !important;
+  border-color:#05070a !important;
+}
+.footer{
+  width:min(var(--max),100%) !important;
+  max-width:var(--max) !important;
+  margin:0 auto !important;
+  padding-top:30px !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  gap:20px !important;
+  color:#727b86 !important;
+  font-size:9px !important;
+  font-weight:400 !important;
+  letter-spacing:.07em !important;
+  text-transform:uppercase !important;
+  background:transparent !important;
+  border:0 !important;
+}
+
+/* Keep the featured area aligned to exactly the same content edges */
+.editorial-grid,
+.top-label{
+  width:100% !important;
+}
+
+/* Dark themes section aligns to the same left/right rails */
+.blog-themes-inner{
+  border-top:1px solid rgba(255,255,255,.10) !important;
+}
+
+/* Mobile = exact shared 24px system from About */
+@media(max-width:760px){
+  :root{
+    --page:24px !important;
+  }
+
+  .blog-hero,
+  .editorial,
+  .blog-themes,
+  .bottom{
+    padding-left:var(--page) !important;
+    padding-right:var(--page) !important;
+  }
+
+  .bottom{
+    padding-top:64px !important;
+    padding-bottom:34px !important;
+  }
+
+  .contact-block{
+    padding-bottom:48px !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:34px !important;
+  }
+
+  .footer{
+    padding-top:26px !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:8px !important;
+  }
+}
+</style>
+
+</head><body>
+
+<header class="nav">
+  <a class="brand" href="/">Felipe Quiroz</a>
+  <nav class="nav-links">
+    <a href="/#work">Trabajo</a>
+    <a href="/about">Sobre mí</a>
+    <a href="/now">Ahora</a>
+    <a href="/blog" class="active">Blog</a>
+    <a href="/#contact" class="contact-nav">Contacto</a>
+    <a href="/blog" class="lang-switch">EN</a>
+  </nav>
+</header>
+<main>
+<section class="blog-hero"><div class="blog-hero-inner">
+<div><div class="blog-kicker">Blog</div><h1>Ideas sobre cómo construir mejor.</h1></div>
+<p>Producto, startups, IA, growth y operaciones. Reflexiones cortas desde cosas que estoy construyendo, probando o aprendiendo.</p>
+</div></section>
+
+<section class="editorial"><div class="editorial-inner">
+<div class="top-label"><span>Destacado</span><span>2026</span></div>
+<div class="editorial-grid">
+<article class="lead-card">
+  <a class="lead-image" href="/es/blog/ai-native-core"><img src="/images/platanus-event.jpg" alt=""></a>
+  <div class="lead-meta">IA / Producto</div>
+  <h2><a href="/es/blog/ai-native-core">El próximo salto de producto se construye con IA en el core</a></h2>
+  <p>Lo que dejó AI Native Startups: pasar de experimentar con IA a incorporarla como parte real de la infraestructura de producto y negocio.</p>
+</article>
+<div class="side-stack">
+        <article class="side-card">
+          <a class="side-image" href="/es/blog/building-lowsignal"><img src="/images/lowsignal-founders.jpg" alt=""></a>
+          <div class="side-copy"><small>Startups / Construcción de empresa</small>
+          <h3><a href="/es/blog/building-lowsignal">Lo que construir lowsignal me enseñó sobre empezar antes de estar listo</a></h3>
+          <p>No construyes claridad primero y después empiezas. Empiezas, vendes, ejecutas, aprendes y conviertes lo que funciona en un sistema.</p></div>
+        </article>
+        <article class="side-card">
+          <a class="side-image" href="/es/blog/edtech-startup-scale"><img src="/images/tether-edtech-scale.jpg" alt=""></a>
+          <div class="side-copy"><small>Startups / Educación</small>
+          <h3><a href="/es/blog/edtech-startup-scale">Lo que construir una startup edtech me enseñó sobre escalar</a></h3>
+          <p>Escalar no es solo crecer. Es lograr que producto, adopción, partnerships y operación sigan funcionando cuando el contexto cambia.</p></div>
+        </article>
+        <article class="side-card">
+          <a class="side-image" href="/es/blog/ai-leaves-the-demo"><img src="/images/felipe-ecosystem-team.jpg" alt=""></a>
+          <div class="side-copy"><small>IA / Startups</small>
+          <h3><a href="/es/blog/ai-leaves-the-demo">Cómo se ve la IA cuando deja de ser una demo</a></h3>
+          <p>AI Week Chile puso el foco en algo más interesante que la promesa tecnológica: cómo la IA ya está cambiando crecimiento, eficiencia y ejecución.</p></div>
+        </article></div>
+</div>
+
+</div></section>
+</main>
+
+
+
+
+<section class="blog-themes">
+  <div class="blog-themes-inner">
+    <div class="blog-themes-head">
+      <div class="blog-themes-label">Sobre qué escribo</div>
+      <p class="blog-themes-copy">Ideas cortas desde cosas que estoy construyendo, probando o aprendiendo en el camino.</p>
+    </div>
+    <div class="blog-themes-grid">
+      <article class="blog-theme">
+        <span>01 / Producto</span>
+        <h3>Construir cerca del problema.</h3>
+        <p>Decisiones de producto, adopción y cómo convertir complejidad real en sistemas más claros.</p>
+      </article>
+      <article class="blog-theme">
+        <span>02 / IA</span>
+        <h3>De la demo al workflow.</h3>
+        <p>Cómo la IA empieza a generar valor cuando entra en productos y operaciones reales.</p>
+      </article>
+      <article class="blog-theme">
+        <span>03 / Startups</span>
+        <h3>Aprender construyendo.</h3>
+        <p>Company building, posicionamiento, ventas, sistemas y lo que cambia cuando empiezas antes de estar listo.</p>
+      </article>
+      <article class="blog-theme">
+        <span>04 / Operaciones</span>
+        <h3>Diseñar para ejecutar mejor.</h3>
+        <p>Procesos, leverage y las capas que conectan una buena estrategia con resultados reales.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="bottom" id="contact">
+  <div class="contact-block">
+    <div class="contact-copy">
+      <div class="section-label">Contacto</div>
+      <h3>Conversemos.</h3>
+    </div>
+    <div class="contact-links">
+      <a class="contact-link" href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="contact-link" href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a class="contact-link" href="mailto:felipe@lowsignal.cl">Email</a>
+    </div>
+  </div>
+  <footer class="footer">
+    <div>© 2026 Felipe Quiroz</div>
+    <div>Santiago / CL</div>
+  </footer>
+</section>
+
+
+</body></html>
