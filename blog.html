@@ -540,6 +540,434 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 }
 </style>
 
+
+<style id="blog-v6-hero-and-aiweek-image">
+/* BLOG V6 — simpler hero label + better AI Week crop */
+
+/* Hero: keep it simple */
+.blog-kicker{
+  letter-spacing:.14em !important;
+}
+
+/* AI Week is the third card in the right-hand stack.
+   Bias the crop upward so faces remain visible. */
+.side-stack .side-card:nth-child(3) .side-image img{
+  object-position:50% 24% !important;
+}
+
+/* Give this specific card a touch more image presence */
+.side-stack .side-card:nth-child(3) .side-copy{
+  background:
+    linear-gradient(
+      to top,
+      rgba(5,7,10,.82) 0%,
+      rgba(5,7,10,.24) 48%,
+      rgba(5,7,10,.02) 100%
+    ) !important;
+}
+
+@media(max-width:1050px){
+  .side-stack .side-card:nth-child(3) .side-image img{
+    object-position:50% 22% !important;
+  }
+}
+
+@media(max-width:760px){
+  .side-stack .side-card:nth-child(3){
+    min-height:275px !important;
+  }
+  .side-stack .side-card:nth-child(3) .side-image img{
+    object-position:50% 20% !important;
+  }
+}
+</style>
+
+
+<style id="blog-v7-exact-site-bottom">
+/* BLOG V7 — exact About/Now footer + navbar parity */
+:root{
+  --site-max:1520px;
+}
+
+/* Exact navbar interactions */
+.nav-links>a{
+  position:relative !important;
+  color:#bcc4ce !important;
+  transition:.2s ease !important;
+}
+.nav-links>a:not(.contact-nav):not(.lang-switch)::after{
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;
+  bottom:-7px !important;
+  width:0 !important;
+  height:1px !important;
+  background:#fff !important;
+  transition:width .22s ease !important;
+}
+.nav-links>a:not(.contact-nav):not(.lang-switch):hover,
+.nav-links>a.active{
+  color:#fff !important;
+}
+.nav-links>a:not(.contact-nav):not(.lang-switch):hover::after,
+.nav-links>a.active:not(.contact-nav):not(.lang-switch)::after{
+  width:100% !important;
+}
+.contact-nav{
+  padding:9px 15px !important;
+  border:1px solid rgba(255,255,255,.25) !important;
+  border-radius:999px !important;
+  color:#fff !important;
+  transition:.2s ease !important;
+}
+.contact-nav:hover,
+.contact-nav:focus-visible,
+.contact-nav:active{
+  background:#fff !important;
+  color:#07101b !important;
+  border-color:#fff !important;
+  outline:none !important;
+}
+.lang-switch{
+  width:38px !important;
+  height:38px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  border:1px solid rgba(255,255,255,.20) !important;
+  border-radius:50% !important;
+  color:#b7c0ca !important;
+}
+.lang-switch:hover{
+  background:rgba(255,255,255,.08) !important;
+  color:#fff !important;
+}
+
+/* Exact bottom proportions used by About */
+.bottom{
+  padding:80px var(--page) 40px !important;
+  background:#fff !important;
+  color:#07101b !important;
+  border-top:1px solid #dde2e8 !important;
+}
+.contact-block{
+  width:min(var(--site-max),100%) !important;
+  margin:0 auto !important;
+  padding-bottom:66px !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:flex-end !important;
+  gap:50px !important;
+  border-bottom:1px solid #dde2e8 !important;
+}
+.section-label{
+  font-size:10px !important;
+  font-weight:600 !important;
+  letter-spacing:.13em !important;
+  text-transform:uppercase !important;
+  color:#6f8196 !important;
+}
+.contact-copy h3{
+  margin:14px 0 0 !important;
+  font-family:Manrope,sans-serif !important;
+  font-size:clamp(42px,5vw,72px) !important;
+  line-height:1 !important;
+  letter-spacing:-.055em !important;
+  font-weight:500 !important;
+}
+.contact-links{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:10px !important;
+}
+.contact-link{
+  padding:11px 16px !important;
+  border:1px solid rgba(11,13,16,.18) !important;
+  border-radius:999px !important;
+  color:#07101b !important;
+  font-size:10px !important;
+  font-weight:600 !important;
+  letter-spacing:.05em !important;
+  text-transform:uppercase !important;
+  transition:.2s ease !important;
+}
+.contact-link:hover{
+  background:#05070a !important;
+  color:#fff !important;
+  border-color:#05070a !important;
+}
+.footer{
+  width:min(var(--site-max),100%) !important;
+  margin:0 auto !important;
+  padding-top:30px !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  gap:20px !important;
+  color:#727b86 !important;
+  font-size:9px !important;
+  letter-spacing:.07em !important;
+  text-transform:uppercase !important;
+  background:transparent !important;
+  border:0 !important;
+}
+
+@media(max-width:760px){
+  .bottom{
+    padding:64px 20px 34px !important;
+  }
+  .contact-block{
+    padding-bottom:48px !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:34px !important;
+  }
+  .footer{
+    padding-top:26px !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:8px !important;
+  }
+  .contact-nav{
+    padding:8px 10px !important;
+  }
+  .lang-switch{
+    width:34px !important;
+    height:34px !important;
+  }
+}
+</style>
+
+
+<style id="blog-v8-final-polish">
+/* =========================================================
+   BLOG V8 — final card polish + themes strip
+   ========================================================= */
+
+/* Remove the odd title underline from previous hover treatment */
+.lead-card h2 a::after{
+  display:none !important;
+  content:none !important;
+}
+
+/* Main feature: subtle, card-level hover */
+.lead-card{
+  cursor:pointer !important;
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease !important;
+}
+.lead-card:hover{
+  transform:translateY(-3px) !important;
+  box-shadow:0 16px 34px rgba(10,18,28,.08) !important;
+  border-color:#cfd7de !important;
+}
+.lead-image{
+  overflow:hidden !important;
+}
+.lead-image img{
+  transition:transform .32s ease !important;
+  object-position:center 42% !important;
+}
+.lead-card:hover .lead-image img{
+  transform:scale(1.018) !important;
+}
+
+/* Side cards: clearer interaction without decorative noise */
+.side-card{
+  cursor:pointer !important;
+  transition:transform .22s ease, box-shadow .22s ease !important;
+}
+.side-card:hover{
+  transform:translateY(-3px) !important;
+  box-shadow:0 14px 28px rgba(5,7,10,.14) !important;
+}
+.side-card::after{
+  display:none !important;
+  content:none !important;
+}
+.side-card .side-image img{
+  transition:transform .3s ease, filter .3s ease !important;
+}
+.side-card:hover .side-image img{
+  transform:scale(1.025) !important;
+  filter:brightness(.65) !important;
+}
+.side-card h3{
+  transition:transform .2s ease !important;
+}
+.side-card:hover h3{
+  transform:translateX(2px) !important;
+}
+
+/* Better image crops */
+.side-stack .side-card:nth-child(1) .side-image img{
+  object-position:center 42% !important; /* lowsignal */
+}
+.side-stack .side-card:nth-child(2) .side-image img{
+  object-position:center 38% !important; /* Tether */
+}
+.side-stack .side-card:nth-child(3) .side-image img{
+  object-position:center 18% !important; /* AI Week */
+}
+
+/* A light editorial strip: useful, but not another giant section */
+.blog-themes{
+  background:#fff;
+  padding:0 var(--page) 92px;
+}
+.blog-themes-inner{
+  max-width:var(--max);
+  margin:0 auto;
+  border-top:1px solid var(--line);
+}
+.blog-themes-head{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  padding:24px 0 34px;
+}
+.blog-themes-label{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:#718091;
+}
+.blog-themes-copy{
+  max-width:520px;
+  margin:0;
+  color:#7a8590;
+  font-size:12px;
+  line-height:1.6;
+}
+.blog-themes-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line);
+  border-left:1px solid var(--line);
+}
+.blog-theme{
+  min-height:180px;
+  padding:24px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.blog-theme span{
+  display:block;
+  font-size:9px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#7890a8;
+}
+.blog-theme h3{
+  margin:42px 0 0;
+  font:500 24px/1.05 Manrope,sans-serif;
+  letter-spacing:-.045em;
+}
+.blog-theme p{
+  margin:12px 0 0;
+  color:#7a8590;
+  font-size:12px;
+  line-height:1.55;
+}
+
+/* Keep card layout clean on tablet/mobile */
+@media(max-width:1050px){
+  .lead-card:hover,
+  .side-card:hover{
+    transform:none !important;
+  }
+  .blog-themes-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+@media(max-width:760px){
+  .lead-card{
+    border-radius:14px !important;
+  }
+  .lead-image{
+    height:300px !important;
+  }
+  .side-card{
+    min-height:250px !important;
+  }
+  .side-copy h3{
+    font-size:23px !important;
+  }
+  .side-stack .side-card:nth-child(3) .side-image img{
+    object-position:center 16% !important;
+  }
+  .blog-themes{
+    padding:0 20px 72px;
+  }
+  .blog-themes-head{
+    flex-direction:column;
+    gap:12px;
+  }
+  .blog-themes-grid{
+    grid-template-columns:1fr;
+  }
+  .blog-theme{
+    min-height:150px;
+    padding:22px;
+  }
+  .blog-theme h3{
+    margin-top:34px;
+  }
+}
+</style>
+
+
+<style id="blog-v9-dark-themes">
+/* BLOG V9 — dark editorial themes section */
+.blog-themes{
+  background:#05070a !important;
+  color:#fff !important;
+  padding:86px var(--page) 92px !important;
+}
+.blog-themes-inner{
+  max-width:var(--max) !important;
+  margin:0 auto !important;
+  border-top:1px solid rgba(255,255,255,.10) !important;
+}
+.blog-themes-head{
+  padding:24px 0 34px !important;
+}
+.blog-themes-label{
+  color:#63aaff !important;
+}
+.blog-themes-copy{
+  color:#919ca8 !important;
+}
+.blog-themes-grid{
+  border-top:1px solid rgba(255,255,255,.10) !important;
+  border-left:1px solid rgba(255,255,255,.10) !important;
+}
+.blog-theme{
+  border-right:1px solid rgba(255,255,255,.10) !important;
+  border-bottom:1px solid rgba(255,255,255,.10) !important;
+  background:transparent !important;
+}
+.blog-theme span{
+  color:#7fb7ef !important;
+}
+.blog-theme h3{
+  color:#f7f8fa !important;
+}
+.blog-theme p{
+  color:#8e99a5 !important;
+}
+
+/* keep separation into the white contact/footer area */
+.blog-themes + .bottom{
+  border-top:0 !important;
+}
+
+@media(max-width:760px){
+  .blog-themes{
+    padding:68px 20px 72px !important;
+  }
+}
+</style>
+
 </head><body>
 
 <header class="nav">
@@ -555,7 +983,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 </header>
 <main>
 <section class="blog-hero"><div class="blog-hero-inner">
-<div><div class="blog-kicker">Blog / Felipe Quiroz</div><h1>Ideas on building better.</h1></div>
+<div><div class="blog-kicker">Blog</div><h1>Ideas on building better.</h1></div>
 <p>Product, startups, AI, growth and operations. Short reflections from things I’m building, testing or learning.</p>
 </div></section>
 
@@ -593,22 +1021,56 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 </main>
 
 
-<section class="site-bottom" id="contact">
-  <div class="site-contact-block">
-    <div class="site-contact-copy">
-      <div class="site-contact-label">Contact</div>
-      <h3>Let’s talk.</h3>
+
+
+<section class="blog-themes">
+  <div class="blog-themes-inner">
+    <div class="blog-themes-head">
+      <div class="blog-themes-label">What I write about</div>
+      <p class="blog-themes-copy">Short ideas from things I’m building, testing or learning along the way.</p>
     </div>
-    <div class="site-contact-links">
-      <a class="site-contact-link" href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a class="site-contact-link" href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a class="site-contact-link" href="mailto:felipe@lowsignal.cl">Email</a>
+    <div class="blog-themes-grid">
+      <article class="blog-theme">
+        <span>01 / Product</span>
+        <h3>Build close to the problem.</h3>
+        <p>Product decisions, adoption and turning real-world complexity into clearer systems.</p>
+      </article>
+      <article class="blog-theme">
+        <span>02 / AI</span>
+        <h3>From demo to workflow.</h3>
+        <p>How AI starts creating value when it enters real products and operations.</p>
+      </article>
+      <article class="blog-theme">
+        <span>03 / Startups</span>
+        <h3>Learn by building.</h3>
+        <p>Company building, positioning, sales, systems and what changes when you start before you’re ready.</p>
+      </article>
+      <article class="blog-theme">
+        <span>04 / Operations</span>
+        <h3>Design for better execution.</h3>
+        <p>Processes, leverage and the layers that connect good strategy with real outcomes.</p>
+      </article>
     </div>
   </div>
-  <footer class="site-footer">
+</section>
+
+<section class="bottom" id="contact">
+  <div class="contact-block">
+    <div class="contact-copy">
+      <div class="section-label">Contact</div>
+      <h3>Let’s talk.</h3>
+    </div>
+    <div class="contact-links">
+      <a class="contact-link" href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="contact-link" href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a class="contact-link" href="mailto:felipe@lowsignal.cl">Email</a>
+    </div>
+  </div>
+  <footer class="footer">
     <div>© 2026 Felipe Quiroz</div>
     <div>Santiago / CL</div>
   </footer>
 </section>
+
 
 </body></html>
