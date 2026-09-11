@@ -1,0 +1,1059 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What building lowsignal taught me about starting before you’re ready | Felipe Quiroz</title>
+<meta name="theme-color" content="#05070a">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --dark:#05070a;--ink:#07101b;--muted:#67727d;--line:#dfe4e8;
+  --ice:#eef1f4;--blue:#63aaff;--page:5vw;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:Inter,sans-serif}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover}
+
+.nav{
+  position:sticky;top:0;z-index:1000;min-height:84px;padding:0 var(--page);
+  display:flex;align-items:center;justify-content:space-between;gap:30px;
+  background:var(--dark);border-bottom:1px solid rgba(255,255,255,.08)
+}
+.brand{color:#fff;font:600 17px/1 Manrope;letter-spacing:-.04em;white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:30px;color:#bcc4ce;font-size:10px;font-weight:500;letter-spacing:.07em;text-transform:uppercase}
+.nav-links>a{position:relative;transition:.2s ease}
+.nav-links>a:not(.contact-nav):not(.lang-switch)::after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:1px;background:#fff;transition:width .22s ease}
+.nav-links>a:not(.contact-nav):not(.lang-switch):hover,.nav-links>a.active{color:#fff}
+.nav-links>a:not(.contact-nav):not(.lang-switch):hover::after,.nav-links>a.active::after{width:100%}
+.contact-nav{padding:9px 15px;border:1px solid rgba(255,255,255,.25);border-radius:999px;color:#fff!important;transition:.2s ease}
+.contact-nav:hover{background:#fff;color:var(--ink)!important;border-color:#fff}
+.lang-switch{width:38px;height:38px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.2);border-radius:50%;color:#b7c0ca}
+.lang-switch:hover{background:rgba(255,255,255,.08);color:#fff}
+
+.article-head{
+  padding:92px var(--page) 64px;
+  background:linear-gradient(180deg,#edf4fa 0%,#f7f9fb 100%);
+  border-bottom:1px solid #e1e7ed
+}
+.article-head-inner{width:100%;max-width:none;margin:0}
+.breadcrumb{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#66819b}
+.article-head h1{
+  margin:30px 0 24px;max-width:1180px;
+  font:400 clamp(58px,6.8vw,104px)/.97 Manrope;letter-spacing:-.067em
+}
+.dek{max-width:780px;color:#64717d;font-size:17px;line-height:1.7}
+.author-line{
+  margin-top:40px;padding-top:22px;border-top:1px solid #d5e0e8;
+  display:flex;justify-content:space-between;align-items:center;gap:24px
+}
+.author{display:flex;align-items:center;gap:12px}
+.author img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+.author strong{display:block;font-size:12px}
+.author span{display:block;margin-top:4px;color:#7a8590;font-size:10px}
+.article-meta{color:#7a8590;font-size:10px}
+
+.hero{padding:42px var(--page) 72px;background:#fff}
+.hero-frame{height:min(68vw,760px);min-height:500px;border-radius:20px;overflow:hidden;background:#e2e6ea}
+.hero-frame img{object-position:center 46%}
+.hero-caption{margin-top:10px;color:#89939c;font-size:10px}
+
+.article{padding:0 var(--page) 110px}
+.article-grid{display:grid;grid-template-columns:220px minmax(0,720px);gap:76px;justify-content:center}
+.toc{position:sticky;top:112px;align-self:start}
+.toc-label{margin-bottom:18px;color:#7d8791;font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+.toc a{display:block;margin-bottom:14px;color:#66727d;font-size:12px;line-height:1.45}
+.toc a:hover{color:#07101b}
+.prose{color:#596571;font-size:17px;line-height:1.82}
+.prose .lead{color:#1b2733;font-size:21px;line-height:1.68}
+.prose p{margin:0 0 24px}
+.prose h2{margin:56px 0 18px;color:#07101b;font:500 32px/1.12 Manrope;letter-spacing:-.043em}
+blockquote{margin:40px 0;padding-left:22px;border-left:3px solid var(--blue);color:#1f2d3a;font:400 28px/1.34 Manrope;letter-spacing:-.032em}
+.callout{margin:36px 0;padding:24px 26px;border:1px solid #dce6ee;border-radius:16px;background:#f2f6fa}
+.callout span{display:block;margin-bottom:9px;color:#6482a0;font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+.callout p{margin:0;color:#31404f;font-size:15px;line-height:1.7}
+
+.article-nav{
+  padding:0 var(--page) 96px;
+}
+.article-nav-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.article-nav .project-link{
+  display:block;
+  min-height:160px;
+  padding:34px 0;
+  transition:padding .2s ease;
+}
+.article-nav .project-link.left{
+  padding-right:40px;
+  border-right:1px solid var(--line);
+}
+.article-nav .project-link.right{
+  padding-left:40px;
+  text-align:right;
+}
+.article-nav .project-link.left:hover{
+  padding-left:10px;
+  padding-right:30px;
+}
+.article-nav .project-link.right:hover{
+  padding-left:30px;
+  padding-right:10px;
+}
+.article-nav .project-link-label{
+  margin-bottom:12px;
+  color:#728090;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.article-nav .project-link strong{
+  display:block;
+  margin:0;
+  font:500 28px/1.08 Manrope, sans-serif;
+  letter-spacing:-.04em;
+  color:var(--ink);
+  max-width:560px;
+}
+.article-nav .project-link.right strong{
+  margin-left:auto;
+}
+
+
+.bottom{padding:78px 0 34px;background:#fff;border-top:1px solid #dde2e8}
+.contact-block{
+  margin:0 5vw;padding-bottom:62px;display:flex;justify-content:space-between;align-items:flex-end;gap:50px
+}
+.section-label{margin-bottom:16px;color:#6f8196;font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase}
+.contact-copy h3{margin:0;font:400 clamp(42px,5vw,72px)/1 Manrope;letter-spacing:-.055em}
+.contact-links{display:flex;flex-wrap:wrap;gap:10px}
+.contact-link{padding:10px 15px;border:1px solid rgba(7,16,27,.16);border-radius:999px;font-size:10px;font-weight:500;letter-spacing:.045em;text-transform:uppercase;transition:.2s ease}
+.contact-link:hover{background:#05070a;color:#fff;border-color:#05070a}
+.footer{width:100%;padding:28px 5vw 0;border-top:1px solid #dfe4e8;display:flex;justify-content:space-between;color:#727b86;font-size:9px;font-weight:400;letter-spacing:.07em;text-transform:uppercase}
+
+@media(max-width:900px){
+  .article-grid{grid-template-columns:170px minmax(0,1fr);gap:44px}
+}
+@media(max-width:760px){
+  :root{--page:20px}
+  .nav{min-height:auto;padding:18px 20px 16px;flex-direction:column;align-items:flex-start;gap:14px}
+  .nav-links{width:100%;justify-content:space-between;gap:8px;font-size:8px}
+  .contact-nav{padding:8px 10px} .lang-switch{width:34px;height:34px}
+  .article-head{padding:62px 20px 46px}
+  .article-head h1{font-size:clamp(48px,13.5vw,66px);line-height:1}
+  .dek{font-size:15px} .author-line{align-items:flex-start;flex-direction:column}
+  .hero{padding:24px 0 54px} .hero-frame{height:330px;min-height:0;border-radius:0} .hero-caption{padding:0 20px}
+  .article{padding:0 20px 80px}
+  .article-grid{display:block}
+  .toc{position:static;padding-bottom:20px;margin-bottom:34px;border-bottom:1px solid var(--line)}
+  .prose{font-size:16px;line-height:1.76} .prose .lead{font-size:19px} .prose h2{font-size:29px;margin-top:48px}
+  blockquote{font-size:24px}
+  .article-nav{padding:0 20px 72px}
+  .article-nav-inner{grid-template-columns:1fr}
+  .back-card{border-right:0;border-bottom:1px solid var(--line);padding-right:0}
+  .next-card{padding-left:0}
+  .bottom{padding-top:60px;padding-bottom:30px}
+  .contact-block{margin:0 20px;padding-bottom:44px;flex-direction:column;align-items:flex-start;gap:32px}
+  .footer{padding:24px 20px 0;flex-direction:column;align-items:flex-start;gap:8px}
+}
+</style>
+
+<style id="article-nav-case-parity">
+/* Article navigation aligned with case-study project navigation */
+.article-nav{
+  padding:0 !important;
+  background:#eef1f4 !important;
+  border-top:1px solid #d9dfe5 !important;
+  border-bottom:1px solid #d9dfe5 !important;
+}
+
+.article-nav-inner{
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  width:100% !important;
+  margin:0 !important;
+  border:0 !important;
+}
+
+.back-card,
+.next-card{
+  min-height:160px !important;
+  padding:34px 5vw 38px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  background:transparent !important;
+  transition:background .22s ease,color .22s ease !important;
+}
+
+.back-card{
+  border-right:1px solid #d9dfe5 !important;
+}
+
+.next-card{
+  text-align:right !important;
+  align-items:flex-end !important;
+}
+
+.article-nav small{
+  display:block !important;
+  color:#8290a0 !important;
+  font-size:9px !important;
+  font-weight:600 !important;
+  letter-spacing:.12em !important;
+  text-transform:uppercase !important;
+  transition:color .22s ease !important;
+}
+
+.article-nav h3{
+  margin:18px 0 0 !important;
+  max-width:620px !important;
+  font:400 clamp(28px,2.5vw,40px)/1.08 Manrope,sans-serif !important;
+  letter-spacing:-.045em !important;
+  color:#07101b !important;
+  text-decoration:none !important;
+  transition:color .22s ease,transform .22s ease !important;
+}
+
+/* Same hover language as the case-study navigation */
+.back-card:hover,
+.next-card:hover{
+  background:#05070a !important;
+}
+
+.back-card:hover small,
+.next-card:hover small{
+  color:#8fb9e6 !important;
+}
+
+.back-card:hover h3,
+.next-card:hover h3{
+  color:#fff !important;
+  text-decoration:none !important;
+}
+
+.back-card:hover h3{
+  transform:translateX(4px) !important;
+}
+
+.next-card:hover h3{
+  transform:translateX(-4px) !important;
+}
+
+.back-card:focus-visible,
+.next-card:focus-visible{
+  outline:2px solid #07101b !important;
+  outline-offset:-2px !important;
+}
+
+@media(max-width:760px){
+  .article-nav-inner{
+    grid-template-columns:1fr !important;
+  }
+
+  .back-card,
+  .next-card{
+    min-height:132px !important;
+    padding:28px 20px 30px !important;
+    text-align:left !important;
+    align-items:flex-start !important;
+  }
+
+  .back-card{
+    border-right:0 !important;
+    border-bottom:1px solid #d9dfe5 !important;
+  }
+
+  .article-nav h3{
+    font-size:30px !important;
+    margin-top:14px !important;
+  }
+
+  .back-card:hover h3,
+  .next-card:hover h3{
+    transform:none !important;
+  }
+}
+</style>
+
+
+<style id="article-nav-tether-exact">
+/* =========================================================
+   ARTICLE NAV — exact Tether case interaction
+   ========================================================= */
+
+.article-nav{
+  padding:0 5vw 0 !important;
+  background:#eef1f4 !important;
+  border-top:0 !important;
+  border-bottom:1px solid #d9dfe5 !important;
+}
+
+.article-nav-inner{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+  padding:42px 0 !important;
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  gap:40px !important;
+  border:0 !important;
+}
+
+/* Same project-link treatment as Tether:
+   only a top rule + slight directional movement on hover */
+.back-card,
+.next-card{
+  min-height:auto !important;
+  padding:16px 0 0 !important;
+  display:block !important;
+  border-top:1px solid #d9dfe5 !important;
+  border-right:0 !important;
+  border-bottom:0 !important;
+  background:transparent !important;
+  transition:padding .2s ease !important;
+}
+
+.back-card{
+  text-align:left !important;
+}
+
+.next-card{
+  margin-left:auto !important;
+  text-align:right !important;
+  align-items:initial !important;
+}
+
+/* Exact hover behavior: no black fill, no inversion */
+.back-card:hover{
+  padding-left:10px !important;
+  background:transparent !important;
+}
+
+.next-card:hover{
+  padding-left:0 !important;
+  padding-right:10px !important;
+  background:transparent !important;
+}
+
+.article-nav small{
+  display:block !important;
+  margin-bottom:8px !important;
+  color:#8290a0 !important;
+  font-size:8px !important;
+  font-weight:600 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+  transition:none !important;
+}
+
+.article-nav h3{
+  margin:0 !important;
+  max-width:none !important;
+  font-family:Manrope,sans-serif !important;
+  font-size:20px !important;
+  font-weight:500 !important;
+  line-height:1.15 !important;
+  letter-spacing:-.03em !important;
+  color:#182536 !important;
+  text-decoration:none !important;
+  transform:none !important;
+  transition:none !important;
+}
+
+/* Cancel previous v2 hover overrides completely */
+.back-card:hover small,
+.next-card:hover small{
+  color:#8290a0 !important;
+}
+
+.back-card:hover h3,
+.next-card:hover h3{
+  color:#182536 !important;
+  text-decoration:none !important;
+  transform:none !important;
+}
+
+.back-card:focus-visible,
+.next-card:focus-visible{
+  outline:2px solid #182536 !important;
+  outline-offset:3px !important;
+}
+
+@media(max-width:760px){
+  .article-nav{
+    padding-left:20px !important;
+    padding-right:20px !important;
+  }
+
+  .article-nav-inner{
+    grid-template-columns:1fr !important;
+    gap:28px !important;
+    padding:36px 0 !important;
+  }
+
+  .back-card,
+  .next-card{
+    width:100% !important;
+    text-align:left !important;
+    margin-left:0 !important;
+  }
+
+  .next-card:hover{
+    padding-right:0 !important;
+    padding-left:10px !important;
+  }
+}
+</style>
+
+
+<style id="article-v4-type-avatar-polish">
+/* =========================================================
+   ARTICLE V4 — typography + author portrait polish
+   ========================================================= */
+
+html{
+  -webkit-font-smoothing:antialiased !important;
+  -moz-osx-font-smoothing:grayscale !important;
+}
+
+body{
+  font-family:Inter, sans-serif !important;
+  font-weight:400 !important;
+}
+
+/* Author portrait: crop into the face, not the torso */
+.author-avatar{
+  width:46px !important;
+  height:46px !important;
+  flex:0 0 46px !important;
+  display:block !important;
+  overflow:hidden !important;
+  border-radius:50% !important;
+  background:#dfe4e8 !important;
+}
+
+.author-avatar img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:50% 18% !important;
+  transform:scale(1.55) !important;
+  transform-origin:50% 22% !important;
+  border-radius:0 !important;
+}
+
+/* Author metadata closer to the case-study typography */
+.author{
+  gap:13px !important;
+}
+
+.author strong{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.25 !important;
+  font-weight:600 !important;
+  letter-spacing:-.015em !important;
+  color:#07101b !important;
+}
+
+.author span{
+  margin-top:4px !important;
+  font-family:Inter,sans-serif !important;
+  font-size:10px !important;
+  line-height:1.35 !important;
+  font-weight:400 !important;
+  letter-spacing:0 !important;
+  color:#7a8590 !important;
+}
+
+.article-meta{
+  font-family:Inter,sans-serif !important;
+  font-size:9px !important;
+  line-height:1.4 !important;
+  font-weight:500 !important;
+  letter-spacing:.045em !important;
+  color:#7a8590 !important;
+}
+
+/* Editorial labels */
+.breadcrumb,
+.toc-label,
+.callout span{
+  font-family:Inter,sans-serif !important;
+  font-weight:600 !important;
+}
+
+/* Main title = same light editorial feeling as the rest of the site */
+.article-head h1{
+  font-family:Manrope,sans-serif !important;
+  font-weight:400 !important;
+  letter-spacing:-.064em !important;
+}
+
+/* Intro and article copy: remove the slightly heavy feel */
+.dek{
+  font-family:Inter,sans-serif !important;
+  font-weight:400 !important;
+  font-size:16px !important;
+  line-height:1.72 !important;
+}
+
+.prose{
+  font-family:Inter,sans-serif !important;
+  font-size:16px !important;
+  line-height:1.78 !important;
+  font-weight:400 !important;
+  letter-spacing:-.005em !important;
+  color:#5e6974 !important;
+}
+
+.prose .lead{
+  font-family:Inter,sans-serif !important;
+  font-size:19px !important;
+  line-height:1.68 !important;
+  font-weight:400 !important;
+  letter-spacing:-.012em !important;
+  color:#1b2733 !important;
+}
+
+.prose h2{
+  font-family:Manrope,sans-serif !important;
+  font-size:32px !important;
+  line-height:1.12 !important;
+  font-weight:400 !important;
+  letter-spacing:-.043em !important;
+  color:#07101b !important;
+}
+
+blockquote{
+  font-family:Manrope,sans-serif !important;
+  font-weight:400 !important;
+}
+
+/* Navigation titles remain exactly in the Tether system */
+.article-nav h3{
+  font-family:Manrope,sans-serif !important;
+  font-weight:500 !important;
+}
+
+@media(max-width:760px){
+  .author-avatar{
+    width:44px !important;
+    height:44px !important;
+    flex-basis:44px !important;
+  }
+
+  .prose{
+    font-size:15.5px !important;
+    line-height:1.76 !important;
+  }
+
+  .prose .lead{
+    font-size:18px !important;
+  }
+
+  .prose h2{
+    font-size:29px !important;
+  }
+}
+</style>
+
+
+<style id="article-nav-v5-exact-box">
+/* =========================================================
+   ARTICLE NAV V5 — match case-study project navigation box
+   ========================================================= */
+
+.article-nav{
+  padding:0 5vw 96px !important;
+  background:#eef1f4 !important;
+  border:0 !important;
+}
+
+.article-nav-inner{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+  padding:0 !important;
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  gap:0 !important;
+  border-top:1px solid #d9dfe5 !important;
+  border-bottom:1px solid #d9dfe5 !important;
+}
+
+.back-card,
+.next-card{
+  min-height:160px !important;
+  padding:34px 0 36px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  background:transparent !important;
+  border:0 !important;
+  transition:padding .2s ease !important;
+}
+
+.back-card{
+  text-align:left !important;
+  align-items:flex-start !important;
+  border-right:1px solid #d9dfe5 !important;
+}
+
+.next-card{
+  text-align:right !important;
+  align-items:flex-end !important;
+  margin-left:0 !important;
+}
+
+.article-nav small{
+  display:block !important;
+  margin:0 0 10px !important;
+  color:#8290a0 !important;
+  font-family:Inter,sans-serif !important;
+  font-size:9px !important;
+  line-height:1.2 !important;
+  font-weight:600 !important;
+  letter-spacing:.10em !important;
+  text-transform:uppercase !important;
+}
+
+.article-nav h3{
+  margin:0 !important;
+  max-width:90% !important;
+  color:#07101b !important;
+  font-family:Manrope,sans-serif !important;
+  font-size:clamp(28px,2.2vw,40px) !important;
+  line-height:1.08 !important;
+  font-weight:400 !important;
+  letter-spacing:-.045em !important;
+  text-decoration:none !important;
+  transform:none !important;
+}
+
+/* Same subtle directional hover as the case studies */
+.back-card:hover{
+  padding-left:10px !important;
+  background:transparent !important;
+}
+
+.next-card:hover{
+  padding-right:10px !important;
+  background:transparent !important;
+}
+
+.back-card:hover small,
+.next-card:hover small{
+  color:#8290a0 !important;
+}
+
+.back-card:hover h3,
+.next-card:hover h3{
+  color:#07101b !important;
+  text-decoration:none !important;
+  transform:none !important;
+}
+
+@media(max-width:760px){
+  .article-nav{
+    padding:0 20px 72px !important;
+  }
+
+  .article-nav-inner{
+    grid-template-columns:1fr !important;
+  }
+
+  .back-card,
+  .next-card{
+    min-height:132px !important;
+    padding:28px 0 30px !important;
+    text-align:left !important;
+    align-items:flex-start !important;
+  }
+
+  .back-card{
+    border-right:0 !important;
+    border-bottom:1px solid #d9dfe5 !important;
+  }
+
+  .next-card:hover{
+    padding-right:0 !important;
+    padding-left:10px !important;
+  }
+
+  .article-nav h3{
+    max-width:100% !important;
+    font-size:30px !important;
+  }
+}
+</style>
+
+
+<style id="article-v8-site-parity">
+/* =========================================================
+   ARTICLE V8 — exact Low/Tether navbar + project-nav behavior
+   ========================================================= */
+
+/* NAVBAR — same system as Low / Tether */
+.nav{
+  position:sticky !important;
+  top:0 !important;
+  z-index:1000 !important;
+  min-height:84px !important;
+  padding:0 var(--page) !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:30px !important;
+  background:rgba(5,7,10,.94) !important;
+  border-bottom:1px solid rgba(255,255,255,.08) !important;
+  backdrop-filter:blur(18px) !important;
+  -webkit-backdrop-filter:blur(18px) !important;
+}
+
+.brand{
+  font-family:Manrope,sans-serif !important;
+  font-size:17px !important;
+  font-weight:600 !important;
+  letter-spacing:-.04em !important;
+  color:#fff !important;
+  white-space:nowrap !important;
+}
+
+.nav-links{
+  display:flex !important;
+  align-items:center !important;
+  gap:30px !important;
+  font-size:10px !important;
+  font-weight:500 !important;
+  letter-spacing:.07em !important;
+  text-transform:uppercase !important;
+}
+
+.nav-links>a{
+  position:relative !important;
+  color:#bcc4ce !important;
+  transition:.2s ease !important;
+}
+
+.nav-links>a:not(.contact-nav):not(.lang-switch)::after{
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;
+  bottom:-7px !important;
+  width:0 !important;
+  height:1px !important;
+  background:#fff !important;
+  transition:width .22s ease !important;
+}
+
+.nav-links>a:not(.contact-nav):not(.lang-switch):hover,
+.nav-links>a.active{
+  color:#fff !important;
+}
+
+.nav-links>a:not(.contact-nav):not(.lang-switch):hover::after,
+.nav-links>a.active:not(.contact-nav):not(.lang-switch)::after{
+  width:100% !important;
+}
+
+.contact-nav{
+  padding:9px 15px !important;
+  border:1px solid rgba(255,255,255,.25) !important;
+  border-radius:999px !important;
+  color:#fff !important;
+  transition:.22s ease !important;
+}
+
+.contact-nav:hover,
+.contact-nav:focus-visible,
+.contact-nav:active{
+  background:#fff !important;
+  color:#07101b !important;
+  border-color:#fff !important;
+  outline:none !important;
+}
+
+.lang-switch{
+  width:38px !important;
+  height:38px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  border:1px solid rgba(255,255,255,.20) !important;
+  border-radius:50% !important;
+  color:#b7c0ca !important;
+  font-size:9px !important;
+  font-weight:600 !important;
+  letter-spacing:.06em !important;
+}
+
+.lang-switch:hover{
+  background:rgba(255,255,255,.08) !important;
+  color:#fff !important;
+}
+
+/* PROJECT NAV — same visible behavior as Low / Tether */
+.article-nav{
+  padding:74px var(--page) !important;
+  background:#eef1f4 !important;
+  color:#07101b !important;
+  border-bottom:1px solid var(--line) !important;
+}
+
+.article-nav-inner{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  border-top:1px solid var(--line) !important;
+  border-bottom:1px solid var(--line) !important;
+}
+
+.article-nav .project-link{
+  min-height:158px !important;
+  padding:28px 0 !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  transition:.2s ease !important;
+  background:transparent !important;
+}
+
+.article-nav .project-link:first-child{
+  padding-right:30px !important;
+  border-right:0 !important;
+  text-align:left !important;
+  align-items:flex-start !important;
+}
+
+.article-nav .project-link:last-child{
+  padding-left:30px !important;
+  border-left:1px solid var(--line) !important;
+  text-align:right !important;
+  align-items:flex-end !important;
+}
+
+/* exact hover language from Low/Tether */
+.article-nav .project-link:hover{
+  background:#fff !important;
+  padding-left:18px !important;
+  padding-right:18px !important;
+}
+
+.article-nav .project-link-label{
+  margin-bottom:8px !important;
+  color:#85919f !important;
+  font-family:Inter,sans-serif !important;
+  font-size:9px !important;
+  font-weight:700 !important;
+  letter-spacing:.1em !important;
+  text-transform:uppercase !important;
+}
+
+.article-nav .project-link strong{
+  display:block !important;
+  margin-top:8px !important;
+  max-width:620px !important;
+  font-family:Manrope,sans-serif !important;
+  font-size:28px !important;
+  line-height:1.08 !important;
+  font-weight:500 !important;
+  letter-spacing:-.04em !important;
+  color:#07101b !important;
+}
+
+/* cancel older nav-card hover leftovers */
+.article-nav .project-link:hover strong{
+  color:#07101b !important;
+  transform:none !important;
+  text-decoration:none !important;
+}
+
+@media(max-width:760px){
+  .nav{
+    min-height:auto !important;
+    padding:18px 20px 16px !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:14px !important;
+  }
+
+  .nav-links{
+    width:100% !important;
+    justify-content:space-between !important;
+    gap:8px !important;
+    font-size:8px !important;
+  }
+
+  .contact-nav{
+    padding:8px 10px !important;
+  }
+
+  .lang-switch{
+    width:34px !important;
+    height:34px !important;
+  }
+
+  .article-nav{
+    padding:56px 20px !important;
+  }
+
+  .article-nav-inner{
+    grid-template-columns:1fr !important;
+  }
+
+  .article-nav .project-link{
+    min-height:132px !important;
+    padding:24px 0 !important;
+  }
+
+  .article-nav .project-link:first-child{
+    padding-right:0 !important;
+    border-bottom:1px solid var(--line) !important;
+  }
+
+  .article-nav .project-link:last-child{
+    padding-left:0 !important;
+    border-left:0 !important;
+    text-align:left !important;
+    align-items:flex-start !important;
+  }
+
+  .article-nav .project-link:hover{
+    padding-left:14px !important;
+    padding-right:14px !important;
+  }
+
+  .article-nav .project-link strong{
+    font-size:26px !important;
+    max-width:100% !important;
+  }
+}
+</style>
+
+
+<style id="article-v9-avatar-tighten">
+/* Slightly tighter author portrait crop */
+.author-avatar{
+  width:48px !important;
+  height:48px !important;
+  flex:0 0 48px !important;
+}
+
+.author-avatar img{
+  object-fit:cover !important;
+  object-position:50% 6% !important;
+  transform:scale(1.46) !important;
+  transform-origin:50% 10% !important;
+}
+</style>
+
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="/">Felipe Quiroz</a>
+  <nav class="nav-links">
+    <a href="/#work">Work</a>
+    <a href="/about">About</a>
+    <a href="/now">Now</a>
+    <a href="/blog" class="active">Blog</a>
+    <a href="#contact" class="contact-nav">Contact</a>
+    <a href="/es/blog/building-lowsignal" class="lang-switch">ES</a>
+  </nav>
+</header>
+
+<main>
+<section class="article-head">
+  <div class="article-head-inner">
+    <div class="breadcrumb">Blog / Startups / Company Building</div>
+    <h1>What building lowsignal taught me about starting before you’re ready</h1>
+    <p class="dek">You do not build clarity first and then start. You start, sell, deliver, learn and turn what works into a system.</p>
+
+    <div class="author-line">
+      <div class="author">
+        <span class="author-avatar"><img src="/felipe-portrait.jpg" alt="Felipe Quiroz"></span>
+        <div>
+          <strong>Felipe Quiroz</strong>
+          <span>Product, Growth & Operations</span>
+        </div>
+      </div>
+      <div class="article-meta">2026 · Santiago, Chile</div>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="hero-frame">
+    <img src="/images/lowsignal-founders.jpg" alt="What building lowsignal taught me about starting before you’re ready">
+  </div>
+  <div class="hero-caption">lowsignal · Santiago, Chile</div>
+</section>
+
+<section class="article">
+  <div class="article-grid">
+    <aside class="toc">
+      <div class="toc-label">In this note</div>
+      <a href="#start">01 / Start before everything is clear</a>
+      <a href="#sell">02 / Selling and delivering are one system</a>
+      <a href="#systems">03 / Systems create leverage</a>
+      <a href="#evolve">04 / The company changes as you learn</a>
+    </aside>
+    <article class="prose">
+      <p class="lead">Building lowsignal from zero has been a good way to learn something that sounds obvious but is hard to internalize: at the beginning, almost nothing is completely clear.</p>
+<p>You do not have perfect positioning, the final offer or every process solved. You have hypotheses, and the only way to sharpen them is to put them into the world.</p>
+<h2 id="start">01 / Start before everything is clear</h2><p>Waiting until everything is ready is an elegant way not to start. Early on, selling, building and delivering are also discovery mechanisms.</p>
+<h2 id="sell">02 / Selling and delivering are one system</h2><p>Sales and delivery cannot grow as separate worlds. If you sell something that is hard to execute, growth creates more noise than value.</p>
+<div class="callout"><small>Company building</small><p>A strong offer should not only be easy to sell. It also has to be repeatable, measurable and operable.</p></div>
+<h2 id="systems">03 / Systems create leverage</h2><p>As clients, projects and people increase, memory stops being a sufficient operating tool. Processes, roles, automation and better handoffs start to matter.</p>
+<h2 id="evolve">04 / The company changes as you learn</h2><p>lowsignal has also taught me that positioning, offer and operations evolve together. What you sell changes as you get clearer about where you create the most value.</p>
+<blockquote>You don’t find clarity and then build. You build your way into clarity.</blockquote>
+    </article>
+  </div>
+</section>
+
+<section class="article-nav">
+  <div class="article-nav-inner">
+    <a class="project-link left" href="/blog/ai-native-core">
+      <div class="project-link-label">Previous article</div>
+      <strong>The next product leap is built with AI at the core</strong>
+    </a>
+    <a class="project-link right" href="/blog/edtech-startup-scale">
+      <div class="project-link-label">Next article</div>
+      <strong>What building an edtech startup taught me about scale</strong>
+    </a>
+  </div>
+</section>
+</main>
+
+<section class="bottom" id="contact">
+  <div class="contact-block">
+    <div class="contact-copy">
+      <div class="section-label">Contact</div>
+      <h3>Let’s talk.</h3>
+    </div>
+    <div class="contact-links">
+      <a class="contact-link" href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="contact-link" href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a class="contact-link" href="mailto:felipe@lowsignal.cl">Email</a>
+    </div>
+  </div>
+  <footer class="footer">
+    <span>© 2026 Felipe Quiroz</span>
+    <span>Santiago / CL</span>
+  </footer>
+</section>
+</body>
+</html>
