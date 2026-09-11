@@ -968,6 +968,250 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 }
 </style>
 
+
+<style id="blog-v10-fullwidth-parity">
+/* =========================================================
+   BLOG V10 — full-width section geometry + exact footer feel
+   ========================================================= */
+
+/* Use the same page gutters as the rest of the site.
+   No centered max-width box inside the sections. */
+.blog-hero-inner,
+.editorial-inner,
+.blog-themes-inner,
+.contact-block,
+.footer{
+  width:100% !important;
+  max-width:none !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
+}
+
+/* Hero */
+.blog-hero{
+  padding-left:var(--page) !important;
+  padding-right:var(--page) !important;
+}
+.blog-hero-inner{
+  grid-template-columns:minmax(0,1.15fr) minmax(340px,.65fr) !important;
+  gap:clamp(56px,7vw,130px) !important;
+}
+
+/* Featured content */
+.editorial{
+  padding-left:var(--page) !important;
+  padding-right:var(--page) !important;
+}
+.editorial-inner{
+  width:100% !important;
+}
+.editorial-grid{
+  width:100% !important;
+  grid-template-columns:minmax(0,1.35fr) minmax(360px,.65fr) !important;
+}
+
+/* Dark themes section */
+.blog-themes{
+  padding-left:var(--page) !important;
+  padding-right:var(--page) !important;
+}
+.blog-themes-inner{
+  width:100% !important;
+}
+
+/* Exact contact/footer width: same gutter-to-gutter line as other pages */
+.bottom{
+  padding-left:var(--page) !important;
+  padding-right:var(--page) !important;
+}
+.contact-block{
+  width:100% !important;
+}
+.footer{
+  width:100% !important;
+}
+
+/* Buttons: lighter typography, closer to other site sections */
+.contact-link{
+  font-weight:500 !important;
+  letter-spacing:.04em !important;
+  padding:11px 18px !important;
+}
+.contact-link:hover{
+  font-weight:500 !important;
+}
+
+/* Footer type is also slightly lighter */
+.footer{
+  font-weight:400 !important;
+}
+
+/* Keep the card grid visually balanced on wide screens */
+@media(min-width:1500px){
+  .lead-image{
+    height:560px !important;
+  }
+  .side-card{
+    min-height:0 !important;
+  }
+}
+
+@media(max-width:1050px){
+  .blog-hero-inner{
+    grid-template-columns:1fr !important;
+    gap:28px !important;
+  }
+  .editorial-grid{
+    grid-template-columns:1fr !important;
+  }
+}
+
+@media(max-width:760px){
+  .blog-hero,
+  .editorial,
+  .blog-themes,
+  .bottom{
+    padding-left:20px !important;
+    padding-right:20px !important;
+  }
+  .contact-link{
+    font-size:9px !important;
+    padding:10px 14px !important;
+  }
+}
+</style>
+
+
+<style id="blog-v11-margin-parity">
+/* =========================================================
+   BLOG V11 — exact shared geometry
+   Same 5vw page gutter + 1520px content system as About.
+   ========================================================= */
+
+:root{
+  --page:5vw !important;
+  --max:1520px !important;
+}
+
+/* Main sections: same centered content width used across the site */
+.blog-hero-inner,
+.editorial-inner,
+.blog-themes-inner{
+  width:min(var(--max),100%) !important;
+  max-width:var(--max) !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+/* Bottom: restore EXACT About geometry */
+.bottom{
+  padding:80px var(--page) 40px !important;
+  background:#fff !important;
+  color:#0b0f14 !important;
+  border-top:1px solid #dde2e8 !important;
+}
+.contact-block{
+  width:min(var(--max),100%) !important;
+  max-width:var(--max) !important;
+  margin:0 auto !important;
+  padding-bottom:66px !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:flex-end !important;
+  gap:50px !important;
+  border-bottom:1px solid #dde2e8 !important;
+}
+.contact-copy h3{
+  margin:14px 0 0 !important;
+  font-family:Manrope,sans-serif !important;
+  font-size:clamp(42px,5vw,72px) !important;
+  line-height:1 !important;
+  letter-spacing:-.055em !important;
+  font-weight:500 !important;
+}
+.contact-links{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:10px !important;
+}
+.contact-link{
+  padding:11px 16px !important;
+  border:1px solid rgba(11,13,16,.18) !important;
+  border-radius:999px !important;
+  font-size:10px !important;
+  font-weight:600 !important;
+  letter-spacing:.05em !important;
+  text-transform:uppercase !important;
+  transition:background .2s ease,color .2s ease,border-color .2s ease !important;
+}
+.contact-link:hover{
+  background:#05070a !important;
+  color:#fff !important;
+  border-color:#05070a !important;
+}
+.footer{
+  width:min(var(--max),100%) !important;
+  max-width:var(--max) !important;
+  margin:0 auto !important;
+  padding-top:30px !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  gap:20px !important;
+  color:#727b86 !important;
+  font-size:9px !important;
+  font-weight:400 !important;
+  letter-spacing:.07em !important;
+  text-transform:uppercase !important;
+  background:transparent !important;
+  border:0 !important;
+}
+
+/* Keep the featured area aligned to exactly the same content edges */
+.editorial-grid,
+.top-label{
+  width:100% !important;
+}
+
+/* Dark themes section aligns to the same left/right rails */
+.blog-themes-inner{
+  border-top:1px solid rgba(255,255,255,.10) !important;
+}
+
+/* Mobile = exact shared 24px system from About */
+@media(max-width:760px){
+  :root{
+    --page:24px !important;
+  }
+
+  .blog-hero,
+  .editorial,
+  .blog-themes,
+  .bottom{
+    padding-left:var(--page) !important;
+    padding-right:var(--page) !important;
+  }
+
+  .bottom{
+    padding-top:64px !important;
+    padding-bottom:34px !important;
+  }
+
+  .contact-block{
+    padding-bottom:48px !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:34px !important;
+  }
+
+  .footer{
+    padding-top:26px !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:8px !important;
+  }
+}
+</style>
+
 </head><body>
 
 <header class="nav">
