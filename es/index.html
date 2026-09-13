@@ -3144,6 +3144,259 @@ header.nav{
 }
 </style>
 
+
+<style id="home-latest-writing">
+/* =========================================================
+   HOME / LATEST WRITING
+   ========================================================= */
+.home-writing{
+  padding:118px var(--page-gutter) 124px !important;
+  background:#fff;
+  border-top:1px solid var(--line);
+}
+
+.home-writing-inner{
+  width:min(var(--page-max),100%);
+  margin:0 auto;
+}
+
+.home-writing-head{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(300px,.62fr);
+  gap:64px;
+  align-items:end;
+  margin-bottom:42px;
+}
+
+.home-writing-head h2{
+  margin:16px 0 0;
+  max-width:9ch;
+  color:var(--ink);
+  font:500 clamp(50px,5vw,78px)/.98 Manrope,sans-serif;
+  letter-spacing:-.055em;
+}
+
+.home-writing-head-side{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:22px;
+}
+
+.home-writing-head-side p{
+  margin:0;
+  max-width:520px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.75;
+}
+
+.home-writing-all{
+  color:var(--ink);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+
+.home-writing-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.25fr) minmax(340px,.75fr);
+  gap:20px;
+}
+
+.home-writing-feature,
+.home-writing-side-card{
+  position:relative;
+  overflow:hidden;
+  background:#070a0e;
+  color:#fff;
+  text-decoration:none;
+}
+
+.home-writing-feature{
+  min-height:630px;
+  border-radius:22px;
+}
+
+.home-writing-side{
+  display:grid;
+  grid-template-rows:1fr 1fr;
+  gap:20px;
+}
+
+.home-writing-side-card{
+  min-height:305px;
+  border-radius:20px;
+}
+
+.home-writing-feature img,
+.home-writing-side-card img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .55s cubic-bezier(.2,.7,.2,1);
+}
+
+.home-writing-feature::after,
+.home-writing-side-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(3,6,10,.90) 0%,
+    rgba(3,6,10,.58) 36%,
+    rgba(3,6,10,.20) 72%,
+    rgba(3,6,10,.10) 100%
+  );
+}
+
+.home-writing-feature:hover img,
+.home-writing-side-card:hover img{
+  transform:scale(1.025);
+}
+
+.home-writing-card-copy{
+  position:absolute;
+  z-index:2;
+  left:32px;
+  right:32px;
+  bottom:30px;
+}
+
+.home-writing-feature .home-writing-card-copy{
+  left:38px;
+  right:38px;
+  bottom:38px;
+}
+
+.home-writing-meta{
+  display:block;
+  margin-bottom:12px;
+  color:#c9d4df;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+.home-writing-feature h3,
+.home-writing-side-card h3{
+  margin:0;
+  color:#fff;
+  font-family:Manrope,sans-serif;
+  font-weight:500;
+  letter-spacing:-.045em;
+}
+
+.home-writing-feature h3{
+  max-width:12ch;
+  font-size:clamp(42px,4.1vw,66px);
+  line-height:1.01;
+}
+
+.home-writing-side-card h3{
+  max-width:16ch;
+  font-size:clamp(28px,2.25vw,38px);
+  line-height:1.04;
+}
+
+.home-writing-read{
+  display:inline-block;
+  margin-top:20px;
+  color:#fff;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+
+@media(max-width:980px){
+  .home-writing-head{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  .home-writing-head h2{
+    max-width:11ch;
+  }
+
+  .home-writing-grid{
+    grid-template-columns:1fr;
+  }
+
+  .home-writing-feature{
+    min-height:520px;
+  }
+
+  .home-writing-side{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:auto;
+  }
+
+  .home-writing-side-card{
+    min-height:320px;
+  }
+}
+
+@media(max-width:760px){
+  .home-writing{
+    padding:82px var(--page-gutter) 88px !important;
+  }
+
+  .home-writing-head{
+    margin-bottom:28px;
+  }
+
+  .home-writing-head h2{
+    margin-top:12px;
+    font-size:46px;
+  }
+
+  .home-writing-head-side{
+    gap:16px;
+  }
+
+  .home-writing-grid{
+    gap:14px;
+  }
+
+  .home-writing-feature{
+    min-height:430px;
+    border-radius:18px;
+  }
+
+  .home-writing-side{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .home-writing-side-card{
+    min-height:300px;
+    border-radius:18px;
+  }
+
+  .home-writing-card-copy,
+  .home-writing-feature .home-writing-card-copy{
+    left:22px;
+    right:22px;
+    bottom:22px;
+  }
+
+  .home-writing-feature h3{
+    font-size:38px;
+  }
+
+  .home-writing-side-card h3{
+    font-size:30px;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="nav">
@@ -3321,6 +3574,58 @@ header.nav{
   <div class="now-inner">
     <div><div class="section-label">Ahora</div><h2>Construyendo<br><span>lo que viene.</span></h2><p class="now-copy">Me gusta trabajar cerca del problema, convertir ambigüedad en sistemas, productos y modelos operativos que los equipos realmente puedan usar.</p></div>
     <a class="now-link" href="/es/now">Ver en qué estoy trabajando ↗</a>
+  </div>
+</section>
+
+
+<section class="home-writing" aria-labelledby="home-writing-title">
+  <div class="home-writing-inner">
+
+    <div class="home-writing-head">
+      <div>
+        <div class="section-label">Últimas ideas</div>
+        <h2 id="home-writing-title">Ideas desde lo que construyo.</h2>
+      </div>
+
+      <div class="home-writing-head-side">
+        <p>Producto, startups, IA, growth y operaciones. Notas desde cosas que he construido, probado y aprendido en el camino.</p>
+        <a class="home-writing-all" href="/es/blog">Explorar el blog ↗</a>
+      </div>
+    </div>
+
+    <div class="home-writing-grid">
+
+      <a class="home-writing-feature" href="/es/blog/ai-native-core">
+        <img src="/images/platanus-event.jpg" alt="Evento AI Native Startups" loading="lazy">
+        <div class="home-writing-card-copy">
+          <span class="home-writing-meta">IA / Producto</span>
+          <h3>El próximo salto de producto se construye con IA en el core</h3>
+          <span class="home-writing-read">Leer artículo →</span>
+        </div>
+      </a>
+
+      <div class="home-writing-side">
+
+        <a class="home-writing-side-card" href="/es/blog/partnerships-infrastructure">
+          <img src="/images/tethered-kiri-partnerships-2025.png" alt="TetherEd y Fundación Kiri" loading="lazy">
+          <div class="home-writing-card-copy">
+            <span class="home-writing-meta">Partnerships / Startups</span>
+            <h3>Partnerships no es solo cerrar alianzas</h3>
+            <span class="home-writing-read">Leer artículo →</span>
+          </div>
+        </a>
+
+        <a class="home-writing-side-card" href="/es/blog/ai-leaves-the-demo">
+          <img src="/images/ai-leaves-the-demo-diio-2025.jpg" alt="Felipe Quiroz junto al equipo de DiiO" loading="lazy">
+          <div class="home-writing-card-copy">
+            <span class="home-writing-meta">IA / Startups</span>
+            <h3>Cómo se ve la IA cuando deja de ser una demo</h3>
+            <span class="home-writing-read">Leer artículo →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
   </div>
 </section>
 
