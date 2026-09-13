@@ -1,8 +1,10 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Blog | Felipe Quiroz</title><link rel="icon" href="/favicon.png"><meta name="theme-color" content="#05070a">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Blog — Felipe Quiroz</title><link href="/favicon.png" rel="icon"/><meta content="#05070a" name="theme-color"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <style>
 :root{--dark:#05070a;--ink:#07101b;--paper:#f6f7f8;--muted:#6d7883;--line:#dfe4e8;--blue:#63aaff;--page:5vw;--max:1240px}
 *{box-sizing:border-box}
@@ -265,8 +267,6 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   }
 }
 </style>
-
-
 <style id="blog-v4-shared-site-parity">
 /* =========================================================
    BLOG V4 — Shared site parity
@@ -420,8 +420,6 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   }
 }
 </style>
-
-
 <style id="blog-v5-card-interactions">
 /* BLOG V5 — cleaner metadata + obvious click affordance */
 
@@ -539,8 +537,6 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   }
 }
 </style>
-
-
 <style id="blog-v6-hero-and-aiweek-image">
 /* BLOG V6 — simpler hero label + better AI Week crop */
 
@@ -581,8 +577,6 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   }
 }
 </style>
-
-
 <style id="blog-v7-exact-site-bottom">
 /* BLOG V7 — exact About/Now footer + navbar parity */
 :root{
@@ -736,8 +730,6 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   }
 }
 </style>
-
-
 <style id="blog-v8-final-polish">
 /* =========================================================
    BLOG V8 — final card polish + themes strip
@@ -914,8 +906,6 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   }
 }
 </style>
-
-
 <style id="blog-v9-dark-themes">
 /* BLOG V9 — dark editorial themes section */
 .blog-themes{
@@ -967,8 +957,6 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   }
 }
 </style>
-
-
 <style id="blog-v10-fullwidth-parity">
 /* =========================================================
    BLOG V10 — full-width section geometry + exact footer feel
@@ -1080,8 +1068,6 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   }
 }
 </style>
-
-
 <style id="blog-v11-margin-parity">
 /* =========================================================
    BLOG V11 — exact shared geometry
@@ -1211,8 +1197,6 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   }
 }
 </style>
-
-
 <style id="blog-v12-home-parity">
 /* =========================================================
    BLOG V12 — align geometry with Home / main site system
@@ -1357,8 +1341,6 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   }
 }
 </style>
-
-
 <style id="blog-v13-edge-to-edge">
 /* BLOG V13 — edge-to-edge section geometry */
 .blog-hero-inner,
@@ -1375,6 +1357,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 /* Keep only the shared outer gutter; no centered inner box */
 .blog-hero,
 .editorial,
+.article-archive,
 .blog-themes,
 .bottom{
   width:100% !important;
@@ -1405,8 +1388,6 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   }
 }
 </style>
-
-
 <style id="blog-v14-true-edge-parity">
 /* =========================================================
    BLOG V14 — true gutter-to-gutter geometry
@@ -1420,6 +1401,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 /* Every main section uses the same outer rails */
 .blog-hero,
 .editorial,
+.article-archive,
 .blog-themes,
 .bottom{
   padding-left:var(--page-gutter) !important;
@@ -1536,169 +1518,664 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   }
 }
 </style>
+<style id="unified-blog-grid">
+/* Unified editorial blog grid */
+.article-archive{
+  padding:0 var(--page-gutter) 112px;
+  background:#fff;
+}
 
+.article-archive-inner{
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding-top:56px;
+  border-top:1px solid var(--line);
+}
 
-<style id="blog-v15-footer-fullbleed">
-/* BLOG V15 — footer divider truly edge-to-edge */
+.article-archive-head{
+  display:none !important;
+}
+
+.article-archive-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:0;
+  border-top:0;
+  border-bottom:1px solid var(--line);
+}
+
+.archive-story{
+  position:relative;
+  min-width:0;
+  padding:0 24px 34px;
+  border-right:1px solid var(--line);
+  cursor:pointer;
+}
+
+.archive-story:first-child{
+  padding-left:0;
+}
+
+.archive-story:last-child{
+  padding-right:0;
+  border-right:0;
+}
+
+.archive-story > a:not(.archive-story-image):not(.archive-story-read){
+  text-decoration:none !important;
+}
+
+.archive-story-image{
+  display:block;
+  overflow:hidden;
+  aspect-ratio:16/10;
+  margin-bottom:22px;
+  background:#eef1f4;
+}
+
+.archive-story-image img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .5s cubic-bezier(.2,.7,.2,1), filter .35s ease;
+}
+
+.archive-story:hover .archive-story-image img{
+  transform:scale(1.025);
+}
+
+.archive-story-meta{
+  margin-bottom:13px;
+  color:#7b8794;
+  font-size:9px;
+  font-weight:650;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.archive-story h3{
+  margin:0 0 14px;
+  font:500 clamp(25px,2.15vw,36px)/1.06 Manrope,sans-serif;
+  letter-spacing:-.045em;
+}
+
+.archive-story h3 a{
+  color:#07101b;
+  text-decoration:none !important;
+  background:none !important;
+}
+
+.archive-story p{
+  margin:0;
+  max-width:95%;
+  color:#697684;
+  font-size:13px;
+  line-height:1.66;
+}
+
+.archive-story-read{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  margin-top:22px;
+  color:#07101b;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  text-decoration:none;
+  transition:gap .2s ease, opacity .2s ease;
+}
+
+.archive-story:hover .archive-story-read{
+  gap:11px;
+}
+
+@media(max-width:900px){
+  .article-archive-grid{
+    grid-template-columns:1fr;
+    border-bottom:0;
+  }
+
+  .archive-story,
+  .archive-story:first-child,
+  .archive-story:last-child{
+    display:grid;
+    grid-template-columns:minmax(190px,.78fr) 1fr;
+    grid-template-areas:
+      "img meta"
+      "img title"
+      "img copy"
+      "img read";
+    column-gap:24px;
+    padding:28px 0;
+    border-right:0;
+    border-bottom:1px solid var(--line);
+    align-items:start;
+  }
+
+  .archive-story-image{grid-area:img;margin:0}
+  .archive-story-meta{grid-area:meta}
+  .archive-story h3{grid-area:title}
+  .archive-story p{grid-area:copy}
+  .archive-story-read{grid-area:read}
+}
+
+@media(max-width:620px){
+  .article-archive{
+    padding:0 20px 76px;
+  }
+
+  .article-archive-inner{
+    padding-top:38px;
+  }
+
+  .archive-story,
+  .archive-story:first-child,
+  .archive-story:last-child{
+    display:block;
+    padding:26px 0 30px;
+  }
+
+  .archive-story-image{
+    margin-bottom:18px;
+    aspect-ratio:4/3;
+  }
+
+  .archive-story h3{
+    font-size:30px;
+  }
+
+  .archive-story p{
+    max-width:100%;
+  }
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.archive-story').forEach(function(card){
+    card.addEventListener('click', function(e){
+      if(e.target.closest('a')) return;
+      const link = card.querySelector('h3 a');
+      if(link) window.location.href = link.href;
+    });
+  });
+});
+</script>
+<style id="blog-link-cleanup">
+    .lead-card h2 a,.side-card h3 a,.archive-story h3 a{
+      text-decoration:none !important;
+      background-image:none !important;
+    }
+    .lead-card h2 a:hover,.side-card h3 a:hover,.archive-story h3 a:hover{
+      text-decoration:none !important;
+    }
+    </style>
+<style id="blog-layout-surgical-fixes">
+/* =========================================================
+   Surgical layout fixes only — preserve current visual design
+   ========================================================= */
+
+:root{
+  --page-gutter:5vw !important;
+}
+
+html,
+body{
+  width:100% !important;
+  max-width:100% !important;
+  overflow-x:hidden !important;
+}
+
+/* One single rail system across every blog section */
+.blog-hero,
+.editorial,
+.article-archive,
+.blog-themes,
 .bottom{
+  box-sizing:border-box !important;
+  width:100% !important;
+  max-width:none !important;
+  padding-left:var(--page-gutter) !important;
+  padding-right:var(--page-gutter) !important;
+}
+
+.blog-hero-inner,
+.editorial-inner,
+.article-archive-inner,
+.blog-themes-inner,
+.contact-block,
+.footer,
+.top-label,
+.editorial-grid,
+.article-archive-grid,
+.blog-themes-head,
+.blog-themes-grid{
+  box-sizing:border-box !important;
+  width:100% !important;
+  max-width:none !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
+  min-width:0 !important;
+}
+
+/* Remove the oversized dead space between featured and older posts */
+.editorial{
+  padding-bottom:72px !important;
+}
+
+.article-archive{
+  padding-top:0 !important;
+  padding-bottom:82px !important;
+  background:#fff !important;
+}
+
+.article-archive-inner{
+  padding-top:34px !important;
+}
+
+/* Older-post cards reach the exact same rails as the sections above */
+.article-archive-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+}
+
+.archive-story{
+  min-width:0 !important;
+  box-sizing:border-box !important;
+  padding-left:22px !important;
+  padding-right:22px !important;
+}
+
+.archive-story:first-child{
   padding-left:0 !important;
+}
+
+.archive-story:last-child{
   padding-right:0 !important;
 }
 
-/* Contact content keeps the site gutter */
+.archive-story-image,
+.archive-story h3,
+.archive-story p{
+  min-width:0 !important;
+  max-width:100% !important;
+}
+
+.archive-story h3,
+.archive-story p{
+  overflow-wrap:anywhere;
+}
+
+/* Keep the dark topics section, just remove the giant empty black tail */
+.blog-themes{
+  padding-top:62px !important;
+  padding-bottom:58px !important;
+}
+
+.blog-themes-grid{
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+}
+
+.blog-theme{
+  min-width:0 !important;
+}
+
+.blog-theme h3,
+.blog-theme p{
+  max-width:100% !important;
+  overflow-wrap:anywhere;
+}
+
+/* Contact/footer: same rails, no content pushed beyond the viewport */
+.bottom{
+  padding-top:68px !important;
+  padding-bottom:32px !important;
+}
+
 .contact-block{
-  width:calc(100% - 10vw) !important;
-  max-width:none !important;
-  margin-left:5vw !important;
-  margin-right:5vw !important;
-  border-bottom:0 !important;
+  min-width:0 !important;
+  padding-bottom:54px !important;
 }
 
-/* Footer divider spans the full viewport width */
+.contact-copy,
+.contact-links{
+  min-width:0 !important;
+}
+
+.contact-links{
+  max-width:52% !important;
+  justify-content:flex-end !important;
+  flex-wrap:wrap !important;
+}
+
 .footer{
-  width:100% !important;
-  max-width:none !important;
-  margin:0 !important;
-  padding:28px 5vw 0 !important;
-  border-top:1px solid #dfe4e8 !important;
-  box-sizing:border-box !important;
+  padding-top:26px !important;
 }
 
-/* Keep footer text aligned with the same outer rails */
-.footer > *{
-  margin:0 !important;
+/* Prevent any card/image from creating horizontal scroll */
+.lead-card,
+.side-card,
+.archive-story,
+.blog-theme,
+.lead-image,
+.side-image,
+.archive-story-image{
+  min-width:0 !important;
+  max-width:100% !important;
 }
 
+img{
+  max-width:100% !important;
+}
+
+/* Tablet */
+@media(max-width:1050px){
+  .article-archive-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  .archive-story,
+  .archive-story:first-child,
+  .archive-story:last-child{
+    padding:26px 0 !important;
+  }
+
+  .contact-links{
+    max-width:100% !important;
+    justify-content:flex-start !important;
+  }
+}
+
+/* Mobile: keep the exact same rail logic */
 @media(max-width:760px){
+  :root{
+    --page-gutter:20px !important;
+  }
+
+  .blog-hero,
+  .editorial,
+  .article-archive,
+  .blog-themes,
+  .bottom{
+    padding-left:var(--page-gutter) !important;
+    padding-right:var(--page-gutter) !important;
+  }
+
+  .editorial{
+    padding-bottom:54px !important;
+  }
+
+  .article-archive{
+    padding-bottom:62px !important;
+  }
+
+  .article-archive-inner{
+    padding-top:28px !important;
+  }
+
+  .blog-themes{
+    padding-top:52px !important;
+    padding-bottom:50px !important;
+  }
+
+  .bottom{
+    padding-top:56px !important;
+    padding-bottom:28px !important;
+  }
+
   .contact-block{
-    width:calc(100% - 40px) !important;
-    margin-left:20px !important;
-    margin-right:20px !important;
+    padding-bottom:42px !important;
   }
 
   .footer{
-    padding-left:20px !important;
-    padding-right:20px !important;
+    padding-top:22px !important;
+  }
+}
+</style>
+<style id="footer-double-gutter-fix">
+/* Footer already lives inside .bottom's page gutter.
+   Remove the legacy horizontal padding that was creating a double gutter. */
+.bottom .footer{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+  padding-left:0 !important;
+  padding-right:0 !important;
+  padding-bottom:0 !important;
+  box-sizing:border-box !important;
+}
+
+@media(max-width:760px){
+  .bottom .footer{
+    padding-left:0 !important;
+    padding-right:0 !important;
+  }
+}
+</style>
+<style id="archive-section-heading-fix">
+.article-archive-head{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:20px !important;
+  margin:0 0 18px !important;
+  padding:0 0 14px !important;
+  border-bottom:1px solid var(--line) !important;
+}
+
+.article-archive-kicker,
+.article-archive-period{
+  margin:0 !important;
+  color:#7a8794 !important;
+  font-size:10px !important;
+  font-weight:700 !important;
+  letter-spacing:.12em !important;
+  text-transform:uppercase !important;
+}
+
+.article-archive-period{
+  font-weight:500 !important;
+  color:#98a1ab !important;
+}
+
+@media(max-width:760px){
+  .article-archive-head{
+    margin-bottom:14px !important;
+    padding-bottom:12px !important;
+  }
+}
+</style>
+<style id="explore-heading-final">
+    .article-archive-head{
+      justify-content:flex-start !important;
+    }
+    .article-archive-kicker{
+      width:auto !important;
+    }
+    </style>
+<style id="explore-section-spacing-fix">
+/* Keep only the divider below the section label.
+   The old top border created a stray line between sections. */
+.article-archive-inner{
+  border-top:0 !important;
+  padding-top:16px !important;
+}
+
+.article-archive{
+  padding-top:0 !important;
+}
+
+/* Slightly tighten the transition from the featured block */
+.editorial{
+  padding-bottom:48px !important;
+}
+
+.article-archive-head{
+  margin-top:0 !important;
+  margin-bottom:22px !important;
+  padding-bottom:14px !important;
+  border-top:0 !important;
+  border-bottom:1px solid var(--line) !important;
+}
+
+@media(max-width:760px){
+  .editorial{
+    padding-bottom:40px !important;
+  }
+
+  .article-archive-inner{
+    padding-top:10px !important;
+  }
+
+  .article-archive-head{
+    margin-bottom:18px !important;
+    padding-bottom:12px !important;
   }
 }
 </style>
 
-
-<style id="blog-v16-full-card-links">
-/* BLOG V16 — whole featured cards are real links */
-.lead-card:focus-visible,
-.side-card:focus-visible{
-  outline:2px solid #07101b !important;
-  outline-offset:4px !important;
+<style id="more-to-explore-top-margin-fix">
+/* Slightly more breathing room above the More to Explore block */
+.article-archive{
+  padding-top:18px !important;
 }
-.side-card:focus-visible{
-  outline-color:#fff !important;
+
+@media(max-width:760px){
+  .article-archive{
+    padding-top:14px !important;
+  }
 }
 </style>
-
 </head><body>
-
 <header class="nav">
-  <a class="brand" href="/">Felipe Quiroz</a>
-  <nav class="nav-links">
-    <a href="/#work">Work</a>
-    <a href="/about">About</a>
-    <a href="/now">Now</a>
-    <a href="/blog" class="active">Blog</a>
-    <a href="/#contact" class="contact-nav">Contact</a>
-    <a href="/es/blog" class="lang-switch">ES</a>
-  </nav>
+<a class="brand" href="/">Felipe Quiroz</a>
+<nav class="nav-links">
+<a href="/#work">Work</a>
+<a href="/about">About</a>
+<a href="/now">Now</a>
+<a class="active" href="/blog">Blog</a>
+<a class="contact-nav" href="#contact">Contact</a>
+<a aria-label="Switch language" class="lang-switch" href="/es/blog">ES</a>
+</nav>
 </header>
 <main>
 <section class="blog-hero"><div class="blog-hero-inner">
 <div><div class="blog-kicker">Blog</div><h1>Ideas on building better.</h1></div>
-<p>Product, startups, AI, growth and operations. Short reflections from things I’m building, testing or learning.</p>
+<p>Product, startups, AI, growth, education and operations. Ideas and reflections from things I’ve built, tested or learned along the way.</p>
 </div></section>
-
 <section class="editorial"><div class="editorial-inner">
 <div class="top-label"><span>Featured</span><span>2026</span></div>
 <div class="editorial-grid">
-<a class="lead-card" href="/blog/ai-native-core" aria-label="Read: The next product leap is built with AI at the core">
-  <div class="lead-image"><img src="/images/platanus-event.jpg" alt=""></div>
-  <div class="lead-meta">AI / Product</div>
-  <h2>The next product leap is built with AI at the core</h2>
-  <p>What AI Native Startups made clear: the shift from experimenting with AI to making it part of product and business infrastructure.</p>
-</a>
+<article class="lead-card">
+<a class="lead-image" href="/blog/ai-native-core"><img alt="" src="/images/platanus-event.jpg"/></a>
+<div class="lead-meta">AI / Product</div>
+<h2><a href="/blog/ai-native-core">The next product leap is built with AI at the core</a></h2>
+<p>What AI Native Startups made clear: the shift from experimenting with AI to making it part of product and business infrastructure.</p>
+</article>
 <div class="side-stack">
-        <a class="side-card" href="/blog/building-lowsignal" aria-label="Read: What building lowsignal taught me about starting before you’re ready">
-          <div class="side-image"><img src="/images/lowsignal-founders.jpg" alt=""></div>
-          <div class="side-copy"><small>Startups / Company Building</small>
-          <h3>What building lowsignal taught me about starting before you’re ready</h3>
-          <p>You do not build clarity first and then start. You start, sell, deliver, learn and turn what works into a system.</p></div>
-        </a>
-        <a class="side-card" href="/blog/edtech-startup-scale" aria-label="Read: What building an edtech startup taught me about scale">
-          <div class="side-image"><img src="/images/tether-edtech-scale.jpg" alt=""></div>
-          <div class="side-copy"><small>Startups / Education</small>
-          <h3>What building an edtech startup taught me about scale</h3>
-          <p>Scaling is not just growth. It is making product, adoption, partnerships and operations keep working as the context changes.</p></div>
-        </a>
-        <a class="side-card" href="/blog/ai-leaves-the-demo" aria-label="Read: What AI looks like when it leaves the demo">
-          <div class="side-image"><img src="/images/felipe-ecosystem-team.jpg" alt=""></div>
-          <div class="side-copy"><small>AI / Startups</small>
-          <h3>What AI looks like when it leaves the demo</h3>
-          <p>AI Week Chile focused on something more useful than the promise of technology: how AI is already changing growth, efficiency and execution.</p></div>
-        </a></div>
+<article class="side-card">
+<a class="side-image" href="/blog/building-lowsignal"><img alt="" src="/images/lowsignal-founders.jpg"/></a>
+<div class="side-copy"><small>Startups / Company Building</small>
+<h3><a href="/blog/building-lowsignal">What building lowsignal taught me about starting before you’re ready</a></h3>
+<p>You do not build clarity first and then start. You start, sell, deliver, learn and turn what works into a system.</p></div>
+</article>
+<article class="side-card">
+<a class="side-image" href="/blog/edtech-startup-scale"><img alt="" src="/images/tether-edtech-scale.jpg"/></a>
+<div class="side-copy"><small>Startups / Education</small>
+<h3><a href="/blog/edtech-startup-scale">What building an edtech startup taught me about scale</a></h3>
+<p>Scaling is not just growth. It is making product, adoption, partnerships and operations keep working as the context changes.</p></div>
+</article>
+<article class="side-card">
+<a class="side-image" href="/blog/ai-leaves-the-demo"><img alt="" src="/images/felipe-ecosystem-team.jpg"/></a>
+<div class="side-copy"><small>AI / Startups</small>
+<h3><a href="/blog/ai-leaves-the-demo">What AI looks like when it leaves the demo</a></h3>
+<p>AI Week Chile focused on something more useful than the promise of technology: how AI is already changing growth, efficiency and execution.</p></div>
+</article></div>
 </div>
-
 </div></section>
+<section class="article-archive">
+<div class="article-archive-inner"><div class="article-archive-head">
+<div class="article-archive-kicker">MORE TO EXPLORE</div>
+</div>
+<div class="article-archive-grid">
+<article class="archive-story">
+<a class="archive-story-image" href="/blog/partnerships-infrastructure">
+<img alt="TetherEd and Fundación Kiri" src="/images/tethered-kiri-partnerships-2025.png"/>
+</a>
+<div class="archive-story-meta">Partnerships / Startups · December 2025</div>
+<h3><a href="/blog/partnerships-infrastructure">Partnerships is more than closing deals</a></h3>
+<p>What leading partnerships at TetherEd taught me about connecting product, institutions, growth and execution.</p>
+<a class="archive-story-read" href="/blog/partnerships-infrastructure">Read →</a>
+</article>
+<article class="archive-story">
+<a class="archive-story-image" href="/blog/future-of-education">
+<img alt="País Digital Summit Future of Education" src="/images/pais-digital-future-education.jpg"/>
+</a>
+<div class="archive-story-meta">Education / AI / Ecosystems · September 2025</div>
+<h3><a href="/blog/future-of-education">The future of education isn’t built with technology alone</a></h3>
+<p>AI, institutions, partnerships and execution: why transforming education takes much more than new tools.</p>
+<a class="archive-story-read" href="/blog/future-of-education">Read →</a>
+</article>
+<article class="archive-story">
+<a class="archive-story-image" href="/blog/ai-future-students">
+<img alt="Felipe Quiroz speaking with future students at USM Open House 2024" src="/images/usm-ai-future-students-2024.jpg"/>
+</a>
+<div class="archive-story-meta">Education / AI · October 2024</div>
+<h3><a href="/blog/ai-future-students">What talking about AI with future students taught me about education</a></h3>
+<p>When access to information stops being the bottleneck, critical thinking, creativity and the ability to learn matter even more.</p>
+<a class="archive-story-read" href="/blog/ai-future-students">Read →</a>
+</article>
+</div>
+</div>
+</section>
 </main>
-
-
-
-
 <section class="blog-themes">
-  <div class="blog-themes-inner">
-    <div class="blog-themes-head">
-      <div class="blog-themes-label">What I write about</div>
-      <p class="blog-themes-copy">Short ideas from things I’m building, testing or learning along the way.</p>
-    </div>
-    <div class="blog-themes-grid">
-      <article class="blog-theme">
-        <span>01 / Product</span>
-        <h3>Build close to the problem.</h3>
-        <p>Product decisions, adoption and turning real-world complexity into clearer systems.</p>
-      </article>
-      <article class="blog-theme">
-        <span>02 / AI</span>
-        <h3>From demo to workflow.</h3>
-        <p>How AI starts creating value when it enters real products and operations.</p>
-      </article>
-      <article class="blog-theme">
-        <span>03 / Startups</span>
-        <h3>Learn by building.</h3>
-        <p>Company building, positioning, sales, systems and what changes when you start before you’re ready.</p>
-      </article>
-      <article class="blog-theme">
-        <span>04 / Operations</span>
-        <h3>Design for better execution.</h3>
-        <p>Processes, leverage and the layers that connect good strategy with real outcomes.</p>
-      </article>
-    </div>
-  </div>
+<div class="blog-themes-inner">
+<div class="blog-themes-head">
+<div class="blog-themes-label">What I write about</div>
+<p class="blog-themes-copy">Short ideas from things I’m building, testing or learning along the way.</p>
+</div>
+<div class="blog-themes-grid">
+<article class="blog-theme">
+<span>01 / Product</span>
+<h3>Build close to the problem.</h3>
+<p>Product decisions, adoption and turning real-world complexity into clearer systems.</p>
+</article>
+<article class="blog-theme">
+<span>02 / AI</span>
+<h3>From demo to workflow.</h3>
+<p>How AI starts creating value when it enters real products and operations.</p>
+</article>
+<article class="blog-theme">
+<span>03 / Startups</span>
+<h3>Learn by building.</h3>
+<p>Company building, positioning, sales, systems and what changes when you start before you’re ready.</p>
+</article>
+<article class="blog-theme">
+<span>04 / Operations</span>
+<h3>Design for better execution.</h3>
+<p>Processes, leverage and the layers that connect good strategy with real outcomes.</p>
+</article>
+</div>
+</div>
 </section>
-
 <section class="bottom" id="contact">
-  <div class="contact-block">
-    <div class="contact-copy">
-      <div class="section-label">Contact</div>
-      <h3>Let’s talk.</h3>
-    </div>
-    <div class="contact-links">
-      <a class="contact-link" href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a class="contact-link" href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a class="contact-link" href="mailto:felipe@lowsignal.cl">Email</a>
-    </div>
-  </div>
-  <footer class="footer">
-    <div>© 2026 Felipe Quiroz</div>
-    <div>Santiago / CL</div>
-  </footer>
+<div class="contact-block">
+<div class="contact-copy">
+<div class="section-label">Contact</div>
+<h3>Let’s talk.</h3>
+</div>
+<div class="contact-links">
+<a class="contact-link" href="https://www.linkedin.com/in/felipequirozp" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a class="contact-link" href="https://www.instagram.com/felipe_quirozp/" rel="noopener noreferrer" target="_blank">Instagram</a>
+<a class="contact-link" href="mailto:felipe@lowsignal.cl">Email</a>
+</div>
+</div>
+<footer class="footer">
+<div>© 2026 Felipe Quiroz</div>
+<div>Santiago / CL</div>
+</footer>
 </section>
-
-
 </body></html>
