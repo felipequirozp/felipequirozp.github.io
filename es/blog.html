@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="es"><head>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Blog — Felipe Quiroz</title><link href="/favicon.png" rel="icon"/><meta content="#05070a" name="theme-color"/>
@@ -1387,8 +1388,6 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   }
 }
 </style>
-
-
 <style id="unified-blog-grid">
 /* Unified editorial blog grid */
 .article-archive{
@@ -1583,7 +1582,343 @@ document.addEventListener('DOMContentLoaded', function(){
     .lead-card h2 a:hover,.side-card h3 a:hover,.archive-story h3 a:hover{
       text-decoration:none !important;
     }
-    </style></head><body>
+    </style>
+<style id="blog-layout-surgical-fixes">
+/* =========================================================
+   Surgical layout fixes only — preserve current visual design
+   ========================================================= */
+
+:root{
+  --page-gutter:5vw !important;
+}
+
+html,
+body{
+  width:100% !important;
+  max-width:100% !important;
+  overflow-x:hidden !important;
+}
+
+/* One single rail system across every blog section */
+.blog-hero,
+.editorial,
+.article-archive,
+.blog-themes,
+.bottom{
+  box-sizing:border-box !important;
+  width:100% !important;
+  max-width:none !important;
+  padding-left:var(--page-gutter) !important;
+  padding-right:var(--page-gutter) !important;
+}
+
+.blog-hero-inner,
+.editorial-inner,
+.article-archive-inner,
+.blog-themes-inner,
+.contact-block,
+.footer,
+.top-label,
+.editorial-grid,
+.article-archive-grid,
+.blog-themes-head,
+.blog-themes-grid{
+  box-sizing:border-box !important;
+  width:100% !important;
+  max-width:none !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
+  min-width:0 !important;
+}
+
+/* Remove the oversized dead space between featured and older posts */
+.editorial{
+  padding-bottom:72px !important;
+}
+
+.article-archive{
+  padding-top:0 !important;
+  padding-bottom:82px !important;
+  background:#fff !important;
+}
+
+.article-archive-inner{
+  padding-top:34px !important;
+}
+
+/* Older-post cards reach the exact same rails as the sections above */
+.article-archive-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+}
+
+.archive-story{
+  min-width:0 !important;
+  box-sizing:border-box !important;
+  padding-left:22px !important;
+  padding-right:22px !important;
+}
+
+.archive-story:first-child{
+  padding-left:0 !important;
+}
+
+.archive-story:last-child{
+  padding-right:0 !important;
+}
+
+.archive-story-image,
+.archive-story h3,
+.archive-story p{
+  min-width:0 !important;
+  max-width:100% !important;
+}
+
+.archive-story h3,
+.archive-story p{
+  overflow-wrap:anywhere;
+}
+
+/* Keep the dark topics section, just remove the giant empty black tail */
+.blog-themes{
+  padding-top:62px !important;
+  padding-bottom:58px !important;
+}
+
+.blog-themes-grid{
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+}
+
+.blog-theme{
+  min-width:0 !important;
+}
+
+.blog-theme h3,
+.blog-theme p{
+  max-width:100% !important;
+  overflow-wrap:anywhere;
+}
+
+/* Contact/footer: same rails, no content pushed beyond the viewport */
+.bottom{
+  padding-top:68px !important;
+  padding-bottom:32px !important;
+}
+
+.contact-block{
+  min-width:0 !important;
+  padding-bottom:54px !important;
+}
+
+.contact-copy,
+.contact-links{
+  min-width:0 !important;
+}
+
+.contact-links{
+  max-width:52% !important;
+  justify-content:flex-end !important;
+  flex-wrap:wrap !important;
+}
+
+.footer{
+  padding-top:26px !important;
+}
+
+/* Prevent any card/image from creating horizontal scroll */
+.lead-card,
+.side-card,
+.archive-story,
+.blog-theme,
+.lead-image,
+.side-image,
+.archive-story-image{
+  min-width:0 !important;
+  max-width:100% !important;
+}
+
+img{
+  max-width:100% !important;
+}
+
+/* Tablet */
+@media(max-width:1050px){
+  .article-archive-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  .archive-story,
+  .archive-story:first-child,
+  .archive-story:last-child{
+    padding:26px 0 !important;
+  }
+
+  .contact-links{
+    max-width:100% !important;
+    justify-content:flex-start !important;
+  }
+}
+
+/* Mobile: keep the exact same rail logic */
+@media(max-width:760px){
+  :root{
+    --page-gutter:20px !important;
+  }
+
+  .blog-hero,
+  .editorial,
+  .article-archive,
+  .blog-themes,
+  .bottom{
+    padding-left:var(--page-gutter) !important;
+    padding-right:var(--page-gutter) !important;
+  }
+
+  .editorial{
+    padding-bottom:54px !important;
+  }
+
+  .article-archive{
+    padding-bottom:62px !important;
+  }
+
+  .article-archive-inner{
+    padding-top:28px !important;
+  }
+
+  .blog-themes{
+    padding-top:52px !important;
+    padding-bottom:50px !important;
+  }
+
+  .bottom{
+    padding-top:56px !important;
+    padding-bottom:28px !important;
+  }
+
+  .contact-block{
+    padding-bottom:42px !important;
+  }
+
+  .footer{
+    padding-top:22px !important;
+  }
+}
+</style>
+<style id="footer-double-gutter-fix">
+/* Footer already lives inside .bottom's page gutter.
+   Remove the legacy horizontal padding that was creating a double gutter. */
+.bottom .footer{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+  padding-left:0 !important;
+  padding-right:0 !important;
+  padding-bottom:0 !important;
+  box-sizing:border-box !important;
+}
+
+@media(max-width:760px){
+  .bottom .footer{
+    padding-left:0 !important;
+    padding-right:0 !important;
+  }
+}
+</style>
+<style id="archive-section-heading-fix">
+.article-archive-head{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:20px !important;
+  margin:0 0 18px !important;
+  padding:0 0 14px !important;
+  border-bottom:1px solid var(--line) !important;
+}
+
+.article-archive-kicker,
+.article-archive-period{
+  margin:0 !important;
+  color:#7a8794 !important;
+  font-size:10px !important;
+  font-weight:700 !important;
+  letter-spacing:.12em !important;
+  text-transform:uppercase !important;
+}
+
+.article-archive-period{
+  font-weight:500 !important;
+  color:#98a1ab !important;
+}
+
+@media(max-width:760px){
+  .article-archive-head{
+    margin-bottom:14px !important;
+    padding-bottom:12px !important;
+  }
+}
+</style>
+<style id="explore-heading-final">
+    .article-archive-head{
+      justify-content:flex-start !important;
+    }
+    .article-archive-kicker{
+      width:auto !important;
+    }
+    </style>
+<style id="explore-section-spacing-fix">
+/* Keep only the divider below the section label.
+   The old top border created a stray line between sections. */
+.article-archive-inner{
+  border-top:0 !important;
+  padding-top:16px !important;
+}
+
+.article-archive{
+  padding-top:0 !important;
+}
+
+/* Slightly tighten the transition from the featured block */
+.editorial{
+  padding-bottom:48px !important;
+}
+
+.article-archive-head{
+  margin-top:0 !important;
+  margin-bottom:22px !important;
+  padding-bottom:14px !important;
+  border-top:0 !important;
+  border-bottom:1px solid var(--line) !important;
+}
+
+@media(max-width:760px){
+  .editorial{
+    padding-bottom:40px !important;
+  }
+
+  .article-archive-inner{
+    padding-top:10px !important;
+  }
+
+  .article-archive-head{
+    margin-bottom:18px !important;
+    padding-bottom:12px !important;
+  }
+}
+</style>
+
+<style id="more-to-explore-top-margin-fix">
+/* Slightly more breathing room above the More to Explore block */
+.article-archive{
+  padding-top:18px !important;
+}
+
+@media(max-width:760px){
+  .article-archive{
+    padding-top:14px !important;
+  }
+}
+</style>
+</head><body>
 <header class="nav">
 <a class="brand" href="/es/">Felipe Quiroz</a>
 <nav class="nav-links">
@@ -1631,8 +1966,9 @@ document.addEventListener('DOMContentLoaded', function(){
 </div>
 </div></section>
 <section class="article-archive">
-<div class="article-archive-inner">
-
+<div class="article-archive-inner"><div class="article-archive-head">
+<div class="article-archive-kicker">MÁS PARA EXPLORAR</div>
+</div>
 <div class="article-archive-grid">
 <article class="archive-story">
 <a class="archive-story-image" href="/es/blog/partnerships-infrastructure">
@@ -1654,7 +1990,7 @@ document.addEventListener('DOMContentLoaded', function(){
 </article>
 <article class="archive-story">
 <a class="archive-story-image" href="/es/blog/ai-future-students">
-<img alt="Charla sobre IA y educación en Puertas Abiertas USM 2024" src="/images/usm-ai-education-2024.jpg"/>
+<img alt="Felipe Quiroz conversando con futuros estudiantes en Puertas Abiertas USM 2024" src="/images/usm-ai-future-students-2024.jpg"/>
 </a>
 <div class="archive-story-meta">Educación / IA · Octubre 2024</div>
 <h3><a href="/es/blog/ai-future-students">Lo que hablar de IA con futuros estudiantes me enseñó sobre educación</a></h3>
