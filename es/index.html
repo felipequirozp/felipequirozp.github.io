@@ -3382,8 +3382,16 @@ header.nav{
 
 @media(max-width:760px){
   #home-writing-title{
-    width:auto !important;
-    max-width:11ch !important;
+    width:max-content !important;
+    max-width:calc(100vw - 40px) !important;
+    font-size:clamp(38px, 10vw, 46px) !important;
+    line-height:1.02 !important;
+  }
+}
+
+@media(max-width:390px){
+  #home-writing-title{
+    font-size:36px !important;
   }
 }
 </style></head>
