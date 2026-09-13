@@ -2035,7 +2035,6 @@ img{
   }
 }
 </style>
-
 <style id="more-to-explore-top-margin-fix">
 /* Slightly more breathing room above the More to Explore block */
 .article-archive{
@@ -2045,6 +2044,100 @@ img{
 @media(max-width:760px){
   .article-archive{
     padding-top:14px !important;
+  }
+}
+</style>
+<style id="full-card-click-style">
+.lead-card,
+.side-card,
+.archive-story{
+  cursor:pointer !important;
+}
+
+.lead-card:focus-visible,
+.side-card:focus-visible,
+.archive-story:focus-visible{
+  outline:2px solid #6f86a2 !important;
+  outline-offset:4px !important;
+}
+</style>
+<style id="navbar-sticky-scroll-fix">
+/* Keep horizontal overflow protection without creating a scroll container
+   that can break position: sticky in Safari/Chrome. */
+html,
+body{
+  overflow-x:clip !important;
+}
+
+/* Navbar should remain visible throughout the page scroll. */
+.nav{
+  position:sticky !important;
+  top:0 !important;
+  z-index:9999 !important;
+  width:100% !important;
+  transform:none !important;
+  will-change:auto !important;
+}
+</style>
+
+<style id="mobile-themes-layout-fix">
+@media(max-width:760px){
+
+  /* Header becomes a clean vertical intro */
+  .blog-themes-head{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:10px !important;
+    padding:20px 0 24px !important;
+  }
+
+  .blog-themes-copy{
+    max-width:100% !important;
+    font-size:12px !important;
+    line-height:1.6 !important;
+  }
+
+  /* Override the late desktop 4-column !important rule */
+  .blog-themes-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    border-left:0 !important;
+    border-top:1px solid rgba(255,255,255,.10) !important;
+  }
+
+  /* Editorial list rows instead of boxed desktop cards */
+  .blog-theme{
+    min-height:0 !important;
+    padding:24px 0 26px !important;
+    border-left:0 !important;
+    border-right:0 !important;
+    border-bottom:1px solid rgba(255,255,255,.10) !important;
+  }
+
+  .blog-theme span{
+    font-size:9px !important;
+    letter-spacing:.12em !important;
+  }
+
+  .blog-theme h3{
+    margin:18px 0 0 !important;
+    max-width:13ch !important;
+    font-size:29px !important;
+    line-height:1.05 !important;
+  }
+
+  .blog-theme p{
+    margin:10px 0 0 !important;
+    max-width:34em !important;
+    font-size:13px !important;
+    line-height:1.58 !important;
+  }
+}
+
+@media(max-width:420px){
+  .blog-theme h3{
+    font-size:27px !important;
   }
 }
 </style>
@@ -2178,4 +2271,32 @@ img{
 <div>Santiago / CL</div>
 </footer>
 </section>
+<script id="full-card-click-fix">
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.lead-card, .side-card, .archive-story').forEach(function (card) {
+    const link = card.querySelector('h2 a, h3 a, .archive-story-read');
+    if (!link) return;
+
+    const href = link.getAttribute('href');
+    if (!href) return;
+
+    card.setAttribute('data-href', href);
+    card.setAttribute('role', 'link');
+    card.setAttribute('tabindex', '0');
+
+    card.addEventListener('click', function (event) {
+      if (event.target.closest('a')) return;
+      window.location.href = href;
+    });
+
+    card.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        if (event.target.closest('a')) return;
+        event.preventDefault();
+        window.location.href = href;
+      }
+    });
+  });
+});
+</script>
 </body></html>
