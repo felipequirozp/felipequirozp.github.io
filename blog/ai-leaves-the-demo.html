@@ -716,7 +716,6 @@
   }
 }
 </style>
-
 <style id="hero-image-spacing-fix">
 /* Keep the full framing more natural and move the whole image section lower */
 .hero-media{
@@ -737,6 +736,26 @@
   }
 }
 </style>
+
+<style id="hero-image-new-photo-fix">
+    .hero-media{
+      padding-top:24px !important;
+    }
+
+    .hero-media img{
+      object-position:center 26% !important;
+    }
+
+    @media(max-width:760px){
+      .hero-media{
+        padding-top:18px !important;
+      }
+
+      .hero-media img{
+        object-position:center 22% !important;
+      }
+    }
+    </style>
 </head>
 <body>
 <header class="nav">
@@ -771,7 +790,7 @@
 <section class="hero-media">
 <div class="hero-media-inner">
 <div class="hero-media-frame">
-<img alt="What AI looks like when it leaves the demo" onerror="this.closest('.hero-media').style.display='none'" src="/images/felipe-ecosystem-team.jpg"/>
+<img alt="Felipe Quiroz with the DiiO team" onerror="this.closest('.hero-media').style.display='none'" src="/images/ai-leaves-the-demo-diio-2025.jpg"/>
 </div>
 <div class="image-caption">AI Week Chile · Santiago, Chile</div>
 </div>
