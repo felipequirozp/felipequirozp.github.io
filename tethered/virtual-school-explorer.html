@@ -822,76 +822,58 @@ img{display:block;width:100%;max-width:100%}
   pointer-events:none !important;
 }
 </style>
-<style id="case-breadcrumb-branding">
+<style id="case-footer-brand-casing">
+.case-next a{
+  text-transform:none !important;
+  letter-spacing:.06em !important;
+}
+.case-next a .brand-case-sensitive{
+  text-transform:none !important;
+  letter-spacing:0 !important;
+}
+</style><style id="case-explorer-branding">
 .case-breadcrumb{
   display:flex !important;
   align-items:center !important;
-  gap:12px !important;
-  flex-wrap:wrap !important;
+  margin-bottom:72px !important;
 }
 
-.case-brand-link{
+.case-explorer-brand-link{
   display:inline-flex !important;
   align-items:center !important;
-  gap:10px !important;
-  color:inherit !important;
   text-decoration:none !important;
 }
 
-.case-brand-logo{
+.case-explorer-brand-logo{
   display:block !important;
   width:auto !important;
-  height:22px !important;
-  max-width:150px !important;
+  height:36px !important;
+  max-width:190px !important;
   object-fit:contain !important;
-}
-
-.case-brand-name{
-  color:#fff !important;
-  font-size:10px !important;
-  font-weight:700 !important;
-  letter-spacing:.1em !important;
-  text-transform:none !important;
-}
-
-.case-brand-separator,
-.case-brand-project{
-  color:#8793a0 !important;
-  font-size:9px !important;
-  font-weight:700 !important;
-  letter-spacing:.1em !important;
-  text-transform:uppercase !important;
-}
-
-.case-brand-link:hover .case-brand-name{
-  color:#fff !important;
 }
 
 @media(max-width:760px){
   .case-breadcrumb{
-    gap:9px !important;
+    margin-bottom:48px !important;
   }
 
-  .case-brand-logo{
-    height:19px !important;
-    max-width:128px !important;
+  .case-explorer-brand-logo{
+    height:31px !important;
+    max-width:168px !important;
   }
+}
 
-  .case-brand-name{
-    font-size:9px !important;
-  }
-
-  .case-brand-separator,
-  .case-brand-project{
-    font-size:8px !important;
-    letter-spacing:.08em !important;
+@media(max-width:420px){
+  .case-explorer-brand-logo{
+    height:28px !important;
+    max-width:154px !important;
   }
 }
 </style></head><body>
 <header class="nav"><a class="brand" href="/es/">Felipe Quiroz</a><nav class="nav-links"><a class="" href="/#work">Work</a><a href="/about">About</a><a href="/now">Now</a><a href="/blog">Blog</a><a class="contact-nav" href="#contact">Contact</a><a aria-label="Switch language" class="lang-switch" href="/es/tethered/explorador-virtual-colegios">ES</a></nav></header>
 <section class="case-hero">
 <div class="case-wrap">
-<div class="case-breadcrumb"><a class="case-brand-link" href="/tethered"><img alt="TetherEd" class="case-brand-logo" src="/logos/tethered-logo.svg"/><span class="case-brand-name">TetherEd</span></a><span class="case-brand-separator">/</span><span class="case-brand-project">Virtual School Explorer</span></div>
+<div class="case-breadcrumb"><a class="case-explorer-brand-link" href="/tethered"><img alt="Virtual School Explorer" class="case-explorer-brand-logo" src="/logos/virtual-school-explorer-logo.svg"/></a></div>
 <div class="case-kicker">Case Study · EdTech · AI · Partnerships</div>
 <h1>Explorador Virtual <span>de Colegios.</span></h1>
 <p class="case-deck">
@@ -1057,7 +1039,7 @@ Your browser does not support HTML5 video.
 </div>
 </div>
 <div class="case-next">
-<a href="/tethered">← Back to TetherEd</a>
+<a href="/tethered">← Back to <span class="brand-case-sensitive">TetherEd</span></a>
 <a href="https://tether.education/tethered-eng/tools/personalized-school-explorer" rel="noopener noreferrer" target="_blank">Visitar Virtual School Explorer ↗</a>
 </div>
 </div>
