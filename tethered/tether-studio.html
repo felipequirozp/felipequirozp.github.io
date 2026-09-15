@@ -885,6 +885,72 @@ img{display:block;width:100%;max-width:100%}
   .studio-btn{min-height:50px;padding:0 20px;font-size:9px}
   .studio-flow-item{min-height:0;padding:24px 0 28px!important}
 }
+</style><style id="studio-system-title-fix">
+/* Tether Studio system heading — controlled two-line rhythm */
+.projects .projects-head h2{
+  max-width:980px !important;
+  font-size:clamp(46px,5.5vw,76px) !important;
+  line-height:1.03 !important;
+}
+.projects .projects-head h2 .studio-system-line{
+  display:block !important;
+  white-space:nowrap !important;
+}
+.projects .projects-head h2 .studio-system-line:first-child{
+  color:#0b0f14 !important;
+}
+.projects .projects-head h2 .studio-system-line:last-child{
+  color:#9aadc0 !important;
+  margin-top:.06em !important;
+}
+
+@media(max-width:760px){
+  .projects .projects-head h2{
+    font-size:42px !important;
+    line-height:1.08 !important;
+  }
+  .projects .projects-head h2 .studio-system-line{
+    white-space:normal !important;
+  }
+}
+</style><style id="studio-title-break-fixes">
+/* Tether Studio controlled heading breaks */
+.operating h2 .studio-building-line,
+.projects .projects-head h2 .studio-system-line{
+  display:block !important;
+  white-space:nowrap !important;
+}
+
+.operating h2 .studio-building-line:first-child,
+.projects .projects-head h2 .studio-system-line:first-child{
+  color:#0b0f14 !important;
+}
+
+.operating h2 .studio-building-line:last-child,
+.projects .projects-head h2 .studio-system-line:last-child{
+  color:#9aadc0 !important;
+  margin-top:.06em !important;
+}
+
+@media(max-width:760px){
+  .operating h2 .studio-building-line,
+  .projects .projects-head h2 .studio-system-line{
+    white-space:normal !important;
+  }
+}
+</style><style id="studio-logo-bigger">
+/* Larger Tether Studio logo inside same pill */
+.studio-mark img{
+  height:40px !important;
+  max-width:255px !important;
+}
+
+@media(max-width:760px){
+  .studio-mark img{
+    height:34px !important;
+    max-width:220px !important;
+  }
+}
 </style></head><body>
 <header class="nav"><a class="brand" href="/">Felipe Quiroz</a><nav class="nav-links">
 <a href="/#work">Work</a><a href="/about">About</a><a href="/now">Now</a><a href="/blog">Blog</a>
@@ -943,7 +1009,7 @@ img{display:block;width:100%;max-width:100%}
 <article class="product-item"><div class="product-num">03</div><div class="product-icon">↗</div><h3>Consent</h3><div class="product-type">Compliance</div><p>Traceable, auditable consent integrated into the process.</p></article>
 <article class="product-item"><div class="product-num">04</div><div class="product-icon">↗</div><h3>Family portal</h3><div class="product-type">Family access</div><p>A simpler digital experience to access and interact with school content.</p></article>
 </div></section><section class="projects"><div class="projects-head">
-<div><div class="section-label">04 / System</div><h2>A connected operation<span>from end to end.</span></h2></div>
+<div><div class="section-label">04 / System</div><h2><span class="studio-system-line">A connected operation</span><span class="studio-system-line">from end to end.</span></h2></div>
 <p>The value was not in digitizing one isolated task, but in connecting schools, families, consent and administration in the same system.</p>
 </div>
 <div class="studio-flow-grid">
@@ -951,7 +1017,7 @@ img{display:block;width:100%;max-width:100%}
 <article class="studio-flow-item"><small>Families</small><strong>Simpler access</strong><p>A digital experience designed around the relationship between the school and its families.</p></article>
 <article class="studio-flow-item"><small>Operations</small><strong>Greater traceability</strong><p>Consent and administration integrated into the same workflow with auditable information.</p></article>
 </div></section><section class="operating"><div class="operating-head">
-<div><div class="section-label">05 / Product building</div><h2>From operational problem<span>to a clear proposition.</span></h2></div>
+<div><div class="section-label">05 / Product building</div><h2><span class="studio-building-line">From operational problem to</span><span class="studio-building-line">a clear proposition.</span></h2></div>
 <p>My contribution focused on connecting what schools needed to solve with a simpler product experience and a value proposition that was easy to understand.</p>
 </div>
 <div class="work-list">
