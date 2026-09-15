@@ -3374,22 +3374,46 @@ header.nav{
   }
 }
 </style>
-<style id="usm-photo-full-frame">
-/* HOME — USM group photo: show the full team, avoid edge cropping */
+<style id="usm-photo-balanced-frame">
+/* HOME — USM group photo: preserve card shape + show full group */
 .photo-usm{
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  padding:18px !important;
-  background:#f1f3f5 !important;
+  position:relative !important;
+  display:block !important;
+  padding:0 !important;
+  overflow:hidden !important;
+  background:#e9edf2 !important;
+}
+
+.photo-usm::before{
+  content:"";
+  position:absolute;
+  inset:-26px;
+  background:
+    linear-gradient(rgba(241,244,247,.14),rgba(241,244,247,.14)),
+    url('/images/usm-admissions-community.jpg') center center/cover no-repeat;
+  filter:blur(18px) saturate(.82);
+  transform:scale(1.08);
+  opacity:.72;
+  z-index:0;
+}
+
+.photo-usm::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(246,248,250,.12);
+  z-index:1;
+  pointer-events:none;
 }
 
 .photo-usm img{
+  position:relative !important;
+  z-index:2 !important;
   width:100% !important;
   height:100% !important;
-  min-height:0 !important;
-  max-width:100% !important;
-  max-height:100% !important;
+  min-height:100% !important;
+  max-width:none !important;
+  max-height:none !important;
   object-fit:contain !important;
   object-position:center center !important;
   transform:none !important;
@@ -3400,8 +3424,9 @@ header.nav{
 }
 
 @media(max-width:760px){
-  .photo-usm{
-    padding:12px !important;
+  .photo-usm::before{
+    inset:-18px;
+    filter:blur(14px) saturate(.84);
   }
 }
 </style></head>
