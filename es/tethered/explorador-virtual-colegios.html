@@ -602,6 +602,119 @@ img{display:block;width:100%;max-width:100%}
     line-height:1.10 !important;
   }
 }
+</style><style id="explorer-logo-compact">
+/* Compact Explorer logo pill */
+.explorer-mark{
+  min-width:0 !important;
+  width:auto !important;
+  min-height:0 !important;
+  padding:18px 28px !important;
+  border-radius:28px !important;
+  background:#f4f6f8 !important;
+  border:1px solid rgba(255,255,255,.14) !important;
+  box-shadow:0 8px 24px rgba(0,0,0,.10) !important;
+}
+
+.explorer-mark .tether-logo{
+  width:auto !important;
+  height:34px !important;
+  max-width:185px !important;
+  object-fit:contain !important;
+}
+
+@media(max-width:760px){
+  .explorer-mark{
+    padding:15px 22px !important;
+    border-radius:24px !important;
+  }
+  .explorer-mark .tether-logo{
+    height:30px !important;
+    max-width:165px !important;
+  }
+}
+</style><style id="explorer-hero-actions-style">
+/* Explorer hero actions */
+.explorer-hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:34px;
+}
+
+.explorer-hero-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:54px;
+  padding:0 26px;
+  border-radius:999px;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  transition:.2s ease;
+  text-decoration:none;
+}
+
+.explorer-hero-btn.primary{
+  background:#fff;
+  color:#090d12;
+  border:1px solid #fff;
+}
+
+.explorer-hero-btn.primary:hover{
+  transform:translateY(-1px);
+  background:#f2f4f6;
+}
+
+.explorer-hero-btn.secondary{
+  background:transparent;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.18);
+}
+
+.explorer-hero-btn.secondary:hover{
+  background:rgba(255,255,255,.06);
+  border-color:rgba(255,255,255,.30);
+}
+
+@media(max-width:760px){
+  .explorer-hero-actions{
+    gap:10px;
+    margin-top:28px;
+  }
+  .explorer-hero-btn{
+    min-height:50px;
+    padding:0 20px;
+    font-size:9px;
+  }
+}
+</style><style id="explorer-impact-inline-accent">
+/* Impact title — keep accent inline so the heading flows naturally */
+.impact h2 span{
+  display:inline !important;
+  margin-top:0 !important;
+}
+
+@media(max-width:760px){
+  .impact h2 span{
+    display:inline !important;
+  }
+}
+</style><style id="explorer-hero-clean">
+/* Cleaner hero — remove repeated role/meta block */
+.hero-bottom{
+  grid-template-columns:1fr !important;
+  gap:0 !important;
+}
+
+.hero-description{
+  max-width:840px !important;
+}
+
+.hero-role{
+  display:none !important;
+}
 </style></head><body>
 <header class="nav"><a class="brand" href="/es/">Felipe Quiroz</a><nav class="nav-links">
 <a href="/es/#work">Trabajo</a><a href="/es/about">Sobre mí</a><a href="/es/now">Ahora</a><a href="/es/blog">Blog</a>
@@ -611,74 +724,73 @@ img{display:block;width:100%;max-width:100%}
 <section class="hero"><div class="hero-inner">
 <div class="hero-top">
 <a aria-label="Volver a TetherEducation" class="tether-mark explorer-mark" href="/es/tethereducation">
-<img alt="Explorador Virtual de Colegios" class="tether-logo" src="/logos/virtual-school-explorer-logo.svg"/>
+<img alt="Virtual School Explorer" class="tether-logo" src="/logos/virtual-school-explorer-logo.svg"/>
 </a>
-<div class="hero-meta"><span>Case study / 01</span><span>2024</span><span>EdTech · AI · Discovery</span></div>
+<div class="hero-meta"><span>Caso de estudio / 01</span><span>2024</span><span>EdTech · IA · Descubrimiento</span></div>
 </div>
-<div class="hero-kicker">Discovery / IA / Partnerships</div>
+<div class="hero-kicker">Descubrimiento / IA / Partnerships</div>
 <h1>Explorador Virtual<span>de Colegios.</span></h1>
 <div class="hero-bottom">
-<p class="hero-description">Una plataforma de descubrimiento educativo impulsada por IA para ayudar a las familias a buscar, comparar y entender mejor sus opciones a través de mapas, filtros personalizados, perfiles digitales y herramientas de orientación.</p>
-<div class="hero-role"><strong>TetherEducation</strong><span>Head of Partnerships</span><span>Producto · Adopción · Educación pública</span><a class="hero-site" href="https://explorador.com/" rel="noopener noreferrer" target="_blank">explorador.com ↗</a></div>
+<p class="hero-description">Una plataforma de descubrimiento educativo impulsada por IA que ayuda a las familias a buscar, comparar y entender mejor sus opciones mediante mapas, filtros personalizados, perfiles digitales de colegios y herramientas de orientación.</p><div class="explorer-hero-actions"><a class="explorer-hero-btn primary" href="https://explorador.com/" rel="noopener noreferrer" target="_blank">Visitar sitio ↗</a><a class="explorer-hero-btn secondary" href="#video">Ver el Explorador en acción ↓</a></div>
 </div>
 </div></section><section class="impact"><div class="impact-head">
-<div><div class="section-label">01 / Impacto</div><h2>De descubrir opciones<span>a tomar mejores decisiones.</span></h2></div>
-<p class="impact-copy">El Explorer combinó producto, datos, IA y alianzas para acercar información educativa más clara a familias y comunidades.</p>
+<div><div class="section-label">01 / Impacto</div><h2>De descubrir opciones <span>a tomar mejores decisiones.</span></h2></div>
+<p class="impact-copy">El Explorador combinó producto, datos, IA y partnerships para hacer la información educativa más clara y útil para familias y comunidades.</p>
 </div>
 <div class="impact-grid">
-<div class="impact-item"><strong>20.000+</strong><span>Familias alcanzadas a través de alianzas en 2024</span></div>
+<div class="impact-item"><strong>20,000+</strong><span>Familias alcanzadas a través de partnerships en 2024</span></div>
 <div class="impact-item"><strong>100+</strong><span>Colegios públicos alcanzados en Chile</span></div>
-<div class="impact-item"><strong>IA + datos</strong><span>Orientación personalizada para decisiones educativas de alto impacto</span></div>
-<div class="impact-item"><strong>1 plataforma</strong><span>Búsqueda, comparación, disponibilidad y orientación en una sola experiencia</span></div>
+<div class="impact-item"><strong>AI + data</strong><span>Orientación personalizada para decisiones educativas de alto impacto</span></div>
+<div class="impact-item"><strong>1 platform</strong><span>Búsqueda, comparación, disponibilidad y orientación en una sola experiencia</span></div>
 </div></section><section class="role"><div class="role-grid">
 <div class="section-label">02 / Mi rol</div>
 <div class="role-main">
 <h2>Conectar producto, instituciones y familias.</h2>
-<p>Desde Partnerships trabajé en conectar el Explorador Virtual de Colegios con escuelas, familias, comunidades educativas, Servicios Locales de Educación Pública y otras instituciones vinculadas a educación.</p>
-<p>Mi foco estuvo en abrir puertas, construir relaciones estratégicas y traducir el valor del producto para distintos actores, ayudando a llevar la plataforma a contextos reales de uso y adopción.</p>
+<p>Desde Partnerships, trabajé para conectar el Explorador Virtual de Colegios con colegios, familias, comunidades educativas, Servicios Locales de Educación Pública y otras instituciones del ecosistema educativo.</p>
+<p>Mi foco estuvo en abrir puertas, construir relaciones estratégicas y traducir el valor del producto para distintos stakeholders, ayudando a llevar la plataforma a contextos reales de adopción e implementación.</p>
 <div class="snapshot">
 <div class="snapshot-item"><div class="snapshot-label">Producto</div><div class="snapshot-value">Explorador Virtual de Colegios</div></div>
 <div class="snapshot-item"><div class="snapshot-label">Rol</div><div class="snapshot-value">Head of Partnerships</div></div>
-<div class="snapshot-item"><div class="snapshot-label">Categoría</div><div class="snapshot-value">EdTech / AI</div></div>
-<div class="snapshot-item"><div class="snapshot-label">Foco</div><div class="snapshot-value">Discovery · Guidance · Adoption</div></div>
+<div class="snapshot-item"><div class="snapshot-label">Categoría</div><div class="snapshot-value">EdTech / IA</div></div>
+<div class="snapshot-item"><div class="snapshot-label">Foco</div><div class="snapshot-value">Descubrimiento · Orientación · Adopción</div></div>
 </div>
-<div class="snapshot-focus"><span>Partnerships</span><span>Product adoption</span><span>Public education</span><span>AI discovery</span><span>Family experience</span></div>
+<div class="snapshot-focus"><span>Partnerships</span><span>Adopción de producto</span><span>Educación pública</span><span>Descubrimiento con IA</span><span>Experiencia de familias</span></div>
 </div>
 </div></section><section class="product"><div class="product-head">
-<div><div class="section-label">03 / Producto &amp; IA</div><h2>Más que un mapa.<span>Una plataforma de orientación.</span></h2></div>
-<p>La experiencia combinaba búsqueda geográfica, datos de admisión, disponibilidad, perfiles enriquecidos y un asistente de IA para acompañar decisiones complejas.</p>
+<div><div class="section-label">03 / Producto e IA</div><h2>Más que un mapa.<span>Una plataforma de orientación.</span></h2></div>
+<p>La experiencia combinaba búsqueda geográfica, datos de admisión, disponibilidad, perfiles enriquecidos y un asistente de IA para acompañar decisiones educativas complejas.</p>
 </div>
-<div class="product-note"><strong>AI-powered discovery</strong><p>Las familias podían comenzar con filtros o conversar con el asistente, que ajustaba el mapa, aplicaba criterios y recomendaba opciones según sus necesidades.</p></div>
+<div class="product-note"><strong>Descubrimiento impulsado por IA</strong><p>Las familias podían comenzar con filtros o interactuar con el asistente, que podía mover el mapa, aplicar criterios y recomendar opciones según sus necesidades.</p></div>
 <div class="product-grid">
-<article class="product-item"><div class="product-num">01</div><div class="product-icon">↗</div><h3>Búsqueda inteligente</h3><div class="product-type">Discovery</div><p>Filtrar por distancia, nivel, costo, modelo educativo y otros criterios relevantes.</p></article>
-<article class="product-item"><div class="product-num">02</div><div class="product-icon">↗</div><h3>Probabilidad de admisión</h3><div class="product-type">Data</div><p>Estimaciones personalizadas usando datos históricos de postulación y reglas de asignación.</p></article>
-<article class="product-item"><div class="product-num">03</div><div class="product-icon">↗</div><h3>Disponibilidad real</h3><div class="product-type">Availability</div><p>Visibilidad de vacantes para conectar descubrimiento con oportunidades reales de matrícula.</p></article>
-<article class="product-item"><div class="product-num">04</div><div class="product-icon">↗</div><h3>Asistente de IA</h3><div class="product-type">Guidance</div><p>Una experiencia conversacional capaz de responder preguntas, mover el mapa y aplicar filtros.</p></article>
+<article class="product-item"><div class="product-num">01</div><div class="product-icon">↗</div><h3>Búsqueda inteligente</h3><div class="product-type">Descubrimiento</div><p>Filtrar por distancia, nivel, costo, modelo educativo y otros criterios relevantes.</p></article>
+<article class="product-item"><div class="product-num">02</div><div class="product-icon">↗</div><h3>Probabilidad de admisión</h3><div class="product-type">Datos</div><p>Estimaciones personalizadas basadas en datos históricos de postulaciones y reglas de asignación.</p></article>
+<article class="product-item"><div class="product-num">03</div><div class="product-icon">↗</div><h3>Vacantes reales</h3><div class="product-type">Disponibilidad</div><p>Visibilidad de vacantes disponibles, conectando descubrimiento con oportunidades reales de matrícula.</p></article>
+<article class="product-item"><div class="product-num">04</div><div class="product-icon">↗</div><h3>Asistente de IA</h3><div class="product-type">Orientación</div><p>Una experiencia conversacional capaz de responder preguntas, mover el mapa y aplicar filtros.</p></article>
 </div></section><section class="projects"><div class="projects-head">
-<div><div class="section-label">04 / Experiencia escolar</div><h2>Entender un colegio<span>más allá de una ficha.</span></h2></div>
-<p>Cada institución podía construir un perfil digital más rico, permitiendo a las familias entender mejor su propuesta, contexto y experiencia.</p>
+<div><div class="section-label">04 / Experiencia del colegio</div><h2>Entender un colegio<span>más allá de una ficha.</span></h2></div>
+<p>Cada institución podía construir un perfil digital más completo, ayudando a las familias a entender su propuesta educativa, contexto y experiencia de comunidad.</p>
 </div>
 <div class="explorer-profile-grid">
-<article class="explorer-profile-item"><small>Transparencia</small><strong>Costos y apoyo financiero</strong><p>Información para comparar aranceles, ayudas y entender mejor el costo real de cada alternativa.</p></article>
-<article class="explorer-profile-item"><small>Perfil digital</small><strong>Contenido multimedia</strong><p>Tours virtuales, videos de la comunidad y contenido para mostrar espacios, identidad y propuesta educativa.</p></article>
-<article class="explorer-profile-item"><small>Engagement</small><strong>Chatbot + CRM</strong><p>Conversaciones específicas por colegio conectadas con herramientas de seguimiento y relación.</p></article>
+<article class="explorer-profile-item"><small>Transparencia</small><strong>Arancel y ayuda financiera</strong><p>Información para comparar costos, apoyos y entender mejor el gasto real de cada alternativa.</p></article>
+<article class="explorer-profile-item"><small>Perfil digital</small><strong>Contenido multimedia</strong><p>Tours virtuales, videos de comunidad y contenido para mostrar espacios, identidad y propuesta educativa.</p></article>
+<article class="explorer-profile-item"><small>Interacción</small><strong>Chatbot + CRM</strong><p>Conversaciones específicas por colegio conectadas con herramientas de relación y seguimiento.</p></article>
 </div></section><section class="operating"><div class="operating-head">
 <div><div class="section-label">05 / Partnerships</div><h2>El producto necesitaba<span>relaciones para escalar.</span></h2></div>
-<p>En educación, la adopción no ocurre solo porque exista una buena plataforma. También depende de confianza, acceso institucional y entendimiento del contexto local.</p>
+<p>En educación, la adopción no ocurre solo porque exista una buena plataforma. También depende de confianza, acceso institucional y contexto local.</p>
 </div>
 <div class="work-list">
-<div class="work-item"><div class="work-num">01</div><strong>Conectar escuelas, familias y comunidades educativas</strong></div>
-<div class="work-item"><div class="work-num">02</div><strong>Construir relaciones con instituciones y actores públicos</strong></div>
+<div class="work-item"><div class="work-num">01</div><strong>Conectar colegios, familias y comunidades educativas</strong></div>
+<div class="work-item"><div class="work-num">02</div><strong>Construir relaciones con instituciones y actores del sector público</strong></div>
 <div class="work-item"><div class="work-num">03</div><strong>Traducir necesidades del mercado en señales de producto</strong></div>
 <div class="work-item"><div class="work-num">04</div><strong>Abrir oportunidades de adopción e implementación</strong></div>
 <div class="work-item"><div class="work-num">05</div><strong>Posicionar el valor del producto para distintos stakeholders</strong></div>
 <div class="work-item"><div class="work-num">06</div><strong>Conectar partnerships con crecimiento y alcance</strong></div>
 </div></section><section class="field explorer-demo" id="video"><div class="field-card">
 <div class="field-copy">
-<div class="section-label">06 / El Explorer en acción</div>
+<div class="section-label">06 / El Explorador en acción</div>
 <h2>Buscar, comparar<br/><span class="field-line">y decidir <span class="field-accent">en una sola experiencia.</span></span></h2>
 <p>Una mirada al producto y a cómo buscábamos simplificar el proceso de descubrir, comparar y entender opciones educativas.</p>
-<div class="field-meta"><span>Búsqueda en mapa</span><span>Asistente de IA</span><span>Orientación personalizada</span></div>
+<div class="field-meta"><span>Búsqueda por mapa</span><span>Asistente de IA</span><span>Orientación personalizada</span></div>
 </div>
 <div class="field-photo">
 <video autoplay="" loop="" muted="" playsinline="" preload="auto">
@@ -688,7 +800,7 @@ img{display:block;width:100%;max-width:100%}
 </div></section><section class="principle"><svg aria-hidden="true" class="principle-arc" preserveaspectratio="none" viewbox="0 0 1600 260"><path class="arc-glow" d="M-80 215 C 330 -70, 1270 -70, 1680 215"></path><path class="arc-line" d="M-80 215 C 330 -70, 1270 -70, 1680 215"></path></svg>
 <div class="principle-inner"><div class="section-label">07 / Aprendizaje</div><h2>Una buena solución necesita<span>un camino claro hacia la adopción.</span></h2>
 <div class="principle-grid">
-<div class="principle-item"><small>01 / Producto</small><strong>Convertir información compleja en decisiones más claras.</strong><p>IA, datos y diseño podían ayudar a familias a navegar una decisión difícil de forma mucho más simple.</p></div>
+<div class="principle-item"><small>01 / Producto</small><strong>Convertir información compleja en decisiones más claras.</strong><p>IA, datos y diseño podían ayudar a las familias a navegar una decisión difícil de una forma mucho más simple.</p></div>
 <div class="principle-item"><small>02 / Partnerships</small><strong>Diseñar cómo el producto entra al sistema.</strong><p>En mercados complejos, las relaciones y la confianza también funcionan como infraestructura de adopción.</p></div>
 </div></div></section><section class="project-nav"><div class="project-nav-inner">
 <a href="/es/tethereducation"><div class="project-nav-label">Volver</div><strong>TetherEducation</strong></a>
