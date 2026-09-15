@@ -646,6 +646,139 @@ img{display:block;width:100%;max-width:100%}
   .ai-partner img{max-height:24px;max-width:145px}
   .ai-collab-item{min-height:0;padding:24px 0 28px!important}
 }
+</style><style id="ai-product-title-lines">
+/* Product title — control line break cleanly */
+.product h2 .product-line{
+  display:block !important;
+  white-space:nowrap !important;
+}
+.product h2 .product-line + .product-line{
+  margin-top:.04em !important;
+}
+@media(max-width:760px){
+  .product h2 .product-line{
+    white-space:normal !important;
+  }
+}
+</style><style id="ai-field-horizontal-style">
+/* AI implementation — horizontal photo layout */
+.ai-field-horizontal{
+  background:#05070a;
+  color:#fff;
+  padding:104px var(--page,5vw) 112px;
+}
+
+.ai-field-horizontal .ai-field-inner{
+  width:min(var(--max,1320px),100%);
+  margin:0 auto;
+}
+
+.ai-field-horizontal .section-label{
+  color:#57adff;
+}
+
+.ai-field-horizontal .ai-field-head{
+  display:grid;
+  grid-template-columns:.52fr 1.48fr;
+  gap:72px;
+  align-items:start;
+}
+
+.ai-field-horizontal h2{
+  margin:0;
+  max-width:940px;
+  font-family:Manrope,sans-serif;
+  font-size:clamp(46px,5.6vw,78px);
+  font-weight:500;
+  line-height:1.03;
+  letter-spacing:-.055em;
+  color:#fff;
+}
+
+.ai-field-horizontal h2 span{
+  color:#a8bfd9;
+}
+
+.ai-field-horizontal .ai-field-copy{
+  max-width:720px;
+  margin:28px 0 0;
+  color:#aeb8c3;
+  font-size:16px;
+  line-height:1.8;
+}
+
+.ai-field-horizontal .ai-field-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:26px;
+}
+
+.ai-field-horizontal .ai-field-meta span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:38px;
+  padding:0 14px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:999px;
+  color:#c5ced8;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+
+.ai-field-horizontal .ai-photo-wrap{
+  margin-top:58px;
+  overflow:hidden;
+  border-radius:28px;
+  background:#10141a;
+}
+
+.ai-field-horizontal .ai-photo-wrap img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  object-position:center center;
+}
+
+.ai-field-horizontal .ai-photo-caption{
+  margin:18px 0 0;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.12);
+  color:#8f99a5;
+  font-size:11px;
+  line-height:1.65;
+}
+
+.ai-field-horizontal .ai-photo-caption strong{
+  color:#d7dee6;
+  font-weight:500;
+}
+
+@media(max-width:900px){
+  .ai-field-horizontal .ai-field-head{
+    grid-template-columns:1fr;
+    gap:26px;
+  }
+}
+
+@media(max-width:760px){
+  .ai-field-horizontal{
+    padding:78px 22px 84px;
+  }
+  .ai-field-horizontal h2{
+    font-size:42px;
+    line-height:1.08;
+  }
+  .ai-field-horizontal .ai-photo-wrap{
+    margin-top:38px;
+    border-radius:18px;
+  }
+}
 </style></head><body>
 <header class="nav"><a class="brand" href="/es/">Felipe Quiroz</a><nav class="nav-links">
 <a href="/es/#work">Work</a><a href="/es/about">About</a><a href="/es/now">Now</a><a href="/es/blog">Blog</a>
@@ -690,7 +823,7 @@ img{display:block;width:100%;max-width:100%}
 <div class="snapshot-focus"><span>AI adoption</span><span>Public education</span><span>Implementation</span><span>Research</span><span>Stakeholder coordination</span></div>
 </div>
 </div></section><section class="product"><div class="product-head">
-<div><div class="section-label">03 / IA en educación</div><h2>De experimentar con IA<span>a integrarla con propósito.</span></h2></div>
+<div><div class="section-label">03 / IA en educación</div><h2><span class="product-line">De experimentar con IA a</span><span class="product-line">integrarla con propósito.</span></h2></div>
 <p>El objetivo no era introducir tecnología por sí sola, sino entender cómo herramientas de IA generativa podían fortalecer gestión, comunicación y aprendizaje dentro de comunidades escolares.</p>
 </div>
 <div class="product-note"><strong>Responsible adoption</strong><p>La colaboración buscó estudiar una integración efectiva y equitativa de herramientas como ChatGPT en contextos educativos reales.</p></div>
@@ -718,10 +851,29 @@ img{display:block;width:100%;max-width:100%}
 <div class="work-item"><div class="work-num">04</div><strong>Acompañamiento de adopción y uso de herramientas de IA</strong></div>
 <div class="work-item"><div class="work-num">05</div><strong>Conexión entre aprendizajes de terreno y equipos internos</strong></div>
 <div class="work-item"><div class="work-num">06</div><strong>Seguimiento de implementación y aprendizaje continuo</strong></div>
-</div></section><section class="principle"><svg aria-hidden="true" class="principle-arc" preserveaspectratio="none" viewbox="0 0 1600 260"><path class="arc-glow" d="M-80 215 C 330 -70, 1270 -70, 1680 215"></path><path class="arc-line" d="M-80 215 C 330 -70, 1270 -70, 1680 215"></path></svg>
-<div class="principle-inner"><div class="section-label">06 / Aprendizaje</div>
+</div></section><section class="ai-field-horizontal">
+<div class="ai-field-inner">
+<div class="ai-field-head">
+<div class="section-label">06 / Implementación en terreno</div>
+<div>
+<h2>La adopción ocurre cuando <span>la tecnología llega al contexto real.</span></h2>
+<p class="ai-field-copy">Parte del trabajo consistió en acompañar establecimientos participantes, entender cómo estudiantes y equipos educativos se relacionaban con estas herramientas y conectar esos aprendizajes con la implementación del programa.</p>
+<div class="ai-field-meta">
+<span>IA generativa</span>
+<span>Implementación</span>
+<span>Comunidad educativa</span>
+</div>
+</div>
+</div>
+<div class="ai-photo-wrap">
+<img alt="Sesión de trabajo con estudiantes y comunidad educativa durante la implementación del programa de adopción de IA generativa" src="/images/ai-education-school-implementation.jpg"/>
+</div>
+<p class="ai-photo-caption"><strong>Implementación en establecimientos participantes</strong><br/>Sesión de trabajo con estudiantes y comunidad educativa en el marco del programa de adopción de IA generativa.</p>
+</div>
+</section><section class="principle"><svg aria-hidden="true" class="principle-arc" preserveaspectratio="none" viewbox="0 0 1600 260"><path class="arc-glow" d="M-80 215 C 330 -70, 1270 -70, 1680 215"></path><path class="arc-line" d="M-80 215 C 330 -70, 1270 -70, 1680 215"></path></svg>
+<div class="principle-inner"><div class="section-label">07 / Aprendizaje</div>
 <h2><span class="principle-line">IA con propósito.</span><span class="principle-line">Adopción con contexto.</span></h2>
 <div class="principle-grid">
 <div class="principle-item"><small>01 / Tecnología</small><strong>La herramienta importa menos que el problema.</strong><p>El valor aparece cuando la IA responde a necesidades reales de las comunidades educativas.</p></div>
 <div class="principle-item"><small>02 / Implementación</small><strong>El contexto define la adopción.</strong><p>Capacidades, procesos y cultura institucional son parte de cualquier estrategia de transformación con IA.</p></div>
-</div></div></section><section class="project-nav"><div class="project-nav-inner"><a href="/es/tethereducation"><div class="project-nav-label">Volver</div><strong>TetherEducation</strong></a><a href="https://tetherstudio.ai/" rel="noopener noreferrer" target="_blank"><div class="project-nav-label">Siguiente proyecto</div><strong>Tether Studio</strong></a></div></section><section class="bottom" id="contact"><div class="contact-block"><div class="contact-copy"><div class="section-label">Contacto</div><h3>Hablemos.</h3></div><div class="contact-links"><a class="contact-link" href="https://www.linkedin.com/in/felipequirozp" rel="noopener noreferrer" target="_blank">LinkedIn</a><a class="contact-link" href="https://www.instagram.com/felipe_quirozp/" rel="noopener noreferrer" target="_blank">Instagram</a><a class="contact-link" href="mailto:felipe@lowsignal.cl">Email</a></div></div><footer class="footer"><div>© 2026 Felipe Quiroz</div><div>Santiago / CL</div></footer></section></body></html>
+</div></div></section><section class="project-nav"><div class="project-nav-inner"><a href="/es/tethereducation"><div class="project-nav-label">Volver</div><strong>TetherEducation</strong></a><a href="/es/tethered/tether-studio"><div class="project-nav-label">Siguiente proyecto</div><strong>Tether Studio</strong></a></div></section><section class="bottom" id="contact"><div class="contact-block"><div class="contact-copy"><div class="section-label">Contacto</div><h3>Hablemos.</h3></div><div class="contact-links"><a class="contact-link" href="https://www.linkedin.com/in/felipequirozp" rel="noopener noreferrer" target="_blank">LinkedIn</a><a class="contact-link" href="https://www.instagram.com/felipe_quirozp/" rel="noopener noreferrer" target="_blank">Instagram</a><a class="contact-link" href="mailto:felipe@lowsignal.cl">Email</a></div></div><footer class="footer"><div>© 2026 Felipe Quiroz</div><div>Santiago / CL</div></footer></section></body></html>
