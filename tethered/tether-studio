@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Tether Studio | Felipe Quiroz</title><meta content="#05070a" name="theme-color"/><link href="/favicon.png" rel="icon" type="image/png"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/><style>
+:root{
+  --black:#05070a;
+  --black-2:#0a0e14;
+  --white:#ffffff;
+  --paper:#f6f7f9;
+  --ink:#0b0f14;
+  --muted:#687382;
+  --muted-dark:#98a3b0;
+  --line:#dde2e8;
+  --line-dark:rgba(255,255,255,.10);
+  --blue:#1683ff;
+  --blue-light:#9acfff;
+  --page:5vw;
+  --max:1520px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--black);color:var(--white);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
+img{display:block;width:100%;max-width:100%}
+::selection{background:var(--blue);color:#fff}
+.wrap{width:min(var(--max),100%);margin:0 auto}
+.section-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7f8a98}
+
+/* NAV — same family as About / Now */
+.nav{position:sticky;top:0;z-index:1000;min-height:84px;padding:0 var(--page);display:flex;align-items:center;justify-content:space-between;gap:30px;background:rgba(5,7,10,.94);border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.brand{font-family:Manrope,sans-serif;font-size:17px;font-weight:600;letter-spacing:-.04em;color:#fff;white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:30px;font-size:10px;font-weight:500;letter-spacing:.07em;text-transform:uppercase}
+.nav-links>a{position:relative;color:#bcc4ce;transition:.2s ease}
+.nav-links>a:not(.contact-nav):not(.lang-switch)::after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:1px;background:#fff;transition:width .22s ease}
+.nav-links>a:not(.contact-nav):not(.lang-switch):hover,.nav-links>a.active{color:#fff}
+.nav-links>a:not(.contact-nav):not(.lang-switch):hover::after,.nav-links>a.active:not(.contact-nav):not(.lang-switch)::after{width:100%}
+.contact-nav{padding:9px 15px;border:1px solid rgba(255,255,255,.25);border-radius:999px;color:#fff!important;transition:.22s ease}
+.contact-nav:hover,.contact-nav:focus-visible,.contact-nav:active{background:#fff;color:#07101b!important;border-color:#fff;outline:none}
+.lang-switch{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.20);border-radius:50%;color:#b7c0ca!important}
+.lang-switch:hover{background:rgba(255,255,255,.08);color:#fff!important}
+
+/* HERO */
+.hero{min-height:calc(100svh - 84px);padding:92px var(--page) 76px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(5,7,10,.99) 0%,rgba(7,12,20,.98) 55%,rgba(9,25,46,.94) 100%);border-bottom:1px solid var(--line-dark);overflow:hidden}
+.hero-inner{width:min(var(--max),100%);margin:0 auto}
+.hero-top{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:96px}
+.tether-mark{display:inline-flex;align-items:center;justify-content:center;min-height:64px;min-width:250px;padding:0 26px;border:1px solid rgba(255,255,255,.14);border-radius:20px;background:rgba(255,255,255,.025);box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
+.tether-logo{display:block;width:auto;height:26px;max-width:100%}
+.hero-meta{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.hero-meta span{padding:10px 14px;border:1px solid rgba(255,255,255,.12);border-radius:999px;color:#aeb7c2;font-size:9px;letter-spacing:.09em;text-transform:uppercase}
+.hero-kicker{margin-bottom:28px;color:#63b2ff;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+.hero h1{margin:0;max-width:1240px;font-family:Manrope,sans-serif;font-size:clamp(72px,6.8vw,124px);font-weight:400;line-height:.94;letter-spacing:-.062em;text-wrap:balance}
+.hero h1 span{display:block;margin-top:.05em;color:#a8bfd9}
+.hero-bottom{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(300px,.55fr);gap:clamp(50px,8vw,130px);margin-top:60px;padding-top:28px;border-top:1px solid rgba(255,255,255,.10)}
+.hero-description{margin:0;max-width:760px;color:#bdc5cf;font-size:15px;line-height:1.78}
+.hero-role strong{display:block;font-family:Manrope,sans-serif;font-size:18px;font-weight:500;letter-spacing:-.035em}
+.hero-role span{display:block;margin-top:8px;color:#8994a0;font-size:11px;line-height:1.5}
+.hero-site{display:inline-flex!important;align-items:center;gap:5px;margin-top:10px!important;color:#d6dde7!important;text-decoration:none;border-bottom:1px solid rgba(214,221,231,.28);width:max-content;padding-bottom:2px;font-size:14px!important;line-height:1.35;letter-spacing:.01em;transition:color .2s ease,border-color .2s ease}
+.hero-site:hover{color:#58acff!important;border-color:#58acff}
+
+/* IMPACT — white, flat, numbers + dividers */
+.impact{padding:112px var(--page);background:#fff;color:var(--ink)}
+.impact-head{width:min(var(--max),100%);margin:0 auto 56px;display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.48fr);gap:clamp(50px,8vw,130px);align-items:end}
+.impact h2{margin:18px 0 0;max-width:900px;font-family:Manrope,sans-serif;font-size:clamp(54px,6vw,92px);font-weight:400;line-height:.95;letter-spacing:-.067em}
+.impact h2 span{display:block;color:#8fa0b5}
+.impact-copy{margin:0;color:var(--muted);font-size:15px;line-height:1.78}
+.impact-grid{width:min(var(--max),100%);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.impact-item{min-height:190px;padding:30px 28px;border-right:1px solid var(--line)}
+.impact-item:last-child{border-right:0}
+.impact-item strong{display:block;font-family:Manrope,sans-serif;font-size:clamp(48px,4.5vw,72px);font-weight:400;letter-spacing:-.06em;color:#111923}
+.impact-item span{display:block;margin-top:18px;max-width:230px;color:#6a7480;font-size:12px;line-height:1.6}
+
+/* ROLE / SNAPSHOT */
+.role{padding:112px var(--page);background:var(--paper);color:var(--ink)}
+.role-grid{width:min(var(--max),100%);margin:0 auto;display:grid;grid-template-columns:minmax(180px,.28fr) minmax(0,1.1fr);gap:clamp(50px,8vw,130px)}
+.role-main h2{margin:18px 0 30px;max-width:900px;font-family:Manrope,sans-serif;font-size:clamp(50px,5.5vw,84px);font-weight:400;line-height:.98;letter-spacing:-.063em}
+.role-main>p{margin:0 0 18px;max-width:860px;color:var(--muted);font-size:15px;line-height:1.8}
+.snapshot{margin-top:42px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr)}
+.snapshot-item{padding:24px 20px;border-right:1px solid var(--line)}
+.snapshot-item:last-child{border-right:0}
+.snapshot-label{color:#85909d;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.snapshot-value{margin-top:10px;color:#17202c;font-size:14px;line-height:1.55}
+.snapshot-focus{margin-top:16px;display:flex;flex-wrap:wrap;gap:9px}
+.snapshot-focus span{padding:9px 12px;border:1px solid #d7dde4;border-radius:999px;background:#fff;color:#293646;font-size:10px;font-weight:600;letter-spacing:.04em}
+
+/* PEOPLE */
+.people{margin-top:70px}
+.people-head{display:grid;grid-template-columns:minmax(160px,.3fr) minmax(0,1fr);gap:40px;margin-bottom:30px;align-items:start}
+.people-head p{margin:0;max-width:760px;color:var(--muted);font-size:14px;line-height:1.75}
+.people-list{border-top:1px solid var(--line)}
+.person{display:grid;grid-template-columns:92px minmax(240px,.65fr) minmax(0,1fr) auto;gap:26px;align-items:center;padding:26px 0;border-bottom:1px solid var(--line)}
+.person-photo{width:84px;height:84px;border-radius:50%;overflow:hidden;background:#eef4fb;border:1px solid #d3dbe4;position:relative;display:grid;place-items:center}
+.person-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;position:absolute;inset:0;z-index:2}
+.person-kicker{color:#7690ad;font-size:9px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;margin-bottom:6px}
+.person h3{margin:0;font-family:Manrope,sans-serif;font-size:28px;font-weight:500;letter-spacing:-.045em}
+.person-role{margin-top:8px;color:#667383;font-size:11px;line-height:1.6}
+.person-context{margin:0;max-width:600px;color:#536172;font-size:13px;line-height:1.75}
+.person-links{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.icon-link{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid #d6dde5;border-radius:50%;background:#fff;color:#17202b;transition:.2s ease}
+.icon-link:hover{background:#0a0d11;color:#fff;border-color:#0a0d11;transform:translateY(-1px)}
+.icon-link svg{width:16px;height:16px}
+.backing{margin-top:34px;padding-top:26px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:30px}
+.backing-logo{display:inline-flex;align-items:center;flex:0 0 auto}
+.backing-logo img{display:block;height:34px;width:auto;opacity:.96}
+.backing p{margin:0;max-width:760px;color:#6b7581;font-size:13px;line-height:1.7}
+.backing p a{text-decoration:underline;text-underline-offset:4px}
+
+/* PRODUCT — black, like lenses / Fintoc feature band */
+.product{padding:112px var(--page);background:var(--black);color:#fff}
+.product-head{width:min(var(--max),100%);margin:0 auto 54px;display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.5fr);gap:clamp(50px,8vw,120px);align-items:end}
+.product h2{margin:18px 0 0;max-width:920px;font-family:Manrope,sans-serif;font-size:clamp(52px,5.8vw,88px);line-height:.96;letter-spacing:-.065em;font-weight:400}
+.product h2 span{display:block;color:#9bb0c8}
+.product-head p{margin:0;color:#9aa4b0;font-size:15px;line-height:1.76}
+.product-note{width:min(var(--max),100%);margin:0 auto 28px;padding:18px 20px;border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark);display:grid;grid-template-columns:170px 1fr;gap:30px}
+.product-note strong{color:#62b1ff;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.product-note p{margin:0;color:#a8b1bc;font-size:13px;line-height:1.7}
+.product-grid{width:min(var(--max),100%);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark)}
+.product-item{min-height:330px;padding:30px 28px;border-right:1px solid var(--line-dark);position:relative}
+.product-item:last-child{border-right:0}
+.product-num{color:#4e5a67;font-size:10px;letter-spacing:.1em}
+.product-icon{position:absolute;right:28px;top:28px;width:38px;height:38px;border-radius:10px;display:grid;place-items:center;border:1px solid rgba(80,161,255,.22);color:#65b0ff;background:rgba(22,131,255,.05)}
+.product-item h3{margin:92px 0 8px;font-family:Manrope,sans-serif;font-size:27px;font-weight:500;letter-spacing:-.045em}
+.product-type{margin-bottom:14px;color:#67b4ff;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.product-item p{margin:0;max-width:330px;color:#909aa6;font-size:13px;line-height:1.72}
+
+/* PROJECTS — white journey-style list */
+.projects{padding:112px var(--page);background:#fff;color:var(--ink)}
+.projects-head{width:min(var(--max),100%);margin:0 auto 52px;display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.55fr);gap:clamp(50px,8vw,120px);align-items:end}
+.projects h2{margin:18px 0 0;max-width:920px;font-family:Manrope,sans-serif;font-size:clamp(50px,5.5vw,84px);line-height:.98;letter-spacing:-.063em;font-weight:400}
+.projects-head p{margin:0;color:var(--muted);font-size:15px;line-height:1.76}
+.project-list{width:min(var(--max),100%);margin:0 auto;border-top:1px solid var(--line)}
+.project{display:grid;grid-template-columns:54px minmax(260px,.72fr) minmax(0,1fr);gap:24px 38px;align-items:start;padding:30px 0;border-bottom:1px solid var(--line);transition:background .2s ease,padding .2s ease}
+.project:hover{background:#f7f9fb;padding-left:16px;padding-right:16px}
+.project-num{padding-top:5px;color:#8995a2;font-size:9px;letter-spacing:.09em}
+.project-type{color:#718399;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.project h3{margin:0;font-family:Manrope,sans-serif;font-size:30px;font-weight:500;line-height:1.06;letter-spacing:-.045em}
+.project-body p{margin:0;color:#5f6b79;font-size:13px;line-height:1.75}
+.project-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;margin-bottom:30px}
+.project-meta span{padding:8px 10px;border:1px solid #dce2e8;border-radius:999px;color:#344355;font-size:9px;font-weight:600;letter-spacing:.04em;background:#fff}
+.project-contribution{margin-top:0;padding-top:0;border-top:0;color:#354354!important}
+.project-contribution strong{color:#73859a;font-size:9px;letter-spacing:.1em;text-transform:uppercase;margin-right:8px}
+.project-link{display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:#17202c;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid #a9b3bf;padding-bottom:3px}
+.project-link:hover{color:var(--blue);border-color:var(--blue)}
+
+/* WORK CONTEXT — paper + dark/photo card like About */
+.field{padding:0 var(--page) 112px;background:var(--paper);color:#fff}
+.field-card{width:min(var(--max),100%);margin:0 auto;display:grid;grid-template-columns:minmax(0,1.16fr) minmax(420px,.84fr);min-height:620px;border-radius:24px;overflow:hidden;background:#070b11;border:1px solid rgba(10,15,22,.08)}
+.field-copy{padding:78px 68px;display:flex;flex-direction:column;justify-content:center}
+.field-copy .section-label{color:#69b5ff}
+.field-copy h2{margin:20px 0 30px;max-width:720px;font-family:Manrope,sans-serif;font-size:clamp(44px,4.05vw,64px);line-height:1.08;letter-spacing:-.055em;font-weight:400;text-wrap:balance}
+.field-copy h2 .field-line{display:block;color:#fff;white-space:nowrap}
+.field-copy h2 .field-accent{color:#9fb2c8}
+.field-copy p{margin:0;max-width:590px;color:#b7c0cb;font-size:15px;line-height:1.88}
+.field-photo{position:relative;min-height:620px;overflow:hidden}
+.field-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,11,17,.42),transparent 24%)}
+.field-photo img{width:100%;height:100%;min-height:620px;object-fit:cover;object-position:center 45%}
+.field-meta{margin-top:30px;display:flex;gap:10px;flex-wrap:wrap}
+.field-meta span{padding:9px 12px;border:1px solid rgba(255,255,255,.15);border-radius:999px;color:#aeb8c4;font-size:9px;letter-spacing:.08em;text-transform:uppercase}
+
+/* OPERATING — white list */
+.operating{padding:112px var(--page);background:#fff;color:var(--ink)}
+.operating-head{width:min(var(--max),100%);margin:0 auto 50px;display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.55fr);gap:clamp(50px,8vw,120px);align-items:end}
+.operating h2{margin:18px 0 0;max-width:900px;font-family:Manrope,sans-serif;font-size:clamp(50px,5.5vw,84px);line-height:.98;letter-spacing:-.063em;font-weight:400}
+.operating h2 span{display:block;color:#8fa0b5}
+.operating-head p{margin:0;color:var(--muted);font-size:15px;line-height:1.76}
+.work-list{width:min(var(--max),100%);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.work-item{display:grid;grid-template-columns:52px 1fr;gap:16px;padding:26px 0;border-bottom:1px solid var(--line)}
+.work-item:nth-child(odd){padding-right:34px;border-right:1px solid var(--line)}
+.work-item:nth-child(even){padding-left:34px}
+.work-num{color:#8a96a4;font-size:9px;letter-spacing:.09em;padding-top:4px}
+.work-item strong{font-family:Manrope,sans-serif;font-size:20px;font-weight:500;line-height:1.35;letter-spacing:-.03em}
+
+/* PRINCIPLE — one clean arc only, same logic as About */
+.principle{position:relative;min-height:740px;padding:150px var(--page) 100px;display:flex;align-items:center;background:#05070a;color:#fff;overflow:hidden}
+.principle-arc{position:absolute;left:0;top:42px;width:100%;height:260px;z-index:1;pointer-events:none}
+.principle-arc .arc-glow{fill:none;stroke:rgba(41,137,255,.16);stroke-width:14;stroke-linecap:round}
+.principle-arc .arc-line{fill:none;stroke:#59adff;stroke-width:6;stroke-linecap:round}
+.principle-inner{position:relative;z-index:2;width:min(var(--max),100%);margin:0 auto;text-align:center}
+.principle .section-label{color:#69b5ff}
+.principle h2{margin:24px auto 0;max-width:1120px;font-family:Manrope,sans-serif;font-size:clamp(58px,6.2vw,94px);line-height:.98;letter-spacing:-.067em;font-weight:400}
+.principle h2 span{display:block;color:#a8bfd9}
+.principle-grid{max-width:980px;margin:58px auto 0;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark);text-align:left}
+.principle-item{padding:26px 30px;min-height:180px}
+.principle-item:first-child{border-right:1px solid var(--line-dark)}
+.principle-item small{color:#66b4ff;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.principle-item strong{display:block;margin-top:16px;font-family:Manrope,sans-serif;font-size:25px;font-weight:500;line-height:1.2;letter-spacing:-.04em}
+.principle-item p{margin:12px 0 0;color:#909aa6;font-size:12px;line-height:1.7}
+
+/* NAV BETWEEN PROJECTS — simple, no cards */
+.project-nav{padding:74px var(--page);background:var(--paper);color:var(--ink);border-bottom:1px solid var(--line)}
+.project-nav-inner{width:min(var(--max),100%);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.project-nav a{padding:28px 0;transition:.2s ease}
+.project-nav a:last-child{text-align:right;border-left:1px solid var(--line);padding-left:30px}
+.project-nav a:first-child{padding-right:30px}
+.project-nav a:hover{background:#fff;padding-left:18px;padding-right:18px}
+.project-nav-label{color:#85919f;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.project-nav strong{display:block;margin-top:8px;font-family:Manrope,sans-serif;font-size:28px;font-weight:500;letter-spacing:-.04em}
+
+/* CONTACT — exactly About/Now family */
+.bottom{padding:80px var(--page) 40px;background:#fff;color:var(--ink);border-top:1px solid var(--line)}
+.contact-block{width:min(var(--max),100%);margin:0 auto;padding-bottom:66px;display:flex;justify-content:space-between;align-items:flex-end;gap:50px;border-bottom:1px solid var(--line)}
+.contact-copy h3{margin:14px 0 0;font-family:Manrope,sans-serif;font-size:clamp(42px,5vw,72px);line-height:1;letter-spacing:-.055em;font-weight:500}
+.contact-links{display:flex;flex-wrap:wrap;gap:10px}
+.contact-link{padding:11px 16px;border:1px solid rgba(11,13,16,.18);border-radius:999px;font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;transition:.2s ease}
+.contact-link:hover{background:var(--black);color:#fff;border-color:var(--black)}
+.footer{width:min(var(--max),100%);margin:0 auto;padding-top:30px;display:flex;justify-content:space-between;gap:20px;color:#727b86;font-size:9px;letter-spacing:.07em;text-transform:uppercase}
+
+@media(max-width:1080px){
+  .impact-grid,.product-grid{grid-template-columns:1fr 1fr}
+  .impact-item:nth-child(2),.product-item:nth-child(2){border-right:0}
+  .impact-item:nth-child(-n+2),.product-item:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .product-item:nth-child(-n+2){border-bottom-color:var(--line-dark)}
+  .snapshot{grid-template-columns:1fr 1fr}
+  .snapshot-item:nth-child(2){border-right:0}.snapshot-item:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .field-card{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .hero-bottom,.impact-head,.role-grid,.product-head,.projects-head,.operating-head{grid-template-columns:1fr}
+  .hero-top{margin-bottom:58px}
+  .person{grid-template-columns:84px 1fr}.person-context{grid-column:2}.person-links{grid-column:2;justify-content:flex-start}
+  .project{grid-template-columns:44px 1fr}.project-body{grid-column:2}
+  .field-card{grid-template-columns:1fr}.field-photo{min-height:460px}.field-photo img{min-height:460px}
+  .work-list{grid-template-columns:1fr}.work-item:nth-child(odd){padding-right:0;border-right:0}.work-item:nth-child(even){padding-left:0}
+  .principle-grid{grid-template-columns:1fr}.principle-item:first-child{border-right:0;border-bottom:1px solid var(--line-dark)}
+}
+@media(max-width:760px){
+  :root{--page:24px}
+  .nav{min-height:auto;padding:18px 20px;flex-direction:column;align-items:flex-start;gap:14px}
+  .brand{font-size:18px}.nav-links{width:100%;justify-content:space-between;gap:8px;font-size:9px}.contact-nav{padding:8px 10px}.lang-switch{width:34px;height:34px}
+  .hero{min-height:auto;padding:78px var(--page) 64px}.hero-top{align-items:flex-start;flex-direction:column;gap:20px;margin-bottom:62px}.hero-meta{justify-content:flex-start}.hero h1{font-size:clamp(52px,13vw,72px);line-height:.98}.hero-bottom{margin-top:42px}.tether-mark{min-height:60px;min-width:210px;padding:0 24px}.tether-logo{height:24px}
+  .impact,.role,.product,.projects,.operating{padding:82px var(--page)}
+  .impact h2,.role-main h2,.product h2,.projects h2,.operating h2{font-size:43px}
+  .impact-grid,.product-grid,.snapshot{grid-template-columns:1fr}
+  .impact-item,.product-item,.snapshot-item{border-right:0!important;border-bottom:1px solid var(--line)}
+  .impact-item:last-child,.snapshot-item:last-child{border-bottom:0}
+  .product-item{border-bottom-color:var(--line-dark)}.product-item:last-child{border-bottom:0}
+  .impact-item{min-height:150px}.product-item{min-height:270px;padding:26px 22px}.product-item h3{margin-top:64px}
+  .role-grid{gap:36px}.people-head{grid-template-columns:1fr;gap:14px}.person{grid-template-columns:70px 1fr;gap:18px}.person-photo{width:68px;height:68px}.person h3{font-size:24px}.person-context,.person-links{grid-column:1/-1}.backing{align-items:flex-start;flex-direction:column}
+  .product-note{grid-template-columns:1fr;gap:10px}
+  .project{grid-template-columns:34px 1fr;gap:18px}.project h3{font-size:25px}.project-body{grid-column:2}
+  .field{padding:0 var(--page) 82px}.field-card{border-radius:20px}.field-copy{padding:54px 28px}.field-copy h2{font-size:41px;line-height:1.08}.field-copy h2 .field-line{white-space:normal}.field-photo,.field-photo img{min-height:340px}
+  .principle{min-height:600px;padding:118px var(--page) 82px}.principle-arc{top:28px;height:190px}.principle-arc .arc-glow{stroke-width:11}.principle-arc .arc-line{stroke-width:5}.principle h2{font-size:48px}.principle-grid{margin-top:42px}
+  .project-nav-inner{grid-template-columns:1fr}.project-nav a:last-child{text-align:left;border-left:0;border-top:1px solid var(--line);padding-left:0}.project-nav a:hover{padding-left:12px;padding-right:12px}
+  .contact-block{flex-direction:column;align-items:flex-start;gap:34px}.footer{flex-direction:column;align-items:flex-start;gap:8px}
+}
+@media(max-width:390px){.nav-links{font-size:8px}.hero h1{font-size:48px}.impact h2,.role-main h2,.product h2,.projects h2,.operating h2{font-size:40px}.field-copy h2{font-size:36px}.principle h2{font-size:44px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+
+/* v12 — project logos + corrected asset paths */
+.project-brand-row{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:0 0 16px}
+.project-brand{
+  display:inline-flex;align-items:center;justify-content:center;
+  height:46px;min-height:46px;max-width:210px;padding:5px 12px;box-sizing:border-box;
+  border:1px solid #e1e6ec;border-radius:14px;background:#fff;
+}
+.project-brand img{display:block;max-width:100%;width:auto;height:32px;object-fit:contain}
+.project-brand.wide img{height:34px;max-width:190px}
+.project-brand.compact img{height:30px;max-width:155px}
+.project-brand.columbia img{height:40px;max-width:210px}
+.project-brand.dark{background:#07101a;border-color:#16283f}
+.project-brand.dark img{filter:none}
+.project-brand.clean{height:auto;padding:4px 0;border:0;background:transparent;border-radius:0;min-height:auto}
+.project-brand.clean img{height:31px}
+.project-brand-row + .project-type{margin-top:2px}
+.project-head-copy{min-width:0}
+@media(max-width:760px){
+  .project-brand-row{gap:8px;margin-bottom:14px}
+  .project-brand{height:42px;min-height:42px;padding:4px 9px;border-radius:12px;max-width:175px}
+  .project-brand img{height:29px}
+  .project-brand.wide img{height:31px;max-width:160px}
+  .project-brand.compact img{height:27px;max-width:132px}
+  .project-brand.columbia img{height:34px;max-width:185px}
+  .project-brand.clean{height:auto}
+  .project-brand.clean img{height:27px}
+}
+
+
+
+/* v16 — SLEP Del Pino uses the new full-color transparent mark */
+.project-brand.slep{height:auto;padding:0;border:0;background:transparent;border-radius:0;min-height:auto;max-width:190px}
+.project-brand.slep img{height:auto;max-height:46px;max-width:185px;width:auto;object-fit:contain}
+@media(max-width:760px){.project-brand.slep{height:auto;max-width:158px}.project-brand.slep img{max-height:40px;max-width:154px}}
+
+/* v14 — logo treatment refinement */
+/* Avalanche needs contrast because its supplied mark is white. */
+.backing-logo{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+  min-height:52px;
+  padding:10px 16px;
+  border:1px solid #182433;
+  border-radius:14px;
+  background:#05070a;
+}
+.backing-logo img{
+  display:block;
+  width:auto;
+  height:27px;
+  max-width:175px;
+  object-fit:contain;
+  opacity:1;
+}
+
+/* Keep standalone wordmarks (Explorer / Tether Studio) clean. */
+.project-brand.clean{
+  padding:4px 0;
+  border:0;
+  background:transparent;
+  border-radius:0;
+  min-height:auto;
+}
+.project-brand.clean img{
+  height:31px;
+  max-width:210px;
+}
+
+/* Partner groups use one compact visual height, regardless of logo proportions. */
+.project-brand-row .project-brand:not(.clean){
+  box-sizing:border-box;
+  min-height:48px;
+  height:48px;
+  padding:7px 11px;
+  border-radius:13px;
+  background:#fff;
+  border:1px solid #dde4ec;
+}
+.project-brand-row .project-brand.dark:not(.clean){
+  background:#07101a;
+  border-color:#16283f;
+}
+.project-brand-row .project-brand:not(.clean) img{
+  width:auto;
+  height:auto;
+  max-height:26px;
+  max-width:170px;
+  object-fit:contain;
+}
+.project-brand-row .project-brand.compact:not(.clean) img{
+  max-height:24px;
+  max-width:138px;
+}
+.project-brand-row .project-brand.wide:not(.clean) img{
+  max-height:27px;
+  max-width:180px;
+}
+
+@media(max-width:760px){
+  .backing-logo{min-height:48px;padding:9px 14px;border-radius:13px}
+  .backing-logo img{height:25px;max-width:160px}
+  .project-brand-row .project-brand:not(.clean){
+    min-height:44px;
+    height:44px;
+    padding:6px 9px;
+    border-radius:12px;
+  }
+  .project-brand-row .project-brand:not(.clean) img{max-height:23px;max-width:150px}
+  .project-brand-row .project-brand.compact:not(.clean) img{max-height:21px;max-width:122px}
+  .project-brand-row .project-brand.wide:not(.clean) img{max-height:24px;max-width:155px}
+  .project-brand.clean img{height:27px;max-width:180px}
+}
+
+</style><style id="lineheight-fix">
+/* Typography rhythm — loosen large headings slightly */
+.hero h1{
+  line-height:1.00 !important;
+}
+.impact h2{
+  line-height:1.01 !important;
+}
+.role-main h2{
+  line-height:1.03 !important;
+}
+.product h2{
+  line-height:1.01 !important;
+}
+.projects h2{
+  line-height:1.03 !important;
+}
+.operating h2{
+  line-height:1.03 !important;
+}
+.field-copy h2{
+  line-height:1.12 !important;
+}
+.principle h2{
+  line-height:1.03 !important;
+}
+
+@media(max-width:760px){
+  .hero h1{
+    line-height:1.04 !important;
+  }
+  .impact h2,
+  .role-main h2,
+  .product h2,
+  .projects h2,
+  .operating h2{
+    line-height:1.08 !important;
+  }
+  .principle h2{
+    line-height:1.06 !important;
+  }
+}
+</style><style id="slep-field-photo">
+/* SLEP field photo */
+.slep-field .field-card{
+  min-height:640px;
+}
+.slep-field .field-photo{
+  min-height:640px;
+}
+.slep-field .field-photo img{
+  min-height:640px;
+  object-position:center center;
+}
+.slep-caption{
+  margin-top:28px !important;
+  padding-top:22px;
+  border-top:1px solid rgba(255,255,255,.12);
+  color:#8f99a5 !important;
+  font-size:11px !important;
+  line-height:1.65 !important;
+}
+.slep-caption strong{
+  color:#d7dee6;
+  font-weight:500;
+}
+@media(max-width:900px){
+  .slep-field .field-card,
+  .slep-field .field-photo,
+  .slep-field .field-photo img{
+    min-height:460px;
+  }
+}
+@media(max-width:760px){
+  .slep-field .field-card{
+    min-height:0;
+  }
+  .slep-field .field-photo,
+  .slep-field .field-photo img{
+    min-height:340px;
+  }
+}
+</style><style id="slep-text-overlap-fix">
+/* SLEP field — prevent title/copy from running under the photo */
+.slep-field .field-card{
+  grid-template-columns:minmax(0,1.05fr) minmax(420px,.95fr) !important;
+}
+
+.slep-field .field-copy{
+  min-width:0 !important;
+}
+
+.slep-field .field-copy h2{
+  max-width:620px !important;
+}
+
+.slep-field .field-copy h2 .field-line{
+  display:block !important;
+  white-space:normal !important;
+}
+
+.slep-field .field-copy p{
+  max-width:590px !important;
+}
+
+@media(max-width:900px){
+  .slep-field .field-card{
+    grid-template-columns:1fr !important;
+  }
+  .slep-field .field-copy h2{
+    max-width:760px !important;
+  }
+}
+
+@media(max-width:760px){
+  .slep-field .field-copy h2{
+    font-size:41px !important;
+    line-height:1.10 !important;
+  }
+}
+</style><style id="digital-logo-buttons">
+/* Compact TetherEducation logo pill */
+.hero .tether-mark{
+  min-width:0 !important;
+  width:auto !important;
+  min-height:0 !important;
+  padding:18px 28px !important;
+  border-radius:28px !important;
+  background:#f4f6f8 !important;
+  border:1px solid rgba(255,255,255,.14) !important;
+  box-shadow:0 8px 24px rgba(0,0,0,.10) !important;
+}
+.hero .tether-mark .tether-logo{
+  width:auto !important;
+  height:30px !important;
+  max-width:180px !important;
+  object-fit:contain !important;
+}
+@media(max-width:760px){
+  .hero .tether-mark{
+    padding:15px 22px !important;
+    border-radius:24px !important;
+  }
+  .hero .tether-mark .tether-logo{
+    height:27px !important;
+    max-width:160px !important;
+  }
+}
+</style><style id="digital-clean-hero">
+/* Digital Transformation hero — intentionally minimal */
+.hero-bottom{
+  grid-template-columns:1fr !important;
+  gap:0 !important;
+}
+.hero-description{
+  max-width:840px !important;
+}
+</style><style id="principle-two-lines">
+/* Principle headline: exactly one sentence per line */
+.principle h2{
+  max-width:none !important;
+  font-size:clamp(42px,5.2vw,78px) !important;
+  line-height:1.02 !important;
+}
+.principle h2 .principle-line{
+  display:block !important;
+  white-space:nowrap !important;
+}
+.principle h2 .principle-line + .principle-line{
+  margin-top:.10em !important;
+}
+
+@media(max-width:900px){
+  .principle h2{
+    font-size:clamp(38px,5.8vw,64px) !important;
+  }
+}
+
+@media(max-width:760px){
+  .principle h2{
+    font-size:clamp(34px,8.5vw,48px) !important;
+  }
+  .principle h2 .principle-line{
+    white-space:normal !important;
+  }
+}
+</style><style id="principle-two-lines-color">
+/* Principle headline colors: first line white, second line accent */
+.principle h2 .principle-line{
+  display:block !important;
+  white-space:nowrap !important;
+}
+.principle h2 .principle-line:first-child{
+  color:#fff !important;
+}
+.principle h2 .principle-line:last-child{
+  color:#a8bfd9 !important;
+}
+@media(max-width:760px){
+  .principle h2 .principle-line{
+    white-space:normal !important;
+  }
+}
+</style><style id="ai-education-case">
+/* AI Education Transformation — partner logo treatment */
+.ai-partners{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.ai-partner{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height:52px;
+  padding:8px 13px;
+  border-radius:14px;
+  background:#fff;
+  border:1px solid rgba(255,255,255,.13);
+}
+.ai-partner img{
+  display:block;
+  width:auto;
+  height:auto;
+  max-height:28px;
+  max-width:170px;
+  object-fit:contain;
+}
+.ai-partner.slep img{max-height:30px;max-width:145px}
+.ai-partner.columbia img{max-height:31px;max-width:185px}
+.ai-partner.openai img{max-height:24px;max-width:120px}
+
+.ai-collab-grid{
+  width:min(var(--max),100%);
+  margin:52px auto 0;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.ai-collab-item{
+  min-height:220px;
+  padding:28px 28px 32px 0;
+}
+.ai-collab-item + .ai-collab-item{
+  padding-left:28px;
+  border-left:1px solid var(--line);
+}
+.ai-collab-item small{
+  color:#718399;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.ai-collab-item strong{
+  display:block;
+  margin-top:26px;
+  font-family:Manrope,sans-serif;
+  font-size:24px;
+  font-weight:500;
+  line-height:1.25;
+  letter-spacing:-.04em;
+  color:#17202c;
+}
+.ai-collab-item p{
+  margin:12px 0 0;
+  color:#5f6b79;
+  font-size:13px;
+  line-height:1.72;
+}
+
+@media(max-width:900px){
+  .ai-collab-grid{grid-template-columns:1fr}
+  .ai-collab-item + .ai-collab-item{
+    padding-left:0;
+    border-left:0;
+    border-top:1px solid var(--line);
+  }
+}
+@media(max-width:760px){
+  .ai-partner{height:46px;padding:7px 10px;border-radius:12px}
+  .ai-partner img{max-height:24px;max-width:145px}
+  .ai-collab-item{min-height:0;padding:24px 0 28px!important}
+}
+</style><style id="ai-product-title-lines">
+/* Product title — control line break cleanly */
+.product h2 .product-line{
+  display:block !important;
+  white-space:nowrap !important;
+}
+.product h2 .product-line + .product-line{
+  margin-top:.04em !important;
+}
+@media(max-width:760px){
+  .product h2 .product-line{
+    white-space:normal !important;
+  }
+}
+</style><style id="ai-field-horizontal-style">
+/* AI implementation — horizontal photo layout */
+.ai-field-horizontal{
+  background:#05070a;
+  color:#fff;
+  padding:104px var(--page,5vw) 112px;
+}
+
+.ai-field-horizontal .ai-field-inner{
+  width:min(var(--max,1320px),100%);
+  margin:0 auto;
+}
+
+.ai-field-horizontal .section-label{
+  color:#57adff;
+}
+
+.ai-field-horizontal .ai-field-head{
+  display:grid;
+  grid-template-columns:.52fr 1.48fr;
+  gap:72px;
+  align-items:start;
+}
+
+.ai-field-horizontal h2{
+  margin:0;
+  max-width:940px;
+  font-family:Manrope,sans-serif;
+  font-size:clamp(46px,5.6vw,78px);
+  font-weight:500;
+  line-height:1.03;
+  letter-spacing:-.055em;
+  color:#fff;
+}
+
+.ai-field-horizontal h2 span{
+  color:#a8bfd9;
+}
+
+.ai-field-horizontal .ai-field-copy{
+  max-width:720px;
+  margin:28px 0 0;
+  color:#aeb8c3;
+  font-size:16px;
+  line-height:1.8;
+}
+
+.ai-field-horizontal .ai-field-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:26px;
+}
+
+.ai-field-horizontal .ai-field-meta span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:38px;
+  padding:0 14px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:999px;
+  color:#c5ced8;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+
+.ai-field-horizontal .ai-photo-wrap{
+  margin-top:58px;
+  overflow:hidden;
+  border-radius:28px;
+  background:#10141a;
+}
+
+.ai-field-horizontal .ai-photo-wrap img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  object-position:center center;
+}
+
+.ai-field-horizontal .ai-photo-caption{
+  margin:18px 0 0;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.12);
+  color:#8f99a5;
+  font-size:11px;
+  line-height:1.65;
+}
+
+.ai-field-horizontal .ai-photo-caption strong{
+  color:#d7dee6;
+  font-weight:500;
+}
+
+@media(max-width:900px){
+  .ai-field-horizontal .ai-field-head{
+    grid-template-columns:1fr;
+    gap:26px;
+  }
+}
+
+@media(max-width:760px){
+  .ai-field-horizontal{
+    padding:78px 22px 84px;
+  }
+  .ai-field-horizontal h2{
+    font-size:42px;
+    line-height:1.08;
+  }
+  .ai-field-horizontal .ai-photo-wrap{
+    margin-top:38px;
+    border-radius:18px;
+  }
+}
+</style><style id="tether-studio-case">
+/* Tether Studio case */
+.studio-mark{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:18px 28px;
+  border-radius:28px;
+  background:#f4f6f8;
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 8px 24px rgba(0,0,0,.10);
+}
+.studio-mark img{
+  display:block;
+  width:auto;
+  height:31px;
+  max-width:210px;
+  object-fit:contain;
+}
+
+.studio-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:34px;
+}
+.studio-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:54px;
+  padding:0 26px;
+  border-radius:999px;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  text-decoration:none;
+  transition:.2s ease;
+}
+.studio-btn.primary{
+  background:#fff;
+  color:#090d12;
+  border:1px solid #fff;
+}
+.studio-btn.secondary{
+  color:#fff;
+  border:1px solid rgba(255,255,255,.18);
+}
+.studio-btn:hover{transform:translateY(-1px)}
+
+.studio-flow-grid{
+  width:min(var(--max),100%);
+  margin:52px auto 0;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.studio-flow-item{
+  min-height:225px;
+  padding:28px 28px 32px 0;
+}
+.studio-flow-item + .studio-flow-item{
+  padding-left:28px;
+  border-left:1px solid var(--line);
+}
+.studio-flow-item small{
+  color:#718399;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.studio-flow-item strong{
+  display:block;
+  margin-top:28px;
+  color:#17202c;
+  font-family:Manrope,sans-serif;
+  font-size:24px;
+  font-weight:500;
+  line-height:1.24;
+  letter-spacing:-.04em;
+}
+.studio-flow-item p{
+  margin:12px 0 0;
+  color:#5f6b79;
+  font-size:13px;
+  line-height:1.72;
+}
+
+@media(max-width:900px){
+  .studio-flow-grid{grid-template-columns:1fr}
+  .studio-flow-item + .studio-flow-item{
+    padding-left:0;
+    border-left:0;
+    border-top:1px solid var(--line);
+  }
+}
+@media(max-width:760px){
+  .studio-mark{padding:15px 22px;border-radius:24px}
+  .studio-mark img{height:27px;max-width:180px}
+  .studio-actions{gap:10px;margin-top:28px}
+  .studio-btn{min-height:50px;padding:0 20px;font-size:9px}
+  .studio-flow-item{min-height:0;padding:24px 0 28px!important}
+}
+</style></head><body>
+<header class="nav"><a class="brand" href="/">Felipe Quiroz</a><nav class="nav-links">
+<a href="/#work">Work</a><a href="/about">About</a><a href="/now">Now</a><a href="/blog">Blog</a>
+<a class="contact-nav" href="#contact">Contact</a>
+<a aria-label="Switch language" class="lang-switch" href="/es/tethered/tether-studio">ES</a>
+</nav></header>
+<section class="hero"><div class="hero-inner">
+<div class="hero-top">
+<a aria-label="Visit Tether Studio" class="studio-mark" href="https://tetherstudio.ai/" rel="noopener noreferrer" target="_blank">
+<img alt="Tether Studio" src="/logos/tether-studio-logo.png"/>
+</a>
+<div class="hero-meta"><span>Case study / 04</span><span>AI product</span><span>School operations</span></div>
+</div>
+<div class="hero-kicker">Product / AI / Operations</div>
+<h1>Tether<span>Studio.</span></h1>
+<div class="hero-bottom">
+<div>
+<p class="hero-description">An AI-enabled school photography platform that centralizes portraits, events, yearbooks, consent, family access and school administration in one digital workflow.</p>
+<div class="studio-actions">
+<a class="studio-btn primary" href="https://tetherstudio.ai/" rel="noopener noreferrer" target="_blank">Visit site ↗</a>
+<a class="studio-btn secondary" href="#workflow">See the workflow ↓</a>
+</div>
+</div>
+</div>
+</div></section><section class="impact"><div class="impact-head">
+<div><div class="section-label">01 / Impact</div><h2>Less manual work.<span>A much simpler workflow.</span></h2></div>
+<p class="impact-copy">Tether Studio brought previously separate school-photography processes into one digital experience for school teams and families.</p>
+</div>
+<div class="impact-grid">
+<div class="impact-item"><strong>−82%</strong><span>Operational hours</span></div>
+<div class="impact-item"><strong>6 weeks</strong><span>To launch</span></div>
+<div class="impact-item"><strong>1 platform</strong><span>5 stages in one workflow</span></div>
+<div class="impact-item"><strong>100%</strong><span>Auditable consent</span></div>
+</div></section><section class="role"><div class="role-grid">
+<div class="section-label">02 / My role</div>
+<div class="role-main">
+<h2>Turning operational needs into product.</h2>
+<p>I worked on product building and positioning, connecting schools' operational needs with a simpler digital experience for teams and families.</p>
+<p>The work combined understanding the problem, shaping the value proposition and translating school processes into an experience that could centralize photography, consent, family access and administration.</p>
+<div class="snapshot">
+<div class="snapshot-item"><div class="snapshot-label">Product</div><div class="snapshot-value">Tether Studio</div></div>
+<div class="snapshot-item"><div class="snapshot-label">Category</div><div class="snapshot-value">AI product / School operations</div></div>
+<div class="snapshot-item"><div class="snapshot-label">Contribution</div><div class="snapshot-value">Product building &amp; positioning</div></div>
+<div class="snapshot-item"><div class="snapshot-label">Users</div><div class="snapshot-value">School teams &amp; families</div></div>
+</div>
+<div class="snapshot-focus"><span>Product building</span><span>Positioning</span><span>School operations</span><span>Family experience</span><span>AI-enabled workflow</span></div>
+</div>
+</div></section><section class="product" id="workflow"><div class="product-head">
+<div><div class="section-label">03 / Product</div><h2>From fragmented processes<span>to one digital workflow.</span></h2></div>
+<p>Tether Studio centralized the full school-photography operation, reducing manual coordination and increasing traceability across the experience.</p>
+</div>
+<div class="product-note"><strong>1 platform · 5 stages</strong><p>Portraits, events, yearbooks, consent, family access and administration connected within the same operational experience.</p></div>
+<div class="product-grid">
+<article class="product-item"><div class="product-num">01</div><div class="product-icon">↗</div><h3>Portraits</h3><div class="product-type">Photography</div><p>School photography managed inside one centralized digital workflow.</p></article>
+<article class="product-item"><div class="product-num">02</div><div class="product-icon">↗</div><h3>Events &amp; yearbooks</h3><div class="product-type">School moments</div><p>School content connected to the same operation and administration.</p></article>
+<article class="product-item"><div class="product-num">03</div><div class="product-icon">↗</div><h3>Consent</h3><div class="product-type">Compliance</div><p>Traceable, auditable consent integrated into the process.</p></article>
+<article class="product-item"><div class="product-num">04</div><div class="product-icon">↗</div><h3>Family portal</h3><div class="product-type">Family access</div><p>A simpler digital experience to access and interact with school content.</p></article>
+</div></section><section class="projects"><div class="projects-head">
+<div><div class="section-label">04 / System</div><h2>A connected operation<span>from end to end.</span></h2></div>
+<p>The value was not in digitizing one isolated task, but in connecting schools, families, consent and administration in the same system.</p>
+</div>
+<div class="studio-flow-grid">
+<article class="studio-flow-item"><small>School teams</small><strong>Less manual coordination</strong><p>One platform for processes that previously required more operational hours and follow-up.</p></article>
+<article class="studio-flow-item"><small>Families</small><strong>Simpler access</strong><p>A digital experience designed around the relationship between the school and its families.</p></article>
+<article class="studio-flow-item"><small>Operations</small><strong>Greater traceability</strong><p>Consent and administration integrated into the same workflow with auditable information.</p></article>
+</div></section><section class="operating"><div class="operating-head">
+<div><div class="section-label">05 / Product building</div><h2>From operational problem<span>to a clear proposition.</span></h2></div>
+<p>My contribution focused on connecting what schools needed to solve with a simpler product experience and a value proposition that was easy to understand.</p>
+</div>
+<div class="work-list">
+<div class="work-item"><div class="work-num">01</div><strong>Understand schools' operational needs</strong></div>
+<div class="work-item"><div class="work-num">02</div><strong>Connect operational pain points with product decisions</strong></div>
+<div class="work-item"><div class="work-num">03</div><strong>Build a simpler experience for school teams</strong></div>
+<div class="work-item"><div class="work-num">04</div><strong>Include the family experience in the workflow</strong></div>
+<div class="work-item"><div class="work-num">05</div><strong>Shape positioning and value proposition</strong></div>
+<div class="work-item"><div class="work-num">06</div><strong>Translate operational efficiency into product value</strong></div>
+</div></section><section class="principle"><svg aria-hidden="true" class="principle-arc" preserveaspectratio="none" viewbox="0 0 1600 260"><path class="arc-glow" d="M-80 215 C 330 -70, 1270 -70, 1680 215"></path><path class="arc-line" d="M-80 215 C 330 -70, 1270 -70, 1680 215"></path></svg>
+<div class="principle-inner"><div class="section-label">06 / Learning</div>
+<h2><span class="principle-line">Less friction.</span><span class="principle-line">Better operations.</span></h2>
+<div class="principle-grid">
+<div class="principle-item"><small>01 / Product</small><strong>Centralization is also design.</strong><p>Bringing processes together can transform the experience when it removes unnecessary coordination, steps and decisions.</p></div>
+<div class="principle-item"><small>02 / Operations</small><strong>Efficiency is part of the experience.</strong><p>Reducing operational hours improves both team workflows and how families interact with the service.</p></div>
+</div></div></section><section class="project-nav"><div class="project-nav-inner">
+<a href="/tethered/ai-powered-education-transformation"><div class="project-nav-label">Previous project</div><strong>AI-powered Education Transformation</strong></a>
+<a href="/tethereducation"><div class="project-nav-label">Back</div><strong>TetherEducation</strong></a>
+</div></section><section class="bottom" id="contact"><div class="contact-block"><div class="contact-copy"><div class="section-label">Contact</div><h3>Let's talk.</h3></div><div class="contact-links"><a class="contact-link" href="https://www.linkedin.com/in/felipequirozp" rel="noopener noreferrer" target="_blank">LinkedIn</a><a class="contact-link" href="https://www.instagram.com/felipe_quirozp/" rel="noopener noreferrer" target="_blank">Instagram</a><a class="contact-link" href="mailto:felipe@lowsignal.cl">Email</a></div></div><footer class="footer"><div>© 2026 Felipe Quiroz</div><div>Santiago / CL</div></footer></section></body></html>
