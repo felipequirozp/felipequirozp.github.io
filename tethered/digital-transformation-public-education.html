@@ -1596,27 +1596,151 @@ img{display:block;width:100%;max-width:100%}
 .implementation-metric p{
   color:rgba(255,255,255,.82) !important;
 }
-</style><style id="product-image-size-fix">
-/* Product screenshot — smaller, more editorial */
+</style><style id="product-image-split-layout">
+.product-in-action{
+  background:#fff !important;
+  padding:108px var(--case-page) 112px !important;
+}
 .product-in-action-inner{
-  width:min(1040px,100%) !important;
-}
-
-.product-in-action-frame{
-  width:min(880px,100%) !important;
+  width:min(1180px,100%) !important;
   margin:0 auto !important;
-  padding:14px !important;
+  display:grid !important;
+  grid-template-columns:minmax(0,.72fr) minmax(420px,1.08fr) !important;
+  gap:72px !important;
+  align-items:center !important;
+}
+.product-in-action-head{
+  display:block !important;
+  margin:0 !important;
+}
+.product-in-action-kicker{
+  margin:0 0 18px !important;
+  color:var(--case-steel-soft,#71869c) !important;
+}
+.product-in-action-head h2{
+  margin:0 0 24px !important;
+  max-width:8ch !important;
+  color:#10161d !important;
+  font-size:clamp(42px,4.6vw,66px) !important;
+  line-height:1.02 !important;
+}
+.product-in-action-head p{
+  margin:0 !important;
+  max-width:430px !important;
+  color:#66717d !important;
+  font-size:15px !important;
+  line-height:1.75 !important;
+}
+.product-in-action-frame{
+  width:100% !important;
+  max-width:620px !important;
+  margin:0 0 0 auto !important;
+  padding:0 !important;
+  background:transparent !important;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+}
+.product-in-action-frame img{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  border-radius:14px !important;
+}
+.product-in-action-caption{
+  grid-column:2 !important;
+  width:100% !important;
+  max-width:620px !important;
+  margin:14px 0 0 auto !important;
+  color:#7b8793 !important;
+  font-size:10px !important;
+  line-height:1.55 !important;
+}
+@media(max-width:900px){
+  .product-in-action-inner{
+    grid-template-columns:1fr !important;
+    gap:34px !important;
+  }
+  .product-in-action-head h2{
+    max-width:12ch !important;
+  }
+  .product-in-action-frame{
+    max-width:720px !important;
+    margin:0 !important;
+  }
+  .product-in-action-caption{
+    grid-column:1 !important;
+    max-width:720px !important;
+    margin:12px 0 0 !important;
+  }
+}
+@media(max-width:760px){
+  .product-in-action{
+    padding:76px 22px 82px !important;
+  }
+  .product-in-action-inner{
+    gap:28px !important;
+  }
+  .product-in-action-head h2{
+    font-size:40px !important;
+    max-width:10ch !important;
+  }
+  .product-in-action-frame img{
+    border-radius:10px !important;
+  }
+}
+</style><style id="impact-light-palette">
+/* =========================================================
+   IMPLEMENTATION IMPACT — NAVY + PAPER
+   ========================================================= */
+.implementation-impact{
+  background:var(--case-paper,#f5f6f7) !important;
 }
 
-.product-in-action-caption{
-  width:min(880px,100%) !important;
-  margin:14px auto 0 !important;
+.implementation-impact-inner{
+  border:1px solid var(--case-line,#d4d9de) !important;
+  box-shadow:none !important;
+}
+
+.implementation-impact-story{
+  background:
+    radial-gradient(circle at 78% 58%, rgba(50,73,99,.28) 0%, rgba(50,73,99,0) 38%),
+    linear-gradient(135deg,var(--case-navy,#0d1724) 0%,var(--case-navy-2,#132235) 100%) !important;
+}
+
+.implementation-impact-label{
+  color:var(--case-accent,#9aadc0) !important;
+}
+
+.implementation-impact-story h2{
+  color:#fff !important;
+}
+
+.implementation-impact-story p{
+  color:#c5d0db !important;
+}
+
+.implementation-impact-metrics{
+  background:var(--case-ice,#eef1f4) !important;
+  color:var(--case-navy,#0d1724) !important;
+}
+
+.implementation-metric{
+  border-bottom:1px solid var(--case-line,#d4d9de) !important;
+}
+
+.implementation-metric strong{
+  color:var(--case-steel,#324963) !important;
+}
+
+.implementation-metric p{
+  color:#5f6d7a !important;
 }
 
 @media(max-width:760px){
-  .product-in-action-frame,
-  .product-in-action-caption{
-    width:100% !important;
+  .implementation-impact-inner{
+    border-left:0 !important;
+    border-right:0 !important;
   }
 }
 </style></head><body>
@@ -1752,7 +1876,7 @@ img{display:block;width:100%;max-width:100%}
 </div>
 </div>
 <div class="case-next">
-<a href="/tethered/">← Back to <span class="brand-case-sensitive">TetherEd</span></a>
+<a href="/tethereducation/">← Back to TetherEducation</a>
 </div>
 </div>
 </section>
