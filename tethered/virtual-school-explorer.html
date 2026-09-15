@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Virtual School Explorer | Felipe Quiroz</title><meta content="#05070a" name="theme-color"/><link href="/favicon.png" rel="icon" type="image/png"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/><style>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Virtual School Explorer | Felipe Quiroz</title><meta content="#05070a" name="theme-color"/><link href="/favicon.png" rel="icon" type="image/png"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/><style>
 :root{
   --black:#05070a;
   --black-2:#0a0e14;
@@ -360,688 +360,312 @@ img{display:block;width:100%;max-width:100%}
   .project-brand.clean img{height:27px;max-width:180px}
 }
 
-</style><meta content="Case study of Virtual School Explorer, an AI-powered education discovery platform developed by TetherEd." name="description"/><style id="virtual-school-explorer-case-study">
-:root{
-  --case-black:#05070a;
-  --case-ink:#0b1016;
-  --case-muted:#69727d;
-  --case-line:#dfe4e9;
-  --case-paper:#f5f6f7;
-  --case-blue:#597590;
-  --case-page:5vw;
-  --case-max:1320px;
+</style><style id="lineheight-fix">
+/* Typography rhythm — loosen large headings slightly */
+.hero h1{
+  line-height:1.00 !important;
+}
+.impact h2{
+  line-height:1.01 !important;
+}
+.role-main h2{
+  line-height:1.03 !important;
+}
+.product h2{
+  line-height:1.01 !important;
+}
+.projects h2{
+  line-height:1.03 !important;
+}
+.operating h2{
+  line-height:1.03 !important;
+}
+.field-copy h2{
+  line-height:1.12 !important;
+}
+.principle h2{
+  line-height:1.03 !important;
 }
 
-.case-hero{
-  background:var(--case-black);
-  color:#fff;
-  padding:130px var(--case-page) 96px;
+@media(max-width:760px){
+  .hero h1{
+    line-height:1.04 !important;
+  }
+  .impact h2,
+  .role-main h2,
+  .product h2,
+  .projects h2,
+  .operating h2{
+    line-height:1.08 !important;
+  }
+  .principle h2{
+    line-height:1.06 !important;
+  }
 }
-
-.case-wrap{
-  width:min(var(--case-max),100%);
-  margin:0 auto;
+</style><style id="slep-field-photo">
+/* SLEP field photo */
+.slep-field .field-card{
+  min-height:640px;
 }
-
-.case-breadcrumb{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin-bottom:72px;
-  color:#8793a0;
-  font-size:9px;
-  font-weight:700;
-  letter-spacing:.1em;
-  text-transform:uppercase;
+.slep-field .field-photo{
+  min-height:640px;
 }
-
-.case-breadcrumb a{
-  color:inherit;
-  text-decoration:none;
+.slep-field .field-photo img{
+  min-height:640px;
+  object-position:center center;
 }
-
-.case-breadcrumb a:hover{color:#fff;}
-
-.case-kicker{
-  margin-bottom:22px;
-  color:#a4b2c0;
-  font-size:10px;
-  font-weight:700;
-  letter-spacing:.11em;
-  text-transform:uppercase;
+.slep-caption{
+  margin-top:28px !important;
+  padding-top:22px;
+  border-top:1px solid rgba(255,255,255,.12);
+  color:#8f99a5 !important;
+  font-size:11px !important;
+  line-height:1.65 !important;
 }
-
-.case-hero h1{
-  margin:0;
-  max-width:980px;
-  font-family:Manrope,sans-serif;
-  font-size:clamp(58px,7.4vw,112px);
+.slep-caption strong{
+  color:#d7dee6;
   font-weight:500;
-  line-height:.91;
-  letter-spacing:-.065em;
+}
+@media(max-width:900px){
+  .slep-field .field-card,
+  .slep-field .field-photo,
+  .slep-field .field-photo img{
+    min-height:460px;
+  }
+}
+@media(max-width:760px){
+  .slep-field .field-card{
+    min-height:0;
+  }
+  .slep-field .field-photo,
+  .slep-field .field-photo img{
+    min-height:340px;
+  }
+}
+</style><style id="slep-text-overlap-fix">
+/* SLEP field — prevent title/copy from running under the photo */
+.slep-field .field-card{
+  grid-template-columns:minmax(0,1.05fr) minmax(420px,.95fr) !important;
 }
 
-.case-hero h1 span{
-  display:block;
-  color:#748ea6;
+.slep-field .field-copy{
+  min-width:0 !important;
 }
 
-.case-deck{
-  max-width:760px;
-  margin:42px 0 0;
-  color:#c4ccd4;
-  font-size:18px;
-  line-height:1.7;
+.slep-field .field-copy h2{
+  max-width:620px !important;
 }
 
-.case-actions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:38px;
+.slep-field .field-copy h2 .field-line{
+  display:block !important;
+  white-space:normal !important;
 }
 
-.case-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:44px;
-  padding:0 18px;
-  border:1px solid rgba(255,255,255,.16);
-  border-radius:999px;
-  color:#fff;
-  font-size:9px;
-  font-weight:700;
-  letter-spacing:.09em;
-  text-decoration:none;
-  text-transform:uppercase;
-  transition:.2s ease;
-}
-
-.case-btn.primary{
-  background:#fff;
-  color:#080b0f;
-  border-color:#fff;
-}
-
-.case-btn:hover{
-  transform:translateY(-1px);
-  border-color:rgba(255,255,255,.45);
-}
-
-.case-stats{
-  background:var(--case-black);
-  color:#fff;
-  padding:0 var(--case-page) 80px;
-}
-
-.case-stats-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  border-top:1px solid rgba(255,255,255,.1);
-}
-
-.case-stat{
-  min-height:170px;
-  padding:28px 28px 20px 0;
-  border-right:1px solid rgba(255,255,255,.1);
-}
-
-.case-stat:not(:first-child){padding-left:28px;}
-.case-stat:last-child{border-right:0;}
-
-.case-stat strong{
-  display:block;
-  color:#fff;
-  font-family:Manrope,sans-serif;
-  font-size:clamp(34px,4vw,58px);
-  font-weight:500;
-  line-height:1;
-  letter-spacing:-.05em;
-}
-
-.case-stat span{
-  display:block;
-  max-width:230px;
-  margin-top:14px;
-  color:#8f9ba7;
-  font-size:11px;
-  line-height:1.5;
-}
-
-.case-body{
-  background:#fff;
-  color:var(--case-ink);
-  padding:116px var(--case-page);
-}
-
-.case-layout{
-  display:grid;
-  grid-template-columns:240px minmax(0,760px);
-  gap:92px;
-  align-items:start;
-  width:min(1120px,100%);
-  margin:0 auto;
-}
-
-.case-aside{
-  position:sticky;
-  top:118px;
-}
-
-.case-aside-label{
-  margin-bottom:16px;
-  color:#9ba3ab;
-  font-size:9px;
-  font-weight:700;
-  letter-spacing:.11em;
-  text-transform:uppercase;
-}
-
-.case-aside p{
-  margin:0;
-  color:#69727d;
-  font-size:12px;
-  line-height:1.7;
-}
-
-.case-content h2{
-  margin:78px 0 22px;
-  color:var(--case-ink);
-  font-family:Manrope,sans-serif;
-  font-size:clamp(34px,4vw,54px);
-  font-weight:500;
-  line-height:1.02;
-  letter-spacing:-.05em;
-}
-
-.case-content h2:first-child{margin-top:0;}
-
-.case-content p{
-  margin:0 0 22px;
-  color:#333b44;
-  font-size:17px;
-  line-height:1.82;
-}
-
-.case-content .lead{
-  color:#10151b;
-  font-size:22px;
-  line-height:1.62;
-}
-
-.case-quote{
-  margin:50px 0;
-  padding:30px 0 30px 28px;
-  border-left:2px solid #7a91a6;
-  color:#1c252d;
-  font-family:Manrope,sans-serif;
-  font-size:25px;
-  line-height:1.45;
-  letter-spacing:-.025em;
-}
-
-.feature-list{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:1px;
-  margin:36px 0 10px;
-  background:var(--case-line);
-  border:1px solid var(--case-line);
-}
-
-.feature-item{
-  background:#fff;
-  padding:28px;
-}
-
-.feature-item span{
-  color:#84909b;
-  font-size:9px;
-  font-weight:700;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-}
-
-.feature-item h3{
-  margin:14px 0 10px;
-  font-family:Manrope,sans-serif;
-  font-size:22px;
-  font-weight:500;
-  letter-spacing:-.035em;
-}
-
-.feature-item p{
-  margin:0;
-  color:#68717b;
-  font-size:13px;
-  line-height:1.65;
-}
-
-.case-video{
-  background:var(--case-paper);
-  padding:104px var(--case-page);
-}
-
-.case-video-head{
-  display:grid;
-  grid-template-columns:1fr minmax(300px,.55fr);
-  gap:64px;
-  align-items:end;
-  margin-bottom:34px;
-}
-
-.case-video-head h2{
-  margin:0;
-  max-width:720px;
-  color:var(--case-ink);
-  font-family:Manrope,sans-serif;
-  font-size:clamp(42px,5.3vw,76px);
-  font-weight:500;
-  line-height:.98;
-  letter-spacing:-.055em;
-}
-
-.case-video-head p{
-  margin:0;
-  color:#67717b;
-  font-size:13px;
-  line-height:1.75;
-}
-
-.case-video-frame{
-  overflow:hidden;
-  border-radius:22px;
-  background:#07090c;
-  box-shadow:0 28px 70px rgba(0,0,0,.10);
-}
-
-.case-video-frame video{
-  display:block;
-  width:100%;
-  height:auto;
-  max-height:780px;
-  background:#07090c;
-}
-
-.case-impact{
-  background:#0a0d11;
-  color:#fff;
-  padding:112px var(--case-page);
-}
-
-.case-impact-grid{
-  display:grid;
-  grid-template-columns:.72fr 1.28fr;
-  gap:100px;
-}
-
-.case-impact-label{
-  color:#85919d;
-  font-size:9px;
-  font-weight:700;
-  letter-spacing:.11em;
-  text-transform:uppercase;
-}
-
-.case-impact-copy h2{
-  margin:0 0 30px;
-  max-width:760px;
-  font-family:Manrope,sans-serif;
-  font-size:clamp(40px,5vw,70px);
-  font-weight:500;
-  line-height:1;
-  letter-spacing:-.055em;
-}
-
-.case-impact-copy p{
-  max-width:720px;
-  margin:0 0 22px;
-  color:#b8c1ca;
-  font-size:16px;
-  line-height:1.8;
-}
-
-.case-learning{
-  background:#fff;
-  padding:112px var(--case-page) 124px;
-}
-
-.case-learning-inner{
-  display:grid;
-  grid-template-columns:.75fr 1.25fr;
-  gap:100px;
-}
-
-.case-learning h2{
-  margin:0;
-  font-family:Manrope,sans-serif;
-  font-size:clamp(38px,4.5vw,64px);
-  font-weight:500;
-  line-height:1;
-  letter-spacing:-.05em;
-}
-
-.case-learning p{
-  margin:0 0 22px;
-  color:#333b44;
-  font-size:17px;
-  line-height:1.8;
-}
-
-.case-next{
-  border-top:1px solid var(--case-line);
-  margin-top:68px;
-  padding-top:32px;
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-}
-
-.case-next a{
-  color:var(--case-ink);
-  font-size:10px;
-  font-weight:700;
-  letter-spacing:.08em;
-  text-decoration:none;
-  text-transform:uppercase;
+.slep-field .field-copy p{
+  max-width:590px !important;
 }
 
 @media(max-width:900px){
-  .case-layout,
-  .case-impact-grid,
-  .case-learning-inner,
-  .case-video-head{
-    grid-template-columns:1fr;
-    gap:40px;
+  .slep-field .field-card{
+    grid-template-columns:1fr !important;
   }
-
-  .case-aside{position:static;}
-  .case-stats-grid{grid-template-columns:1fr 1fr;}
-  .case-stat:nth-child(2){border-right:0;}
-  .case-stat:last-child{
-    grid-column:1/-1;
-    border-top:1px solid rgba(255,255,255,.1);
+  .slep-field .field-copy h2{
+    max-width:760px !important;
   }
 }
 
 @media(max-width:760px){
-  .case-hero{padding:88px 22px 64px;}
-  .case-breadcrumb{margin-bottom:48px;}
-  .case-hero h1{font-size:54px;}
-  .case-deck{margin-top:30px;font-size:16px;}
-  .case-actions{margin-top:28px;}
-
-  .case-stats{padding:0 22px 54px;}
-  .case-stats-grid{grid-template-columns:1fr;}
-  .case-stat,
-  .case-stat:not(:first-child){
-    min-height:0;
-    padding:22px 0;
-    border-right:0;
-    border-bottom:1px solid rgba(255,255,255,.1);
-  }
-  .case-stat:last-child{grid-column:auto;border-top:0;border-bottom:0;}
-
-  .case-body{padding:76px 22px;}
-  .case-layout{gap:48px;}
-  .case-content h2{margin-top:60px;font-size:38px;}
-  .case-content p{font-size:16px;line-height:1.75;}
-  .case-content .lead{font-size:19px;}
-  .case-quote{font-size:22px;padding-left:20px;}
-
-  .feature-list{grid-template-columns:1fr;}
-  .feature-item{padding:24px 20px;}
-
-  .case-video{padding:76px 0;}
-  .case-video-head{padding:0 22px;margin-bottom:26px;}
-  .case-video-head h2{font-size:43px;}
-  .case-video-frame{border-radius:0;}
-
-  .case-impact{padding:78px 22px;}
-  .case-impact-grid{gap:28px;}
-  .case-impact-copy h2{font-size:42px;}
-
-  .case-learning{padding:78px 22px 88px;}
-  .case-learning-inner{gap:30px;}
-  .case-learning h2{font-size:42px;}
-
-  .case-next{
-    flex-direction:column;
-    align-items:flex-start;
-    margin-top:48px;
+  .slep-field .field-copy h2{
+    font-size:41px !important;
+    line-height:1.10 !important;
   }
 }
-</style>
-<style id="virtual-school-explorer-video-autoplay">
-.case-video-frame video{
-  display:block !important;
-  width:100% !important;
-  height:auto !important;
-  object-fit:cover !important;
-  pointer-events:none !important;
+</style><style id="virtual-explorer-same-format">
+/* Virtual School Explorer — case-specific media */
+.explorer-mark{
+  background:#fff !important;
+  border-color:rgba(255,255,255,.16) !important;
 }
-</style>
-<style id="case-footer-brand-casing">
-.case-next a{
-  text-transform:none !important;
-  letter-spacing:.06em !important;
-}
-.case-next a .brand-case-sensitive{
-  text-transform:none !important;
-  letter-spacing:0 !important;
-}
-</style><style id="case-explorer-branding">
-.case-breadcrumb{
-  display:flex !important;
-  align-items:center !important;
-  margin-bottom:72px !important;
+.explorer-mark .tether-logo{
+  height:30px !important;
+  max-width:210px !important;
 }
 
-.case-explorer-brand-link{
-  display:inline-flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  text-decoration:none !important;
-  padding:14px 18px !important;
-  background:linear-gradient(180deg,#f8fbff 0%,#eef3f9 100%) !important;
-  border:1px solid rgba(164,178,192,.45) !important;
-  border-radius:18px !important;
-  box-shadow:0 14px 34px rgba(0,0,0,.18) !important;
+.explorer-demo .field-card{
+  min-height:600px;
+}
+.explorer-demo .field-photo{
+  min-height:600px;
+  background:#eef2f6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.explorer-demo .field-photo::after{
+  display:none !important;
+}
+.explorer-demo video{
+  display:block;
+  width:100%;
+  height:100%;
+  min-height:600px;
+  object-fit:cover;
+  pointer-events:none;
 }
 
-.case-explorer-brand-link:hover{
-  transform:translateY(-1px) !important;
-  box-shadow:0 18px 36px rgba(0,0,0,.22) !important;
+.explorer-profile-grid{
+  width:min(var(--max),100%);
+  margin:52px auto 0;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.explorer-profile-item{
+  min-height:220px;
+  padding:28px 28px 32px 0;
+}
+.explorer-profile-item + .explorer-profile-item{
+  padding-left:28px;
+  border-left:1px solid var(--line);
+}
+.explorer-profile-item small{
+  color:#718399;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.explorer-profile-item strong{
+  display:block;
+  margin-top:28px;
+  font-family:Manrope,sans-serif;
+  font-size:24px;
+  font-weight:500;
+  line-height:1.25;
+  letter-spacing:-.04em;
+  color:#17202c;
+}
+.explorer-profile-item p{
+  margin:12px 0 0;
+  color:#5f6b79;
+  font-size:13px;
+  line-height:1.7;
 }
 
-.case-explorer-brand-logo{
-  display:block !important;
-  width:auto !important;
-  height:36px !important;
-  max-width:190px !important;
-  object-fit:contain !important;
+@media(max-width:900px){
+  .explorer-profile-grid{grid-template-columns:1fr}
+  .explorer-profile-item + .explorer-profile-item{
+    padding-left:0;
+    border-left:0;
+    border-top:1px solid var(--line);
+  }
 }
-
 @media(max-width:760px){
-  .case-breadcrumb{
-    margin-bottom:48px !important;
-  }
-
-  .case-explorer-brand-link{
-    padding:12px 16px !important;
-    border-radius:16px !important;
-  }
-
-  .case-explorer-brand-logo{
-    height:31px !important;
-    max-width:168px !important;
-  }
-}
-
-@media(max-width:420px){
-  .case-explorer-brand-link{
-    padding:11px 14px !important;
-    border-radius:14px !important;
-  }
-
-  .case-explorer-brand-logo{
-    height:28px !important;
-    max-width:154px !important;
-  }
+  .explorer-demo .field-card{min-height:0}
+  .explorer-demo .field-photo,
+  .explorer-demo video{min-height:340px}
+  .explorer-profile-item{min-height:0;padding:24px 0 28px!important}
 }
 </style></head><body>
-<header class="nav"><a class="brand" href="/es/">Felipe Quiroz</a><nav class="nav-links"><a class="" href="/#work">Work</a><a href="/about">About</a><a href="/now">Now</a><a href="/blog">Blog</a><a class="contact-nav" href="#contact">Contact</a><a aria-label="Switch language" class="lang-switch" href="/es/tethered/explorador-virtual-colegios">ES</a></nav></header>
-<section class="case-hero">
-<div class="case-wrap">
-<div class="case-breadcrumb"><a class="case-explorer-brand-link" href="https://felipequirozp.cl/tethereducation"><img alt="Virtual School Explorer" class="case-explorer-brand-logo" src="/logos/virtual-school-explorer-logo.svg"/></a></div>
-<div class="case-kicker">Case Study · EdTech · AI · Partnerships</div>
-<h1>Virtual School <span>Explorer.</span></h1>
-<p class="case-deck">
-      An AI-powered education discovery platform that helps families search, compare and better understand their options through maps, personalized filters, digital school profiles and guidance tools.
-    </p>
-<div class="case-actions">
-<a class="case-btn primary" href="https://explorador.com/en" rel="noopener noreferrer" target="_blank">Visit site ↗</a>
-<a class="case-btn" href="#video">See the Explorer in action ↓</a>
+<header class="nav"><a class="brand" href="/">Felipe Quiroz</a><nav class="nav-links">
+<a href="/#work">Work</a><a href="/about">About</a><a href="/now">Now</a><a href="/blog">Blog</a>
+<a class="contact-nav" href="#contact">Contact</a>
+<a aria-label="Switch language" class="lang-switch" href="/es/tethered/explorador-virtual-colegios">ES</a>
+</nav></header>
+
+
+
+
+
+
+
+
+
+<section class="hero"><div class="hero-inner">
+<div class="hero-top">
+<a aria-label="Back to TetherEducation" class="tether-mark explorer-mark" href="/tethereducation">
+<img alt="Virtual School Explorer" class="tether-logo" src="/logos/virtual-school-explorer-logo.svg"/>
+</a>
+<div class="hero-meta"><span>Case study / 01</span><span>2024</span><span>EdTech · AI · Discovery</span></div>
 </div>
+<div class="hero-kicker">Discovery / AI / Partnerships</div>
+<h1>Virtual School<span>Explorer.</span></h1>
+<div class="hero-bottom">
+<p class="hero-description">An AI-powered education discovery platform helping families search, compare and better understand their options through maps, personalized filters, digital school profiles and guidance tools.</p>
+<div class="hero-role"><strong>TetherEducation</strong><span>Head of Partnerships</span><span>Product · Adoption · Public education</span><a class="hero-site" href="https://explorador.com/en" rel="noopener noreferrer" target="_blank">explorador.com ↗</a></div>
 </div>
-</section>
-<section class="case-stats">
-<div class="case-wrap">
-<div class="case-stats-grid">
-<div class="case-stat">
-<strong>20,000+</strong>
-<span>families reached through partnerships in 2024</span>
+</div></section><section class="impact"><div class="impact-head">
+<div><div class="section-label">01 / Impact</div><h2>From discovering options<span>to making better decisions.</span></h2></div>
+<p class="impact-copy">The Explorer combined product, data, AI and partnerships to make educational information clearer and more useful for families and communities.</p>
 </div>
-<div class="case-stat">
-<strong>100+</strong>
-<span>public schools reached in Chile</span>
+<div class="impact-grid">
+<div class="impact-item"><strong>20,000+</strong><span>Families reached through partnerships in 2024</span></div>
+<div class="impact-item"><strong>100+</strong><span>Public schools reached in Chile</span></div>
+<div class="impact-item"><strong>AI + data</strong><span>Personalized guidance for high-impact education decisions</span></div>
+<div class="impact-item"><strong>1 platform</strong><span>Search, comparison, availability and guidance in one experience</span></div>
+</div></section><section class="role"><div class="role-grid">
+<div class="section-label">02 / My role</div>
+<div class="role-main">
+<h2>Connecting product, institutions and families.</h2>
+<p>From Partnerships, I worked to connect Virtual School Explorer with schools, families, education communities, Local Public Education Services and other education institutions.</p>
+<p>My focus was opening doors, building strategic relationships and translating the product's value for different stakeholders, helping bring the platform into real adoption and implementation contexts.</p>
+<div class="snapshot">
+<div class="snapshot-item"><div class="snapshot-label">Product</div><div class="snapshot-value">Virtual School Explorer</div></div>
+<div class="snapshot-item"><div class="snapshot-label">Role</div><div class="snapshot-value">Head of Partnerships</div></div>
+<div class="snapshot-item"><div class="snapshot-label">Category</div><div class="snapshot-value">EdTech / AI</div></div>
+<div class="snapshot-item"><div class="snapshot-label">Focus</div><div class="snapshot-value">Discovery · Guidance · Adoption</div></div>
 </div>
-<div class="case-stat">
-<strong>AI + data</strong>
-<span>personalized guidance for high-impact education decisions</span>
+<div class="snapshot-focus"><span>Partnerships</span><span>Product adoption</span><span>Public education</span><span>AI discovery</span><span>Family experience</span></div>
 </div>
+</div></section><section class="product"><div class="product-head">
+<div><div class="section-label">03 / Product &amp; AI</div><h2>More than a map.<span>A guidance platform.</span></h2></div>
+<p>The experience combined geographic search, admissions data, availability, enriched profiles and an AI assistant to support complex education decisions.</p>
 </div>
+<div class="product-note"><strong>AI-powered discovery</strong><p>Families could start with filters or interact with the assistant, which could move the map, apply criteria and recommend options based on their needs.</p></div>
+<div class="product-grid">
+<article class="product-item"><div class="product-num">01</div><div class="product-icon">↗</div><h3>Smart search</h3><div class="product-type">Discovery</div><p>Filter by distance, grade level, cost, educational model and other relevant criteria.</p></article>
+<article class="product-item"><div class="product-num">02</div><div class="product-icon">↗</div><h3>Admission chances</h3><div class="product-type">Data</div><p>Personalized estimates based on historical application data and assignment rules.</p></article>
+<article class="product-item"><div class="product-num">03</div><div class="product-icon">↗</div><h3>Real availability</h3><div class="product-type">Availability</div><p>Visibility into open seats, connecting discovery with real enrollment opportunities.</p></article>
+<article class="product-item"><div class="product-num">04</div><div class="product-icon">↗</div><h3>AI assistant</h3><div class="product-type">Guidance</div><p>A conversational experience able to answer questions, move the map and apply filters.</p></article>
+</div></section><section class="projects"><div class="projects-head">
+<div><div class="section-label">04 / School experience</div><h2>Understanding a school<span>beyond a listing.</span></h2></div>
+<p>Each institution could build a richer digital profile, helping families understand its educational approach, context and community experience.</p>
 </div>
-</section>
-<section class="case-body">
-<div class="case-layout">
-<aside class="case-aside">
-<div class="case-aside-label">Project</div>
-<p>
-        TetherEd<br/>
-        Virtual School Explorer<br/><br/>
-        Discovery · Guidance · AI<br/>
-        Partnerships · Public Education
-      </p>
-</aside>
-<article class="case-content">
-<h2>The challenge.</h2>
-<p class="lead">
-        Choosing a school is a high-impact decision, but the information needed to make it is often scattered, difficult to compare and not always designed around the questions families actually need to answer.
-      </p>
-<p>Virtual School Explorer was designed to transform that experience. Instead of forcing families to navigate multiple sources of information, the platform brought educational options into a map-based interface and let them explore schools by location, grade level, cost, academic model and other needs.</p>
-<p>
-        The goal was to bring more transparency to available options and make complex processes—such as understanding costs, open seats or admission probabilities—much easier to navigate.
-      </p>
-<h2>From search tool to guidance platform.</h2>
-<p>
-        The product went far beyond displaying schools on a map. Families could begin by applying filters or interacting with an AI assistant. From those signals, the platform could deliver personalized information, adjust the search and recommend options based on each family’s needs.
-      </p>
-<div class="feature-list">
-<div class="feature-item">
-<span>Discovery</span>
-<h3>Smart School Search</h3>
-<p>Search by distance, grade level, cost, educational model and other relevant criteria.</p>
+<div class="explorer-profile-grid">
+<article class="explorer-profile-item"><small>Transparency</small><strong>Tuition &amp; financial aid</strong><p>Information to compare costs, aid and better understand the real out-of-pocket expense of each option.</p></article>
+<article class="explorer-profile-item"><small>Digital profile</small><strong>Multimedia content</strong><p>Virtual tours, community videos and content showcasing spaces, identity and the school's educational proposition.</p></article>
+<article class="explorer-profile-item"><small>Engagement</small><strong>Chatbot + CRM</strong><p>School-specific conversations connected with relationship and follow-up tools.</p></article>
+</div></section><section class="operating"><div class="operating-head">
+<div><div class="section-label">05 / Partnerships</div><h2>The product needed<span>relationships to scale.</span></h2></div>
+<p>In education, adoption does not happen just because a strong platform exists. It also depends on trust, institutional access and local context.</p>
 </div>
-<div class="feature-item">
-<span>Transparency</span>
-<h3>Tuition &amp; financial aid</h3>
-<p>Information to compare costs and better understand the real out-of-pocket expense of each option.</p>
+<div class="work-list">
+<div class="work-item"><div class="work-num">01</div><strong>Connect schools, families and education communities</strong></div>
+<div class="work-item"><div class="work-num">02</div><strong>Build relationships with institutions and public-sector actors</strong></div>
+<div class="work-item"><div class="work-num">03</div><strong>Translate market needs into product signals</strong></div>
+<div class="work-item"><div class="work-num">04</div><strong>Open adoption and implementation opportunities</strong></div>
+<div class="work-item"><div class="work-num">05</div><strong>Position product value for different stakeholders</strong></div>
+<div class="work-item"><div class="work-num">06</div><strong>Connect partnerships with growth and reach</strong></div>
+</div></section><section class="field explorer-demo" id="video"><div class="field-card">
+<div class="field-copy">
+<div class="section-label">06 / The Explorer in action</div>
+<h2>Search, compare<br/><span class="field-line">and decide <span class="field-accent">in one experience.</span></span></h2>
+<p>A look at the product and how we aimed to simplify the process of discovering, comparing and understanding educational options.</p>
+<div class="field-meta"><span>Map search</span><span>AI assistant</span><span>Personalized guidance</span></div>
 </div>
-<div class="feature-item">
-<span>Data</span>
-<h3>Admission Chances</h3>
-<p>Personalized estimates based on historical application data and assignment rules.</p>
-</div>
-<div class="feature-item">
-<span>Availability</span>
-<h3>Open seats</h3>
-<p>Visibility into schools with available seats, connecting discovery with real enrollment opportunities.</p>
-</div>
-<div class="feature-item">
-<span>AI</span>
-<h3>Real-time assistant</h3>
-<p>A conversational experience that can answer questions, move the map and apply filters.</p>
-</div>
-<div class="feature-item">
-<span>Engagement</span>
-<h3>Digital profile + CRM</h3>
-<p>School profiles with multimedia content, chatbot and conversations connected to the CRM.</p>
-</div>
-</div>
-<h2>A richer way to understand each school.</h2>
-<p>
-        Each institution could have a digital profile that went far beyond a traditional listing. Families could understand the school’s educational approach, explore spaces through virtual tours, watch community testimonials and access multimedia content about the school and its surroundings.
-      </p>
-<p>
-        That combination helped close the gap between finding a school on a list and actually understanding whether it could be a good fit for a family.
-      </p>
-<div class="case-quote">
-        The value was not just in showing more information, but in turning complex information into clearer decisions.
-      </div>
-<h2>My role.</h2>
-<p>From Partnerships, I worked on connecting Virtual School Explorer with the different actors across the education ecosystem: schools, families, education communities, Local Public Education Services and other institutions connected to education.</p>
-<p>
-        My focus was on opening doors, building strategic relationships and translating the product’s value for different stakeholders, helping the platform reach more communities and be understood not only as a technology tool, but as a new way to support education decisions.
-      </p>
-<p>
-        That work meant moving between product, institutions and local contexts: understanding each actor’s needs, identifying collaboration opportunities and building partnerships that could expand TetherEd’s reach and bring the product into real-world use cases.
-      </p>
-</article>
-</div>
-</section>
-<section class="case-video" id="video">
-<div class="case-wrap">
-<div class="case-video-head">
-<h2>The Explorer in action.</h2>
-<p>
-        A look at the product and how we aimed to simplify the process of discovering, comparing and understanding educational options.
-      </p>
-</div>
-<div class="case-video-frame">
+<div class="field-photo">
 <video autoplay="" loop="" muted="" playsinline="" preload="auto">
 <source src="/videos/virtual-school-explorer.mp4" type="video/mp4"/>
-Your browser does not support HTML5 video.
 </video>
 </div>
-</div>
-</section>
-<section class="case-impact">
-<div class="case-wrap case-impact-grid">
-<div class="case-impact-label">Impact</div>
-<div class="case-impact-copy">
-<h2>The product needed relationships to reach scale.</h2>
-<p>
-        Through partnerships, we reached more than 20,000 families in 2024 and connected with more than 100 public schools in Chile.
-      </p>
-<p>
-        More than distributing a platform, the challenge was to build the relationships needed for it to reach families and education communities within a system where adoption depends as much on the product as it does on trust between actors.
-      </p>
-</div>
-</div>
-</section>
-<section class="case-learning">
-<div class="case-wrap">
-<div class="case-learning-inner">
-<h2>What I learned.</h2>
-<div>Virtual School Explorer reinforced an idea that later became central to how I think about product and growth: in complex markets, launching a strong solution is not enough. You also have to design how that solution enters the system.</div>
-</div>
-<div class="case-next">
-<a href="https://felipequirozp.cl/tethereducation">← Back to <span class="brand-case-sensitive">TetherEd</span></a>
-<a href="https://explorador.com/en" rel="noopener noreferrer" target="_blank">Visit Virtual School Explorer ↗</a>
-</div>
-</div>
-</section>
-<section class="bottom" id="contact"><div class="contact-block"><div class="contact-copy"><div class="section-label">Contact</div><h3>Let’s talk.</h3></div><div class="contact-links"><a class="contact-link" href="https://www.linkedin.com/in/felipequirozp" rel="noopener noreferrer" target="_blank">LinkedIn</a><a class="contact-link" href="https://www.instagram.com/felipe_quirozp/" rel="noopener noreferrer" target="_blank">Instagram</a><a class="contact-link" href="mailto:felipe@lowsignal.cl">Email</a></div></div><footer class="footer"><div>© 2026 Felipe Quiroz</div><div>Santiago / CL</div></footer></section>
-</body></html>
+</div></section><section class="principle"><svg aria-hidden="true" class="principle-arc" preserveaspectratio="none" viewbox="0 0 1600 260"><path class="arc-glow" d="M-80 215 C 330 -70, 1270 -70, 1680 215"></path><path class="arc-line" d="M-80 215 C 330 -70, 1270 -70, 1680 215"></path></svg>
+<div class="principle-inner"><div class="section-label">07 / Learning</div><h2>A strong solution needs<span>a clear path to adoption.</span></h2>
+<div class="principle-grid">
+<div class="principle-item"><small>01 / Product</small><strong>Turn complex information into clearer decisions.</strong><p>AI, data and design could help families navigate a difficult decision in a much simpler way.</p></div>
+<div class="principle-item"><small>02 / Partnerships</small><strong>Design how the product enters the system.</strong><p>In complex markets, relationships and trust also function as adoption infrastructure.</p></div>
+</div></div></section><section class="project-nav"><div class="project-nav-inner">
+<a href="/tethereducation"><div class="project-nav-label">Back</div><strong>TetherEducation</strong></a>
+<a href="/tethered/digital-transformation-public-education"><div class="project-nav-label">Next project</div><strong>Digital Transformation of Public Education</strong></a>
+</div></section><section class="bottom" id="contact"><div class="contact-block"><div class="contact-copy"><div class="section-label">Contact</div><h3>Let's talk.</h3></div><div class="contact-links"><a class="contact-link" href="https://www.linkedin.com/in/felipequirozp" rel="noopener noreferrer" target="_blank">LinkedIn</a><a class="contact-link" href="https://www.instagram.com/felipe_quirozp/" rel="noopener noreferrer" target="_blank">Instagram</a><a class="contact-link" href="mailto:felipe@lowsignal.cl">Email</a></div></div><footer class="footer"><div>© 2026 Felipe Quiroz</div><div>Santiago / CL</div></footer></section></body></html>
