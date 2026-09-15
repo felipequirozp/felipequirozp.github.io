@@ -7,7 +7,7 @@
 <title>Felipe Quiroz | Producto, Growth &amp; Operaciones</title>
 <meta content="#05070a" name="theme-color"/>
 <link href="/favicon.png" rel="icon" type="image/png"/>
-<meta content="Felipe Quiroz — producto, growth y operaciones. Construyendo productos, sistemas y compañías entre tecnología y negocio." name="description"/>
+<meta content="Felipe Quiroz — producto, growth y operaciones. Construyendo productos, sistemas de growth y modelos operativos entre tecnología y negocio." name="description"/>
 <link href="https://felipequirozp.cl/es/" rel="canonical"/>
 <link href="https://felipequirozp.cl/" hreflang="en" rel="alternate"/>
 <link href="https://felipequirozp.cl/es/" hreflang="es" rel="alternate"/>
@@ -3374,24 +3374,56 @@ header.nav{
   }
 }
 </style>
-<style id="home-writing-title-es-two-lines">
-#home-writing-title{
-  max-width:none !important;
-  width:max-content !important;
+<style id="usm-photo-same-system">
+/* USM — same image system as the other Selected Work cases */
+.photo-usm{
+  padding:0 !important;
+  background:#eef2f6 !important;
+  overflow:hidden !important;
 }
 
-@media(max-width:760px){
-  #home-writing-title{
-    width:max-content !important;
-    max-width:calc(100vw - 40px) !important;
-    font-size:clamp(38px, 10vw, 46px) !important;
-    line-height:1.02 !important;
+.photo-usm::before,
+.photo-usm::after{
+  content:none !important;
+  display:none !important;
+}
+
+.photo-usm img{
+  width:100% !important;
+  height:100% !important;
+  min-height:390px !important;
+  max-width:none !important;
+  max-height:none !important;
+  object-fit:cover !important;
+  object-position:center 50% !important;
+}
+
+.work-card:hover .photo-usm img{
+  transform:scale(1.015) !important;
+}
+
+@media(min-width:761px) and (max-width:960px){
+  .photo-usm img{
+    min-height:360px !important;
   }
 }
 
-@media(max-width:390px){
-  #home-writing-title{
-    font-size:36px !important;
+@media(max-width:760px){
+  .photo-usm img{
+    height:220px !important;
+    min-height:220px !important;
+    object-position:center 50% !important;
+  }
+}
+</style><style id="lowsignal-photo-framing-fix">
+/* lowsignal — stronger framing correction */
+.photo-low img{
+  object-position:76% 50% !important;
+}
+
+@media(max-width:760px){
+  .photo-low img{
+    object-position:80% 50% !important;
   }
 }
 </style></head>
@@ -3404,7 +3436,7 @@ header.nav{
 <a href="/es/now">Ahora</a>
 <a href="/es/blog">Blog</a>
 <a class="contact-nav" href="#contact">Contacto</a>
-<a aria-label="Switch language" class="lang-switch" href="/">EN</a>
+<a aria-label="Ver sitio en inglés" class="lang-switch" href="/">EN</a>
 </nav>
 </header>
 <section class="hero">
@@ -3427,7 +3459,7 @@ header.nav{
 <section class="proof">
 <div class="proof-inner">
 <div class="section-label">En números</div>
-<div class="proof-grid"><div class="proof-item"><strong>10K+</strong><span>clientes en el ecosistema GeoVictoria</span></div><div class="proof-item"><strong>15+</strong><span>organizaciones atendidas desde lowsignal</span></div><div class="proof-item"><strong>1M+</strong><span>postulaciones en TetherEd</span></div><div class="proof-item"><strong>4</strong><span>casos de trabajo seleccionados</span></div></div>
+<div class="proof-grid"><div class="proof-item"><strong>10K+</strong><span>clientes en el ecosistema GeoVictoria</span></div><div class="proof-item"><strong>15+</strong><span>organizaciones atendidas desde lowsignal</span></div><div class="proof-item"><strong>1M+</strong><span>postulaciones a través de TetherEd</span></div><div class="proof-item"><strong>4</strong><span>casos de trabajo seleccionados</span></div></div>
 </div>
 </section>
 <section class="home-thesis">
@@ -3439,17 +3471,17 @@ header.nav{
 </div>
 <div class="home-thesis-grid">
 <article>
-<small>01 / SEÑAL</small>
-<h3>Entender qué importa.</h3>
-<p>Clientes, datos y operación antes de soluciones.</p>
+<small>01 / SIGNAL</small>
+<h3>Encontrar lo que importa.</h3>
+<p>Clientes, datos y operación antes que soluciones.</p>
 </article>
 <article>
-<small>02 / SISTEMA</small>
+<small>02 / SYSTEM</small>
 <h3>Convertir ambigüedad en estructura.</h3>
-<p>Producto, procesos y automatización conectados a la ejecución.</p>
+<p>Producto, procesos y automatización conectados alrededor de la ejecución.</p>
 </article>
 <article>
-<small>03 / ESCALA</small>
+<small>03 / SCALE</small>
 <h3>Hacerlo repetible.</h3>
 <p>Medir, aprender y mejorar antes de escalar.</p>
 </article>
@@ -3475,20 +3507,20 @@ header.nav{
 </div>
 <div class="work-main">
 <h3>Construyendo productos de workforce para operaciones reales a escala.</h3>
-<p>Estrategia de producto, discovery, pilotos y MVPs con IA en Smart Scheduler, Shift Optimizer y Shift Change Workflow.</p>
+<p>Estrategia de producto, discovery, pilotos y MVPs habilitados por IA en Smart Scheduler, Shift Optimizer y Shift Change Workflow.</p>
 <div class="work-signals"><span>10K+ clientes</span><span>3 productos</span><span>IA · SaaS · Ops</span></div>
 <div class="work-cta">Ver caso<span aria-hidden="true" class="work-arrow"></span></div>
 </div>
 </div>
 <div class="work-photo-wrap">
 <div class="work-photo photo-geo">
-<img alt="GeoVictoria con clientes de distintas industrias" loading="lazy" onerror="this.onerror=null;this.src='geocoffe.jpg'" src="/images/geocoffe.jpg"/>
+<img alt="GeoVictoria with clients from different industries" loading="lazy" onerror="this.onerror=null;this.src='geocoffe.jpg'" src="/images/geocoffe.jpg"/>
 </div>
 </div>
 </a><a class="work-card" href="/es/lowsignal">
 <div class="work-content">
 <div class="work-meta">
-<div class="work-index">02 / Construcción de empresa</div>
+<div class="work-index">02 / Company building</div>
 <div class="work-brand logo-low"><img alt="lowsignal" loading="lazy" onerror="this.onerror=null;this.src='/logos/lowsignal-logo.png'" src="/logos/lowsignal-logo.png"/></div>
 <div class="work-role">Co-Founder &amp; COO · Growth Systems</div>
 </div>
@@ -3501,13 +3533,13 @@ header.nav{
 </div>
 <div class="work-photo-wrap">
 <div class="work-photo photo-low">
-<img alt="Trabajo con clientes de lowsignal" loading="lazy" onerror="this.onerror=null;this.src='lowsignal-client-work.jpg'" src="/images/lowsignal-client-work.jpg"/>
+<img alt="lowsignal client work" loading="lazy" onerror="this.onerror=null;this.src='lowsignal-client-work.jpg'" src="/images/lowsignal-client-work.jpg"/>
 </div>
 </div>
 </a><a class="work-card" href="/es/tethereducation">
 <div class="work-content">
 <div class="work-meta">
-<div class="work-index">03 / Alianzas</div>
+<div class="work-index">03 / Partnerships</div>
 <div class="work-brand logo-tether"><img alt="TetherEd" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" src="/logos/tethered-logo.svg"/><span class="tether-fallback">TetherEd</span></div>
 <div class="work-role">Head of Partnerships · EdTech · Expansión internacional</div>
 </div>
@@ -3520,7 +3552,7 @@ header.nav{
 </div>
 <div class="work-photo-wrap">
 <div class="work-photo photo-tether">
-<img alt="Equipo de TetherEd en un evento" loading="lazy" onerror="this.onerror=null;this.src='tether-team-event.jpg'" src="/images/tether-team-event.jpg"/>
+<img alt="TetherEd team at an event" loading="lazy" onerror="this.onerror=null;this.src='tether-team-event.jpg'" src="/images/tether-team-event.jpg"/>
 </div>
 </div>
 </a><a class="work-card" href="/es/usm">
@@ -3528,7 +3560,7 @@ header.nav{
 <div class="work-meta">
 <div class="work-index">04 / Estrategia y operaciones</div>
 <div class="work-brand logo-usm"><img alt="Universidad Técnica Federico Santa María" loading="lazy" onerror="this.onerror=null;this.src='/logos/logo-usm.png'" src="/logos/logo-usm.png"/></div>
-<div class="work-role">Higher Education · Admisión · Operaciones</div>
+<div class="work-role">Educación superior · Admisión · Operaciones</div>
 </div>
 <div class="work-main">
 <h3>De la captación a operar con consistencia a escala.</h3>
@@ -3539,7 +3571,7 @@ header.nav{
 </div>
 <div class="work-photo-wrap">
 <div class="work-photo photo-usm">
-<img alt="Equipo de Admisión de la Universidad Técnica Federico Santa María" loading="lazy" onerror="this.onerror=null;this.src='usm-admissions-community.jpg'" src="/images/usm-admissions-community.jpg"/>
+<img alt="Admissions team at Universidad Técnica Federico Santa María" loading="lazy" src="/images/usm-admissions-community.jpg"/>
 </div>
 </div>
 </a>
@@ -3551,11 +3583,11 @@ header.nav{
 <div class="about-bridge-copy">
 <div class="section-label">Sobre mí</div>
 <h2>Construyo donde <span>producto, growth</span> y negocio se cruzan.</h2>
-<p class="about-bridge-lead">Mi experiencia cruza producto, growth, alianzas y construcción de compañías. El hilo común es convertir problemas y oportunidades en sistemas que puedan operar, aprender y escalar.</p>
+<p class="about-bridge-lead">Mi experiencia cruza producto, growth, partnerships y construcción de compañías. El hilo común es convertir problemas y oportunidades en sistemas que puedan operar, aprender y escalar.</p>
 <a class="about-bridge-link" href="/es/about">Ver mi recorrido <span>↗</span></a>
 </div>
 <figure class="about-bridge-visual">
-<img alt="Felipe Quiroz trabajando en terreno y conversando con personas" loading="lazy" onerror="this.onerror=null;this.src='building-in-the-field.jpg'" src="/images/building-in-the-field.jpg"/>
+<img alt="Felipe Quiroz working in the field and talking with people" loading="lazy" onerror="this.onerror=null;this.src='building-in-the-field.jpg'" src="/images/building-in-the-field.jpg"/>
 <figcaption><span>En terreno / Producto, personas y conversaciones reales</span><span>Santiago / CL</span></figcaption>
 </figure>
 </div>
@@ -3571,7 +3603,7 @@ header.nav{
 <div class="home-writing-head">
 <div>
 <div class="section-label">Últimas ideas</div>
-<h2 id="home-writing-title">Ideas desde lo que<br/>construyo.</h2>
+<h2 id="home-writing-title">Ideas desde lo que construyo.</h2>
 </div>
 <div class="home-writing-head-side">
 <p>Producto, startups, IA, growth y operaciones. Notas desde cosas que he construido, probado y aprendido en el camino.</p>
@@ -3580,7 +3612,7 @@ header.nav{
 </div>
 <div class="home-writing-grid">
 <a class="home-writing-feature" href="/es/blog/ai-native-core">
-<img alt="Evento AI Native Startups" loading="lazy" src="/images/platanus-event.jpg"/>
+<img alt="AI Native Startups event" loading="lazy" src="/images/platanus-event.jpg"/>
 <div class="home-writing-card-copy">
 <span class="home-writing-meta">IA / Producto</span>
 <h3>El próximo salto de producto se construye con IA en el core</h3>
@@ -3589,18 +3621,18 @@ header.nav{
 </a>
 <div class="home-writing-side">
 <a class="home-writing-side-card" href="/es/blog/partnerships-infrastructure">
-<img alt="TetherEd y Fundación Kiri" loading="lazy" src="/images/tethered-kiri-partnerships-2025.png"/>
+<img alt="TetherEd and Fundación Kiri" loading="lazy" src="/images/tethered-kiri-partnerships-2025.png"/>
 <div class="home-writing-card-copy">
 <span class="home-writing-meta">Partnerships / Startups</span>
-<h3>Partnerships no es solo cerrar alianzas</h3>
+<h3>Partnerships es más que cerrar deals</h3>
 <span class="home-writing-read">Leer artículo →</span>
 </div>
 </a>
 <a class="home-writing-side-card" href="/es/blog/ai-leaves-the-demo">
-<img alt="Felipe Quiroz junto al equipo de DiiO" loading="lazy" src="/images/ai-leaves-the-demo-diio-2025.jpg"/>
+<img alt="Felipe Quiroz with the DiiO team" loading="lazy" src="/images/ai-leaves-the-demo-diio-2025.jpg"/>
 <div class="home-writing-card-copy">
 <span class="home-writing-meta">IA / Startups</span>
-<h3>Cómo se ve la IA cuando deja de ser una demo</h3>
+<h3>Cómo se ve la IA cuando sale de la demo</h3>
 <span class="home-writing-read">Leer artículo →</span>
 </div>
 </a>
@@ -3610,7 +3642,7 @@ header.nav{
 </section>
 <section class="bottom" id="contact">
 <div class="contact-block">
-<div class="contact-copy"><div class="section-label">Contacto</div><h3>Conversemos.</h3></div>
+<div class="contact-copy"><div class="section-label">Contacto</div><h3>Hablemos.</h3></div>
 <div class="contact-links">
 <a class="contact-link" href="https://www.linkedin.com/in/felipequirozp" rel="noopener noreferrer" target="_blank">LinkedIn</a>
 <a class="contact-link" href="https://www.instagram.com/felipe_quirozp/" rel="noopener noreferrer" target="_blank">Instagram</a>
