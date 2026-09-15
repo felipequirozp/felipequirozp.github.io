@@ -480,6 +480,89 @@ img{display:block;width:100%;max-width:100%}
     line-height:1.10 !important;
   }
 }
+</style><style id="digital-logo-buttons">
+/* Compact TetherEducation logo pill */
+.hero .tether-mark{
+  min-width:0 !important;
+  width:auto !important;
+  min-height:0 !important;
+  padding:18px 28px !important;
+  border-radius:28px !important;
+  background:#f4f6f8 !important;
+  border:1px solid rgba(255,255,255,.14) !important;
+  box-shadow:0 8px 24px rgba(0,0,0,.10) !important;
+}
+.hero .tether-mark .tether-logo{
+  width:auto !important;
+  height:30px !important;
+  max-width:180px !important;
+  object-fit:contain !important;
+}
+@media(max-width:760px){
+  .hero .tether-mark{
+    padding:15px 22px !important;
+    border-radius:24px !important;
+  }
+  .hero .tether-mark .tether-logo{
+    height:27px !important;
+    max-width:160px !important;
+  }
+}
+</style><style id="digital-clean-hero">
+/* Digital Transformation hero — intentionally minimal */
+.hero-bottom{
+  grid-template-columns:1fr !important;
+  gap:0 !important;
+}
+.hero-description{
+  max-width:840px !important;
+}
+</style><style id="principle-two-lines">
+/* Principle headline: exactly one sentence per line */
+.principle h2{
+  max-width:none !important;
+  font-size:clamp(42px,5.2vw,78px) !important;
+  line-height:1.02 !important;
+}
+.principle h2 .principle-line{
+  display:block !important;
+  white-space:nowrap !important;
+}
+.principle h2 .principle-line + .principle-line{
+  margin-top:.10em !important;
+}
+
+@media(max-width:900px){
+  .principle h2{
+    font-size:clamp(38px,5.8vw,64px) !important;
+  }
+}
+
+@media(max-width:760px){
+  .principle h2{
+    font-size:clamp(34px,8.5vw,48px) !important;
+  }
+  .principle h2 .principle-line{
+    white-space:normal !important;
+  }
+}
+</style><style id="principle-two-lines-color">
+/* Principle headline colors: first line white, second line accent */
+.principle h2 .principle-line{
+  display:block !important;
+  white-space:nowrap !important;
+}
+.principle h2 .principle-line:first-child{
+  color:#fff !important;
+}
+.principle h2 .principle-line:last-child{
+  color:#a8bfd9 !important;
+}
+@media(max-width:760px){
+  .principle h2 .principle-line{
+    white-space:normal !important;
+  }
+}
 </style></head><body>
 <header class="nav"><a class="brand" href="/">Felipe Quiroz</a><nav class="nav-links">
 <a href="/#work">Work</a><a href="/about">About</a><a href="/now">Now</a><a href="/blog">Blog</a>
@@ -497,7 +580,6 @@ img{display:block;width:100%;max-width:100%}
 <h1>Digital Transformation<span>of Public Education.</span></h1>
 <div class="hero-bottom">
 <p class="hero-description">I led strategic and implementation initiatives with SLEP del Pino and CORMUN Rancagua to digitize admissions, enrollment and access to digital infrastructure.</p>
-<div class="hero-role"><strong>TetherEducation</strong><span>Head of Partnerships</span><span>SLEP del Pino · CORMUN Rancagua</span></div>
 </div>
 </div></section>
 <section class="impact"><div class="impact-head">
@@ -551,7 +633,7 @@ img{display:block;width:100%;max-width:100%}
 <article class="product-item"><div class="product-num">03</div><div class="product-icon">↗</div><h3>Admission offers</h3><div class="product-type">Assignment</div><p>Digital management from availability to acceptance.</p></article>
 <article class="product-item"><div class="product-num">04</div><div class="product-icon">↗</div><h3>Digital enrollment</h3><div class="product-type">Completion</div><p>A digital process with e-signatures and structured data for operations.</p></article>
 </div></section>
-<section class="projects"><div class="projects-head">
+<section class="projects" id="platform"><div class="projects-head">
 <div><div class="section-label">04 / Platform in action</div><h2>The product inside<span>the real operation.</span></h2></div>
 <p>A view of the admissions and waitlist management system used to digitize enrollment, tracking and assignment workflows.</p>
 </div>
@@ -591,7 +673,7 @@ img{display:block;width:100%;max-width:100%}
 </div>
 </div>
 </section><section class="principle"><svg aria-hidden="true" class="principle-arc" preserveaspectratio="none" viewbox="0 0 1600 260"><path class="arc-glow" d="M-80 215 C 330 -70, 1270 -70, 1680 215"></path><path class="arc-line" d="M-80 215 C 330 -70, 1270 -70, 1680 215"></path></svg>
-<div class="principle-inner"><div class="section-label">07 / Learning</div><h2>Real transformation happened when <span>technology, adoption and operations moved together.</span></h2>
+<div class="principle-inner"><div class="section-label">07 / Learning</div><h2><span class="principle-line">Technology, adoption and operations.</span><span class="principle-line">One transformation.</span></h2>
 <div class="principle-grid">
 <div class="principle-item"><small>01 / Product</small><strong>Design for the whole system.</strong><p>Product, processes and institutional constraints had to be addressed as part of the same solution.</p></div>
 <div class="principle-item"><small>02 / Implementation</small><strong>Turn implementation into impact.</strong><p>Adoption and operational coordination were part of the path that turned technology into real value.</p></div>
