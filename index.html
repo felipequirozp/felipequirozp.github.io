@@ -3374,59 +3374,45 @@ header.nav{
   }
 }
 </style>
-<style id="usm-photo-balanced-frame">
-/* HOME — USM group photo: preserve card shape + show full group */
+<style id="usm-photo-same-system">
+/* USM — same image system as the other Selected Work cases */
 .photo-usm{
-  position:relative !important;
-  display:block !important;
   padding:0 !important;
+  background:#eef2f6 !important;
   overflow:hidden !important;
-  background:#e9edf2 !important;
 }
 
-.photo-usm::before{
-  content:"";
-  position:absolute;
-  inset:-26px;
-  background:
-    linear-gradient(rgba(241,244,247,.14),rgba(241,244,247,.14)),
-    url('/images/usm-admissions-community.jpg') center center/cover no-repeat;
-  filter:blur(18px) saturate(.82);
-  transform:scale(1.08);
-  opacity:.72;
-  z-index:0;
-}
-
+.photo-usm::before,
 .photo-usm::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(246,248,250,.12);
-  z-index:1;
-  pointer-events:none;
+  content:none !important;
+  display:none !important;
 }
 
 .photo-usm img{
-  position:relative !important;
-  z-index:2 !important;
   width:100% !important;
   height:100% !important;
-  min-height:100% !important;
+  min-height:390px !important;
   max-width:none !important;
   max-height:none !important;
-  object-fit:contain !important;
-  object-position:center center !important;
-  transform:none !important;
+  object-fit:cover !important;
+  object-position:center 50% !important;
 }
 
 .work-card:hover .photo-usm img{
-  transform:none !important;
+  transform:scale(1.015) !important;
+}
+
+@media(min-width:761px) and (max-width:960px){
+  .photo-usm img{
+    min-height:360px !important;
+  }
 }
 
 @media(max-width:760px){
-  .photo-usm::before{
-    inset:-18px;
-    filter:blur(14px) saturate(.84);
+  .photo-usm img{
+    height:220px !important;
+    min-height:220px !important;
+    object-position:center 50% !important;
   }
 }
 </style></head>
