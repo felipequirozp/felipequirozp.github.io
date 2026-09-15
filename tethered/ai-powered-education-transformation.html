@@ -779,6 +779,115 @@ img{display:block;width:100%;max-width:100%}
     border-radius:18px;
   }
 }
+</style><style id="ai-product-title-layout-fix">
+/* AI product title — keep within its column */
+.product-head{
+  grid-template-columns:minmax(0,1.05fr) minmax(320px,.55fr) !important;
+}
+
+.product-head > div:first-child{
+  min-width:0 !important;
+}
+
+.product h2{
+  max-width:820px !important;
+  font-size:clamp(48px,5.15vw,80px) !important;
+  line-height:1.01 !important;
+}
+
+.product h2 .product-line{
+  display:block !important;
+  white-space:normal !important;
+}
+
+.product h2 .product-line + .product-line{
+  margin-top:.05em !important;
+}
+
+@media(max-width:900px){
+  .product-head{
+    grid-template-columns:1fr !important;
+  }
+  .product h2{
+    max-width:900px !important;
+  }
+}
+
+@media(max-width:760px){
+  .product h2{
+    font-size:43px !important;
+    line-height:1.08 !important;
+  }
+}
+</style><style id="ai-case-heading-fixes">
+/* ===== AI CASE — heading fixes ===== */
+
+/* 03 / AI in education */
+.product-head{
+  grid-template-columns:minmax(0,1.08fr) minmax(320px,.52fr) !important;
+}
+.product-head > div:first-child{
+  min-width:0 !important;
+}
+.product h2{
+  max-width:860px !important;
+  font-size:clamp(48px,5vw,78px) !important;
+  line-height:1.02 !important;
+}
+.product h2 .product-line{
+  display:block !important;
+  white-space:normal !important;
+}
+.product h2 .product-line:first-child{
+  color:#ffffff !important;
+}
+.product h2 .product-line:last-child{
+  color:#9bb0c8 !important;
+  margin-top:.06em !important;
+}
+
+/* 04 / Collaboration */
+.projects-head > div:first-child{
+  min-width:0 !important;
+}
+.projects h2{
+  max-width:920px !important;
+  font-size:clamp(48px,5.25vw,80px) !important;
+  line-height:1.02 !important;
+}
+.projects h2 .collab-line{
+  display:block !important;
+  white-space:nowrap !important;
+}
+.projects h2 .collab-line:first-child{
+  color:#0b0f14 !important;
+}
+.projects h2 .collab-line:last-child{
+  color:#9aadc0 !important;
+  margin-top:.06em !important;
+}
+
+@media(max-width:900px){
+  .product-head,
+  .projects-head{
+    grid-template-columns:1fr !important;
+  }
+  .product h2,
+  .projects h2{
+    max-width:900px !important;
+  }
+}
+
+@media(max-width:760px){
+  .product h2,
+  .projects h2{
+    font-size:42px !important;
+    line-height:1.08 !important;
+  }
+  .projects h2 .collab-line{
+    white-space:normal !important;
+  }
+}
 </style></head><body>
 <header class="nav"><a class="brand" href="/">Felipe Quiroz</a><nav class="nav-links">
 <a href="/#work">Work</a><a href="/about">About</a><a href="/now">Now</a><a href="/blog">Blog</a>
@@ -833,7 +942,7 @@ img{display:block;width:100%;max-width:100%}
 <article class="product-item"><div class="product-num">03</div><div class="product-icon">↗</div><h3>Pedagogical innovation</h3><div class="product-type">Learning</div><p>Open new possibilities for teaching, autonomous learning and experimentation.</p></article>
 <article class="product-item"><div class="product-num">04</div><div class="product-icon">↗</div><h3>Responsible adoption</h3><div class="product-type">Equity</div><p>Integrate AI effectively and equitably while considering institutional capabilities and context.</p></article>
 </div></section><section class="projects"><div class="projects-head">
-<div><div class="section-label">04 / Collaboration</div><h2>International research<span>with local implementation.</span></h2></div>
+<div><div class="section-label">04 / Collaboration</div><h2><span class="collab-line">International research</span><span class="collab-line">with local implementation.</span></h2></div>
 <p>The initiative connected research, technology and public education to learn from real use rather than only from the lab.</p>
 </div>
 <div class="ai-collab-grid">
