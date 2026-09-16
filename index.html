@@ -3426,6 +3426,63 @@ header.nav{
     object-position:80% 50% !important;
   }
 }
+</style><style id="personal-metrics-refined">
+/* HOME — refined personal metrics */
+.proof-item{
+  justify-content:center !important;
+  gap:0 !important;
+}
+
+.metric-heading{
+  display:flex;
+  align-items:baseline;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.metric-heading strong{
+  margin:0 !important;
+  color:var(--ink) !important;
+  font-family:"Manrope",sans-serif !important;
+  font-size:clamp(58px,5.5vw,88px) !important;
+  font-weight:400 !important;
+  letter-spacing:-.07em !important;
+  line-height:.92 !important;
+}
+
+.metric-word{
+  color:var(--ink);
+  font-family:"Manrope",sans-serif;
+  font-size:clamp(22px,2vw,31px);
+  font-weight:400;
+  line-height:1;
+  letter-spacing:-.045em;
+}
+
+.metric-description{
+  margin:24px 0 0 !important;
+  max-width:260px !important;
+  color:#718096 !important;
+  font-size:12px !important;
+  line-height:1.55 !important;
+}
+
+@media(max-width:960px){
+  .metric-heading{gap:10px}
+  .metric-heading strong{font-size:66px !important}
+  .metric-word{font-size:25px}
+}
+
+@media(max-width:760px){
+  .proof-item{
+    justify-content:center !important;
+  }
+  .metric-heading strong{font-size:62px !important}
+  .metric-word{font-size:24px}
+  .metric-description{
+    margin-top:18px !important;
+  }
+}
 </style></head>
 <body>
 <header class="nav">
@@ -3459,7 +3516,7 @@ header.nav{
 <section class="proof">
 <div class="proof-inner">
 <div class="section-label">In numbers</div>
-<div class="proof-grid"><div class="proof-item"><strong>10K+</strong><span>customers across the GeoVictoria ecosystem</span></div><div class="proof-item"><strong>15+</strong><span>organizations served through lowsignal</span></div><div class="proof-item"><strong>1M+</strong><span>applications through TetherEd</span></div><div class="proof-item"><strong>4</strong><span>selected work cases</span></div></div>
+<div class="proof-grid"><div class="proof-item"><div class="metric-heading"><strong>4+</strong><div class="metric-word">years</div></div><p class="metric-description">across product, growth and operations</p></div><div class="proof-item"><div class="metric-heading"><strong>7</strong><div class="metric-word">markets</div></div><p class="metric-description">LATAM, United States and Europe</p></div><div class="proof-item"><div class="metric-heading"><strong>4</strong><div class="metric-word">disciplines</div></div><p class="metric-description">product, growth, operations and partnerships</p></div><div class="proof-item"><div class="metric-heading"><strong>4</strong><div class="metric-word">sectors</div></div><p class="metric-description">SaaS, EdTech / GovTech, digital services and higher education</p></div></div>
 </div>
 </section>
 <section class="home-thesis">
