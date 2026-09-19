@@ -3979,6 +3979,28 @@ header.nav{
 }
 </style>
 
+
+<style id="hybrid-card-specific-bottom-spacing">
+/* Extra breathing room for denser GeoVictoria + Tether cards */
+@media(min-width:981px){
+  .hybrid-work-card.geo .hybrid-work-copy,
+  .hybrid-work-card.tether .hybrid-work-copy{
+    padding-bottom:72px !important;
+  }
+}
+</style>
+
+
+<style id="hybrid-bottom-lift-final">
+/* Visually lift metrics + CTA away from the rounded bottom edge */
+@media(min-width:981px){
+  .hybrid-work-card.geo .hybrid-work-bottom,
+  .hybrid-work-card.tether .hybrid-work-bottom{
+    transform:translateY(-18px) !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="nav">
