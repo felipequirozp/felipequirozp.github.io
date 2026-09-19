@@ -3880,6 +3880,46 @@ header.nav{
   max-width:145px !important;
   opacity:.98 !important;
 }
+</style><style id="selected-work-hybrid-proposal">
+.selected{padding:112px var(--page-gutter) 122px!important;background:#f5f6f7!important}
+.selected-inner{width:min(var(--page-max),100%);margin:0 auto}
+.selected-head{display:grid!important;grid-template-columns:minmax(0,1.05fr) minmax(280px,.5fr)!important;gap:70px!important;align-items:end!important;margin-bottom:48px!important}
+.selected-head h2{margin:16px 0 0!important;max-width:940px!important;font-family:"Manrope",sans-serif!important;font-size:clamp(50px,5.8vw,84px)!important;line-height:.98!important;letter-spacing:-.065em!important;font-weight:400!important;color:var(--navy)!important}
+.selected-head>p{margin:0 0 5px!important;max-width:440px!important;color:#66717d!important;font-size:14px!important;line-height:1.72!important}
+.hybrid-work-list{display:grid;gap:22px}
+.hybrid-work-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:520px;overflow:hidden;border:1px solid #d7dce2;border-radius:28px;background:#fff;color:#10161d;text-decoration:none;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.hybrid-work-card:hover{transform:translateY(-3px);border-color:#c5ccd4;box-shadow:0 18px 42px rgba(13,23,36,.07)}
+.hybrid-work-card.is-reverse .hybrid-work-media{order:1}.hybrid-work-card.is-reverse .hybrid-work-copy{order:2}
+.hybrid-work-copy{padding:46px 48px 42px;display:flex;flex-direction:column;justify-content:space-between;min-width:0}
+.hybrid-work-top{display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
+.hybrid-work-index{padding-top:8px;color:#77879a;font-size:9px;line-height:1;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.hybrid-work-logo{min-width:150px;height:50px;padding:8px 13px;border-radius:13px;background:#090c11;display:flex;align-items:center;justify-content:center}
+.hybrid-work-logo img{display:block;width:auto;height:23px;max-width:142px;object-fit:contain}
+.hybrid-work-logo.geo img,.hybrid-work-logo.low img{filter:brightness(0) invert(1)}
+.hybrid-work-main{margin-top:56px}
+.hybrid-work-main h3{margin:0;max-width:690px;font-family:"Manrope",sans-serif;font-size:clamp(39px,3.65vw,58px);line-height:1.01;letter-spacing:-.058em;font-weight:400;color:#0e141b}
+.hybrid-work-main p{margin:22px 0 0;max-width:650px;color:#687584;font-size:13px;line-height:1.72}
+.hybrid-work-bottom{margin-top:36px;padding-top:19px;border-top:1px solid #dce1e6;display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
+.hybrid-work-tags{display:flex;flex-wrap:wrap;gap:10px 18px;color:#748396;font-size:10px;line-height:1.5}
+.hybrid-work-cta{flex:0 0 auto;display:inline-flex;align-items:center;gap:10px;color:#111820;font-size:10px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+.hybrid-work-cta span{font-size:18px;font-weight:400;transform:translateY(-1px);transition:transform .2s ease}
+.hybrid-work-card:hover .hybrid-work-cta span{transform:translate(3px,-3px)}
+.hybrid-work-media{min-height:520px;overflow:hidden;background:#e9edf1}
+.hybrid-work-media img{width:100%;height:100%;min-height:520px;object-fit:cover;transition:transform .55s ease}
+.hybrid-work-card:hover .hybrid-work-media img{transform:scale(1.022)}
+.hybrid-work-card.geo .hybrid-work-media img{object-position:52% 44%}
+.hybrid-work-card.low .hybrid-work-media img{object-position:50% 44%}
+.hybrid-work-card.tether .hybrid-work-media img{object-position:50% 34%}
+.hybrid-work-card.usm .hybrid-work-media img{object-position:50% 42%}
+.hybrid-work-card.geo .hybrid-work-copy{background:#0d1724;color:#fff}
+.hybrid-work-card.geo .hybrid-work-main h3{color:#fff}
+.hybrid-work-card.geo .hybrid-work-main p{color:#b9c4d0}
+.hybrid-work-card.geo .hybrid-work-index,.hybrid-work-card.geo .hybrid-work-tags{color:#95a8bc}
+.hybrid-work-card.geo .hybrid-work-bottom{border-top-color:rgba(255,255,255,.16)}
+.hybrid-work-card.geo .hybrid-work-cta{color:#fff}
+.hybrid-work-logo.tether{background:#090c11}.hybrid-work-logo.tether img{height:24px;opacity:1}
+@media(max-width:980px){.selected-head{grid-template-columns:1fr!important;gap:20px!important}.hybrid-work-card{grid-template-columns:1fr}.hybrid-work-card.is-reverse .hybrid-work-media,.hybrid-work-card.is-reverse .hybrid-work-copy{order:initial}.hybrid-work-media{min-height:390px}.hybrid-work-media img{min-height:390px}}
+@media(max-width:760px){.selected{padding:82px 20px 90px!important}.selected-head{margin-bottom:30px!important}.selected-head h2{font-size:46px!important}.hybrid-work-list{gap:14px}.hybrid-work-card{border-radius:21px;min-height:0}.hybrid-work-copy{padding:26px 22px 28px}.hybrid-work-top{align-items:center}.hybrid-work-logo{min-width:128px;height:44px;padding:7px 10px}.hybrid-work-logo img{max-width:120px;height:20px}.hybrid-work-main{margin-top:44px}.hybrid-work-main h3{font-size:37px}.hybrid-work-main p{font-size:12px}.hybrid-work-bottom{margin-top:28px;align-items:flex-start;flex-direction:column}.hybrid-work-media,.hybrid-work-media img{min-height:300px;height:300px}}
 </style></head>
 <body>
 <header class="nav">
@@ -3943,67 +3983,100 @@ header.nav{
 </div>
 </section>
 <section class="selected" id="work"><div class="selected-inner"><div class="selected-head">
-<div><div class="section-label">Selected work</div><h2>Products, companies and systems I’ve helped build.</h2></div>
+<div>
+<div class="section-label">Selected work</div>
+<h2>Products, companies and systems I’ve helped build.</h2>
+</div>
 <p>A selection of work across product, growth, operations and company building.</p>
-</div><a class="work-feature" href="/geovictoria">
-<div class="work-feature-copy">
-<div class="work-feature-top">
-<div class="work-feature-index">01 / Product</div>
-<div class="work-feature-brand"><img alt="GeoVictoria" src="/logos/geovictoria-logo.png"/></div>
+</div><div class="hybrid-work-list"><a class="hybrid-work-card geo" href="/geovictoria">
+<div class="hybrid-work-copy">
+<div>
+<div class="hybrid-work-top">
+<div class="hybrid-work-index">01 / Product</div>
+<div class="hybrid-work-logo geo">
+<img alt="GeoVictoria" src="/logos/geovictoria-logo.png"/>
 </div>
-<div class="work-feature-main">
-<h3>Building workforce products for real operations at scale.</h3>
+</div>
+<div class="hybrid-work-main">
+<h3>Workforce for real operations, built from product.</h3>
 <p>Product strategy, discovery, pilots and AI-enabled MVPs across Smart Scheduler, Shift Optimizer and Shift Change Workflow.</p>
-<div class="work-signals-editorial"><span>10K+ customers</span><span>3 products</span><span>AI · SaaS · Ops</span></div>
-<div class="work-feature-cta">View case <span>↗</span></div>
 </div>
 </div>
-<div class="work-feature-media"><img alt="GeoVictoria" src="/images/geocoffe.jpg"/></div>
-</a><div class="work-duo"><a class="work-editorial-card low" href="/lowsignal">
-<div class="work-editorial-media"><img alt="lowsignal" src="/images/lowsignal-client-work.jpg"/></div>
-<div class="work-editorial-body">
-<div class="work-editorial-top">
-<div class="work-editorial-index">02 / Company building</div>
-<div class="work-editorial-logo"><img alt="lowsignal" src="/logos/lowsignal-logo.png"/></div>
+<div class="hybrid-work-bottom">
+<div class="hybrid-work-tags"><span>10K+ customers</span><span>3 products</span><span>AI · SaaS · Operations</span></div>
+<div class="hybrid-work-cta">View case <span>↗</span></div>
 </div>
+</div>
+<div class="hybrid-work-media">
+<img alt="GeoVictoria with clients" loading="lazy" src="/images/geocoffe.jpg"/>
+</div>
+</a><a class="hybrid-work-card low is-reverse" href="/lowsignal">
+<div class="hybrid-work-copy">
+<div>
+<div class="hybrid-work-top">
+<div class="hybrid-work-index">02 / Company building</div>
+<div class="hybrid-work-logo low">
+<img alt="lowsignal" src="/logos/lowsignal-logo.png"/>
+</div>
+</div>
+<div class="hybrid-work-main">
 <h3>Building the system behind growth.</h3>
 <p>Commercial strategy, delivery, automation and growth systems designed to turn opportunities into repeatable execution.</p>
-<div class="work-editorial-footer">
-<div class="work-editorial-signals"><span>15+ organizations</span><span>5+ industries</span><span>End-to-end</span></div>
-<div class="work-editorial-arrow">↗</div>
 </div>
 </div>
-</a><a class="work-editorial-card tether" href="/tethereducation">
-<div class="work-editorial-media"><img alt="TetherEducation" src="/images/tether-team-event.jpg"/></div>
-<div class="work-editorial-body">
-<div class="work-editorial-top">
-<div class="work-editorial-index">03 / Partnerships</div>
-<div class="work-editorial-logo"><img alt="TetherEducation" src="/logos/tethered-logo.svg"/></div>
-</div>
-<h3>Scaling access to education through product, partnerships and technology.</h3>
-<p>Public-sector transformation, international expansion and AI initiatives connecting institutions and education systems.</p>
-<div class="work-editorial-footer">
-<div class="work-editorial-signals"><span>1M+ applications</span><span>LATAM · US · EU</span><span>Public sector</span></div>
-<div class="work-editorial-arrow">↗</div>
+<div class="hybrid-work-bottom">
+<div class="hybrid-work-tags"><span>15+ organizations</span><span>5+ industries</span><span>End-to-end</span></div>
+<div class="hybrid-work-cta">View case <span>↗</span></div>
 </div>
 </div>
-</a></div><a class="work-usm-strip" href="/usm">
-<div class="work-usm-copy">
-<div class="work-usm-top">
-<div class="work-usm-index">04 / Strategy &amp; operations</div>
-<div class="work-usm-logo"><img alt="Universidad Técnica Federico Santa María" src="/logos/logo-usm.png"/></div>
+<div class="hybrid-work-media">
+<img alt="lowsignal client work" loading="lazy" src="/images/lowsignal-client-work.jpg"/>
 </div>
+</a><a class="hybrid-work-card tether" href="/tethereducation">
+<div class="hybrid-work-copy">
 <div>
+<div class="hybrid-work-top">
+<div class="hybrid-work-index">03 / Partnerships</div>
+<div class="hybrid-work-logo tether">
+<img alt="TetherEducation" src="/logos/tethered-logo.svg"/>
+</div>
+</div>
+<div class="hybrid-work-main">
+<h3>Scaling access to education through product, partnerships and technology.</h3>
+<p>Digital transformation, international expansion and AI initiatives connecting institutions, communities and education systems.</p>
+</div>
+</div>
+<div class="hybrid-work-bottom">
+<div class="hybrid-work-tags"><span>1M+ applications</span><span>LATAM · US · Europe</span><span>Public sector</span></div>
+<div class="hybrid-work-cta">View case <span>↗</span></div>
+</div>
+</div>
+<div class="hybrid-work-media">
+<img alt="TetherEducation team" loading="lazy" src="/images/tether-team-event.jpg"/>
+</div>
+</a><a class="hybrid-work-card usm is-reverse" href="/usm">
+<div class="hybrid-work-copy">
+<div>
+<div class="hybrid-work-top">
+<div class="hybrid-work-index">04 / Strategy &amp; operations</div>
+<div class="hybrid-work-logo usm">
+<img alt="Universidad Técnica Federico Santa María" src="/logos/logo-usm.png"/>
+</div>
+</div>
+<div class="hybrid-work-main">
 <h3>From acquisition to operating consistently at scale.</h3>
-<p>Admissions, CRM, academic coordination and process design across two complementary higher-education contexts.</p>
-<div class="work-usm-meta">
-<div class="work-usm-signals"><span>1,000+ prospects</span><span>400+ students</span><span>12+ sections</span></div>
-<div class="work-usm-arrow">↗</div>
+<p>Admissions, CRM, academic coordination and process design across different higher-education contexts.</p>
 </div>
 </div>
+<div class="hybrid-work-bottom">
+<div class="hybrid-work-tags"><span>1,000+ prospects</span><span>400+ students</span><span>12+ sections</span></div>
+<div class="hybrid-work-cta">View case <span>↗</span></div>
 </div>
-<div class="work-usm-media"><img alt="Universidad Técnica Federico Santa María" src="/images/usm-admissions-community.jpg"/></div>
-</a></div></section>
+</div>
+<div class="hybrid-work-media">
+<img alt="Future students at Universidad Técnica Federico Santa María" loading="lazy" src="/images/usm-ai-future-students-2024.jpg"/>
+</div>
+</a></div></div></section>
 <section class="about-bridge" id="about">
 <div class="about-bridge-inner">
 <div class="about-bridge-copy">
