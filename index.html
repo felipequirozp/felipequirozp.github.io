@@ -3991,12 +3991,22 @@ header.nav{
 </style>
 
 
+
+
+
 <style id="hybrid-bottom-lift-final">
-/* Visually lift metrics + CTA away from the rounded bottom edge */
+/* Final desktop spacing fix — visibly lift metrics + CTA away from the rounded bottom edge */
 @media(min-width:981px){
   .hybrid-work-card.geo .hybrid-work-bottom,
-  .hybrid-work-card.tether .hybrid-work-bottom{
-    transform:translateY(-18px) !important;
+  .hybrid-work-card.tether .hybrid-work-bottom,
+  .hybrid-work-card.usm .hybrid-work-bottom{
+    transform:translateY(-26px) !important;
+  }
+
+  .hybrid-work-card.geo .hybrid-work-copy,
+  .hybrid-work-card.tether .hybrid-work-copy,
+  .hybrid-work-card.usm .hybrid-work-copy{
+    padding-bottom:42px !important;
   }
 }
 </style>
