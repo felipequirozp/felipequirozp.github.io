@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Felipe Quiroz | About</title>
+  <meta name="description" content="About Felipe Quiroz, Product Manager and Co-Founder. Experience across product, growth, partnerships, operations and company building.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="canonical" href="https://felipequirozp.cl/about">
+  <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/about">
+  <link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/about">
+  <link rel="alternate" hreflang="x-default" href="https://felipequirozp.cl/about">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Felipe Quiroz | About">
+  <meta property="og:description" content="About Felipe Quiroz, Product Manager and Co-Founder. Experience across product, growth, partnerships, operations and company building.">
+  <meta property="og:url" content="https://felipequirozp.cl/about">
+  <meta property="og:image" content="https://felipequirozp.cl/images/profile-0.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --ink:#0b1117;
+      --muted:#5f6b78;
+      --muted-2:#7a8796;
+      --line:#e2e7ec;
+      --soft:#f3f6f9;
+      --soft-2:#eef3f7;
+      --blue:#1467d8;
+      --dark:#05070a;
+      --dark-2:#0d1724;
+      --page:clamp(22px,4vw,64px);
+      --max:1520px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    ::selection{background:var(--blue);color:#fff}
+    .section-label{
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:#6f7d8d;
+    }
+
+    /* NAV */
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      min-height:76px;
+      padding:0 var(--page);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid rgba(11,17,23,.08);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+    .brand{
+      font-family:Manrope,sans-serif;
+      font-size:22px!important;
+      font-weight:600;
+      letter-spacing:-.045em;
+      white-space:nowrap;
+    }
+    .nav-center,.nav-right{display:flex;align-items:center;gap:28px}
+    .nav a{font-size:11px;font-weight:500;color:#1a232d}
+    .nav-center a,.nav-right a:not(.lang){position:relative}
+    .nav-center a::after,.nav-right a:not(.lang)::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-7px;
+      width:0;
+      height:1px;
+      background:#111820;
+      transition:width .2s ease;
+    }
+    .nav-center a:hover::after,.nav-center a.active::after,.nav-right a:not(.lang):hover::after{width:100%}
+    .lang{
+      width:38px;height:38px;
+      display:grid;place-items:center;
+      border:1px solid #d7dde4;
+      border-radius:50%;
+      font-size:10px!important;
+      letter-spacing:.04em;
+      transition:.2s ease;
+    }
+    .lang:hover{background:#0b1117;color:#fff;border-color:#0b1117}
+
+    /* HERO */
+    .hero{
+      padding:92px var(--page) 112px;
+      background:#fff;
+    }
+    .hero-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:minmax(360px,.78fr) minmax(0,1.22fr);
+      gap:clamp(60px,8vw,140px);
+      align-items:center;
+    }
+    .hero-photo{
+      max-width:560px;
+      aspect-ratio:4/5;
+      overflow:hidden;
+      border-radius:26px;
+      background:#e9eef3;
+    }
+    .hero-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center 20%;
+    }
+    .hero-kicker{
+      margin-bottom:24px;
+      color:var(--blue);
+      font-size:12px;
+      font-weight:600;
+    }
+    .hero h1{
+      margin:0;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(68px,7.4vw,118px);
+      line-height:.93;
+      letter-spacing:-.07em;
+      font-weight:500;
+    }
+    .hero-role{
+      margin-top:28px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(26px,2.5vw,40px);
+      line-height:1.08;
+      letter-spacing:-.045em;
+      font-weight:400;
+      color:#24303b;
+    }
+    .hero-desc{
+      max-width:760px;
+      margin:28px 0 0;
+      color:var(--muted);
+      font-size:18px;
+      line-height:1.72;
+    }
+    .hero-meta{
+      margin-top:30px;
+    }
+    .hero-roles{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 12px;
+      align-items:center;
+    }
+    .hero-roles span{
+      display:inline-flex;
+      align-items:center;
+      min-height:42px;
+      padding:0 15px;
+      border:1px solid #d8dee5;
+      border-radius:999px;
+      color:#5f6b78;
+      background:#f7f9fb;
+      font-size:11px;
+      font-weight:600;
+    }
+    .hero-social-block{
+      margin-top:18px;
+    }
+    .hero-social-label{
+      margin-bottom:10px;
+      color:#7a8796;
+      font-size:10px;
+      font-weight:600;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .hero-socials{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .hero-socials a{
+      width:40px;
+      height:40px;
+      display:grid;
+      place-items:center;
+      border:1px solid #d8dee5;
+      border-radius:50%;
+      color:#0b1117;
+      background:#fff;
+      transition:.2s ease;
+    }
+    .hero-socials a:hover{
+      background:#0b1117;
+      color:#fff;
+      border-color:#0b1117;
+      transform:translateY(-1px);
+    }
+    .hero-socials svg{
+      width:17px;
+      height:17px;
+      fill:currentColor;
+    }
+
+    /* STORY */
+    .story{
+      padding:112px var(--page);
+      background:#fff;
+      border-top:1px solid var(--line);
+    }
+    .story-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:minmax(170px,.32fr) minmax(0,1.2fr);
+      gap:clamp(50px,8vw,130px);
+      align-items:start;
+    }
+    .story-copy{max-width:980px}
+    .story-copy h2{
+      margin:0 0 34px;
+      max-width:900px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5.4vw,82px);
+      line-height:1.02;
+      letter-spacing:-.06em;
+      font-weight:500;
+    }
+    .story-copy p{
+      margin:0 0 20px;
+      max-width:900px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.8;
+    }
+    .cv-button{
+      margin-top:28px;
+      min-height:46px;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:0 18px;
+      border-radius:999px;
+      background:#0b1117;
+      color:#fff;
+      border:1px solid #0b1117;
+      font-size:11px;
+      font-weight:700;
+      transition:.22s ease;
+    }
+    .cv-button:hover{
+      background:var(--blue);
+      border-color:var(--blue);
+      transform:translateY(-2px);
+      box-shadow:0 12px 28px rgba(20,103,216,.18);
+    }
+    .cv-button svg{
+      width:15px;height:15px;
+      fill:none;stroke:currentColor;stroke-width:1.7;
+      stroke-linecap:round;stroke-linejoin:round;
+    }
+
+    /* VALUE CARDS */
+    .value{
+      padding:112px var(--page) 122px;
+      background:var(--soft);
+    }
+    .value h2{
+      margin:14px auto 54px;
+      max-width:880px;
+      text-align:center;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+      font-weight:500;
+    }
+    .value-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:22px;
+    }
+    .value-card{
+      min-height:300px;
+      padding:32px 30px;
+      border-radius:24px;
+      background:#fff;
+      border:1px solid #e2e6eb;
+    }
+    .value-icon{
+      width:48px;height:48px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:#eef5ff;
+      color:var(--blue);
+    }
+    .value-icon svg{
+      width:22px;
+      height:22px;
+      stroke:currentColor;
+      fill:none;
+      stroke-width:1.9;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+      vector-effect:non-scaling-stroke;
+    }
+    .value-icon svg.fill-icon{
+      fill:currentColor;
+      stroke:none;
+    }
+    .value-card h3{
+      margin:36px 0 0;
+      font-family:Manrope,sans-serif;
+      font-size:29px;
+      line-height:1.06;
+      letter-spacing:-.045em;
+      font-weight:500;
+    }
+    .value-card p{
+      margin:16px 0 0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.7;
+    }
+
+    /* FIELD */
+    .field{
+      padding:112px var(--page);
+      background:#fff;
+    }
+    .field-card{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:minmax(0,.82fr) minmax(480px,1.18fr);
+      min-height:620px;
+      overflow:hidden;
+      border-radius:28px;
+      background:var(--dark);
+      color:#fff;
+    }
+    .field-copy{
+      padding:72px 64px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+    .field-copy .section-label{color:#8ec4ff}
+    .field-copy h2{
+      margin:18px 0 24px;
+      max-width:650px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);
+      line-height:1;
+      letter-spacing:-.06em;
+      font-weight:500;
+    }
+    .field-copy h2 span{display:block;color:#a8bfd9}
+    .field-copy p{
+      margin:0;
+      max-width:560px;
+      color:#b7c0cb;
+      font-size:15px;
+      line-height:1.76;
+    }
+    .field-photo{min-height:620px}
+    .field-photo img{
+      width:100%;height:100%;min-height:620px;
+      object-fit:cover;object-position:center 45%;
+    }
+
+    /* JOURNEY */
+    .journey{
+      padding:112px var(--page) 122px;
+      background:#fff;
+    }
+    .journey-head{
+      width:min(var(--max),100%);
+      margin:0 auto 48px;
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:50px;
+    }
+    .journey-head h2{
+      margin:14px 0 0;
+      max-width:900px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+      font-weight:500;
+    }
+    .journey-head p{
+      margin:0;
+      max-width:520px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.7;
+    }
+    .experience-list{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      border-top:1px solid var(--line);
+    }
+    .experience{
+      display:grid;
+      grid-template-columns:48px minmax(0,1fr) auto;
+      gap:20px;
+      align-items:center;
+      padding:24px 0;
+      border-bottom:1px solid var(--line);
+      transition:.2s ease;
+    }
+    .experience[href]:hover{
+      padding-left:14px;
+      padding-right:14px;
+      background:#f7f9fb;
+    }
+    .experience-num{
+      color:#8a96a3;
+      font-size:10px;
+      letter-spacing:.08em;
+    }
+    .experience-main strong{
+      display:block;
+      font-family:Manrope,sans-serif;
+      font-size:24px;
+      font-weight:500;
+      letter-spacing:-.04em;
+    }
+    .experience-main span{
+      display:block;
+      margin-top:6px;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.55;
+    }
+    .experience-period{
+      color:#4d5865;
+      font-size:10px;
+      white-space:nowrap;
+    }
+
+    /* PRINCIPLE */
+    .principle{
+      padding:120px var(--page);
+      background:var(--dark);
+      color:#fff;
+    }
+    .principle-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      text-align:center;
+    }
+    .principle .section-label{color:#8ec4ff}
+    .principle h2{
+      margin:24px auto 0;
+      max-width:1080px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(58px,6.2vw,94px);
+      line-height:1;
+      letter-spacing:-.067em;
+      font-weight:500;
+    }
+    .principle h2 span{display:block;color:#a8bfd9}
+
+    /* FOOTER */
+    .footer{
+      padding:72px var(--page) 34px;
+      background:#fff;
+      border-top:1px solid var(--line);
+    }
+    .footer-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.2fr repeat(3,.7fr);
+      gap:50px;
+    }
+    .footer-brand{
+      font-family:Manrope,sans-serif;
+      font-size:30px;
+      letter-spacing:-.045em;
+      font-weight:600;
+    }
+    .footer-copy{
+      margin-top:14px;
+      max-width:360px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+    .footer-col strong{
+      display:block;
+      margin-bottom:14px;
+      font-size:12px;
+      font-weight:700;
+    }
+    .footer-col a{
+      display:block;
+      margin:10px 0;
+      color:#5f6b78;
+      font-size:13px;
+    }
+    .footer-col a:hover{color:#0b1117}
+    .footer-bottom{
+      width:min(var(--max),100%);
+      margin:54px auto 0;
+      padding-top:24px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      border-top:1px solid var(--line);
+      color:#7b8794;
+      font-size:10px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    @media(max-width:1100px){
+      .hero-grid{grid-template-columns:minmax(320px,.72fr) 1fr;gap:58px}
+      .value-grid{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+
+    @media(max-width:860px){
+      .nav-center{display:none}
+      .hero-grid,.story-grid,.field-card{grid-template-columns:1fr}
+      .hero-photo{max-width:620px}
+      .journey-head{flex-direction:column;align-items:flex-start}
+      .field-photo,.field-photo img{min-height:460px}
+    }
+
+    @media(max-width:640px){
+      .nav{min-height:68px}
+      .brand{font-size:20px!important}
+      .nav-right{gap:14px}
+      .nav-right a:not(.lang):nth-child(2){display:none}
+      .hero{padding-top:54px;padding-bottom:76px}
+      .hero-grid{gap:38px}
+      .hero-photo{border-radius:20px}
+      .hero h1{font-size:clamp(58px,16vw,80px)}
+      .hero-role{font-size:26px}
+      .hero-desc{font-size:16px}
+      .story,.value,.field,.journey,.principle{padding-top:82px;padding-bottom:88px}
+      .story-copy h2,.value h2,.journey-head h2,.field-copy h2{font-size:42px}
+      .value-grid{grid-template-columns:1fr}
+      .value-card{min-height:240px}
+      .field-card{border-radius:20px}
+      .field-copy{padding:52px 26px}
+      .field-photo,.field-photo img{min-height:340px}
+      .experience{grid-template-columns:38px 1fr;gap:12px 16px}
+      .experience-period{grid-column:2}
+      .principle h2{font-size:46px}
+      .footer-grid{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="/">Felipe Quiroz</a>
+
+  <nav class="nav-center" aria-label="Primary">
+    <a href="/#work">Work</a>
+    <a href="/about" class="active" aria-current="page">About</a>
+    <a href="/now">Now</a>
+    <a href="/blog">Blog</a>
+  </nav>
+
+  <div class="nav-right">
+    <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="lang" href="/es/about" aria-label="Switch language">ES</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-photo">
+        <img src="/images/profile-0.jpg" alt="Felipe Quiroz" fetchpriority="high">
+      </div>
+
+      <div>
+        <div class="hero-kicker">Santiago, Chile</div>
+        <h1>Felipe Quiroz</h1>
+        <div class="hero-role">Product, Growth & Operations</div>
+        <p class="hero-desc">
+          I build where product, growth and business intersect, turning ambiguous problems into products, systems and operating models teams can actually use.
+        </p>
+
+        <div class="hero-meta">
+          <div class="hero-roles">
+            <span>Product Manager · GeoVictoria</span>
+            <span>Co-Founder & COO · lowsignal</span>
+          </div>
+
+          <div class="hero-social-block">
+            <div class="hero-social-label">Follow me on</div>
+
+            <div class="hero-socials" aria-label="Social links">
+              <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg>
+              </a>
+              <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.22c0 4.51 2.87 8.34 6.84 9.69.5.1.68-.22.68-.49 0-.24-.01-1.04-.02-1.89-2.78.62-3.37-1.2-3.37-1.2-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.56 2.35 1.11 2.92.85.09-.66.35-1.11.64-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.34 9.34 0 0 1 12 6.97c.85 0 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.35 4.79-4.58 5.05.36.32.68.94.68 1.89 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.24 10.24 0 0 0 22 12.22C22 6.58 17.52 2 12 2Z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.2 2h9.6A5.2 5.2 0 0 1 22 7.2v9.6a5.2 5.2 0 0 1-5.2 5.2H7.2A5.2 5.2 0 0 1 2 16.8V7.2A5.2 5.2 0 0 1 7.2 2Zm-.18 2A3.02 3.02 0 0 0 4 7.02v9.96A3.02 3.02 0 0 0 7.02 20h9.96A3.02 3.02 0 0 0 20 16.98V7.02A3.02 3.02 0 0 0 16.98 4H7.02ZM17.25 5.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="story-grid">
+      <div class="section-label">About</div>
+
+      <div class="story-copy">
+        <h2>I turn ambiguity into products, systems and growth.</h2>
+
+        <p>I’m Felipe Quiroz, a Product Manager and Co-Founder based in Santiago, Chile. I work at the intersection of product, growth, operations and business, usually in environments where the problem is still taking shape and execution matters as much as strategy. At GeoVictoria, I lead the evolution of Workforce Management products within a SaaS ecosystem serving 10,000+ customers across 20+ countries. At lowsignal, I lead operations, commercial strategy and delivery while building the systems the company needs to scale.</p>
+
+        <p>Before that, I led partnerships, business development and market expansion at TetherEd across Latin America, the U.S. and Europe, connecting technology with public and private education systems. Across those roles, I’ve learned to move comfortably between strategy and execution: understanding the problem, aligning teams and stakeholders, building the operating model and pushing the work until it creates measurable value.</p>
+
+        <a class="cv-button" href="https://felipequirozp.cl/Felipe_Quiroz_cv_en.pdf" target="_blank" rel="noopener noreferrer">
+          Download CV
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 4v10"></path>
+            <path d="m8 10 4 4 4-4"></path>
+            <path d="M5 19h14"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="value">
+    <div class="section-label" style="text-align:center">Where I add value</div>
+    <h2>I’m strongest when the path is not obvious.</h2>
+
+    <div class="value-grid">
+      <article class="value-card">
+        <div class="value-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5 20.5 12 12 20.5 3.5 12 12 3.5Z"/></svg></div>
+        <h3>Product strategy</h3>
+        <p>Turning customer, market and operational signals into clear priorities, products and experiments.</p>
+      </article>
+
+      <article class="value-card">
+        <div class="value-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg></div>
+        <h3>Go-to-market</h3>
+        <p>Connecting positioning, partnerships, acquisition and commercial execution around real business goals.</p>
+      </article>
+
+      <article class="value-card">
+        <div class="value-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 8h10"/><path d="M7 12h10"/><path d="M7 16h10"/></svg></div>
+        <h3>Operating systems</h3>
+        <p>Creating ownership, processes and visibility so teams can execute with more consistency and speed.</p>
+      </article>
+
+      <article class="value-card">
+        <div class="value-icon" aria-hidden="true"><svg class="fill-icon" viewBox="0 0 24 24"><path d="M12 3.5c.7 3.5 1.5 4.3 5 5-.77.16-1.49.38-2.17.67-.68.29-1.28.68-1.83 1.16-.48.43-.91.96-1.28 1.57-.37.61-.62 1.2-.72 1.77-.1-.57-.35-1.16-.72-1.77-.37-.61-.8-1.14-1.28-1.57a5.83 5.83 0 0 0-1.83-1.16A10.5 10.5 0 0 0 7 8.5c3.5-.7 4.3-1.5 5-5Z"/></svg></div>
+        <h3>Cross-functional execution</h3>
+        <p>Aligning teams and stakeholders around the problem, the decision and the work needed to move forward.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="field">
+    <div class="field-card">
+      <div class="field-copy">
+        <div class="section-label">In the field</div>
+        <h2>The best signals live<span>close to the operation.</span></h2>
+        <p>I stay close to users, teams and real operations because that is where the useful information is. The friction, workarounds and constraints you see there are often what separate a polished idea from a product or system that actually performs.</p>
+      </div>
+
+      <div class="field-photo">
+        <img src="/images/building-in-the-field.jpg" alt="Felipe Quiroz working in the field" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="journey">
+    <div class="journey-head">
+      <div>
+        <div class="section-label">Journey</div>
+        <h2>Different roles. One pattern: build, align, scale.</h2>
+      </div>
+
+      <p>Product, growth, partnerships and operations have been different entry points into the same kind of work: understand what is holding the system back, align the people who can change it and build the structure that turns intent into results.</p>
+    </div>
+
+    <div class="experience-list">
+      <a class="experience" href="/geovictoria">
+        <div class="experience-num">01</div>
+        <div class="experience-main">
+          <strong>GeoVictoria</strong>
+          <span>Product Manager · Workforce Management</span>
+        </div>
+        <div class="experience-period">2026 – Present</div>
+      </a>
+
+      <a class="experience" href="/lowsignal">
+        <div class="experience-num">02</div>
+        <div class="experience-main">
+          <strong>lowsignal</strong>
+          <span>Co-Founder & COO · Growth Systems</span>
+        </div>
+        <div class="experience-period">2025 – Present</div>
+      </a>
+
+      <a class="experience" href="/tethereducation">
+        <div class="experience-num">03</div>
+        <div class="experience-main">
+          <strong>TetherEd</strong>
+          <span>Head of Partnerships · EdTech</span>
+        </div>
+        <div class="experience-period">2024 – 2026</div>
+      </a>
+
+      <a class="experience" href="/usm">
+        <div class="experience-num">04</div>
+        <div class="experience-main">
+          <strong>USM</strong>
+          <span>Admissions Promotion Coordinator · Assistant Coordinator</span>
+        </div>
+        <div class="experience-period">2023 – 2025</div>
+      </a>
+
+      <div class="experience">
+        <div class="experience-num">05</div>
+        <div class="experience-main">
+          <strong>RECH</strong>
+          <span>Math Program Coordinator · Data & Operations</span>
+        </div>
+        <div class="experience-period">2019 – 2021</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="principle">
+    <div class="principle-inner">
+      <div class="section-label">Principle</div>
+      <h2>Start with reality.<span>Build what moves it forward.</span></h2>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Felipe Quiroz</div>
+      <div class="footer-copy">Product, Growth & Operations. Building products, growth systems and companies across technology and business.</div>
+    </div>
+
+    <div class="footer-col">
+      <strong>Explore</strong>
+      <a href="/#work">Work</a>
+      <a href="/about">About</a>
+      <a href="/now">Now</a>
+      <a href="/blog">Blog</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Social</strong>
+      <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Contact</strong>
+      <a href="mailto:felipe@lowsignal.cl">felipe@lowsignal.cl</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 Felipe Quiroz</div>
+    <div>Santiago / CL</div>
+  </div>
+</footer>
+
+</body>
+</html>
