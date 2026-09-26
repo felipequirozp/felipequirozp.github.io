@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ahora | Felipe Quiroz</title>
+  <meta name="description" content="Lo que Felipe Quiroz está construyendo y explorando actualmente en producto, growth, IA y company building.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="canonical" href="https://felipequirozp.cl/es/now">
+  <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/now">
+  <link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/now">
+  <link rel="alternate" hreflang="x-default" href="https://felipequirozp.cl/now">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ahora | Felipe Quiroz">
+  <meta property="og:description" content="Lo que Felipe Quiroz está construyendo y explorando actualmente en producto, growth, IA y company building.">
+  <meta property="og:url" content="https://felipequirozp.cl/es/now">
+  <meta property="og:image" content="https://felipequirozp.cl/images/now-santiago-workspace.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --ink:#0b1117;
+      --muted:#5f6b78;
+      --muted-2:#7a8796;
+      --line:#e2e7ec;
+      --soft:#f3f6f9;
+      --soft-2:#eef3f7;
+      --blue:#1467d8;
+      --dark:#05070a;
+      --dark-2:#0d1724;
+      --page:clamp(22px,4vw,64px);
+      --max:1520px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    ::selection{background:var(--blue);color:#fff}
+    .section-label{
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:#6f7d8d;
+    }
+
+    /* NAV */
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      min-height:76px;
+      padding:0 var(--page);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid rgba(11,17,23,.08);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+    .brand{
+      font-family:Manrope,sans-serif;
+      font-size:22px!important;
+      font-weight:600;
+      letter-spacing:-.045em;
+      white-space:nowrap;
+    }
+    .nav-center,.nav-right{display:flex;align-items:center;gap:28px}
+    .nav a{font-size:11px;font-weight:500;color:#1a232d}
+    .nav-center a,.nav-right a:not(.lang){position:relative}
+    .nav-center a::after,.nav-right a:not(.lang)::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-7px;
+      width:0;
+      height:1px;
+      background:#111820;
+      transition:width .2s ease;
+    }
+    .nav-center a:hover::after,.nav-center a.active::after,.nav-right a:not(.lang):hover::after{width:100%}
+    .lang{
+      width:38px;height:38px;
+      display:grid;place-items:center;
+      border:1px solid #d7dde4;
+      border-radius:50%;
+      font-size:10px!important;
+      letter-spacing:.04em;
+      transition:.2s ease;
+    }
+    .lang:hover{background:#0b1117;color:#fff;border-color:#0b1117}
+
+    /* HERO */
+    .hero{
+      padding:104px var(--page) 116px;
+      background:#fff;
+    }
+    .hero-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:minmax(0,1.1fr) minmax(340px,.58fr);
+      gap:clamp(60px,9vw,150px);
+      align-items:end;
+    }
+    .hero-kicker{
+      color:var(--blue);
+      font-size:12px;
+      font-weight:600;
+      margin-bottom:28px;
+    }
+    .hero h1{
+      margin:0;
+      max-width:960px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(72px,8vw,124px);
+      line-height:.92;
+      letter-spacing:-.073em;
+      font-weight:500;
+    }
+    .hero h1 span{
+      display:block;
+      color:#a8b4c3;
+    }
+    .hero-side{
+      padding-top:26px;
+      border-top:1px solid var(--line);
+    }
+    .hero-side p{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.75;
+    }
+    .hero-meta{
+      margin-top:24px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .hero-meta span{
+      display:inline-flex;
+      min-height:40px;
+      align-items:center;
+      padding:0 14px;
+      border-radius:999px;
+      border:1px solid #d8dee5;
+      background:#f7f9fb;
+      color:#5f6b78;
+      font-size:10px;
+      font-weight:600;
+    }
+
+    /* FOCUS */
+    .focus{
+      padding:112px var(--page) 122px;
+      background:var(--soft);
+      border-top:1px solid var(--line);
+    }
+    .focus-head{
+      width:min(var(--max),100%);
+      margin:0 auto 54px;
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:40px;
+    }
+    .focus-head h2{
+      margin:14px 0 0;
+      max-width:880px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+      font-weight:500;
+    }
+    .focus-head p{
+      margin:0;
+      max-width:500px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.7;
+    }
+    .focus-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+    .focus-card{
+      min-height:340px;
+      padding:32px 30px;
+      border-radius:24px;
+      border:1px solid #e2e6eb;
+      background:#fff;
+      transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+    }
+    a.focus-card:hover{
+      transform:translateY(-3px);
+      border-color:#cdd6df;
+      box-shadow:0 20px 48px rgba(15,31,47,.07);
+    }
+    .focus-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
+    .focus-icon{
+      width:48px;
+      height:48px;
+      display:grid;
+      place-items:center;
+      border-radius:14px;
+      background:#eef5ff;
+      color:var(--blue);
+    }
+    .focus-icon svg{
+      width:21px;height:21px;
+      stroke:currentColor;
+      fill:none;
+      stroke-width:1.9;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+    .focus-num{
+      color:#9aa5b2;
+      font-size:10px;
+      letter-spacing:.1em;
+    }
+    .focus-card h3{
+      margin:72px 0 0;
+      font-family:Manrope,sans-serif;
+      font-size:34px;
+      line-height:1.06;
+      letter-spacing:-.045em;
+      font-weight:500;
+    }
+    .focus-tag{
+      display:block;
+      margin-top:10px;
+      color:#748190;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .focus-card p{
+      margin:18px 0 0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.7;
+    }
+
+    /* THINKING */
+    .thinking{
+      padding:112px var(--page) 122px;
+      background:#fff;
+    }
+    .thinking-head{
+      width:min(var(--max),100%);
+      margin:0 auto 54px;
+      text-align:center;
+    }
+    .thinking-head h2{
+      margin:14px auto 0;
+      max-width:880px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+      font-weight:500;
+    }
+    .thinking-head p{
+      margin:20px auto 0;
+      max-width:650px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.7;
+    }
+    .thinking-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:22px;
+    }
+    .thinking-card{
+      min-height:260px;
+      padding:28px;
+      border-radius:22px;
+      border:1px solid var(--line);
+      background:#fff;
+    }
+    .thinking-card .num{
+      color:#9aa5b2;
+      font-size:10px;
+      letter-spacing:.1em;
+    }
+    .thinking-card h3{
+      margin:68px 0 12px;
+      font-family:Manrope,sans-serif;
+      font-size:26px;
+      line-height:1.07;
+      letter-spacing:-.04em;
+      font-weight:500;
+    }
+    .thinking-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.68;
+    }
+
+    /* ECOSYSTEM */
+    .ecosystem{
+      padding:112px var(--page) 122px;
+      background:var(--soft);
+    }
+    .ecosystem-head{
+      width:min(var(--max),100%);
+      margin:0 auto 48px;
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:50px;
+    }
+    .ecosystem-head h2{
+      margin:14px 0 0;
+      max-width:880px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+      font-weight:500;
+    }
+    .ecosystem-head p{
+      margin:0;
+      max-width:500px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.7;
+    }
+    .photo-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.35fr .65fr;
+      gap:22px;
+    }
+    .photo-card{margin:0}
+    .photo-box{
+      height:430px;
+      overflow:hidden;
+      border-radius:24px;
+      background:#e9eef3;
+    }
+    .photo-box img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .photo-card:first-child img{object-position:center 52%}
+    .photo-card:last-child img{object-position:center 42%}
+    .photo-cap{
+      margin-top:14px;
+      display:flex;
+      justify-content:space-between;
+      gap:18px;
+      color:#7b8794;
+      font-size:10px;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+    }
+
+    /* OPERATING */
+    .operating{
+      padding:116px var(--page) 122px;
+      background:var(--dark);
+      color:#fff;
+    }
+    .operating-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);
+      gap:clamp(70px,10vw,160px);
+      align-items:start;
+    }
+    .operating-left .section-label{color:#8ec4ff}
+    .operating-left h2{
+      margin:18px 0 20px;
+      max-width:600px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(50px,5vw,76px);
+      line-height:1;
+      letter-spacing:-.06em;
+      font-weight:500;
+    }
+    .operating-left p{
+      margin:0;
+      max-width:500px;
+      color:#9ca6b2;
+      font-size:14px;
+      line-height:1.75;
+    }
+    .mode-list{border-top:1px solid rgba(255,255,255,.12)}
+    .mode{
+      display:grid;
+      grid-template-columns:48px minmax(0,1fr);
+      gap:20px;
+      padding:30px 0;
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+    .mode-num{
+      padding-top:4px;
+      color:#5d6875;
+      font-size:10px;
+      letter-spacing:.08em;
+    }
+    .mode strong{
+      display:block;
+      font-family:Manrope,sans-serif;
+      font-size:24px;
+      font-weight:500;
+      letter-spacing:-.035em;
+      margin-bottom:8px;
+    }
+    .mode p{
+      margin:0;
+      color:#929ca8;
+      font-size:13px;
+      line-height:1.66;
+    }
+
+    /* PRINCIPLE */
+    .principle{
+      position:relative;
+      padding:122px var(--page);
+      background:#0b1117;
+      color:#fff;
+      overflow:hidden;
+    }
+    .principle::before{
+      content:none;
+    }
+    .principle-inner{
+      position:relative;
+      z-index:2;
+      width:min(1040px,100%);
+      margin:0 auto;
+      text-align:center;
+    }
+    .principle .section-label{
+      color:#8ec4ff;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:16px;
+    }
+    .principle .section-label::before{
+      content:"";
+      width:44px;
+      height:1px;
+      background:rgba(142,196,255,.7);
+    }
+    .principle h2{
+      margin:24px auto 0;
+      max-width:980px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(54px,5.6vw,86px);
+      line-height:1.02;
+      letter-spacing:-.063em;
+      font-weight:500;
+    }
+    .principle h2 .principle-line{
+      display:block;
+    }
+    .principle h2 .principle-mixed{
+      display:block;
+      white-space:nowrap;
+    }
+    .principle h2 .principle-white{
+      color:#fff;
+    }
+    .principle h2 .principle-accent{
+      color:#a8bfd9;
+    }
+    @media(max-width:860px){
+      .principle h2 .principle-mixed{
+        white-space:normal;
+      }
+    }
+    .principle p{
+      margin:28px auto 0;
+      max-width:680px;
+      color:#909aa7;
+      font-size:15px;
+      line-height:1.72;
+    }
+    .principle-tags{
+      margin-top:30px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .principle-tags span{
+      padding:9px 12px;
+      border:1px solid rgba(255,255,255,.15);
+      border-radius:999px;
+      color:#d8e1eb;
+      font-size:9px;
+      font-weight:600;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+    }
+
+    /* CLOSING */
+    .closing{
+      padding:120px var(--page);
+      min-height:620px;
+      display:flex;
+      align-items:flex-end;
+      background:
+        linear-gradient(90deg,rgba(5,7,10,.94),rgba(9,20,36,.72)),
+        url('/images/now-santiago-workspace.jpg') center 48%/cover no-repeat;
+      color:#fff;
+    }
+    .closing-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+    }
+    .closing .section-label{color:#8ec4ff}
+    .closing h2{
+      margin:18px 0 0;
+      max-width:900px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(64px,7vw,110px);
+      line-height:.93;
+      letter-spacing:-.067em;
+      font-weight:500;
+    }
+    .closing h2 span{display:block;color:#a8bfd9}
+    .closing p{
+      margin:26px 0 0;
+      max-width:580px;
+      color:#d3dbe4;
+      font-size:16px;
+      line-height:1.72;
+    }
+    .closing-link{
+      margin-top:28px;
+      min-height:46px;
+      display:inline-flex;
+      align-items:center;
+      padding:0 18px;
+      border-radius:999px;
+      background:#fff;
+      color:#0b1117;
+      border:1px solid #fff;
+      font-size:11px;
+      font-weight:700;
+      transition:.22s ease;
+    }
+    .closing-link:hover{
+      background:var(--blue);
+      color:#fff;
+      border-color:var(--blue);
+      transform:translateY(-2px);
+      box-shadow:0 12px 28px rgba(20,103,216,.22);
+    }
+
+    /* FOOTER */
+    .footer{
+      padding:72px var(--page) 34px;
+      background:#fff;
+      border-top:1px solid var(--line);
+    }
+    .footer-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.2fr repeat(3,.7fr);
+      gap:50px;
+    }
+    .footer-brand{
+      font-family:Manrope,sans-serif;
+      font-size:30px;
+      letter-spacing:-.045em;
+      font-weight:600;
+    }
+    .footer-copy{
+      margin-top:14px;
+      max-width:360px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+    .footer-col strong{
+      display:block;
+      margin-bottom:14px;
+      font-size:12px;
+      font-weight:700;
+    }
+    .footer-col a{
+      display:block;
+      margin:10px 0;
+      color:#5f6b78;
+      font-size:13px;
+    }
+    .footer-col a:hover{color:#0b1117}
+    .footer-bottom{
+      width:min(var(--max),100%);
+      margin:54px auto 0;
+      padding-top:24px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      border-top:1px solid var(--line);
+      color:#7b8794;
+      font-size:10px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    @media(max-width:1100px){
+      .focus-grid{grid-template-columns:1fr 1fr}
+      .thinking-grid{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+
+    @media(max-width:860px){
+      .nav-center{display:none}
+      .hero-grid,.operating-grid{grid-template-columns:1fr}
+      .focus-head,.ecosystem-head{flex-direction:column;align-items:flex-start}
+      .photo-grid{grid-template-columns:1fr}
+      .photo-box{height:360px}
+    }
+
+    @media(max-width:640px){
+      .nav{min-height:68px}
+      .brand{font-size:20px!important}
+      .nav-right{gap:14px}
+      .nav-right a:not(.lang):nth-child(2){display:none}
+      .hero{padding-top:70px;padding-bottom:82px}
+      .hero h1{font-size:clamp(58px,16vw,82px)}
+      .hero-grid{gap:46px}
+      .focus,.thinking,.ecosystem,.operating,.principle,.closing{padding-top:82px;padding-bottom:88px}
+      .focus-grid,.thinking-grid{grid-template-columns:1fr}
+      .focus-card{min-height:280px}
+      .focus-card h3{margin-top:54px}
+      .thinking-card{min-height:220px}
+      .thinking-card h3{margin-top:44px}
+      .photo-box{height:320px}
+      .photo-cap{flex-direction:column;gap:5px}
+      .operating-left h2,.principle h2{font-size:44px}
+      .closing{min-height:520px}
+      .closing h2{font-size:54px}
+      .footer-grid{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="/es/">Felipe Quiroz</a>
+
+  <nav class="nav-center" aria-label="Primary">
+    <a href="/es/#work">Trabajo</a>
+    <a href="/es/about">Sobre mí</a>
+    <a href="/es/now" class="active" aria-current="page">Ahora</a>
+    <a href="/es/blog">Blog</a>
+  </nav>
+
+  <div class="nav-right">
+    <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="lang" href="/now" aria-label="Cambiar idioma">EN</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-kicker">Ahora / Septiembre 2026</div>
+        <h1>Lo que estoy construyendo<span>ahora.</span></h1>
+      </div>
+
+      <div class="hero-side">
+        <p>Producto, growth, IA y operaciones. Una mirada en tiempo real a lo que estoy construyendo, probando y aprendiendo mientras evolucionan productos, equipos y compañías.</p>
+        <div class="hero-meta">
+          <span>Santiago, Chile</span>
+          <span>Actualizado sep 2026</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="focus">
+    <div class="focus-head">
+      <div>
+        <div class="section-label">Construyendo</div>
+        <h2>Tres cosas que concentran gran parte de mi atención hoy.</h2>
+      </div>
+      <p>Estoy enfocado en construir productos, compañías y sistemas donde tecnología, operaciones y growth se conectan.</p>
+    </div>
+
+    <div class="focus-grid">
+      <a class="focus-card" href="/es/geovictoria">
+        <div class="focus-top">
+          <div class="focus-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 12h16"/><path d="M13 5l7 7-7 7"/></svg>
+          </div>
+          <div class="focus-num">01</div>
+        </div>
+        <h3>GeoVictoria</h3>
+        <span class="focus-tag">Product · Workforce Management</span>
+        <p>Liderando la evolución de productos de Workforce Management para planificación, optimización y operación de turnos en entornos empresariales complejos.</p>
+      </a>
+
+      <a class="focus-card" href="/es/lowsignal">
+        <div class="focus-top">
+          <div class="focus-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3.5 20.5 12 12 20.5 3.5 12 12 3.5Z"/></svg>
+          </div>
+          <div class="focus-num">02</div>
+        </div>
+        <h3>lowsignal</h3>
+        <span class="focus-tag">Company Building · Growth Systems</span>
+        <p>Construyendo los sistemas comerciales, operativos y de delivery necesarios para convertir lowsignal en una compañía de growth escalable.</p>
+      </a>
+
+      <article class="focus-card">
+        <div class="focus-top">
+          <div class="focus-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 19 19 5"/><path d="M10 5h9v9"/></svg>
+          </div>
+          <div class="focus-num">03</div>
+        </div>
+        <h3>Explorando</h3>
+        <span class="focus-tag">AI-native · Nuevos modelos</span>
+        <p>Explorando cómo la IA, la automatización y los equipos pequeños están cambiando la economía de construir y operar compañías.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="thinking">
+    <div class="thinking-head">
+      <div class="section-label">En qué estoy pensando</div>
+      <h2>Preguntas que están dando forma a cómo construyo.</h2>
+      <p>No son tendencias separadas. Son señales del mismo cambio en cómo se están diseñando productos, equipos y compañías.</p>
+    </div>
+
+    <div class="thinking-grid">
+      <article class="thinking-card">
+        <div class="num">01</div>
+        <h3>Productos AI-native</h3>
+        <p>Productos diseñados alrededor de IA desde el día uno, en vez de agregarla después como otra funcionalidad.</p>
+      </article>
+
+      <article class="thinking-card">
+        <div class="num">02</div>
+        <h3>Sistemas de workforce</h3>
+        <p>Planificación, optimización y workflows que reducen trabajo manual en operaciones reales.</p>
+      </article>
+
+      <article class="thinking-card">
+        <div class="num">03</div>
+        <h3>Infraestructura de growth</h3>
+        <p>Sistemas repetibles que conectan posicionamiento, distribución, automatización y ejecución.</p>
+      </article>
+
+      <article class="thinking-card">
+        <div class="num">04</div>
+        <h3>Company building</h3>
+        <p>Nuevas formas de estructurar compañías, equipos y productos alrededor de tecnología e IA.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="ecosystem">
+    <div class="ecosystem-head">
+      <div>
+        <div class="section-label">En el ecosistema</div>
+        <h2>Mantenerme cerca de donde se están construyendo cosas.</h2>
+      </div>
+      <p>Eventos, founders, equipos y conversaciones que me mantienen expuesto a nuevos productos, ideas y modelos operativos.</p>
+    </div>
+
+    <div class="photo-grid">
+      <figure class="photo-card">
+        <div class="photo-box">
+          <img src="/images/platanus-ai-native.jpg" alt="Platanus AI Native Startups event in Santiago" loading="lazy">
+        </div>
+        <figcaption class="photo-cap">
+          <span>Platanus</span>
+          <span>AI Native Startups · Santiago</span>
+        </figcaption>
+      </figure>
+
+      <figure class="photo-card">
+        <div class="photo-box">
+          <img src="/images/felipe-ecosystem-team.jpg" alt="Felipe Quiroz with a team in the startup and technology ecosystem" loading="lazy">
+        </div>
+        <figcaption class="photo-cap">
+          <span>En el ecosistema</span>
+          <span>Equipos · Conversaciones · Nuevas ideas</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="operating">
+    <div class="operating-grid">
+      <div class="operating-left">
+        <div class="section-label">Cómo estoy operando</div>
+        <h2>Menos ruido. Más sistema.</h2>
+        <p>Primero reduzco complejidad y luego agrego estructura solo cuando mejora la claridad, la velocidad o el impacto.</p>
+      </div>
+
+      <div class="mode-list">
+        <div class="mode">
+          <div class="mode-num">01</div>
+          <div>
+            <strong>Claridad</strong>
+            <p>Entender el problema real antes de agregar procesos, funcionalidades o tecnología.</p>
+          </div>
+        </div>
+
+        <div class="mode">
+          <div class="mode-num">02</div>
+          <div>
+            <strong>Sistemas</strong>
+            <p>Convertir lo que funciona en algo repetible, medible y más fácil de operar.</p>
+          </div>
+        </div>
+
+        <div class="mode">
+          <div class="mode-num">03</div>
+          <div>
+            <strong>Leverage</strong>
+            <p>Usar tecnología, automatización e IA para aumentar el impacto de buenos equipos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="principle">
+    <div class="principle-inner">
+      <div class="section-label">Principio de trabajo</div>
+      <h2>
+        <span class="principle-line">La buena ejecución parte con</span>
+        <span class="principle-mixed"><span class="principle-white">claridad</span> <span class="principle-accent">y se potencia con</span></span>
+        <span class="principle-line principle-accent">sistemas.</span>
+      </h2>
+      <p>El objetivo no es tener más procesos. Es una forma de operar que ayuda a los equipos a tomar mejores decisiones, moverse más rápido y aprender continuamente.</p>
+
+      <div class="principle-tags">
+        <span>Claridad</span>
+        <span>Sistemas</span>
+        <span>Ejecución</span>
+        <span>Growth</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="closing-inner">
+      <div class="section-label">Sigo construyendo</div>
+      <h2>Sigo construyendo.<span>Sigo aprendiendo.</span></h2>
+      <p>Esta página cambia a medida que cambian los problemas que estoy intentando resolver.</p>
+      <a class="closing-link" href="/es/#work">Ver mi trabajo ↗</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Felipe Quiroz</div>
+      <div class="footer-copy">Producto, Growth & Operaciones. Construyendo productos, sistemas de growth y compañías entre tecnología y negocio.</div>
+    </div>
+
+    <div class="footer-col">
+      <strong>Explorar</strong>
+      <a href="/es/#work">Trabajo</a>
+      <a href="/es/about">Sobre mí</a>
+      <a href="/es/now">Ahora</a>
+      <a href="/es/blog">Blog</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Social</strong>
+      <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Contacto</strong>
+      <a href="mailto:felipe@lowsignal.cl">felipe@lowsignal.cl</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 Felipe Quiroz</div>
+    <div>Santiago / CL</div>
+  </div>
+</footer>
+
+</body>
+</html>
