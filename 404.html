@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>404 | Felipe Quiroz</title>
+  <meta name="theme-color" content="#05070a">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --black:#05070a;
+      --navy:#07101b;
+      --navy-2:#102844;
+      --white:#fff;
+      --muted:#aeb8c4;
+      --line:rgba(255,255,255,.12);
+      --blue:#1683ff;
+      --page:5vw;
+      --max:1440px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%}
+    body{
+      min-height:100svh;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:#05070a;
+      color:#fff;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    a{color:inherit;text-decoration:none}
+    ::selection{background:var(--blue);color:#fff}
+
+    .page{
+      min-height:100svh;
+      display:flex;
+      flex-direction:column;
+      background:
+        radial-gradient(circle at 78% 38%,rgba(22,131,255,.16),transparent 24%),
+        linear-gradient(108deg,#05070a 0%,#07101b 54%,#102844 100%);
+      overflow:hidden;
+    }
+
+    .nav{
+      min-height:84px;
+      padding:0 var(--page);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      background:rgba(5,7,10,.82);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+    }
+
+    .brand{
+      font-family:Manrope,sans-serif;
+      font-size:17px;
+      font-weight:600;
+      letter-spacing:-.04em;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:28px;
+      font-size:10px;
+      font-weight:500;
+      letter-spacing:.07em;
+      text-transform:uppercase;
+      color:#bcc4ce;
+    }
+
+    .nav-links a{transition:.2s ease}
+    .nav-links a:hover{color:#fff}
+
+    .home-link{
+      padding:9px 15px;
+      border:1px solid rgba(255,255,255,.25);
+      border-radius:999px;
+      color:#fff!important;
+    }
+
+    .home-link:hover{
+      background:#fff;
+      color:#07101b!important;
+      border-color:#fff;
+    }
+
+    main{
+      flex:1;
+      display:flex;
+      align-items:center;
+      padding:72px var(--page) 86px;
+    }
+
+    .inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(280px,.52fr);
+      gap:clamp(56px,8vw,130px);
+      align-items:end;
+    }
+
+    .eyebrow{
+      color:#69b5ff;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+      margin-bottom:28px;
+    }
+
+    .code{
+      margin:0;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(124px,19vw,290px);
+      font-weight:400;
+      line-height:.72;
+      letter-spacing:-.085em;
+      color:#fff;
+    }
+
+    .code span{color:#a8bfd9}
+
+    h1{
+      margin:52px 0 0;
+      max-width:900px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(46px,5.4vw,82px);
+      line-height:1.01;
+      letter-spacing:-.062em;
+      font-weight:400;
+    }
+
+    h1 span{
+      display:block;
+      color:#a8bfd9;
+    }
+
+    .side{
+      padding-top:28px;
+      border-top:1px solid var(--line);
+    }
+
+    .side p{
+      margin:0;
+      max-width:520px;
+      color:#bdc5cf;
+      font-size:15px;
+      line-height:1.78;
+    }
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:30px;
+    }
+
+    .btn{
+      min-height:46px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:0 17px;
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:999px;
+      font-size:10px;
+      font-weight:600;
+      letter-spacing:.07em;
+      text-transform:uppercase;
+      transition:.2s ease;
+    }
+
+    .btn.primary{
+      background:#fff;
+      color:#07101b;
+      border-color:#fff;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      border-color:#fff;
+    }
+
+    .btn.primary:hover{
+      background:#dfe8f3;
+      border-color:#dfe8f3;
+    }
+
+    .footer{
+      width:min(var(--max),calc(100% - (var(--page) * 2)));
+      margin:0 auto;
+      padding:26px 0 34px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      border-top:1px solid rgba(255,255,255,.09);
+      color:#7f8a98;
+      font-size:9px;
+      letter-spacing:.07em;
+      text-transform:uppercase;
+    }
+
+    @media(max-width:900px){
+      .inner{grid-template-columns:1fr;gap:48px}
+      .code{font-size:clamp(116px,30vw,220px)}
+      h1{margin-top:42px}
+      .side{max-width:680px}
+    }
+
+    @media(max-width:760px){
+      :root{--page:24px}
+
+      .nav{
+        min-height:auto;
+        padding:18px 20px;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:14px;
+      }
+
+      .nav-links{
+        width:100%;
+        justify-content:space-between;
+        gap:8px;
+        font-size:9px;
+      }
+
+      main{padding:62px var(--page) 70px}
+      .eyebrow{margin-bottom:22px}
+      .code{font-size:clamp(108px,38vw,176px)}
+      h1{font-size:clamp(42px,12vw,58px);line-height:1.04}
+      .side p{font-size:14px}
+      .footer{
+        width:calc(100% - 48px);
+        flex-direction:column;
+        gap:7px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <header class="nav">
+    <a class="brand" href="/" id="brand-link">Felipe Quiroz</a>
+    <nav class="nav-links">
+      <a href="/#work" id="work-link">Work</a>
+      <a href="/about" id="about-link">About</a>
+      <a class="home-link" href="/" id="nav-home">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="inner">
+      <div>
+        <div class="eyebrow" id="eyebrow">Wrong turn / 404</div>
+        <div class="code">4<span>0</span>4</div>
+        <h1 id="title">This page got lost.<span>Let’s get you somewhere useful.</span></h1>
+      </div>
+
+      <div class="side">
+        <p id="copy">The page you’re looking for doesn’t exist, moved somewhere else or never made it past the prototype.</p>
+
+        <div class="actions">
+          <a class="btn primary" href="/" id="home-btn">Back home</a>
+          <a class="btn" href="/#work" id="work-btn">View selected work</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div>© 2026 Felipe Quiroz</div>
+    <div>Santiago / CL</div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  const isEs = location.pathname === "/es" || location.pathname.startsWith("/es/");
+  if(!isEs) return;
+
+  document.documentElement.lang = "es";
+  document.title = "404 | Felipe Quiroz";
+
+  document.getElementById("brand-link").href = "/es/";
+  document.getElementById("work-link").href = "/es/#work";
+  document.getElementById("work-link").textContent = "Trabajo";
+  document.getElementById("about-link").href = "/es/about";
+  document.getElementById("about-link").textContent = "Sobre mí";
+  document.getElementById("nav-home").href = "/es/";
+  document.getElementById("nav-home").textContent = "Inicio";
+
+  document.getElementById("eyebrow").textContent = "Ruta incorrecta / 404";
+  document.getElementById("title").innerHTML = 'Esta página se perdió.<span>Volvamos a algo útil.</span>';
+  document.getElementById("copy").textContent = "La página que buscas no existe, cambió de lugar o nunca pasó del prototipo.";
+  document.getElementById("home-btn").href = "/es/";
+  document.getElementById("home-btn").textContent = "Volver al inicio";
+  document.getElementById("work-btn").href = "/es/#work";
+  document.getElementById("work-btn").textContent = "Ver trabajo";
+})();
+</script>
+
+</body>
+</html>
