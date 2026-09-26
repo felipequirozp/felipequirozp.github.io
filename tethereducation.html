@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TetherEd | Felipe Quiroz</title>
+  <meta name="description" content="TetherEd case study by Felipe Quiroz. Partnerships, market expansion, product adoption, public education and applied AI.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="canonical" href="https://felipequirozp.cl/tethereducation">
+  <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/tethereducation">
+  <link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/tethereducation">
+  <link rel="alternate" hreflang="x-default" href="https://felipequirozp.cl/tethereducation">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TetherEd | Felipe Quiroz">
+  <meta property="og:description" content="Building infrastructure for better choices.">
+  <meta property="og:url" content="https://felipequirozp.cl/tethereducation">
+  <meta property="og:image" content="https://felipequirozp.cl/images/tether-team-event.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --ink:#0b1117;
+      --muted:#5f6b78;
+      --muted-2:#7a8796;
+      --line:#e2e7ec;
+      --soft:#f3f6f9;
+      --blue:#1467d8;
+      --dark:#05070a;
+      --dark-2:#0d1724;
+      --accent:#9aadc0;
+      --page:clamp(22px,4vw,64px);
+      --max:1520px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    ::selection{background:var(--blue);color:#fff}
+    .section-label{
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:#6f7d8d;
+    }
+
+    /* NAV */
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      min-height:76px;
+      padding:0 var(--page);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid rgba(11,17,23,.08);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+    .brand{
+      font-family:Manrope,sans-serif;
+      font-size:22px!important;
+      font-weight:600;
+      letter-spacing:-.045em;
+      white-space:nowrap;
+    }
+    .nav-center,.nav-right{display:flex;align-items:center;gap:28px}
+    .nav a{font-size:11px;font-weight:500;color:#1a232d}
+    .nav-center a,.nav-right a:not(.lang){position:relative}
+    .nav-center a::after,.nav-right a:not(.lang)::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-7px;
+      width:0;
+      height:1px;
+      background:#111820;
+      transition:width .2s ease;
+    }
+    .nav-center a:hover::after,.nav-center a.active::after,.nav-right a:not(.lang):hover::after{width:100%}
+    .lang{
+      width:38px;height:38px;
+      display:grid;place-items:center;
+      border:1px solid #d7dde4;
+      border-radius:50%;
+      font-size:10px!important;
+      letter-spacing:.04em;
+      transition:.2s ease;
+    }
+    .lang:hover{background:#0b1117;color:#fff;border-color:#0b1117}
+
+    /* HERO */
+    .hero{
+      padding:86px var(--page) 104px;
+      background:#fff;
+    }
+    .hero-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+    }
+    .hero-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:30px;
+      margin-bottom:68px;
+    }
+    .tether-mark{
+      min-width:240px;
+      min-height:72px;
+      padding:12px 22px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:18px;
+      background:#0d1724;
+      border:1px solid #142235;
+    }
+    .tether-mark img{
+      width:auto;
+      max-width:210px;
+      height:29px;
+      object-fit:contain;
+    }
+    .hero-meta{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      gap:10px;
+    }
+    .hero-meta span{
+      min-height:40px;
+      display:inline-flex;
+      align-items:center;
+      padding:0 14px;
+      border:1px solid #d8dee5;
+      border-radius:999px;
+      background:#f7f9fb;
+      color:#667281;
+      font-size:10px;
+      font-weight:600;
+    }
+    .hero-kicker{
+      margin-bottom:24px;
+      color:var(--blue);
+      font-size:12px;
+      font-weight:600;
+    }
+    .hero h1{
+      margin:0;
+      max-width:1180px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(72px,7.6vw,124px);
+      line-height:1.01;
+      letter-spacing:-.072em;
+      font-weight:500;
+    }
+    .hero h1 span{
+      display:block;
+      margin-top:.02em;
+      color:#a8b4c3;
+    }
+    .hero-bottom{
+      margin-top:52px;
+      padding-top:28px;
+      border-top:1px solid var(--line);
+      display:grid;
+      grid-template-columns:minmax(0,1.08fr) minmax(300px,.5fr);
+      gap:clamp(50px,8vw,130px);
+    }
+    .hero-description{
+      margin:0;
+      max-width:800px;
+      color:var(--muted);
+      font-size:17px;
+      line-height:1.76;
+    }
+    .hero-role strong{
+      display:block;
+      font-family:Manrope,sans-serif;
+      font-size:22px;
+      font-weight:500;
+      letter-spacing:-.035em;
+    }
+    .hero-role span{
+      display:block;
+      margin-top:7px;
+      color:#74808d;
+      font-size:12px;
+      line-height:1.5;
+    }
+    .hero-site{
+      margin-top:14px;
+      display:inline-flex;
+      padding-bottom:3px;
+      border-bottom:1px solid #bfc8d2;
+      font-size:11px;
+      font-weight:700;
+    }
+    .hero-site:hover{color:var(--blue);border-color:var(--blue)}
+
+    /* IMPACT */
+    .impact{
+      padding:112px var(--page) 122px;
+      background:var(--soft);
+    }
+    .impact-head{
+      width:min(var(--max),100%);
+      margin:0 auto 54px;
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:40px;
+    }
+    .impact-head h2{
+      margin:14px 0 0;
+      max-width:880px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);
+      line-height:1.05;
+      letter-spacing:-.055em;
+      font-weight:500;
+    }
+    .impact-head p{
+      margin:0;
+      max-width:520px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.7;
+    }
+    .impact-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:22px;
+    }
+    .impact-card{
+      min-height:250px;
+      padding:30px;
+      border-radius:24px;
+      background:#fff;
+      border:1px solid #e1e6eb;
+    }
+    .impact-card strong{
+      display:block;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(52px,4.7vw,78px);
+      font-weight:500;
+      letter-spacing:-.06em;
+    }
+    .impact-card span{
+      display:block;
+      margin-top:28px;
+      max-width:230px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    /* ROLE */
+    .role{
+      padding:112px var(--page);
+      background:#fff;
+    }
+    .role-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:minmax(170px,.3fr) minmax(0,1.2fr);
+      gap:clamp(50px,8vw,130px);
+    }
+    .role-main h2{
+      margin:0 0 30px;
+      max-width:900px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5.2vw,80px);
+      line-height:1.02;
+      letter-spacing:-.06em;
+      font-weight:500;
+    }
+    .role-main>p{
+      margin:0 0 20px;
+      max-width:900px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.8;
+    }
+    .snapshot{
+      margin-top:40px;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .snapshot-item{
+      padding:24px 20px;
+      border-right:1px solid var(--line);
+    }
+    .snapshot-item:last-child{border-right:0}
+    .snapshot-label{
+      color:#8b96a2;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .snapshot-value{
+      margin-top:10px;
+      font-size:14px;
+      line-height:1.5;
+    }
+    .snapshot-focus{
+      margin-top:18px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+    }
+    .snapshot-focus span{
+      padding:9px 12px;
+      border:1px solid #d8dee5;
+      border-radius:999px;
+      background:#f7f9fb;
+      color:#344150;
+      font-size:10px;
+      font-weight:600;
+    }
+
+    /* PEOPLE */
+    .people{
+      margin-top:72px;
+      padding-top:56px;
+      border-top:1px solid var(--line);
+    }
+    .people-head{
+      margin-bottom:32px;
+      display:flex;
+      justify-content:space-between;
+      gap:40px;
+      align-items:end;
+    }
+    .people-head h3{
+      margin:12px 0 0;
+      font-family:Manrope,sans-serif;
+      font-size:38px;
+      letter-spacing:-.045em;
+      font-weight:500;
+    }
+    .people-head p{
+      margin:0;
+      max-width:560px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.7;
+    }
+    .people-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+    }
+    .person{
+      padding:26px;
+      border-radius:22px;
+      border:1px solid var(--line);
+      background:#fff;
+    }
+    .person-top{
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+    .person-photo{
+      width:66px;height:66px;
+      border-radius:50%;
+      overflow:hidden;
+      background:#edf2f6;
+      flex:0 0 auto;
+    }
+    .person-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .person-kicker{
+      margin-bottom:5px;
+      color:#7a8da4;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+    .person h4{
+      margin:0;
+      font-family:Manrope,sans-serif;
+      font-size:22px;
+      letter-spacing:-.04em;
+      font-weight:500;
+    }
+    .person-role{
+      margin-top:6px;
+      color:#6c7886;
+      font-size:11px;
+      line-height:1.45;
+    }
+    .person-context{
+      margin:22px 0 0;
+      color:#5a6776;
+      font-size:13px;
+      line-height:1.7;
+    }
+    .person-links{
+      margin-top:20px;
+      display:flex;
+      gap:8px;
+    }
+    .icon-link{
+      width:38px;height:38px;
+      display:grid;place-items:center;
+      border:1px solid #d8dee5;
+      border-radius:50%;
+      color:#111820;
+      transition:.2s ease;
+    }
+    .icon-link:hover{background:#0b1117;color:#fff;border-color:#0b1117}
+    .icon-link svg{width:16px;height:16px}
+    .backing{
+      margin-top:22px;
+      padding:24px;
+      display:flex;
+      align-items:center;
+      gap:24px;
+      border-radius:20px;
+      border:1px solid var(--line);
+      background:#f8fafc;
+    }
+    .backing-logo{
+      min-width:170px;
+      min-height:50px;
+      padding:9px 14px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:14px;
+      background:#0d1724;
+    }
+    .backing-logo img{
+      width:auto;
+      height:25px;
+      max-width:150px;
+      object-fit:contain;
+    }
+    .backing p{
+      margin:0;
+      color:#65717f;
+      font-size:13px;
+      line-height:1.7;
+    }
+    .backing p a{
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    /* PRODUCT */
+    .product{
+      padding:114px var(--page) 122px;
+      background:var(--dark);
+      color:#fff;
+    }
+    .product-head{
+      width:min(var(--max),100%);
+      margin:0 auto 42px;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(360px,.52fr);
+      gap:clamp(64px,8vw,120px);
+      align-items:end;
+    }
+    .product-head>div,.product-head>p{min-width:0}
+    .product .section-label{color:#8ec4ff}
+    .product h2{
+      margin:14px 0 0;
+      max-width:860px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(44px,4.15vw,66px);
+      line-height:1.03;
+      letter-spacing:-.058em;
+      font-weight:500;
+    }
+    .product h2 span{display:block;color:#a8bfd9}
+    .product-head p{
+      margin:0;
+      max-width:520px;
+      color:#9aa4b0;
+      font-size:15px;
+      line-height:1.72;
+    }
+    .product-note{
+      width:min(var(--max),100%);
+      margin:0 auto 28px;
+      padding:18px 20px;
+      display:grid;
+      grid-template-columns:150px 1fr;
+      gap:28px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:16px;
+      background:rgba(255,255,255,.025);
+    }
+    .product-note strong{
+      color:#8ec4ff;
+      font-size:10px;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .product-note p{
+      margin:0;
+      color:#aeb7c2;
+      font-size:13px;
+      line-height:1.68;
+    }
+    .product-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+    .product-item{
+      min-height:290px;
+      padding:28px;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.10);
+      background:#0b1117;
+    }
+    .product-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .product-num{
+      color:#606b77;
+      font-size:10px;
+      letter-spacing:.1em;
+    }
+    .product-icon{
+      width:42px;height:42px;
+      border-radius:13px;
+      display:grid;place-items:center;
+      background:rgba(20,103,216,.10);
+      color:#78b7ff;
+    }
+    .product-icon svg{
+      width:19px;height:19px;
+      stroke:currentColor;
+      fill:none;
+      stroke-width:1.8;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+    .product-item h3{
+      margin:58px 0 8px;
+      font-family:Manrope,sans-serif;
+      font-size:29px;
+      letter-spacing:-.045em;
+      font-weight:500;
+    }
+    .product-type{
+      color:#78b7ff;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+    .product-item p{
+      margin:16px 0 0;
+      color:#949eaa;
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    /* PROJECTS */
+    .projects{
+      padding:112px var(--page) 122px;
+      background:#fff;
+    }
+    .projects-head{
+      width:min(var(--max),100%);
+      margin:0 auto 48px;
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:50px;
+    }
+    .projects-head h2{
+      margin:14px 0 0;
+      max-width:900px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+      font-weight:500;
+    }
+    .projects-head p{
+      margin:0;
+      max-width:540px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.7;
+    }
+    .project-list{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      border-top:1px solid var(--line);
+    }
+    .project{
+      display:grid;
+      grid-template-columns:48px minmax(280px,.72fr) minmax(0,1fr);
+      gap:26px 38px;
+      padding:32px 0;
+      border-bottom:1px solid var(--line);
+      transition:.2s ease;
+    }
+    .project:hover{
+      padding-left:14px;
+      padding-right:14px;
+      background:#f7f9fb;
+    }
+    .project-num{
+      padding-top:6px;
+      color:#8995a2;
+      font-size:10px;
+      letter-spacing:.09em;
+    }
+    .project-brand-row{
+      display:flex;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:0 0 14px;
+    }
+    .project-brand{
+      min-height:44px;
+      padding:6px 10px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border:1px solid #dde4ec;
+      border-radius:13px;
+      background:#fff;
+    }
+    .project-brand.clean{
+      min-height:auto;
+      padding:4px 0;
+      border:0;
+      background:transparent;
+    }
+    .project-brand img{
+      width:auto;
+      max-width:170px;
+      max-height:26px;
+      object-fit:contain;
+    }
+    .project-brand.clean img{
+      max-height:31px;
+      max-width:210px;
+    }
+    .project-brand.slep{
+      min-height:auto;
+      padding:0;
+      border:0;
+      background:transparent;
+    }
+    .project-brand.slep img{
+      max-height:46px;
+      max-width:185px;
+    }
+    .project-type{
+      color:#718399;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      margin-bottom:10px;
+    }
+    .project h3{
+      margin:0;
+      font-family:Manrope,sans-serif;
+      font-size:32px;
+      line-height:1.05;
+      letter-spacing:-.045em;
+      font-weight:500;
+    }
+    .project-body p{
+      margin:0;
+      color:#5f6b79;
+      font-size:13px;
+      line-height:1.75;
+    }
+    .project-meta{
+      margin:18px 0 24px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .project-meta span{
+      padding:8px 10px;
+      border:1px solid #dce2e8;
+      border-radius:999px;
+      background:#fff;
+      color:#344355;
+      font-size:9px;
+      font-weight:600;
+    }
+    .project-contribution strong{
+      display:block;
+      margin-bottom:7px;
+      color:#73859a;
+      font-size:9px;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .project-link{
+      margin-top:17px;
+      display:inline-flex;
+      padding-bottom:3px;
+      border-bottom:1px solid #a9b3bf;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+    }
+    .project-link:hover{color:var(--blue);border-color:var(--blue)}
+
+    /* FIELD */
+    .field{
+      padding:0 var(--page) 112px;
+      background:var(--soft);
+    }
+    .field-card{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
+      align-items:stretch;
+      overflow:hidden;
+      border-radius:28px;
+      background:var(--dark);
+      color:#fff;
+    }
+    .field-copy{
+      min-width:0;
+      min-height:470px;
+      padding:60px 54px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .field-copy .section-label{color:#8ec4ff}
+    .field-copy h2{
+      margin:18px 0 24px;
+      max-width:600px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(44px,4.2vw,66px);
+      line-height:1.04;
+      letter-spacing:-.058em;
+      font-weight:500;
+    }
+    .field-copy h2 span{
+      display:block;
+      color:#a8bfd9;
+    }
+    .field-copy p{
+      margin:0;
+      max-width:560px;
+      color:#b7c0cb;
+      font-size:15px;
+      line-height:1.76;
+    }
+    .field-meta{
+      margin-top:26px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+    }
+    .field-meta span{
+      padding:8px 10px;
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:999px;
+      color:#c4ccd5;
+      font-size:9px;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+    }
+    .field-photo{
+      min-width:0;
+      height:470px;
+      overflow:hidden;
+      background:#0c1623;
+    }
+    .field-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center 45%;
+    }
+
+    /* OPERATING */
+    .operating{
+      padding:112px var(--page) 122px;
+      background:#fff;
+    }
+    .operating-head{
+      width:min(var(--max),100%);
+      margin:0 auto 48px;
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:50px;
+    }
+    .operating-head h2{
+      margin:14px 0 0;
+      max-width:880px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+      font-weight:500;
+    }
+    .operating-head p{
+      margin:0;
+      max-width:560px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.72;
+    }
+    .work-list{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      border-top:1px solid var(--line);
+    }
+    .work-item{
+      display:grid;
+      grid-template-columns:44px 1fr;
+      gap:16px;
+      padding:26px 0;
+      border-bottom:1px solid var(--line);
+    }
+    .work-item:nth-child(odd){
+      padding-right:32px;
+      border-right:1px solid var(--line);
+    }
+    .work-item:nth-child(even){padding-left:32px}
+    .work-num{
+      color:#8a96a4;
+      font-size:9px;
+      letter-spacing:.09em;
+      padding-top:4px;
+    }
+    .work-item strong{
+      font-family:Manrope,sans-serif;
+      font-size:20px;
+      font-weight:500;
+      line-height:1.35;
+      letter-spacing:-.03em;
+    }
+
+    /* PRINCIPLE */
+    .principle{
+      padding:118px var(--page);
+      background:#0b1117;
+      color:#fff;
+    }
+    .principle-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      text-align:center;
+    }
+    .principle .section-label{color:#8ec4ff}
+    .principle h2{
+      margin:24px auto 0;
+      max-width:980px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(54px,5.6vw,86px);
+      line-height:1.02;
+      letter-spacing:-.063em;
+      font-weight:500;
+    }
+    .principle h2 span{display:block;color:#a8bfd9}
+    .principle-grid{
+      max-width:920px;
+      margin:54px auto 0;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+    .principle-item{
+      padding:28px;
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:20px;
+      text-align:left;
+      background:rgba(255,255,255,.025);
+    }
+    .principle-item small{
+      color:#78b7ff;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .principle-item strong{
+      display:block;
+      margin-top:16px;
+      font-family:Manrope,sans-serif;
+      font-size:26px;
+      line-height:1.18;
+      letter-spacing:-.04em;
+      font-weight:500;
+    }
+    .principle-item p{
+      margin:12px 0 0;
+      color:#909aa6;
+      font-size:12px;
+      line-height:1.7;
+    }
+
+    /* PROJECT NAV */
+    .project-nav{
+      padding:72px var(--page);
+      background:var(--soft);
+    }
+    .project-nav-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .project-nav a{
+      padding:28px 0;
+      transition:.2s ease;
+    }
+    .project-nav a:first-child{padding-right:30px}
+    .project-nav a:last-child{
+      padding-left:30px;
+      text-align:right;
+      border-left:1px solid var(--line);
+    }
+    .project-nav a:hover{
+      padding-left:16px;
+      padding-right:16px;
+      background:#fff;
+    }
+    .project-nav-label{
+      color:#85919f;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .project-nav strong{
+      display:block;
+      margin-top:8px;
+      font-family:Manrope,sans-serif;
+      font-size:28px;
+      font-weight:500;
+      letter-spacing:-.04em;
+    }
+
+    /* FOOTER */
+    .footer{
+      padding:72px var(--page) 34px;
+      background:#fff;
+      border-top:1px solid var(--line);
+    }
+    .footer-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.2fr repeat(3,.7fr);
+      gap:50px;
+    }
+    .footer-brand{
+      font-family:Manrope,sans-serif;
+      font-size:30px;
+      letter-spacing:-.045em;
+      font-weight:600;
+    }
+    .footer-copy{
+      margin-top:14px;
+      max-width:360px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+    .footer-col strong{
+      display:block;
+      margin-bottom:14px;
+      font-size:12px;
+      font-weight:700;
+    }
+    .footer-col a{
+      display:block;
+      margin:10px 0;
+      color:#5f6b78;
+      font-size:13px;
+    }
+    .footer-col a:hover{color:#0b1117}
+    .footer-bottom{
+      width:min(var(--max),100%);
+      margin:54px auto 0;
+      padding-top:24px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      border-top:1px solid var(--line);
+      color:#7b8794;
+      font-size:10px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    @media(max-width:1100px){
+      .impact-grid{grid-template-columns:1fr 1fr}
+      .product-grid{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+
+    @media(max-width:980px){
+      .product-head{grid-template-columns:1fr;gap:28px}
+      .field-card{grid-template-columns:1fr}
+      .field-copy{min-height:auto;padding:52px 42px}
+      .field-photo{height:360px}
+    }
+
+    @media(max-width:860px){
+      .nav-center{display:none}
+      .hero-bottom,.role-grid{grid-template-columns:1fr}
+      .impact-head,.projects-head,.operating-head,.people-head{flex-direction:column;align-items:flex-start}
+      .snapshot{grid-template-columns:1fr 1fr}
+      .people-grid{grid-template-columns:1fr}
+      .project{grid-template-columns:40px 1fr}
+      .project-body{grid-column:2}
+      .work-list{grid-template-columns:1fr}
+      .work-item:nth-child(odd){padding-right:0;border-right:0}
+      .work-item:nth-child(even){padding-left:0}
+      .backing{align-items:flex-start;flex-direction:column}
+    }
+
+    @media(max-width:640px){
+      .nav{min-height:68px}
+      .brand{font-size:20px!important}
+      .nav-right{gap:14px}
+      .nav-right a:not(.lang):nth-child(2){display:none}
+
+      .hero{padding-top:58px;padding-bottom:80px}
+      .hero-top{align-items:flex-start;flex-direction:column;margin-bottom:48px}
+      .hero-meta{justify-content:flex-start}
+      .tether-mark{min-width:210px;min-height:64px}
+      .tether-mark img{height:26px}
+      .hero h1{font-size:clamp(56px,15vw,78px)}
+      .hero-description{font-size:15px}
+
+      .impact,.role,.product,.projects,.operating,.principle{padding-top:82px;padding-bottom:88px}
+      .impact-grid,.product-grid,.snapshot,.principle-grid{grid-template-columns:1fr}
+      .impact-card{min-height:210px}
+      .role-main h2,.impact-head h2,.product h2,.projects-head h2,.operating-head h2,.principle h2{font-size:42px}
+      .snapshot-item{border-right:0;border-bottom:1px solid var(--line)}
+      .snapshot-item:last-child{border-bottom:0}
+
+      .person{padding:22px}
+      .project{grid-template-columns:30px 1fr;gap:16px}
+      .project h3{font-size:27px}
+      .project-brand img{max-width:145px}
+      .project-brand.clean img{max-width:180px}
+      .project-brand.slep img{max-width:150px}
+
+      .field{padding:0 var(--page) 82px}
+      .field-card{border-radius:20px}
+      .field-copy{padding:42px 26px}
+      .field-copy h2{font-size:42px}
+      .field-photo{height:280px}
+
+      .project-nav-inner{grid-template-columns:1fr}
+      .project-nav a:last-child{text-align:left;border-left:0;border-top:1px solid var(--line);padding-left:0}
+
+      .footer-grid{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="/">Felipe Quiroz</a>
+
+  <nav class="nav-center" aria-label="Primary">
+    <a href="/#work" class="active">Work</a>
+    <a href="/about">About</a>
+    <a href="/now">Now</a>
+    <a href="/blog">Blog</a>
+  </nav>
+
+  <div class="nav-right">
+    <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="lang" href="/es/tethereducation" aria-label="Switch language">ES</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-top">
+        <a class="tether-mark" href="https://tether.education/" target="_blank" rel="noopener noreferrer" aria-label="Visit TetherEd">
+          <img src="/logos/tethered-logo.svg" alt="TetherEd">
+        </a>
+
+        <div class="hero-meta">
+          <span>Selected Work / 03</span>
+          <span>2024 – 2026</span>
+          <span>GovTech / EdTech</span>
+        </div>
+      </div>
+
+      <div class="hero-kicker">Education Access / Partnerships / AI</div>
+      <h1>Building infrastructure<span>for better choices.</span></h1>
+
+      <div class="hero-bottom">
+        <p class="hero-description">I led partnerships, business development and market expansion across Latin America, the U.S. and Europe, connecting governments, education organizations and technology partners with AI-enabled products and digital infrastructure for admissions, enrollment and student guidance.</p>
+
+        <div class="hero-role">
+          <strong>TetherEd</strong>
+          <span>Head of Partnerships</span>
+          <span>Latin America · United States · Denmark · Spain</span>
+          <a class="hero-site" href="https://tether.education/" target="_blank" rel="noopener noreferrer">tether.education ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="impact">
+    <div class="impact-head">
+      <div>
+        <div class="section-label">Impact</div>
+        <h2>From opening doors to building reach.</h2>
+      </div>
+      <p>I connected institutional relationships, commercial execution, product signals and implementation to turn opportunities into adoption, measurable reach and systems that could scale.</p>
+    </div>
+
+    <div class="impact-grid">
+      <article class="impact-card"><strong>14+</strong><span>Strategic partnerships</span></article>
+      <article class="impact-card"><strong>20,000+</strong><span>Families reached through partnerships</span></article>
+      <article class="impact-card"><strong>100+</strong><span>Public schools reached in Chile</span></article>
+      <article class="impact-card"><strong>25+</strong><span>Cross-functional collaborators across geographies</span></article>
+    </div>
+  </section>
+
+  <section class="role">
+    <div class="role-grid">
+      <div class="section-label">Role</div>
+
+      <div class="role-main">
+        <h2>Connecting market, product and execution.</h2>
+        <p>Tether Education is a US GovTech startup focused on digital infrastructure for school choice, admissions and enrollment.</p>
+        <p>As Head of Partnerships, I led partnership strategy, business development and market expansion across Latin America, the U.S. and Europe, working with governments, education organizations and technology partners to turn opportunities into scalable products, implementations and long-term partnerships.</p>
+
+        <div class="snapshot">
+          <div class="snapshot-item"><div class="snapshot-label">Company</div><div class="snapshot-value">Tether Education</div></div>
+          <div class="snapshot-item"><div class="snapshot-label">Role</div><div class="snapshot-value">Head of Partnerships</div></div>
+          <div class="snapshot-item"><div class="snapshot-label">Period</div><div class="snapshot-value">2024 – 2026</div></div>
+          <div class="snapshot-item"><div class="snapshot-label">Category</div><div class="snapshot-value">GovTech / EdTech</div></div>
+        </div>
+
+        <div class="snapshot-focus">
+          <span>Partnerships</span>
+          <span>Business development</span>
+          <span>Expansion</span>
+          <span>Product adoption</span>
+          <span>LATAM · US · Denmark · Spain</span>
+        </div>
+
+        <div class="people">
+          <div class="people-head">
+            <div>
+              <div class="section-label">Key people</div>
+              <h3>Built close to leadership.</h3>
+            </div>
+            <p>Two working relationships that explain how I operated inside TetherEd: close to leadership, go-to-market and the decisions connecting market, product and execution.</p>
+          </div>
+
+          <div class="people-grid">
+            <article class="person">
+              <div class="person-top">
+                <div class="person-photo"><img src="/images/christopher-neilson.jpg" alt="Christopher Neilson"></div>
+                <div>
+                  <div class="person-kicker">Direct leadership</div>
+                  <h4>Christopher Neilson</h4>
+                  <div class="person-role">Founder & CEO · Tether Education<br>Professor of Economics and Global Affairs · Yale University</div>
+                </div>
+              </div>
+              <p class="person-context">I worked directly and closely with Christopher, aligning partnerships, institutional relationships and expansion initiatives with the evolution of the product.</p>
+              <div class="person-links">
+                <a class="icon-link" href="https://christopher-neilson.com/" target="_blank" rel="noopener noreferrer" aria-label="Christopher Neilson website"><svg viewBox="0 0 20 20" fill="none"><path d="M7 13L13 7" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"/><path d="M8 6H14V12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"/></svg></a>
+                <a class="icon-link" href="https://www.linkedin.com/in/christopher-a-neilson/" target="_blank" rel="noopener noreferrer" aria-label="Christopher Neilson on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg></a>
+              </div>
+            </article>
+
+            <article class="person">
+              <div class="person-top">
+                <div class="person-photo"><img src="/images/zack-tseng.jpg" alt="Zack Tseng"></div>
+                <div>
+                  <div class="person-kicker">Go-to-market & execution</div>
+                  <h4>Zack Tseng</h4>
+                  <div class="person-role">Chief of Staff · Tether Education</div>
+                </div>
+              </div>
+              <p class="person-context">I worked with Zack on go-to-market initiatives and Stocktake results, connecting commercial execution, adoption and market learning.</p>
+              <div class="person-links">
+                <a class="icon-link" href="https://www.linkedin.com/in/zacharytseng/" target="_blank" rel="noopener noreferrer" aria-label="Zack Tseng on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="backing">
+            <a class="backing-logo" href="https://avalanche.vc/" target="_blank" rel="noopener noreferrer" aria-label="Avalanche">
+              <img src="/logos/avalanche-logo.png" alt="Avalanche">
+            </a>
+            <p>Tether Education is backed by Avalanche, a private investment firm led by <a href="https://katelyndonnelly.com/" target="_blank" rel="noopener noreferrer">Katelyn Donnelly</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="product">
+    <div class="product-head">
+      <div>
+        <div class="section-label">Product & AI</div>
+        <h2>Listen to the market.<span>Build better.</span></h2>
+      </div>
+      <p>I worked with Product and Engineering to translate customer, institution and family needs into product improvements, new digital solutions and AI-enabled initiatives that could scale across education systems.</p>
+    </div>
+
+    <div class="product-note">
+      <strong>Applied AI</strong>
+      <p>The work included AI-powered education initiatives developed with OpenAI and Anthropic, as well as specific projects with Columbia University and SLEP del Pino across 50+ public education institutions.</p>
+    </div>
+
+    <div class="product-grid">
+      <article class="product-item">
+        <div class="product-top"><div class="product-num">01</div><div class="product-icon"><svg viewBox="0 0 24 24"><path d="M5 18 19 6"/><path d="M11 6h8v8"/></svg></div></div>
+        <h3>Market signals</h3>
+        <div class="product-type">Discovery</div>
+        <p>Turn conversations with institutions and families into useful signals for product prioritization and evolution.</p>
+      </article>
+
+      <article class="product-item">
+        <div class="product-top"><div class="product-num">02</div><div class="product-icon"><svg viewBox="0 0 24 24"><path d="M5 7h14"/><path d="M5 12h9"/><path d="M5 17h12"/></svg></div></div>
+        <h3>Product & Engineering</h3>
+        <div class="product-type">Translation</div>
+        <p>Translate commercial and operational requirements into concrete problems technical teams could design, build and validate.</p>
+      </article>
+
+      <article class="product-item">
+        <div class="product-top"><div class="product-num">03</div><div class="product-icon"><svg viewBox="0 0 24 24"><path d="M12 3v6"/><path d="M12 15v6"/><path d="M3 12h6"/><path d="M15 12h6"/><circle cx="12" cy="12" r="3"/></svg></div></div>
+        <h3>Applied AI</h3>
+        <div class="product-type">Innovation</div>
+        <p>Built and deployed AI-powered education initiatives with OpenAI and Anthropic, including conversational assistants, guidance bots and digital tools for students, families and public education systems.</p>
+      </article>
+
+      <article class="product-item">
+        <div class="product-top"><div class="product-num">04</div><div class="product-icon"><svg viewBox="0 0 24 24"><path d="M5 18V9"/><path d="M12 18V5"/><path d="M19 18v-6"/></svg></div></div>
+        <h3>Measurement</h3>
+        <div class="product-type">Learning</div>
+        <p>Design operations and processes to learn from adoption, measure outcomes and iterate with evidence.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="projects">
+    <div class="projects-head">
+      <div>
+        <div class="section-label">Selected projects</div>
+        <h2>Product, implementation and transformation at scale.</h2>
+      </div>
+      <p>A selection of initiatives where I connected product, institutions and execution, from education discovery tools to digital transformation and AI adoption in public education.</p>
+    </div>
+
+    <div class="project-list">
+      <article class="project">
+        <div class="project-num">01</div>
+        <div class="project-head-copy">
+          <div class="project-brand-row">
+            <span class="project-brand clean"><img src="/logos/virtual-school-explorer-logo.svg" alt="Virtual School Explorer" loading="lazy"></span>
+          </div>
+          <div class="project-type">Product · AI-powered discovery</div>
+          <h3>Virtual School Explorer</h3>
+        </div>
+        <div class="project-body">
+          <p>Education discovery platform with map search, personalized filters, enriched profiles, availability, admission estimates and an AI assistant that helps families explore and compare options.</p>
+          <div class="project-meta"><span>Map search</span><span>Admission probability</span><span>Real-time availability</span><span>AI assistant</span></div>
+          <p class="project-contribution"><strong>My contribution</strong>I connected institution and family needs with product and adoption opportunities, bringing market signals into partnership and development decisions.</p>
+          <a class="project-link" href="/tethered/virtual-school-explorer">View case study ↗</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-num">02</div>
+        <div class="project-head-copy">
+          <div class="project-brand-row">
+            <span class="project-brand slep"><img src="/logos/slep-delpino-logo.png" alt="SLEP del Pino" loading="lazy"></span>
+            <span class="project-brand"><img src="/logos/rancagua-cormun-logo.png" alt="CORMUN Rancagua" loading="lazy"></span>
+          </div>
+          <div class="project-type">Public education · Chile · 2024</div>
+          <h3>Digital Transformation of Public Education</h3>
+        </div>
+        <div class="project-body">
+          <p>I led strategic and implementation initiatives with SLEP del Pino and CORMUN Rancagua to digitize admissions processes and expand access to digital application infrastructure.</p>
+          <div class="project-meta"><span>100+ public schools</span><span>35,000+ students</span><span>2 public systems</span></div>
+          <p class="project-contribution"><strong>My contribution</strong>I coordinated public stakeholders, school leadership and internal product teams, translating institutional and operational requirements into scalable implementation strategies.</p>
+          <a class="project-link" href="/tethered/digital-transformation-public-education">View case study ↗</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-num">03</div>
+        <div class="project-head-copy">
+          <div class="project-brand-row">
+            <span class="project-brand"><img src="/logos/openai-logo.png" alt="OpenAI" loading="lazy"></span>
+            <span class="project-brand"><img src="/logos/columbia-university-1-logo.png" onerror="this.onerror=null;this.src='/logos/columbia-university-logo.png';" alt="Columbia University"></span>
+            <span class="project-brand slep"><img src="/logos/slep-delpino-logo.png" alt="SLEP del Pino" loading="lazy"></span>
+          </div>
+          <div class="project-type">AI · Public education · 2025</div>
+          <h3>AI-powered Education Transformation</h3>
+        </div>
+        <div class="project-body">
+          <p>An international initiative developed with Columbia University, OpenAI, Tether Education and SLEP del Pino to accelerate responsible and equitable AI adoption in Chilean public schools.</p>
+          <div class="project-meta"><span>50+ institutions</span><span>OpenAI</span><span>Columbia University</span><span>AI adoption at scale</span></div>
+          <p class="project-contribution"><strong>My contribution</strong>I led implementation across participating schools, coordinating execution, stakeholders and the connection between research, institutional needs and AI-enabled solutions.</p>
+          <a class="project-link" href="/tethered/ai-powered-education-transformation">View case study ↗</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-num">04</div>
+        <div class="project-head-copy">
+          <div class="project-brand-row">
+            <span class="project-brand clean"><img src="/logos/tether-studio-logo.png" alt="Tether Studio" loading="lazy"></span>
+          </div>
+          <div class="project-type">AI product · School operations</div>
+          <h3>Tether Studio</h3>
+        </div>
+        <div class="project-body">
+          <p>AI-powered school photography platform that centralizes portraits, events, yearbooks, consent, family portal and school administration in one digital flow.</p>
+          <div class="project-meta"><span>−82% operating hours</span><span>6 weeks to operate</span><span>1 platform · 5 stages</span><span>100% auditable consent</span></div>
+          <p class="project-contribution"><strong>My contribution</strong>I worked on product building and positioning, connecting school operational needs with a simpler digital experience for teams and families.</p>
+          <a class="project-link" href="/tethered/tether-studio">View case study ↗</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="field">
+    <div class="field-card">
+      <div class="field-copy">
+        <div class="section-label">Work in context</div>
+        <h2>Adoption is built<span>with people.</span></h2>
+        <p>Much of the role happened outside the pipeline: sessions with internal teams, education leaders and institutions. That is where real needs became product, implementation and adoption decisions.</p>
+        <div class="field-meta"><span>Education</span><span>Partnerships</span><span>Santiago</span></div>
+      </div>
+
+      <div class="field-photo">
+        <img src="/images/tether-team-event.jpg" alt="TetherEd and Nivel4 team at an education event" onerror="this.onerror=null;this.src='/tether-team-event.jpg';">
+      </div>
+    </div>
+  </section>
+
+  <section class="operating">
+    <div class="operating-head">
+      <div>
+        <div class="section-label">Operating system</div>
+        <h2>Turning relationships into execution.</h2>
+      </div>
+      <p>I worked across product, growth and operations to move opportunities from conversation to implementation, aligning 25+ collaborators across Sales, Marketing, Engineering, Data, Design, Research and Onboarding around execution across markets.</p>
+    </div>
+
+    <div class="work-list">
+      <div class="work-item"><div class="work-num">01</div><strong>Partnership strategy and business development</strong></div>
+      <div class="work-item"><div class="work-num">02</div><strong>Commercial pipeline, prospecting and negotiation</strong></div>
+      <div class="work-item"><div class="work-num">03</div><strong>Public and private sector relationships</strong></div>
+      <div class="work-item"><div class="work-num">04</div><strong>Cross-functional execution across Sales, Marketing, Engineering, Data, Design, Research and Onboarding</strong></div>
+      <div class="work-item"><div class="work-num">05</div><strong>Market signals into product and AI improvements</strong></div>
+      <div class="work-item"><div class="work-num">06</div><strong>CRM, dashboards, reporting and scalable processes</strong></div>
+    </div>
+  </section>
+
+  <section class="principle">
+    <div class="principle-inner">
+      <div class="section-label">Working principles</div>
+      <h2>Two principles.<span>One way of operating.</span></h2>
+
+      <div class="principle-grid">
+        <article class="principle-item">
+          <small>01 / Partnerships</small>
+          <strong>Connect actors. Turn relationships into adoption.</strong>
+          <p>Understand context, align interests and design the path from relationship to real implementation.</p>
+        </article>
+
+        <article class="principle-item">
+          <small>02 / Product</small>
+          <strong>Listen to the market. Build better.</strong>
+          <p>Use conversations and adoption as signals to prioritize, learn and improve the product.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-nav">
+    <div class="project-nav-inner">
+      <a href="/lowsignal">
+        <div class="project-nav-label">Previous project</div>
+        <strong>lowsignal</strong>
+      </a>
+      <a href="/geovictoria">
+        <div class="project-nav-label">Next project</div>
+        <strong>GeoVictoria</strong>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Felipe Quiroz</div>
+      <div class="footer-copy">Product, Growth & Operations. Building products, growth systems and companies across technology and business.</div>
+    </div>
+
+    <div class="footer-col">
+      <strong>Explore</strong>
+      <a href="/#work">Work</a>
+      <a href="/about">About</a>
+      <a href="/now">Now</a>
+      <a href="/blog">Blog</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Social</strong>
+      <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Contact</strong>
+      <a href="mailto:felipe@lowsignal.cl">felipe@lowsignal.cl</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 Felipe Quiroz</div>
+    <div>Santiago / CL</div>
+  </div>
+</footer>
+
+</body>
+</html>
