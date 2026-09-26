@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GeoVictoria | Felipe Quiroz</title>
+  <meta name="description" content="GeoVictoria case study by Felipe Quiroz. Product strategy, Workforce Management, applied AI and product operations.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="canonical" href="https://felipequirozp.cl/geovictoria">
+  <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/geovictoria">
+  <link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/geovictoria">
+  <link rel="alternate" hreflang="x-default" href="https://felipequirozp.cl/geovictoria">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GeoVictoria | Felipe Quiroz">
+  <meta property="og:description" content="Product systems for real-world operations.">
+  <meta property="og:url" content="https://felipequirozp.cl/geovictoria">
+  <meta property="og:image" content="https://felipequirozp.cl/images/geocoffe.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --ink:#0b1117;
+      --muted:#5f6b78;
+      --muted-2:#7a8796;
+      --line:#e2e7ec;
+      --soft:#f3f6f9;
+      --blue:#1467d8;
+      --dark:#05070a;
+      --dark-2:#0d1724;
+      --page:clamp(22px,4vw,64px);
+      --max:1520px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    ::selection{background:var(--blue);color:#fff}
+    .section-label{
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:#6f7d8d;
+    }
+
+    /* NAV */
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      min-height:76px;
+      padding:0 var(--page);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid rgba(11,17,23,.08);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+    .brand{
+      font-family:Manrope,sans-serif;
+      font-size:22px!important;
+      font-weight:600;
+      letter-spacing:-.045em;
+      white-space:nowrap;
+    }
+    .nav-center,.nav-right{display:flex;align-items:center;gap:28px}
+    .nav a{font-size:11px;font-weight:500;color:#1a232d}
+    .nav-center a,.nav-right a:not(.lang){position:relative}
+    .nav-center a::after,.nav-right a:not(.lang)::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-7px;
+      width:0;
+      height:1px;
+      background:#111820;
+      transition:width .2s ease;
+    }
+    .nav-center a:hover::after,.nav-center a.active::after,.nav-right a:not(.lang):hover::after{width:100%}
+    .lang{
+      width:38px;height:38px;
+      display:grid;place-items:center;
+      border:1px solid #d7dde4;
+      border-radius:50%;
+      font-size:10px!important;
+      letter-spacing:.04em;
+      transition:.2s ease;
+    }
+    .lang:hover{background:#0b1117;color:#fff;border-color:#0b1117}
+
+    /* HERO */
+    .hero{
+      padding:86px var(--page) 104px;
+      background:#fff;
+    }
+    .hero-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+    }
+    .hero-top{
+      display:flex;
+      justify-content:space-between;
+      gap:30px;
+      align-items:center;
+      margin-bottom:68px;
+    }
+    .geo-mark{
+      min-width:240px;
+      min-height:72px;
+      padding:12px 22px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:18px;
+      background:#0d1724;
+      border:1px solid #142235;
+    }
+    .geo-mark img{
+      width:auto;
+      height:31px;
+      max-width:210px;
+      object-fit:contain;
+    }
+    .hero-meta{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      gap:10px;
+    }
+    .hero-meta span{
+      min-height:40px;
+      display:inline-flex;
+      align-items:center;
+      padding:0 14px;
+      border:1px solid #d8dee5;
+      border-radius:999px;
+      background:#f7f9fb;
+      color:#667281;
+      font-size:10px;
+      font-weight:600;
+    }
+    .hero-kicker{
+      margin-bottom:24px;
+      color:var(--blue);
+      font-size:12px;
+      font-weight:600;
+    }
+    .hero h1{
+      margin:0;
+      max-width:1220px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(72px,7.6vw,124px);
+      line-height:.93;
+      letter-spacing:-.072em;
+      font-weight:500;
+    }
+    .hero h1 span{
+      display:block;
+      color:#a8b4c3;
+    }
+    .hero-bottom{
+      margin-top:52px;
+      padding-top:28px;
+      border-top:1px solid var(--line);
+      display:grid;
+      grid-template-columns:minmax(0,1.08fr) minmax(300px,.5fr);
+      gap:clamp(50px,8vw,130px);
+    }
+    .hero-description{
+      margin:0;
+      max-width:780px;
+      color:var(--muted);
+      font-size:17px;
+      line-height:1.76;
+    }
+    .hero-role strong{
+      display:block;
+      font-family:Manrope,sans-serif;
+      font-size:22px;
+      font-weight:500;
+      letter-spacing:-.035em;
+    }
+    .hero-role span{
+      display:block;
+      margin-top:7px;
+      color:#74808d;
+      font-size:12px;
+      line-height:1.5;
+    }
+    .hero-site{
+      margin-top:14px;
+      display:inline-flex;
+      padding-bottom:3px;
+      border-bottom:1px solid #bfc8d2;
+      font-size:11px;
+      font-weight:700;
+    }
+    .hero-site:hover{color:var(--blue);border-color:var(--blue)}
+
+    /* IMPACT */
+    .impact{
+      padding:112px var(--page) 122px;
+      background:var(--soft);
+    }
+    .impact-head{
+      width:min(var(--max),100%);
+      margin:0 auto 54px;
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:40px;
+    }
+    .impact-head h2{
+      margin:14px 0 0;
+      max-width:880px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+      font-weight:500;
+    }
+    .impact-head p{
+      margin:0;
+      max-width:500px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.7;
+    }
+    .impact-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:22px;
+    }
+    .impact-card{
+      min-height:250px;
+      padding:30px;
+      border-radius:24px;
+      background:#fff;
+      border:1px solid #e1e6eb;
+    }
+    .impact-card strong{
+      display:block;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(52px,4.7vw,78px);
+      font-weight:500;
+      letter-spacing:-.06em;
+    }
+    .impact-card span{
+      display:block;
+      margin-top:28px;
+      max-width:230px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    /* ROLE */
+    .role{
+      padding:112px var(--page);
+      background:#fff;
+    }
+    .role-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:minmax(170px,.3fr) minmax(0,1.2fr);
+      gap:clamp(50px,8vw,130px);
+    }
+    .role-main h2{
+      margin:0 0 30px;
+      max-width:900px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5.2vw,80px);
+      line-height:1.02;
+      letter-spacing:-.06em;
+      font-weight:500;
+    }
+    .role-main>p{
+      margin:0 0 20px;
+      max-width:900px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.8;
+    }
+    .snapshot{
+      margin-top:40px;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .snapshot-item{
+      padding:24px 20px;
+      border-right:1px solid var(--line);
+    }
+    .snapshot-item:last-child{border-right:0}
+    .snapshot-label{
+      color:#8b96a2;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .snapshot-value{
+      margin-top:10px;
+      font-size:14px;
+      line-height:1.5;
+    }
+    .snapshot-focus{
+      margin-top:18px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+    }
+    .snapshot-focus span{
+      padding:9px 12px;
+      border:1px solid #d8dee5;
+      border-radius:999px;
+      background:#f7f9fb;
+      color:#344150;
+      font-size:10px;
+      font-weight:600;
+    }
+
+    /* PEOPLE */
+    .people{
+      margin-top:72px;
+      padding-top:56px;
+      border-top:1px solid var(--line);
+    }
+    .people-head{
+      margin-bottom:32px;
+      display:flex;
+      justify-content:space-between;
+      gap:40px;
+      align-items:end;
+    }
+    .people-head h3{
+      margin:12px 0 0;
+      font-family:Manrope,sans-serif;
+      font-size:38px;
+      letter-spacing:-.045em;
+      font-weight:500;
+    }
+    .people-head p{
+      margin:0;
+      max-width:560px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.7;
+    }
+    .people-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+    .person{
+      padding:26px;
+      border-radius:22px;
+      border:1px solid var(--line);
+      background:#fff;
+    }
+    .person-top{
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+    .person-photo{
+      width:66px;
+      height:66px;
+      overflow:hidden;
+      border-radius:50%;
+      background:#edf2f6;
+      flex:0 0 auto;
+    }
+    .person-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .person-kicker{
+      margin-bottom:5px;
+      color:#7a8da4;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+    .person h4{
+      margin:0;
+      font-family:Manrope,sans-serif;
+      font-size:22px;
+      letter-spacing:-.04em;
+      font-weight:500;
+    }
+    .person-role{
+      margin-top:6px;
+      color:#6c7886;
+      font-size:11px;
+      line-height:1.45;
+    }
+    .person-context{
+      margin:22px 0 0;
+      color:#5a6776;
+      font-size:13px;
+      line-height:1.7;
+    }
+    .person-link{
+      margin-top:20px;
+      width:38px;
+      height:38px;
+      display:grid;
+      place-items:center;
+      border:1px solid #d8dee5;
+      border-radius:50%;
+      color:#111820;
+      transition:.2s ease;
+    }
+    .person-link:hover{background:#0b1117;color:#fff;border-color:#0b1117}
+    .person-link svg{width:16px;height:16px;fill:currentColor}
+
+    /* PRODUCT SYSTEM */
+    .product{
+      padding:114px var(--page) 122px;
+      background:var(--dark);
+      color:#fff;
+    }
+    .product-head{
+      width:min(var(--max),100%);
+      margin:0 auto 42px;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(360px,.52fr);
+      align-items:end;
+      gap:clamp(64px,8vw,120px);
+    }
+    .product-head>div,
+    .product-head>p{
+      min-width:0;
+    }
+    .product-head .section-label{color:#8ec4ff}
+    .product-head h2{
+      margin:14px 0 0;
+      max-width:860px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(44px,4.15vw,66px);
+      line-height:1.03;
+      letter-spacing:-.058em;
+      font-weight:500;
+      overflow-wrap:normal;
+      word-break:normal;
+    }
+    .product-head h2 span{
+      display:block;
+      color:#a8bfd9;
+    }
+    .product-head h2 .heading-line,
+    .field-copy h2 .heading-line{
+      display:block;
+    }
+    .product-head h2 .heading-line{
+      white-space:normal;
+    }
+    .field-copy h2 .heading-line{
+      white-space:normal;
+    }
+    .product-head p{
+      margin:0;
+      max-width:520px;
+      color:#99a4b0;
+      font-size:15px;
+      line-height:1.72;
+    }
+    .product-note{
+      width:min(var(--max),100%);
+      margin:0 auto 28px;
+      padding:18px 20px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:16px;
+      display:grid;
+      grid-template-columns:150px 1fr;
+      gap:28px;
+      background:rgba(255,255,255,.025);
+    }
+    .product-note strong{
+      color:#8ec4ff;
+      font-size:10px;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .product-note p{
+      margin:0;
+      color:#aeb7c2;
+      font-size:13px;
+      line-height:1.68;
+    }
+    .product-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+    .product-item{
+      min-height:290px;
+      padding:28px;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.10);
+      background:#0b1117;
+    }
+    .product-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .product-num{
+      color:#606b77;
+      font-size:10px;
+      letter-spacing:.1em;
+    }
+    .product-icon{
+      width:42px;height:42px;
+      border-radius:13px;
+      display:grid;place-items:center;
+      background:rgba(20,103,216,.10);
+      color:#78b7ff;
+    }
+    .product-icon svg{
+      width:19px;height:19px;
+      stroke:currentColor;fill:none;
+      stroke-width:1.8;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+    .product-item h3{
+      margin:58px 0 8px;
+      font-family:Manrope,sans-serif;
+      font-size:29px;
+      letter-spacing:-.045em;
+      font-weight:500;
+    }
+    .product-type{
+      color:#78b7ff;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+    .product-item p{
+      margin:16px 0 0;
+      color:#949eaa;
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    /* PRODUCTS */
+    .projects{
+      padding:112px var(--page) 122px;
+      background:#fff;
+    }
+    .projects-head{
+      width:min(var(--max),100%);
+      margin:0 auto 48px;
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:50px;
+    }
+    .projects-head h2{
+      margin:14px 0 0;
+      max-width:880px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+      font-weight:500;
+    }
+    .projects-head p{
+      margin:0;
+      max-width:520px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.7;
+    }
+    .project-list{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      border-top:1px solid var(--line);
+    }
+    .project{
+      display:grid;
+      grid-template-columns:48px minmax(260px,.7fr) minmax(0,1fr);
+      gap:26px 38px;
+      padding:32px 0;
+      border-bottom:1px solid var(--line);
+      transition:.2s ease;
+    }
+    .project:hover{
+      padding-left:14px;
+      padding-right:14px;
+      background:#f7f9fb;
+    }
+    .project-num{
+      padding-top:6px;
+      color:#8995a2;
+      font-size:10px;
+      letter-spacing:.09em;
+    }
+    .project-type{
+      color:#718399;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      margin-bottom:10px;
+    }
+    .project h3{
+      margin:0;
+      font-family:Manrope,sans-serif;
+      font-size:32px;
+      line-height:1.05;
+      letter-spacing:-.045em;
+      font-weight:500;
+    }
+    .project-body p{
+      margin:0;
+      color:#5f6b79;
+      font-size:13px;
+      line-height:1.75;
+    }
+    .project-meta{
+      margin:18px 0 24px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .project-meta span{
+      padding:8px 10px;
+      border:1px solid #dce2e8;
+      border-radius:999px;
+      background:#fff;
+      color:#344355;
+      font-size:9px;
+      font-weight:600;
+    }
+    .project-contribution strong{
+      display:block;
+      margin-bottom:7px;
+      color:#73859a;
+      font-size:9px;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+
+    /* FIELD */
+    .field{
+      padding:0 var(--page) 112px;
+      background:var(--soft);
+      color:#fff;
+    }
+    .field-card{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      min-height:620px;
+      display:grid;
+      grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+      overflow:hidden;
+      border-radius:28px;
+      background:var(--dark);
+    }
+    .field-copy{
+      min-width:0;
+      padding:72px 58px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .field-copy .section-label{color:#8ec4ff}
+    .field-copy h2{
+      margin:18px 0 24px;
+      width:100%;
+      max-width:600px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(44px,4.2vw,66px);
+      line-height:1.03;
+      letter-spacing:-.058em;
+      font-weight:500;
+      overflow-wrap:normal;
+      word-break:normal;
+    }
+    .field-copy h2 span{display:block;color:#a8bfd9}
+    .field-copy h2 .field-accent-inline{
+      display:inline !important;
+      color:#a8bfd9 !important;
+    }
+    .field-copy p{
+      margin:0;
+      max-width:560px;
+      color:#b7c0cb;
+      font-size:15px;
+      line-height:1.76;
+    }
+    .field-meta{
+      margin-top:26px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+    }
+    .field-meta span{
+      padding:8px 10px;
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:999px;
+      color:#c4ccd5;
+      font-size:9px;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+    }
+    .field-photo{
+      min-width:0;
+      min-height:620px;
+      overflow:hidden;
+    }
+    .field-photo img{
+      width:100%;
+      height:100%;
+      min-height:620px;
+      object-fit:cover;
+      object-position:center 45%;
+    }
+
+    /* OPERATING */
+    .operating{
+      padding:112px var(--page) 122px;
+      background:#fff;
+    }
+    .operating-head{
+      width:min(var(--max),100%);
+      margin:0 auto 48px;
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:50px;
+    }
+    .operating-head h2{
+      margin:14px 0 0;
+      max-width:880px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+      font-weight:500;
+    }
+    .operating-head p{
+      margin:0;
+      max-width:540px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.72;
+    }
+    .work-list{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      border-top:1px solid var(--line);
+    }
+    .work-item{
+      display:grid;
+      grid-template-columns:44px 1fr;
+      gap:16px;
+      padding:26px 0;
+      border-bottom:1px solid var(--line);
+    }
+    .work-item:nth-child(odd){
+      padding-right:32px;
+      border-right:1px solid var(--line);
+    }
+    .work-item:nth-child(even){padding-left:32px}
+    .work-num{
+      color:#8a96a4;
+      font-size:9px;
+      letter-spacing:.09em;
+      padding-top:4px;
+    }
+    .work-item strong{
+      font-family:Manrope,sans-serif;
+      font-size:20px;
+      font-weight:500;
+      line-height:1.35;
+      letter-spacing:-.03em;
+    }
+
+    /* PRINCIPLE */
+    .principle{
+      padding:118px var(--page);
+      background:#0b1117;
+      color:#fff;
+    }
+    .principle-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      text-align:center;
+    }
+    .principle .section-label{color:#8ec4ff}
+    .principle h2{
+      margin:24px auto 0;
+      max-width:980px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(54px,5.6vw,86px);
+      line-height:1.02;
+      letter-spacing:-.063em;
+      font-weight:500;
+    }
+    .principle h2 span{
+      display:block;
+      color:#a8bfd9;
+    }
+    .principle-grid{
+      max-width:920px;
+      margin:54px auto 0;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+    .principle-item{
+      padding:28px;
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:20px;
+      text-align:left;
+      background:rgba(255,255,255,.025);
+    }
+    .principle-item small{
+      color:#78b7ff;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .principle-item strong{
+      display:block;
+      margin-top:16px;
+      font-family:Manrope,sans-serif;
+      font-size:26px;
+      line-height:1.18;
+      letter-spacing:-.04em;
+      font-weight:500;
+    }
+    .principle-item p{
+      margin:12px 0 0;
+      color:#909aa6;
+      font-size:12px;
+      line-height:1.7;
+    }
+
+    /* PROJECT NAV */
+    .project-nav{
+      padding:72px var(--page);
+      background:var(--soft);
+    }
+    .project-nav-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .project-nav a{
+      padding:28px 0;
+      transition:.2s ease;
+    }
+    .project-nav a:first-child{padding-right:30px}
+    .project-nav a:last-child{
+      padding-left:30px;
+      text-align:right;
+      border-left:1px solid var(--line);
+    }
+    .project-nav a:hover{
+      padding-left:16px;
+      padding-right:16px;
+      background:#fff;
+    }
+    .project-nav-label{
+      color:#85919f;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .project-nav strong{
+      display:block;
+      margin-top:8px;
+      font-family:Manrope,sans-serif;
+      font-size:28px;
+      font-weight:500;
+      letter-spacing:-.04em;
+    }
+
+    /* FOOTER */
+    .footer{
+      padding:72px var(--page) 34px;
+      background:#fff;
+      border-top:1px solid var(--line);
+    }
+    .footer-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.2fr repeat(3,.7fr);
+      gap:50px;
+    }
+    .footer-brand{
+      font-family:Manrope,sans-serif;
+      font-size:30px;
+      letter-spacing:-.045em;
+      font-weight:600;
+    }
+    .footer-copy{
+      margin-top:14px;
+      max-width:360px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+    .footer-col strong{
+      display:block;
+      margin-bottom:14px;
+      font-size:12px;
+      font-weight:700;
+    }
+    .footer-col a{
+      display:block;
+      margin:10px 0;
+      color:#5f6b78;
+      font-size:13px;
+    }
+    .footer-col a:hover{color:#0b1117}
+    .footer-bottom{
+      width:min(var(--max),100%);
+      margin:54px auto 0;
+      padding-top:24px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      border-top:1px solid var(--line);
+      color:#7b8794;
+      font-size:10px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    @media(max-width:1100px){
+      .impact-grid{grid-template-columns:1fr 1fr}
+      .product-grid{grid-template-columns:1fr 1fr}
+      .people-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+
+    @media(max-width:1080px){
+      .product-head{grid-template-columns:1fr;gap:28px}
+      .product-head h2{max-width:860px}
+      .field-card{grid-template-columns:1fr}
+      .field-photo{min-height:440px}
+      .field-photo img{min-height:440px}
+    }
+
+    @media(max-width:860px){
+      .nav-center{display:none}
+      .hero-bottom,.role-grid{grid-template-columns:1fr}
+      .impact-head,.projects-head,.operating-head,.people-head{flex-direction:column;align-items:flex-start}
+      .snapshot{grid-template-columns:1fr 1fr}
+      .project{grid-template-columns:40px 1fr}
+      .project-body{grid-column:2}
+      .work-list{grid-template-columns:1fr}
+      .work-item:nth-child(odd){padding-right:0;border-right:0}
+      .work-item:nth-child(even){padding-left:0}
+      .field-photo,.field-photo img{min-height:450px}
+    }
+
+    @media(max-width:640px){
+      .nav{min-height:68px}
+      .brand{font-size:20px!important}
+      .nav-right{gap:14px}
+      .nav-right a:not(.lang):nth-child(2){display:none}
+
+      .hero{padding-top:58px;padding-bottom:80px}
+      .hero-top{align-items:flex-start;flex-direction:column;margin-bottom:48px}
+      .hero-meta{justify-content:flex-start}
+      .geo-mark{min-width:210px;min-height:64px}
+      .geo-mark img{height:27px}
+      .hero h1{font-size:clamp(56px,15vw,78px)}
+      .hero-description{font-size:15px}
+      .impact,.role,.product,.projects,.operating,.principle{padding-top:82px;padding-bottom:88px}
+      .impact-grid,.product-grid,.snapshot,.principle-grid{grid-template-columns:1fr}
+      .impact-card{min-height:210px}
+      .role-main h2,.impact-head h2,.product-head h2,.projects-head h2,.operating-head h2,.principle h2{font-size:42px}
+      .snapshot-item{border-right:0;border-bottom:1px solid var(--line)}
+      .snapshot-item:last-child{border-bottom:0}
+      .person{padding:22px}
+      .project{grid-template-columns:30px 1fr;gap:16px}
+      .project h3{font-size:27px}
+      .field{padding:0 var(--page) 82px}
+      .field-card{border-radius:20px}
+      .field-copy{padding:52px 26px}
+      .field-copy h2{font-size:42px}
+      .product-head h2 .heading-line,
+      .field-copy h2 .heading-line{white-space:normal}
+      .field-photo,.field-photo img{min-height:330px}
+      .project-nav-inner{grid-template-columns:1fr}
+      .project-nav a:last-child{text-align:left;border-left:0;border-top:1px solid var(--line);padding-left:0}
+      .footer-grid{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="/">Felipe Quiroz</a>
+
+  <nav class="nav-center" aria-label="Primary">
+    <a href="/#work" class="active">Work</a>
+    <a href="/about">About</a>
+    <a href="/now">Now</a>
+    <a href="/blog">Blog</a>
+  </nav>
+
+  <div class="nav-right">
+    <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="lang" href="/es/geovictoria" aria-label="Switch language">ES</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-top">
+        <a class="geo-mark" href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit GeoVictoria">
+          <img src="/logos/geovictoria-logo.png" alt="GeoVictoria">
+        </a>
+
+        <div class="hero-meta">
+          <span>Selected Work / 01</span>
+          <span>2026 – Present</span>
+          <span>WFM / B2B SaaS</span>
+        </div>
+      </div>
+
+      <div class="hero-kicker">Product / Workforce Management / AI</div>
+      <h1>Product systems<span>for real-world operations.</span></h1>
+
+      <div class="hero-bottom">
+        <p class="hero-description">I lead the strategy and evolution of three Workforce Management products at GeoVictoria: Smart Scheduler, Shift Optimizer and Shift Change Workflow, within a B2B SaaS platform serving 10,000+ customers across 20+ countries.</p>
+
+        <div class="hero-role">
+          <strong>GeoVictoria</strong>
+          <span>Product Manager · Workforce Management</span>
+          <span>B2B SaaS · Product · Operations</span>
+          <a class="hero-site" href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer">geovictoria.com ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="impact">
+    <div class="impact-head">
+      <div>
+        <div class="section-label">Impact</div>
+        <h2>From operational problems to adopted product.</h2>
+      </div>
+      <p>I connect customer, operational and business signals to turn complex workforce constraints into products that can be tested, measured and scaled.</p>
+    </div>
+
+    <div class="impact-grid">
+      <article class="impact-card"><strong>3</strong><span>Workforce Management products under my responsibility</span></article>
+      <article class="impact-card"><strong>100+</strong><span>Customer pilots and validations</span></article>
+      <article class="impact-card"><strong>10K+</strong><span>Customers across the GeoVictoria ecosystem</span></article>
+      <article class="impact-card"><strong>20+</strong><span>Countries where the company operates</span></article>
+    </div>
+  </section>
+
+  <section class="role">
+    <div class="role-grid">
+      <div class="section-label">Role</div>
+
+      <div class="role-main">
+        <h2>Connecting customer, product and execution.</h2>
+        <p>GeoVictoria is a B2B SaaS Workforce Management platform built for operations with complex staffing, scheduling and attendance needs.</p>
+        <p>As Product Manager, I own product strategy, roadmap and prioritization across Smart Scheduler, Shift Optimizer and Shift Change Workflow, balancing customer needs, business impact and technical feasibility from discovery through pilot, launch and adoption.</p>
+
+        <div class="snapshot">
+          <div class="snapshot-item"><div class="snapshot-label">Company</div><div class="snapshot-value">GeoVictoria</div></div>
+          <div class="snapshot-item"><div class="snapshot-label">Role</div><div class="snapshot-value">Product Manager</div></div>
+          <div class="snapshot-item"><div class="snapshot-label">Period</div><div class="snapshot-value">2026 – Present</div></div>
+          <div class="snapshot-item"><div class="snapshot-label">Category</div><div class="snapshot-value">Workforce Management</div></div>
+        </div>
+
+        <div class="snapshot-focus">
+          <span>Product strategy</span>
+          <span>Discovery</span>
+          <span>Pilots</span>
+          <span>Applied AI</span>
+          <span>Adoption</span>
+        </div>
+
+        <div class="people">
+          <div class="people-head">
+            <div>
+              <div class="section-label">Key people</div>
+              <h3>Built cross-functionally.</h3>
+            </div>
+            <p>Three working relationships that show how I operate inside GeoVictoria: close to company strategy, product and go-to-market.</p>
+          </div>
+
+          <div class="people-grid">
+            <article class="person">
+              <div class="person-top">
+                <div class="person-photo"><img src="/images/francisca-astudillo.jpg" alt="Francisca Astudillo"></div>
+                <div>
+                  <div class="person-kicker">Company leadership</div>
+                  <h4>Francisca Astudillo</h4>
+                  <div class="person-role">CEO · GeoVictoria</div>
+                </div>
+              </div>
+              <p class="person-context">Executive leadership connecting company strategy, market growth and GeoVictoria's evolution.</p>
+              <a class="person-link" href="https://www.linkedin.com/in/francisca-astudillo-bessi-200b2432/" target="_blank" rel="noopener noreferrer" aria-label="Francisca Astudillo on LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg></a>
+            </article>
+
+            <article class="person">
+              <div class="person-top">
+                <div class="person-photo"><img src="/images/nicolas-garcias.jpg" alt="Nicolás Garcías"></div>
+                <div>
+                  <div class="person-kicker">Product leadership</div>
+                  <h4>Nicolás Garcías</h4>
+                  <div class="person-role">Chief Product Officer · GeoVictoria</div>
+                </div>
+              </div>
+              <p class="person-context">Product leadership across strategy, priorities and the evolution of GeoVictoria's product portfolio.</p>
+              <a class="person-link" href="https://www.linkedin.com/in/ngarcias/" target="_blank" rel="noopener noreferrer" aria-label="Nicolás Garcías on LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg></a>
+            </article>
+
+            <article class="person">
+              <div class="person-top">
+                <div class="person-photo"><img src="/images/rodrigo-lewit.jpg" alt="Rodrigo Lewit"></div>
+                <div>
+                  <div class="person-kicker">Commercial leadership</div>
+                  <h4>Rodrigo Lewit</h4>
+                  <div class="person-role">Co-Founder & Chief Commercial Officer · GeoVictoria</div>
+                </div>
+              </div>
+              <p class="person-context">Co-founder and commercial leader focused on growth, go-to-market and customer and market relationships.</p>
+              <a class="person-link" href="https://www.linkedin.com/in/rodrigo-lewit-rozenfeld-05190118/" target="_blank" rel="noopener noreferrer" aria-label="Rodrigo Lewit on LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="product">
+    <div class="product-head">
+      <div>
+        <div class="section-label">Workforce Management</div>
+        <h2><span class="heading-line" style="color:#fff">From recording what happened.</span><span class="heading-line">To deciding what should happen.</span></h2>
+      </div>
+      <p>The problem is not only attendance tracking. It is deciding how many people are needed, where they should be, which rules must be respected and how the operation adapts when something changes.</p>
+    </div>
+
+    <div class="product-note">
+      <strong>Applied AI</strong>
+      <p>I use AI and rapid prototyping when they help reduce uncertainty, test a hypothesis or accelerate a product decision before scaling development.</p>
+    </div>
+
+    <div class="product-grid">
+      <article class="product-item">
+        <div class="product-top"><div class="product-num">01</div><div class="product-icon"><svg viewBox="0 0 24 24"><path d="M5 19 19 5"/><path d="M10 5h9v9"/></svg></div></div>
+        <h3>Demand</h3>
+        <div class="product-type">Operational signal</div>
+        <p>Understand how much coverage the operation needs and when demand changes.</p>
+      </article>
+
+      <article class="product-item">
+        <div class="product-top"><div class="product-num">02</div><div class="product-icon"><svg viewBox="0 0 24 24"><path d="M4 12h16"/><path d="M13 5l7 7-7 7"/></svg></div></div>
+        <h3>Coverage</h3>
+        <div class="product-type">Decision</div>
+        <p>See where staffing is missing or excessive and how to allocate people more effectively.</p>
+      </article>
+
+      <article class="product-item">
+        <div class="product-top"><div class="product-num">03</div><div class="product-icon"><svg viewBox="0 0 24 24"><path d="M7 7h10"/><path d="M7 12h10"/><path d="M7 17h10"/></svg></div></div>
+        <h3>Rules</h3>
+        <div class="product-type">Constraint</div>
+        <p>Bring schedules, rest periods, roles, groups and real operating conditions into the decision.</p>
+      </article>
+
+      <article class="product-item">
+        <div class="product-top"><div class="product-num">04</div><div class="product-icon"><svg viewBox="0 0 24 24"><path d="M8 8a4 4 0 1 1 8 0c0 3-4 4-4 4s-4-1-4-4Z"/><path d="M5 21c.6-4 3-6 7-6s6.4 2 7 6"/></svg></div></div>
+        <h3>People</h3>
+        <div class="product-type">Flexibility</div>
+        <p>Give teams room to solve changes without losing traceability or operational control.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="projects">
+    <div class="projects-head">
+      <div>
+        <div class="section-label">Selected products</div>
+        <h2>Three products. One operating system.</h2>
+      </div>
+      <p>Planning, optimizing and enabling flexibility are different problems, but they are connected by the same operation. My work is to design them as parts of one coherent system.</p>
+    </div>
+
+    <div class="project-list">
+      <article class="project">
+        <div class="project-num">01</div>
+        <div>
+          <div class="project-type">Planning · Workforce Management</div>
+          <h3>Smart Scheduler</h3>
+        </div>
+        <div class="project-body">
+          <p>Staffing and shift planning for complex operations, connecting coverage, rules, absences and staffing needs.</p>
+          <div class="project-meta"><span>Staffing</span><span>Coverage</span><span>Rules</span><span>Absences</span></div>
+          <p class="project-contribution"><strong>My contribution</strong>I define opportunities and requirements, prioritize operating rules and coordinate validation with customers and internal teams before scaling.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-num">02</div>
+        <div>
+          <div class="project-type">Optimization · Applied AI</div>
+          <h3>Shift Optimizer</h3>
+        </div>
+        <div class="project-body">
+          <p>An MVP designed to combine demand, availability and operational constraints to support more efficient staffing decisions.</p>
+          <div class="project-meta"><span>Demand</span><span>Availability</span><span>Constraints</span><span>AI</span></div>
+          <p class="project-contribution"><strong>My contribution</strong>I’m evolving Shift Optimizer from MVP toward a production-ready commercial product, using enterprise pilots to validate business rules, usability, operational fit and where optimization creates measurable value.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-num">03</div>
+        <div>
+          <div class="project-type">Workflow · Operational flexibility</div>
+          <h3>Shift Change Workflow</h3>
+        </div>
+        <div class="project-body">
+          <p>A workflow for shift changes, swaps and replacements with configurable rules, approvals and operational validations.</p>
+          <div class="project-meta"><span>Approvals</span><span>Validations</span><span>Rest rules</span><span>Flexibility</span></div>
+          <p class="project-contribution"><strong>My contribution</strong>I built Shift Change Workflow from 0→1, taking the product from customer problem and discovery through rules, requirements, validation and pilot execution.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="field">
+    <div class="field-card">
+      <div class="field-copy">
+        <div class="section-label">Work in context</div>
+        <h2><span class="heading-line" style="color:#fff">Product gets built</span><span class="heading-line" style="color:#fff">close <span class="field-accent-inline">to the</span></span><span class="heading-line">operation.</span></h2>
+        <p>Much of the learning happens with customers: discovery sessions, pilots and spaces such as Café con GeoVictoria. That is where real problems turn into product decisions, rules and priorities.</p>
+        <div class="field-meta"><span>Customers</span><span>Workforce Management</span><span>Santiago</span></div>
+      </div>
+
+      <div class="field-photo">
+        <img src="/images/geocoffe.jpg" alt="Café con GeoVictoria with customers" onerror="this.onerror=null;this.src='/geocoffe.jpg';">
+      </div>
+    </div>
+  </section>
+
+  <section class="operating">
+    <div class="operating-head">
+      <div>
+        <div class="section-label">Operating system</div>
+        <h2>From problem to adoption.</h2>
+      </div>
+      <p>I treat product as a cycle: understand the operation, reduce uncertainty, coordinate cross-functional execution, test with customers and turn learning into a solution that can scale from pilot through launch and adoption.</p>
+    </div>
+
+    <div class="work-list">
+      <div class="work-item"><div class="work-num">01</div><strong>Direct discovery with customers and real operations</strong></div>
+      <div class="work-item"><div class="work-num">02</div><strong>Prioritization by impact, evidence and feasibility</strong></div>
+      <div class="work-item"><div class="work-num">03</div><strong>MVPs, prototypes and AI experiments</strong></div>
+      <div class="work-item"><div class="work-num">04</div><strong>Pilots in real operating contexts</strong></div>
+      <div class="work-item"><div class="work-num">05</div><strong>Feedback, metrics and continuous learning</strong></div>
+      <div class="work-item"><div class="work-num">06</div><strong>Cross-functional execution across Engineering, Design, Sales, Customer Success, Operations and Support</strong></div>
+    </div>
+  </section>
+
+  <section class="principle">
+    <div class="principle-inner">
+      <div class="section-label">Working principles</div>
+      <h2>Two principles.<span>One way of building.</span></h2>
+
+      <div class="principle-grid">
+        <div class="principle-item">
+          <small>01 / Product</small>
+          <strong>From problem to real adoption.</strong>
+          <p>Discover, validate and measure before scaling.</p>
+        </div>
+
+        <div class="principle-item">
+          <small>02 / Operations</small>
+          <strong>Build for real operations.</strong>
+          <p>Customer, product and adoption connected from the start.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-nav">
+    <div class="project-nav-inner">
+      <a href="/tethereducation">
+        <div class="project-nav-label">Previous project</div>
+        <strong>TetherEd</strong>
+      </a>
+      <a href="/lowsignal">
+        <div class="project-nav-label">Next project</div>
+        <strong>lowsignal</strong>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Felipe Quiroz</div>
+      <div class="footer-copy">Product, Growth & Operations. Building products, growth systems and companies across technology and business.</div>
+    </div>
+
+    <div class="footer-col">
+      <strong>Explore</strong>
+      <a href="/#work">Work</a>
+      <a href="/about">About</a>
+      <a href="/now">Now</a>
+      <a href="/blog">Blog</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Social</strong>
+      <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Contact</strong>
+      <a href="mailto:felipe@lowsignal.cl">felipe@lowsignal.cl</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 Felipe Quiroz</div>
+    <div>Santiago / CL</div>
+  </div>
+</footer>
+
+</body>
+</html>
