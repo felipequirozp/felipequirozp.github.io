@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>AI-powered Education Transformation | Felipe Quiroz</title>
+  <meta name="description" content="An international initiative developed with Columbia University, OpenAI, Tether Education and SLEP del Pino to accelerate responsible and equitable generative AI adoption in Chilean public schools.">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="canonical" href="https://felipequirozp.cl/tethered/ai-powered-education-transformation">
+  <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/tethered/ai-powered-education-transformation">
+  <link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/tethered/transformacion-educativa-impulsada-por-ia">
+  <link rel="alternate" hreflang="x-default" href="https://felipequirozp.cl/tethered/ai-powered-education-transformation">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI-powered Education Transformation">
+  <meta property="og:description" content="Responsible and equitable generative AI adoption in Chilean public education, developed with Columbia University, OpenAI, Tether Education and SLEP del Pino.">
+  <meta property="og:url" content="https://felipequirozp.cl/tethered/ai-powered-education-transformation">
+  <meta property="og:image" content="https://felipequirozp.cl/images/ai-education-school-implementation.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --ink:#0b1117;
+      --muted:#5f6b78;
+      --line:#e1e6eb;
+      --soft:#f3f6f9;
+      --blue:#1467d8;
+      --blue-soft:#a8b4c3;
+      --dark:#05070a;
+      --dark-2:#0a0f16;
+      --page:clamp(22px,4vw,64px);
+      --max:1520px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:#fff;
+      color:var(--ink);
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    ::selection{background:var(--blue);color:#fff}
+    .wrap{width:min(var(--max),100%);margin:0 auto}
+    .section-label{
+      color:#748397;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+    }
+
+    /* NAV */
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      min-height:76px;
+      padding:0 var(--page);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid rgba(11,17,23,.08);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+    .brand{
+      font-family:Manrope,sans-serif;
+      font-size:22px!important;
+      font-weight:600;
+      letter-spacing:-.045em;
+      white-space:nowrap;
+    }
+    .nav-center,.nav-right{display:flex;align-items:center;gap:28px}
+    .nav a{font-size:11px;font-weight:500;color:#1a232d}
+    .nav-center a,.nav-right a:not(.lang){position:relative}
+    .nav-center a::after,.nav-right a:not(.lang)::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-7px;
+      width:0;
+      height:1px;
+      background:#111820;
+      transition:width .2s ease;
+    }
+    .nav-center a:hover::after,.nav-center a.active::after,.nav-right a:not(.lang):hover::after{width:100%}
+    .lang{
+      width:38px;height:38px;
+      display:grid;place-items:center;
+      border:1px solid #d7dde4;
+      border-radius:50%;
+      font-size:10px!important;
+      letter-spacing:.04em;
+      transition:.2s ease;
+    }
+    .lang:hover{background:#0b1117;color:#fff;border-color:#0b1117}
+
+    /* HERO */
+    .hero{
+      padding:86px var(--page) 104px;
+      background:#fff;
+    }
+    .hero-inner{width:min(var(--max),100%);margin:0 auto}
+    .hero-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:30px;
+      margin-bottom:68px;
+    }
+    .partner-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .partner{
+      min-height:60px;
+      padding:11px 16px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border:1px solid #dde3e9;
+      border-radius:16px;
+      background:#fff;
+    }
+    .partner img{width:auto;height:auto;max-height:28px;max-width:165px;object-fit:contain}
+    .partner.openai img{max-height:23px;max-width:118px}
+    .partner.columbia img{max-height:30px;max-width:180px}
+    .partner.slep img{max-height:31px;max-width:150px}
+
+    .hero-meta{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .hero-meta span{
+      min-height:40px;
+      padding:0 14px;
+      display:inline-flex;
+      align-items:center;
+      border:1px solid #d8dee5;
+      border-radius:999px;
+      background:#f7f9fb;
+      color:#667281;
+      font-size:10px;
+      font-weight:600;
+    }
+    .hero-kicker{
+      margin-bottom:24px;
+      color:var(--blue);
+      font-size:12px;
+      font-weight:600;
+    }
+    .hero h1{
+      margin:0;
+      max-width:1260px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(72px,7.6vw,124px);
+      line-height:1.01;
+      letter-spacing:-.072em;
+      font-weight:500;
+    }
+    .hero h1 span{display:block;color:var(--blue-soft)}
+    .hero-bottom{
+      margin-top:52px;
+      padding-top:28px;
+      border-top:1px solid var(--line);
+      display:grid;
+      grid-template-columns:minmax(0,1.08fr) minmax(280px,.48fr);
+      gap:clamp(48px,8vw,120px);
+    }
+    .hero-description{
+      margin:0;
+      max-width:850px;
+      color:var(--muted);
+      font-size:17px;
+      line-height:1.76;
+    }
+    .hero-role strong{
+      display:block;
+      font-family:Manrope,sans-serif;
+      font-size:22px;
+      font-weight:500;
+      letter-spacing:-.035em;
+    }
+    .hero-role span{
+      display:block;
+      margin-top:7px;
+      color:#74808d;
+      font-size:12px;
+      line-height:1.5;
+    }
+
+    /* IMPACT */
+    .impact{padding:112px var(--page) 122px;background:var(--soft)}
+    .impact-head{
+      width:min(var(--max),100%);
+      margin:0 auto 54px;
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:40px;
+    }
+    .impact-head h2{
+      margin:14px 0 0;
+      max-width:880px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);
+      line-height:1.05;
+      letter-spacing:-.055em;
+      font-weight:500;
+    }
+    .impact-head h2 span{display:block;color:#93a4b8}
+    .impact-head p{margin:0;max-width:520px;color:var(--muted);font-size:15px;line-height:1.72}
+    .impact-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:22px;
+    }
+    .impact-card{
+      min-height:250px;
+      padding:30px;
+      border-radius:24px;
+      background:#fff;
+      border:1px solid #e1e6eb;
+    }
+    .impact-card strong{
+      display:block;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(44px,4.2vw,68px);
+      font-weight:500;
+      letter-spacing:-.06em;
+    }
+    .impact-card span{
+      display:block;
+      margin-top:28px;
+      max-width:230px;
+      color:#677381;
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    /* ROLE */
+    .role{padding:112px var(--page);background:#fff}
+    .role-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:minmax(180px,.28fr) minmax(0,1.1fr);
+      gap:clamp(50px,8vw,130px);
+    }
+    .role-main h2{
+      margin:14px 0 28px;
+      max-width:900px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5.5vw,84px);
+      line-height:1.03;
+      letter-spacing:-.063em;
+      font-weight:500;
+    }
+    .role-main>p{
+      margin:0 0 18px;
+      max-width:880px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.8;
+    }
+    .snapshot{
+      margin-top:42px;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .snapshot-item{padding:24px 20px;border-right:1px solid var(--line)}
+    .snapshot-item:last-child{border-right:0}
+    .snapshot-label{
+      color:#85909d;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .snapshot-value{margin-top:10px;color:#17202c;font-size:14px;line-height:1.55}
+    .snapshot-focus{margin-top:18px;display:flex;flex-wrap:wrap;gap:9px}
+    .snapshot-focus span{
+      padding:9px 12px;
+      border:1px solid #d7dde4;
+      border-radius:999px;
+      background:#fff;
+      color:#293646;
+      font-size:10px;
+      font-weight:600;
+    }
+
+    /* PRODUCT / AI */
+    .product{padding:112px var(--page);background:var(--dark);color:#fff}
+    .product .section-label{color:#67b4ff}
+    .product-head{
+      width:min(var(--max),100%);
+      margin:0 auto 54px;
+      display:grid;
+      grid-template-columns:minmax(0,1.08fr) minmax(320px,.52fr);
+      gap:clamp(50px,8vw,120px);
+      align-items:end;
+    }
+    .product h2{
+      margin:14px 0 0;
+      max-width:860px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,78px);
+      line-height:1.02;
+      letter-spacing:-.06em;
+      font-weight:500;
+    }
+    .product h2 span{display:block}
+    .product h2 span:last-child{color:#9bb0c8}
+    .product-head>p{margin:0;color:#9aa4b0;font-size:15px;line-height:1.76}
+    .product-note{
+      width:min(var(--max),100%);
+      margin:0 auto 28px;
+      padding:18px 0;
+      display:grid;
+      grid-template-columns:180px 1fr;
+      gap:30px;
+      border-top:1px solid rgba(255,255,255,.11);
+      border-bottom:1px solid rgba(255,255,255,.11);
+    }
+    .product-note strong{
+      color:#62b1ff;
+      font-size:10px;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+    }
+    .product-note p{margin:0;color:#a8b1bc;font-size:13px;line-height:1.7}
+    .product-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      border-top:1px solid rgba(255,255,255,.11);
+      border-bottom:1px solid rgba(255,255,255,.11);
+    }
+    .product-item{
+      min-height:315px;
+      padding:30px 28px;
+      border-right:1px solid rgba(255,255,255,.11);
+    }
+    .product-item:last-child{border-right:0}
+    .product-num{color:#52606e;font-size:10px;letter-spacing:.1em}
+    .product-item h3{
+      margin:78px 0 8px;
+      font-family:Manrope,sans-serif;
+      font-size:27px;
+      font-weight:500;
+      letter-spacing:-.045em;
+    }
+    .product-type{
+      margin-bottom:14px;
+      color:#67b4ff;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .product-item p{margin:0;color:#909aa6;font-size:13px;line-height:1.72}
+
+    /* COLLAB */
+    .collab{padding:112px var(--page);background:#fff}
+    .collab-head{
+      width:min(var(--max),100%);
+      margin:0 auto 52px;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(320px,.55fr);
+      gap:clamp(50px,8vw,120px);
+      align-items:end;
+    }
+    .collab h2{
+      margin:14px 0 0;
+      max-width:920px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5.25vw,80px);
+      line-height:1.02;
+      letter-spacing:-.06em;
+      font-weight:500;
+    }
+    .collab h2 span{display:block}
+    .collab h2 span:last-child{color:#9aadc0}
+    .collab-head p{margin:0;color:var(--muted);font-size:15px;line-height:1.76}
+    .collab-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .collab-item{min-height:235px;padding:30px 30px 34px 0}
+    .collab-item+.collab-item{padding-left:30px;border-left:1px solid var(--line)}
+    .collab-item small{
+      color:#718399;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .collab-item strong{
+      display:block;
+      margin-top:26px;
+      font-family:Manrope,sans-serif;
+      font-size:26px;
+      font-weight:500;
+      letter-spacing:-.04em;
+    }
+    .collab-item p{margin:12px 0 0;color:#5f6b79;font-size:13px;line-height:1.72}
+
+    /* IMPLEMENTATION */
+    .implementation{padding:112px var(--page);background:var(--soft)}
+    .implementation-head{
+      width:min(var(--max),100%);
+      margin:0 auto 50px;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(320px,.55fr);
+      gap:clamp(50px,8vw,120px);
+      align-items:end;
+    }
+    .implementation h2{
+      margin:14px 0 0;
+      max-width:900px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5.5vw,84px);
+      line-height:1.03;
+      letter-spacing:-.063em;
+      font-weight:500;
+    }
+    .implementation h2 span{display:block;color:#8fa0b5}
+    .implementation-head p{margin:0;color:var(--muted);font-size:15px;line-height:1.76}
+    .work-list{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      border-top:1px solid var(--line);
+    }
+    .work-item{
+      display:grid;
+      grid-template-columns:52px 1fr;
+      gap:16px;
+      padding:26px 0;
+      border-bottom:1px solid var(--line);
+    }
+    .work-item:nth-child(odd){padding-right:34px;border-right:1px solid var(--line)}
+    .work-item:nth-child(even){padding-left:34px}
+    .work-num{color:#8a96a4;font-size:9px;letter-spacing:.09em;padding-top:4px}
+    .work-item strong{
+      font-family:Manrope,sans-serif;
+      font-size:20px;
+      font-weight:500;
+      line-height:1.35;
+      letter-spacing:-.03em;
+    }
+
+    /* FIELD */
+    .field{padding:108px var(--page) 116px;background:var(--dark);color:#fff}
+    .field-inner{width:min(var(--max),100%);margin:0 auto}
+    .field-head{
+      display:grid;
+      grid-template-columns:.48fr 1.52fr;
+      gap:72px;
+      align-items:start;
+    }
+    .field .section-label{color:#57adff}
+    .field h2{
+      margin:0;
+      max-width:960px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(46px,5.6vw,78px);
+      font-weight:500;
+      line-height:1.03;
+      letter-spacing:-.055em;
+    }
+    .field h2 span{color:#a8bfd9}
+    .field-copy{max-width:740px;margin:28px 0 0;color:#aeb8c3;font-size:16px;line-height:1.8}
+    .field-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+    .field-meta span{
+      min-height:38px;
+      padding:0 14px;
+      display:inline-flex;
+      align-items:center;
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:999px;
+      color:#c5ced8;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+    .photo-wrap{
+      margin-top:58px;
+      overflow:hidden;
+      border-radius:28px;
+      background:#10141a;
+    }
+    .photo-wrap img{
+      width:100%;
+      aspect-ratio:16/9;
+      object-fit:cover;
+      object-position:center center;
+    }
+    .photo-caption{
+      margin:18px 0 0;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.12);
+      color:#8f99a5;
+      font-size:11px;
+      line-height:1.65;
+    }
+    .photo-caption strong{color:#d7dee6;font-weight:500}
+
+    /* LEARNING */
+    .learning{padding:124px var(--page);background:#fff}
+    .learning-inner{width:min(var(--max),100%);margin:0 auto}
+    .learning h2{
+      margin:20px 0 0;
+      max-width:1100px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(58px,6.2vw,94px);
+      line-height:1.03;
+      letter-spacing:-.067em;
+      font-weight:500;
+    }
+    .learning h2 span{display:block;color:#a8b4c3}
+    .learning-grid{
+      margin-top:58px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .learning-item{padding:30px 34px;min-height:190px}
+    .learning-item:first-child{border-right:1px solid var(--line)}
+    .learning-item small{
+      color:#6e84a0;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .learning-item strong{
+      display:block;
+      margin-top:18px;
+      font-family:Manrope,sans-serif;
+      font-size:27px;
+      font-weight:500;
+      letter-spacing:-.04em;
+    }
+    .learning-item p{margin:12px 0 0;color:#697481;font-size:13px;line-height:1.72}
+
+    /* PROJECT NAV */
+    .project-nav{padding:74px var(--page);background:var(--soft);border-top:1px solid var(--line)}
+    .project-nav-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .project-nav a{padding:28px 0;transition:.2s ease}
+    .project-nav a:last-child{text-align:right;border-left:1px solid var(--line);padding-left:30px}
+    .project-nav a:first-child{padding-right:30px}
+    .project-nav a:hover{background:#fff;padding-left:18px;padding-right:18px}
+    .project-nav-label{
+      color:#85919f;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .project-nav strong{
+      display:block;
+      margin-top:8px;
+      font-family:Manrope,sans-serif;
+      font-size:28px;
+      font-weight:500;
+      letter-spacing:-.04em;
+    }
+
+    /* FOOTER */
+    .footer{
+      padding:72px var(--page) 34px;
+      background:#fff;
+      border-top:1px solid var(--line);
+    }
+    .footer-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.2fr repeat(3,.7fr);
+      gap:50px;
+    }
+    .footer-brand{
+      font-family:Manrope,sans-serif;
+      font-size:30px;
+      letter-spacing:-.045em;
+      font-weight:600;
+    }
+    .footer-copy{
+      margin-top:14px;
+      max-width:360px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+    .footer-col strong{display:block;margin-bottom:14px;font-size:12px;font-weight:700}
+    .footer-col a{display:block;margin:10px 0;color:#5f6b78;font-size:13px}
+    .footer-col a:hover{color:#0b1117}
+    .footer-bottom{
+      width:min(var(--max),100%);
+      margin:54px auto 0;
+      padding-top:24px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      border-top:1px solid var(--line);
+      color:#7b8794;
+      font-size:10px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    @media(max-width:1100px){
+      .impact-grid,.product-grid{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:900px){
+      .hero-bottom,.role-grid,.product-head,.collab-head,.implementation-head,.field-head{grid-template-columns:1fr}
+      .impact-head{flex-direction:column;align-items:flex-start}
+      .snapshot{grid-template-columns:1fr 1fr}
+      .collab-grid{grid-template-columns:1fr}
+      .collab-item+.collab-item{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+      .work-list{grid-template-columns:1fr}
+      .work-item:nth-child(odd){padding-right:0;border-right:0}
+      .work-item:nth-child(even){padding-left:0}
+    }
+    @media(max-width:860px){
+      .nav-center{display:none}
+    }
+    @media(max-width:640px){
+      .nav{min-height:68px}
+      .brand{font-size:20px!important}
+      .nav-right{gap:14px}
+      .nav-right a:not(.lang):nth-child(2){display:none}
+
+      .hero{padding-top:58px;padding-bottom:80px}
+      .hero-top{align-items:flex-start;flex-direction:column;margin-bottom:48px}
+      .hero-meta{justify-content:flex-start}
+      .partner{min-height:52px;padding:8px 12px}
+      .partner img{max-height:24px;max-width:145px}
+      .hero h1{font-size:clamp(54px,14vw,78px)}
+      .hero-description{font-size:15px}
+
+      .impact,.role,.product,.collab,.implementation,.field,.learning{padding-top:82px;padding-bottom:88px}
+      .impact-grid,.product-grid,.snapshot,.learning-grid{grid-template-columns:1fr}
+      .impact-card{min-height:210px}
+      .snapshot-item{border-right:0;border-bottom:1px solid var(--line)}
+      .snapshot-item:last-child{border-bottom:0}
+      .product-item{border-right:0;border-bottom:1px solid rgba(255,255,255,.11)}
+      .product-item:last-child{border-bottom:0}
+      .product-note{grid-template-columns:1fr;gap:10px}
+      .photo-wrap{border-radius:18px}
+      .learning-item:first-child{border-right:0;border-bottom:1px solid var(--line)}
+      .project-nav-inner{grid-template-columns:1fr}
+      .project-nav a:last-child{text-align:left;border-left:0;border-top:1px solid var(--line);padding-left:0}
+
+      .footer-grid{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column}
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="nav">
+  <a class="brand" href="/">Felipe Quiroz</a>
+
+  <nav class="nav-center" aria-label="Primary">
+    <a href="/#work" class="active">Work</a>
+    <a href="/about">About</a>
+    <a href="/now">Now</a>
+    <a href="/blog">Blog</a>
+  </nav>
+
+  <div class="nav-right">
+    <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="lang" href="/es/tethered/transformacion-educativa-impulsada-por-ia" aria-label="Switch language">ES</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-top">
+        <div class="partner-row">
+          <span class="partner openai"><img src="/logos/openai-logo.png" alt="OpenAI"></span>
+          <span class="partner columbia"><img src="/logos/columbia-university-1-logo.png" onerror="this.onerror=null;this.src='/logos/columbia-university-logo.png';" alt="Columbia University"></span>
+          <span class="partner slep"><img src="/logos/slep-delpino-logo.png" alt="SLEP del Pino"></span>
+        </div>
+
+        <div class="hero-meta">
+          <span>Case study / 03</span>
+          <span>2025</span>
+          <span>AI · Public education</span>
+        </div>
+      </div>
+
+      <div class="hero-kicker">Generative AI / Research / Implementation</div>
+
+      <h1>
+        AI-powered Education
+        <span>Transformation.</span>
+      </h1>
+
+      <div class="hero-bottom">
+        <p class="hero-description">
+          An international initiative developed with Columbia University, OpenAI, Tether Education and SLEP del Pino to accelerate responsible and equitable generative AI adoption in Chilean public schools.
+        </p>
+
+        <div class="hero-role">
+          <strong>TetherEd</strong>
+          <span>Implementation &amp; Partnerships</span>
+          <span>Chile · Public education · Generative AI</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="impact">
+    <div class="impact-head">
+      <div>
+        <div class="section-label">01 / Impact</div>
+        <h2>Applied AI<span>in real education environments.</span></h2>
+      </div>
+
+      <p>The initiative explored how educational institutions could integrate generative AI tools effectively, responsibly and equitably.</p>
+    </div>
+
+    <div class="impact-grid">
+      <article class="impact-card"><strong>50+</strong><span>Participating educational institutions</span></article>
+      <article class="impact-card"><strong>OpenAI</strong><span>Generative AI applied to education contexts</span></article>
+      <article class="impact-card"><strong>Columbia</strong><span>Research and international collaboration</span></article>
+      <article class="impact-card"><strong>SLEP</strong><span>Implementation in Chilean public education</span></article>
+    </div>
+  </section>
+
+  <section class="role">
+    <div class="role-grid">
+      <div class="section-label">02 / My role</div>
+
+      <div class="role-main">
+        <h2>Connecting research, institutions and implementation.</h2>
+
+        <p>I led implementation across participating schools, coordinating execution, stakeholders and the connection between research, institutional needs and AI-enabled solutions.</p>
+
+        <p>The work required moving across different layers: understanding each education community's context, coordinating public actors and internal teams, and turning research objectives into experiences that could work in real schools.</p>
+
+        <div class="snapshot">
+          <div class="snapshot-item">
+            <div class="snapshot-label">Program</div>
+            <div class="snapshot-value">AI-powered Education Transformation</div>
+          </div>
+          <div class="snapshot-item">
+            <div class="snapshot-label">Role</div>
+            <div class="snapshot-value">Implementation &amp; Partnerships</div>
+          </div>
+          <div class="snapshot-item">
+            <div class="snapshot-label">Institutions</div>
+            <div class="snapshot-value">50+ participants</div>
+          </div>
+          <div class="snapshot-item">
+            <div class="snapshot-label">Focus</div>
+            <div class="snapshot-value">AI · Research · Public education</div>
+          </div>
+        </div>
+
+        <div class="snapshot-focus">
+          <span>AI adoption</span>
+          <span>Public education</span>
+          <span>Implementation</span>
+          <span>Research</span>
+          <span>Stakeholder coordination</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="product">
+    <div class="product-head">
+      <div>
+        <div class="section-label">03 / AI in education</div>
+        <h2>
+          <span>From experimenting with AI</span>
+          <span>to integrating it with purpose.</span>
+        </h2>
+      </div>
+
+      <p>The goal was not to introduce technology for its own sake, but to understand how generative AI tools could strengthen management, communication and learning across school communities.</p>
+    </div>
+
+    <div class="product-note">
+      <strong>Responsible adoption</strong>
+      <p>The collaboration explored effective and equitable integration of tools such as ChatGPT in real educational contexts.</p>
+    </div>
+
+    <div class="product-grid">
+      <article class="product-item">
+        <div class="product-num">01</div>
+        <h3>School management</h3>
+        <div class="product-type">Operations</div>
+        <p>Explore how generative AI could support institutional and administrative processes.</p>
+      </article>
+
+      <article class="product-item">
+        <div class="product-num">02</div>
+        <h3>Communication</h3>
+        <div class="product-type">Community</div>
+        <p>Strengthen interaction and communication across education communities.</p>
+      </article>
+
+      <article class="product-item">
+        <div class="product-num">03</div>
+        <h3>Pedagogical innovation</h3>
+        <div class="product-type">Learning</div>
+        <p>Open new possibilities for teaching, autonomous learning and experimentation.</p>
+      </article>
+
+      <article class="product-item">
+        <div class="product-num">04</div>
+        <h3>Responsible adoption</h3>
+        <div class="product-type">Equity</div>
+        <p>Integrate AI effectively and equitably while considering institutional capabilities and context.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="collab">
+    <div class="collab-head">
+      <div>
+        <div class="section-label">04 / Collaboration</div>
+        <h2>
+          <span>International research</span>
+          <span>with local implementation.</span>
+        </h2>
+      </div>
+
+      <p>The initiative connected research, technology and public education to learn from real use rather than only from the lab.</p>
+    </div>
+
+    <div class="collab-grid">
+      <article class="collab-item">
+        <small>Research</small>
+        <strong>Columbia University</strong>
+        <p>Academic collaboration to study how educational institutions could integrate generative AI effectively and equitably.</p>
+      </article>
+
+      <article class="collab-item">
+        <small>Technology</small>
+        <strong>OpenAI</strong>
+        <p>Access to generative AI tools and applied learning around their use across school communities.</p>
+      </article>
+
+      <article class="collab-item">
+        <small>Public education</small>
+        <strong>SLEP del Pino</strong>
+        <p>Institutional context and deployment in Chilean public schools, connecting research with real needs.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="implementation">
+    <div class="implementation-head">
+      <div>
+        <div class="section-label">05 / Implementation</div>
+        <h2>From research<span>to the classroom.</span></h2>
+      </div>
+
+      <p>Implementation required coordinating stakeholders, supporting schools and translating research goals into processes that could work in everyday school environments.</p>
+    </div>
+
+    <div class="work-list">
+      <div class="work-item"><div class="work-num">01</div><strong>Coordinate participating schools</strong></div>
+      <div class="work-item"><div class="work-num">02</div><strong>Connect research with institutional needs</strong></div>
+      <div class="work-item"><div class="work-num">03</div><strong>Manage public and education stakeholders</strong></div>
+      <div class="work-item"><div class="work-num">04</div><strong>Support adoption and use of AI tools</strong></div>
+      <div class="work-item"><div class="work-num">05</div><strong>Connect field learnings with internal teams</strong></div>
+      <div class="work-item"><div class="work-num">06</div><strong>Track implementation and continuous learning</strong></div>
+    </div>
+  </section>
+
+  <section class="field">
+    <div class="field-inner">
+      <div class="field-head">
+        <div class="section-label">06 / Implementation in context</div>
+
+        <div>
+          <h2>Adoption happens when <span>technology reaches the real context.</span></h2>
+
+          <p class="field-copy">
+            Part of the work involved supporting participating schools, understanding how students and education teams engaged with these tools, and connecting those learnings back into program implementation.
+          </p>
+
+          <div class="field-meta">
+            <span>Generative AI</span>
+            <span>Implementation</span>
+            <span>Education community</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-wrap">
+        <img src="/images/ai-education-school-implementation.jpg" alt="Working session with students and the education community during implementation of the generative AI adoption program">
+      </div>
+
+      <p class="photo-caption">
+        <strong>Implementation with participating institutions</strong><br>
+        Working session with students and the education community as part of the generative AI adoption program.
+      </p>
+    </div>
+  </section>
+
+  <section class="learning">
+    <div class="learning-inner">
+      <div class="section-label">07 / Learning</div>
+
+      <h2>AI with purpose.<span>Adoption with context.</span></h2>
+
+      <div class="learning-grid">
+        <article class="learning-item">
+          <small>01 / Technology</small>
+          <strong>The problem matters more than the tool.</strong>
+          <p>Value appears when AI responds to real needs across education communities.</p>
+        </article>
+
+        <article class="learning-item">
+          <small>02 / Implementation</small>
+          <strong>Context shapes adoption.</strong>
+          <p>Capabilities, processes and institutional culture are part of any AI transformation strategy.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-nav">
+    <div class="project-nav-inner">
+      <a href="/tethereducation">
+        <div class="project-nav-label">Back</div>
+        <strong>TetherEducation</strong>
+      </a>
+
+      <a href="/tethered/tether-studio">
+        <div class="project-nav-label">Next project</div>
+        <strong>Tether Studio</strong>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Felipe Quiroz</div>
+      <div class="footer-copy">Product, Growth & Operations. Building products, growth systems and companies across technology and business.</div>
+    </div>
+
+    <div class="footer-col">
+      <strong>Explore</strong>
+      <a href="/#work">Work</a>
+      <a href="/about">About</a>
+      <a href="/now">Now</a>
+      <a href="/blog">Blog</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Social</strong>
+      <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Contact</strong>
+      <a href="mailto:felipe@lowsignal.cl">felipe@lowsignal.cl</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 Felipe Quiroz</div>
+    <div>Santiago / CL</div>
+  </div>
+</footer>
+
+</body>
+</html>
