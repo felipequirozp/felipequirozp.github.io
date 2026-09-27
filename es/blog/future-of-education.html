@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>El futuro de la educación no se construye solo con tecnología | Felipe Quiroz</title>
+  <meta name="description" content="Una reflexión desde País Digital Summit sobre IA, educación, partnerships y por qué transformar un sistema requiere mucho más que tecnología.">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="canonical" href="https://felipequirozp.cl/es/blog/future-of-education">
+  <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/blog/future-of-education">
+  <link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/blog/future-of-education">
+  <link rel="alternate" hreflang="x-default" href="https://felipequirozp.cl/blog/future-of-education">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="El futuro de la educación no se construye solo con tecnología">
+  <meta property="og:description" content="IA, partnerships, instituciones y ejecución: una reflexión desde País Digital Summit sobre lo que realmente se necesita para transformar la educación.">
+  <meta property="og:url" content="https://felipequirozp.cl/es/blog/future-of-education">
+  <meta property="og:image" content="https://felipequirozp.cl/images/pais-digital-future-education.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --ink:#0b1117;
+      --muted:#5f6b78;
+      --line:#e2e7ec;
+      --soft:#f3f6f9;
+      --blue:#1467d8;
+      --dark:#05070a;
+      --page:clamp(22px,4vw,64px);
+      --max:1520px;
+      --article:780px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:#fff;
+      color:var(--ink);
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    ::selection{background:var(--blue);color:#fff}
+
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      min-height:76px;
+      padding:0 var(--page);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid rgba(11,17,23,.08);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+    .brand{
+      font-family:Manrope,sans-serif;
+      font-size:22px!important;
+      font-weight:600;
+      letter-spacing:-.045em;
+      white-space:nowrap;
+    }
+    .nav-center,.nav-right{display:flex;align-items:center;gap:28px}
+    .nav a{font-size:11px;font-weight:500;color:#1a232d}
+    .nav-center a,.nav-right a:not(.lang){position:relative}
+    .nav-center a::after,.nav-right a:not(.lang)::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-7px;
+      width:0;
+      height:1px;
+      background:#111820;
+      transition:width .2s ease;
+    }
+    .nav-center a:hover::after,.nav-center a.active::after,.nav-right a:not(.lang):hover::after{width:100%}
+    .lang{
+      width:38px;height:38px;
+      display:grid;place-items:center;
+      border:1px solid #d7dde4;
+      border-radius:50%;
+      font-size:10px!important;
+      letter-spacing:.04em;
+      transition:.2s ease;
+    }
+    .lang:hover{background:#0b1117;color:#fff;border-color:#0b1117}
+
+    .article-hero{
+      padding:92px var(--page) 74px;
+      background:#fff;
+    }
+    .article-hero-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+    }
+    .article-meta{
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      align-items:center;
+      margin-bottom:56px;
+    }
+    .article-meta-left{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .article-meta-left span{
+      min-height:38px;
+      padding:0 13px;
+      display:inline-flex;
+      align-items:center;
+      border:1px solid #d8dee5;
+      border-radius:999px;
+      background:#f7f9fb;
+      color:#667281;
+      font-size:9px;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+    }
+    .article-back{
+      color:#6d7885;
+      font-size:11px;
+      font-weight:600;
+      transition:.2s ease;
+    }
+    .article-back:hover{color:#0b1117}
+    .article-title{
+      margin:0;
+      max-width:1260px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(64px,7vw,112px);
+      line-height:1.01;
+      letter-spacing:-.068em;
+      font-weight:500;
+    }
+    .article-title span{
+      display:block;
+      color:#a8b4c3;
+    }
+    .article-deck{
+      margin:38px 0 0;
+      max-width:820px;
+      color:var(--muted);
+      font-size:18px;
+      line-height:1.75;
+    }
+
+    .hero-media{
+      padding:0 var(--page) 90px;
+      background:#fff;
+    }
+    .hero-media-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+    }
+    .hero-media-frame{
+      overflow:hidden;
+      border-radius:28px;
+      background:#e8edf2;
+    }
+    .hero-media img{
+      width:100%;
+      aspect-ratio:16/8.6;
+      object-fit:cover;
+      object-position:center 42%;
+    }
+    .image-caption{
+      padding-top:14px;
+      color:#7b8794;
+      font-size:10px;
+      letter-spacing:.02em;
+    }
+
+    .article{
+      padding:108px var(--page) 124px;
+      background:#fff;
+      border-top:1px solid var(--line);
+    }
+    .article-layout{
+      width:min(1180px,100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:220px minmax(0,var(--article));
+      gap:90px;
+      justify-content:center;
+      align-items:start;
+    }
+    .article-aside{
+      position:sticky;
+      top:112px;
+      color:#85909d;
+      font-size:10px;
+      line-height:1.65;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .article-aside strong{
+      display:block;
+      margin-bottom:12px;
+      color:#1c2732;
+      font-family:Manrope,sans-serif;
+      font-size:17px;
+      font-weight:500;
+      line-height:1.4;
+      letter-spacing:-.025em;
+      text-transform:none;
+    }
+    .article-body p{
+      margin:0 0 28px;
+      color:#3f4a57;
+      font-size:17px;
+      line-height:1.9;
+    }
+    .article-body .lead{
+      margin-bottom:42px;
+      color:#17202a;
+      font-family:Manrope,sans-serif;
+      font-size:29px;
+      line-height:1.46;
+      letter-spacing:-.035em;
+    }
+    .article-body h2{
+      margin:76px 0 25px;
+      color:#0d141c;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(38px,4vw,56px);
+      font-weight:500;
+      line-height:1.05;
+      letter-spacing:-.055em;
+    }
+    .article-body blockquote{
+      margin:66px 0;
+      padding:34px 0 34px 34px;
+      border-left:2px solid var(--blue);
+      color:#111923;
+      font-family:Manrope,sans-serif;
+      font-size:30px;
+      line-height:1.42;
+      letter-spacing:-.04em;
+    }
+    .article-body ul{
+      margin:28px 0 34px;
+      padding:0;
+      list-style:none;
+      border-top:1px solid var(--line);
+    }
+    .article-body li{
+      padding:18px 0;
+      border-bottom:1px solid var(--line);
+      color:#3d4956;
+      font-size:15px;
+      line-height:1.65;
+    }
+
+    .article-end{
+      margin-top:82px;
+      padding-top:34px;
+      border-top:1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      gap:30px;
+      color:#7b8794;
+      font-size:11px;
+      line-height:1.65;
+    }
+    .article-author{
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+    .article-author-avatar{
+      width:58px;height:58px;
+      flex:0 0 58px;
+      border-radius:50%;
+      overflow:hidden;
+      background:#eef1f4;
+    }
+    .article-author-avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center 8%;
+    }
+    .article-author-copy strong{
+      display:block;
+      margin-bottom:6px;
+      color:#1a2430;
+      font-family:Manrope,sans-serif;
+      font-size:18px;
+      font-weight:500;
+      letter-spacing:-.03em;
+    }
+
+    .next-article{
+      padding:92px var(--page);
+      background:var(--soft);
+    }
+    .next-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:.3fr 1fr;
+      gap:80px;
+      align-items:end;
+    }
+    .next-label{
+      color:#85919f;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+    }
+    .next-link{
+      display:block;
+      padding-top:28px;
+      border-top:1px solid var(--line);
+    }
+    .next-link small{
+      color:#738295;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .next-link h2{
+      margin:16px 0 0;
+      max-width:900px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(40px,4.8vw,70px);
+      font-weight:500;
+      line-height:1.04;
+      letter-spacing:-.06em;
+    }
+    .next-link:hover h2{color:var(--blue)}
+
+    .footer{
+      padding:72px var(--page) 34px;
+      background:#fff;
+      border-top:1px solid var(--line);
+    }
+    .footer-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.2fr repeat(3,.7fr);
+      gap:50px;
+    }
+    .footer-brand{
+      font-family:Manrope,sans-serif;
+      font-size:30px;
+      letter-spacing:-.045em;
+      font-weight:600;
+    }
+    .footer-copy{
+      margin-top:14px;
+      max-width:360px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+    .footer-col strong{
+      display:block;
+      margin-bottom:14px;
+      font-size:12px;
+      font-weight:700;
+    }
+    .footer-col a{
+      display:block;
+      margin:10px 0;
+      color:#5f6b78;
+      font-size:13px;
+    }
+    .footer-col a:hover{color:#0b1117}
+    .footer-bottom{
+      width:min(var(--max),100%);
+      margin:54px auto 0;
+      padding-top:24px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      border-top:1px solid var(--line);
+      color:#7b8794;
+      font-size:10px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    @media(max-width:980px){
+      .article-layout{grid-template-columns:1fr;gap:42px}
+      .article-aside{position:static;max-width:560px}
+      .next-inner{grid-template-columns:1fr;gap:32px}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+
+    @media(max-width:860px){
+      .nav-center{display:none}
+    }
+
+    @media(max-width:640px){
+      .nav{min-height:68px}
+      .brand{font-size:20px!important}
+      .nav-right{gap:14px}
+      .nav-right a:not(.lang):nth-child(2){display:none}
+
+      .article-hero{padding-top:64px;padding-bottom:58px}
+      .article-meta{align-items:flex-start;flex-direction:column;margin-bottom:42px}
+      .article-title{font-size:clamp(48px,13vw,68px)}
+      .article-deck{font-size:15px}
+
+      .hero-media{padding:0 0 60px}
+      .hero-media-frame{border-radius:0}
+      .hero-media img{aspect-ratio:4/3;object-position:center 40%}
+      .image-caption{padding:12px 22px 0}
+
+      .article{padding-top:72px;padding-bottom:88px}
+      .article-body p{font-size:16px;line-height:1.82}
+      .article-body .lead{font-size:23px}
+      .article-body h2{margin-top:58px;font-size:38px}
+      .article-body blockquote{margin:48px 0;padding:26px 0 26px 24px;font-size:25px}
+      .article-end{flex-direction:column}
+
+      .next-article{padding:70px var(--page)}
+      .next-link h2{font-size:40px}
+
+      .footer-grid{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column}
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="nav">
+  <a class="brand" href="/es/">Felipe Quiroz</a>
+
+  <nav class="nav-center" aria-label="Primary">
+    <a href="/es/#work">Trabajo</a>
+    <a href="/es/about">Sobre mí</a>
+    <a href="/es/now">Ahora</a>
+    <a href="/es/blog" class="active">Blog</a>
+  </nav>
+
+  <div class="nav-right">
+    <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="lang" href="/blog/future-of-education" aria-label="Cambiar a inglés">EN</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <div class="article-meta">
+        <div class="article-meta-left">
+          <span>Educación</span>
+          <span>IA</span>
+          <span>Ecosistemas</span>
+          <span>Septiembre 2025</span>
+        </div>
+        <a class="article-back" href="/es/blog">← Volver al blog</a>
+      </div>
+
+      <h1 class="article-title">
+        El futuro de la educación
+        <span>no se construye solo con tecnología.</span>
+      </h1>
+
+      <p class="article-deck">
+        Una reflexión desde País Digital Summit sobre IA, partnerships y por qué transformar la educación depende tanto de las personas, las instituciones y la capacidad de ejecutar en conjunto como de la tecnología.
+      </p>
+    </div>
+  </section>
+
+  <section class="hero-media">
+    <div class="hero-media-inner">
+      <div class="hero-media-frame">
+        <img src="/images/pais-digital-future-education.jpg" alt="País Digital Summit: Future of Education in Santiago">
+      </div>
+      <div class="image-caption">País Digital Summit · Futuro de la Educación · Santiago, Chile</div>
+    </div>
+  </section>
+
+  <article class="article">
+    <div class="article-layout">
+
+      <aside class="article-aside">
+        <strong>Una idea a la que todavía vuelvo.</strong>
+        Tecnología, instituciones y colaboración tienen que avanzar juntas si queremos que la innovación realmente llegue a las personas.
+      </aside>
+
+      <div class="article-body">
+
+        <p class="lead">
+          Cuando hablamos del futuro de la educación, es fácil llevar la conversación directamente hacia la tecnología:
+          inteligencia artificial, nuevas plataformas, automatización o experiencias de aprendizaje más personalizadas.
+          Todo eso importa. Pero nada de eso transforma un sistema por sí solo.
+        </p>
+
+        <p>
+          Esa fue una de las ideas que se me quedó después de asistir a País Digital Summit: Future of Education.
+          El evento reunió a personas del gobierno, la academia y organizaciones internacionales para conversar sobre los desafíos
+          y oportunidades de la transformación digital en educación.
+        </p>
+
+        <p>
+          En ese momento lideraba partnerships estratégicos en TetherEd, así que miraba estas conversaciones desde
+          una pregunta muy concreta: ¿cómo hacemos para que una buena idea, una tecnología o una política no se quede en una
+          presentación, sino que realmente llegue a estudiantes, familias y comunidades educativas?
+        </p>
+
+        <h2>La tecnología no transforma un sistema por sí sola.</h2>
+
+        <p>
+          Una herramienta puede ser extraordinaria y aun así tener poco impacto si no logra encajar en el contexto donde necesita
+          funcionar. En educación, eso significa entender instituciones, procesos, incentivos, capacidades, regulación, adopción
+          y, sobre todo, a las personas que tienen que usarla.
+        </p>
+
+        <p>
+          Durante el summit, expertos como Wayne Holmes de University College London compartieron perspectivas sobre IA,
+          aprendizaje y cómo estas tecnologías están empezando a moldear el futuro de la educación. La conversación sobre IA era
+          relevante, pero también reforzó algo más amplio para mí: el desafío no es solo construir mejores herramientas,
+          sino crear las condiciones para que esas herramientas generen valor real.
+        </p>
+
+        <blockquote>
+          La innovación educativa no ocurre cuando aparece una nueva tecnología. Ocurre cuando esa tecnología se convierte en una capacidad real del sistema.
+        </blockquote>
+
+        <h2>Los partnerships también son infraestructura.</h2>
+
+        <p>
+          Tendemos a pensar la infraestructura como plataformas, datos o conectividad. Pero en ecosistemas complejos existe otro
+          tipo de infraestructura igual de importante: las relaciones entre las personas y organizaciones que tienen que hacer que las cosas pasen.
+        </p>
+
+        <p>
+          Gobiernos, colegios, universidades, startups, fundaciones, empresas y organizaciones internacionales pueden mirar el mismo
+          problema desde ángulos muy distintos. Cuando esos actores trabajan de forma aislada, incluso buenas iniciativas pueden terminar
+          duplicándose, avanzando lento o sin lograr adopción.
+        </p>
+
+        <p>
+          Por eso el trabajo de partnerships siempre me ha interesado tanto. No se trata solo de “cerrar partnerships”. Se trata de conectar
+          distintas capacidades alrededor de un problema compartido y encontrar una forma concreta de convertir esa coordinación en ejecución.
+        </p>
+
+        <ul>
+          <li>Una startup puede aportar velocidad, pensamiento de producto y capacidad de experimentar.</li>
+          <li>Una institución educativa entiende el contexto real donde la solución tiene que funcionar.</li>
+          <li>El sector público puede aportar escala, legitimidad y continuidad.</li>
+          <li>La academia y organizaciones especializadas pueden aportar evidencia, investigación y perspectiva.</li>
+        </ul>
+
+        <p>
+          El valor aparece cuando esas piezas dejan de operar como iniciativas separadas y empiezan a comportarse como un sistema.
+        </p>
+
+        <h2>La IA hace esta conversación todavía más importante.</h2>
+
+        <p>
+          La velocidad con la que avanza la inteligencia artificial hace tentador mirar la educación desde una
+          perspectiva puramente tecnológica. Pero mientras más poderosa se vuelve la tecnología, más importante se vuelve decidir
+          cómo, dónde y para qué usarla.
+        </p>
+
+        <p>
+          En educación, la pregunta interesante no es solo qué puede hacer un modelo de IA. También es quién tendrá acceso,
+          cómo cambia el trabajo de profesores y equipos, qué procesos pueden mejorar y qué condiciones se necesitan para que
+          la tecnología amplíe oportunidades en vez de profundizar brechas existentes.
+        </p>
+
+        <h2>La escala no parte con más usuarios.</h2>
+
+        <p>
+          Una de las cosas que aprendí trabajando en EdTech es que escalar no se trata simplemente de llegar a más personas.
+          Primero, producto, adopción, partnerships y operaciones tienen que seguir funcionando a medida que cambia el contexto.
+        </p>
+
+        <p>
+          Lo mismo aplica a la transformación educativa. Para pasar de una buena experiencia aislada a un cambio más amplio,
+          necesitas procesos repetibles, stakeholders alineados y una forma de aprender rápido de lo que pasa en terreno.
+        </p>
+
+        <p>
+          Por eso espacios como este importan. No porque una conferencia vaya a resolver los desafíos de la educación, sino porque crean
+          conexiones entre personas que normalmente están trabajando en partes distintas del mismo problema.
+        </p>
+
+        <h2>Con qué me quedé.</h2>
+
+        <p>
+          Después de ese summit, una idea me quedó mucho más clara: el futuro de la educación probablemente tendrá mucha más tecnología,
+          pero no será construido solo por tecnólogos.
+        </p>
+
+        <p>
+          Va a requerir producto, política pública, educación, investigación, operaciones, partnerships y personas capaces de traducir
+          entre esos mundos.
+        </p>
+
+        <p>
+          La oportunidad está en conectar mejor esas piezas. Porque la transformación digital deja de ser una promesa cuando se convierte
+          en una mejor experiencia para las personas que están al otro lado del sistema.
+        </p>
+
+        <div class="article-end">
+          <div class="article-author">
+            <span class="article-author-avatar">
+              <img src="/images/profile-0.jpg" alt="Felipe Quiroz">
+            </span>
+            <div class="article-author-copy">
+              <strong>Felipe Quiroz</strong>
+              Producto · Growth · Operaciones · Partnerships
+            </div>
+          </div>
+          <div>
+            Reflexiones sobre producto, startups, IA y sistemas.<br>
+            Santiago / CL
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+  <section class="next-article">
+    <div class="next-inner">
+      <div class="next-label">Seguir leyendo</div>
+      <a class="next-link" href="/es/blog/edtech-startup-scale">
+        <small>Startups / Educación →</small>
+        <h2>Lo que construir una startup edtech me enseñó sobre escalar</h2>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Felipe Quiroz</div>
+      <div class="footer-copy">Producto, Growth & Operaciones. Construyendo productos, sistemas de growth y compañías entre tecnología y negocio.</div>
+    </div>
+
+    <div class="footer-col">
+      <strong>Explorar</strong>
+      <a href="/es/#work">Trabajo</a>
+      <a href="/es/about">Sobre mí</a>
+      <a href="/es/now">Ahora</a>
+      <a href="/blog">Blog</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Social</strong>
+      <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Contacto</strong>
+      <a href="mailto:felipe@lowsignal.cl">felipe@lowsignal.cl</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 Felipe Quiroz</div>
+    <div>Santiago / CL</div>
+  </div>
+</footer>
+
+</body>
+</html>
