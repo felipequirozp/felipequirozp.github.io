@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Cómo se ve la IA cuando sale del demo | Felipe Quiroz</title>
+  <meta name="description" content="Cuando la IA sale del demo, la conversación cambia: menos promesa tecnológica y más preguntas sobre impacto, workflows y ejecución real.">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="canonical" href="https://felipequirozp.cl/es/blog/ai-leaves-the-demo">
+  <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/blog/ai-leaves-the-demo">
+  <link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/blog/ai-leaves-the-demo">
+  <link rel="alternate" hreflang="x-default" href="https://felipequirozp.cl/blog/ai-leaves-the-demo">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Cómo se ve la IA cuando sale del demo">
+  <meta property="og:description" content="Cuando la IA sale del demo, la conversación cambia: menos promesa tecnológica y más preguntas sobre impacto, workflows y ejecución real.">
+  <meta property="og:url" content="https://felipequirozp.cl/es/blog/ai-leaves-the-demo">
+  <meta property="og:image" content="https://felipequirozp.cl/images/ai-leaves-the-demo-diio-2025.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --ink:#0b1117;
+      --muted:#5f6b78;
+      --line:#e2e7ec;
+      --soft:#f3f6f9;
+      --blue:#1467d8;
+      --dark:#05070a;
+      --page:clamp(22px,4vw,64px);
+      --max:1520px;
+      --article:780px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:#fff;
+      color:var(--ink);
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    ::selection{background:var(--blue);color:#fff}
+    .section-label{
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:#6f7d8d;
+    }
+
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      min-height:76px;
+      padding:0 var(--page);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid rgba(11,17,23,.08);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+    .brand{
+      font-family:Manrope,sans-serif;
+      font-size:22px!important;
+      font-weight:600;
+      letter-spacing:-.045em;
+      white-space:nowrap;
+    }
+    .nav-center,.nav-right{display:flex;align-items:center;gap:28px}
+    .nav a{font-size:11px;font-weight:500;color:#1a232d}
+    .nav-center a,.nav-right a:not(.lang){position:relative}
+    .nav-center a::after,.nav-right a:not(.lang)::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-7px;
+      width:0;
+      height:1px;
+      background:#111820;
+      transition:width .2s ease;
+    }
+    .nav-center a:hover::after,.nav-center a.active::after,.nav-right a:not(.lang):hover::after{width:100%}
+    .lang{
+      width:38px;height:38px;
+      display:grid;place-items:center;
+      border:1px solid #d7dde4;
+      border-radius:50%;
+      font-size:10px!important;
+      letter-spacing:.04em;
+      transition:.2s ease;
+    }
+    .lang:hover{background:#0b1117;color:#fff;border-color:#0b1117}
+
+    .article-hero{
+      padding:92px var(--page) 74px;
+      background:#fff;
+    }
+    .article-hero-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+    }
+    .article-meta{
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      align-items:center;
+      margin-bottom:56px;
+    }
+    .article-meta-left{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .article-meta-left span{
+      min-height:38px;
+      padding:0 13px;
+      display:inline-flex;
+      align-items:center;
+      border:1px solid #d8dee5;
+      border-radius:999px;
+      background:#f7f9fb;
+      color:#667281;
+      font-size:9px;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+    }
+    .article-back{
+      color:#6d7885;
+      font-size:11px;
+      font-weight:600;
+      transition:.2s ease;
+    }
+    .article-back:hover{color:#0b1117}
+    .article-title{
+      margin:0;
+      max-width:1260px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(64px,7vw,112px);
+      line-height:1.01;
+      letter-spacing:-.068em;
+      font-weight:500;
+    }
+    .article-title span{
+      display:block;
+      color:#a8b4c3;
+    }
+    .article-deck{
+      margin:38px 0 0;
+      max-width:820px;
+      color:var(--muted);
+      font-size:18px;
+      line-height:1.75;
+    }
+
+    .hero-media{
+      padding:0 var(--page) 90px;
+      background:#fff;
+    }
+    .hero-media-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+    }
+    .hero-media-frame{
+      overflow:hidden;
+      border-radius:28px;
+      background:#e8edf2;
+    }
+    .hero-media img{
+      width:100%;
+      aspect-ratio:16/8.6;
+      object-fit:cover;
+      object-position:center 26%;
+    }
+    .image-caption{
+      padding-top:14px;
+      color:#7b8794;
+      font-size:10px;
+      letter-spacing:.02em;
+    }
+
+    .article{
+      padding:108px var(--page) 124px;
+      background:#fff;
+      border-top:1px solid var(--line);
+    }
+    .article-layout{
+      width:min(1180px,100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:220px minmax(0,var(--article));
+      gap:90px;
+      justify-content:center;
+      align-items:start;
+    }
+    .article-aside{
+      position:sticky;
+      top:112px;
+      color:#85909d;
+      font-size:10px;
+      line-height:1.65;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .article-aside strong{
+      display:block;
+      margin-bottom:12px;
+      color:#1c2732;
+      font-family:Manrope,sans-serif;
+      font-size:17px;
+      font-weight:500;
+      line-height:1.4;
+      letter-spacing:-.025em;
+      text-transform:none;
+    }
+    .article-body p{
+      margin:0 0 28px;
+      color:#3f4a57;
+      font-size:17px;
+      line-height:1.9;
+    }
+    .article-body .lead{
+      margin-bottom:42px;
+      color:#17202a;
+      font-family:Manrope,sans-serif;
+      font-size:29px;
+      line-height:1.46;
+      letter-spacing:-.035em;
+    }
+    .article-body h2{
+      margin:76px 0 25px;
+      color:#0d141c;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(38px,4vw,56px);
+      font-weight:500;
+      line-height:1.05;
+      letter-spacing:-.055em;
+    }
+    .article-body blockquote{
+      margin:66px 0;
+      padding:34px 0 34px 34px;
+      border-left:2px solid var(--blue);
+      color:#111923;
+      font-family:Manrope,sans-serif;
+      font-size:30px;
+      line-height:1.42;
+      letter-spacing:-.04em;
+    }
+    .article-note{
+      margin:46px 0;
+      padding:26px 0;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .article-note span{
+      display:block;
+      margin-bottom:10px;
+      color:#6f86a2;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .article-note p{
+      margin:0!important;
+      color:#17202a!important;
+      font-family:Manrope,sans-serif;
+      font-size:23px!important;
+      line-height:1.5!important;
+      letter-spacing:-.025em;
+    }
+
+    .article-end{
+      margin-top:82px;
+      padding-top:34px;
+      border-top:1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      gap:30px;
+      color:#7b8794;
+      font-size:11px;
+      line-height:1.65;
+    }
+    .article-author{
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+    .article-author-avatar{
+      width:58px;height:58px;
+      flex:0 0 58px;
+      border-radius:50%;
+      overflow:hidden;
+      background:#eef1f4;
+    }
+    .article-author-avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center 8%;
+    }
+    .article-author-copy strong{
+      display:block;
+      margin-bottom:6px;
+      color:#1a2430;
+      font-family:Manrope,sans-serif;
+      font-size:18px;
+      font-weight:500;
+      letter-spacing:-.03em;
+    }
+
+    .next-article{
+      padding:92px var(--page);
+      background:var(--soft);
+    }
+    .next-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:.3fr 1fr;
+      gap:80px;
+      align-items:end;
+    }
+    .next-label{
+      color:#85919f;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+    }
+    .next-link{
+      display:block;
+      padding-top:28px;
+      border-top:1px solid var(--line);
+    }
+    .next-link small{
+      color:#738295;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .next-link h2{
+      margin:16px 0 0;
+      max-width:900px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(40px,4.8vw,70px);
+      font-weight:500;
+      line-height:1.04;
+      letter-spacing:-.06em;
+    }
+    .next-link:hover h2{color:var(--blue)}
+
+    .footer{
+      padding:72px var(--page) 34px;
+      background:#fff;
+      border-top:1px solid var(--line);
+    }
+    .footer-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.2fr repeat(3,.7fr);
+      gap:50px;
+    }
+    .footer-brand{
+      font-family:Manrope,sans-serif;
+      font-size:30px;
+      letter-spacing:-.045em;
+      font-weight:600;
+    }
+    .footer-copy{
+      margin-top:14px;
+      max-width:360px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+    .footer-col strong{
+      display:block;
+      margin-bottom:14px;
+      font-size:12px;
+      font-weight:700;
+    }
+    .footer-col a{
+      display:block;
+      margin:10px 0;
+      color:#5f6b78;
+      font-size:13px;
+    }
+    .footer-col a:hover{color:#0b1117}
+    .footer-bottom{
+      width:min(var(--max),100%);
+      margin:54px auto 0;
+      padding-top:24px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      border-top:1px solid var(--line);
+      color:#7b8794;
+      font-size:10px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    @media(max-width:980px){
+      .article-layout{grid-template-columns:1fr;gap:42px}
+      .article-aside{position:static;max-width:560px}
+      .next-inner{grid-template-columns:1fr;gap:32px}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+
+    @media(max-width:860px){
+      .nav-center{display:none}
+    }
+
+    @media(max-width:640px){
+      .nav{min-height:68px}
+      .brand{font-size:20px!important}
+      .nav-right{gap:14px}
+      .nav-right a:not(.lang):nth-child(2){display:none}
+
+      .article-hero{padding-top:64px;padding-bottom:58px}
+      .article-meta{align-items:flex-start;flex-direction:column;margin-bottom:42px}
+      .article-title{font-size:clamp(48px,13vw,68px)}
+      .article-deck{font-size:15px}
+
+      .hero-media{padding:0 0 60px}
+      .hero-media-frame{border-radius:0}
+      .hero-media img{aspect-ratio:4/3;object-position:center 22%}
+      .image-caption{padding:12px 22px 0}
+
+      .article{padding-top:72px;padding-bottom:88px}
+      .article-body p{font-size:16px;line-height:1.82}
+      .article-body .lead{font-size:23px}
+      .article-body h2{margin-top:58px;font-size:38px}
+      .article-body blockquote{margin:48px 0;padding:26px 0 26px 24px;font-size:25px}
+      .article-note p{font-size:20px!important}
+      .article-end{flex-direction:column}
+
+      .next-article{padding:70px var(--page)}
+      .next-link h2{font-size:40px}
+
+      .footer-grid{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column}
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="nav">
+  <a class="brand" href="/es/">Felipe Quiroz</a>
+
+  <nav class="nav-center" aria-label="Primary">
+    <a href="/es/#work">Trabajo</a>
+    <a href="/es/about">Sobre mí</a>
+    <a href="/es/now">Ahora</a>
+    <a href="/es/blog" class="active">Blog</a>
+  </nav>
+
+  <div class="nav-right">
+    <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="lang" href="/blog/ai-leaves-the-demo" aria-label="Cambiar a inglés">EN</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <div class="article-meta">
+        <div class="article-meta-left">
+          <span>IA</span>
+          <span>Startups</span>
+          <span>Agosto 2026</span>
+        </div>
+        <a class="article-back" href="/es/blog">← Volver al blog</a>
+      </div>
+
+      <h1 class="article-title">
+        Cómo se ve la IA
+        <span>cuando sale del demo.</span>
+      </h1>
+
+      <p class="article-deck">
+        Cuando la IA sale del demo, la conversación cambia: menos promesa tecnológica y más preguntas sobre impacto, workflows y ejecución real.
+      </p>
+    </div>
+  </section>
+
+  <section class="hero-media">
+    <div class="hero-media-inner">
+      <div class="hero-media-frame">
+        <img src="/images/ai-leaves-the-demo-diio-2025.jpg" alt="Felipe Quiroz with the DiiO team">
+      </div>
+      <div class="image-caption">AI Week Chile · Santiago, Chile</div>
+    </div>
+  </section>
+
+  <article class="article">
+    <div class="article-layout">
+
+      <aside class="article-aside">
+        <strong>Una idea que se me quedó.</strong>
+        La IA genera más valor cuando deja de ser el centro de la experiencia y empieza a mejorar el sistema.
+      </aside>
+
+      <div class="article-body">
+
+        <p class="lead">
+          AI Week Chile reunió a empresas para compartir experiencias concretas implementando IA. Eso hizo la conversación mucho más útil: menos predicciones y más preguntas sobre qué está funcionando realmente hoy.
+        </p>
+
+        <p>
+          Lo interesante ya no es solo demostrar que un modelo puede hacer algo. Es entender qué cambia cuando esa capacidad entra en un proceso real, con usuarios reales, datos incompletos, restricciones y objetivos de negocio.
+        </p>
+
+        <p>
+          Ahí es donde la IA deja de ser un demo y empieza a convertirse en producto, operaciones y una forma de trabajar.
+        </p>
+
+        <blockquote>
+          Lo interesante de la IA ya no es lo que puede hacer. Es lo que las empresas están aprendiendo a hacer con ella.
+        </blockquote>
+
+        <h2>Más allá de la promesa.</h2>
+
+        <p>
+          Durante mucho tiempo, gran parte de la conversación sobre IA giró en torno a la posibilidad: qué podía automatizar, cómo podía cambiar industrias o qué trabajos podía transformar.
+        </p>
+
+        <p>
+          Esas preguntas siguen importando, pero cada vez me interesa más otra conversación: qué está funcionando hoy y bajo qué condiciones.
+        </p>
+
+        <p>
+          Los casos más valiosos no siempre son los más llamativos. Muchas veces son los que eliminan una tarea repetitiva, reducen fricción, aceleran una decisión o aumentan la capacidad de un equipo sin reemplazar el criterio humano.
+        </p>
+
+        <h2>IA aplicada al growth real.</h2>
+
+        <p>
+          Una de las cosas de AI Week que más sentido me hizo fue conectar IA con growth, eficiencia y transformación organizacional.
+        </p>
+
+        <p>
+          Eso obliga a mover la conversación desde la novedad hacia el impacto. No basta con que una solución sea técnicamente impresionante. Tiene que mover una métrica, eliminar una restricción o mejorar la forma en que trabaja un equipo.
+        </p>
+
+        <div class="article-note">
+          <span>La pregunta útil</span>
+          <p>En vez de preguntar “¿dónde podemos agregar IA?”, partiría por “¿qué restricción real estamos tratando de eliminar?”.</p>
+        </div>
+
+        <p>
+          Ese orden importa. Cuando partes desde la tecnología, es fácil forzar casos de uso. Cuando partes desde una restricción concreta, la IA se convierte en una herramienta más dentro de una decisión de producto o negocio.
+        </p>
+
+        <h2>Del caso de uso al workflow.</h2>
+
+        <p>Un demo puede vivir aislado. Un workflow no.</p>
+
+        <p>
+          Un workflow tiene que convivir con datos, permisos, excepciones, usuarios, equipos y procesos existentes. Tiene que saber qué pasa cuando falta información, cuándo escalar a una persona y cómo dejar suficiente trazabilidad para que las personas confíen en lo que está haciendo.
+        </p>
+
+        <p>Ahí aparece el verdadero trabajo de producto.</p>
+
+        <p>
+          La IA empieza a generar leverage cuando deja de ser el centro de la experiencia y se convierte en una capa dentro del sistema.
+        </p>
+
+        <h2>La organización también tiene que cambiar.</h2>
+
+        <p>Implementar IA no se trata solo de integrar una API o elegir un modelo.</p>
+
+        <p>
+          También cambia cómo los equipos definen procesos, qué tareas siguen siendo manuales, dónde se necesita supervisión y qué nuevas capacidades tienen que aprender las personas.
+        </p>
+
+        <p>
+          En muchos casos, la barrera más difícil no es técnica. Es diseñar un workflow que el equipo entienda, en el que confíe y que realmente quiera usar.
+        </p>
+
+        <h2>Con qué me quedé.</h2>
+
+        <p>
+          La parte más valiosa de la semana fue comparar cómo distintos equipos están resolviendo problemas similares desde contextos diferentes.
+        </p>
+
+        <p>
+          La IA empieza a sentirse menos como una categoría independiente y más como una capacidad que entra silenciosamente en producto, growth, operaciones y servicio.
+        </p>
+
+        <p>
+          Y quizás esa sea la señal más interesante: cuando deja de ser la historia principal y simplemente empieza a hacer que el sistema funcione mejor.
+        </p>
+
+        <div class="article-end">
+          <div class="article-author">
+            <span class="article-author-avatar">
+              <img src="/images/profile-0.jpg" alt="Felipe Quiroz">
+            </span>
+            <div class="article-author-copy">
+              <strong>Felipe Quiroz</strong>
+              Producto · Growth · Operaciones
+            </div>
+          </div>
+          <div>
+            Reflexiones sobre producto, startups, IA y sistemas.<br>
+            Santiago / CL
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+  <section class="next-article">
+    <div class="next-inner">
+      <div class="next-label">Seguir leyendo</div>
+      <a class="next-link" href="/es/blog">
+        <small>Blog →</small>
+        <h2>Ideas sobre construir mejor.</h2>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Felipe Quiroz</div>
+      <div class="footer-copy">Producto, Growth & Operaciones. Construyendo productos, sistemas de growth y compañías entre tecnología y negocio.</div>
+    </div>
+
+    <div class="footer-col">
+      <strong>Explorar</strong>
+      <a href="/es/#work">Trabajo</a>
+      <a href="/es/about">Sobre mí</a>
+      <a href="/es/now">Ahora</a>
+      <a href="/blog">Blog</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Social</strong>
+      <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Contacto</strong>
+      <a href="mailto:felipe@lowsignal.cl">felipe@lowsignal.cl</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 Felipe Quiroz</div>
+    <div>Santiago / CL</div>
+  </div>
+</footer>
+
+</body>
+</html>
