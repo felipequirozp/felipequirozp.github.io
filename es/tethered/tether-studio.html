@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Tether Studio | Felipe Quiroz</title>
+  <meta name="description" content="Una plataforma de fotografía escolar habilitada por IA que centraliza retratos, eventos, anuarios, consentimientos, acceso de familias y administración escolar en un solo workflow digital.">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="canonical" href="https://felipequirozp.cl/es/tethered/tether-studio">
+  <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/tethered/tether-studio">
+  <link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/tethered/tether-studio">
+  <link rel="alternate" hreflang="x-default" href="https://felipequirozp.cl/tethered/tether-studio">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Tether Studio">
+  <meta property="og:description" content="Una plataforma de fotografía escolar habilitada por IA que centraliza retratos, eventos, anuarios, consentimientos, acceso de familias y administración escolar en un solo workflow digital.">
+  <meta property="og:url" content="https://felipequirozp.cl/es/tethered/tether-studio">
+  <meta property="og:image" content="https://felipequirozp.cl/logos/tether-studio-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --ink:#0b1117;
+      --muted:#5f6b78;
+      --line:#e1e6eb;
+      --soft:#f3f6f9;
+      --blue:#1467d8;
+      --blue-soft:#a8b4c3;
+      --dark:#05070a;
+      --page:clamp(22px,4vw,64px);
+      --max:1520px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;background:#fff;color:var(--ink);
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+    }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    ::selection{background:var(--blue);color:#fff}
+    .section-label{color:#748397;font-size:10px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+
+    .nav{
+      position:sticky;top:0;z-index:1000;
+      min-height:76px;padding:0 var(--page);
+      display:flex;align-items:center;justify-content:space-between;gap:28px;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid rgba(11,17,23,.08);
+      backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+    }
+    .brand{
+      font-family:Manrope,sans-serif;font-size:22px!important;font-weight:600;
+      letter-spacing:-.045em;white-space:nowrap;
+    }
+    .nav-center,.nav-right{display:flex;align-items:center;gap:28px}
+    .nav a{font-size:11px;font-weight:500;color:#1a232d}
+    .nav-center a,.nav-right a:not(.lang){position:relative}
+    .nav-center a::after,.nav-right a:not(.lang)::after{
+      content:"";position:absolute;left:0;bottom:-7px;width:0;height:1px;
+      background:#111820;transition:width .2s ease;
+    }
+    .nav-center a:hover::after,.nav-center a.active::after,.nav-right a:not(.lang):hover::after{width:100%}
+    .lang{
+      width:38px;height:38px;display:grid;place-items:center;
+      border:1px solid #d7dde4;border-radius:50%;
+      font-size:10px!important;letter-spacing:.04em;transition:.2s ease;
+    }
+    .lang:hover{background:#0b1117;color:#fff;border-color:#0b1117}
+
+    .hero{padding:86px var(--page) 104px;background:#fff}
+    .hero-inner{width:min(var(--max),100%);margin:0 auto}
+    .hero-top{display:flex;justify-content:space-between;align-items:center;gap:30px;margin-bottom:68px}
+    .studio-mark{
+      display:inline-flex;align-items:center;justify-content:center;
+      min-height:62px;padding:11px 18px;border:1px solid #dde3e9;
+      border-radius:16px;background:#fff;
+    }
+    .studio-mark img{width:auto;height:38px;max-width:240px;object-fit:contain}
+    .hero-meta{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .hero-meta span{
+      min-height:40px;padding:0 14px;display:inline-flex;align-items:center;
+      border:1px solid #d8dee5;border-radius:999px;background:#f7f9fb;
+      color:#667281;font-size:10px;font-weight:600;
+    }
+    .hero-kicker{margin-bottom:24px;color:var(--blue);font-size:12px;font-weight:600}
+    .hero h1{
+      margin:0;max-width:1260px;
+      font-family:Manrope,sans-serif;font-size:clamp(72px,7.6vw,124px);
+      line-height:1.01;letter-spacing:-.072em;font-weight:500;
+    }
+    .hero h1 span{display:block;color:var(--blue-soft)}
+    .hero-bottom{
+      margin-top:52px;padding-top:28px;border-top:1px solid var(--line);
+      display:grid;grid-template-columns:minmax(0,1.08fr) minmax(280px,.48fr);
+      gap:clamp(48px,8vw,120px);
+    }
+    .hero-description{margin:0;max-width:850px;color:var(--muted);font-size:17px;line-height:1.76}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+    .hero-btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      min-height:46px;padding:0 18px;border-radius:999px;
+      font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+      border:1px solid #d8dee5;background:#fff;
+    }
+    .hero-btn.primary{background:#0b1117;color:#fff;border-color:#0b1117}
+    .hero-role strong{
+      display:block;font-family:Manrope,sans-serif;font-size:22px;font-weight:500;letter-spacing:-.035em;
+    }
+    .hero-role span{display:block;margin-top:7px;color:#74808d;font-size:12px;line-height:1.5}
+
+    .impact{padding:112px var(--page) 122px;background:var(--soft)}
+    .impact-head{
+      width:min(var(--max),100%);margin:0 auto 54px;
+      display:flex;justify-content:space-between;align-items:end;gap:40px;
+    }
+    .impact-head h2{
+      margin:14px 0 0;max-width:880px;
+      font-family:Manrope,sans-serif;font-size:clamp(48px,5vw,76px);
+      line-height:1.05;letter-spacing:-.055em;font-weight:500;
+    }
+    .impact-head h2 span{display:block;color:#93a4b8}
+    .impact-head p{margin:0;max-width:520px;color:var(--muted);font-size:15px;line-height:1.72}
+    .impact-grid{
+      width:min(var(--max),100%);margin:0 auto;display:grid;
+      grid-template-columns:repeat(4,1fr);gap:22px;
+    }
+    .impact-card{
+      min-height:250px;padding:30px;border-radius:24px;background:#fff;border:1px solid #e1e6eb;
+    }
+    .impact-card strong{
+      display:block;font-family:Manrope,sans-serif;
+      font-size:clamp(44px,4.2vw,68px);font-weight:500;letter-spacing:-.06em;
+    }
+    .impact-card span{
+      display:block;margin-top:28px;max-width:230px;
+      color:#677381;font-size:13px;line-height:1.6;
+    }
+
+    .role{padding:112px var(--page);background:#fff}
+    .role-grid{
+      width:min(var(--max),100%);margin:0 auto;
+      display:grid;grid-template-columns:minmax(180px,.28fr) minmax(0,1.1fr);
+      gap:clamp(50px,8vw,130px);
+    }
+    .role-main h2{
+      margin:14px 0 28px;max-width:900px;
+      font-family:Manrope,sans-serif;font-size:clamp(48px,5.5vw,84px);
+      line-height:1.03;letter-spacing:-.063em;font-weight:500;
+    }
+    .role-main>p{margin:0 0 18px;max-width:880px;color:var(--muted);font-size:15px;line-height:1.8}
+    .snapshot{
+      margin-top:42px;display:grid;grid-template-columns:repeat(4,1fr);
+      border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    }
+    .snapshot-item{padding:24px 20px;border-right:1px solid var(--line)}
+    .snapshot-item:last-child{border-right:0}
+    .snapshot-label{color:#85909d;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .snapshot-value{margin-top:10px;color:#17202c;font-size:14px;line-height:1.55}
+    .snapshot-focus{margin-top:18px;display:flex;flex-wrap:wrap;gap:9px}
+    .snapshot-focus span{
+      padding:9px 12px;border:1px solid #d7dde4;border-radius:999px;
+      background:#fff;color:#293646;font-size:10px;font-weight:600;
+    }
+
+    .product{padding:112px var(--page);background:var(--dark);color:#fff}
+    .product .section-label{color:#67b4ff}
+    .product-head{
+      width:min(var(--max),100%);margin:0 auto 54px;
+      display:grid;grid-template-columns:minmax(0,1.08fr) minmax(320px,.52fr);
+      gap:clamp(50px,8vw,120px);align-items:end;
+    }
+    .product h2{
+      margin:14px 0 0;max-width:860px;
+      font-family:Manrope,sans-serif;font-size:clamp(48px,5vw,78px);
+      line-height:1.02;letter-spacing:-.06em;font-weight:500;
+    }
+    .product h2 span{display:block}
+    .product h2 span:last-child{color:#9bb0c8}
+    .product-head>p{margin:0;color:#9aa4b0;font-size:15px;line-height:1.76}
+    .product-note{
+      width:min(var(--max),100%);margin:0 auto 28px;padding:18px 0;
+      display:grid;grid-template-columns:180px 1fr;gap:30px;
+      border-top:1px solid rgba(255,255,255,.11);
+      border-bottom:1px solid rgba(255,255,255,.11);
+    }
+    .product-note strong{color:#62b1ff;font-size:10px;letter-spacing:.11em;text-transform:uppercase}
+    .product-note p{margin:0;color:#a8b1bc;font-size:13px;line-height:1.7}
+    .product-grid{
+      width:min(var(--max),100%);margin:0 auto;display:grid;
+      grid-template-columns:repeat(4,1fr);
+      border-top:1px solid rgba(255,255,255,.11);
+      border-bottom:1px solid rgba(255,255,255,.11);
+    }
+    .product-item{min-height:315px;padding:30px 28px;border-right:1px solid rgba(255,255,255,.11)}
+    .product-item:last-child{border-right:0}
+    .product-num{color:#52606e;font-size:10px;letter-spacing:.1em}
+    .product-item h3{
+      margin:78px 0 8px;font-family:Manrope,sans-serif;
+      font-size:27px;font-weight:500;letter-spacing:-.045em;
+    }
+    .product-type{margin-bottom:14px;color:#67b4ff;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .product-item p{margin:0;color:#909aa6;font-size:13px;line-height:1.72}
+
+    .system{padding:112px var(--page);background:#fff}
+    .system-head{
+      width:min(var(--max),100%);margin:0 auto 52px;
+      display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.55fr);
+      gap:clamp(50px,8vw,120px);align-items:end;
+    }
+    .system h2{
+      margin:14px 0 0;max-width:920px;
+      font-family:Manrope,sans-serif;font-size:clamp(48px,5.25vw,80px);
+      line-height:1.02;letter-spacing:-.06em;font-weight:500;
+    }
+    .system h2 span{display:block}
+    .system h2 span:last-child{color:#9aadc0}
+    .system-head p{margin:0;color:var(--muted);font-size:15px;line-height:1.76}
+    .flow-grid{
+      width:min(var(--max),100%);margin:0 auto;display:grid;
+      grid-template-columns:repeat(3,1fr);
+      border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    }
+    .flow-item{min-height:235px;padding:30px 30px 34px 0}
+    .flow-item+.flow-item{padding-left:30px;border-left:1px solid var(--line)}
+    .flow-item small{color:#718399;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .flow-item strong{
+      display:block;margin-top:26px;font-family:Manrope,sans-serif;
+      font-size:26px;font-weight:500;letter-spacing:-.04em;
+    }
+    .flow-item p{margin:12px 0 0;color:#5f6b79;font-size:13px;line-height:1.72}
+
+    .building{padding:112px var(--page);background:var(--soft)}
+    .building-head{
+      width:min(var(--max),100%);margin:0 auto 50px;
+      display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.55fr);
+      gap:clamp(50px,8vw,120px);align-items:end;
+    }
+    .building h2{
+      margin:14px 0 0;max-width:900px;
+      font-family:Manrope,sans-serif;font-size:clamp(48px,5.5vw,84px);
+      line-height:1.03;letter-spacing:-.063em;font-weight:500;
+    }
+    .building h2 span{display:block}
+    .building h2 span:last-child{color:#8fa0b5}
+    .building-head p{margin:0;color:var(--muted);font-size:15px;line-height:1.76}
+    .work-list{
+      width:min(var(--max),100%);margin:0 auto;display:grid;
+      grid-template-columns:1fr 1fr;border-top:1px solid var(--line);
+    }
+    .work-item{
+      display:grid;grid-template-columns:52px 1fr;gap:16px;
+      padding:26px 0;border-bottom:1px solid var(--line);
+    }
+    .work-item:nth-child(odd){padding-right:34px;border-right:1px solid var(--line)}
+    .work-item:nth-child(even){padding-left:34px}
+    .work-num{color:#8a96a4;font-size:9px;letter-spacing:.09em;padding-top:4px}
+    .work-item strong{
+      font-family:Manrope,sans-serif;font-size:20px;font-weight:500;
+      line-height:1.35;letter-spacing:-.03em;
+    }
+
+    .learning{padding:124px var(--page);background:#fff}
+    .learning-inner{width:min(var(--max),100%);margin:0 auto;text-align:center}
+    .learning h2{
+      margin:20px auto 0;max-width:1120px;
+      font-family:Manrope,sans-serif;font-size:clamp(58px,6.2vw,94px);
+      line-height:1.03;letter-spacing:-.067em;font-weight:500;
+    }
+    .learning h2 span{display:block;color:#a8b4c3}
+    .learning-grid{
+      max-width:980px;margin:58px auto 0;display:grid;grid-template-columns:1fr 1fr;
+      border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:left;
+    }
+    .learning-item{padding:30px 34px;min-height:190px}
+    .learning-item:first-child{border-right:1px solid var(--line)}
+    .learning-item small{color:#6e84a0;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .learning-item strong{
+      display:block;margin-top:18px;font-family:Manrope,sans-serif;
+      font-size:27px;font-weight:500;letter-spacing:-.04em;
+    }
+    .learning-item p{margin:12px 0 0;color:#697481;font-size:13px;line-height:1.72}
+
+    .project-nav{padding:74px var(--page);background:var(--soft);border-top:1px solid var(--line)}
+    .project-nav-inner{
+      width:min(var(--max),100%);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;
+      border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    }
+    .project-nav a{padding:28px 0;transition:.2s ease}
+    .project-nav a:last-child{text-align:right;border-left:1px solid var(--line);padding-left:30px}
+    .project-nav a:first-child{padding-right:30px}
+    .project-nav a:hover{background:#fff;padding-left:18px;padding-right:18px}
+    .project-nav-label{color:#85919f;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .project-nav strong{
+      display:block;margin-top:8px;font-family:Manrope,sans-serif;
+      font-size:28px;font-weight:500;letter-spacing:-.04em;
+    }
+
+    .footer{padding:72px var(--page) 34px;background:#fff;border-top:1px solid var(--line)}
+    .footer-grid{
+      width:min(var(--max),100%);margin:0 auto;
+      display:grid;grid-template-columns:1.2fr repeat(3,.7fr);gap:50px;
+    }
+    .footer-brand{font-family:Manrope,sans-serif;font-size:30px;letter-spacing:-.045em;font-weight:600}
+    .footer-copy{margin-top:14px;max-width:360px;color:var(--muted);font-size:13px;line-height:1.7}
+    .footer-col strong{display:block;margin-bottom:14px;font-size:12px;font-weight:700}
+    .footer-col a{display:block;margin:10px 0;color:#5f6b78;font-size:13px}
+    .footer-col a:hover{color:#0b1117}
+    .footer-bottom{
+      width:min(var(--max),100%);margin:54px auto 0;padding-top:24px;
+      display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);
+      color:#7b8794;font-size:10px;letter-spacing:.04em;text-transform:uppercase;
+    }
+
+    @media(max-width:1100px){
+      .impact-grid,.product-grid{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:900px){
+      .hero-bottom,.role-grid,.product-head,.system-head,.building-head{grid-template-columns:1fr}
+      .impact-head{flex-direction:column;align-items:flex-start}
+      .snapshot{grid-template-columns:1fr 1fr}
+      .flow-grid{grid-template-columns:1fr}
+      .flow-item+.flow-item{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+      .work-list{grid-template-columns:1fr}
+      .work-item:nth-child(odd){padding-right:0;border-right:0}
+      .work-item:nth-child(even){padding-left:0}
+    }
+    @media(max-width:860px){.nav-center{display:none}}
+    @media(max-width:640px){
+      .nav{min-height:68px}
+      .brand{font-size:20px!important}
+      .nav-right{gap:14px}
+      .nav-right a:not(.lang):nth-child(2){display:none}
+      .hero{padding-top:58px;padding-bottom:80px}
+      .hero-top{align-items:flex-start;flex-direction:column;margin-bottom:48px}
+      .hero-meta{justify-content:flex-start}
+      .studio-mark img{height:32px;max-width:210px}
+      .hero h1{font-size:clamp(54px,14vw,78px)}
+      .hero-description{font-size:15px}
+      .impact,.role,.product,.system,.building,.learning{padding-top:82px;padding-bottom:88px}
+      .impact-grid,.product-grid,.snapshot,.learning-grid{grid-template-columns:1fr}
+      .impact-card{min-height:210px}
+      .snapshot-item{border-right:0;border-bottom:1px solid var(--line)}
+      .snapshot-item:last-child{border-bottom:0}
+      .product-item{border-right:0;border-bottom:1px solid rgba(255,255,255,.11)}
+      .product-item:last-child{border-bottom:0}
+      .product-note{grid-template-columns:1fr;gap:10px}
+      .learning-item:first-child{border-right:0;border-bottom:1px solid var(--line)}
+      .project-nav-inner{grid-template-columns:1fr}
+      .project-nav a:last-child{text-align:left;border-left:0;border-top:1px solid var(--line);padding-left:0}
+      .footer-grid{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column}
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="nav">
+  <a class="brand" href="/es/">Felipe Quiroz</a>
+  <nav class="nav-center" aria-label="Primary">
+    <a href="/es/#work" class="active">Trabajo</a>
+    <a href="/es/about">Sobre mí</a>
+    <a href="/es/now">Ahora</a>
+    <a href="/es/blog">Blog</a>
+  </nav>
+  <div class="nav-right">
+    <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="lang" href="/tethered/tether-studio" aria-label="Cambiar a inglés">EN</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-top">
+        <a class="studio-mark" href="https://tetherstudio.ai/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Tether Studio">
+          <img src="/logos/tether-studio-logo.png" alt="Tether Studio">
+        </a>
+
+        <div class="hero-meta">
+          <span>Caso de estudio / 04</span>
+          <span>Producto con IA</span>
+          <span>Operaciones escolares</span>
+        </div>
+      </div>
+
+      <div class="hero-kicker">Producto / IA / Operaciones</div>
+
+      <h1>Tether<span>Studio.</span></h1>
+
+      <div class="hero-bottom">
+        <div>
+          <p class="hero-description">
+            Una plataforma de fotografía escolar habilitada por IA que centraliza retratos, eventos, anuarios, consentimientos, acceso de familias y administración escolar en un solo workflow digital.
+          </p>
+
+          <div class="hero-actions">
+            <a class="hero-btn primary" href="https://tetherstudio.ai/" target="_blank" rel="noopener noreferrer">Visitar sitio ↗</a>
+            <a class="hero-btn" href="#workflow">Ver el workflow ↓</a>
+          </div>
+        </div>
+
+        <div class="hero-role">
+          <strong>Tether Studio</strong>
+          <span>Product building &amp; positioning</span>
+          <span>Equipos escolares · Familias · Workflow habilitado por IA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="impact">
+    <div class="impact-head">
+      <div>
+        <div class="section-label">01 / Impacto</div>
+        <h2>Menos trabajo manual.<span>Un workflow mucho más simple.</span></h2>
+      </div>
+      <p>Tether Studio reunió procesos de fotografía escolar que antes estaban separados en una sola experiencia digital para equipos escolares y familias.</p>
+    </div>
+
+    <div class="impact-grid">
+      <article class="impact-card"><strong>−82%</strong><span>Horas operacionales</span></article>
+      <article class="impact-card"><strong>6 weeks</strong><span>Para lanzar</span></article>
+      <article class="impact-card"><strong>1 platform</strong><span>5 etapas en un solo workflow</span></article>
+      <article class="impact-card"><strong>100%</strong><span>Consentimientoimiento auditable</span></article>
+    </div>
+  </section>
+
+  <section class="role">
+    <div class="role-grid">
+      <div class="section-label">02 / Mi rol</div>
+
+      <div class="role-main">
+        <h2>Convirtiendo necesidades operacionales en producto.</h2>
+
+        <p>Trabajé en product building y positioning, conectando las necesidades operacionales de los colegios con una experiencia digital más simple para equipos y familias.</p>
+
+        <p>El trabajo combinó entender el problema, dar forma a la propuesta de valor y traducir procesos escolares en una experiencia capaz de centralizar fotografía, consentimientos, acceso de familias y administración.</p>
+
+        <div class="snapshot">
+          <div class="snapshot-item">
+            <div class="snapshot-label">Producto</div>
+            <div class="snapshot-value">Tether Studio</div>
+          </div>
+          <div class="snapshot-item">
+            <div class="snapshot-label">Categoría</div>
+            <div class="snapshot-value">Producto con IA / Operaciones escolares</div>
+          </div>
+          <div class="snapshot-item">
+            <div class="snapshot-label">Contribución</div>
+            <div class="snapshot-value">Product building &amp; positioning</div>
+          </div>
+          <div class="snapshot-item">
+            <div class="snapshot-label">Usuarios</div>
+            <div class="snapshot-value">Equipos escolares &amp; familias</div>
+          </div>
+        </div>
+
+        <div class="snapshot-focus">
+          <span>Product building</span>
+          <span>Positioning</span>
+          <span>Operaciones escolares</span>
+          <span>Experiencia de familias</span>
+          <span>Workflow habilitado por IA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="product" id="workflow">
+    <div class="product-head">
+      <div>
+        <div class="section-label">03 / Producto</div>
+        <h2>
+          <span>De procesos fragmentados</span>
+          <span>a un solo workflow digital.</span>
+        </h2>
+      </div>
+
+      <p>Tether Studio centralizó toda la operación de fotografía escolar, reduciendo coordinación manual y aumentando la trazabilidad en toda la experiencia.</p>
+    </div>
+
+    <div class="product-note">
+      <strong>1 plataforma · 5 etapas</strong>
+      <p>Retratos, eventos, anuarios, consentimientos, acceso de familias y administración conectados dentro de la misma experiencia operacional.</p>
+    </div>
+
+    <div class="product-grid">
+      <article class="product-item">
+        <div class="product-num">01</div>
+        <h3>Retratos</h3>
+        <div class="product-type">Fotografía</div>
+        <p>Fotografía escolar gestionada dentro de un workflow digital centralizado.</p>
+      </article>
+
+      <article class="product-item">
+        <div class="product-num">02</div>
+        <h3>Eventos &amp; anuarios</h3>
+        <div class="product-type">Momentos escolares</div>
+        <p>Contenido escolar conectado a la misma operación y administración.</p>
+      </article>
+
+      <article class="product-item">
+        <div class="product-num">03</div>
+        <h3>Consentimiento</h3>
+        <div class="product-type">Compliance</div>
+        <p>Consentimiento trazable y auditable integrado al proceso.</p>
+      </article>
+
+      <article class="product-item">
+        <div class="product-num">04</div>
+        <h3>Portal de familias</h3>
+        <div class="product-type">Acceso de familias</div>
+        <p>Una experiencia digital más simple para acceder e interactuar con contenido escolar.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="system">
+    <div class="system-head">
+      <div>
+        <div class="section-label">04 / Sistema</div>
+        <h2>
+          <span>Una operación conectada</span>
+          <span>de principio a fin.</span>
+        </h2>
+      </div>
+
+      <p>El valor no estaba en digitalizar una tarea aislada, sino en conectar colegios, familias, consentimientos y administración dentro del mismo sistema.</p>
+    </div>
+
+    <div class="flow-grid">
+      <article class="flow-item">
+        <small>Equipos escolares</small>
+        <strong>Menos coordinación manual</strong>
+        <p>Una plataforma para procesos que antes requerían más horas operacionales y seguimiento.</p>
+      </article>
+
+      <article class="flow-item">
+        <small>Familias</small>
+        <strong>Acceso más simple</strong>
+        <p>Una experiencia digital diseñada alrededor de la relación entre el colegio y sus familias.</p>
+      </article>
+
+      <article class="flow-item">
+        <small>Operaciones</small>
+        <strong>Mayor trazabilidad</strong>
+        <p>Consentimiento and administration integrated into the same workflow with auditable information.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="building">
+    <div class="building-head">
+      <div>
+        <div class="section-label">05 / Product building</div>
+        <h2>
+          <span>Del problema operacional</span>
+          <span>a una propuesta clara.</span>
+        </h2>
+      </div>
+
+      <p>Mi contribución se enfocó en conectar lo que los colegios necesitaban resolver con una experiencia de producto más simple y una propuesta de valor fácil de entender.</p>
+    </div>
+
+    <div class="work-list">
+      <div class="work-item"><div class="work-num">01</div><strong>Entender las necesidades operacionales de los colegios</strong></div>
+      <div class="work-item"><div class="work-num">02</div><strong>Conectar pain points operacionales con decisiones de producto</strong></div>
+      <div class="work-item"><div class="work-num">03</div><strong>Construir una experiencia más simple para equipos escolares</strong></div>
+      <div class="work-item"><div class="work-num">04</div><strong>Incorporar la experiencia de las familias dentro del workflow</strong></div>
+      <div class="work-item"><div class="work-num">05</div><strong>Dar forma al positioning y a la propuesta de valor</strong></div>
+      <div class="work-item"><div class="work-num">06</div><strong>Traducir eficiencia operacional en valor de producto</strong></div>
+    </div>
+  </section>
+
+  <section class="learning">
+    <div class="learning-inner">
+      <div class="section-label">06 / Aprendizajes</div>
+
+      <h2>Menos fricción.<span>Mejores operaciones.</span></h2>
+
+      <div class="learning-grid">
+        <article class="learning-item">
+          <small>01 / Product</small>
+          <strong>Centralizar también es diseño.</strong>
+          <p>Conectar procesos puede transformar la experiencia cuando elimina coordinación, pasos y decisiones innecesarias.</p>
+        </article>
+
+        <article class="learning-item">
+          <small>02 / Operaciones</small>
+          <strong>La eficiencia es parte de la experiencia.</strong>
+          <p>Reducir horas operacionales mejora tanto los workflows de los equipos como la forma en que las familias interactúan con el servicio.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-nav">
+    <div class="project-nav-inner">
+      <a href="/es/tethered/transformacion-educativa-impulsada-por-ia">
+        <div class="project-nav-label">Proyecto anterior</div>
+        <strong>Transformación Educativa impulsada por IA</strong>
+      </a>
+
+      <a href="/es/tethereducation">
+        <div class="project-nav-label">Volver</div>
+        <strong>TetherEducation</strong>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Felipe Quiroz</div>
+      <div class="footer-copy">Producto, Growth & Operaciones. Construyendo productos, sistemas de growth y compañías entre tecnología y negocio.</div>
+    </div>
+
+    <div class="footer-col">
+      <strong>Explorar</strong>
+      <a href="/es/#work">Trabajo</a>
+      <a href="/es/about">Sobre mí</a>
+      <a href="/es/now">Ahora</a>
+      <a href="/es/blog">Blog</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Social</strong>
+      <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Contacto</strong>
+      <a href="mailto:felipe@lowsignal.cl">felipe@lowsignal.cl</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 Felipe Quiroz</div>
+    <div>Santiago / CL</div>
+  </div>
+</footer>
+
+</body>
+</html>
