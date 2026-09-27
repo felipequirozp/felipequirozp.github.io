@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Partnerships is more than closing deals | Felipe Quiroz</title>
+  <meta name="description" content="A reflection from my time as Head of Partnerships at TetherEd on how partnerships connect product, growth, learning and execution inside a complex ecosystem.">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="canonical" href="https://felipequirozp.cl/blog/partnerships-infrastructure">
+  <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/blog/partnerships-infrastructure">
+  <link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/blog/partnerships-infrastructure">
+  <link rel="alternate" hreflang="x-default" href="https://felipequirozp.cl/blog/partnerships-infrastructure">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Partnerships is more than closing deals">
+  <meta property="og:description" content="What leading partnerships at TetherEd taught me about connecting product, institutions and growth.">
+  <meta property="og:url" content="https://felipequirozp.cl/blog/partnerships-infrastructure">
+  <meta property="og:image" content="https://felipequirozp.cl/images/tethered-kiri-partnerships-2025.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --ink:#0b1117;
+      --muted:#5f6b78;
+      --line:#e2e7ec;
+      --soft:#f3f6f9;
+      --blue:#1467d8;
+      --page:clamp(22px,4vw,64px);
+      --max:1520px;
+      --article:780px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:#fff;
+      color:var(--ink);
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    ::selection{background:var(--blue);color:#fff}
+
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      min-height:76px;
+      padding:0 var(--page);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid rgba(11,17,23,.08);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+    .brand{
+      font-family:Manrope,sans-serif;
+      font-size:22px!important;
+      font-weight:600;
+      letter-spacing:-.045em;
+      white-space:nowrap;
+    }
+    .nav-center,.nav-right{display:flex;align-items:center;gap:28px}
+    .nav a{font-size:11px;font-weight:500;color:#1a232d}
+    .nav-center a,.nav-right a:not(.lang){position:relative}
+    .nav-center a::after,.nav-right a:not(.lang)::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-7px;
+      width:0;
+      height:1px;
+      background:#111820;
+      transition:width .2s ease;
+    }
+    .nav-center a:hover::after,.nav-center a.active::after,.nav-right a:not(.lang):hover::after{width:100%}
+    .lang{
+      width:38px;height:38px;
+      display:grid;place-items:center;
+      border:1px solid #d7dde4;
+      border-radius:50%;
+      font-size:10px!important;
+      letter-spacing:.04em;
+      transition:.2s ease;
+    }
+    .lang:hover{background:#0b1117;color:#fff;border-color:#0b1117}
+
+    .article-hero{
+      padding:92px var(--page) 74px;
+      background:#fff;
+    }
+    .article-hero-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+    }
+    .article-meta{
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      align-items:center;
+      margin-bottom:56px;
+    }
+    .article-meta-left{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .article-meta-left span{
+      min-height:38px;
+      padding:0 13px;
+      display:inline-flex;
+      align-items:center;
+      border:1px solid #d8dee5;
+      border-radius:999px;
+      background:#f7f9fb;
+      color:#667281;
+      font-size:9px;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+    }
+    .article-back{
+      color:#6d7885;
+      font-size:11px;
+      font-weight:600;
+      transition:.2s ease;
+    }
+    .article-back:hover{color:#0b1117}
+    .article-title{
+      margin:0;
+      max-width:1260px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(64px,7vw,112px);
+      line-height:1.01;
+      letter-spacing:-.068em;
+      font-weight:500;
+    }
+    .article-title span{
+      display:block;
+      color:#a8b4c3;
+    }
+    .article-deck{
+      margin:38px 0 0;
+      max-width:820px;
+      color:var(--muted);
+      font-size:18px;
+      line-height:1.75;
+    }
+
+    .hero-media{
+      padding:0 var(--page) 90px;
+      background:#fff;
+    }
+    .hero-media-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+    }
+    .hero-media-frame{
+      overflow:hidden;
+      border-radius:28px;
+      background:#e8edf2;
+    }
+    .hero-media img{
+      width:100%;
+      aspect-ratio:16/8.6;
+      object-fit:cover;
+      object-position:center 44%;
+    }
+    .image-caption{
+      padding-top:14px;
+      color:#7b8794;
+      font-size:10px;
+      letter-spacing:.02em;
+    }
+
+    .article{
+      padding:108px var(--page) 124px;
+      background:#fff;
+      border-top:1px solid var(--line);
+    }
+    .article-layout{
+      width:min(1180px,100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:220px minmax(0,var(--article));
+      gap:90px;
+      justify-content:center;
+      align-items:start;
+    }
+    .article-aside{
+      position:sticky;
+      top:112px;
+      color:#85909d;
+      font-size:10px;
+      line-height:1.65;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .article-aside strong{
+      display:block;
+      margin-bottom:12px;
+      color:#1c2732;
+      font-family:Manrope,sans-serif;
+      font-size:17px;
+      font-weight:500;
+      line-height:1.4;
+      letter-spacing:-.025em;
+      text-transform:none;
+    }
+    .article-body p{
+      margin:0 0 28px;
+      color:#3f4a57;
+      font-size:17px;
+      line-height:1.9;
+    }
+    .article-body .lead{
+      margin-bottom:42px;
+      color:#17202a;
+      font-family:Manrope,sans-serif;
+      font-size:29px;
+      line-height:1.46;
+      letter-spacing:-.035em;
+    }
+    .article-body h2{
+      margin:76px 0 25px;
+      color:#0d141c;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(38px,4vw,56px);
+      font-weight:500;
+      line-height:1.05;
+      letter-spacing:-.055em;
+    }
+    .article-body blockquote{
+      margin:66px 0;
+      padding:34px 0 34px 34px;
+      border-left:2px solid var(--blue);
+      color:#111923;
+      font-family:Manrope,sans-serif;
+      font-size:30px;
+      line-height:1.42;
+      letter-spacing:-.04em;
+    }
+    .article-body ul{
+      margin:28px 0 34px;
+      padding:0;
+      list-style:none;
+      border-top:1px solid var(--line);
+    }
+    .article-body li{
+      padding:18px 0;
+      border-bottom:1px solid var(--line);
+      color:#3d4956;
+      font-size:15px;
+      line-height:1.65;
+    }
+
+    .article-end{
+      margin-top:82px;
+      padding-top:34px;
+      border-top:1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      gap:30px;
+      color:#7b8794;
+      font-size:11px;
+      line-height:1.65;
+    }
+    .article-author{
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+    .article-author-avatar{
+      width:58px;height:58px;
+      flex:0 0 58px;
+      border-radius:50%;
+      overflow:hidden;
+      background:#eef1f4;
+    }
+    .article-author-avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center 8%;
+    }
+    .article-author-copy strong{
+      display:block;
+      margin-bottom:6px;
+      color:#1a2430;
+      font-family:Manrope,sans-serif;
+      font-size:18px;
+      font-weight:500;
+      letter-spacing:-.03em;
+    }
+
+    .next-article{
+      padding:92px var(--page);
+      background:var(--soft);
+    }
+    .next-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:.3fr 1fr;
+      gap:80px;
+      align-items:end;
+    }
+    .next-label{
+      color:#85919f;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+    }
+    .next-link{
+      display:block;
+      padding-top:28px;
+      border-top:1px solid var(--line);
+    }
+    .next-link small{
+      color:#738295;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .next-link h2{
+      margin:16px 0 0;
+      max-width:900px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(40px,4.8vw,70px);
+      font-weight:500;
+      line-height:1.04;
+      letter-spacing:-.06em;
+    }
+    .next-link:hover h2{color:var(--blue)}
+
+    .footer{
+      padding:72px var(--page) 34px;
+      background:#fff;
+      border-top:1px solid var(--line);
+    }
+    .footer-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.2fr repeat(3,.7fr);
+      gap:50px;
+    }
+    .footer-brand{
+      font-family:Manrope,sans-serif;
+      font-size:30px;
+      letter-spacing:-.045em;
+      font-weight:600;
+    }
+    .footer-copy{
+      margin-top:14px;
+      max-width:360px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+    .footer-col strong{
+      display:block;
+      margin-bottom:14px;
+      font-size:12px;
+      font-weight:700;
+    }
+    .footer-col a{
+      display:block;
+      margin:10px 0;
+      color:#5f6b78;
+      font-size:13px;
+    }
+    .footer-col a:hover{color:#0b1117}
+    .footer-bottom{
+      width:min(var(--max),100%);
+      margin:54px auto 0;
+      padding-top:24px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      border-top:1px solid var(--line);
+      color:#7b8794;
+      font-size:10px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    @media(max-width:980px){
+      .article-layout{grid-template-columns:1fr;gap:42px}
+      .article-aside{position:static;max-width:560px}
+      .next-inner{grid-template-columns:1fr;gap:32px}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+
+    @media(max-width:860px){
+      .nav-center{display:none}
+    }
+
+    @media(max-width:640px){
+      .nav{min-height:68px}
+      .brand{font-size:20px!important}
+      .nav-right{gap:14px}
+      .nav-right a:not(.lang):nth-child(2){display:none}
+
+      .article-hero{padding-top:64px;padding-bottom:58px}
+      .article-meta{align-items:flex-start;flex-direction:column;margin-bottom:42px}
+      .article-title{font-size:clamp(48px,13vw,68px)}
+      .article-deck{font-size:15px}
+
+      .hero-media{padding:0 0 60px}
+      .hero-media-frame{border-radius:0}
+      .hero-media img{aspect-ratio:4/3;object-position:center 42%}
+      .image-caption{padding:12px 22px 0}
+
+      .article{padding-top:72px;padding-bottom:88px}
+      .article-body p{font-size:16px;line-height:1.82}
+      .article-body .lead{font-size:23px}
+      .article-body h2{margin-top:58px;font-size:38px}
+      .article-body blockquote{margin:48px 0;padding:26px 0 26px 24px;font-size:25px}
+      .article-end{flex-direction:column}
+
+      .next-article{padding:70px var(--page)}
+      .next-link h2{font-size:40px}
+
+      .footer-grid{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column}
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="nav">
+  <a class="brand" href="/">Felipe Quiroz</a>
+
+  <nav class="nav-center" aria-label="Primary">
+    <a href="/#work">Work</a>
+    <a href="/about">About</a>
+    <a href="/now">Now</a>
+    <a href="/blog" class="active">Blog</a>
+  </nav>
+
+  <div class="nav-right">
+    <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="lang" href="/es/blog/partnerships-infrastructure" aria-label="Switch language">ES</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <div class="article-meta">
+        <div class="article-meta-left">
+          <span>Partnerships</span>
+          <span>Startups</span>
+          <span>Education</span>
+          <span>December 2025</span>
+        </div>
+        <a class="article-back" href="/blog">← Back to blog</a>
+      </div>
+
+      <h1 class="article-title">
+        Partnerships
+        <span>is more than closing deals.</span>
+      </h1>
+
+      <p class="article-deck">
+        In May 2025, I stepped into the Head of Partnerships role at TetherEd with the mission of building and strengthening strategic relationships that could connect product, institutions and growth across the education ecosystem.
+      </p>
+    </div>
+  </section>
+
+  <section class="hero-media">
+    <div class="hero-media-inner">
+      <div class="hero-media-frame">
+        <img src="/images/tethered-kiri-partnerships-2025.png" alt="TetherEd and Fundación Kiri meeting in Santiago">
+      </div>
+      <div class="image-caption">TetherEd × Fundación Kiri · Santiago, Chile · December 2025</div>
+    </div>
+  </section>
+
+  <article class="article">
+    <div class="article-layout">
+
+      <aside class="article-aside">
+        <strong>One idea I still come back to.</strong>
+        In complex ecosystems, partnerships is not only a commercial function. It is also infrastructure for learning, coordination and better execution.
+      </aside>
+
+      <div class="article-body">
+
+        <p class="lead">
+          In May 2025, I stepped into the Head of Partnerships role at TetherEd. In simple terms, the mission was to build and strengthen strategic relationships that could expand the company’s impact across the education ecosystem.
+        </p>
+
+        <p>
+          At first, partnerships could sound like a fairly straightforward function: start conversations, build alliances and find growth opportunities. But the deeper I got into the work, the clearer it became that the role was much broader than that.
+        </p>
+
+        <p>
+          It was not only about connecting organizations. It was about connecting different capabilities, timelines, interests and needs around a shared problem.
+        </p>
+
+        <blockquote>
+          Partnerships is not only a growth function. It is also a way of building.
+        </blockquote>
+
+        <h2>What the partnerships role actually does.</h2>
+
+        <p>
+          A strong partnership does not begin or end with an introduction, a meeting or an announcement. What matters is what new capability becomes possible because of that relationship.
+        </p>
+
+        <p>
+          Sometimes that capability is distribution. Other times it is access to new communities, market learning, legitimacy, implementation, institutional knowledge or a better understanding of the problem you are trying to solve.
+        </p>
+
+        <p>
+          That is why I started to see the role less as a commercial layer on top of the business and more as a function that connects different parts of the company with the outside world.
+        </p>
+
+        <h2>Partnerships as infrastructure.</h2>
+
+        <p>
+          In education, that connection is especially important. Schools, foundations, universities, education operators, public organizations and startups all operate with different contexts, timelines and incentives.
+        </p>
+
+        <p>
+          A startup can move quickly, experiment and build product. An education organization can bring local knowledge, trust and a deep understanding of the people it is trying to reach.
+        </p>
+
+        <p>
+          When those capabilities connect well, the result is not just a partnership. It becomes infrastructure that helps everyone learn and execute better.
+        </p>
+
+        <p>
+          Work with organizations like Fundación Kiri reminded me of exactly that: stepping outside the startup’s internal logic, listening to other perspectives and understanding how different organizations could bring complementary pieces to the same challenge.
+        </p>
+
+        <h2>It is not only about opening doors.</h2>
+
+        <p>
+          One of the most common simplifications of the role is thinking that partnerships is about getting contacts or opening meetings.
+        </p>
+
+        <p>
+          That can be part of the job, but opening a door does not guarantee that anything valuable happens next.
+        </p>
+
+        <p>
+          The interesting part starts when you have to translate an opportunity into something concrete: a pilot, a joint initiative, adoption, implementation, distribution, learning or a relationship that keeps creating value over time.
+        </p>
+
+        <ul>
+          <li>Understand what each side is trying to solve.</li>
+          <li>Identify where real complementarity exists.</li>
+          <li>Translate different interests into an executable initiative.</li>
+          <li>Coordinate internal and external teams so the relationship can move forward.</li>
+          <li>Learn from what happens and adjust how you work.</li>
+        </ul>
+
+        <h2>The value is in connecting capabilities.</h2>
+
+        <p>
+          Partnerships becomes especially powerful when it stops being a relationship between logos and starts connecting real capabilities.
+        </p>
+
+        <p>
+          Product can learn from needs that emerge in the field. Growth can find new distribution paths. Operations can better understand what an implementation needs in order to work. And the external organization can access tools, knowledge or infrastructure it did not have before.
+        </p>
+
+        <p>
+          At that point, the partnership stops being peripheral to the business and starts directly influencing how the company learns and grows.
+        </p>
+
+        <h2>Partnerships matter when they turn into execution.</h2>
+
+        <p>
+          I also learned that a strategic relationship has limited value if it never turns into movement.
+        </p>
+
+        <p>
+          Two organizations can have a lot of affinity, but if no one translates that into ownership, next steps, timelines and a concrete way to measure progress, the relationship ends up staying at the level of intention.
+        </p>
+
+        <p>
+          That is where partnerships overlaps heavily with operations: building trust, yes, but also driving clarity, coordination and follow-through.
+        </p>
+
+        <h2>What the role taught me.</h2>
+
+        <p>
+          Leading partnerships at TetherEd helped me look at growth from a different angle.
+        </p>
+
+        <p>
+          Less as a collection of isolated opportunities, and more as the ability to build relationships that generate learning, execution and sustained impact.
+        </p>
+
+        <p>
+          In complex ecosystems, growth does not always depend only on having a strong product. It often also depends on how well you can connect it with the people, institutions and contexts where that product can actually make sense.
+        </p>
+
+        <p>
+          And that is where partnerships stops being just a function. It starts becoming infrastructure.
+        </p>
+
+        <div class="article-end">
+          <div class="article-author">
+            <span class="article-author-avatar">
+              <img src="/images/profile-0.jpg" alt="Felipe Quiroz">
+            </span>
+            <div class="article-author-copy">
+              <strong>Felipe Quiroz</strong>
+              Product · Growth · Operations · Partnerships
+            </div>
+          </div>
+          <div>
+            Reflections on product, startups, growth and systems.<br>
+            Santiago / CL
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+  <section class="next-article">
+    <div class="next-inner">
+      <div class="next-label">Keep reading</div>
+      <a class="next-link" href="/blog/ai-leaves-the-demo">
+        <small>AI / Startups →</small>
+        <h2>What AI looks like when it leaves the demo</h2>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Felipe Quiroz</div>
+      <div class="footer-copy">Product, Growth & Operations. Building products, growth systems and companies across technology and business.</div>
+    </div>
+
+    <div class="footer-col">
+      <strong>Explore</strong>
+      <a href="/#work">Work</a>
+      <a href="/about">About</a>
+      <a href="/now">Now</a>
+      <a href="/blog">Blog</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Social</strong>
+      <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Contact</strong>
+      <a href="mailto:felipe@lowsignal.cl">felipe@lowsignal.cl</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 Felipe Quiroz</div>
+    <div>Santiago / CL</div>
+  </div>
+</footer>
+
+</body>
+</html>
