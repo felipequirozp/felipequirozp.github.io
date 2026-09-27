@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>404 | Felipe Quiroz</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --ink:#0b1117;
+      --muted:#5f6b78;
+      --line:#e1e6eb;
+      --soft:#f3f6f9;
+      --blue:#1467d8;
+      --steel:#a8b4c3;
+      --page:clamp(22px,4vw,64px);
+      --max:1520px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%}
+    body{
+      min-height:100svh;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:#fff;
+      color:var(--ink);
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    a{color:inherit;text-decoration:none}
+    ::selection{background:var(--blue);color:#fff}
+
+    .page{
+      min-height:100svh;
+      display:flex;
+      flex-direction:column;
+      background:#fff;
+    }
+
+    /* NAV */
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      min-height:76px;
+      padding:0 var(--page);
+      display:grid;
+      grid-template-columns:1fr auto 1fr;
+      align-items:center;
+      gap:28px;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid rgba(11,17,23,.08);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+
+    .brand{
+      font-family:Manrope,sans-serif;
+      font-size:22px;
+      font-weight:600;
+      letter-spacing:-.045em;
+      white-space:nowrap;
+      justify-self:start;
+    }
+
+    .nav-center{
+      display:flex;
+      align-items:center;
+      gap:28px;
+      justify-self:center;
+    }
+
+    .nav-right{
+      display:flex;
+      align-items:center;
+      gap:28px;
+      justify-self:end;
+    }
+
+    .nav a{
+      font-size:11px;
+      font-weight:500;
+      color:#1a232d;
+    }
+
+    .nav-center a,
+    .nav-right a:not(.lang){
+      position:relative;
+    }
+
+    .nav-center a::after,
+    .nav-right a:not(.lang)::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-7px;
+      width:0;
+      height:1px;
+      background:#111820;
+      transition:width .2s ease;
+    }
+
+    .nav-center a:hover::after,
+    .nav-right a:not(.lang):hover::after{
+      width:100%;
+    }
+
+    .lang{
+      width:38px;
+      height:38px;
+      display:grid;
+      place-items:center;
+      border:1px solid #d7dde4;
+      border-radius:50%;
+      font-size:10px!important;
+      letter-spacing:.04em;
+      transition:.2s ease;
+    }
+
+    .lang:hover{
+      background:#0b1117;
+      color:#fff;
+      border-color:#0b1117;
+    }
+
+    /* MAIN */
+    main{
+      flex:1;
+      display:flex;
+      align-items:center;
+      padding:88px var(--page) 110px;
+    }
+
+    .inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:minmax(0,1.1fr) minmax(300px,.48fr);
+      gap:clamp(54px,8vw,130px);
+      align-items:end;
+    }
+
+    .eyebrow{
+      margin-bottom:28px;
+      color:var(--blue);
+      font-size:11px;
+      font-weight:600;
+    }
+
+    .code{
+      margin:0;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(148px,20vw,310px);
+      font-weight:500;
+      line-height:.72;
+      letter-spacing:-.09em;
+      color:#0b1117;
+    }
+
+    .code span{
+      color:var(--steel);
+    }
+
+    h1{
+      margin:62px 0 0;
+      max-width:1050px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(50px,5.6vw,86px);
+      line-height:1.02;
+      letter-spacing:-.064em;
+      font-weight:500;
+    }
+
+    h1 span{
+      display:block;
+      color:var(--steel);
+    }
+
+    .side{
+      padding-top:28px;
+      border-top:1px solid var(--line);
+    }
+
+    .side p{
+      margin:0;
+      max-width:520px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.78;
+    }
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:30px;
+    }
+
+    .btn{
+      min-height:46px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:0 17px;
+      border:1px solid #d6dde4;
+      border-radius:999px;
+      background:#fff;
+      font-size:10px;
+      font-weight:600;
+      letter-spacing:.05em;
+      transition:.2s ease;
+    }
+
+    .btn.primary{
+      background:#0b1117;
+      color:#fff;
+      border-color:#0b1117;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      border-color:#0b1117;
+    }
+
+    .btn.primary:hover{
+      background:#1a232d;
+    }
+
+    /* FOOTER */
+    .footer{
+      padding:68px var(--page) 32px;
+      background:var(--soft);
+      border-top:1px solid var(--line);
+    }
+
+    .footer-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.2fr repeat(3,.7fr);
+      gap:50px;
+    }
+
+    .footer-brand{
+      font-family:Manrope,sans-serif;
+      font-size:30px;
+      letter-spacing:-.045em;
+      font-weight:600;
+    }
+
+    .footer-copy{
+      margin-top:14px;
+      max-width:360px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    .footer-col strong{
+      display:block;
+      margin-bottom:14px;
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .footer-col a{
+      display:block;
+      margin:10px 0;
+      color:#5f6b78;
+      font-size:13px;
+    }
+
+    .footer-col a:hover{
+      color:#0b1117;
+    }
+
+    .footer-bottom{
+      width:min(var(--max),100%);
+      margin:54px auto 0;
+      padding-top:24px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      border-top:1px solid var(--line);
+      color:#7b8794;
+      font-size:10px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    @media(max-width:1000px){
+      .inner{
+        grid-template-columns:1fr;
+        gap:48px;
+      }
+
+      .side{
+        max-width:680px;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media(max-width:860px){
+      .nav{
+        grid-template-columns:1fr auto;
+      }
+
+      .nav-center{
+        display:none;
+      }
+    }
+
+    @media(max-width:640px){
+      .nav{
+        min-height:68px;
+      }
+
+      .brand{
+        font-size:20px;
+      }
+
+      .nav-right{
+        gap:14px;
+      }
+
+      .nav-right a:not(.lang):nth-child(2){
+        display:none;
+      }
+
+      main{
+        padding:68px var(--page) 82px;
+      }
+
+      .eyebrow{
+        margin-bottom:22px;
+      }
+
+      .code{
+        font-size:clamp(116px,40vw,182px);
+      }
+
+      h1{
+        margin-top:44px;
+        font-size:clamp(42px,12vw,58px);
+        line-height:1.05;
+      }
+
+      .side p{
+        font-size:14px;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+
+      .footer-bottom{
+        flex-direction:column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<div class="page">
+
+  <header class="nav">
+    <a class="brand" href="/" id="brand-link">Felipe Quiroz</a>
+
+    <nav class="nav-center" aria-label="Primary">
+      <a href="/#work" id="work-link">Work</a>
+      <a href="/about" id="about-link">About</a>
+      <a href="/now" id="now-link">Now</a>
+      <a href="/blog" id="blog-link">Blog</a>
+    </nav>
+
+    <div class="nav-right">
+      <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="lang" href="/es/" id="lang-link" aria-label="Switch language">ES</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="inner">
+
+      <div>
+        <div class="eyebrow" id="eyebrow">Wrong turn / 404</div>
+
+        <div class="code">4<span>0</span>4</div>
+
+        <h1 id="title">
+          This page got lost.
+          <span>Let’s get you somewhere useful.</span>
+        </h1>
+      </div>
+
+      <div class="side">
+        <p id="copy">
+          The page you’re looking for doesn’t exist, moved somewhere else or never made it past the prototype.
+        </p>
+
+        <div class="actions">
+          <a class="btn primary" href="/" id="home-btn">Back home</a>
+          <a class="btn" href="/#work" id="work-btn">View selected work</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+
+      <div>
+        <div class="footer-brand">Felipe Quiroz</div>
+        <div class="footer-copy" id="footer-copy">
+          Product, Growth & Operations. Building products, growth systems and companies across technology and business.
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <strong id="footer-explore-label">Explore</strong>
+        <a href="/#work" id="footer-work">Work</a>
+        <a href="/about" id="footer-about">About</a>
+        <a href="/now" id="footer-now">Now</a>
+        <a href="/blog" id="footer-blog">Blog</a>
+      </div>
+
+      <div class="footer-col">
+        <strong>Social</strong>
+        <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+
+      <div class="footer-col">
+        <strong id="footer-contact-label">Contact</strong>
+        <a href="mailto:felipe@lowsignal.cl">felipe@lowsignal.cl</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 Felipe Quiroz</div>
+      <div>Santiago / CL</div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  const isEs = location.pathname === "/es" || location.pathname.startsWith("/es/");
+  if(!isEs) return;
+
+  document.documentElement.lang = "es";
+  document.title = "404 | Felipe Quiroz";
+
+  document.getElementById("brand-link").href = "/es/";
+
+  document.getElementById("work-link").href = "/es/#work";
+  document.getElementById("work-link").textContent = "Trabajo";
+
+  document.getElementById("about-link").href = "/es/about";
+  document.getElementById("about-link").textContent = "Sobre mí";
+
+  document.getElementById("now-link").href = "/es/now";
+  document.getElementById("now-link").textContent = "Ahora";
+
+  document.getElementById("blog-link").href = "/es/blog";
+
+  document.getElementById("lang-link").href = "/";
+  document.getElementById("lang-link").textContent = "EN";
+  document.getElementById("lang-link").setAttribute("aria-label","Cambiar a inglés");
+
+  document.getElementById("eyebrow").textContent = "Ruta incorrecta / 404";
+  document.getElementById("title").innerHTML = 'Esta página se perdió.<span>Volvamos a algo útil.</span>';
+  document.getElementById("copy").textContent = "La página que buscas no existe, cambió de lugar o nunca pasó del prototipo.";
+
+  document.getElementById("home-btn").href = "/es/";
+  document.getElementById("home-btn").textContent = "Volver al inicio";
+
+  document.getElementById("work-btn").href = "/es/#work";
+  document.getElementById("work-btn").textContent = "Ver trabajo";
+
+  document.getElementById("footer-copy").textContent = "Producto, Growth & Operaciones. Construyendo productos, sistemas de growth y compañías entre tecnología y negocio.";
+
+  document.getElementById("footer-explore-label").textContent = "Explorar";
+
+  document.getElementById("footer-work").href = "/es/#work";
+  document.getElementById("footer-work").textContent = "Trabajo";
+
+  document.getElementById("footer-about").href = "/es/about";
+  document.getElementById("footer-about").textContent = "Sobre mí";
+
+  document.getElementById("footer-now").href = "/es/now";
+  document.getElementById("footer-now").textContent = "Ahora";
+
+  document.getElementById("footer-blog").href = "/es/blog";
+
+  document.getElementById("footer-contact-label").textContent = "Contacto";
+})();
+</script>
+
+</body>
+</html>
