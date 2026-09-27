@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Blog | Felipe Quiroz</title>
+  <meta name="description" content="Ideas on product, startups, AI, growth, education and operations by Felipe Quiroz.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="canonical" href="https://felipequirozp.cl/blog">
+  <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/blog">
+  <link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/blog">
+  <link rel="alternate" hreflang="x-default" href="https://felipequirozp.cl/blog">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blog | Felipe Quiroz">
+  <meta property="og:description" content="Ideas on building better.">
+  <meta property="og:url" content="https://felipequirozp.cl/blog">
+  <meta property="og:image" content="https://felipequirozp.cl/images/platanus-event.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#fff;
+      --ink:#0b1117;
+      --muted:#5f6b78;
+      --line:#e2e7ec;
+      --soft:#f3f6f9;
+      --blue:#1467d8;
+      --dark:#05070a;
+      --page:clamp(22px,4vw,64px);
+      --max:1520px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:#fff;
+      color:var(--ink);
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    ::selection{background:var(--blue);color:#fff}
+    .section-label{
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:#6f7d8d;
+    }
+
+    /* NAV */
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      min-height:76px;
+      padding:0 var(--page);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid rgba(11,17,23,.08);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+    .brand{
+      font-family:Manrope,sans-serif;
+      font-size:22px!important;
+      font-weight:600;
+      letter-spacing:-.045em;
+      white-space:nowrap;
+    }
+    .nav-center,.nav-right{display:flex;align-items:center;gap:28px}
+    .nav a{font-size:11px;font-weight:500;color:#1a232d}
+    .nav-center a,.nav-right a:not(.lang){position:relative}
+    .nav-center a::after,.nav-right a:not(.lang)::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-7px;
+      width:0;
+      height:1px;
+      background:#111820;
+      transition:width .2s ease;
+    }
+    .nav-center a:hover::after,.nav-center a.active::after,.nav-right a:not(.lang):hover::after{width:100%}
+    .lang{
+      width:38px;height:38px;
+      display:grid;place-items:center;
+      border:1px solid #d7dde4;
+      border-radius:50%;
+      font-size:10px!important;
+      letter-spacing:.04em;
+      transition:.2s ease;
+    }
+    .lang:hover{background:#0b1117;color:#fff;border-color:#0b1117}
+
+    /* HERO */
+    .hero{
+      padding:96px var(--page) 96px;
+      background:#fff;
+    }
+    .hero-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:minmax(0,1.15fr) minmax(320px,.55fr);
+      gap:clamp(56px,8vw,130px);
+      align-items:end;
+    }
+    .hero-kicker{
+      margin-bottom:24px;
+      color:var(--blue);
+      font-size:12px;
+      font-weight:600;
+    }
+    .hero h1{
+      margin:0;
+      max-width:920px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(72px,7vw,118px);
+      line-height:1.01;
+      letter-spacing:-.07em;
+      font-weight:500;
+    }
+    .hero h1 span{
+      display:block;
+      color:#a8b4c3;
+    }
+    .hero p{
+      margin:0 0 4px;
+      max-width:520px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.78;
+    }
+
+    /* FEATURED */
+    .featured{
+      padding:34px var(--page) 118px;
+      background:var(--soft);
+    }
+    .featured-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+    }
+    .featured-top{
+      padding-bottom:16px;
+      margin-bottom:18px;
+      display:flex;
+      justify-content:space-between;
+      border-bottom:1px solid var(--line);
+    }
+    .featured-top span{
+      color:#758290;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .featured-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.3fr) minmax(360px,.7fr);
+      gap:20px;
+      align-items:stretch;
+    }
+    .lead-card{
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:#fff;
+      transition:.22s ease;
+    }
+    .lead-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 16px 34px rgba(10,18,28,.08);
+    }
+    .lead-image{
+      display:block;
+      height:540px;
+      overflow:hidden;
+      background:#e7ebef;
+    }
+    .lead-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center 42%;
+      transition:transform .3s ease;
+    }
+    .lead-card:hover .lead-image img{transform:scale(1.018)}
+    .lead-copy{padding:28px 30px 32px}
+    .lead-meta{
+      color:#6f8196;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+    }
+    .lead-copy h2{
+      margin:14px 0 12px;
+      max-width:760px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(40px,4vw,58px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+      font-weight:500;
+    }
+    .lead-copy p{
+      margin:0;
+      max-width:700px;
+      color:#66727d;
+      font-size:14px;
+      line-height:1.67;
+    }
+
+    .side-stack{
+      display:grid;
+      grid-template-rows:repeat(3,1fr);
+      gap:18px;
+    }
+    .side-card{
+      position:relative;
+      min-height:0;
+      overflow:hidden;
+      border-radius:20px;
+      background:#0b0f14;
+      transition:.22s ease;
+    }
+    .side-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 14px 28px rgba(5,7,10,.14);
+    }
+    .side-image{
+      position:absolute;
+      inset:0;
+    }
+    .side-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:brightness(.6);
+      transition:.3s ease;
+    }
+    .side-card:nth-child(1) .side-image img{object-position:center 42%}
+    .side-card:nth-child(2) .side-image img{object-position:center 38%}
+    .side-card:nth-child(3) .side-image img{object-position:center 18%}
+    .side-card:hover .side-image img{transform:scale(1.025);filter:brightness(.66)}
+    .side-copy{
+      position:relative;
+      z-index:2;
+      height:100%;
+      padding:24px;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      background:linear-gradient(to top,rgba(5,7,10,.9),rgba(5,7,10,.15) 62%,transparent);
+    }
+    .side-copy small{
+      color:#b8c5d1;
+      font-size:8px;
+      font-weight:700;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+    }
+    .side-copy h3{
+      margin:10px 0 0;
+      color:#fff;
+      font-family:Manrope,sans-serif;
+      font-size:25px;
+      line-height:1.04;
+      letter-spacing:-.045em;
+      font-weight:500;
+    }
+
+    /* ARCHIVE */
+    .archive{
+      padding:112px var(--page) 120px;
+      background:#fff;
+    }
+    .archive-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+    }
+    .archive-head{
+      margin-bottom:30px;
+      display:flex;
+      justify-content:space-between;
+      gap:30px;
+      align-items:end;
+    }
+    .archive-head h2{
+      margin:14px 0 0;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+      font-weight:500;
+    }
+    .archive-head p{
+      margin:0;
+      max-width:500px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.7;
+    }
+    .archive-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:0;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .archive-story{
+      padding:30px 24px 34px;
+      border-right:1px solid var(--line);
+    }
+    .archive-story:first-child{padding-left:0}
+    .archive-story:last-child{border-right:0;padding-right:0}
+    .archive-story-image{
+      display:block;
+      aspect-ratio:16/10;
+      overflow:hidden;
+      background:#eef1f4;
+    }
+    .archive-story-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .3s ease;
+    }
+    .archive-story:hover .archive-story-image img{transform:scale(1.02)}
+    .archive-story-meta{
+      margin-top:20px;
+      color:#718399;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .archive-story h3{
+      margin:14px 0 12px;
+      font-family:Manrope,sans-serif;
+      font-size:29px;
+      line-height:1.06;
+      letter-spacing:-.046em;
+      font-weight:500;
+    }
+    .archive-story p{
+      margin:0;
+      color:#6f7a86;
+      font-size:13px;
+      line-height:1.65;
+    }
+    .archive-story-read{
+      margin-top:24px;
+      display:inline-flex;
+      padding-bottom:3px;
+      border-bottom:1px solid #a9b3bf;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+
+    /* THEMES */
+    .themes{
+      padding:112px var(--page);
+      background:#0b1117;
+      color:#fff;
+    }
+    .themes-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+    }
+    .themes-head{
+      margin-bottom:34px;
+      display:flex;
+      justify-content:space-between;
+      gap:40px;
+      align-items:end;
+    }
+    .themes-head h2{
+      margin:14px 0 0;
+      max-width:780px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+      font-weight:500;
+    }
+    .themes-head p{
+      margin:0;
+      max-width:500px;
+      color:#929da9;
+      font-size:14px;
+      line-height:1.7;
+    }
+    .themes .section-label{color:#8ec4ff}
+    .themes-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+    .theme-card{
+      min-height:230px;
+      padding:28px;
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:20px;
+      background:rgba(255,255,255,.025);
+    }
+    .theme-card span{
+      color:#78b7ff;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .theme-card h3{
+      margin:44px 0 0;
+      font-family:Manrope,sans-serif;
+      font-size:27px;
+      line-height:1.08;
+      letter-spacing:-.045em;
+      font-weight:500;
+    }
+    .theme-card p{
+      margin:12px 0 0;
+      color:#919ca8;
+      font-size:12px;
+      line-height:1.6;
+    }
+
+    /* FOOTER */
+    .footer{
+      padding:72px var(--page) 34px;
+      background:#fff;
+      border-top:1px solid var(--line);
+    }
+    .footer-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.2fr repeat(3,.7fr);
+      gap:50px;
+    }
+    .footer-brand{
+      font-family:Manrope,sans-serif;
+      font-size:30px;
+      letter-spacing:-.045em;
+      font-weight:600;
+    }
+    .footer-copy{
+      margin-top:14px;
+      max-width:360px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+    .footer-col strong{
+      display:block;
+      margin-bottom:14px;
+      font-size:12px;
+      font-weight:700;
+    }
+    .footer-col a{
+      display:block;
+      margin:10px 0;
+      color:#5f6b78;
+      font-size:13px;
+    }
+    .footer-col a:hover{color:#0b1117}
+    .footer-bottom{
+      width:min(var(--max),100%);
+      margin:54px auto 0;
+      padding-top:24px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      border-top:1px solid var(--line);
+      color:#7b8794;
+      font-size:10px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    @media(max-width:1100px){
+      .featured-grid{grid-template-columns:1fr}
+      .side-stack{grid-template-columns:repeat(3,1fr);grid-template-rows:none}
+      .side-card{min-height:260px}
+      .archive-grid{grid-template-columns:1fr 1fr}
+      .archive-story:nth-child(2){border-right:0}
+      .archive-story:last-child{grid-column:1/-1;border-top:1px solid var(--line);padding-left:0}
+      .themes-grid{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+
+    @media(max-width:860px){
+      .nav-center{display:none}
+      .hero-inner{grid-template-columns:1fr}
+      .archive-head,.themes-head{flex-direction:column;align-items:flex-start}
+    }
+
+    @media(max-width:640px){
+      .nav{min-height:68px}
+      .brand{font-size:20px!important}
+      .nav-right{gap:14px}
+      .nav-right a:not(.lang):nth-child(2){display:none}
+
+      .hero{padding-top:58px;padding-bottom:74px}
+      .hero h1{font-size:clamp(56px,15vw,78px)}
+      .hero p{font-size:15px}
+
+      .featured{padding-top:28px;padding-bottom:82px}
+      .lead-image{height:300px}
+      .lead-copy{padding:22px}
+      .lead-copy h2{font-size:36px}
+
+      .side-stack{grid-template-columns:1fr}
+      .side-card{min-height:250px}
+
+      .archive,.themes{padding-top:82px;padding-bottom:88px}
+      .archive-head h2,.themes-head h2{font-size:42px}
+      .archive-grid{grid-template-columns:1fr}
+      .archive-story,
+      .archive-story:first-child,
+      .archive-story:last-child{
+        padding:24px 0 30px;
+        border-right:0;
+        border-top:0;
+        border-bottom:1px solid var(--line);
+        grid-column:auto;
+      }
+      .archive-story:last-child{border-bottom:0}
+
+      .themes-grid{grid-template-columns:1fr}
+      .theme-card{min-height:190px}
+
+      .footer-grid{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="/">Felipe Quiroz</a>
+
+  <nav class="nav-center" aria-label="Primary">
+    <a href="/#work">Work</a>
+    <a href="/about">About</a>
+    <a href="/now">Now</a>
+    <a href="/blog" class="active">Blog</a>
+  </nav>
+
+  <div class="nav-right">
+    <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="lang" href="/es/blog" aria-label="Switch language">ES</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-kicker">Blog</div>
+        <h1>Ideas on<span>building better.</span></h1>
+      </div>
+      <p>Product, startups, AI, growth, education and operations. Ideas and reflections from things I’ve built, tested or learned along the way.</p>
+    </div>
+  </section>
+
+  <section class="featured">
+    <div class="featured-inner">
+      <div class="featured-top">
+        <span>Featured</span>
+        <span>2026</span>
+      </div>
+
+      <div class="featured-grid">
+        <article class="lead-card">
+          <a class="lead-image" href="/blog/ai-native-core">
+            <img src="/images/platanus-event.jpg" alt="AI Native Startups event">
+          </a>
+          <div class="lead-copy">
+            <div class="lead-meta">AI / Product</div>
+            <h2><a href="/blog/ai-native-core">The next product leap is built with AI at the core</a></h2>
+            <p>What AI Native Startups made clear: the shift from experimenting with AI to making it part of product and business infrastructure.</p>
+          </div>
+        </article>
+
+        <div class="side-stack">
+          <article class="side-card">
+            <a class="side-image" href="/blog/building-lowsignal"><img src="/images/lowsignal-founders.jpg" alt="lowsignal founders"></a>
+            <div class="side-copy">
+              <small>Startups / Company Building</small>
+              <h3><a href="/blog/building-lowsignal">What building lowsignal taught me about starting before you’re ready</a></h3>
+            </div>
+          </article>
+
+          <article class="side-card">
+            <a class="side-image" href="/blog/edtech-startup-scale"><img src="/images/tether-edtech-scale.jpg" alt="TetherEd team and education work"></a>
+            <div class="side-copy">
+              <small>Startups / Education</small>
+              <h3><a href="/blog/edtech-startup-scale">What building an edtech startup taught me about scale</a></h3>
+            </div>
+          </article>
+
+          <article class="side-card">
+            <a class="side-image" href="/blog/ai-leaves-the-demo"><img src="/images/ai-leaves-the-demo-diio-2025.jpg" alt="Felipe Quiroz with the DiiO team"></a>
+            <div class="side-copy">
+              <small>AI / Startups</small>
+              <h3><a href="/blog/ai-leaves-the-demo">What AI looks like when it leaves the demo</a></h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="archive">
+    <div class="archive-inner">
+      <div class="archive-head">
+        <div>
+          <div class="section-label">More to explore</div>
+          <h2>Ideas from the field.</h2>
+        </div>
+        <p>Notes on partnerships, education, AI and the systems behind building and operating products.</p>
+      </div>
+
+      <div class="archive-grid">
+        <article class="archive-story">
+          <a class="archive-story-image" href="/blog/partnerships-infrastructure">
+            <img src="/images/tethered-kiri-partnerships-2025.png" alt="TetherEd and Fundación Kiri">
+          </a>
+          <div class="archive-story-meta">Partnerships / Startups · December 2025</div>
+          <h3><a href="/blog/partnerships-infrastructure">Partnerships is more than closing deals</a></h3>
+          <p>What leading partnerships at TetherEd taught me about connecting product, institutions, growth and execution.</p>
+          <a class="archive-story-read" href="/blog/partnerships-infrastructure">Read →</a>
+        </article>
+
+        <article class="archive-story">
+          <a class="archive-story-image" href="/blog/future-of-education">
+            <img src="/images/pais-digital-future-education.jpg" alt="País Digital Summit Future of Education">
+          </a>
+          <div class="archive-story-meta">Education / AI / Ecosystems · September 2025</div>
+          <h3><a href="/blog/future-of-education">The future of education isn’t built with technology alone</a></h3>
+          <p>AI, institutions, partnerships and execution: why transforming education takes much more than new tools.</p>
+          <a class="archive-story-read" href="/blog/future-of-education">Read →</a>
+        </article>
+
+        <article class="archive-story">
+          <a class="archive-story-image" href="/blog/ai-future-students">
+            <img src="/images/usm-ai-future-students-2024.jpg" alt="Felipe Quiroz speaking with future students at USM Open House 2024">
+          </a>
+          <div class="archive-story-meta">Education / AI · October 2024</div>
+          <h3><a href="/blog/ai-future-students">What talking about AI with future students taught me about education</a></h3>
+          <p>When access to information stops being the bottleneck, critical thinking, creativity and the ability to learn matter even more.</p>
+          <a class="archive-story-read" href="/blog/ai-future-students">Read →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="themes">
+    <div class="themes-inner">
+      <div class="themes-head">
+        <div>
+          <div class="section-label">What I write about</div>
+          <h2>Four themes.<br>One operating lens.</h2>
+        </div>
+        <p>Short ideas from things I’m building, testing or learning along the way.</p>
+      </div>
+
+      <div class="themes-grid">
+        <article class="theme-card">
+          <span>01 / Product</span>
+          <h3>Build close to the problem.</h3>
+          <p>Product decisions, adoption and turning real-world complexity into clearer systems.</p>
+        </article>
+
+        <article class="theme-card">
+          <span>02 / AI</span>
+          <h3>From demo to workflow.</h3>
+          <p>How AI starts creating value when it enters real products and operations.</p>
+        </article>
+
+        <article class="theme-card">
+          <span>03 / Startups</span>
+          <h3>Learn by building.</h3>
+          <p>Company building, positioning, sales, systems and what changes when you start before you’re ready.</p>
+        </article>
+
+        <article class="theme-card">
+          <span>04 / Operations</span>
+          <h3>Design for better execution.</h3>
+          <p>Processes, leverage and the layers that connect good strategy with real outcomes.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Felipe Quiroz</div>
+      <div class="footer-copy">Product, Growth & Operations. Building products, growth systems and companies across technology and business.</div>
+    </div>
+
+    <div class="footer-col">
+      <strong>Explore</strong>
+      <a href="/#work">Work</a>
+      <a href="/about">About</a>
+      <a href="/now">Now</a>
+      <a href="/blog">Blog</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Social</strong>
+      <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Contact</strong>
+      <a href="mailto:felipe@lowsignal.cl">felipe@lowsignal.cl</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 Felipe Quiroz</div>
+    <div>Santiago / CL</div>
+  </div>
+</footer>
+
+</body>
+</html>
