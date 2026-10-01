@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Scaling technology without losing speed | Felipe Quiroz</title>
+  <meta name="description" content="Reflections from Tech Founders AMA on scalability, technical debt, engineering leadership and how AI is changing development workflows.">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="canonical" href="https://felipequirozp.cl/blog/scaling-technology-without-losing-speed">
+  <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/blog/scaling-technology-without-losing-speed">
+  <link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/blog/escalar-tecnologia-sin-perder-velocidad">
+  <link rel="alternate" hreflang="x-default" href="https://felipequirozp.cl/blog/scaling-technology-without-losing-speed">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Scaling technology without losing speed">
+  <meta property="og:description" content="What I took away from Tech Founders AMA about scale, technical debt, engineering leadership and AI-enabled development workflows.">
+  <meta property="og:url" content="https://felipequirozp.cl/blog/scaling-technology-without-losing-speed">
+  <meta property="og:image" content="https://felipequirozp.cl/images/tech-founders-ama-buk-2026.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --ink:#0b1117;
+      --muted:#5f6b78;
+      --line:#e1e6eb;
+      --soft:#f3f6f9;
+      --blue:#1467d8;
+      --steel:#a8b4c3;
+      --page:clamp(22px,4vw,64px);
+      --max:1520px;
+      --body:780px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:#fff;
+      color:var(--ink);
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    ::selection{background:var(--blue);color:#fff}
+
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      min-height:76px;
+      padding:0 var(--page);
+      display:grid;
+      grid-template-columns:1fr auto 1fr;
+      align-items:center;
+      gap:28px;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid rgba(11,17,23,.08);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+
+    .brand{
+      font-family:Manrope,sans-serif;
+      font-size:22px;
+      font-weight:600;
+      letter-spacing:-.045em;
+      white-space:nowrap;
+      justify-self:start;
+    }
+
+    .nav-center,.nav-right{display:flex;align-items:center;gap:28px}
+    .nav-center{justify-self:center}
+    .nav-right{justify-self:end}
+
+    .nav a{font-size:11px;font-weight:500;color:#1a232d}
+    .nav-center a,.nav-right a:not(.lang){position:relative}
+
+    .nav-center a::after,.nav-right a:not(.lang)::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-7px;
+      width:0;
+      height:1px;
+      background:#111820;
+      transition:width .2s ease;
+    }
+
+    .nav-center a:hover::after,.nav-center a.active::after,.nav-right a:not(.lang):hover::after{width:100%}
+
+    .lang{
+      width:38px;
+      height:38px;
+      display:grid;
+      place-items:center;
+      border:1px solid #d7dde4;
+      border-radius:50%;
+      font-size:10px!important;
+      letter-spacing:.04em;
+      transition:.2s ease;
+    }
+
+    .lang:hover{background:#0b1117;color:#fff;border-color:#0b1117}
+
+    .hero{
+      padding:84px var(--page) 58px;
+      background:#fff;
+    }
+
+    .hero-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+    }
+
+    .hero-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      margin-bottom:56px;
+    }
+
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+    }
+
+    .chip{
+      min-height:38px;
+      padding:0 13px;
+      display:inline-flex;
+      align-items:center;
+      border:1px solid #d8dee5;
+      border-radius:999px;
+      background:#f7f9fb;
+      color:#667281;
+      font-size:10px;
+      font-weight:600;
+    }
+
+    .back{
+      color:#667281;
+      font-size:11px;
+      font-weight:600;
+    }
+
+    .back:hover{color:var(--ink)}
+
+    .hero h1{
+      margin:0;
+      max-width:1260px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(62px,7vw,112px);
+      line-height:1.01;
+      letter-spacing:-.07em;
+      font-weight:500;
+    }
+
+    .hero h1 span{
+      display:block;
+      color:var(--steel);
+    }
+
+    .deck{
+      margin:38px 0 0;
+      max-width:920px;
+      color:var(--muted);
+      font-size:18px;
+      line-height:1.72;
+    }
+
+    .hero-media{
+      width:min(var(--max),100%);
+      margin:54px auto 0;
+      overflow:hidden;
+      border-radius:28px;
+      background:#eef2f6;
+    }
+
+    .hero-media img{
+      width:100%;
+      aspect-ratio:16/9;
+      object-fit:cover;
+      object-position:center 52%;
+    }
+
+    .caption{
+      width:min(var(--max),100%);
+      margin:14px auto 0;
+      color:#8a95a2;
+      font-size:11px;
+      line-height:1.6;
+    }
+
+    .article{
+      padding:94px var(--page) 120px;
+      background:#fff;
+    }
+
+    .article-grid{
+      width:min(1180px,100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:220px minmax(0,var(--body));
+      gap:70px;
+      justify-content:center;
+      align-items:start;
+    }
+
+    aside{
+      position:sticky;
+      top:110px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:#7a8795;
+      font-size:12px;
+      line-height:1.7;
+    }
+
+    aside strong{
+      display:block;
+      margin-bottom:10px;
+      color:#24303d;
+      font-size:12px;
+      font-weight:600;
+    }
+
+    .body{
+      max-width:var(--body);
+    }
+
+    .lead{
+      margin:0 0 42px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(28px,3vw,40px);
+      line-height:1.36;
+      letter-spacing:-.035em;
+      color:#1a232d;
+    }
+
+    .body p{
+      margin:0 0 24px;
+      color:#3f4a57;
+      font-size:17px;
+      line-height:1.82;
+    }
+
+    .body h2{
+      margin:66px 0 24px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(34px,4vw,54px);
+      line-height:1.08;
+      letter-spacing:-.052em;
+      font-weight:500;
+      color:#121922;
+    }
+
+    blockquote{
+      margin:46px 0;
+      padding:4px 0 4px 28px;
+      border-left:3px solid var(--blue);
+      font-family:Manrope,sans-serif;
+      font-size:clamp(26px,3vw,38px);
+      line-height:1.42;
+      letter-spacing:-.035em;
+      color:#17202b;
+    }
+
+    .article-note{
+      margin:50px 0;
+      padding:22px 0;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .article-note strong{
+      display:block;
+      margin-bottom:8px;
+      color:#173d72;
+      font-size:11px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .article-note p{
+      margin:0;
+      font-size:15px;
+      color:#667281;
+    }
+
+    .author{
+      margin-top:72px;
+      padding-top:28px;
+      border-top:1px solid var(--line);
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+
+    .author img{
+      width:54px;
+      height:54px;
+      border-radius:50%;
+      object-fit:cover;
+    }
+
+    .author strong{
+      display:block;
+      font-family:Manrope,sans-serif;
+      font-size:16px;
+      font-weight:600;
+      letter-spacing:-.02em;
+    }
+
+    .author span{
+      display:block;
+      margin-top:4px;
+      color:#7a8795;
+      font-size:11px;
+    }
+
+    .next{
+      padding:86px var(--page);
+      background:var(--soft);
+      border-top:1px solid var(--line);
+    }
+
+    .next-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+    }
+
+    .next-label{
+      color:#7d8a99;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+
+    .next a{
+      display:block;
+      margin-top:12px;
+      max-width:900px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(40px,5vw,72px);
+      line-height:1.06;
+      letter-spacing:-.055em;
+      font-weight:500;
+    }
+
+    .next a span{color:var(--steel)}
+
+    .footer{
+      padding:72px var(--page) 34px;
+      background:#fff;
+      border-top:1px solid var(--line);
+    }
+
+    .footer-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.2fr repeat(3,.7fr);
+      gap:50px;
+    }
+
+    .footer-brand{
+      font-family:Manrope,sans-serif;
+      font-size:30px;
+      letter-spacing:-.045em;
+      font-weight:600;
+    }
+
+    .footer-copy{
+      margin-top:14px;
+      max-width:360px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    .footer-col strong{
+      display:block;
+      margin-bottom:14px;
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .footer-col a{
+      display:block;
+      margin:10px 0;
+      color:#5f6b78;
+      font-size:13px;
+    }
+
+    .footer-col a:hover{color:#0b1117}
+
+    .footer-bottom{
+      width:min(var(--max),100%);
+      margin:54px auto 0;
+      padding-top:24px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      border-top:1px solid var(--line);
+      color:#7b8794;
+      font-size:10px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    @media(max-width:980px){
+      .article-grid{grid-template-columns:1fr;gap:34px}
+      aside{position:static}
+      .body{max-width:100%}
+    }
+
+    @media(max-width:860px){
+      .nav{grid-template-columns:1fr auto}
+      .nav-center{display:none}
+    }
+
+    @media(max-width:640px){
+      .nav{min-height:68px}
+      .brand{font-size:20px}
+      .nav-right{gap:14px}
+      .nav-right a:not(.lang):nth-child(2){display:none}
+
+      .hero{padding-top:58px}
+      .hero-top{align-items:flex-start;flex-direction:column}
+      .hero h1{font-size:clamp(50px,13vw,72px)}
+      .deck{font-size:16px}
+      .hero-media{border-radius:0;margin-left:calc(var(--page) * -1);margin-right:calc(var(--page) * -1);width:auto}
+      .caption{padding:0}
+
+      .article{padding-top:72px;padding-bottom:88px}
+      .body p{font-size:16px}
+      .footer-grid{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column}
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="nav">
+  <a class="brand" href="/">Felipe Quiroz</a>
+
+  <nav class="nav-center" aria-label="Primary">
+    <a href="/#work">Work</a>
+    <a href="/about">About</a>
+    <a href="/now">Now</a>
+    <a href="/blog" class="active">Blog</a>
+  </nav>
+
+  <div class="nav-right">
+    <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="lang" href="/es/blog/escalar-tecnologia-sin-perder-velocidad" aria-label="Switch language">ES</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-inner">
+
+      <div class="hero-top">
+        <div class="chips">
+          <span class="chip">Technology</span>
+          <span class="chip">Product</span>
+          <span class="chip">September 2026</span>
+        </div>
+
+        <a class="back" href="/blog">← Back to Blog</a>
+      </div>
+
+      <h1>
+        Scaling technology
+        <span>without losing speed.</span>
+      </h1>
+
+      <p class="deck">
+        Reflections from Tech Founders AMA on scalability, technical debt, engineering leadership and how AI is becoming part of the development workflow.
+      </p>
+
+      <div class="hero-media">
+        <img src="/images/tech-founders-ama-buk-2026.jpg" alt="Tech Founders AMA at Buk in Santiago">
+      </div>
+
+      <p class="caption">Tech Founders AMA · Buk · Santiago, Chile · September 2026</p>
+
+    </div>
+  </section>
+
+  <article class="article">
+    <div class="article-grid">
+
+      <aside>
+        <strong>One idea I kept thinking about.</strong>
+        Scaling is not just a technical challenge. Every architecture decision eventually becomes a product, team and business decision too.
+      </aside>
+
+      <div class="body">
+
+        <p class="lead">
+          Yesterday I had the chance to attend Tech Founders AMA, a conversation about how technology companies scale their architecture, teams and products without losing speed or focus.
+        </p>
+
+        <p>
+          Sebastián Hevia Ovalle from AgendaPro, Lukas Zorich from Fintoc and Felipe Sateler from Buk shared practical experiences around scalability, technical debt, engineering leadership and the integration of AI into development workflows. Rodrigo Oyarzún, Head of Product at Buk Finanzas, moderated the session.
+        </p>
+
+        <p>
+          What made the conversation especially interesting was that the topics were not treated as isolated engineering problems. They were discussed as decisions that shape how a company builds, prioritizes and operates as it grows.
+        </p>
+
+        <h2>Scale changes what a “good decision” looks like.</h2>
+
+        <p>
+          A decision that is perfectly reasonable at an early stage can become a constraint later. The opposite is also true: over-engineering too early can slow a team down before there is enough evidence that the complexity is necessary.
+        </p>
+
+        <p>
+          That tension showed up repeatedly during the conversation. Scaling is not about eliminating trade-offs. It is about getting better at understanding which trade-offs are worth making at each stage of the company.
+        </p>
+
+        <blockquote>
+          The challenge is not to avoid technical debt at all costs. It is to know which debt is helping you move faster and which debt is starting to slow the company down.
+        </blockquote>
+
+        <h2>Technical debt is also a prioritization problem.</h2>
+
+        <p>
+          Technical debt is often discussed as if it were only an engineering concern. But deciding when to take it on, when to pay it down and how much of it the organization can absorb is ultimately a prioritization decision.
+        </p>
+
+        <p>
+          Product pressure, customer needs, team capacity and architecture all compete for the same limited attention. That makes the conversation about technical debt much closer to product strategy than it may seem from the outside.
+        </p>
+
+        <div class="article-note">
+          <strong>What stood out</strong>
+          <p>The most useful discussions were the ones that connected technical choices with speed, product quality and the ability of teams to keep executing as the organization grows.</p>
+        </div>
+
+        <h2>Engineering leadership becomes a systems problem.</h2>
+
+        <p>
+          As teams grow, maintaining a high bar is no longer just about hiring strong engineers. It also depends on how decisions are made, how context travels across teams and how much autonomy people can have without creating unnecessary fragmentation.
+        </p>
+
+        <p>
+          Culture, tooling and operating principles start to matter as much as individual technical decisions. The system around the team becomes part of the product development infrastructure.
+        </p>
+
+        <h2>AI is moving into the workflow, not just the demo.</h2>
+
+        <p>
+          Another recurring topic was the integration of AI into development. The interesting part was not the novelty of using AI tools, but how they are becoming embedded in everyday engineering workflows.
+        </p>
+
+        <p>
+          That shift changes the question from “should teams use AI?” to “where does AI actually improve the workflow, and how do we integrate it without lowering the quality bar?”
+        </p>
+
+        <p>
+          The same principle applies here as with architecture and technical debt: the value comes from making the tool part of a better system, not from using it simply because it is available.
+        </p>
+
+        <h2>Product and technology get closer as companies scale.</h2>
+
+        <p>
+          My main takeaway from the event was that product and engineering decisions become increasingly intertwined as a company grows.
+        </p>
+
+        <p>
+          Architecture affects delivery speed. Technical debt affects roadmap flexibility. Team structure affects product quality. AI tools affect how work gets done. None of those decisions live entirely inside one function.
+        </p>
+
+        <p>
+          Hearing these experiences first-hand was a good reminder that scaling well is less about finding a perfect architecture or process and more about building the judgment to evolve both as the company changes.
+        </p>
+
+        <div class="author">
+          <img src="/images/profile-0.jpg" alt="Felipe Quiroz">
+          <div>
+            <strong>Felipe Quiroz</strong>
+            <span>Product · Growth · Operations</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+  <section class="next">
+    <div class="next-inner">
+      <div class="next-label">Keep reading</div>
+      <a href="/blog/ai-native-core">
+        The next product leap
+        <span>is built with AI at the core.</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+
+    <div>
+      <div class="footer-brand">Felipe Quiroz</div>
+      <div class="footer-copy">
+        Product, Growth & Operations. Building products, growth systems and companies across technology and business.
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <strong>Explore</strong>
+      <a href="/#work">Work</a>
+      <a href="/about">About</a>
+      <a href="/now">Now</a>
+      <a href="/blog">Blog</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Social</strong>
+      <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Contact</strong>
+      <a href="mailto:felipe@lowsignal.cl">felipe@lowsignal.cl</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 Felipe Quiroz</div>
+    <div>Santiago / CL</div>
+  </div>
+</footer>
+
+</body>
+</html>
