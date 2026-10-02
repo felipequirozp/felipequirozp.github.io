@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>What changes when AI becomes the strategy | Felipe Quiroz</title>
+  <meta name="description" content="Reflections from Platanus AI Native Startups #4 on what changes when companies reorganize product, operations and strategy around AI and LLMs.">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="canonical" href="https://felipequirozp.cl/blog/when-ai-becomes-the-strategy">
+  <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/blog/when-ai-becomes-the-strategy">
+  <link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/blog/cuando-la-ia-se-vuelve-la-estrategia">
+  <link rel="alternate" hreflang="x-default" href="https://felipequirozp.cl/blog/when-ai-becomes-the-strategy">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What changes when AI becomes the strategy">
+  <meta property="og:description" content="What Platanus AI Native Startups #4 made clear about product, operations and strategy when AI moves from a feature to the core of the company.">
+  <meta property="og:url" content="https://felipequirozp.cl/blog/when-ai-becomes-the-strategy">
+  <meta property="og:image" content="https://felipequirozp.cl/images/platanus-ai-native-startups-4-2026.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --ink:#0b1117;
+      --muted:#5f6b78;
+      --line:#e1e6eb;
+      --soft:#f3f6f9;
+      --blue:#1467d8;
+      --steel:#a8b4c3;
+      --page:clamp(22px,4vw,64px);
+      --max:1520px;
+      --body:780px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:#fff;
+      color:var(--ink);
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    ::selection{background:var(--blue);color:#fff}
+
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      min-height:76px;
+      padding:0 var(--page);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid rgba(11,17,23,.08);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+
+    .brand{
+      font-family:Manrope,sans-serif;
+      font-size:22px!important;
+      font-weight:600;
+      letter-spacing:-.045em;
+      white-space:nowrap;
+    }
+
+    .nav-center,.nav-right{display:flex;align-items:center;gap:28px}
+
+    .nav a{font-size:11px;font-weight:500;color:#1a232d}
+    .nav-center a,.nav-right a:not(.lang){position:relative}
+
+    .nav-center a::after,.nav-right a:not(.lang)::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-7px;
+      width:0;
+      height:1px;
+      background:#111820;
+      transition:width .2s ease;
+    }
+
+    .nav-center a:hover::after,.nav-center a.active::after,.nav-right a:not(.lang):hover::after{width:100%}
+
+    .lang{
+      width:38px;
+      height:38px;
+      display:grid;
+      place-items:center;
+      border:1px solid #d7dde4;
+      border-radius:50%;
+      font-size:10px!important;
+      letter-spacing:.04em;
+      transition:.2s ease;
+    }
+
+    .lang:hover{background:#0b1117;color:#fff;border-color:#0b1117}
+
+    .hero{
+      padding:84px var(--page) 58px;
+      background:#fff;
+    }
+
+    .hero-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+    }
+
+    .hero-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      margin-bottom:56px;
+    }
+
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+    }
+
+    .chip{
+      min-height:38px;
+      padding:0 13px;
+      display:inline-flex;
+      align-items:center;
+      border:1px solid #d8dee5;
+      border-radius:999px;
+      background:#f7f9fb;
+      color:#667281;
+      font-size:10px;
+      font-weight:600;
+    }
+
+    .back{
+      color:#667281;
+      font-size:11px;
+      font-weight:600;
+    }
+
+    .back:hover{color:var(--ink)}
+
+    .hero h1{
+      margin:0;
+      max-width:1260px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(62px,7vw,112px);
+      line-height:1.01;
+      letter-spacing:-.07em;
+      font-weight:500;
+    }
+
+    .hero h1 span{
+      display:block;
+      color:var(--steel);
+    }
+
+    .deck{
+      margin:38px 0 0;
+      max-width:920px;
+      color:var(--muted);
+      font-size:18px;
+      line-height:1.72;
+    }
+
+    .hero-media{
+      width:min(var(--max),100%);
+      margin:54px auto 0;
+      overflow:hidden;
+      border-radius:28px;
+      background:#eef2f6;
+    }
+
+    .hero-media img{
+      width:100%;
+      aspect-ratio:16/9;
+      object-fit:cover;
+      object-position:center 52%;
+    }
+
+    .caption{
+      width:min(var(--max),100%);
+      margin:14px auto 0;
+      color:#8a95a2;
+      font-size:11px;
+      line-height:1.6;
+    }
+
+    .article{
+      padding:94px var(--page) 120px;
+      background:#fff;
+    }
+
+    .article-grid{
+      width:min(1180px,100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:220px minmax(0,var(--body));
+      gap:70px;
+      justify-content:center;
+      align-items:start;
+    }
+
+    .article-aside{
+      position:sticky;
+      top:120px;
+      padding-top:4px;
+      color:#8b95a2;
+      font-size:10px;
+      line-height:1.65;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+
+    .article-aside strong{
+      display:block;
+      margin-bottom:12px;
+      color:#202935;
+      font-family:Manrope,sans-serif;
+      font-size:15px;
+      font-weight:500;
+      line-height:1.35;
+      letter-spacing:-.02em;
+      text-transform:none;
+    }
+
+    .body{
+      max-width:var(--body);
+    }
+
+    .lead{
+      margin:0 0 42px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(28px,3vw,40px);
+      line-height:1.36;
+      letter-spacing:-.035em;
+      color:#1a232d;
+    }
+
+    .body p{
+      margin:0 0 24px;
+      color:#3f4a57;
+      font-size:17px;
+      line-height:1.82;
+    }
+
+    .body h2{
+      margin:66px 0 24px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(34px,4vw,54px);
+      line-height:1.08;
+      letter-spacing:-.052em;
+      font-weight:500;
+      color:#121922;
+    }
+
+    blockquote{
+      margin:46px 0;
+      padding:4px 0 4px 28px;
+      border-left:3px solid var(--blue);
+      font-family:Manrope,sans-serif;
+      font-size:clamp(26px,3vw,38px);
+      line-height:1.42;
+      letter-spacing:-.035em;
+      color:#17202b;
+    }
+
+    .article-note{
+      margin:50px 0;
+      padding:22px 0;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .article-note strong{
+      display:block;
+      margin-bottom:8px;
+      color:#173d72;
+      font-size:11px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .article-note p{
+      margin:0;
+      font-size:15px;
+      color:#667281;
+    }
+
+    .article-end{
+      margin-top:82px;
+      padding-top:34px;
+      border-top:1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      gap:30px;
+      color:#7b8794;
+      font-size:11px;
+      line-height:1.65;
+    }
+
+    .article-author{
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+
+    .article-author-avatar{
+      width:58px;
+      height:58px;
+      flex:0 0 58px;
+      border-radius:50%;
+      overflow:hidden;
+      background:#eef1f4;
+    }
+
+    .article-author-avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:50% 8%;
+    }
+
+    .article-author-copy strong{
+      display:block;
+      margin-bottom:6px;
+      color:#1a2430;
+      font-family:Manrope,sans-serif;
+      font-size:18px;
+      font-weight:500;
+      letter-spacing:-.03em;
+    }
+
+    .next{
+      padding:92px var(--page);
+      background:var(--soft);
+      border-top:1px solid var(--line);
+    }
+
+    .next-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:.35fr 1fr;
+      gap:80px;
+      align-items:end;
+    }
+
+    .next-label{
+      color:#85919f;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+    }
+
+    .next-link{
+      display:block;
+      border-top:1px solid var(--line);
+      padding-top:28px;
+    }
+
+    .next-link small{
+      color:#738295;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+
+    .next-link h2{
+      margin:16px 0 0;
+      max-width:900px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(40px,4.8vw,70px);
+      font-weight:500;
+      line-height:1.04;
+      letter-spacing:-.06em;
+    }
+
+    .next-link:hover h2{color:#166fcf}
+
+    .footer{
+      padding:72px var(--page) 34px;
+      background:#fff;
+      border-top:1px solid var(--line);
+    }
+
+    .footer-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.2fr repeat(3,.7fr);
+      gap:50px;
+    }
+
+    .footer-brand{
+      font-family:Manrope,sans-serif;
+      font-size:30px;
+      letter-spacing:-.045em;
+      font-weight:600;
+    }
+
+    .footer-copy{
+      margin-top:14px;
+      max-width:360px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    .footer-col strong{
+      display:block;
+      margin-bottom:14px;
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .footer-col a{
+      display:block;
+      margin:10px 0;
+      color:#5f6b78;
+      font-size:13px;
+    }
+
+    .footer-col a:hover{color:#0b1117}
+
+    .footer-bottom{
+      width:min(var(--max),100%);
+      margin:54px auto 0;
+      padding-top:24px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      border-top:1px solid var(--line);
+      color:#7b8794;
+      font-size:10px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    @media(max-width:980px){
+      .article-grid{grid-template-columns:1fr;gap:34px}
+      .article-aside{position:static;max-width:560px}
+      .body{max-width:100%}
+      .next-inner{grid-template-columns:1fr;gap:32px}
+    }
+
+    @media(max-width:860px){
+      .nav{grid-template-columns:1fr auto}
+      .nav-center{display:none}
+    }
+
+    @media(max-width:640px){
+      .nav{min-height:68px}
+      .brand{font-size:20px!important}
+      .nav-right{gap:14px}
+      .nav-right a:not(.lang):nth-child(2){display:none}
+
+      .hero{padding-top:58px}
+      .hero-top{align-items:flex-start;flex-direction:column}
+      .hero h1{font-size:clamp(50px,13vw,72px)}
+      .deck{font-size:16px}
+      .hero-media{border-radius:0;margin-left:calc(var(--page) * -1);margin-right:calc(var(--page) * -1);width:auto}
+      .caption{padding:0}
+
+      .article{padding-top:72px;padding-bottom:88px}
+      .body p{font-size:16px}
+      .article-end{flex-direction:column}
+      .article-author-avatar{width:54px;height:54px;flex-basis:54px}
+      .next{padding:70px var(--page)}
+      .next-link h2{font-size:40px}
+      .footer-grid{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column}
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="nav">
+  <a class="brand" href="/">Felipe Quiroz</a>
+
+  <nav class="nav-center" aria-label="Primary">
+    <a href="/#work">Work</a>
+    <a href="/about">About</a>
+    <a href="/now">Now</a>
+    <a href="/blog" class="active">Blog</a>
+  </nav>
+
+  <div class="nav-right">
+    <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="lang" href="/es/blog/cuando-la-ia-se-vuelve-la-estrategia" aria-label="Switch language">ES</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-inner">
+
+      <div class="hero-top">
+        <div class="chips">
+          <span class="chip">AI</span>
+          <span class="chip">Strategy</span>
+          <span class="chip">October 2026</span>
+        </div>
+
+        <a class="back" href="/blog">← Back to Blog</a>
+      </div>
+
+      <h1>
+        What changes when AI
+        <span>becomes the strategy.</span>
+      </h1>
+
+      <p class="deck">
+        Reflections from Platanus AI Native Startups #4 on what changes when companies stop treating AI as a feature and start reorganizing product, operations and strategy around it.
+      </p>
+
+      <div class="hero-media">
+        <img src="/images/platanus-ai-native-startups-4-2026.jpg" alt="Platanus AI Native Startups #4 in Santiago">
+      </div>
+
+      <p class="caption">Platanus AI Native Startups #4 · Santiago, Chile · October 2026</p>
+
+    </div>
+  </section>
+
+  <article class="article">
+    <div class="article-grid">
+
+      <aside class="article-aside">
+        <strong>One idea I kept coming back to.</strong>
+        AI becomes much more interesting when it stops being an isolated capability and starts changing how the whole company thinks, builds and operates.
+      </aside>
+
+      <div class="body">
+
+        <p class="lead">
+          At Platanus AI Native Startups #4, the conversation was less about whether AI will change companies and more about what happens when founders decide to reorganize their companies around it.
+        </p>
+
+        <p>
+          Lukas Zorich, Cofounder &amp; CTO at Fintoc, Andrés Marinkovic, Cofounder &amp; COO at Fintual, and Alfonso Rojas-Anfossi, Founder &amp; CEO at Osiris Experience, shared how they are thinking about LLMs, product, operations and company strategy from very different starting points.
+        </p>
+
+        <p>
+          The common thread was not simply adoption. It was a much deeper question: what changes when AI moves from being one tool among many to becoming part of the core operating model of the company?
+        </p>
+
+        <h2>The interesting shift is not “using AI.”</h2>
+
+        <p>
+          Most teams can already add AI somewhere in the product or workflow. The harder part is deciding where it actually changes the economics, the user experience or the speed at which the company can operate.
+        </p>
+
+        <p>
+          That distinction matters because adding an AI feature is relatively easy. Rebuilding a workflow, product or company around a capability that did not exist before requires much more judgment.
+        </p>
+
+        <blockquote>
+          The real opportunity appears when AI changes the system, not only the interface.
+        </blockquote>
+
+        <h2>AI changes what small teams can do.</h2>
+
+        <p>
+          One of the strongest signals from the event was leverage. LLMs are making it possible for smaller teams to handle workflows, complexity and output that previously required much more structure.
+        </p>
+
+        <p>
+          That does not automatically make the company better. It changes the design space. Founders can now ask different questions about what should be automated, what still needs human judgment and how much operating complexity the product itself can absorb.
+        </p>
+
+        <div class="article-note">
+          <strong>What stood out</strong>
+          <p>The companies that seem most interesting are not only adding AI to what already exists. They are redesigning how work gets done around capabilities that were not available before.</p>
+        </div>
+
+        <h2>Strategy has to move at the same speed as the technology.</h2>
+
+        <p>
+          Language models are improving quickly enough that assumptions can become outdated in a matter of months. That makes product strategy harder, but also more important.
+        </p>
+
+        <p>
+          If the underlying capability keeps moving, teams need to separate what is durable from what is temporary. The durable part may be the customer problem, distribution, proprietary context, data, trust or the workflow itself. The model is only one layer.
+        </p>
+
+        <p>
+          That is why an AI-native strategy cannot just be “we use the newest model.” It needs a view of where the company creates value even as the technology changes underneath it.
+        </p>
+
+        <h2>Product and operations start collapsing into each other.</h2>
+
+        <p>
+          AI also blurs the line between product and operations. A process that used to live entirely inside a team can become part of the software. A manual workflow can become a product capability. Internal leverage can eventually become customer value.
+        </p>
+
+        <p>
+          That changes how companies should think about product scope. Some of the most important product opportunities may start inside the operation before they ever appear in the user interface.
+        </p>
+
+        <h2>AI-native is a company design question.</h2>
+
+        <p>
+          My main takeaway from the event was that the AI-native conversation is becoming less about tooling and more about company design.
+        </p>
+
+        <p>
+          What should the product do now that software can understand more context? What should teams stop doing manually? Where should human judgment remain? What becomes the moat when models keep improving? And how should the organization evolve if leverage increases dramatically?
+        </p>
+
+        <p>
+          Those questions sit across product, operations, technology and strategy at the same time. That is probably why this moment feels bigger than a normal platform shift.
+        </p>
+
+        <p>
+          The companies that adapt best may not be the ones using the most AI. They may be the ones that understand fastest what becomes possible when AI is treated as infrastructure rather than decoration.
+        </p>
+
+        <div class="article-end">
+          <div class="article-author">
+            <span class="article-author-avatar">
+              <img src="/images/profile-0.jpg" alt="Felipe Quiroz">
+            </span>
+            <div class="article-author-copy">
+              <strong>Felipe Quiroz</strong>
+              Product · Growth · Operations
+            </div>
+          </div>
+
+          <div>
+            Reflections on product, startups, AI and systems.<br>
+            Santiago / CL
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+  <section class="next">
+    <div class="next-inner">
+      <div class="next-label">Keep reading</div>
+
+      <a class="next-link" href="/blog/scaling-technology-without-losing-speed">
+        <small>Technology / Product →</small>
+        <h2>Scaling technology without losing speed</h2>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+
+    <div>
+      <div class="footer-brand">Felipe Quiroz</div>
+      <div class="footer-copy">
+        Product, Growth & Operations. Building products, growth systems and companies across technology and business.
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <strong>Explore</strong>
+      <a href="/#work">Work</a>
+      <a href="/about">About</a>
+      <a href="/now">Now</a>
+      <a href="/blog">Blog</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Social</strong>
+      <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Contact</strong>
+      <a href="mailto:felipe@lowsignal.cl">felipe@lowsignal.cl</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 Felipe Quiroz</div>
+    <div>Santiago / CL</div>
+  </div>
+</footer>
+
+</body>
+</html>
