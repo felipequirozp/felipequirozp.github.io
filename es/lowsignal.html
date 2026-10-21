@@ -1303,6 +1303,34 @@
 @media(max-width:900px){.solutions .solution-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:46px 34px}}
 @media(max-width:640px){.solutions .solution-grid{grid-template-columns:1fr;gap:24px}.solutions .solution-card{padding:16px 0 4px}.solutions .solution-top{margin-bottom:20px}.solutions .solution-card h3{font-size:25px}.solutions .solution-card p{max-width:46ch}}
 </style>
+<style id="solution-photo-cards">
+.solutions .solution-grid{gap:26px 24px}
+.solutions .solution-card{display:flex;flex-direction:column;min-height:0;padding:0;border:1px solid #e2e7ec;border-radius:18px;overflow:hidden;background:#fff;transition:transform .25s ease,box-shadow .25s ease}
+.solutions .solution-card:hover{transform:translateY(-4px);box-shadow:0 16px 44px rgba(11,17,23,.1)}
+.solution-card__visual{position:relative;display:block;aspect-ratio:1.58;overflow:hidden;background:#101a2b}
+.solution-card__visual>img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
+.solution-card:hover .solution-card__visual>img{transform:scale(1.035)}
+.solution-card__visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,9,19,.26),transparent 38%,rgba(5,9,19,.38));pointer-events:none}
+.solution-card__num{position:absolute;top:16px;left:18px;z-index:1;color:#fff;font-size:10px;font-weight:700;letter-spacing:.12em}
+.solution-card__image-arrow{position:absolute;right:16px;top:14px;z-index:1;width:36px;height:36px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.55);border-radius:50%;color:#fff;background:rgba(7,15,27,.18)}
+.solution-card__image-arrow svg,.solution-card__link svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.solution-card__body{display:flex;flex:1;flex-direction:column;align-items:flex-start;padding:22px 22px 20px}
+.solutions .solution-card h3{margin:0 0 8px;font-size:26px;line-height:1.1}
+.solutions .solution-card p{max-width:38ch;margin:14px 0 22px;color:#687482;font-size:13px;line-height:1.65}
+.solution-card__link{margin-top:auto;display:inline-flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid #d9e2ec;border-radius:999px;color:var(--blue);font-size:10px;font-weight:700;letter-spacing:.055em;text-transform:uppercase;transition:background .2s ease,color .2s ease,border-color .2s ease}
+.solution-card__link:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+.solution-card__link span{display:inline-flex;transition:transform .2s ease}
+.solution-card__link:hover span{transform:translate(2px,-2px)}
+@media(max-width:900px){.solutions .solution-grid{gap:34px 24px}}
+@media(max-width:640px){
+ .solutions .solution-grid{gap:22px}
+ .solutions .solution-card{padding:0}
+ .solution-card__visual{aspect-ratio:1.6}
+ .solution-card__body{padding:20px}
+ .solutions .solution-card h3{font-size:25px}
+ .solutions .solution-card p{max-width:46ch}
+}
+</style>
 <style id="selected-case-logos">
 .case-story__logo{position:absolute;left:20px;bottom:18px;z-index:2;display:block;width:124px;height:54px}
 .case-story__logo img{display:block;width:100%;height:100%;object-fit:contain;object-position:left bottom}
@@ -1488,39 +1516,87 @@
 
     <div class="solution-grid">
       <article class="solution-card">
-        <div class="solution-top"><div class="solution-num">01</div><div class="solution-icon"><svg viewBox="0 0 24 24"><path d="M6 7h12"/><path d="M6 12h8"/><path d="M6 17h10"/></svg></div></div>
-        <h3>Low Social</h3><div class="solution-type">Redes Sociales</div>
-        <p>Estrategia editorial y sistemas de contenido para que las marcas tengan una voz clara y una cadencia que puedan sostener.</p>
+        <a class="solution-card__visual" href="https://lowsignal.cl/soluciones/low-social" target="_blank" rel="noopener noreferrer" aria-label="Ver Low Social">
+          <img src="https://lowsignal.cl/assets/hub-ig.jpg" alt="Social media content created for hUB" loading="lazy" decoding="async">
+          <span class="solution-card__num">01 / 06</span>
+          <span class="solution-card__image-arrow"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 12.5 12.5 3.5M5 3.5h7.5V11" /></svg></span>
+        </a>
+        <div class="solution-card__body">
+          <h3>Low Social</h3>
+          <div class="solution-type">Redes sociales</div>
+          <p>Estrategia editorial y sistemas de contenido para que las marcas tengan una voz clara y una cadencia sostenible.</p>
+          <a class="solution-card__link" href="https://lowsignal.cl/soluciones/low-social" target="_blank" rel="noopener noreferrer">Ver Low Social<span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 12.5 12.5 3.5M5 3.5h7.5V11" /></svg></span></a>
+        </div>
       </article>
 
       <article class="solution-card">
-        <div class="solution-top"><div class="solution-num">02</div><div class="solution-icon"><svg viewBox="0 0 24 24"><path d="M5 18 19 6"/><path d="M11 6h8v8"/></svg></div></div>
-        <h3>Low Ads</h3><div class="solution-type">Paid Media</div>
-        <p>Campañas de adquisición conectadas con objetivos de negocio, audiencias y aprendizaje continuo.</p>
+        <a class="solution-card__visual" href="https://lowsignal.cl/soluciones/low-ads" target="_blank" rel="noopener noreferrer" aria-label="Ver Low Ads">
+          <img src="https://lowsignal.cl/assets/dulce-local.jpg" alt="Campaign image for a local consumer brand" loading="lazy" decoding="async">
+          <span class="solution-card__num">02 / 06</span>
+          <span class="solution-card__image-arrow"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 12.5 12.5 3.5M5 3.5h7.5V11" /></svg></span>
+        </a>
+        <div class="solution-card__body">
+          <h3>Low Ads</h3>
+          <div class="solution-type">Performance</div>
+          <p>Campañas de adquisición conectadas con objetivos de negocio, audiencias y aprendizaje continuo.</p>
+          <a class="solution-card__link" href="https://lowsignal.cl/soluciones/low-ads" target="_blank" rel="noopener noreferrer">Ver Low Ads<span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 12.5 12.5 3.5M5 3.5h7.5V11" /></svg></span></a>
+        </div>
       </article>
 
       <article class="solution-card">
-        <div class="solution-top"><div class="solution-num">03</div><div class="solution-icon"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 9h16"/></svg></div></div>
-        <h3>Low Web</h3><div class="solution-type">Desarrollo Web</div>
-        <p>Sitios y experiencias digitales que aclaran la propuesta de valor y convierten atención en acción.</p>
+        <a class="solution-card__visual" href="https://lowsignal.cl/soluciones/low-web" target="_blank" rel="noopener noreferrer" aria-label="Ver Low Web">
+          <img src="https://lowsignal.cl/assets/csjo-web.jpg" alt="Website design for Colegio San Jorge" loading="lazy" decoding="async">
+          <span class="solution-card__num">03 / 06</span>
+          <span class="solution-card__image-arrow"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 12.5 12.5 3.5M5 3.5h7.5V11" /></svg></span>
+        </a>
+        <div class="solution-card__body">
+          <h3>Low Web</h3>
+          <div class="solution-type">Desarrollo web</div>
+          <p>Sitios y experiencias digitales que aclaran la propuesta de valor y convierten atención en acción.</p>
+          <a class="solution-card__link" href="https://lowsignal.cl/soluciones/low-web" target="_blank" rel="noopener noreferrer">Ver Low Web<span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 12.5 12.5 3.5M5 3.5h7.5V11" /></svg></span></a>
+        </div>
       </article>
 
       <article class="solution-card">
-        <div class="solution-top"><div class="solution-num">04</div><div class="solution-icon"><svg viewBox="0 0 24 24"><path d="M5 16c3-6 7-9 14-10"/><path d="M13 5h6v6"/></svg></div></div>
-        <h3>Low Scale</h3><div class="solution-type">Sistemas de Growth</div>
-        <p>Sistemas de growth que conectan canales, datos y procesos para encontrar y repetir lo que funciona.</p>
+        <a class="solution-card__visual" href="https://lowsignal.cl/soluciones/low-scale" target="_blank" rel="noopener noreferrer" aria-label="Ver Low Scale">
+          <img src="https://lowsignal.cl/assets/reunion-oficina2.jpg" alt="A working session with a client team" loading="lazy" decoding="async">
+          <span class="solution-card__num">04 / 06</span>
+          <span class="solution-card__image-arrow"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 12.5 12.5 3.5M5 3.5h7.5V11" /></svg></span>
+        </a>
+        <div class="solution-card__body">
+          <h3>Low Scale</h3>
+          <div class="solution-type">Sistemas de growth</div>
+          <p>Sistemas que conectan canales, datos y procesos para encontrar y repetir lo que funciona.</p>
+          <a class="solution-card__link" href="https://lowsignal.cl/soluciones/low-scale" target="_blank" rel="noopener noreferrer">Ver Low Scale<span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 12.5 12.5 3.5M5 3.5h7.5V11" /></svg></span></a>
+        </div>
       </article>
 
       <article class="solution-card">
-        <div class="solution-top"><div class="solution-num">05</div><div class="solution-icon"><svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M10 17h4"/></svg></div></div>
-        <h3>Low Apps</h3><div class="solution-type">Productos & Apps</div>
-        <p>Productos y herramientas digitales que resuelven fricciones concretas y abren nuevas formas de crecer.</p>
+        <a class="solution-card__visual" href="https://lowsignal.cl/soluciones/low-apps" target="_blank" rel="noopener noreferrer" aria-label="Ver Low Apps">
+          <img src="https://lowsignal.cl/assets/colegio-ninos-hd.jpg" alt="Students in a school environment" loading="lazy" decoding="async">
+          <span class="solution-card__num">05 / 06</span>
+          <span class="solution-card__image-arrow"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 12.5 12.5 3.5M5 3.5h7.5V11" /></svg></span>
+        </a>
+        <div class="solution-card__body">
+          <h3>Low Apps</h3>
+          <div class="solution-type">Productos y apps</div>
+          <p>Productos y herramientas digitales que eliminan fricciones y abren nuevas formas de crecer.</p>
+          <a class="solution-card__link" href="https://lowsignal.cl/soluciones/low-apps" target="_blank" rel="noopener noreferrer">Ver Low Apps<span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 12.5 12.5 3.5M5 3.5h7.5V11" /></svg></span></a>
+        </div>
       </article>
 
       <article class="solution-card">
-        <div class="solution-top"><div class="solution-num">06</div><div class="solution-icon"><svg viewBox="0 0 24 24"><path d="M12 3v6"/><path d="M12 15v6"/><path d="M3 12h6"/><path d="M15 12h6"/><circle cx="12" cy="12" r="3"/></svg></div></div>
-        <h3>Low Flow</h3><div class="solution-type">IA & Automatización</div>
-        <p>IA y automatización aplicadas al trabajo real: menos tareas manuales y más capacidad para avanzar.</p>
+        <a class="solution-card__visual" href="https://lowsignal.cl/soluciones/low-flow" target="_blank" rel="noopener noreferrer" aria-label="Ver Low Flow">
+          <img src="https://lowsignal.cl/assets/hub-bg.jpg" alt="hUB hotel and coworking space" loading="lazy" decoding="async">
+          <span class="solution-card__num">06 / 06</span>
+          <span class="solution-card__image-arrow"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 12.5 12.5 3.5M5 3.5h7.5V11" /></svg></span>
+        </a>
+        <div class="solution-card__body">
+          <h3>Low Flow</h3>
+          <div class="solution-type">IA y automatización</div>
+          <p>IA y automatización aplicadas al trabajo diario: menos tareas manuales y más capacidad para avanzar.</p>
+          <a class="solution-card__link" href="https://lowsignal.cl/soluciones/low-flow" target="_blank" rel="noopener noreferrer">Ver Low Flow<span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 12.5 12.5 3.5M5 3.5h7.5V11" /></svg></span></a>
+        </div>
       </article>
     </div>
   </section>
