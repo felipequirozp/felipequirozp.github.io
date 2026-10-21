@@ -1082,7 +1082,122 @@
       .project{padding:26px 0}
       .work-item{min-height:auto;padding-top:20px;padding-bottom:20px}
     }
-\n  </style>
+\n  
+    /* Editorial case-study direction inspired by the reference layout. */
+    :root{--ink:#151a2c;--muted:#535d6c;--line:#dfe3e9;--soft:#f5f6f8;--blue:#2845db;--max:1360px}
+    .hero{padding:58px var(--page) 58px}
+    .hero-inner{width:min(var(--max),100%)}
+    .hero-top{margin-bottom:44px;align-items:center}
+    .hero-meta span{min-height:28px;padding:0 10px;border-radius:999px;font-size:10px}
+    .hero-layout{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(360px,.9fr);align-items:center;gap:clamp(48px,7vw,100px)}
+    .hero-copy{min-width:0}
+    .hero-kicker{margin-bottom:22px;font-size:10px;letter-spacing:.11em;text-transform:uppercase}
+    .hero h1,.impact-head h2,.role-main h2,.people-head h3,.product-head h2,.projects-head h2,.project h3,.operating-head h2{
+      font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.035em;line-height:1.08
+    }
+    .hero h1{max-width:660px;font-size:clamp(54px,6vw,82px);letter-spacing:-.04em;line-height:1.04}
+    .hero h1 span{color:#273253}
+    .hero-description{margin-top:24px;max-width:620px;font-size:15px;line-height:1.78}
+    .hero-role{margin-top:26px;padding-top:16px;border-top:1px solid var(--line)}
+    .hero-role strong{font-family:Inter,system-ui,sans-serif;font-size:14px;font-weight:600;letter-spacing:0}
+    .hero-role span{display:inline-block;margin:7px 12px 0 0;font-size:11px}
+    .hero-media{margin:0;min-width:0}
+    .hero-media img{width:100%;height:clamp(360px,42vw,540px);object-fit:cover;object-position:center 42%;border-radius:3px}
+    .hero-media figcaption{margin-top:9px;color:#747d89;font-size:10px;line-height:1.5}
+    .impact{display:flex;flex-direction:column;padding:0 var(--page) 78px;background:#fff}
+    .impact-grid{order:-1;padding:24px 0 22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);gap:0}
+    .impact-card{min-height:0;padding:8px 20px;border:0;border-right:1px solid var(--line);border-radius:0;background:transparent}
+    .impact-card:first-child{padding-left:0}
+    .impact-card:last-child{border-right:0}
+    .impact-card strong{font-family:Georgia,"Times New Roman",serif;font-size:clamp(34px,4vw,50px);font-weight:400;letter-spacing:-.04em}
+    .impact-card span{margin-top:5px;max-width:190px;font-size:10px;line-height:1.5}
+    .impact-head{margin:64px auto 0;align-items:start}
+    .impact-head .section-label,.section-label{color:var(--blue);font-size:9px;letter-spacing:.12em}
+    .impact-head h2,.role-main h2,.projects-head h2,.operating-head h2{font-size:clamp(38px,4.2vw,58px)}
+    .impact-head p,.projects-head p,.operating-head p{font-size:14px;line-height:1.8}
+    .case-nav{position:sticky;top:76px;z-index:900;padding:14px var(--page);display:flex;gap:30px;background:rgba(255,255,255,.96);border-top:1px solid var(--line);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+    .case-nav a{color:var(--blue);font-size:10px;font-weight:600}
+    .case-nav a:hover{text-decoration:underline;text-underline-offset:4px}
+    #impact,#role,#products,#approach{scroll-margin-top:150px}
+    .role,.projects,.operating{padding-top:88px;padding-bottom:92px}
+    .role-grid{grid-template-columns:minmax(130px,.28fr) minmax(0,1.25fr);gap:clamp(40px,7vw,96px)}
+    .role-main h2{max-width:700px;font-size:clamp(38px,4.2vw,58px)}
+    .role-main>p{max-width:740px;font-size:14px;line-height:1.8}
+    .snapshot{margin-top:32px}
+    .snapshot-item{padding:18px 14px}
+    .snapshot-item:first-child{padding-left:0}
+    .snapshot-focus{gap:0}
+    .snapshot-focus span{padding:3px 11px 3px 0;border:0;border-radius:0;background:none;font-size:10px}
+    .snapshot-focus span+span:before{content:"·";margin-right:11px;color:#9aa2ac}
+    .people{margin-top:52px;padding-top:42px}
+    .people-grid{gap:28px}
+    .person{padding:0;border:0;border-radius:0;background:transparent}
+    .person-photo{width:48px;height:48px}
+    .person-context{font-size:12px}
+    .product{padding:82px var(--page);background:#f5f6f8;color:var(--ink)}
+    .product-head{margin-bottom:28px}
+    .product-head .section-label{color:var(--blue)}
+    .product-head h2{font-size:clamp(38px,4.2vw,58px)}
+    .product-head h2 span{color:#687287}
+    .product-head p,.product-note p{color:#586272}
+    .product-note{border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;padding:18px 0 0}
+    .product-note strong{color:var(--blue)}
+    .projects-head{align-items:start}
+    .project{grid-template-columns:40px minmax(220px,.7fr) minmax(0,1fr);padding:30px 0}
+    .project:hover{padding-left:0;padding-right:0;background:transparent}
+    .project-num,.project-type{color:var(--blue)}
+    .project h3{font-size:clamp(25px,2.8vw,36px)}
+    .project-meta{margin:13px 0 20px;gap:5px 12px}
+    .project-meta span{padding:0;border:0;border-radius:0;background:transparent;font-size:9px}
+    .project-meta span+span:before{content:"·";margin-right:12px;color:#9aa2ac}
+    .project-contribution strong{color:var(--blue)}
+    .operating-head{align-items:start}
+    .work-list{gap:0;border-top:1px solid var(--line)}
+    .work-item{min-height:120px;padding:24px 20px 24px 0;border-bottom:1px solid var(--line);background:transparent}
+    .work-item:nth-child(odd),.work-item:nth-child(even){padding-left:0;padding-right:24px;border-right:0}
+    .work-item strong{font-size:14px;line-height:1.55}
+    .work-num{color:var(--blue)}
+    @media(max-width:860px){
+      .hero-layout{grid-template-columns:1fr 0.9fr;gap:36px}
+      .hero h1{font-size:clamp(48px,6vw,68px)}
+      .case-nav{gap:22px}
+      .impact-head,.projects-head,.operating-head{flex-direction:row;align-items:start}
+      .work-list{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:640px){
+      .hero{padding-top:38px;padding-bottom:38px}
+      .hero-top{margin-bottom:34px}
+      .hero-layout{grid-template-columns:1fr;gap:26px}
+      .hero h1{font-size:clamp(48px,13vw,64px)}
+      .hero-media{order:-1}
+      .hero-media img{height:300px}
+      .hero-description{font-size:14px}
+      .impact{padding-bottom:58px}
+      .impact-grid{grid-template-columns:1fr 1fr;padding:12px 0;row-gap:0}
+      .impact-card{padding:14px 10px;border-right:0;border-bottom:1px solid var(--line)}
+      .impact-card:nth-child(odd){padding-left:0;border-right:1px solid var(--line)}
+      .impact-card:nth-child(even){padding-right:0}
+      .impact-card:nth-last-child(-n+2){border-bottom:0}
+      .impact-card strong{font-size:38px}
+      .impact-card span{max-width:160px}
+      .impact-head{margin-top:42px;flex-direction:column}
+      .case-nav{top:68px;gap:0;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+      .case-nav a{font-size:9px}
+      .role,.projects,.operating{padding-top:64px;padding-bottom:68px}
+      .role-grid{grid-template-columns:1fr;gap:20px}
+      .snapshot{grid-template-columns:1fr 1fr}
+      .snapshot-item:nth-child(2){border-right:0}
+      .snapshot-focus{gap:4px}
+      .product{padding-top:64px;padding-bottom:64px}
+      .product-head{gap:18px}
+      .product-note{grid-template-columns:1fr;gap:8px}
+      .project{grid-template-columns:28px 1fr;gap:14px;padding:24px 0}
+      .project-body{grid-column:2}
+      .work-list{grid-template-columns:1fr}
+      .work-item:nth-child(odd),.work-item:nth-child(even){padding-right:0}
+    }
+
+  </style>
 </head>
 <body>
 
@@ -1119,23 +1234,22 @@
         </div>
       </div>
 
-      <div class="hero-kicker">Producto / Gestión de fuerza laboral / IA</div>
-      <h1>Sistemas de producto<span>para operaciones reales.</span></h1>
-
-      <div class="hero-bottom">
-        <p class="hero-description">Lidero la estrategia y evolución de tres productos de gestión de fuerza laboral en <a href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer">GeoVictoria</a>: Planificador Inteligente, Optimizador de Turnos y Flujo de Cambio de Turno, dentro de una plataforma B2B SaaS que atiende a más de 10.000 clientes en más de 40 países.</p>
-
-        <div class="hero-role">
-          <strong><a href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer">GeoVictoria</a></strong>
-          <span>Product Manager · Gestión de fuerza laboral</span>
-          <span>B2B SaaS · Producto · Operaciones</span>
-          <a class="hero-site" href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer">geovictoria.com ↗</a>
+<div class="hero-layout">
+        <div class="hero-copy">
+          <div class="hero-kicker">Producto / Gestión de fuerza laboral / IA</div>
+          <h1>Producto para<span>operaciones reales.</span></h1>
+          <p class="hero-description">Lidero la estrategia de producto de gestión de fuerza laboral en <a href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer">GeoVictoria</a>, convirtiendo desafíos de planificación, dotación y cambios de turno en productos prácticos para operaciones complejas.</p>
+          <div class="hero-role"><strong>Product Manager</strong><span><a href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer">GeoVictoria</a> · Gestión de fuerza laboral</span><span>B2B SaaS · Producto · Operaciones</span></div>
         </div>
+        <figure class="hero-media">
+          <img src="/images/geocoffe.jpg" alt="Clientes y equipo de GeoVictoria en una sesión de trabajo de producto" onerror="this.onerror=null;this.src='/geocoffe.jpg';">
+          <figcaption>Sesión de trabajo con clientes en Café con GeoVictoria.</figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
-  <section class="impact">
+  <section class="impact" id="impact">
     <div class="impact-head">
       <div>
         <div class="section-label">Impacto</div>
@@ -1152,7 +1266,11 @@
     </div>
   </section>
 
-  <section class="role">
+  <nav class="case-nav" aria-label="Secciones del caso">
+    <a href="#impact">Impacto</a><a href="#role">Rol</a><a href="#products">Productos</a><a href="#approach">Enfoque</a>
+  </nav>
+
+  <section class="role" id="role">
     <div class="role-grid">
       <div class="section-label">Rol</div>
 
@@ -1230,7 +1348,7 @@
     </div>
   </section>
 
-  <section class="product">
+  <section class="product" id="wfm">
     <div class="product-head">
       <div>
         <div class="section-label">Gestión de fuerza laboral</div>
@@ -1247,7 +1365,7 @@
 
   </section>
 
-  <section class="projects">
+  <section class="projects" id="products">
     <div class="projects-head">
       <div>
         <div class="section-label">Productos seleccionados</div>
@@ -1298,22 +1416,7 @@
     </div>
   </section>
 
-  <section class="field">
-    <div class="field-card">
-      <div class="field-copy">
-        <div class="section-label">Trabajo en contexto</div>
-        <h2><span class="heading-line" style="color:#fff">El producto se construye</span><span class="heading-line" style="color:#fff">cerca <span class="field-accent-inline">de la</span></span><span class="heading-line">operación.</span></h2>
-        <p>Gran parte del aprendizaje ocurre con clientes: sesiones de discovery, pilotos y espacios como Café con GeoVictoria. Ahí es donde los problemas reales se transforman en decisiones de producto, reglas y prioridades.</p>
-        <div class="field-meta"><span>Clientes</span><span>Gestión de fuerza laboral</span><span>Santiago</span></div>
-      </div>
-
-      <div class="field-photo">
-        <img src="/images/geocoffe.jpg" alt="Café con GeoVictoria con clientes" onerror="this.onerror=null;this.src='/geocoffe.jpg';">
-      </div>
-    </div>
-  </section>
-
-  <section class="operating">
+  <section class="operating" id="approach">
     <div class="operating-head">
       <div>
         <div class="section-label">Sistema operativo</div>
