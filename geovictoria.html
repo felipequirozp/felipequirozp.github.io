@@ -1032,7 +1032,19 @@
       .footer-grid{grid-template-columns:1fr}
       .footer-bottom{flex-direction:column}
     }
-  </style>
+  
+    /* Match the Home grid and keep GeoVictoria's mark clean on white. */
+    :root{--page:8vw;--max:1520px}
+    .geo-mark{min-width:0;min-height:52px;padding:0;justify-content:flex-start;border:0;border-radius:0;background:transparent}
+    .geo-mark img{height:38px;max-width:220px}
+    .hero-description a,.hero-role strong a,.role-main p a,.snapshot-value a{color:inherit;text-decoration:underline;text-decoration-color:#bcc7d2;text-underline-offset:3px;transition:color .2s ease,text-decoration-color .2s ease}
+    .hero-description a:hover,.hero-role strong a:hover,.role-main p a:hover,.snapshot-value a:hover{color:var(--blue);text-decoration-color:var(--blue)}
+    @media(max-width:640px){
+      :root{--page:20px}
+      .geo-mark{min-width:0;min-height:46px}
+      .geo-mark img{height:34px}
+    }
+</style>
 </head>
 <body>
 
@@ -1059,7 +1071,7 @@
     <div class="hero-inner">
       <div class="hero-top">
         <a class="geo-mark" href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit GeoVictoria">
-          <img src="/logos/geovictoria-logo.png" alt="GeoVictoria">
+          <img src="/logos/logo-geovictoria.png" alt="GeoVictoria">
         </a>
 
         <div class="hero-meta">
@@ -1073,10 +1085,10 @@
       <h1>Product systems<span>for real-world operations.</span></h1>
 
       <div class="hero-bottom">
-        <p class="hero-description">I lead the strategy and evolution of three Workforce Management products at GeoVictoria: Smart Scheduler, Shift Optimizer and Shift Change Workflow, within a B2B SaaS platform serving 10,000+ customers across 20+ countries.</p>
+        <p class="hero-description">I lead the strategy and evolution of three Workforce Management products at <a href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer">GeoVictoria</a>: Smart Scheduler, Shift Optimizer and Shift Change Workflow, within a B2B SaaS platform serving 10,000+ customers across 40+ countries.</p>
 
         <div class="hero-role">
-          <strong>GeoVictoria</strong>
+          <strong><a href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer">GeoVictoria</a></strong>
           <span>Product Manager · Workforce Management</span>
           <span>B2B SaaS · Product · Operations</span>
           <a class="hero-site" href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer">geovictoria.com ↗</a>
@@ -1098,7 +1110,7 @@
       <article class="impact-card"><strong>3</strong><span>Workforce Management products under my responsibility</span></article>
       <article class="impact-card"><strong>100+</strong><span>Customer pilots and validations</span></article>
       <article class="impact-card"><strong>10K+</strong><span>Customers across the GeoVictoria ecosystem</span></article>
-      <article class="impact-card"><strong>20+</strong><span>Countries where the company operates</span></article>
+      <article class="impact-card"><strong>40+</strong><span>Countries where the company operates</span></article>
     </div>
   </section>
 
@@ -1108,11 +1120,11 @@
 
       <div class="role-main">
         <h2>Connecting customer, product and execution.</h2>
-        <p>GeoVictoria is a B2B SaaS Workforce Management platform built for operations with complex staffing, scheduling and attendance needs.</p>
+        <p><a href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer">GeoVictoria</a> is a B2B SaaS Workforce Management platform built for operations with complex staffing, scheduling and attendance needs.</p>
         <p>As Product Manager, I own product strategy, roadmap and prioritization across Smart Scheduler, Shift Optimizer and Shift Change Workflow, balancing customer needs, business impact and technical feasibility from discovery through pilot, launch and adoption.</p>
 
         <div class="snapshot">
-          <div class="snapshot-item"><div class="snapshot-label">Company</div><div class="snapshot-value">GeoVictoria</div></div>
+          <div class="snapshot-item"><div class="snapshot-label">Company</div><div class="snapshot-value"><a href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer">GeoVictoria</a></div></div>
           <div class="snapshot-item"><div class="snapshot-label">Role</div><div class="snapshot-value">Product Manager</div></div>
           <div class="snapshot-item"><div class="snapshot-label">Period</div><div class="snapshot-value">2026 – Present</div></div>
           <div class="snapshot-item"><div class="snapshot-label">Category</div><div class="snapshot-value">Workforce Management</div></div>
