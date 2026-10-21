@@ -580,7 +580,75 @@
       .footer-grid{grid-template-columns:1fr}
       .footer-bottom{flex-direction:column}
     }
-  </style>
+  
+/* About page: editorial rhythm and lighter capability layout */
+.story{padding:88px var(--page) 96px}
+.story-grid{grid-template-columns:minmax(150px,.28fr) minmax(0,1fr);gap:clamp(40px,7vw,100px)}
+.story-copy{max-width:980px}
+.story-copy h2{max-width:820px;margin-bottom:28px;font-size:clamp(42px,4.4vw,66px);line-height:1.04}
+.story-copy p{max-width:860px;margin-bottom:16px;font-size:15px;line-height:1.76}
+.value{padding:86px var(--page) 96px;background:var(--soft)}
+.value-head{width:min(var(--max),100%);margin:0 auto 46px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);gap:clamp(48px,8vw,120px);align-items:end}
+.value-head .section-label{color:var(--blue)}
+.value-head h2{margin:14px 0 0;max-width:760px;text-align:left;font-size:clamp(40px,4.2vw,58px);line-height:1.05}
+.value-head>p{margin:0 0 4px;max-width:460px;color:var(--muted);font-size:15px;line-height:1.75}
+.value-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.value-card{min-height:0;padding:22px 24px 0;background:transparent;border:0;border-top:1px solid #cbd5df;border-radius:0}
+.value-card:first-child{padding-left:0}
+.value-card+.value-card{border-left:1px solid #d5dde5}
+.value-icon{display:none}
+.value-index{color:var(--blue);font-size:10px;font-weight:700;letter-spacing:.12em}
+.value-card h3{margin:22px 0 0;font-size:23px;line-height:1.12}
+.value-card p{margin:11px 0 0;font-size:13px;line-height:1.68}
+.field{padding:88px var(--page)}
+.field-card{grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);min-height:500px;border-radius:24px}
+.field-copy{padding:54px clamp(28px,4vw,64px)}
+.field-copy h2{margin:16px 0 20px;max-width:520px;font-size:clamp(42px,4.5vw,64px)}
+.field-copy p{font-size:14px;line-height:1.75}
+.field-photo,.field-photo img{min-height:500px}
+.journey{padding:88px var(--page) 96px}
+.journey-head{margin-bottom:42px;gap:clamp(40px,7vw,100px)}
+.journey-head h2{max-width:760px;font-size:clamp(40px,4.2vw,58px)}
+.journey-head p{max-width:460px;font-size:14px}
+.experience{padding:22px 0}
+.experience-main strong{font-size:22px}
+.experience-main span{font-size:13px}
+.experience-period{font-size:11px}
+.principle{padding:92px var(--page)}
+.principle h2{font-size:clamp(46px,5.4vw,76px)}
+@media(max-width:1050px){
+.value-head{grid-template-columns:minmax(0,1fr) minmax(250px,.8fr);gap:42px}
+.value-grid{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:28px}
+.value-card:nth-child(odd){padding-left:0;border-left:0}
+.value-card:nth-child(even){border-left:1px solid #d5dde5}
+.field-card{grid-template-columns:1fr}
+.field-photo,.field-photo img{min-height:400px}
+}
+@media(max-width:640px){
+.story,.value,.field,.journey,.principle{padding:62px var(--page) 70px}
+.story-grid{display:block}
+.story-grid>.section-label{margin-bottom:22px}
+.story-copy h2{font-size:clamp(36px,9vw,46px);margin-bottom:22px}
+.story-copy p{font-size:14px;line-height:1.72}
+.value-head{display:block;margin-bottom:32px}
+.value-head h2{font-size:clamp(35px,9vw,44px)}
+.value-head>p{margin-top:16px;font-size:14px}
+.value-grid{grid-template-columns:1fr;row-gap:0}
+.value-card,.value-card:first-child,.value-card+.value-card{padding:20px 0;border-left:0;border-top:1px solid #cbd5df}
+.value-card h3{margin-top:12px;font-size:22px}
+.field-card{border-radius:18px}
+.field-copy{padding:38px 24px}
+.field-copy h2{font-size:42px}
+.field-photo,.field-photo img{min-height:300px}
+.journey-head{gap:18px;margin-bottom:30px}
+.journey-head h2{font-size:clamp(36px,9vw,44px)}
+.experience{grid-template-columns:28px minmax(0,1fr);gap:10px 12px;padding:18px 0}
+.experience-main strong{font-size:19px}
+.experience-main span{font-size:12px}
+.experience-period{grid-column:2}
+.principle h2{font-size:clamp(40px,10vw,50px)}
+}
+</style>
 </head>
 <body>
 
@@ -606,7 +674,7 @@
   <section class="hero">
     <div class="hero-grid">
       <div class="hero-photo">
-        <img src="/images/profile-0.jpg" alt="Felipe Quiroz" fetchpriority="high">
+        <img src="/images/profile_felipe.png" alt="Felipe Quiroz" fetchpriority="high">
       </div>
 
       <div>
@@ -614,7 +682,7 @@
         <h1>Felipe Quiroz</h1>
         <div class="hero-role">Producto, Growth & Operaciones</div>
         <p class="hero-desc">
-          Construyo donde producto, growth y negocio se intersectan, convirtiendo problemas ambiguos en productos, sistemas y modelos operativos que los equipos realmente puedan usar.
+          Trabajo entre producto, growth y operaciones: me acerco a cómo funciona realmente un negocio y convierto lo que descubro en mejores productos y sistemas.
         </p>
 
         <div class="hero-meta">
@@ -643,138 +711,15 @@
     </div>
   </section>
 
-  <section class="story">
-    <div class="story-grid">
-      <div class="section-label">Sobre mí</div>
+  <section class="story"><div class="story-grid"><div class="section-label">Mi forma de trabajar</div><div class="story-copy"><h2>Me gusta el tramo complejo: pasar de un problema real a algo que funcione.</h2><p>Me atraen esos momentos en que un equipo sabe que algo debe cambiar, pero todavía no tiene claro cómo. Parto por entender el problema: escucho a clientes, identifico fricciones, pongo a prueba supuestos y alineo a las personas que pueden convertir una idea en realidad.</p><p>Hoy soy Product Manager en GeoVictoria, donde trabajo en productos de Workforce Management para empresas en más de 40 países. También soy Co-Founder &amp; COO de lowsignal, donde ayudo a organizaciones de educación, B2B y B2C a crecer con estrategia, marketing, tecnología y automatización.</p><p>Antes lideré partnerships y expansión de mercado en Tether Education, trabajando entre Latinoamérica, Estados Unidos y Europa. Moverme entre producto, estrategia comercial y operaciones me ha enseñado a mantenerme cerca de quienes hacen el trabajo y acompañar una buena idea hasta su entrega, adopción y resultados.</p><a class="cv-button" href="https://felipequirozp.cl/Felipe_Quiroz_cv_es.pdf" target="_blank" rel="noopener noreferrer">Descargar CV<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10"></path><path d="m8 10 4 4 4-4"></path><path d="M5 19h14"></path></svg></a></div></div></section>
 
-      <div class="story-copy">
-        <h2>Convierto ambigüedad en productos, sistemas y crecimiento.</h2>
+  <section class="value"><div class="value-head"><div><div class="section-label">Cómo trabajo</div><h2>Me muevo mejor cuando el camino todavía se está armando.</h2></div><p>Cada equipo enfrenta un desafío distinto. El patrón se repite: encontrar qué está frenando el avance, alinear a las personas en torno a una decisión y construir el camino entre una idea y su impacto.</p></div><div class="value-grid"><article class="value-card"><div class="value-index">01</div><h3>Estrategia de producto</h3><p>Convirtiendo señales de clientes, mercado y operación en prioridades, apuestas y experimentos claros.</p></article><article class="value-card"><div class="value-index">02</div><h3>Go-to-market</h3><p>Conectando posicionamiento, alianzas, adquisición y ejecución comercial con objetivos de crecimiento.</p></article><article class="value-card"><div class="value-index">03</div><h3>Sistemas operativos</h3><p>Creando procesos, ownership y visibilidad para que los equipos ejecuten con consistencia al escalar.</p></article><article class="value-card"><div class="value-index">04</div><h3>Trabajo cross-functional</h3><p>Alineando producto, diseño, ingeniería, ventas y operaciones en torno a decisiones y resultados.</p></article></div></section>
 
-        <p>Soy Felipe Quiroz, Product Manager y Co-Founder basado en Santiago, Chile. Trabajo en la intersección entre producto, growth, operaciones y negocio, normalmente en entornos donde el problema todavía está tomando forma y la ejecución importa tanto como la estrategia. En GeoVictoria lidero la evolución de tres productos de Workforce Management, con 100+ pilotos con clientes y más de USD 40K en oportunidades comerciales tempranas generadas alrededor de nuevas soluciones. En lowsignal lidero operaciones, estrategia comercial y delivery para 15+ organizaciones en 5+ industrias, mientras construyo los sistemas que la compañía necesita para escalar.</p>
+  <section class="field"><div class="field-card"><div class="field-copy"><div class="section-label">En terreno</div><h2>Mantenerse cerca<span>del trabajo real.</span></h2><p>Los detalles que importan rara vez aparecen en una presentación. Están en el atajo, en el traspaso y en el momento en que un usuario se frena. Me acerco a equipos y clientes porque ahí empiezan los mejores productos y sistemas operativos.</p></div><div class="field-photo"><img src="/images/building-in-the-field.jpg" alt="Felipe Quiroz trabajando junto a un equipo" loading="lazy"></div></div></section>
 
-        <p>Antes de eso, lideré partnerships, desarrollo de negocios y expansión de mercado en TetherEd en Latinoamérica, Estados Unidos y Europa, construyendo 14+ alianzas estratégicas y contribuyendo a iniciativas que abarcaron 7 mercados, 600+ instituciones y más de 1M de postulaciones. A lo largo de estos roles, he aprendido a moverme con comodidad entre estrategia y ejecución: entendiendo el problema, alineando equipos y stakeholders, construyendo el modelo operativo y empujando el trabajo hasta generar valor medible.</p>
+  <section class="journey"><div class="journey-head"><div><div class="section-label">Trayectoria</div><h2>Distintos roles. Un hilo común: construir lo que hace avanzar el trabajo.</h2></div><p>Desde operaciones académicas y alianzas en educación hasta product management y construcción de compañías, he trabajado cerca de las personas, los sistemas y las decisiones detrás del crecimiento.</p></div><div class="experience-list"><a class="experience" href="/geovictoria"><div class="experience-num">01</div><div class="experience-main"><strong>GeoVictoria</strong><span>Product Manager · Workforce Management</span></div><div class="experience-period">2026 – Actualidad</div></a><a class="experience" href="/lowsignal"><div class="experience-num">02</div><div class="experience-main"><strong>lowsignal</strong><span>Co-Founder &amp; COO · Growth Systems</span></div><div class="experience-period">2025 – Actualidad</div></a><a class="experience" href="/tethereducation"><div class="experience-num">03</div><div class="experience-main"><strong>Tether Education</strong><span>Head of Partnerships · EdTech &amp; GovTech</span></div><div class="experience-period">2024 – 2026</div></a><a class="experience" href="/usm"><div class="experience-num">04</div><div class="experience-main"><strong>Escuela de Negocios USM</strong><span>Coordinador de Promoción de Admisión</span></div><div class="experience-period">2023 – 2025</div></a><div class="experience"><div class="experience-num">05</div><div class="experience-main"><strong>RECH</strong><span>Coordinador Programa de Matemática · Datos &amp; Operaciones</span></div><div class="experience-period">2019 – 2021</div></div></div></section>
 
-        <a class="cv-button" href="https://felipequirozp.cl/Felipe_Quiroz_cv_es.pdf" target="_blank" rel="noopener noreferrer">
-          Descargar CV
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 4v10"></path>
-            <path d="m8 10 4 4 4-4"></path>
-            <path d="M5 19h14"></path>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="value">
-    <div class="section-label" style="text-align:center">Dónde agrego valor</div>
-    <h2>Trabajo mejor cuando el camino no es obvio.</h2>
-
-    <div class="value-grid">
-      <article class="value-card">
-        <div class="value-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5 20.5 12 12 20.5 3.5 12 12 3.5Z"/></svg></div>
-        <h3>Estrategia de producto</h3>
-        <p>Convirtiendo señales de clientes, mercado y operación en prioridades, productos y experimentos claros.</p>
-      </article>
-
-      <article class="value-card">
-        <div class="value-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg></div>
-        <h3>Go-to-market</h3>
-        <p>Conectando posicionamiento, partnerships, adquisición y ejecución comercial alrededor de objetivos reales de negocio.</p>
-      </article>
-
-      <article class="value-card">
-        <div class="value-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 8h10"/><path d="M7 12h10"/><path d="M7 16h10"/></svg></div>
-        <h3>Sistemas operativos</h3>
-        <p>Creando ownership, procesos y visibilidad para que los equipos ejecuten con mayor consistencia y velocidad.</p>
-      </article>
-
-      <article class="value-card">
-        <div class="value-icon" aria-hidden="true"><svg class="fill-icon" viewBox="0 0 24 24"><path d="M12 3.5c.7 3.5 1.5 4.3 5 5-.77.16-1.49.38-2.17.67-.68.29-1.28.68-1.83 1.16-.48.43-.91.96-1.28 1.57-.37.61-.62 1.2-.72 1.77-.1-.57-.35-1.16-.72-1.77-.37-.61-.8-1.14-1.28-1.57a5.83 5.83 0 0 0-1.83-1.16A10.5 10.5 0 0 0 7 8.5c3.5-.7 4.3-1.5 5-5Z"/></svg></div>
-        <h3>Ejecución cross-functional</h3>
-        <p>Alineando equipos y stakeholders alrededor del problema, la decisión y el trabajo necesario para avanzar.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="field">
-    <div class="field-card">
-      <div class="field-copy">
-        <div class="section-label">En terreno</div>
-        <h2>Las mejores señales viven<span>cerca de la operación.</span></h2>
-        <p>Me mantengo cerca de usuarios, equipos y operaciones reales porque ahí está la información útil. La fricción, los atajos y las restricciones que aparecen en terreno suelen marcar la diferencia entre una idea pulida y un producto o sistema que realmente funciona.</p>
-      </div>
-
-      <div class="field-photo">
-        <img src="/images/building-in-the-field.jpg" alt="Felipe Quiroz trabajando en terreno" loading="lazy">
-      </div>
-    </div>
-  </section>
-
-  <section class="journey">
-    <div class="journey-head">
-      <div>
-        <div class="section-label">Trayectoria</div>
-        <h2>Distintos roles. Un mismo patrón: construir, alinear, escalar.</h2>
-      </div>
-
-      <p>Producto, growth, partnerships y operaciones han sido distintos puntos de entrada al mismo tipo de trabajo: entender qué está frenando el sistema, alinear a las personas que pueden cambiarlo y construir la estructura que convierte intención en resultados.</p>
-    </div>
-
-    <div class="experience-list">
-      <a class="experience" href="/geovictoria">
-        <div class="experience-num">01</div>
-        <div class="experience-main">
-          <strong>GeoVictoria</strong>
-          <span>Product Manager · Workforce Management</span>
-        </div>
-        <div class="experience-period">2026 – Actualidad</div>
-      </a>
-
-      <a class="experience" href="/lowsignal">
-        <div class="experience-num">02</div>
-        <div class="experience-main">
-          <strong>lowsignal</strong>
-          <span>Co-Founder & COO · Growth Systems</span>
-        </div>
-        <div class="experience-period">2025 – Actualidad</div>
-      </a>
-
-      <a class="experience" href="/tethereducation">
-        <div class="experience-num">03</div>
-        <div class="experience-main">
-          <strong>TetherEd</strong>
-          <span>Head of Partnerships · EdTech</span>
-        </div>
-        <div class="experience-period">2024 – 2026</div>
-      </a>
-
-      <a class="experience" href="/usm">
-        <div class="experience-num">04</div>
-        <div class="experience-main">
-          <strong>USM</strong>
-          <span>Coordinador de Promoción de Admisión · Coordinador Ayudante</span>
-        </div>
-        <div class="experience-period">2023 – 2025</div>
-      </a>
-
-      <div class="experience">
-        <div class="experience-num">05</div>
-        <div class="experience-main">
-          <strong>RECH</strong>
-          <span>Coordinador Programa de Matemática · Datos & Operaciones</span>
-        </div>
-        <div class="experience-period">2019 – 2021</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="principle">
-    <div class="principle-inner">
-      <div class="section-label">Principio</div>
-      <h2>Partir desde la realidad.<span>Construir lo que la mueve hacia adelante.</span></h2>
-    </div>
-  </section>
+  <section class="principle"><div class="principle-inner"><div class="section-label">Una idea que siempre vuelve</div><h2>Acercarse al problema.<span>Seguir hasta que algo funcione.</span></h2></div></section>
 
 </main>
 
