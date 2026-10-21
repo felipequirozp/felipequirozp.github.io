@@ -1376,21 +1376,52 @@
 .solution-art__step span{width:21px;height:21px;display:grid;place-items:center;border:1px solid rgba(158,184,255,.55);border-radius:7px;color:#aec4ff;font-size:8px;font-weight:700}
 .solution-art__step strong{font-size:7px;line-height:1.2}
 
-.solution-art--social{display:flex;align-items:center;justify-content:center;padding:30px 24px 34px;background:linear-gradient(135deg,#111a2d,#0a1020)}
-.solution-art__social-board{width:min(100%,350px);padding:10px;border:1px solid rgba(255,255,255,.16);border-radius:12px;background:rgba(255,255,255,.96);box-shadow:0 16px 40px rgba(0,0,0,.22)}
-.solution-art__social-head{display:flex;align-items:center;justify-content:space-between;margin:0 2px 8px;color:#1a263d;font-size:7px;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
-.solution-art__social-head span:last-child{color:#77849a}
-.solution-social-grid{position:static;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr;gap:6px;transform:none}
-.solution-social-grid img,.solution-social-grid img:first-child{width:100%;height:92px;min-height:0;grid-row:auto;object-fit:cover;border:1px solid #e8edf4;border-radius:6px}
-.solution-art--web{background:radial-gradient(circle at 85% 15%,#d7e4ff,transparent 38%),linear-gradient(135deg,#eff4ff,#dce7f7)}
-.solution-art__browser{width:min(100%,380px);overflow:hidden;border:1px solid rgba(255,255,255,.88);border-radius:10px;background:#fff;box-shadow:0 18px 42px rgba(25,48,91,.2)}
-.solution-art__browser-bar{height:23px;display:flex;align-items:center;gap:4px;padding:0 9px;border-bottom:1px solid #e8edf4;background:#f8fafc}
+.solution-art--social,.solution-art--web{background:radial-gradient(circle at 85% 15%,rgba(82,112,255,.72),transparent 34%),linear-gradient(135deg,#111a37,#080d1f)}
+.solution-art__social-board{width:min(100%,360px);padding:10px;border:1px solid rgba(255,255,255,.16);border-radius:12px;background:rgba(255,255,255,.97);box-shadow:0 18px 46px rgba(0,0,0,.22);color:#17233b}
+.solution-art__social-head{display:flex;align-items:center;justify-content:space-between;margin:0 1px 8px;font-size:7px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.solution-art__live{display:flex;align-items:center;gap:5px;color:#66748a;font-size:6px}
+.solution-art__live:before{width:5px;height:5px;border-radius:50%;background:#38bd87;content:""}
+.solution-social-grid{position:static;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;transform:none}
+.solution-social-post{overflow:hidden;border:1px solid #e7ebf2;border-radius:7px;background:#fff}
+.solution-social-post__art{position:relative;height:75px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:7px;color:#fff}
+.solution-social-post__art span{font-size:5px;font-weight:800;letter-spacing:.1em;line-height:1.2}
+.solution-social-post__art strong{font-size:11px;line-height:.95;letter-spacing:-.06em}
+.solution-social-post__art--one{background:linear-gradient(145deg,#f78d62 0%,#db4d56 55%,#773776 100%)}
+.solution-social-post__art--one:after{position:absolute;right:-10px;top:10px;width:45px;height:45px;border:1px solid rgba(255,255,255,.55);border-radius:50%;content:""}
+.solution-social-post__art--two{background:linear-gradient(145deg,#233e7b,#597be9 58%,#a0b5ff)}
+.solution-social-post__art--two i{position:absolute;right:8px;bottom:-12px;width:40px;height:48px;border-radius:50% 50% 5px 5px;background:#f2b695;transform:rotate(-16deg)}
+.solution-social-post__art--three{background:linear-gradient(140deg,#f1d2a6,#d58a60 60%,#723c47)}
+.solution-social-post__art--three span{color:#273453}
+.solution-social-post__art--three i{position:absolute;right:9px;bottom:-5px;width:29px;height:38px;border-radius:16px 16px 3px 3px;background:linear-gradient(#293a57 0 35%,#f0c4a2 36% 58%,#e9e6dc 59%)}
+.solution-social-post__meta{display:flex;flex-direction:column;gap:2px;padding:5px 6px}
+.solution-social-post__meta strong{overflow:hidden;color:#253149;font-size:6px;white-space:nowrap;text-overflow:ellipsis}
+.solution-social-post__meta span{color:#7a879a;font-size:5px;white-space:nowrap}
+.solution-art--web{padding:30px 24px 34px}
+.solution-art__browser{width:min(100%,380px);overflow:hidden;border:1px solid rgba(255,255,255,.82);border-radius:9px;background:#fff;box-shadow:0 18px 42px rgba(0,0,0,.24)}
+.solution-art__browser-bar{height:18px;display:flex;align-items:center;gap:4px;padding:0 8px;border-bottom:1px solid #e8edf4;background:#f8fafc}
 .solution-art__browser-bar i{width:5px;height:5px;border-radius:50%;background:#cbd4df}
-.solution-art__browser-bar span{margin-left:8px;color:#7b8798;font-size:7px}
-.solution-art__browser img{display:block;width:100%;height:144px;object-fit:cover;object-position:top center}
-.solution-art--social .solution-art__caption{left:24px;bottom:12px;font-size:8px}
-.solution-art--web .solution-art__caption{left:24px;bottom:12px;color:#29416c;font-size:8px}
-@media(max-width:640px){.solution-art__social-board{padding:8px}.solution-social-grid img,.solution-social-grid img:first-child{height:78px}.solution-art__browser img{height:128px}}
+.solution-art__browser-bar span{margin-left:8px;color:#7b8798;font-size:6px}
+.solution-art__web-page{padding:10px 12px 7px;color:#202943;background:#fbfaf7}
+.solution-art__web-nav{display:flex;align-items:center;justify-content:space-between;padding-bottom:8px;border-bottom:1px solid #e6e3dd}
+.solution-art__web-nav strong{font-family:Georgia,serif;font-size:9px;letter-spacing:.02em}
+.solution-art__web-nav strong span{font:6px Arial,sans-serif;vertical-align:top}
+.solution-art__web-nav>span{color:#697187;font-size:5px}
+.solution-art__web-nav b{padding:4px 6px;border-radius:20px;color:#fff;background:#283655;font-size:5px;letter-spacing:.06em}
+.solution-art__web-hero{display:grid;grid-template-columns:1fr .75fr;align-items:center;gap:8px;min-height:118px;padding:8px 0}
+.solution-art__web-hero>div:first-child{display:flex;flex-direction:column;align-items:flex-start}
+.solution-art__web-hero small{margin-bottom:6px;color:#5366cc;font-size:5px;font-weight:800;letter-spacing:.12em}
+.solution-art__web-hero strong{font-family:Georgia,serif;font-size:19px;font-weight:500;line-height:.95;letter-spacing:-.06em}
+.solution-art__web-hero p{max-width:150px;margin:5px 0;color:#727789;font-size:6px;line-height:1.35}
+.solution-art__web-hero>div:first-child>span{padding:4px 6px;border-radius:20px;color:#fff;background:#5366cc;font-size:5px;font-weight:700}
+.solution-art__web-visual{position:relative;min-height:94px;overflow:hidden;display:flex;align-items:flex-end;padding:8px;border-radius:4px;color:#fff;background:linear-gradient(145deg,#f0a477,#e86d66 45%,#5366cc)}
+.solution-art__web-visual:before{position:absolute;top:-16px;right:-8px;width:82px;height:82px;border:12px solid rgba(255,255,255,.34);border-radius:50%;content:""}
+.solution-art__web-visual:after{position:absolute;right:17px;bottom:-26px;width:56px;height:70px;border-radius:50% 50% 4px 4px;background:rgba(31,46,86,.72);content:""}
+.solution-art__web-visual i{position:absolute;top:15px;left:12px;width:22px;height:38px;border-radius:14px;background:rgba(255,255,255,.56);transform:rotate(24deg)}
+.solution-art__web-visual b{position:absolute;top:8px;left:9px;font-size:6px}
+.solution-art__web-visual span{position:relative;z-index:1;font-size:5px;font-weight:800;letter-spacing:.11em;line-height:1.25}
+.solution-art__web-foot{display:flex;justify-content:space-between;padding-top:6px;border-top:1px solid #e6e3dd;color:#7d8491;font-size:4px;font-weight:700;letter-spacing:.1em}
+.solution-art--social .solution-art__caption,.solution-art--web .solution-art__caption{left:24px;bottom:12px;font-size:8px}
+@media(max-width:640px){.solution-art__social-board{padding:8px}.solution-social-grid{gap:5px}.solution-social-post__art{height:64px;padding:6px}.solution-art__web-hero{min-height:106px}.solution-art__web-hero strong{font-size:17px}.solution-art__web-visual{min-height:82px}.solution-art--web{padding:28px 20px 34px}}
 
 .solution-card__visual--apps .solution-card__num{color:#17233b}.solution-card__visual--apps .solution-card__image-arrow{color:#17233b;border-color:rgba(23,35,59,.35);background:rgba(255,255,255,.58)}
 @media(max-width:640px){.solution-art{padding:25px 14px 14px}.solution-social-grid{inset:30px 18px 34px}.solution-art__dashboard,.solution-art__product{padding:10px}.solution-art__workflow{gap:7px}.solution-art__step:not(:last-child)::after{width:8px}}
@@ -1580,7 +1611,7 @@
 
     <div class="solution-grid">
       <article class="solution-card">
-        <a class="solution-card__visual solution-card__visual--art solution-card__visual--social" href="https://lowsignal.cl/soluciones/low-social" target="_blank" rel="noopener noreferrer" aria-label="Ver Low Social"><div class="solution-art solution-art--social"><div class="solution-art__social-board"><div class="solution-art__social-head"><span>Social · contenido</span><span>Piezas</span></div><div class="solution-social-grid"><img src="https://lowsignal.cl/assets/hub-ig.jpg" alt="" loading="lazy" decoding="async"><img src="https://lowsignal.cl/assets/dali-ig.jpg" alt="" loading="lazy" decoding="async"><img src="https://lowsignal.cl/assets/dimor-ig.jpg" alt="" loading="lazy" decoding="async"></div></div><span class="solution-art__caption">Contenido creado por lowsignal</span></div><span class="solution-card__num">01 / 06</span><span class="solution-card__image-arrow"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 12.5 12.5 3.5M5 3.5h7.5V11" /></svg></span></a>
+        <a class="solution-card__visual solution-card__visual--art solution-card__visual--social" href="https://lowsignal.cl/soluciones/low-social" target="_blank" rel="noopener noreferrer" aria-label="Ver Low Social"><div class="solution-art solution-art--social"><div class="solution-art__social-board"><div class="solution-art__social-head"><span>Planificador de contenido</span><span class="solution-art__live">Semana 42</span></div><div class="solution-social-grid"><div class="solution-social-post"><div class="solution-social-post__art solution-social-post__art--one"><span>HISTORIA DE MARCA</span><strong>Hecho para<br>avanzar.</strong></div><div class="solution-social-post__meta"><strong>Historia de marca</strong><span>Instagram · Reel</span></div></div><div class="solution-social-post"><div class="solution-social-post__art solution-social-post__art--two"><span>NUESTRO<br>PRÓXIMO<br>CAPÍTULO</span><i></i></div><div class="solution-social-post__meta"><strong>Detrás de la marca</strong><span>Instagram · Carrusel</span></div></div><div class="solution-social-post"><div class="solution-social-post__art solution-social-post__art--three"><span>EN<br>PROCESO</span><i></i></div><div class="solution-social-post__meta"><strong>En proceso</strong><span>Instagram · Historia</span></div></div></div></div><span class="solution-art__caption">Sistema de contenidos · Creado por lowsignal</span></div><span class="solution-card__num">01 / 06</span><span class="solution-card__image-arrow"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 12.5 12.5 3.5M5 3.5h7.5V11" /></svg></span></a>
         <div class="solution-card__body">
           <h3>Low Social</h3>
           <div class="solution-type">Redes sociales</div>
@@ -1600,7 +1631,7 @@
       </article>
 
       <article class="solution-card">
-        <a class="solution-card__visual solution-card__visual--art solution-card__visual--web" href="https://lowsignal.cl/soluciones/low-web" target="_blank" rel="noopener noreferrer" aria-label="Ver Low Web"><div class="solution-art solution-art--web"><div class="solution-art__browser"><div class="solution-art__browser-bar"><i></i><i></i><i></i><span>colegiosanjorge.cl</span></div><img src="https://lowsignal.cl/assets/csjo-web.jpg" alt="Sitio web creado por lowsignal para Colegio San Jorge" loading="lazy" decoding="async"></div><span class="solution-art__caption">Sitio creado por lowsignal</span></div><span class="solution-card__num">03 / 06</span><span class="solution-card__image-arrow"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 12.5 12.5 3.5M5 3.5h7.5V11" /></svg></span></a>
+        <a class="solution-card__visual solution-card__visual--art solution-card__visual--web" href="https://lowsignal.cl/soluciones/low-web" target="_blank" rel="noopener noreferrer" aria-label="Ver Low Web"><div class="solution-art solution-art--web"><div class="solution-art__browser"><div class="solution-art__browser-bar"><i></i><i></i><i></i><span>project-preview.co</span></div><div class="solution-art__web-page"><div class="solution-art__web-nav"><strong>FORME<span>®</span></strong><span>Estudio&nbsp;&nbsp; Proyectos&nbsp;&nbsp; Nosotros</span><b>HABLEMOS&nbsp; ↗</b></div><div class="solution-art__web-hero"><div><small>DISEÑO PARA LO QUE VIENE</small><strong>Haz espacio<br>para lo que viene.</strong><p>Experiencias digitales para llevar tu próxima idea más lejos.</p><span>Explorar proyectos&nbsp; ↗</span></div><div class="solution-art__web-visual"><i></i><b>01</b><span>LA FORMA<br>SIGUE A<br>LA IDEA</span></div></div><div class="solution-art__web-foot"><span>MARCA · DIGITAL · EXPERIENCIA</span><span>DESLIZA PARA EXPLORAR ↓</span></div></div></div><span class="solution-art__caption">Experiencia digital · Creada por lowsignal</span></div><span class="solution-card__num">03 / 06</span><span class="solution-card__image-arrow"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 12.5 12.5 3.5M5 3.5h7.5V11" /></svg></span></a>
         <div class="solution-card__body">
           <h3>Low Web</h3>
           <div class="solution-type">Desarrollo web</div>
