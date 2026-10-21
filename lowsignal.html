@@ -1073,6 +1073,65 @@
 @media(max-width:860px){.hero-layout{grid-template-columns:1fr .88fr;gap:34px}.hero h1{font-size:clamp(48px,6.4vw,68px)}.case-nav{gap:18px}.impact-head,.solutions-head,.system-head,.cases-head{flex-direction:row;align-items:flex-end}.impact-head{margin-top:42px}}
 @media(max-width:640px){.hero{padding-top:38px;padding-bottom:48px}.hero-top{align-items:flex-start;flex-direction:column;margin-bottom:28px;gap:20px}.hero-meta{justify-content:flex-start;gap:7px}.hero-meta span{padding:7px 10px;font-size:10px}.hero-layout{grid-template-columns:1fr;gap:26px}.hero-media{order:-1}.hero-media img{height:300px;object-position:50% 36%}.hero h1{font-size:clamp(46px,12.2vw,64px)}.hero-description{font-size:15px}.impact{padding-bottom:56px}.impact-grid{grid-template-columns:1fr 1fr;padding:12px 0}.impact-card{min-height:94px;padding:13px 10px;border-right:0;border-bottom:1px solid var(--line)}.impact-card:nth-child(odd){padding-left:0;border-right:1px solid var(--line)}.impact-card:nth-child(even){padding-right:0}.impact-card:nth-last-child(-n+2){border-bottom:0}.impact-card strong{font-size:34px}.impact-card span{font-size:12px}.impact-head,.solutions-head,.system-head,.cases-head{margin-top:38px;flex-direction:column;align-items:flex-start;gap:17px}.impact-head h2,.company-main h2,.operating h2,.solutions-head h2,.system-head h2,.cases-head h2{font-size:clamp(34px,9vw,48px)}.case-nav{top:68px;justify-content:space-between;gap:8px;padding:11px var(--page)}.case-nav a{font-size:10px}.company,.operating,.solutions,.system,.cases{padding-top:64px;padding-bottom:68px}.company-grid{grid-template-columns:1fr;gap:18px}.work-list{grid-template-columns:1fr}.work-item:nth-child(odd),.work-item:nth-child(even){padding-left:0;padding-right:0;border-right:0}.people{margin-top:54px}.people-head{flex-direction:column;gap:12px}.people-grid{grid-template-columns:1fr 1fr;gap:10px}.person{padding:16px}.person h4{font-size:16px}.person p{font-size:13px}.solution-grid,.system-steps{grid-template-columns:1fr 1fr}.solution-card{min-height:240px;padding:18px}.solution-card h3{font-size:21px}.solution-card p{font-size:13px}.system-step{min-height:190px;padding:18px}.field{padding-bottom:60px}.field-copy{min-height:auto;padding:36px 25px}.case-row{grid-template-columns:26px 1fr;gap:12px 14px;padding:24px 0}.case-row .case-copy,.case-row .case-link{grid-column:2}}
 </style>
+<style>
+/* Match GeoVictoria's layout grid, rhythm and editorial hierarchy. */
+:root{--page:8vw;--max:1360px;--ink:#151a2c;--muted:#535d6c;--line:#dfe3e9;--soft:#f5f6f8;--blue:#2845db}
+.hero{padding:58px var(--page) 58px}
+.hero-inner{width:min(var(--max),100%)}
+.hero-top{margin-bottom:44px;align-items:center}
+.hero-meta span{min-height:28px;padding:0 10px;font-size:10px}
+.hero-layout{grid-template-columns:minmax(0,1.02fr) minmax(360px,.9fr);gap:clamp(48px,7vw,100px)}
+.hero-kicker{margin-bottom:22px;font-size:10px}
+.hero h1{max-width:660px;font-size:clamp(54px,6vw,82px);letter-spacing:-.04em;line-height:1.04}
+.hero h1 span{color:#273253}
+.hero-description{max-width:620px;margin-top:24px;font-size:15px;line-height:1.78}
+.hero-role{margin-top:26px;padding-top:16px}
+.hero-role strong{font-family:Inter,system-ui,sans-serif;font-size:14px;font-weight:600;letter-spacing:0}
+.hero-role span{display:inline-block;margin:7px 12px 0 0;font-size:11px}
+.hero-site{font-size:11px}
+.hero-media img{height:clamp(360px,42vw,540px);object-position:center 42%}
+.hero-media figcaption{margin-top:9px;color:#747d89;font-size:10px}
+.impact{padding:0 var(--page) 78px;background:#fff}
+.impact-grid{padding:24px 0 22px}
+.impact-card{min-height:0;padding:8px 20px}
+.impact-card strong{font-size:clamp(34px,4vw,50px)}
+.impact-card span{max-width:190px;margin-top:5px;font-size:12px;line-height:1.55}
+.impact-head{margin:64px auto 0;align-items:flex-start}
+.impact-head h2,.company-main h2,.operating h2,.solutions-head h2,.system-head h2,.cases-head h2{font-size:clamp(38px,3.6vw,50px);line-height:1.04;letter-spacing:-.05em}
+.impact-head p,.solutions-head p,.system-head p,.cases-head p{font-size:14px;line-height:1.8}
+.section-label,.operating .section-label{color:var(--blue);font-size:9px;letter-spacing:.12em}
+.case-nav{padding:14px var(--page);gap:30px}
+.case-nav a{font-size:10px}
+.company,.operating,.solutions,.system,.cases{padding-top:88px;padding-bottom:92px}
+#impact,#company,#role,#solutions,#approach,#work{scroll-margin-top:150px}
+@media(max-width:860px){
+ .hero-layout{grid-template-columns:1fr .88fr;gap:34px}
+ .hero h1{font-size:clamp(48px,6.4vw,68px)}
+}
+@media(max-width:640px){
+ :root{--page:20px}
+ .hero{padding:38px var(--page) 48px}
+ .hero-top{margin-bottom:34px}
+ .hero-layout{grid-template-columns:1fr;gap:26px}
+ .hero h1{font-size:clamp(48px,13vw,64px)}
+ .hero-media{order:-1}
+ .hero-media img{height:300px}
+ .hero-description{font-size:14px}
+ .impact{padding-bottom:58px}
+ .impact-grid{grid-template-columns:1fr 1fr;padding:12px 0}
+ .impact-card{padding:14px 10px;border-right:0;border-bottom:1px solid var(--line)}
+ .impact-card:nth-child(odd){padding-left:0;border-right:1px solid var(--line)}
+ .impact-card:nth-child(even){padding-right:0}
+ .impact-card:nth-last-child(-n+2){border-bottom:0}
+ .impact-card strong{font-size:38px}
+ .impact-card span{max-width:160px;font-size:12px}
+ .impact-head{margin-top:42px;flex-direction:column}
+ .impact-head h2,.company-main h2,.operating h2,.solutions-head h2,.system-head h2,.cases-head h2{font-size:clamp(38px,9vw,48px)}
+ .case-nav{top:68px;gap:0;justify-content:space-between;padding:12px var(--page)}
+ .case-nav a{font-size:9px}
+ .company,.operating,.solutions,.system,.cases{padding-top:64px;padding-bottom:68px}
+}
+</style>
 </head>
 <body>
 
@@ -1126,7 +1185,7 @@
       <article class="impact-card"><strong>15+</strong><span>Organizations worked with</span></article>
       <article class="impact-card"><strong>5+</strong><span>Person cross-functional team</span></article>
       <article class="impact-card"><strong>5+</strong><span>Industries</span></article>
-      <article class="impact-card"><strong>End-to-end</strong><span>Commercial engine</span></article>
+      <article class="impact-card"><strong>3</strong><span>Markets: education, B2B and B2C</span></article>
     </div>
   </section>
 
