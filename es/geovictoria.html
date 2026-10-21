@@ -1044,7 +1044,45 @@
       .geo-mark{min-width:0;min-height:46px}
       .geo-mark img{height:34px}
     }
-</style>
+
+    /* Focused case-study refresh: tighter hierarchy, less repetition. */
+    .hero{padding-top:68px;padding-bottom:82px}
+    .hero-top{margin-bottom:48px}
+    .hero h1{font-size:clamp(64px,6.6vw,104px);max-width:1120px}
+    .hero-bottom{margin-top:42px}
+    .impact,.role,.projects,.operating{padding-top:84px;padding-bottom:92px}
+    .impact-head{margin-bottom:36px}
+    .impact-head h2,.role-main h2,.projects-head h2,.operating-head h2{font-size:clamp(40px,4.2vw,62px)}
+    .impact-card{min-height:174px;padding:24px;border-radius:18px}
+    .impact-card strong{font-size:clamp(48px,4vw,64px)}
+    .impact-card span{margin-top:18px}
+    .role-main h2{margin-bottom:22px}
+    .people{margin-top:56px;padding-top:42px}
+    .people-head h3{font-size:32px}
+    .product{padding-top:82px;padding-bottom:82px}
+    .product-head{margin-bottom:30px}
+    .product-head h2{font-size:clamp(40px,4.2vw,62px)}
+    .product-note{margin-bottom:0}
+    .project-list{max-width:var(--max)}
+    .project{padding:34px 0}
+    .project h3{font-size:clamp(24px,2.5vw,34px)}
+    .field{padding-bottom:84px}
+    .field-copy h2{font-size:clamp(40px,4.2vw,62px)}
+    .operating-head{margin-bottom:32px}
+    .work-item{min-height:108px}
+    @media(max-width:640px){
+      .hero{padding-top:46px;padding-bottom:64px}
+      .hero-top{margin-bottom:38px}
+      .hero h1{font-size:clamp(52px,13vw,68px)}
+      .impact,.role,.product,.projects,.operating{padding-top:64px;padding-bottom:68px}
+      .impact-card{min-height:138px;padding:20px}
+      .impact-card strong{font-size:54px}
+      .impact-card span{margin-top:12px}
+      .product-note{grid-template-columns:1fr;gap:10px}
+      .project{padding:26px 0}
+      .work-item{min-height:auto;padding-top:20px;padding-bottom:20px}
+    }
+\n  </style>
 </head>
 <body>
 
@@ -1206,35 +1244,7 @@
       <p>Uso IA y prototipado rápido cuando ayudan a reducir incertidumbre, probar una hipótesis o acelerar una decisión de producto antes de escalar el desarrollo.</p>
     </div>
 
-    <div class="product-grid">
-      <article class="product-item">
-        <div class="product-top"><div class="product-num">01</div><div class="product-icon"><svg viewBox="0 0 24 24"><path d="M5 19 19 5"/><path d="M10 5h9v9"/></svg></div></div>
-        <h3>Demanda</h3>
-        <div class="product-type">Señal operacional</div>
-        <p>Entender cuánta cobertura necesita la operación y cuándo cambia la demanda.</p>
-      </article>
 
-      <article class="product-item">
-        <div class="product-top"><div class="product-num">02</div><div class="product-icon"><svg viewBox="0 0 24 24"><path d="M4 12h16"/><path d="M13 5l7 7-7 7"/></svg></div></div>
-        <h3>Cobertura</h3>
-        <div class="product-type">Decisión</div>
-        <p>Ver dónde falta o sobra dotación y cómo asignar personas de forma más efectiva.</p>
-      </article>
-
-      <article class="product-item">
-        <div class="product-top"><div class="product-num">03</div><div class="product-icon"><svg viewBox="0 0 24 24"><path d="M7 7h10"/><path d="M7 12h10"/><path d="M7 17h10"/></svg></div></div>
-        <h3>Reglas</h3>
-        <div class="product-type">Restricción</div>
-        <p>Incorporar horarios, descansos, roles, grupos y condiciones reales de operación en la decisión.</p>
-      </article>
-
-      <article class="product-item">
-        <div class="product-top"><div class="product-num">04</div><div class="product-icon"><svg viewBox="0 0 24 24"><path d="M8 8a4 4 0 1 1 8 0c0 3-4 4-4 4s-4-1-4-4Z"/><path d="M5 21c.6-4 3-6 7-6s6.4 2 7 6"/></svg></div></div>
-        <h3>Personas</h3>
-        <div class="product-type">Flexibilidad</div>
-        <p>Dar espacio a los equipos para resolver cambios sin perder trazabilidad ni control operacional.</p>
-      </article>
-    </div>
   </section>
 
   <section class="projects">
@@ -1319,27 +1329,6 @@
       <div class="work-item"><div class="work-num">04</div><strong>Pilotos en contextos operacionales reales</strong></div>
       <div class="work-item"><div class="work-num">05</div><strong>Feedback, métricas y aprendizaje continuo</strong></div>
       <div class="work-item"><div class="work-num">06</div><strong>Ejecución transversal entre ingeniería, diseño, ventas, customer success, operaciones y soporte</strong></div>
-    </div>
-  </section>
-
-  <section class="principle">
-    <div class="principle-inner">
-      <div class="section-label">Principios de trabajo</div>
-      <h2>Dos principios.<span>Una forma de construir.</span></h2>
-
-      <div class="principle-grid">
-        <div class="principle-item">
-          <small>01 / Producto</small>
-          <strong>Del problema a la adopción real.</strong>
-          <p>Descubrir, validar y medir antes de escalar.</p>
-        </div>
-
-        <div class="principle-item">
-          <small>02 / Operaciones</small>
-          <strong>Construir para operaciones reales.</strong>
-          <p>Cliente, producto y adopción conectados desde el inicio.</p>
-        </div>
-      </div>
     </div>
   </section>
 
