@@ -1423,7 +1423,69 @@
  .system-step strong{margin-top:2px;font-size:23px}
  .system-step span{margin-top:6px;font-size:13px}
 }
-</style>
+
+    /* Team: compact photo and name links */
+    .people .people-grid{
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:14px;
+    }
+    .people .person{
+      min-width:0;
+      min-height:94px;
+      padding:10px 20px 10px 10px;
+      display:flex;
+      align-items:center;
+      gap:16px;
+      border:1px solid #d9dde3;
+      border-radius:999px;
+      background:#f7f8fa;
+      transition:border-color .2s ease,background .2s ease,transform .2s ease;
+    }
+    .people .person:hover{
+      border-color:#b8c6d7;
+      background:#fff;
+      transform:translateY(-2px);
+    }
+    .people .person-photo{
+      width:70px;
+      height:70px;
+      margin:0;
+      flex:0 0 70px;
+      border-radius:50%;
+      overflow:hidden;
+      background:#e7ebef;
+    }
+    .people .person-photo img{display:block;width:100%;height:100%;object-fit:cover}
+    .people .person h4{
+      margin:0;
+      min-width:0;
+      font-size:18px;
+      line-height:1.25;
+      letter-spacing:-.035em;
+    }
+    .people .person h4 a{
+      color:var(--ink);
+      text-decoration:none;
+      text-underline-offset:4px;
+      transition:color .2s ease;
+    }
+    .people .person h4 a:hover{color:var(--blue);text-decoration:underline}
+    .people .person h4 a:focus-visible{
+      outline:2px solid var(--blue);
+      outline-offset:4px;
+      border-radius:2px;
+    }
+    .people .person-role,.people .person p,.people .person .icon-link{display:none}
+    @media(max-width:1000px){
+      .people .people-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media(max-width:640px){
+      .people .people-grid{grid-template-columns:1fr;gap:10px}
+      .people .person{min-height:88px;padding:9px 18px 9px 9px}
+      .people .person-photo{width:68px;height:68px;flex-basis:68px}
+      .people .person h4{font-size:17px}
+    }
+  </style>
 </head>
 <body>
 
@@ -1544,42 +1606,27 @@
         <div class="people-grid">
           <article class="person">
             <div class="person-photo"><img src="/images/team_marco-1.png" alt="Marco Kroeger" loading="lazy"></div>
-            <h4>Marco Kroeger</h4>
-            <div class="person-role">Desarrollo de Negocios</div>
-            <p>Abre nuevas conversaciones comerciales, identifica oportunidades y conecta las necesidades de clientes con los sistemas de growth de lowsignal.</p>
-            <a class="icon-link" href="https://www.linkedin.com/in/marcokroeger/" target="_blank" rel="noopener noreferrer" aria-label="Marco Kroeger on LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg></a>
+            <h4><a href="https://www.linkedin.com/in/marcokroeger/" target="_blank" rel="noopener noreferrer">Marco Kroeger</a></h4>
           </article>
 
           <article class="person">
             <div class="person-photo"><img src="/images/team_lia-1.png" alt="Lía Morice" loading="lazy"></div>
-            <h4>Lía Morice</h4>
-            <div class="person-role">Creadora de Contenido</div>
-            <p>Convierte estrategia, tendencias y cultura digital en contenido relevante para marcas y comunidades.</p>
-            <a class="icon-link" href="https://www.linkedin.com/in/l%C3%ADa-morice-b31521419/" target="_blank" rel="noopener noreferrer" aria-label="Lía Morice on LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg></a>
+            <h4><a href="https://www.linkedin.com/in/l%C3%ADa-morice-b31521419/" target="_blank" rel="noopener noreferrer">Lía Morice</a></h4>
           </article>
 
           <article class="person">
             <div class="person-photo"><img src="/images/team_martin-1.png" alt="Martín Alvarado" loading="lazy"></div>
-            <h4>Martín Alvarado</h4>
-            <div class="person-role">Productor Audiovisual</div>
-            <p>Construye piezas audiovisuales desde producción, edición y narrativa, traduciendo la identidad de cada proyecto a video.</p>
-            <a class="icon-link" href="https://www.linkedin.com/in/martin-alvaradod" target="_blank" rel="noopener noreferrer" aria-label="Martín Alvarado on LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg></a>
+            <h4><a href="https://www.linkedin.com/in/martin-alvaradod" target="_blank" rel="noopener noreferrer">Martín Alvarado</a></h4>
           </article>
 
           <article class="person">
             <div class="person-photo"><img src="/images/team_jorge-1.png" alt="Jorge Muñoz" loading="lazy"></div>
-            <h4>Jorge Muñoz</h4>
-            <div class="person-role">Productor Audiovisual</div>
-            <p>Trabaja en producción audiovisual, storytelling y dirección creativa para dar forma a contenidos de marcas y proyectos.</p>
-            <a class="icon-link" href="https://www.linkedin.com/in/jorgemunozve/" target="_blank" rel="noopener noreferrer" aria-label="Jorge Muñoz on LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg></a>
+            <h4><a href="https://www.linkedin.com/in/jorgemunozve/" target="_blank" rel="noopener noreferrer">Jorge Muñoz</a></h4>
           </article>
 
           <article class="person">
             <div class="person-photo"><img src="/images/team-matias.png" alt="Matías Bussinger" loading="lazy"></div>
-            <h4>Matías Bussinger</h4>
-            <div class="person-role">AI Engineer</div>
-            <p>Construye automatizaciones y workflows con IA que conectan herramientas, datos y procesos para reducir trabajo repetitivo y generar leverage operacional.</p>
-            <a class="icon-link" href="https://www.linkedin.com/in/matias-bussinger-3872b4380/" target="_blank" rel="noopener noreferrer" aria-label="Matías Bussinger on LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg></a>
+            <h4><a href="https://www.linkedin.com/in/matias-bussinger-3872b4380/" target="_blank" rel="noopener noreferrer">Matías Bussinger</a></h4>
           </article>
         </div>
       </div>
