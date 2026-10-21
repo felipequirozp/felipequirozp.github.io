@@ -1,39 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Tether Studio | Felipe Quiroz</title>
-  <meta name="description" content="An AI-enabled school photography platform that centralizes portraits, events, yearbooks, consent, family access and school administration in one digital workflow.">
+  <meta name="description" content="An AI-enabled school photography platform connecting portraits, events, yearbooks, consent, family access and school administration in one digital workflow.">
   <meta name="theme-color" content="#ffffff">
-
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="canonical" href="https://felipequirozp.cl/tethered/tether-studio">
   <link rel="alternate" hreflang="en" href="https://felipequirozp.cl/tethered/tether-studio">
   <link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/tethered/tether-studio">
   <link rel="alternate" hreflang="x-default" href="https://felipequirozp.cl/tethered/tether-studio">
-
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Tether Studio">
-  <meta property="og:description" content="An AI-enabled school photography platform that centralizes portraits, events, yearbooks, consent, family access and school administration in one digital workflow.">
-  <meta property="og:url" content="https://felipequirozp.cl/tethered/tether-studio">
-  <meta property="og:image" content="https://felipequirozp.cl/logos/tether-studio-logo.png">
+  <meta property="og:type" content="article"><meta property="og:title" content="Tether Studio">
+  <meta property="og:description" content="An AI-enabled school photography platform connecting portraits, events, yearbooks, consent, family access and school administration in one digital workflow."><meta property="og:url" content="https://felipequirozp.cl/tethered/tether-studio">
+  <meta property="og:image" content="https://felipequirozp.cl/images/building-in-the-field.jpg">
   <meta name="twitter:card" content="summary_large_image">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
-
   <style>
     :root{
+      --bg:#ffffff;
       --ink:#0b1117;
       --muted:#5f6b78;
-      --line:#e1e6eb;
+      --muted-2:#7a8796;
+      --line:#e2e7ec;
       --soft:#f3f6f9;
       --blue:#1467d8;
-      --blue-soft:#a8b4c3;
       --dark:#05070a;
+      --dark-2:#0d1724;
       --page:clamp(22px,4vw,64px);
       --max:1520px;
     }
@@ -41,631 +34,1510 @@
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
-      margin:0;background:#fff;color:var(--ink);
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
       font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
     }
     a{color:inherit;text-decoration:none}
     img{display:block;max-width:100%}
     ::selection{background:var(--blue);color:#fff}
-    .section-label{color:#748397;font-size:10px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+    .section-label{
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:#6f7d8d;
+    }
 
+    /* NAV */
     .nav{
-      position:sticky;top:0;z-index:1000;
-      min-height:76px;padding:0 var(--page);
-      display:flex;align-items:center;justify-content:space-between;gap:28px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      min-height:76px;
+      padding:0 var(--page);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
       background:rgba(255,255,255,.96);
       border-bottom:1px solid rgba(11,17,23,.08);
-      backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
     }
     .brand{
-      font-family:Manrope,sans-serif;font-size:22px!important;font-weight:600;
-      letter-spacing:-.045em;white-space:nowrap;
+      font-family:Manrope,sans-serif;
+      font-size:22px!important;
+      font-weight:600;
+      letter-spacing:-.045em;
+      white-space:nowrap;
     }
     .nav-center,.nav-right{display:flex;align-items:center;gap:28px}
     .nav a{font-size:11px;font-weight:500;color:#1a232d}
     .nav-center a,.nav-right a:not(.lang){position:relative}
     .nav-center a::after,.nav-right a:not(.lang)::after{
-      content:"";position:absolute;left:0;bottom:-7px;width:0;height:1px;
-      background:#111820;transition:width .2s ease;
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-7px;
+      width:0;
+      height:1px;
+      background:#111820;
+      transition:width .2s ease;
     }
     .nav-center a:hover::after,.nav-center a.active::after,.nav-right a:not(.lang):hover::after{width:100%}
     .lang{
-      width:38px;height:38px;display:grid;place-items:center;
-      border:1px solid #d7dde4;border-radius:50%;
-      font-size:10px!important;letter-spacing:.04em;transition:.2s ease;
+      width:38px;height:38px;
+      display:grid;place-items:center;
+      border:1px solid #d7dde4;
+      border-radius:50%;
+      font-size:10px!important;
+      letter-spacing:.04em;
+      transition:.2s ease;
     }
     .lang:hover{background:#0b1117;color:#fff;border-color:#0b1117}
 
-    .hero{padding:86px var(--page) 104px;background:#fff}
-    .hero-inner{width:min(var(--max),100%);margin:0 auto}
-    .hero-top{display:flex;justify-content:space-between;align-items:center;gap:30px;margin-bottom:68px}
-    .studio-mark{
-      display:inline-flex;align-items:center;justify-content:center;
-      min-height:62px;padding:11px 18px;border:1px solid #dde3e9;
-      border-radius:16px;background:#fff;
+    /* HERO */
+    .hero{
+      padding:86px var(--page) 104px;
+      background:#fff;
     }
-    .studio-mark img{width:auto;height:38px;max-width:240px;object-fit:contain}
-    .hero-meta{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .hero-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+    }
+    .hero-top{
+      display:flex;
+      justify-content:space-between;
+      gap:30px;
+      align-items:center;
+      margin-bottom:68px;
+    }
+    .geo-mark{
+      min-width:240px;
+      min-height:72px;
+      padding:12px 22px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:18px;
+      background:#0d1724;
+      border:1px solid #142235;
+    }
+    .geo-mark img{
+      width:auto;
+      height:31px;
+      max-width:210px;
+      object-fit:contain;
+    }
+    .hero-meta{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      gap:10px;
+    }
     .hero-meta span{
-      min-height:40px;padding:0 14px;display:inline-flex;align-items:center;
-      border:1px solid #d8dee5;border-radius:999px;background:#f7f9fb;
-      color:#667281;font-size:10px;font-weight:600;
+      min-height:40px;
+      display:inline-flex;
+      align-items:center;
+      padding:0 14px;
+      border:1px solid #d8dee5;
+      border-radius:999px;
+      background:#f7f9fb;
+      color:#667281;
+      font-size:10px;
+      font-weight:600;
     }
-    .hero-kicker{margin-bottom:24px;color:var(--blue);font-size:12px;font-weight:600}
+    .hero-kicker{
+      margin-bottom:24px;
+      color:var(--blue);
+      font-size:12px;
+      font-weight:600;
+    }
     .hero h1{
-      margin:0;max-width:1260px;
-      font-family:Manrope,sans-serif;font-size:clamp(72px,7.6vw,124px);
-      line-height:1.01;letter-spacing:-.072em;font-weight:500;
+      margin:0;
+      max-width:1220px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(72px,7.6vw,124px);
+      line-height:.93;
+      letter-spacing:-.072em;
+      font-weight:500;
     }
-    .hero h1 span{display:block;color:var(--blue-soft)}
+    .hero h1 span{
+      display:block;
+      color:#a8b4c3;
+    }
     .hero-bottom{
-      margin-top:52px;padding-top:28px;border-top:1px solid var(--line);
-      display:grid;grid-template-columns:minmax(0,1.08fr) minmax(280px,.48fr);
-      gap:clamp(48px,8vw,120px);
+      margin-top:52px;
+      padding-top:28px;
+      border-top:1px solid var(--line);
+      display:grid;
+      grid-template-columns:minmax(0,1.08fr) minmax(300px,.5fr);
+      gap:clamp(50px,8vw,130px);
     }
-    .hero-description{margin:0;max-width:850px;color:var(--muted);font-size:17px;line-height:1.76}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
-    .hero-btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      min-height:46px;padding:0 18px;border-radius:999px;
-      font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
-      border:1px solid #d8dee5;background:#fff;
+    .hero-description{
+      margin:0;
+      max-width:780px;
+      color:var(--muted);
+      font-size:17px;
+      line-height:1.76;
     }
-    .hero-btn.primary{background:#0b1117;color:#fff;border-color:#0b1117}
     .hero-role strong{
-      display:block;font-family:Manrope,sans-serif;font-size:22px;font-weight:500;letter-spacing:-.035em;
+      display:block;
+      font-family:Manrope,sans-serif;
+      font-size:22px;
+      font-weight:500;
+      letter-spacing:-.035em;
     }
-    .hero-role span{display:block;margin-top:7px;color:#74808d;font-size:12px;line-height:1.5}
+    .hero-role span{
+      display:block;
+      margin-top:7px;
+      color:#74808d;
+      font-size:12px;
+      line-height:1.5;
+    }
+    .hero-site{
+      margin-top:14px;
+      display:inline-flex;
+      padding-bottom:3px;
+      border-bottom:1px solid #bfc8d2;
+      font-size:11px;
+      font-weight:700;
+    }
+    .hero-site:hover{color:var(--blue);border-color:var(--blue)}
 
-    .impact{padding:112px var(--page) 122px;background:var(--soft)}
+    /* IMPACT */
+    .impact{
+      padding:112px var(--page) 122px;
+      background:var(--soft);
+    }
     .impact-head{
-      width:min(var(--max),100%);margin:0 auto 54px;
-      display:flex;justify-content:space-between;align-items:end;gap:40px;
+      width:min(var(--max),100%);
+      margin:0 auto 54px;
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:40px;
     }
     .impact-head h2{
-      margin:14px 0 0;max-width:880px;
-      font-family:Manrope,sans-serif;font-size:clamp(48px,5vw,76px);
-      line-height:1.05;letter-spacing:-.055em;font-weight:500;
+      margin:14px 0 0;
+      max-width:880px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+      font-weight:500;
     }
-    .impact-head h2 span{display:block;color:#93a4b8}
-    .impact-head p{margin:0;max-width:520px;color:var(--muted);font-size:15px;line-height:1.72}
+    .impact-head p{
+      margin:0;
+      max-width:500px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.7;
+    }
     .impact-grid{
-      width:min(var(--max),100%);margin:0 auto;display:grid;
-      grid-template-columns:repeat(4,1fr);gap:22px;
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:22px;
     }
     .impact-card{
-      min-height:250px;padding:30px;border-radius:24px;background:#fff;border:1px solid #e1e6eb;
+      min-height:250px;
+      padding:30px;
+      border-radius:24px;
+      background:#fff;
+      border:1px solid #e1e6eb;
     }
     .impact-card strong{
-      display:block;font-family:Manrope,sans-serif;
-      font-size:clamp(44px,4.2vw,68px);font-weight:500;letter-spacing:-.06em;
+      display:block;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(52px,4.7vw,78px);
+      font-weight:500;
+      letter-spacing:-.06em;
     }
     .impact-card span{
-      display:block;margin-top:28px;max-width:230px;
-      color:#677381;font-size:13px;line-height:1.6;
+      display:block;
+      margin-top:28px;
+      max-width:230px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.6;
     }
 
-    .role{padding:112px var(--page);background:#fff}
+    /* ROLE */
+    .role{
+      padding:112px var(--page);
+      background:#fff;
+    }
     .role-grid{
-      width:min(var(--max),100%);margin:0 auto;
-      display:grid;grid-template-columns:minmax(180px,.28fr) minmax(0,1.1fr);
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:minmax(170px,.3fr) minmax(0,1.2fr);
       gap:clamp(50px,8vw,130px);
     }
     .role-main h2{
-      margin:14px 0 28px;max-width:900px;
-      font-family:Manrope,sans-serif;font-size:clamp(48px,5.5vw,84px);
-      line-height:1.03;letter-spacing:-.063em;font-weight:500;
+      margin:0 0 30px;
+      max-width:900px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5.2vw,80px);
+      line-height:1.02;
+      letter-spacing:-.06em;
+      font-weight:500;
     }
-    .role-main>p{margin:0 0 18px;max-width:880px;color:var(--muted);font-size:15px;line-height:1.8}
+    .role-main>p{
+      margin:0 0 20px;
+      max-width:900px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.8;
+    }
     .snapshot{
-      margin-top:42px;display:grid;grid-template-columns:repeat(4,1fr);
-      border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-    }
-    .snapshot-item{padding:24px 20px;border-right:1px solid var(--line)}
-    .snapshot-item:last-child{border-right:0}
-    .snapshot-label{color:#85909d;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-    .snapshot-value{margin-top:10px;color:#17202c;font-size:14px;line-height:1.55}
-    .snapshot-focus{margin-top:18px;display:flex;flex-wrap:wrap;gap:9px}
-    .snapshot-focus span{
-      padding:9px 12px;border:1px solid #d7dde4;border-radius:999px;
-      background:#fff;color:#293646;font-size:10px;font-weight:600;
-    }
-
-    .product{padding:112px var(--page);background:var(--dark);color:#fff}
-    .product .section-label{color:#67b4ff}
-    .product-head{
-      width:min(var(--max),100%);margin:0 auto 54px;
-      display:grid;grid-template-columns:minmax(0,1.08fr) minmax(320px,.52fr);
-      gap:clamp(50px,8vw,120px);align-items:end;
-    }
-    .product h2{
-      margin:14px 0 0;max-width:860px;
-      font-family:Manrope,sans-serif;font-size:clamp(48px,5vw,78px);
-      line-height:1.02;letter-spacing:-.06em;font-weight:500;
-    }
-    .product h2 span{display:block}
-    .product h2 span:last-child{color:#9bb0c8}
-    .product-head>p{margin:0;color:#9aa4b0;font-size:15px;line-height:1.76}
-    .product-note{
-      width:min(var(--max),100%);margin:0 auto 28px;padding:18px 0;
-      display:grid;grid-template-columns:180px 1fr;gap:30px;
-      border-top:1px solid rgba(255,255,255,.11);
-      border-bottom:1px solid rgba(255,255,255,.11);
-    }
-    .product-note strong{color:#62b1ff;font-size:10px;letter-spacing:.11em;text-transform:uppercase}
-    .product-note p{margin:0;color:#a8b1bc;font-size:13px;line-height:1.7}
-    .product-grid{
-      width:min(var(--max),100%);margin:0 auto;display:grid;
+      margin-top:40px;
+      display:grid;
       grid-template-columns:repeat(4,1fr);
-      border-top:1px solid rgba(255,255,255,.11);
-      border-bottom:1px solid rgba(255,255,255,.11);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
     }
-    .product-item{min-height:315px;padding:30px 28px;border-right:1px solid rgba(255,255,255,.11)}
-    .product-item:last-child{border-right:0}
-    .product-num{color:#52606e;font-size:10px;letter-spacing:.1em}
+    .snapshot-item{
+      padding:24px 20px;
+      border-right:1px solid var(--line);
+    }
+    .snapshot-item:last-child{border-right:0}
+    .snapshot-label{
+      color:#8b96a2;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .snapshot-value{
+      margin-top:10px;
+      font-size:14px;
+      line-height:1.5;
+    }
+    .snapshot-focus{
+      margin-top:18px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+    }
+    .snapshot-focus span{
+      padding:9px 12px;
+      border:1px solid #d8dee5;
+      border-radius:999px;
+      background:#f7f9fb;
+      color:#344150;
+      font-size:10px;
+      font-weight:600;
+    }
+
+    /* PEOPLE */
+    .people{
+      margin-top:76px;
+      padding-top:54px;
+      border-top:1px solid var(--line);
+    }
+    .people-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:40px;
+      margin-bottom:28px;
+    }
+    .people-head h3{
+      margin:12px 0 0;
+      font-family:Manrope,sans-serif;
+      font-size:38px;
+      font-weight:500;
+      letter-spacing:-.045em;
+    }
+    .people-head p{
+      margin:0;
+      max-width:580px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.7;
+    }
+    .people-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:16px;
+    }
+    .person{
+      min-width:0;
+      padding:22px;
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:20px;
+      background:#0b1117;
+      color:#fff;
+    }
+    .person-photo{
+      width:62px;
+      height:62px;
+      border-radius:50%;
+      overflow:hidden;
+      background:#111923;
+    }
+    .person-photo img{width:100%;height:100%;object-fit:cover}
+    .person h4{
+      margin:22px 0 0;
+      font-family:Manrope,sans-serif;
+      font-size:20px;
+      font-weight:500;
+      letter-spacing:-.035em;
+    }
+    .person h4 a{
+      color:inherit;
+      text-decoration:none;
+    }
+    .person h4 a:hover{color:#a8bfd9}
+    .person h4 a:focus-visible{
+      outline:2px solid #8ec4ff;
+      outline-offset:4px;
+      border-radius:2px;
+    }
+
+    /* PRODUCT SYSTEM */
+    .product{
+      padding:114px var(--page) 122px;
+      background:var(--dark);
+      color:#fff;
+    }
+    .product-head{
+      width:min(var(--max),100%);
+      margin:0 auto 42px;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(360px,.52fr);
+      align-items:end;
+      gap:clamp(64px,8vw,120px);
+    }
+    .product-head>div,
+    .product-head>p{
+      min-width:0;
+    }
+    .product-head .section-label{color:#8ec4ff}
+    .product-head h2{
+      margin:14px 0 0;
+      max-width:860px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(44px,4.15vw,66px);
+      line-height:1.03;
+      letter-spacing:-.058em;
+      font-weight:500;
+      overflow-wrap:normal;
+      word-break:normal;
+    }
+    .product-head h2 span{
+      display:block;
+      color:#a8bfd9;
+    }
+    .product-head h2 .heading-line,
+    .field-copy h2 .heading-line{
+      display:block;
+    }
+    .product-head h2 .heading-line{
+      white-space:normal;
+    }
+    .field-copy h2 .heading-line{
+      white-space:normal;
+    }
+    .product-head p{
+      margin:0;
+      max-width:520px;
+      color:#99a4b0;
+      font-size:15px;
+      line-height:1.72;
+    }
+    .product-note{
+      width:min(var(--max),100%);
+      margin:0 auto 28px;
+      padding:18px 20px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:16px;
+      display:grid;
+      grid-template-columns:150px 1fr;
+      gap:28px;
+      background:rgba(255,255,255,.025);
+    }
+    .product-note strong{
+      color:#8ec4ff;
+      font-size:10px;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .product-note p{
+      margin:0;
+      color:#aeb7c2;
+      font-size:13px;
+      line-height:1.68;
+    }
+    .product-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+    .product-item{
+      min-height:290px;
+      padding:28px;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.10);
+      background:#0b1117;
+    }
+    .product-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .product-num{
+      color:#606b77;
+      font-size:10px;
+      letter-spacing:.1em;
+    }
+    .product-icon{
+      width:42px;height:42px;
+      border-radius:13px;
+      display:grid;place-items:center;
+      background:rgba(20,103,216,.10);
+      color:#78b7ff;
+    }
+    .product-icon svg{
+      width:19px;height:19px;
+      stroke:currentColor;fill:none;
+      stroke-width:1.8;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
     .product-item h3{
-      margin:78px 0 8px;font-family:Manrope,sans-serif;
-      font-size:27px;font-weight:500;letter-spacing:-.045em;
+      margin:58px 0 8px;
+      font-family:Manrope,sans-serif;
+      font-size:29px;
+      letter-spacing:-.045em;
+      font-weight:500;
     }
-    .product-type{margin-bottom:14px;color:#67b4ff;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-    .product-item p{margin:0;color:#909aa6;font-size:13px;line-height:1.72}
+    .product-type{
+      color:#78b7ff;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+    .product-item p{
+      margin:16px 0 0;
+      color:#949eaa;
+      font-size:13px;
+      line-height:1.7;
+    }
 
-    .system{padding:112px var(--page);background:#fff}
-    .system-head{
-      width:min(var(--max),100%);margin:0 auto 52px;
-      display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.55fr);
-      gap:clamp(50px,8vw,120px);align-items:end;
+    /* PRODUCTS */
+    .projects{
+      padding:112px var(--page) 122px;
+      background:#fff;
     }
-    .system h2{
-      margin:14px 0 0;max-width:920px;
-      font-family:Manrope,sans-serif;font-size:clamp(48px,5.25vw,80px);
-      line-height:1.02;letter-spacing:-.06em;font-weight:500;
+    .projects-head{
+      width:min(var(--max),100%);
+      margin:0 auto 48px;
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:50px;
     }
-    .system h2 span{display:block}
-    .system h2 span:last-child{color:#9aadc0}
-    .system-head p{margin:0;color:var(--muted);font-size:15px;line-height:1.76}
-    .flow-grid{
-      width:min(var(--max),100%);margin:0 auto;display:grid;
-      grid-template-columns:repeat(3,1fr);
-      border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    .projects-head h2{
+      margin:14px 0 0;
+      max-width:880px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+      font-weight:500;
     }
-    .flow-item{min-height:235px;padding:30px 30px 34px 0}
-    .flow-item+.flow-item{padding-left:30px;border-left:1px solid var(--line)}
-    .flow-item small{color:#718399;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-    .flow-item strong{
-      display:block;margin-top:26px;font-family:Manrope,sans-serif;
-      font-size:26px;font-weight:500;letter-spacing:-.04em;
+    .projects-head p{
+      margin:0;
+      max-width:520px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.7;
     }
-    .flow-item p{margin:12px 0 0;color:#5f6b79;font-size:13px;line-height:1.72}
+    .project-list{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      border-top:1px solid var(--line);
+    }
+    .project{
+      display:grid;
+      grid-template-columns:48px minmax(260px,.7fr) minmax(0,1fr);
+      gap:26px 38px;
+      padding:32px 0;
+      border-bottom:1px solid var(--line);
+      transition:.2s ease;
+    }
+    .project:hover{
+      padding-left:14px;
+      padding-right:14px;
+      background:#f7f9fb;
+    }
+    .project-num{
+      padding-top:6px;
+      color:#8995a2;
+      font-size:10px;
+      letter-spacing:.09em;
+    }
+    .project-type{
+      color:#718399;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      margin-bottom:10px;
+    }
+    .project h3{
+      margin:0;
+      font-family:Manrope,sans-serif;
+      font-size:32px;
+      line-height:1.05;
+      letter-spacing:-.045em;
+      font-weight:500;
+    }
+    .project-body p{
+      margin:0;
+      color:#5f6b79;
+      font-size:13px;
+      line-height:1.75;
+    }
+    .project-meta{
+      margin:18px 0 24px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .project-meta span{
+      padding:8px 10px;
+      border:1px solid #dce2e8;
+      border-radius:999px;
+      background:#fff;
+      color:#344355;
+      font-size:9px;
+      font-weight:600;
+    }
+    .project-contribution strong{
+      display:block;
+      margin-bottom:7px;
+      color:#73859a;
+      font-size:9px;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
 
-    .building{padding:112px var(--page);background:var(--soft)}
-    .building-head{
-      width:min(var(--max),100%);margin:0 auto 50px;
-      display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.55fr);
-      gap:clamp(50px,8vw,120px);align-items:end;
+    /* FIELD */
+    .field{
+      padding:0 var(--page) 112px;
+      background:var(--soft);
+      color:#fff;
     }
-    .building h2{
-      margin:14px 0 0;max-width:900px;
-      font-family:Manrope,sans-serif;font-size:clamp(48px,5.5vw,84px);
-      line-height:1.03;letter-spacing:-.063em;font-weight:500;
+    .field-card{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      min-height:620px;
+      display:grid;
+      grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+      overflow:hidden;
+      border-radius:28px;
+      background:var(--dark);
     }
-    .building h2 span{display:block}
-    .building h2 span:last-child{color:#8fa0b5}
-    .building-head p{margin:0;color:var(--muted);font-size:15px;line-height:1.76}
+    .field-copy{
+      min-width:0;
+      padding:72px 58px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .field-copy .section-label{color:#8ec4ff}
+    .field-copy h2{
+      margin:18px 0 24px;
+      width:100%;
+      max-width:600px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(44px,4.2vw,66px);
+      line-height:1.03;
+      letter-spacing:-.058em;
+      font-weight:500;
+      overflow-wrap:normal;
+      word-break:normal;
+    }
+    .field-copy h2 span{display:block;color:#a8bfd9}
+    .field-copy h2 .field-accent-inline{
+      display:inline !important;
+      color:#a8bfd9 !important;
+    }
+    .field-copy p{
+      margin:0;
+      max-width:560px;
+      color:#b7c0cb;
+      font-size:15px;
+      line-height:1.76;
+    }
+    .field-meta{
+      margin-top:26px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+    }
+    .field-meta span{
+      padding:8px 10px;
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:999px;
+      color:#c4ccd5;
+      font-size:9px;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+    }
+    .field-photo{
+      min-width:0;
+      min-height:620px;
+      overflow:hidden;
+    }
+    .field-photo img{
+      width:100%;
+      height:100%;
+      min-height:620px;
+      object-fit:cover;
+      object-position:center 45%;
+    }
+
+    /* OPERATING */
+    .operating{
+      padding:112px var(--page) 122px;
+      background:#fff;
+    }
+    .operating-head{
+      width:min(var(--max),100%);
+      margin:0 auto 48px;
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:50px;
+    }
+    .operating-head h2{
+      margin:14px 0 0;
+      max-width:880px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+      font-weight:500;
+    }
+    .operating-head p{
+      margin:0;
+      max-width:540px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.72;
+    }
     .work-list{
-      width:min(var(--max),100%);margin:0 auto;display:grid;
-      grid-template-columns:1fr 1fr;border-top:1px solid var(--line);
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      border-top:1px solid var(--line);
     }
     .work-item{
-      display:grid;grid-template-columns:52px 1fr;gap:16px;
-      padding:26px 0;border-bottom:1px solid var(--line);
+      display:grid;
+      grid-template-columns:44px 1fr;
+      gap:16px;
+      padding:26px 0;
+      border-bottom:1px solid var(--line);
     }
-    .work-item:nth-child(odd){padding-right:34px;border-right:1px solid var(--line)}
-    .work-item:nth-child(even){padding-left:34px}
-    .work-num{color:#8a96a4;font-size:9px;letter-spacing:.09em;padding-top:4px}
+    .work-item:nth-child(odd){
+      padding-right:32px;
+      border-right:1px solid var(--line);
+    }
+    .work-item:nth-child(even){padding-left:32px}
+    .work-num{
+      color:#8a96a4;
+      font-size:9px;
+      letter-spacing:.09em;
+      padding-top:4px;
+    }
     .work-item strong{
-      font-family:Manrope,sans-serif;font-size:20px;font-weight:500;
-      line-height:1.35;letter-spacing:-.03em;
+      font-family:Manrope,sans-serif;
+      font-size:20px;
+      font-weight:500;
+      line-height:1.35;
+      letter-spacing:-.03em;
     }
 
-    .learning{padding:124px var(--page);background:#fff}
-    .learning-inner{width:min(var(--max),100%);margin:0 auto;text-align:center}
-    .learning h2{
-      margin:20px auto 0;max-width:1120px;
-      font-family:Manrope,sans-serif;font-size:clamp(58px,6.2vw,94px);
-      line-height:1.03;letter-spacing:-.067em;font-weight:500;
+    /* PRINCIPLE */
+    .principle{
+      padding:118px var(--page);
+      background:#0b1117;
+      color:#fff;
     }
-    .learning h2 span{display:block;color:#a8b4c3}
-    .learning-grid{
-      max-width:980px;margin:58px auto 0;display:grid;grid-template-columns:1fr 1fr;
-      border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:left;
+    .principle-inner{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      text-align:center;
     }
-    .learning-item{padding:30px 34px;min-height:190px}
-    .learning-item:first-child{border-right:1px solid var(--line)}
-    .learning-item small{color:#6e84a0;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-    .learning-item strong{
-      display:block;margin-top:18px;font-family:Manrope,sans-serif;
-      font-size:27px;font-weight:500;letter-spacing:-.04em;
+    .principle .section-label{color:#8ec4ff}
+    .principle h2{
+      margin:24px auto 0;
+      max-width:980px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(54px,5.6vw,86px);
+      line-height:1.02;
+      letter-spacing:-.063em;
+      font-weight:500;
     }
-    .learning-item p{margin:12px 0 0;color:#697481;font-size:13px;line-height:1.72}
+    .principle h2 span{
+      display:block;
+      color:#a8bfd9;
+    }
+    .principle-grid{
+      max-width:920px;
+      margin:54px auto 0;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+    .principle-item{
+      padding:28px;
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:20px;
+      text-align:left;
+      background:rgba(255,255,255,.025);
+    }
+    .principle-item small{
+      color:#78b7ff;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .principle-item strong{
+      display:block;
+      margin-top:16px;
+      font-family:Manrope,sans-serif;
+      font-size:26px;
+      line-height:1.18;
+      letter-spacing:-.04em;
+      font-weight:500;
+    }
+    .principle-item p{
+      margin:12px 0 0;
+      color:#909aa6;
+      font-size:12px;
+      line-height:1.7;
+    }
 
-    .project-nav{padding:74px var(--page);background:var(--soft);border-top:1px solid var(--line)}
+    /* PROJECT NAV */
+    .project-nav{
+      padding:72px var(--page);
+      background:var(--soft);
+    }
     .project-nav-inner{
-      width:min(var(--max),100%);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;
-      border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
     }
-    .project-nav a{padding:28px 0;transition:.2s ease}
-    .project-nav a:last-child{text-align:right;border-left:1px solid var(--line);padding-left:30px}
+    .project-nav a{
+      padding:28px 0;
+      transition:.2s ease;
+    }
     .project-nav a:first-child{padding-right:30px}
-    .project-nav a:hover{background:#fff;padding-left:18px;padding-right:18px}
-    .project-nav-label{color:#85919f;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .project-nav a:last-child{
+      padding-left:30px;
+      text-align:right;
+      border-left:1px solid var(--line);
+    }
+    .project-nav a:hover{
+      padding-left:16px;
+      padding-right:16px;
+      background:#fff;
+    }
+    .project-nav-label{
+      color:#85919f;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
     .project-nav strong{
-      display:block;margin-top:8px;font-family:Manrope,sans-serif;
-      font-size:28px;font-weight:500;letter-spacing:-.04em;
+      display:block;
+      margin-top:8px;
+      font-family:Manrope,sans-serif;
+      font-size:28px;
+      font-weight:500;
+      letter-spacing:-.04em;
     }
 
-    .footer{padding:72px var(--page) 34px;background:#fff;border-top:1px solid var(--line)}
-    .footer-grid{
-      width:min(var(--max),100%);margin:0 auto;
-      display:grid;grid-template-columns:1.2fr repeat(3,.7fr);gap:50px;
+    /* FOOTER */
+    .footer{
+      padding:72px var(--page) 34px;
+      background:#fff;
+      border-top:1px solid var(--line);
     }
-    .footer-brand{font-family:Manrope,sans-serif;font-size:30px;letter-spacing:-.045em;font-weight:600}
-    .footer-copy{margin-top:14px;max-width:360px;color:var(--muted);font-size:13px;line-height:1.7}
-    .footer-col strong{display:block;margin-bottom:14px;font-size:12px;font-weight:700}
-    .footer-col a{display:block;margin:10px 0;color:#5f6b78;font-size:13px}
+    .footer-grid{
+      width:min(var(--max),100%);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.2fr repeat(3,.7fr);
+      gap:50px;
+    }
+    .footer-brand{
+      font-family:Manrope,sans-serif;
+      font-size:30px;
+      letter-spacing:-.045em;
+      font-weight:600;
+    }
+    .footer-copy{
+      margin-top:14px;
+      max-width:360px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+    .footer-col strong{
+      display:block;
+      margin-bottom:14px;
+      font-size:12px;
+      font-weight:700;
+    }
+    .footer-col a{
+      display:block;
+      margin:10px 0;
+      color:#5f6b78;
+      font-size:13px;
+    }
     .footer-col a:hover{color:#0b1117}
     .footer-bottom{
-      width:min(var(--max),100%);margin:54px auto 0;padding-top:24px;
-      display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);
-      color:#7b8794;font-size:10px;letter-spacing:.04em;text-transform:uppercase;
+      width:min(var(--max),100%);
+      margin:54px auto 0;
+      padding-top:24px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      border-top:1px solid var(--line);
+      color:#7b8794;
+      font-size:10px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
     }
 
     @media(max-width:1100px){
-      .impact-grid,.product-grid{grid-template-columns:1fr 1fr}
+      .impact-grid{grid-template-columns:1fr 1fr}
+      .product-grid{grid-template-columns:1fr 1fr}
+      .people-grid{grid-template-columns:1fr}
       .footer-grid{grid-template-columns:1fr 1fr}
     }
-    @media(max-width:900px){
-      .hero-bottom,.role-grid,.product-head,.system-head,.building-head{grid-template-columns:1fr}
-      .impact-head{flex-direction:column;align-items:flex-start}
+
+    @media(max-width:1080px){
+      .product-head{grid-template-columns:1fr;gap:28px}
+      .product-head h2{max-width:860px}
+      .field-card{grid-template-columns:1fr}
+      .field-photo{min-height:440px}
+      .field-photo img{min-height:440px}
+    }
+
+    @media(max-width:860px){
+      .nav-center{display:none}
+      .hero-bottom,.role-grid{grid-template-columns:1fr}
+      .impact-head,.projects-head,.operating-head,.people-head{flex-direction:column;align-items:flex-start}
       .snapshot{grid-template-columns:1fr 1fr}
-      .flow-grid{grid-template-columns:1fr}
-      .flow-item+.flow-item{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+      .project{grid-template-columns:40px 1fr}
+      .project-body{grid-column:2}
       .work-list{grid-template-columns:1fr}
       .work-item:nth-child(odd){padding-right:0;border-right:0}
       .work-item:nth-child(even){padding-left:0}
+      .field-photo,.field-photo img{min-height:450px}
     }
-    @media(max-width:860px){.nav-center{display:none}}
+
     @media(max-width:640px){
       .nav{min-height:68px}
       .brand{font-size:20px!important}
       .nav-right{gap:14px}
       .nav-right a:not(.lang):nth-child(2){display:none}
+
       .hero{padding-top:58px;padding-bottom:80px}
       .hero-top{align-items:flex-start;flex-direction:column;margin-bottom:48px}
       .hero-meta{justify-content:flex-start}
-      .studio-mark img{height:32px;max-width:210px}
-      .hero h1{font-size:clamp(54px,14vw,78px)}
+      .geo-mark{min-width:210px;min-height:64px}
+      .geo-mark img{height:27px}
+      .hero h1{font-size:clamp(56px,15vw,78px)}
       .hero-description{font-size:15px}
-      .impact,.role,.product,.system,.building,.learning{padding-top:82px;padding-bottom:88px}
-      .impact-grid,.product-grid,.snapshot,.learning-grid{grid-template-columns:1fr}
+      .impact,.role,.product,.projects,.operating,.principle{padding-top:82px;padding-bottom:88px}
+      .impact-grid,.product-grid,.snapshot,.principle-grid{grid-template-columns:1fr}
       .impact-card{min-height:210px}
+      .role-main h2,.impact-head h2,.product-head h2,.projects-head h2,.operating-head h2,.principle h2{font-size:42px}
       .snapshot-item{border-right:0;border-bottom:1px solid var(--line)}
       .snapshot-item:last-child{border-bottom:0}
-      .product-item{border-right:0;border-bottom:1px solid rgba(255,255,255,.11)}
-      .product-item:last-child{border-bottom:0}
-      .product-note{grid-template-columns:1fr;gap:10px}
-      .learning-item:first-child{border-right:0;border-bottom:1px solid var(--line)}
+      .person{padding:22px}
+      .project{grid-template-columns:30px 1fr;gap:16px}
+      .project h3{font-size:27px}
+      .field{padding:0 var(--page) 82px}
+      .field-card{border-radius:20px}
+      .field-copy{padding:52px 26px}
+      .field-copy h2{font-size:42px}
+      .product-head h2 .heading-line,
+      .field-copy h2 .heading-line{white-space:normal}
+      .field-photo,.field-photo img{min-height:330px}
       .project-nav-inner{grid-template-columns:1fr}
       .project-nav a:last-child{text-align:left;border-left:0;border-top:1px solid var(--line);padding-left:0}
       .footer-grid{grid-template-columns:1fr}
       .footer-bottom{flex-direction:column}
     }
-  </style>
-<style id="studio-field-photo">
-.studio-field-photo{width:min(var(--max),100%);margin:54px auto 0;overflow:hidden;border-radius:3px;background:#f1f3f6}
-.studio-field-photo img{display:block;width:100%;height:clamp(300px,42vw,620px);object-fit:cover;object-position:center 42%}
-@media(max-width:640px){.studio-field-photo{margin-top:30px}.studio-field-photo img{height:clamp(260px,72vw,380px)}}
+  
+    /* Match the Home grid and keep GeoVictoria's mark clean on white. */
+    :root{--page:8vw;--max:1520px}
+    .geo-mark{min-width:0;min-height:52px;padding:0;justify-content:flex-start;border:0;border-radius:0;background:transparent}
+    .geo-mark img{height:38px;max-width:220px}
+    .hero-description a,.hero-role strong a,.role-main p a,.snapshot-value a{color:inherit;text-decoration:underline;text-decoration-color:#bcc7d2;text-underline-offset:3px;transition:color .2s ease,text-decoration-color .2s ease}
+    .hero-description a:hover,.hero-role strong a:hover,.role-main p a:hover,.snapshot-value a:hover{color:var(--blue);text-decoration-color:var(--blue)}
+    @media(max-width:640px){
+      :root{--page:20px}
+      .geo-mark{min-width:0;min-height:46px}
+      .geo-mark img{height:34px}
+    }
+
+    /* Focused case-study refresh: tighter hierarchy, less repetition. */
+    .hero{padding-top:68px;padding-bottom:82px}
+    .hero-top{margin-bottom:48px}
+    .hero h1{font-size:clamp(64px,6.6vw,104px);max-width:1120px}
+    .hero-bottom{margin-top:42px}
+    .impact,.role,.projects,.operating{padding-top:84px;padding-bottom:92px}
+    .impact-head{margin-bottom:36px}
+    .impact-head h2,.role-main h2,.projects-head h2,.operating-head h2{font-size:clamp(40px,4.2vw,62px)}
+    .impact-card{min-height:174px;padding:24px;border-radius:18px}
+    .impact-card strong{font-size:clamp(48px,4vw,64px)}
+    .impact-card span{margin-top:18px}
+    .role-main h2{margin-bottom:22px}
+    .people{margin-top:56px;padding-top:42px}
+    .people-head h3{font-size:32px}
+    .product{padding-top:82px;padding-bottom:82px}
+    .product-head{margin-bottom:30px}
+    .product-head h2{font-size:clamp(40px,4.2vw,62px)}
+    .product-note{margin-bottom:0}
+    .project-list{max-width:var(--max)}
+    .project{padding:34px 0}
+    .project h3{font-size:clamp(24px,2.5vw,34px)}
+    .field{padding-bottom:84px}
+    .field-copy h2{font-size:clamp(40px,4.2vw,62px)}
+    .operating-head{margin-bottom:32px}
+    .work-item{min-height:108px}
+    @media(max-width:640px){
+      .hero{padding-top:46px;padding-bottom:64px}
+      .hero-top{margin-bottom:38px}
+      .hero h1{font-size:clamp(52px,13vw,68px)}
+      .impact,.role,.product,.projects,.operating{padding-top:64px;padding-bottom:68px}
+      .impact-card{min-height:138px;padding:20px}
+      .impact-card strong{font-size:54px}
+      .impact-card span{margin-top:12px}
+      .product-note{grid-template-columns:1fr;gap:10px}
+      .project{padding:26px 0}
+      .work-item{min-height:auto;padding-top:20px;padding-bottom:20px}
+    }
+\n  
+    /* Editorial case-study direction inspired by the reference layout. */
+    :root{--ink:#151a2c;--muted:#535d6c;--line:#dfe3e9;--soft:#f5f6f8;--blue:#2845db;--max:1360px}
+    .hero{padding:58px var(--page) 58px}
+    .hero-inner{width:min(var(--max),100%)}
+    .hero-top{margin-bottom:44px;align-items:center}
+    .hero-meta span{min-height:28px;padding:0 10px;border-radius:999px;font-size:10px}
+    .hero-layout{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(360px,.9fr);align-items:center;gap:clamp(48px,7vw,100px)}
+    .hero-copy{min-width:0}
+    .hero-kicker{margin-bottom:22px;font-size:10px;letter-spacing:.11em;text-transform:uppercase}
+    .hero h1,.impact-head h2,.role-main h2,.people-head h3,.product-head h2,.projects-head h2,.project h3,.operating-head h2{
+      font-family:Manrope,sans-serif;font-weight:500;letter-spacing:-.05em;line-height:1.04
+    }
+    .hero h1{max-width:660px;font-size:clamp(54px,6vw,82px);letter-spacing:-.04em;line-height:1.04}
+    .hero h1 span{color:#273253}
+    .hero-description{margin-top:24px;max-width:620px;font-size:15px;line-height:1.78}
+    .hero-role{margin-top:26px;padding-top:16px;border-top:1px solid var(--line)}
+    .hero-role strong{font-family:Inter,system-ui,sans-serif;font-size:14px;font-weight:600;letter-spacing:0}
+    .hero-role span{display:inline-block;margin:7px 12px 0 0;font-size:11px}
+    .hero-media{margin:0;min-width:0}
+    .hero-media img{width:100%;height:clamp(360px,42vw,540px);object-fit:cover;object-position:center 42%;border-radius:3px}
+    .hero-media figcaption{margin-top:9px;color:#747d89;font-size:10px;line-height:1.5}
+    .impact{display:flex;flex-direction:column;padding:0 var(--page) 78px;background:#fff}
+    .impact-grid{order:-1;padding:24px 0 22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);gap:0}
+    .impact-card{min-height:0;padding:8px 20px;border:0;border-right:1px solid var(--line);border-radius:0;background:transparent}
+    .impact-card:first-child{padding-left:0}
+    .impact-card:last-child{border-right:0}
+    .impact-card strong{font-family:Manrope,sans-serif;font-size:clamp(34px,4vw,50px);font-weight:500;letter-spacing:-.06em}
+    .impact-card span{margin-top:5px;max-width:190px;font-size:10px;line-height:1.5}
+    .impact-head{margin:64px auto 0;align-items:start}
+    .impact-head .section-label,.section-label{color:var(--blue);font-size:9px;letter-spacing:.12em}
+    .impact-head h2,.role-main h2,.projects-head h2,.operating-head h2{font-size:clamp(38px,3.6vw,50px)}
+    .impact-head p,.projects-head p,.operating-head p{font-size:14px;line-height:1.8}
+    .case-nav{position:sticky;top:76px;z-index:900;padding:14px var(--page);display:flex;gap:30px;background:rgba(255,255,255,.96);border-top:1px solid var(--line);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+    .case-nav a{color:var(--blue);font-size:10px;font-weight:600}
+    .case-nav a:hover{text-decoration:underline;text-underline-offset:4px}
+    #impact,#role,#products,#approach{scroll-margin-top:150px}
+    .role,.projects,.operating{padding-top:88px;padding-bottom:92px}
+    .role-grid{grid-template-columns:minmax(130px,.28fr) minmax(0,1.25fr);gap:clamp(40px,7vw,96px)}
+    .role-main h2{max-width:700px;font-size:clamp(38px,4.2vw,58px)}
+    .role-main>p{max-width:740px;font-size:14px;line-height:1.8}
+    .snapshot{margin-top:32px}
+    .snapshot-item{padding:18px 14px}
+    .snapshot-item:first-child{padding-left:0}
+    .snapshot-focus{gap:0}
+    .snapshot-focus span{padding:3px 11px 3px 0;border:0;border-radius:0;background:none;font-size:10px}
+    .snapshot-focus span+span:before{content:"·";margin-right:11px;color:#9aa2ac}
+    .people{margin-top:52px;padding-top:42px}
+    .people-grid{gap:28px}
+    .person{padding:0;border:0;border-radius:0;background:transparent}
+    .person-photo{width:48px;height:48px}
+    .person-context{font-size:12px}
+    .product{padding:82px var(--page);background:#f5f6f8;color:var(--ink)}
+    .product-head{margin-bottom:28px}
+    .product-head .section-label{color:var(--blue)}
+    .product-head h2{font-size:clamp(38px,4.2vw,58px)}
+    .product-head h2 span{color:#687287}
+    .product-head p,.product-note p{color:#586272}
+    .product-note{border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;padding:18px 0 0}
+    .product-note strong{color:var(--blue)}
+    .projects-head{align-items:start}
+    .project{grid-template-columns:40px minmax(220px,.7fr) minmax(0,1fr);padding:30px 0}
+    .project:hover{padding-left:0;padding-right:0;background:transparent}
+    .project-num,.project-type{color:var(--blue)}
+    .project h3{font-size:clamp(25px,2.8vw,36px)}
+    .project-meta{margin:13px 0 20px;gap:5px 12px}
+    .project-meta span{padding:0;border:0;border-radius:0;background:transparent;font-size:9px}
+    .project-meta span+span:before{content:"·";margin-right:12px;color:#9aa2ac}
+    .project-contribution strong{color:var(--blue)}
+    .operating-head{align-items:start}
+    .work-list{gap:0;border-top:1px solid var(--line)}
+    .work-item{min-height:120px;padding:24px 20px 24px 0;border-bottom:1px solid var(--line);background:transparent}
+    .work-item:nth-child(odd),.work-item:nth-child(even){padding-left:0;padding-right:24px;border-right:0}
+    .work-item strong{font-size:14px;line-height:1.55}
+    .work-num{color:var(--blue);font-size:12px;font-weight:600;letter-spacing:.05em}
+    .operating-head>div .section-label{font-size:10px}
+    .operating-head p{font-size:16px;line-height:1.75}
+    .work-item{grid-template-columns:48px minmax(0,1fr);gap:12px;min-height:126px;padding:26px 36px 26px 0;align-items:start}
+    .work-item:nth-child(odd){border-right:1px solid var(--line)}
+    .work-item:nth-child(even){padding-left:36px;padding-right:0}
+    .work-item strong{font-size:18px;line-height:1.45;letter-spacing:-.025em}
+    .work-num{font-size:13px}
+    @media(max-width:860px){
+      .operating-head p{font-size:15px}
+      .work-item strong{font-size:16px}
+      .work-item{min-height:116px;padding-top:22px;padding-bottom:22px}
+    }
+    @media(max-width:640px){
+      .operating-head p{font-size:15px}
+      .work-item,.work-item:nth-child(odd),.work-item:nth-child(even){min-height:0;padding:19px 0;border-right:0}
+      .work-item strong{font-size:16px;line-height:1.5}
+    }
+    @media(max-width:860px){
+      .hero-layout{grid-template-columns:1fr 0.9fr;gap:36px}
+      .hero h1{font-size:clamp(48px,6vw,68px)}
+      .case-nav{gap:22px}
+      .impact-head,.projects-head,.operating-head{flex-direction:row;align-items:start}
+      .work-list{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:640px){
+      .hero{padding-top:38px;padding-bottom:38px}
+      .hero-top{margin-bottom:34px}
+      .hero-layout{grid-template-columns:1fr;gap:26px}
+      .hero h1{font-size:clamp(48px,13vw,64px)}
+      .hero-media{order:-1}
+      .hero-media img{height:300px}
+      .hero-description{font-size:14px}
+      .impact{padding-bottom:58px}
+      .impact-grid{grid-template-columns:1fr 1fr;padding:12px 0;row-gap:0}
+      .impact-card{padding:14px 10px;border-right:0;border-bottom:1px solid var(--line)}
+      .impact-card:nth-child(odd){padding-left:0;border-right:1px solid var(--line)}
+      .impact-card:nth-child(even){padding-right:0}
+      .impact-card:nth-last-child(-n+2){border-bottom:0}
+      .impact-card strong{font-size:38px}
+      .impact-card span{max-width:160px}
+      .impact-head{margin-top:42px;flex-direction:column}
+      .case-nav{top:68px;gap:0;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+      .case-nav a{font-size:9px}
+      .role,.projects,.operating{padding-top:64px;padding-bottom:68px}
+      .role-grid{grid-template-columns:1fr;gap:20px}
+      .snapshot{grid-template-columns:1fr 1fr}
+      .snapshot-item:nth-child(2){border-right:0}
+      .snapshot-focus{gap:4px}
+      .product{padding-top:64px;padding-bottom:64px}
+      .product-head{gap:18px}
+      .product-note{grid-template-columns:1fr;gap:8px}
+      .project{grid-template-columns:28px 1fr;gap:14px;padding:24px 0}
+      .project-body{grid-column:2}
+      .work-list{grid-template-columns:1fr}
+      .work-item:nth-child(odd),.work-item:nth-child(even){padding-right:0}
+    }
+
+  
+    /* GeoVictoria people and product sections follow the Low case-study rhythm. */
+    .people-section{
+      padding:0 var(--page) 84px;
+      background:#fff;
+    }
+    .people-container{width:min(var(--max),100%);margin:0 auto}
+    .people{margin:0;padding-top:54px;border-top:1px solid var(--line)}
+    .people-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:40px;
+      margin-bottom:28px;
+    }
+    .people-head h3{
+      margin:12px 0 0;
+      font-family:Manrope,sans-serif;
+      font-size:38px;
+      font-weight:500;
+      letter-spacing:-.045em;
+    }
+    .people-head p{margin:0;max-width:580px;color:#64707e;font-size:14px;line-height:1.7}
+    .people-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .person{
+      min-width:0;
+      padding:22px;
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:20px;
+      background:#0b1117;
+      color:#fff;
+    }
+    .person-photo{width:62px;height:62px;border-radius:50%;overflow:hidden;background:#111923}
+    .person-photo img{width:100%;height:100%;object-fit:cover}
+    .person h4{margin:22px 0 0;font-family:Manrope,sans-serif;font-size:20px;font-weight:500;letter-spacing:-.035em}
+    .person h4 a{color:inherit;text-decoration:none}
+    .person h4 a:hover{color:#a8bfd9}
+    .person h4 a:focus-visible{outline:2px solid #8ec4ff;outline-offset:4px;border-radius:2px}
+
+    .projects{padding:112px var(--page) 122px;background:#fff}
+    .projects-head{
+      width:min(var(--max),100%);margin:0 auto 46px;
+      display:flex;justify-content:space-between;align-items:end;gap:50px;
+    }
+    .projects-head h2{
+      margin:14px 0 0;max-width:860px;font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);line-height:1.02;letter-spacing:-.055em;font-weight:500;
+    }
+    .projects-head p{margin:0;max-width:520px;color:var(--muted);font-size:15px;line-height:1.7}
+    .project-list{width:min(var(--max),100%);margin:0 auto;border-top:1px solid var(--line)}
+    .geo-product-card{
+      display:grid;
+      grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+      gap:clamp(34px,6vw,88px);
+      align-items:center;
+      padding:48px 0;
+      border-bottom:1px solid var(--line);
+    }
+    .geo-product-card--reverse .geo-product-card__visual{grid-column:2;grid-row:1}
+    .geo-product-card--reverse .geo-product-card__content{grid-column:1;grid-row:1}
+    .geo-product-card__visual{
+      min-width:0;overflow:hidden;aspect-ratio:1.45;
+      display:grid;place-items:center;border-radius:20px;
+      background:linear-gradient(135deg,#f6f9fc,#eaf5fb);
+    }
+    .geo-product-card__visual img{
+      display:block;width:100%;height:100%;padding:18px;
+      object-fit:contain;
+    }
+    .geo-product-card__content{min-width:0;display:flex;flex-direction:column;align-items:flex-start}
+    .geo-product-card__meta{
+      display:flex;flex-wrap:wrap;align-items:center;gap:14px;
+      color:#748397;font-size:10px;font-weight:700;letter-spacing:.1em;line-height:1.5;text-transform:uppercase;
+    }
+    .geo-product-card__meta span:first-child{color:var(--blue)}
+    .geo-product-card h3{
+      margin:22px 0 18px;font-family:Manrope,sans-serif;
+      font-size:clamp(32px,3.5vw,52px);font-weight:500;line-height:1.08;letter-spacing:-.055em;
+    }
+    .geo-product-card__content>p{margin:0;color:#64707e;font-size:14px;line-height:1.75}
+    .geo-product-card .project-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+    .geo-product-card .project-meta span{
+      padding:7px 10px;border:1px solid #dce2e9;border-radius:999px;
+      color:#526172;font-size:9px;font-weight:600;
+    }
+    .geo-product-card__contribution{
+      display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;
+      width:100%;margin-top:24px;padding-top:18px;border-top:1px solid var(--line);
+    }
+    .geo-product-card__contribution span{
+      color:#728198;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    }
+    .geo-product-card__contribution p{margin:0;color:#64707e;font-size:12px;line-height:1.7}
+
+    .geo-cta{padding:clamp(76px,9vw,128px) var(--page);background:var(--dark);color:#fff}
+    .geo-cta-inner{width:min(var(--max),100%);margin:0 auto}
+    .geo-cta .section-label{color:#8ec4ff;text-transform:none;letter-spacing:0}
+    .geo-cta-links .cta-arrow{
+      display:inline-block;width:15px;height:15px;margin-left:6px;vertical-align:-2px;
+      fill:none;stroke:#8ec4ff;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s ease;
+    }
+    .geo-cta-links>a:hover .cta-arrow{transform:translate(2px,-2px)}
+    .geo-cta h2{
+      margin:18px 0 14px;max-width:900px;font-family:Manrope,sans-serif;
+      font-size:clamp(52px,6.5vw,92px);font-weight:500;line-height:1.01;letter-spacing:-.065em;
+    }
+    .geo-cta-inner>p{margin:0;max-width:640px;color:#aeb8c3;font-size:15px;line-height:1.7}
+    .geo-cta-links{margin-top:52px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.16)}
+    .geo-cta-links>a{min-width:0;padding:22px 22px 0 0;display:flex;flex-direction:column;gap:13px;color:#fff}
+    .geo-cta-links>a+a{padding-left:24px;border-left:1px solid rgba(255,255,255,.16)}
+    .geo-cta-links>a>span{color:#91a1b2;font-size:10px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+    .geo-cta-links strong{font-family:Manrope,sans-serif;font-size:clamp(18px,2vw,24px);font-weight:500;letter-spacing:-.025em}
+    .geo-cta-links>a:hover strong{color:#a8bfd9}
+    @media(max-width:860px){
+      .people-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .people-head,.projects-head{flex-direction:column;align-items:flex-start;gap:22px}
+      .geo-product-card{gap:32px}
+      .geo-product-card h3{font-size:clamp(28px,4vw,40px)}
+    }
+    @media(max-width:640px){
+      .people-section{padding-bottom:68px}
+      .people-head{margin-bottom:24px}
+      .people-head h3{font-size:32px}
+      .people-grid{grid-template-columns:1fr}
+      .projects{padding-top:68px;padding-bottom:72px}
+      .projects-head{margin-bottom:30px}
+      .projects-head h2{font-size:clamp(40px,10vw,58px)}
+      .geo-product-card,.geo-product-card--reverse{grid-template-columns:1fr;gap:22px;padding:26px 0}
+      .geo-product-card__visual,.geo-product-card--reverse .geo-product-card__visual{grid-column:1;grid-row:1;aspect-ratio:1.3}
+      .geo-product-card__content,.geo-product-card--reverse .geo-product-card__content{grid-column:1;grid-row:2}
+      .geo-product-card__visual img{padding:12px}
+      .geo-product-card__contribution{grid-template-columns:1fr;gap:8px}
+      .geo-product-card h3{margin:16px 0 14px}
+      .geo-cta{padding:68px var(--page) 72px}
+      .geo-cta h2{font-size:clamp(44px,11vw,64px)}
+      .geo-cta-links{grid-template-columns:1fr;margin-top:34px}
+      .geo-cta-links>a,.geo-cta-links>a+a{padding:18px 0;border-left:0;border-bottom:1px solid rgba(255,255,255,.16)}
+    }
+
+    /* Geo team cards follow the compact LowSignal photo-and-name pills. */
+    .people-section .people-grid{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:flex-start;
+      gap:10px;
+      max-width:870px;
+    }
+    .people-section .person{
+      width:max-content;
+      max-width:100%;
+      min-height:90px;
+      padding:8px 18px 8px 8px;
+      display:flex;
+      align-items:center;
+      gap:14px;
+      flex:0 0 auto;
+      border:1px solid #d9dde3;
+      border-radius:999px;
+      background:#f7f8fa;
+      color:var(--ink);
+      transition:border-color .2s ease,background .2s ease,transform .2s ease;
+    }
+    .people-section .person:hover{
+      border-color:#b8c6d7;
+      background:#fff;
+      transform:translateY(-2px);
+    }
+    .people-section .person-photo{
+      width:68px;
+      height:68px;
+      margin:0;
+      flex:0 0 68px;
+      border-radius:50%;
+      overflow:hidden;
+      background:#e7ebef;
+    }
+    .people-section .person-photo img{display:block;width:100%;height:100%;object-fit:cover}
+    .people-section .person h4{
+      margin:0;
+      min-width:0;
+      color:var(--ink);
+      font-size:19px;
+      line-height:1.25;
+      letter-spacing:-.035em;
+    }
+    .people-section .person h4 a{color:var(--ink);text-decoration:none}
+    .people-section .person h4 a:hover{color:var(--blue);text-decoration:underline}
+    .people-section .person h4 a:focus-visible{outline:2px solid var(--blue);outline-offset:4px;border-radius:2px}
+    @media(max-width:640px){
+      .people-section .people-grid{max-width:100%;gap:10px}
+      .people-section .person{min-height:88px;padding:9px 18px 9px 9px;gap:14px}
+      .people-section .person-photo{width:68px;height:68px;flex-basis:68px}
+      .people-section .person h4{font-size:17px}
+    }
+  
+    /* Scroll reveal, matching the LowSignal case study. */
+    .scroll-reveal{
+      opacity:0;
+      transform:translate3d(0,14px,0);
+      transition:opacity .65s cubic-bezier(.2,.7,.2,1),transform .65s cubic-bezier(.2,.7,.2,1);
+      transition-delay:var(--reveal-delay,0ms);
+    }
+    .scroll-reveal.is-visible{opacity:1;transform:translate3d(0,0,0)}
+    @media(prefers-reduced-motion:reduce){
+      .scroll-reveal,.scroll-reveal.is-visible{opacity:1;transform:none;transition:none}
+    }
+  
+    .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+    .hero-btn{min-height:42px;padding:0 16px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #d9e0e8;border-radius:999px;background:#fff;color:var(--ink);font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s ease,border-color .2s ease,transform .2s ease}
+    .hero-btn:hover{transform:translateY(-1px);border-color:#aeb9c6}
+    .hero-btn.primary{background:#151a2c;border-color:#151a2c;color:#fff}
+    .hero-btn.primary:hover{background:#2845db;border-color:#2845db}
+    .hero-btn:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+    @media(max-width:640px){.hero-actions{gap:8px}.hero-btn{min-height:40px;padding:0 13px;font-size:9px}}
+    .studio-mark{min-width:0;min-height:52px;padding:0 12px;justify-content:flex-start;border:1px solid var(--line);border-radius:3px;background:#fff}
+    .studio-mark img{height:32px;max-width:210px}
+    .studio-learning{padding:88px var(--page) 96px;background:var(--soft)}
+    .studio-learning-inner{width:min(var(--max),100%);margin:0 auto}
+    .studio-learning-head{display:flex;justify-content:space-between;align-items:end;gap:50px;margin-bottom:34px}
+    .studio-learning-head h2{margin:14px 0 0;max-width:760px;font-family:Manrope,sans-serif;font-size:clamp(38px,3.6vw,50px);font-weight:500;letter-spacing:-.05em;line-height:1.04}
+    .studio-learning-head p{margin:0;max-width:520px;color:var(--muted);font-size:14px;line-height:1.8}
+    .studio-learning-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line)}
+    .studio-learning-item{padding:24px 30px 24px 0;border-bottom:1px solid var(--line)}
+    .studio-learning-item:nth-child(even){padding-left:30px;border-left:1px solid var(--line)}
+    .studio-learning-item small{color:var(--blue);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .studio-learning-item h3{margin:14px 0 8px;font-family:Manrope,sans-serif;font-size:24px;font-weight:500;letter-spacing:-.035em}
+    .studio-learning-item p{margin:0;color:#64707e;font-size:13px;line-height:1.75}
+    .studio-mark:focus-visible,.studio-cta-link:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+    @media(max-width:860px){.studio-learning-head{flex-direction:column;align-items:flex-start;gap:20px}}
+    @media(max-width:640px){
+      .studio-mark{min-height:46px;padding:0 8px}
+      .studio-mark img{height:28px}
+      .studio-learning{padding:64px var(--page) 68px}
+      .studio-learning-grid{grid-template-columns:1fr}
+      .studio-learning-item,.studio-learning-item:nth-child(even){padding:20px 0;border-left:0}
+      .studio-learning-item h3{font-size:22px}
+    }
 </style>
 </head>
-
 <body>
-
 <header class="nav">
   <a class="brand" href="/">Felipe Quiroz</a>
   <nav class="nav-center" aria-label="Primary">
-    <a href="/#work" class="active">Work</a>
-    <a href="/about">About</a>
-    <a href="/now">Now</a>
-    <a href="/blog">Blog</a>
+    <a href="/#work" class="active">Work</a><a href="/about">About</a><a href="/now">Now</a><a href="/blog">Blog</a>
   </nav>
   <div class="nav-right">
-    <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a class="lang" href="/es/tethered/tether-studio" aria-label="Switch language">ES</a>
+    <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a><a class="lang" href="/es/tethered/tether-studio" aria-label="Switch to Spanish">ES</a>
   </div>
 </header>
-
 <main>
-
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-top">
-        <a class="studio-mark" href="https://tetherstudio.ai/" target="_blank" rel="noopener noreferrer" aria-label="Visit Tether Studio">
-          <img src="/logos/tether-studio-logo.png" alt="Tether Studio">
-        </a>
-
-        <div class="hero-meta">
-          <span>Case study / 04</span>
-          <span>AI product</span>
-          <span>School operations</span>
-        </div>
+        <a class="geo-mark studio-mark" href="https://tetherstudio.ai/" target="_blank" rel="noopener noreferrer" aria-label="Visit Tether Studio"><img src="/logos/tether-studio-logo.png" alt="Tether Studio"></a>
+        <div class="hero-meta"><span>Case study / 04</span><span>AI product</span><span>School operations</span></div>
       </div>
-
-      <div class="hero-kicker">Product / AI / Operations</div>
-
-      <h1>Tether<span>Studio.</span></h1>
-
-      <div class="hero-bottom">
-        <div>
-          <p class="hero-description">
-            An AI-enabled school photography platform that centralizes portraits, events, yearbooks, consent, family access and school administration in one digital workflow.
-          </p>
-
-          <div class="hero-actions">
-            <a class="hero-btn primary" href="https://tetherstudio.ai/" target="_blank" rel="noopener noreferrer">Visit site ↗</a>
-            <a class="hero-btn" href="#workflow">See the workflow ↓</a>
-          </div>
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <div class="hero-kicker">Product / School photography / Operations</div>
+          <h1>School photography,<span>one connected workflow.</span></h1>
+          <p class="hero-description">Tether Studio is an AI-enabled school photography platform that connects portraits, events, yearbooks, consent, family access and school administration in one digital experience.</p>
+          <div class="hero-actions"><a class="hero-btn primary" href="https://tetherstudio.ai/" target="_blank" rel="noopener noreferrer">Visit site ↗</a><a class="hero-btn" href="#products">See the workflow ↓</a></div>
+          <div class="hero-role"><strong>Product building &amp; positioning</strong><span>Tether Studio</span><span>School teams · Families · Applied AI</span></div>
         </div>
-
-        <div class="hero-role">
-          <strong>Tether Studio</strong>
-          <span>Product building &amp; positioning</span>
-          <span>School teams · Families · AI-enabled workflow</span>
-        </div>
+        <figure class="hero-media"><img src="/images/building-in-the-field.jpg" alt="Field work for Tether Studio" loading="eager" fetchpriority="high" decoding="async"></figure>
       </div>
-      <figure class="studio-field-photo">
-        <img src="/images/building-in-the-field.jpg" alt="Tether Studio in the field during a school photography session">
-      </figure>
     </div>
   </section>
-
-  <section class="impact">
-    <div class="impact-head">
-      <div>
-        <div class="section-label">01 / Impact</div>
-        <h2>Less manual work.<span>A much simpler workflow.</span></h2>
-      </div>
-      <p>Tether Studio brought previously separate school-photography processes into one digital experience for school teams and families.</p>
-    </div>
-
+  <section class="impact" id="impact">
+    <div class="impact-head"><div><div class="section-label">Impact</div><h2>Less manual work.<br>A simpler operation.</h2></div><p>Tether Studio brought previously separate school-photography processes into one digital experience for school teams and families.</p></div>
     <div class="impact-grid">
       <article class="impact-card"><strong>−82%</strong><span>Operational hours</span></article>
-      <article class="impact-card"><strong>6 weeks</strong><span>To launch</span></article>
-      <article class="impact-card"><strong>1 platform</strong><span>5 stages in one workflow</span></article>
+      <article class="impact-card"><strong>6</strong><span>Weeks to launch</span></article>
+      <article class="impact-card"><strong>5</strong><span>Stages connected in one platform</span></article>
       <article class="impact-card"><strong>100%</strong><span>Auditable consent</span></article>
     </div>
   </section>
-
-  <section class="role">
-    <div class="role-grid">
-      <div class="section-label">02 / My role</div>
-
-      <div class="role-main">
-        <h2>Turning operational needs into product.</h2>
-
-        <p>I worked on product building and positioning, connecting schools' operational needs with a simpler digital experience for teams and families.</p>
-
-        <p>The work combined understanding the problem, shaping the value proposition and translating school processes into an experience that could centralize photography, consent, family access and administration.</p>
-
-        <div class="snapshot">
-          <div class="snapshot-item">
-            <div class="snapshot-label">Product</div>
-            <div class="snapshot-value">Tether Studio</div>
-          </div>
-          <div class="snapshot-item">
-            <div class="snapshot-label">Category</div>
-            <div class="snapshot-value">AI product / School operations</div>
-          </div>
-          <div class="snapshot-item">
-            <div class="snapshot-label">Contribution</div>
-            <div class="snapshot-value">Product building &amp; positioning</div>
-          </div>
-          <div class="snapshot-item">
-            <div class="snapshot-label">Users</div>
-            <div class="snapshot-value">School teams &amp; families</div>
-          </div>
-        </div>
-
-        <div class="snapshot-focus">
-          <span>Product building</span>
-          <span>Positioning</span>
-          <span>School operations</span>
-          <span>Family experience</span>
-          <span>AI-enabled workflow</span>
-        </div>
+  <nav class="case-nav" aria-label="Case sections"><a href="#impact">Impact</a><a href="#role">My role</a><a href="#products">Product</a><a href="#approach">Approach</a><a href="#learning">Learning</a></nav>
+  <section class="role" id="role">
+    <div class="role-grid"><div class="section-label">My role</div><div class="role-main">
+      <h2>Turning operational needs into product.</h2>
+      <p>I worked on product building and positioning, connecting schools' operational needs with a simpler digital experience for their teams and families.</p>
+      <p>The work combined understanding the problem, shaping the value proposition and translating school processes into a solution that could centralize photography, consent, family access and administration.</p>
+      <div class="snapshot">
+        <div class="snapshot-item"><div class="snapshot-label">Product</div><div class="snapshot-value">Tether Studio</div></div>
+        <div class="snapshot-item"><div class="snapshot-label">Category</div><div class="snapshot-value">AI product / School operations</div></div>
+        <div class="snapshot-item"><div class="snapshot-label">Contribution</div><div class="snapshot-value">Product building &amp; positioning</div></div>
+        <div class="snapshot-item"><div class="snapshot-label">Users</div><div class="snapshot-value">School teams &amp; families</div></div>
       </div>
+      <div class="snapshot-focus"><span>Product</span><span>Positioning</span><span>School operations</span><span>Family experience</span><span>Applied AI</span></div>
+    </div></div>
+  </section>
+  <section class="projects" id="products">
+    <div class="projects-head"><div><div class="section-label">The product</div><h2>Five stages.<br>One connected operation.</h2></div><p>The value was not in digitizing one isolated task, but in connecting schools, families, consent and administration in the same workflow.</p></div>
+    <div class="project-list">
+      <article class="project"><div class="project-num">01</div><div><div class="project-type">Photography</div><h3>School portraits</h3></div><div class="project-body"><p>School photography managed inside one centralized digital workflow.</p></div></article>
+      <article class="project"><div class="project-num">02</div><div><div class="project-type">School content</div><h3>Events &amp; yearbooks</h3></div><div class="project-body"><p>Community moments connected to the same operation and administration.</p></div></article>
+      <article class="project"><div class="project-num">03</div><div><div class="project-type">Compliance</div><h3>Consent</h3></div><div class="project-body"><p>Traceable, auditable permissions integrated throughout the process.</p></div></article>
+      <article class="project"><div class="project-num">04</div><div><div class="project-type">Family access</div><h3>Family portal</h3></div><div class="project-body"><p>A simple digital experience for accessing and interacting with school content.</p></div></article>
+      <article class="project"><div class="project-num">05</div><div><div class="project-type">Administration</div><h3>School management</h3></div><div class="project-body"><p>School teams gain better visibility and traceability with less manual coordination.</p></div></article>
     </div>
   </section>
-
-  <section class="product" id="workflow">
-    <div class="product-head">
-      <div>
-        <div class="section-label">03 / Product</div>
-        <h2>
-          <span>From fragmented processes</span>
-          <span>to one digital workflow.</span>
-        </h2>
-      </div>
-
-      <p>Tether Studio centralized the full school-photography operation, reducing manual coordination and increasing traceability across the experience.</p>
-    </div>
-
-    <div class="product-note">
-      <strong>1 platform · 5 stages</strong>
-      <p>Portraits, events, yearbooks, consent, family access and administration connected within the same operational experience.</p>
-    </div>
-
-    <div class="product-grid">
-      <article class="product-item">
-        <div class="product-num">01</div>
-        <h3>Portraits</h3>
-        <div class="product-type">Photography</div>
-        <p>School photography managed inside one centralized digital workflow.</p>
-      </article>
-
-      <article class="product-item">
-        <div class="product-num">02</div>
-        <h3>Events &amp; yearbooks</h3>
-        <div class="product-type">School moments</div>
-        <p>School content connected to the same operation and administration.</p>
-      </article>
-
-      <article class="product-item">
-        <div class="product-num">03</div>
-        <h3>Consent</h3>
-        <div class="product-type">Compliance</div>
-        <p>Traceable, auditable consent integrated into the process.</p>
-      </article>
-
-      <article class="product-item">
-        <div class="product-num">04</div>
-        <h3>Family portal</h3>
-        <div class="product-type">Family access</div>
-        <p>A simpler digital experience to access and interact with school content.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="system">
-    <div class="system-head">
-      <div>
-        <div class="section-label">04 / System</div>
-        <h2>
-          <span>A connected operation</span>
-          <span>from end to end.</span>
-        </h2>
-      </div>
-
-      <p>The value was not in digitizing one isolated task, but in connecting schools, families, consent and administration in the same system.</p>
-    </div>
-
-    <div class="flow-grid">
-      <article class="flow-item">
-        <small>School teams</small>
-        <strong>Less manual coordination</strong>
-        <p>One platform for processes that previously required more operational hours and follow-up.</p>
-      </article>
-
-      <article class="flow-item">
-        <small>Families</small>
-        <strong>Simpler access</strong>
-        <p>A digital experience designed around the relationship between the school and its families.</p>
-      </article>
-
-      <article class="flow-item">
-        <small>Operations</small>
-        <strong>Greater traceability</strong>
-        <p>Consent and administration integrated into the same workflow with auditable information.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="building">
-    <div class="building-head">
-      <div>
-        <div class="section-label">05 / Product building</div>
-        <h2>
-          <span>From operational problem to</span>
-          <span>a clear proposition.</span>
-        </h2>
-      </div>
-
-      <p>My contribution focused on connecting what schools needed to solve with a simpler product experience and a value proposition that was easy to understand.</p>
-    </div>
-
+  <section class="operating" id="approach">
+    <div class="operating-head"><div><div class="section-label">Product building</div><h2>From operational problem to a clear proposition.</h2></div><p>I connected what schools needed to solve with a simpler product experience and a value proposition that was easy to understand.</p></div>
     <div class="work-list">
-      <div class="work-item"><div class="work-num">01</div><strong>Understand schools' operational needs</strong></div>
-      <div class="work-item"><div class="work-num">02</div><strong>Connect operational pain points with product decisions</strong></div>
-      <div class="work-item"><div class="work-num">03</div><strong>Build a simpler experience for school teams</strong></div>
-      <div class="work-item"><div class="work-num">04</div><strong>Include the family experience in the workflow</strong></div>
-      <div class="work-item"><div class="work-num">05</div><strong>Shape positioning and value proposition</strong></div>
-      <div class="work-item"><div class="work-num">06</div><strong>Translate operational efficiency into product value</strong></div>
+      <div class="work-item"><div class="work-num">01</div><strong>Understand schools' operational needs.</strong></div>
+      <div class="work-item"><div class="work-num">02</div><strong>Connect operational pain points with product decisions.</strong></div>
+      <div class="work-item"><div class="work-num">03</div><strong>Build a simpler experience for school teams.</strong></div>
+      <div class="work-item"><div class="work-num">04</div><strong>Bring the family experience into the workflow.</strong></div>
+      <div class="work-item"><div class="work-num">05</div><strong>Shape the positioning and value proposition.</strong></div>
+      <div class="work-item"><div class="work-num">06</div><strong>Translate operational efficiency into product value.</strong></div>
     </div>
   </section>
-
-  <section class="learning">
-    <div class="learning-inner">
-      <div class="section-label">06 / Learning</div>
-
-      <h2>Less friction.<span>Better operations.</span></h2>
-
-      <div class="learning-grid">
-        <article class="learning-item">
-          <small>01 / Product</small>
-          <strong>Centralization is also design.</strong>
-          <p>Bringing processes together can transform the experience when it removes unnecessary coordination, steps and decisions.</p>
-        </article>
-
-        <article class="learning-item">
-          <small>02 / Operations</small>
-          <strong>Efficiency is part of the experience.</strong>
-          <p>Reducing operational hours improves both team workflows and how families interact with the service.</p>
-        </article>
+  <section class="studio-learning" id="learning">
+    <div class="studio-learning-inner">
+      <div class="studio-learning-head"><div><div class="section-label">Learning</div><h2>Less friction.<br>Better operations.</h2></div><p>Two ideas guided the work: simplify the whole system and treat efficiency as part of the experience.</p></div>
+      <div class="studio-learning-grid">
+        <article class="studio-learning-item"><small>01 / Product</small><h3>Centralization is also design.</h3><p>Connecting processes can transform the experience when it removes unnecessary coordination, steps and decisions.</p></article>
+        <article class="studio-learning-item"><small>02 / Operations</small><h3>Efficiency is part of the experience.</h3><p>Reducing operational hours improves team workflows and how families interact with the service.</p></article>
       </div>
     </div>
   </section>
-
-  <section class="project-nav">
-    <div class="project-nav-inner">
-      <a href="/tethered/ai-powered-education-transformation">
-        <div class="project-nav-label">Previous project</div>
-        <strong>AI-powered Education Transformation</strong>
-      </a>
-
-      <a href="/tethereducation">
-        <div class="project-nav-label">Back</div>
-        <strong>TetherEducation</strong>
-      </a>
+  <section class="geo-cta"><div class="geo-cta-inner">
+    <div class="section-label">Tether Studio</div><h2>Keep exploring.</h2><p>Visit Tether Studio, explore the rest of my work or get in touch.</p>
+    <div class="geo-cta-links">
+      <a href="https://tetherstudio.ai/" target="_blank" rel="noopener noreferrer"><span>The product</span><strong>Visit Tether Studio <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></strong></a>
+      <a href="/tethereducation"><span>More from Tether</span><strong>Explore TetherEducation <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></strong></a>
+      <a href="https://calendly.com/felipe-lowsignal/30min" target="_blank" rel="noopener noreferrer"><span>Get in touch</span><strong>Book a conversation <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></strong></a>
     </div>
-  </section>
-
+  </div></section>
+  <section class="project-nav"><div class="project-nav-inner">
+    <a href="/tethered/ai-powered-education-transformation"><div class="project-nav-label">Previous project</div><strong>AI-powered Education Transformation</strong></a>
+    <a href="/tethereducation"><div class="project-nav-label">Back</div><strong>TetherEducation</strong></a>
+  </div></section>
 </main>
-
 <footer class="footer">
   <div class="footer-grid">
-    <div>
-      <div class="footer-brand">Felipe Quiroz</div>
-      <div class="footer-copy">Product, Growth & Operations. Building products, growth systems and companies across technology and business.</div>
-    </div>
-
-    <div class="footer-col">
-      <strong>Explore</strong>
-      <a href="/#work">Work</a>
-      <a href="/about">About</a>
-      <a href="/now">Now</a>
-      <a href="/blog">Blog</a>
-    </div>
-
-    <div class="footer-col">
-      <strong>Social</strong>
-      <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a>
-    </div>
-
-    <div class="footer-col">
-      <strong>Contact</strong>
-      <a href="mailto:felipe@lowsignal.cl">Email</a>
-      <a href="https://calendly.com/felipe-lowsignal/30min" target="_blank" rel="noopener noreferrer">Calendly</a>
-    </div>
+    <div><div class="footer-brand">Felipe Quiroz</div><div class="footer-copy">Product, Growth &amp; Operations. Building products, growth systems and companies across technology and business.</div></div>
+    <div class="footer-col"><strong>Explore</strong><a href="/#work">Work</a><a href="/about">About</a><a href="/now">Now</a><a href="/blog">Blog</a></div>
+    <div class="footer-col"><strong>Social</strong><a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a></div>
+    <div class="footer-col"><strong>Contact</strong><a href="mailto:felipe@lowsignal.cl">Email</a><a href="https://calendly.com/felipe-lowsignal/30min" target="_blank" rel="noopener noreferrer">Calendly</a></div>
   </div>
-
-  <div class="footer-bottom">
-    <div>© 2026 Felipe Quiroz</div>
-    <div>Santiago / CL</div>
-  </div>
+  <div class="footer-bottom"><div>© 2026 Felipe Quiroz</div><div>Santiago / CL</div></div>
 </footer>
-
-</body>
-</html>
+<script>
+(()=>{
+  if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const targets=new Set();
+  const add=(selector)=>document.querySelectorAll(selector).forEach(el=>targets.add(el));
+  add('.hero-top,.hero-layout,.impact-head,.role-grid,.people-head,.product-head,.product-note,.projects-head,.operating-head,.geo-cta-inner,.project-nav-inner,.footer-grid,.footer-bottom');
+  ['.impact-grid','.people-grid','.product-grid','.project-list','.work-list','.snapshot','.snapshot-focus','.geo-cta-links'].forEach(selector=>{
+    document.querySelectorAll(selector).forEach(group=>group.querySelectorAll(':scope > *').forEach((el,index)=>{
+      el.style.setProperty('--reveal-delay',Math.min(index,4)*65+'ms');
+      targets.add(el);
+    }));
+  });
+  const observer=new IntersectionObserver((entries,observer)=>entries.forEach(entry=>{
+    if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}
+  }),{threshold:.12,rootMargin:'0px 0px -36px 0px'});
+  targets.forEach(el=>{el.classList.add('scroll-reveal');observer.observe(el)});
+})();
+</script>
+</body></html>
