@@ -1153,7 +1153,396 @@
 @media(max-width:640px){.projects{padding-top:68px;padding-bottom:72px}.projects-head{margin-bottom:30px}.projects-head h2{font-size:clamp(40px,10vw,58px)}.geo-product-card,.geo-product-card--reverse{grid-template-columns:1fr;gap:22px;padding:26px 0}.geo-product-card__visual,.geo-product-card--reverse .geo-product-card__visual{grid-column:1;grid-row:1;aspect-ratio:1.3}.geo-product-card__content,.geo-product-card--reverse .geo-product-card__content{grid-column:1;grid-row:2}.geo-product-card__contribution{grid-template-columns:1fr;gap:8px}.geo-product-card h3{margin:16px 0 14px}.geo-cta{padding:68px var(--page) 72px}.geo-cta h2{font-size:clamp(44px,11vw,64px)}.geo-cta-links{grid-template-columns:1fr;margin-top:34px}.geo-cta-links>a,.geo-cta-links>a+a{padding:18px 0;border-left:0;border-bottom:1px solid rgba(255,255,255,.16)}}
   
 .geo-cta-links .cta-arrow{display:inline-block;width:15px;height:15px;margin-left:6px;vertical-align:-2px;fill:none;stroke:#8ec4ff;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s ease}.geo-cta-links>a:hover .cta-arrow{transform:translate(2px,-2px)}
-</style>
+/* Match the Home grid and keep Tether's colored mark clean on white. */
+    :root{--page:8vw;--max:1520px}
+    .tether-mark{min-width:0;min-height:52px;padding:0;justify-content:flex-start;border:0;border-radius:0;background:transparent}
+    .tether-mark img{height:38px;max-width:220px}
+    .hero-description a,.hero-role strong a,.role-main p a,.snapshot-value a{color:inherit;text-decoration:underline;text-decoration-color:#bcc7d2;text-underline-offset:3px;transition:color .2s ease,text-decoration-color .2s ease}
+    .hero-description a:hover,.hero-role strong a:hover,.role-main p a:hover,.snapshot-value a:hover{color:var(--blue);text-decoration-color:var(--blue)}
+    @media(max-width:640px){
+      :root{--page:20px}
+      .tether-mark{min-width:0;min-height:46px}
+      .tether-mark img{height:34px}
+    }
+
+    /* Focused case-study refresh: tighter hierarchy, less repetition. */
+    .hero{padding-top:68px;padding-bottom:82px}
+    .hero-top{margin-bottom:48px}
+    .hero h1{font-size:clamp(64px,6.6vw,104px);max-width:1120px}
+    .hero-bottom{margin-top:42px}
+    .impact,.role,.projects,.operating{padding-top:84px;padding-bottom:92px}
+    .impact-head{margin-bottom:36px}
+    .impact-head h2,.role-main h2,.projects-head h2,.operating-head h2{font-size:clamp(40px,4.2vw,62px)}
+    .impact-card{min-height:174px;padding:24px;border-radius:18px}
+    .impact-card strong{font-size:clamp(48px,4vw,64px)}
+    .impact-card span{margin-top:18px}
+    .role-main h2{margin-bottom:22px}
+    .people{margin-top:56px;padding-top:42px}
+    .people-head h3{font-size:32px}
+    .product{padding-top:82px;padding-bottom:82px}
+    .product-head{margin-bottom:30px}
+    .product-head h2{font-size:clamp(40px,4.2vw,62px)}
+    .product-note{margin-bottom:0}
+    .project-list{max-width:var(--max)}
+    .project{padding:34px 0}
+    .project h3{font-size:clamp(24px,2.5vw,34px)}
+    .field{padding-bottom:84px}
+    .field-copy h2{font-size:clamp(40px,4.2vw,62px)}
+    .operating-head{margin-bottom:32px}
+    .work-item{min-height:108px}
+    @media(max-width:640px){
+      .hero{padding-top:46px;padding-bottom:64px}
+      .hero-top{margin-bottom:38px}
+      .hero h1{font-size:clamp(52px,13vw,68px)}
+      .impact,.role,.product,.projects,.operating{padding-top:64px;padding-bottom:68px}
+      .impact-card{min-height:138px;padding:20px}
+      .impact-card strong{font-size:54px}
+      .impact-card span{margin-top:12px}
+      .product-note{grid-template-columns:1fr;gap:10px}
+      .project{padding:26px 0}
+      .work-item{min-height:auto;padding-top:20px;padding-bottom:20px}
+    }
+\n  
+    /* Editorial case-study direction inspired by the reference layout. */
+    :root{--ink:#151a2c;--muted:#535d6c;--line:#dfe3e9;--soft:#f5f6f8;--blue:#2845db;--max:1360px}
+    .hero{padding:58px var(--page) 58px}
+    .hero-inner{width:min(var(--max),100%)}
+    .hero-top{margin-bottom:44px;align-items:center}
+    .hero-meta span{min-height:28px;padding:0 10px;border-radius:999px;font-size:10px}
+    .hero-layout{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(360px,.9fr);align-items:center;gap:clamp(48px,7vw,100px)}
+    .hero-copy{min-width:0}
+    .hero-kicker{margin-bottom:22px;font-size:10px;letter-spacing:.11em;text-transform:uppercase}
+    .hero h1,.impact-head h2,.role-main h2,.people-head h3,.product-head h2,.projects-head h2,.project h3,.operating-head h2{
+      font-family:Manrope,sans-serif;font-weight:500;letter-spacing:-.05em;line-height:1.04
+    }
+    .hero h1{max-width:660px;font-size:clamp(54px,6vw,82px);letter-spacing:-.04em;line-height:1.04}
+    .hero h1 span{color:#273253}
+    .hero-description{margin-top:24px;max-width:620px;font-size:15px;line-height:1.78}
+    .hero-role{margin-top:26px;padding-top:16px;border-top:1px solid var(--line)}
+    .hero-role strong{font-family:Inter,system-ui,sans-serif;font-size:14px;font-weight:600;letter-spacing:0}
+    .hero-role span{display:inline-block;margin:7px 12px 0 0;font-size:11px}
+    .hero-media{margin:0;min-width:0}
+    .hero-media img{width:100%;height:clamp(360px,42vw,540px);object-fit:cover;object-position:center 42%;border-radius:3px}
+    .hero-media figcaption{margin-top:9px;color:#747d89;font-size:10px;line-height:1.5}
+    .impact{display:flex;flex-direction:column;padding:0 var(--page) 78px;background:#fff}
+    .impact-grid{order:-1;padding:24px 0 22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);gap:0}
+    .impact-card{min-height:0;padding:8px 20px;border:0;border-right:1px solid var(--line);border-radius:0;background:transparent}
+    .impact-card:first-child{padding-left:0}
+    .impact-card:last-child{border-right:0}
+    .impact-card strong{font-family:Manrope,sans-serif;font-size:clamp(34px,4vw,50px);font-weight:500;letter-spacing:-.06em}
+    .impact-card span{margin-top:5px;max-width:190px;font-size:10px;line-height:1.5}
+    .impact-head{margin:64px auto 0;align-items:start}
+    .impact-head .section-label,.section-label{color:var(--blue);font-size:9px;letter-spacing:.12em}
+    .impact-head h2,.role-main h2,.projects-head h2,.operating-head h2{font-size:clamp(38px,3.6vw,50px)}
+    .impact-head p,.projects-head p,.operating-head p{font-size:14px;line-height:1.8}
+    .case-nav{position:sticky;top:76px;justify-content:flex-start;z-index:900;padding:14px var(--page);display:flex;gap:30px;background:rgba(255,255,255,.96);border-top:1px solid var(--line);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+    .case-nav a{color:var(--blue);font-size:10px;font-weight:600}
+    .case-nav a:hover{text-decoration:underline;text-underline-offset:4px}
+    #impact,#role,#projects,#approach{scroll-margin-top:150px}
+    .role,.projects,.operating{padding-top:88px;padding-bottom:92px}
+    .role-grid{grid-template-columns:minmax(130px,.28fr) minmax(0,1.25fr);gap:clamp(40px,7vw,96px)}
+    .role-main h2{max-width:700px;font-size:clamp(38px,4.2vw,58px)}
+    .role-main>p{max-width:740px;font-size:14px;line-height:1.8}
+    .snapshot{margin-top:32px}
+    .snapshot-item{padding:18px 14px}
+    .snapshot-item:first-child{padding-left:0}
+    .snapshot-focus{gap:0}
+    .snapshot-focus span{padding:3px 11px 3px 0;border:0;border-radius:0;background:none;font-size:10px}
+    .snapshot-focus span+span:before{content:"·";margin-right:11px;color:#9aa2ac}
+    .people{margin-top:52px;padding-top:42px}
+    .people-grid{gap:28px}
+    .person{padding:0;border:0;border-radius:0;background:transparent}
+    .person-photo{width:48px;height:48px}
+    .person-context{font-size:12px}
+    .product{padding:82px var(--page);background:#f5f6f8;color:var(--ink)}
+    .product-head{margin-bottom:28px}
+    .product-head .section-label{color:var(--blue)}
+    .product-head h2{font-size:clamp(38px,4.2vw,58px)}
+    .product-head h2 span{color:#687287}
+    .product-head p,.product-note p{color:#586272}
+    .product-note{border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;padding:18px 0 0}
+    .product-note strong{color:var(--blue)}
+    .projects-head{align-items:start}
+    .project{grid-template-columns:40px minmax(220px,.7fr) minmax(0,1fr);padding:30px 0}
+    .project:hover{padding-left:0;padding-right:0;background:transparent}
+    .project-num,.project-type{color:var(--blue)}
+    .project h3{font-size:clamp(25px,2.8vw,36px)}
+    .project-meta{margin:13px 0 20px;gap:5px 12px}
+    .project-meta span{padding:0;border:0;border-radius:0;background:transparent;font-size:9px}
+    .project-meta span+span:before{content:"·";margin-right:12px;color:#9aa2ac}
+    .project-contribution strong{color:var(--blue)}
+    .operating-head{align-items:start}
+    .work-list{gap:0;border-top:1px solid var(--line)}
+    .work-item{min-height:120px;padding:24px 20px 24px 0;border-bottom:1px solid var(--line);background:transparent}
+    .work-item:nth-child(odd),.work-item:nth-child(even){padding-left:0;padding-right:24px;border-right:0}
+    .work-item strong{font-size:14px;line-height:1.55}
+    .work-num{color:var(--blue);font-size:12px;font-weight:600;letter-spacing:.05em}
+    .operating-head>div .section-label{font-size:10px}
+    .operating-head p{font-size:16px;line-height:1.75}
+    .work-item{grid-template-columns:48px minmax(0,1fr);gap:12px;min-height:126px;padding:26px 36px 26px 0;align-items:start}
+    .work-item:nth-child(odd){border-right:1px solid var(--line)}
+    .work-item:nth-child(even){padding-left:36px;padding-right:0}
+    .work-item strong{font-size:18px;line-height:1.45;letter-spacing:-.025em}
+    .work-num{font-size:13px}
+    @media(max-width:860px){
+      .operating-head p{font-size:15px}
+      .work-item strong{font-size:16px}
+      .work-item{min-height:116px;padding-top:22px;padding-bottom:22px}
+    }
+    @media(max-width:640px){
+      .operating-head p{font-size:15px}
+      .work-item,.work-item:nth-child(odd),.work-item:nth-child(even){min-height:0;padding:19px 0;border-right:0}
+      .work-item strong{font-size:16px;line-height:1.5}
+    }
+    @media(max-width:860px){
+      .hero-layout{grid-template-columns:1fr 0.9fr;gap:36px}
+      .hero h1{font-size:clamp(48px,6vw,68px)}
+      .case-nav{gap:22px}
+      .impact-head,.projects-head,.operating-head{flex-direction:row;align-items:start}
+      .work-list{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:640px){
+      .hero{padding-top:38px;padding-bottom:38px}
+      .hero-top{margin-bottom:34px}
+      .hero-layout{grid-template-columns:1fr;gap:26px}
+      .hero h1{font-size:clamp(48px,13vw,64px)}
+      .hero-media{order:-1}
+      .hero-media img{height:300px}
+      .hero-description{font-size:14px}
+      .impact{padding-bottom:58px}
+      .impact-grid{grid-template-columns:1fr 1fr;padding:12px 0;row-gap:0}
+      .impact-card{padding:14px 10px;border-right:0;border-bottom:1px solid var(--line)}
+      .impact-card:nth-child(odd){padding-left:0;border-right:1px solid var(--line)}
+      .impact-card:nth-child(even){padding-right:0}
+      .impact-card:nth-last-child(-n+2){border-bottom:0}
+      .impact-card strong{font-size:38px}
+      .impact-card span{max-width:160px}
+      .impact-head{margin-top:42px;flex-direction:column}
+      .case-nav{top:68px;gap:0;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+      .case-nav a{font-size:9px}
+      .role,.projects,.operating{padding-top:64px;padding-bottom:68px}
+      .role-grid{grid-template-columns:1fr;gap:20px}
+      .snapshot{grid-template-columns:1fr 1fr}
+      .snapshot-item:nth-child(2){border-right:0}
+      .snapshot-focus{gap:4px}
+      .product{padding-top:64px;padding-bottom:64px}
+      .product-head{gap:18px}
+      .product-note{grid-template-columns:1fr;gap:8px}
+      .project{grid-template-columns:28px 1fr;gap:14px;padding:24px 0}
+      .project-body{grid-column:2}
+      .work-list{grid-template-columns:1fr}
+      .work-item:nth-child(odd),.work-item:nth-child(even){padding-right:0}
+    }
+
+  
+    /* GeoVictoria people and product sections follow the Low case-study rhythm. */
+    .people-section{
+      padding:0 var(--page) 84px;
+      background:#fff;
+    }
+    .people-container{width:min(var(--max),100%);margin:0 auto}
+    .people{margin:0;padding-top:54px;border-top:1px solid var(--line)}
+    .people-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:40px;
+      margin-bottom:28px;
+    }
+    .people-head h3{
+      margin:12px 0 0;
+      font-family:Manrope,sans-serif;
+      font-size:38px;
+      font-weight:500;
+      letter-spacing:-.045em;
+    }
+    .people-head p{margin:0;max-width:580px;color:#64707e;font-size:14px;line-height:1.7}
+    .people-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .person{
+      min-width:0;
+      padding:22px;
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:20px;
+      background:#0b1117;
+      color:#fff;
+    }
+    .person-photo{width:62px;height:62px;border-radius:50%;overflow:hidden;background:#111923}
+    .person-photo img{width:100%;height:100%;object-fit:cover}
+    .person h4{margin:22px 0 0;font-family:Manrope,sans-serif;font-size:20px;font-weight:500;letter-spacing:-.035em}
+    .person h4 a{color:inherit;text-decoration:none}
+    .person h4 a:hover{color:#a8bfd9}
+    .person h4 a:focus-visible{outline:2px solid #8ec4ff;outline-offset:4px;border-radius:2px}
+
+    .projects{padding:112px var(--page) 122px;background:#fff}
+    .projects-head{
+      width:min(var(--max),100%);margin:0 auto 46px;
+      display:flex;justify-content:space-between;align-items:end;gap:50px;
+    }
+    .projects-head h2{
+      margin:14px 0 0;max-width:860px;font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);line-height:1.02;letter-spacing:-.055em;font-weight:500;
+    }
+    .projects-head p{margin:0;max-width:520px;color:var(--muted);font-size:15px;line-height:1.7}
+    .project-list{width:min(var(--max),100%);margin:0 auto;border-top:1px solid var(--line)}
+    .geo-product-card{
+      display:grid;
+      grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+      gap:clamp(34px,6vw,88px);
+      align-items:center;
+      padding:48px 0;
+      border-bottom:1px solid var(--line);
+    }
+    .geo-product-card--reverse .geo-product-card__visual{grid-column:2;grid-row:1}
+    .geo-product-card--reverse .geo-product-card__content{grid-column:1;grid-row:1}
+    .geo-product-card__visual{
+      min-width:0;overflow:hidden;aspect-ratio:1.45;
+      display:grid;place-items:center;border-radius:20px;
+      background:linear-gradient(135deg,#f6f9fc,#eaf5fb);
+    }
+    .geo-product-card__visual img{
+      display:block;width:100%;height:100%;padding:18px;
+      object-fit:contain;
+    }
+    .geo-product-card__content{min-width:0;display:flex;flex-direction:column;align-items:flex-start}
+    .geo-product-card__meta{
+      display:flex;flex-wrap:wrap;align-items:center;gap:14px;
+      color:#748397;font-size:10px;font-weight:700;letter-spacing:.1em;line-height:1.5;text-transform:uppercase;
+    }
+    .geo-product-card__meta span:first-child{color:var(--blue)}
+    .geo-product-card h3{
+      margin:22px 0 18px;font-family:Manrope,sans-serif;
+      font-size:clamp(32px,3.5vw,52px);font-weight:500;line-height:1.08;letter-spacing:-.055em;
+    }
+    .geo-product-card__content>p{margin:0;color:#64707e;font-size:14px;line-height:1.75}
+    .geo-product-card .project-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+    .geo-product-card .project-meta span{
+      padding:7px 10px;border:1px solid #dce2e9;border-radius:999px;
+      color:#526172;font-size:9px;font-weight:600;
+    }
+    .geo-product-card__contribution{
+      display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;
+      width:100%;margin-top:24px;padding-top:18px;border-top:1px solid var(--line);
+    }
+    .geo-product-card__contribution span{
+      color:#728198;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    }
+    .geo-product-card__contribution p{margin:0;color:#64707e;font-size:12px;line-height:1.7}
+
+    .geo-cta{padding:clamp(76px,9vw,128px) var(--page);background:var(--dark);color:#fff}
+    .geo-cta-inner{width:min(var(--max),100%);margin:0 auto}
+    .geo-cta .section-label{color:#8ec4ff;text-transform:none;letter-spacing:0}
+    .geo-cta-links .cta-arrow{
+      display:inline-block;width:15px;height:15px;margin-left:6px;vertical-align:-2px;
+      fill:none;stroke:#8ec4ff;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s ease;
+    }
+    .geo-cta-links>a:hover .cta-arrow{transform:translate(2px,-2px)}
+    .geo-cta h2{
+      margin:18px 0 14px;max-width:900px;font-family:Manrope,sans-serif;
+      font-size:clamp(52px,6.5vw,92px);font-weight:500;line-height:1.01;letter-spacing:-.065em;
+    }
+    .geo-cta-inner>p{margin:0;max-width:640px;color:#aeb8c3;font-size:15px;line-height:1.7}
+    .geo-cta-links{margin-top:52px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.16)}
+    .geo-cta-links>a{min-width:0;padding:22px 22px 0 0;display:flex;flex-direction:column;gap:13px;color:#fff}
+    .geo-cta-links>a+a{padding-left:24px;border-left:1px solid rgba(255,255,255,.16)}
+    .geo-cta-links>a>span{color:#91a1b2;font-size:10px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+    .geo-cta-links strong{font-family:Manrope,sans-serif;font-size:clamp(18px,2vw,24px);font-weight:500;letter-spacing:-.025em}
+    .geo-cta-links>a:hover strong{color:#a8bfd9}
+    @media(max-width:860px){
+      .people-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .people-head,.projects-head{flex-direction:column;align-items:flex-start;gap:22px}
+      .geo-product-card{gap:32px}
+      .geo-product-card h3{font-size:clamp(28px,4vw,40px)}
+    }
+    @media(max-width:640px){
+      .people-section{padding-bottom:68px}
+      .people-head{margin-bottom:24px}
+      .people-head h3{font-size:32px}
+      .people-grid{grid-template-columns:1fr}
+      .projects{padding-top:68px;padding-bottom:72px}
+      .projects-head{margin-bottom:30px}
+      .projects-head h2{font-size:clamp(40px,10vw,58px)}
+      .geo-product-card,.geo-product-card--reverse{grid-template-columns:1fr;gap:22px;padding:26px 0}
+      .geo-product-card__visual,.geo-product-card--reverse .geo-product-card__visual{grid-column:1;grid-row:1;aspect-ratio:1.3}
+      .geo-product-card__content,.geo-product-card--reverse .geo-product-card__content{grid-column:1;grid-row:2}
+      .geo-product-card__visual img{padding:12px}
+      .geo-product-card__contribution{grid-template-columns:1fr;gap:8px}
+      .geo-product-card h3{margin:16px 0 14px}
+      .geo-cta{padding:68px var(--page) 72px}
+      .geo-cta h2{font-size:clamp(44px,11vw,64px)}
+      .geo-cta-links{grid-template-columns:1fr;margin-top:34px}
+      .geo-cta-links>a,.geo-cta-links>a+a{padding:18px 0;border-left:0;border-bottom:1px solid rgba(255,255,255,.16)}
+    }
+
+    /* Geo team cards follow the compact LowSignal photo-and-name pills. */
+    .people-section .people-grid{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:flex-start;
+      gap:10px;
+      max-width:870px;
+    }
+    .people-section .person{
+      width:max-content;
+      max-width:100%;
+      min-height:90px;
+      padding:8px 18px 8px 8px;
+      display:flex;
+      align-items:center;
+      gap:14px;
+      flex:0 0 auto;
+      border:1px solid #d9dde3;
+      border-radius:999px;
+      background:#f7f8fa;
+      color:var(--ink);
+      transition:border-color .2s ease,background .2s ease,transform .2s ease;
+    }
+    .people-section .person:hover{
+      border-color:#b8c6d7;
+      background:#fff;
+      transform:translateY(-2px);
+    }
+    .people-section .person-photo{
+      width:68px;
+      height:68px;
+      margin:0;
+      flex:0 0 68px;
+      border-radius:50%;
+      overflow:hidden;
+      background:#e7ebef;
+    }
+    .people-section .person-photo img{display:block;width:100%;height:100%;object-fit:cover}
+    .people-section .person h4{
+      margin:0;
+      min-width:0;
+      color:var(--ink);
+      font-size:19px;
+      line-height:1.25;
+      letter-spacing:-.035em;
+    }
+    .people-section .person h4 a{color:var(--ink);text-decoration:none}
+    .people-section .person h4 a:hover{color:var(--blue);text-decoration:underline}
+    .people-section .person h4 a:focus-visible{outline:2px solid var(--blue);outline-offset:4px;border-radius:2px}
+    @media(max-width:640px){
+      .people-section .people-grid{max-width:100%;gap:10px}
+      .people-section .person{min-height:88px;padding:9px 18px 9px 9px;gap:14px}
+      .people-section .person-photo{width:68px;height:68px;flex-basis:68px}
+      .people-section .person h4{font-size:17px}
+    }
+  
+    /* Scroll reveal, matching the LowSignal case study. */
+    .scroll-reveal{
+      opacity:0;
+      transform:translate3d(0,14px,0);
+      transition:opacity .65s cubic-bezier(.2,.7,.2,1),transform .65s cubic-bezier(.2,.7,.2,1);
+      transition-delay:var(--reveal-delay,0ms);
+    }
+    .scroll-reveal.is-visible{opacity:1;transform:translate3d(0,0,0)}
+    @media(prefers-reduced-motion:reduce){
+      .scroll-reveal,.scroll-reveal.is-visible{opacity:1;transform:none;transition:none}
+    }
+  
+  </style>
 </head>
 <body>
 
@@ -1176,7 +1565,7 @@
 
 <main>
 
-  <section class="hero"><div class="hero-inner"><div class="hero-top"><a class="tether-mark" href="https://tether.education/" target="_blank" rel="noopener noreferrer" aria-label="Visitar TetherEd"><img src="/logos/tethered-logo.svg" alt="TetherEd"></a><div class="hero-meta"><span>Trabajo seleccionado / 03</span><span>2024 – 2026</span><span>GovTech / EdTech</span></div></div><div class="hero-layout"><div class="hero-copy"><div class="hero-kicker">Acceso a educación / Partnerships / IA</div><h1>Construyendo infraestructura<span>para mejores decisiones.</span></h1><p class="hero-description">Conecté gobiernos, organizaciones educativas y socios tecnológicos con la infraestructura digital detrás de la elección de colegios, admisión y matrícula, liderando alianzas y expansión de mercado en Latinoamérica, Estados Unidos y Europa.</p><div class="hero-role"><strong>Head of Partnerships</strong><span>TetherEd · SaaS EdTech y GovTech con IA</span><span>2024 – 2026 · Latinoamérica · EE. UU. · Europa</span></div><div class="hero-slogan">Empowering Communities with Seamless Access to Education Options.</div></div><figure class="hero-media"><img src="/images/tether-team-event.jpg" alt="Equipos de TetherEd y Nivel4 en un encuentro educativo" onerror="this.onerror=null;this.src='/tether-team-event.jpg';"><figcaption>Alianzas educativas en acción.</figcaption></figure></div></div></section>
+  <section class="hero"><div class="hero-inner"><div class="hero-top"><a class="tether-mark" href="https://tether.education/" target="_blank" rel="noopener noreferrer" aria-label="Visitar TetherEd"><img src="/logos/tether-logo.svg" alt="Tether Education"></a><div class="hero-meta"><span>Trabajo seleccionado / 03</span><span>2024 – 2026</span><span>GovTech / EdTech</span></div></div><div class="hero-layout"><div class="hero-copy"><div class="hero-kicker">Acceso a educación / Partnerships / IA</div><h1>Construyendo infraestructura<span>para mejores decisiones.</span></h1><p class="hero-description">Conecté gobiernos, organizaciones educativas y socios tecnológicos con la infraestructura digital detrás de la elección de colegios, admisión y matrícula, liderando alianzas y expansión de mercado en Latinoamérica, Estados Unidos y Europa.</p><div class="hero-role"><strong>Head of Partnerships</strong><span>TetherEd · SaaS EdTech y GovTech con IA</span><span>2024 – 2026 · Latinoamérica · EE. UU. · Europa</span></div><div class="hero-slogan">Empowering Communities with Seamless Access to Education Options.</div></div><figure class="hero-media"><img src="/images/tether-team-event.jpg" alt="Equipos de TetherEd y Nivel4 en un encuentro educativo" onerror="this.onerror=null;this.src='/tether-team-event.jpg';"><figcaption>Alianzas educativas en acción.</figcaption></figure></div></div></section>
 <section class="impact" id="impact"><div class="impact-head"><div><div class="section-label">Impacto</div><h2>De abrir puertas a construir alcance.</h2></div><p>Conecté relaciones institucionales, ejecución comercial y señales de producto para convertir oportunidades en adopción, alcance medible y sistemas capaces de escalar.</p></div><div class="impact-grid"><article class="impact-card"><strong>600+</strong><span>Instituciones en el ecosistema TetherEd</span></article><article class="impact-card"><strong>7</strong><span>Mercados entre Latinoamérica, EE. UU. y Europa</span></article><article class="impact-card"><strong>1M+</strong><span>Postulaciones procesadas en 2024</span></article><article class="impact-card"><strong>14+</strong><span>Alianzas estratégicas construidas y activadas</span></article></div><div class="tether-backing"><a href="https://avalanche.vc/" target="_blank" rel="noopener noreferrer" aria-label="Avalanche"><img src="/logos/avalanche-logo.png" alt="Avalanche"></a><p>TetherEd cuenta con el respaldo de Avalanche, firma de inversión privada liderada por Katelyn Donnelly.</p></div></section><nav class="case-nav" aria-label="Secciones del caso"><a href="#impact">Impacto</a><a href="#role">Rol</a><a href="#product">Producto e IA</a><a href="#projects">Proyectos</a><a href="#approach">Enfoque</a></nav>
 <section class="role" id="role"><div class="role-grid"><div class="section-label">Rol</div><div class="role-main"><h2>Conectando mercado, producto y ejecución.</h2><p>Tether Education es una compañía SaaS estadounidense de EdTech y GovTech habilitada por IA, que construye infraestructura digital para la elección de colegios, admisión y matrícula.</p><p>Como Head of Partnerships, lideré la estrategia de alianzas, el desarrollo de negocios y la expansión de mercado en Latinoamérica, Estados Unidos y Europa, trabajando con equipos de producto, tecnología y educación.</p><div class="snapshot"><div class="snapshot-item"><div class="snapshot-label">Empresa</div><div class="snapshot-value">Tether Education</div></div><div class="snapshot-item"><div class="snapshot-label">Rol</div><div class="snapshot-value">Head of Partnerships</div></div><div class="snapshot-item"><div class="snapshot-label">Período</div><div class="snapshot-value">2024 – 2026</div></div><div class="snapshot-item"><div class="snapshot-label">Categoría</div><div class="snapshot-value">GovTech / EdTech</div></div></div><div class="snapshot-focus"><span>Estrategia de alianzas</span><span>Desarrollo de negocios</span><span>Expansión de mercado</span><span>Adopción de producto</span><span>LATAM · EE. UU. · Europa</span></div></div></div></section><section class="people-section" id="people"><div class="people-container"><div class="people"><div class="people-head"><div><div class="section-label">Personas clave</div><h3>Cerca del liderazgo.</h3></div><p>Trabajé de cerca con Christopher Neilson, Founder & CEO, y Zack Tseng, Chief of Staff, conectando alianzas, decisiones de go-to-market y ejecución de producto.</p></div><div class="people-grid"><article class="person"><div class="person-photo"><img src="/images/christopher-neilson.jpg" alt="Christopher Neilson" loading="lazy"></div><h4><a href="https://www.linkedin.com/in/christopher-a-neilson/" target="_blank" rel="noopener noreferrer">Christopher Neilson</a></h4></article><article class="person"><div class="person-photo"><img src="/images/zack-tseng.jpg" alt="Zack Tseng" loading="lazy"></div><h4><a href="https://www.linkedin.com/in/zacharytseng/" target="_blank" rel="noopener noreferrer">Zack Tseng</a></h4></article></div></div></div></section>
 <section class="product" id="product"><div class="product-head"><div><div class="section-label">Infraestructura educativa</div><h2>Mejores decisiones necesitan<span>mejores sistemas.</span></h2></div><p>La elección de un colegio es también un desafío de información. TetherEd conecta exploración, postulación y matrícula en una experiencia digital para instituciones y familias de distintos mercados.</p></div><div class="product-note"><strong>Mi rol</strong><p>Conecté necesidades institucionales, alianzas y ejecución de producto, trabajando con Product y Engineering para llevar oportunidades del mercado a entornos educativos reales.</p></div></section>
