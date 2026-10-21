@@ -34,7 +34,7 @@
       --blue:#1467d8;
       --dark:#05070a;
       --dark-2:#0d1724;
-      --page:clamp(22px,4vw,64px);
+      --page:8vw;
       --max:1520px;
     }
 
@@ -625,6 +625,7 @@
 .field-photo,.field-photo img{min-height:400px}
 }
 @media(max-width:640px){
+:root{--page:20px}
 .story,.value,.field,.journey,.principle{padding:62px var(--page) 70px}
 .story-grid{display:block}
 .story-grid>.section-label{margin-bottom:22px}
@@ -648,6 +649,12 @@
 .experience-period{grid-column:2}
 .principle h2{font-size:clamp(40px,10vw,50px)}
 }
+
+/* Align About page gutters with Home and keep this page focused on the story. */
+.hero-grid{grid-template-columns:minmax(0,1fr)}
+.hero-grid>div{max-width:1080px}
+.hero{padding-left:var(--page);padding-right:var(--page)}
+@media(max-width:640px){:root{--page:20px}}
 </style>
 </head>
 <body>
@@ -673,10 +680,6 @@
 
   <section class="hero">
     <div class="hero-grid">
-      <div class="hero-photo">
-        <img src="/images/profile_felipe.png" alt="Felipe Quiroz" fetchpriority="high">
-      </div>
-
       <div>
         <div class="hero-kicker">Santiago, Chile</div>
         <h1>Felipe Quiroz</h1>
@@ -687,7 +690,7 @@
 
         <div class="hero-meta">
           <div class="hero-roles">
-            <span>Product Manager · GeoVictoria</span>
+            <span>Ex Product Manager · GeoVictoria</span>
             <span>Co-Founder & COO · lowsignal</span>
           </div>
 
@@ -711,13 +714,13 @@
     </div>
   </section>
 
-  <section class="story"><div class="story-grid"><div class="section-label">Mi forma de trabajar</div><div class="story-copy"><h2>Me gusta el tramo complejo: pasar de un problema real a algo que funcione.</h2><p>Me atraen esos momentos en que un equipo sabe que algo debe cambiar, pero todavía no tiene claro cómo. Parto por entender el problema: escucho a clientes, identifico fricciones, pongo a prueba supuestos y alineo a las personas que pueden convertir una idea en realidad.</p><p>Hoy soy Product Manager en GeoVictoria, donde trabajo en productos de Workforce Management para empresas en más de 40 países. También soy Co-Founder &amp; COO de lowsignal, donde ayudo a organizaciones de educación, B2B y B2C a crecer con estrategia, marketing, tecnología y automatización.</p><p>Antes lideré partnerships y expansión de mercado en Tether Education, trabajando entre Latinoamérica, Estados Unidos y Europa. Moverme entre producto, estrategia comercial y operaciones me ha enseñado a mantenerme cerca de quienes hacen el trabajo y acompañar una buena idea hasta su entrega, adopción y resultados.</p><a class="cv-button" href="https://felipequirozp.cl/Felipe_Quiroz_cv_es.pdf" target="_blank" rel="noopener noreferrer">Descargar CV<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10"></path><path d="m8 10 4 4 4-4"></path><path d="M5 19h14"></path></svg></a></div></div></section>
+  <section class="story"><div class="story-grid"><div class="section-label">Mi forma de trabajar</div><div class="story-copy"><h2>Me gusta el tramo complejo: pasar de un problema real a algo que funcione.</h2><p>Me atraen esos momentos en que un equipo sabe que algo debe cambiar, pero todavía no tiene claro cómo. Parto por entender el problema: escucho a clientes, identifico fricciones, pongo a prueba supuestos y alineo a las personas que pueden convertir una idea en realidad.</p><p>Hasta septiembre de 2026 fui Product Manager en GeoVictoria, donde trabajé en productos de Workforce Management para empresas en más de 40 países. También soy Co-Founder &amp; COO de lowsignal, donde ayudo a organizaciones de educación, B2B y B2C a crecer con estrategia, marketing, tecnología y automatización.</p><p>Antes lideré partnerships y expansión de mercado en Tether Education, trabajando entre Latinoamérica, Estados Unidos y Europa. Moverme entre producto, estrategia comercial y operaciones me ha enseñado a mantenerme cerca de quienes hacen el trabajo y acompañar una buena idea hasta su entrega, adopción y resultados.</p><a class="cv-button" href="https://felipequirozp.cl/Felipe_Quiroz_cv_es.pdf" target="_blank" rel="noopener noreferrer">Descargar CV<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10"></path><path d="m8 10 4 4 4-4"></path><path d="M5 19h14"></path></svg></a></div></div></section>
 
   <section class="value"><div class="value-head"><div><div class="section-label">Cómo trabajo</div><h2>Me muevo mejor cuando el camino todavía se está armando.</h2></div><p>Cada equipo enfrenta un desafío distinto. El patrón se repite: encontrar qué está frenando el avance, alinear a las personas en torno a una decisión y construir el camino entre una idea y su impacto.</p></div><div class="value-grid"><article class="value-card"><div class="value-index">01</div><h3>Estrategia de producto</h3><p>Convirtiendo señales de clientes, mercado y operación en prioridades, apuestas y experimentos claros.</p></article><article class="value-card"><div class="value-index">02</div><h3>Go-to-market</h3><p>Conectando posicionamiento, alianzas, adquisición y ejecución comercial con objetivos de crecimiento.</p></article><article class="value-card"><div class="value-index">03</div><h3>Sistemas operativos</h3><p>Creando procesos, ownership y visibilidad para que los equipos ejecuten con consistencia al escalar.</p></article><article class="value-card"><div class="value-index">04</div><h3>Trabajo cross-functional</h3><p>Alineando producto, diseño, ingeniería, ventas y operaciones en torno a decisiones y resultados.</p></article></div></section>
 
   <section class="field"><div class="field-card"><div class="field-copy"><div class="section-label">En terreno</div><h2>Mantenerse cerca<span>del trabajo real.</span></h2><p>Los detalles que importan rara vez aparecen en una presentación. Están en el atajo, en el traspaso y en el momento en que un usuario se frena. Me acerco a equipos y clientes porque ahí empiezan los mejores productos y sistemas operativos.</p></div><div class="field-photo"><img src="/images/building-in-the-field.jpg" alt="Felipe Quiroz trabajando junto a un equipo" loading="lazy"></div></div></section>
 
-  <section class="journey"><div class="journey-head"><div><div class="section-label">Trayectoria</div><h2>Distintos roles. Un hilo común: construir lo que hace avanzar el trabajo.</h2></div><p>Desde operaciones académicas y alianzas en educación hasta product management y construcción de compañías, he trabajado cerca de las personas, los sistemas y las decisiones detrás del crecimiento.</p></div><div class="experience-list"><a class="experience" href="/geovictoria"><div class="experience-num">01</div><div class="experience-main"><strong>GeoVictoria</strong><span>Product Manager · Workforce Management</span></div><div class="experience-period">2026 – Actualidad</div></a><a class="experience" href="/lowsignal"><div class="experience-num">02</div><div class="experience-main"><strong>lowsignal</strong><span>Co-Founder &amp; COO · Growth Systems</span></div><div class="experience-period">2025 – Actualidad</div></a><a class="experience" href="/tethereducation"><div class="experience-num">03</div><div class="experience-main"><strong>Tether Education</strong><span>Head of Partnerships · EdTech &amp; GovTech</span></div><div class="experience-period">2024 – 2026</div></a><a class="experience" href="/usm"><div class="experience-num">04</div><div class="experience-main"><strong>Escuela de Negocios USM</strong><span>Coordinador de Promoción de Admisión</span></div><div class="experience-period">2023 – 2025</div></a><div class="experience"><div class="experience-num">05</div><div class="experience-main"><strong>RECH</strong><span>Coordinador Programa de Matemática · Datos &amp; Operaciones</span></div><div class="experience-period">2019 – 2021</div></div></div></section>
+  <section class="journey"><div class="journey-head"><div><div class="section-label">Trayectoria</div><h2>Distintos roles. Un hilo común: construir lo que hace avanzar el trabajo.</h2></div><p>Desde operaciones académicas y alianzas en educación hasta product management y construcción de compañías, he trabajado cerca de las personas, los sistemas y las decisiones detrás del crecimiento.</p></div><div class="experience-list"><a class="experience" href="/geovictoria"><div class="experience-num">01</div><div class="experience-main"><strong>GeoVictoria</strong><span>Product Manager · Workforce Management</span></div><div class="experience-period">Jun – Sep 2026</div></a><a class="experience" href="/lowsignal"><div class="experience-num">02</div><div class="experience-main"><strong>lowsignal</strong><span>Co-Founder &amp; COO · Growth Systems</span></div><div class="experience-period">2025 – Actualidad</div></a><a class="experience" href="/tethereducation"><div class="experience-num">03</div><div class="experience-main"><strong>Tether Education</strong><span>Head of Partnerships · EdTech &amp; GovTech</span></div><div class="experience-period">2024 – 2026</div></a><a class="experience" href="/usm"><div class="experience-num">04</div><div class="experience-main"><strong>Escuela de Negocios USM</strong><span>Coordinador de Promoción de Admisión</span></div><div class="experience-period">2023 – 2025</div></a></div></section>
 
   <section class="principle"><div class="principle-inner"><div class="section-label">Una idea que siempre vuelve</div><h2>Acercarse al problema.<span>Seguir hasta que algo funcione.</span></h2></div></section>
 
