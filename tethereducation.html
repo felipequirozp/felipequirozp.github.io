@@ -1121,6 +1121,36 @@
 .scroll-reveal{opacity:0;transform:translate3d(0,14px,0);transition:opacity .65s cubic-bezier(.2,.7,.2,1),transform .65s cubic-bezier(.2,.7,.2,1);transition-delay:var(--reveal-delay,0ms)}.scroll-reveal.is-visible{opacity:1;transform:translate3d(0,0,0)}@media(prefers-reduced-motion:reduce){.scroll-reveal,.scroll-reveal.is-visible{opacity:1;transform:none;transition:none}}
 @media(max-width:860px){.hero-layout{grid-template-columns:minmax(0,1fr) minmax(280px,.8fr);gap:32px}.hero h1{font-size:clamp(54px,7vw,78px)}.projects .project-list{grid-template-columns:1fr 1fr}.people-section .people-head{flex-direction:column;align-items:flex-start;gap:20px}}
 @media(max-width:640px){.hero{padding:42px var(--page) 64px}.hero-top{align-items:flex-start;flex-direction:column;margin-bottom:32px;gap:18px}.hero-meta{justify-content:flex-start;gap:7px}.hero-meta span{font-size:9px;padding:0 10px}.hero-layout{grid-template-columns:1fr;gap:26px}.hero-copy{order:1}.hero-media{order:0;border-radius:17px}.hero-media img{aspect-ratio:1.35;object-position:center 43%}.hero-kicker{margin-bottom:15px;font-size:11px}.hero h1{font-size:clamp(46px,12vw,64px)}.hero-description{margin-top:22px;font-size:15px}.hero-role{margin-top:22px;padding-top:18px}.hero-role strong{font-size:18px}.case-nav{top:68px;justify-content:space-between;gap:8px;padding:11px var(--page)}.case-nav a{font-size:9px}.impact{padding-top:70px;padding-bottom:72px}.impact-head,.projects-head,.operating-head,.people-section .people-head{flex-direction:column;align-items:flex-start;gap:18px}.impact-head h2,.role-main h2,.product h2,.projects-head h2,.operating-head h2{font-size:clamp(40px,10vw,58px)}.impact-grid{grid-template-columns:1fr 1fr;gap:10px}.impact-card{min-height:155px;padding:20px;border-radius:17px}.impact-card strong{font-size:clamp(39px,10vw,56px)}.impact-card span{margin-top:14px;font-size:12px}.tether-backing{margin-top:32px;padding-top:18px;gap:15px}.tether-backing>a{width:92px;height:38px}.tether-backing p{font-size:11px}.role{padding-top:70px;padding-bottom:70px}.role-grid{grid-template-columns:1fr;gap:18px}.role-main h2{margin-bottom:22px}.role-main>p{font-size:15px}.snapshot{grid-template-columns:1fr 1fr;margin-top:28px}.snapshot-item{padding:18px 12px}.snapshot-item:nth-child(2){border-right:0}.snapshot-item:nth-child(3),.snapshot-item:nth-child(4){border-top:1px solid var(--line)}.snapshot-focus{gap:7px}.snapshot-focus span{font-size:9px;padding:8px 10px}.people-section{padding-bottom:68px}.people-section .people{padding-top:40px}.people-section .people-head{margin-bottom:22px}.people-section .people-head h3{font-size:31px}.people-section .people-grid{max-width:100%;gap:9px}.people-section .person{min-height:78px;padding:7px 15px 7px 7px;gap:12px}.people-section .person-photo{width:62px;height:62px;flex-basis:62px}.people-section .person h4{font-size:16px}.product{padding:72px var(--page) 78px}.product-head{grid-template-columns:1fr;gap:22px;margin-bottom:30px}.product-note{grid-template-columns:1fr;gap:8px;padding:17px}.product-grid{grid-template-columns:1fr 1fr;gap:9px}.product-item{min-height:230px;padding:17px;border-radius:17px}.product-item h3{margin-top:34px;font-size:21px}.product-item p{font-size:12px}.projects{padding-top:72px;padding-bottom:78px}.projects-head{margin-bottom:30px}.projects .project-list{grid-template-columns:1fr;gap:12px}.projects .project,.projects .project:hover{padding:20px;border-radius:17px;gap:16px}.projects .project-brand-row{min-height:48px;margin-bottom:16px;gap:7px;flex-wrap:wrap}.projects .project-brand{height:40px;min-height:40px;padding:6px 8px}.projects .project-brand img{max-width:105px;max-height:25px}.projects .project h3{font-size:25px}.projects .project-meta{margin:13px 0 16px}.projects .project-meta span{font-size:8px}.operating{padding:72px var(--page) 78px}.operating-head{margin-bottom:30px}.work-list{grid-template-columns:1fr}.work-item:nth-child(odd),.work-item:nth-child(even){padding-left:0;padding-right:0;border-right:0}.work-item strong{font-size:17px}.principle{padding:72px var(--page) 78px}.principle-grid{grid-template-columns:1fr;gap:10px}.principle-item{min-height:auto;padding:20px}.tether-cta{padding:70px var(--page) 76px}.tether-cta h2{font-size:clamp(44px,11vw,64px)}.tether-cta-links{grid-template-columns:1fr;margin-top:34px}.tether-cta-links>a,.tether-cta-links>a+a{padding:17px 0;border-left:0;border-bottom:1px solid rgba(255,255,255,.16)}}
+  
+.people-section .people-grid{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:10px;max-width:870px}
+.people-section .person{width:max-content;max-width:100%;min-height:90px;padding:8px 18px 8px 8px;display:flex;align-items:center;gap:14px;flex:0 0 auto;border:1px solid #d9dde3;border-radius:999px;background:#f7f8fa;color:var(--ink);transition:border-color .2s ease,background .2s ease,transform .2s ease}
+.people-section .person:hover{border-color:#b8c6d7;background:#fff;transform:translateY(-2px)}
+.people-section .person-photo{width:68px;height:68px;margin:0;flex:0 0 68px;border-radius:50%;overflow:hidden;background:#e7ebef}
+.people-section .person-photo img{display:block;width:100%;height:100%;object-fit:cover}
+.people-section .person h4{margin:0;min-width:0;color:var(--ink);font-size:19px;line-height:1.25;letter-spacing:-.035em}
+.people-section .person h4 a{color:var(--ink);text-decoration:none}.people-section .person h4 a:hover{color:var(--blue);text-decoration:underline}
+#projects .project-list{display:block;width:min(var(--max),100%);margin:0 auto;border:0}
+/* Match GeoVictoria's project cards and closing CTA. */
+.geo-product-card{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(34px,6vw,88px);align-items:center;padding:48px 0;border-bottom:1px solid var(--line)}
+.geo-product-card--reverse .geo-product-card__visual{grid-column:2;grid-row:1}.geo-product-card--reverse .geo-product-card__content{grid-column:1;grid-row:1}
+.geo-product-card__visual{min-width:0;overflow:hidden;aspect-ratio:1.45;display:grid;place-items:center;border-radius:20px;background:linear-gradient(135deg,#f6f9fc,#eaf5fb)}
+.geo-product-card__visual img{display:block;width:100%;height:100%;padding:18px;object-fit:cover}
+.geo-product-card__content{min-width:0;display:flex;flex-direction:column;align-items:flex-start}
+.geo-product-card__meta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;color:#748397;font-size:10px;font-weight:700;letter-spacing:.1em;line-height:1.5;text-transform:uppercase}.geo-product-card__meta span:first-child{color:var(--blue)}
+.geo-product-card h3{margin:22px 0 18px;font-family:Manrope,sans-serif;font-size:clamp(32px,3.5vw,52px);font-weight:500;line-height:1.08;letter-spacing:-.055em}
+.geo-product-card__content>p{margin:0;color:#64707e;font-size:14px;line-height:1.75}
+.geo-product-card .project-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.geo-product-card .project-meta span{padding:7px 10px;border:1px solid #dce2e9;border-radius:999px;color:#526172;font-size:9px;font-weight:600}
+.geo-product-card__contribution{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;width:100%;margin-top:24px;padding-top:18px;border-top:1px solid var(--line)}
+.geo-product-card__contribution>span{color:#8492a1;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.geo-product-card__contribution p{margin:0;color:#667382;font-size:12px;line-height:1.65}
+.geo-product-card .project-link{margin-top:20px;padding-bottom:4px;display:inline-flex;align-items:center;gap:9px;border-bottom:1px solid #a9b3bf;color:#17202b;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.geo-product-card .project-link:hover{color:var(--blue);border-color:var(--blue)}.geo-product-card .cta-arrow{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s ease}.geo-product-card .project-link:hover .cta-arrow{transform:translate(2px,-2px)}
+.geo-product-card__visual.tether-studio-visual{padding:34px;grid-template-rows:1fr auto;background:#0d1724}.tether-studio-visual img{width:min(82%,330px);height:auto;max-height:110px;padding:0;object-fit:contain}.tether-studio-visual span{align-self:end;color:#b7c6d7;font-family:Manrope,sans-serif;font-size:clamp(17px,2vw,23px);line-height:1.3;letter-spacing:-.025em;text-align:center}
+.geo-cta{padding:90px var(--page) 104px;background:#0b1117;color:#fff}.geo-cta-inner{width:min(var(--max),100%);margin:0 auto}.geo-cta .section-label{color:#91a1b2}
+.geo-cta h2{margin:18px 0 20px;font-family:Manrope,sans-serif;font-size:clamp(52px,7vw,94px);font-weight:500;line-height:.98;letter-spacing:-.065em}.geo-cta-inner>p{margin:0;max-width:640px;color:#aeb8c3;font-size:15px;line-height:1.7}
+.geo-cta-links{margin-top:52px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.16)}.geo-cta-links>a{min-width:0;padding:22px 22px 0 0;display:flex;flex-direction:column;gap:13px;color:#fff}.geo-cta-links>a+a{padding-left:24px;border-left:1px solid rgba(255,255,255,.16)}
+.geo-cta-links>a>span{color:#91a1b2;font-size:10px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}.geo-cta-links strong{font-family:Manrope,sans-serif;font-size:clamp(18px,2vw,24px);font-weight:500;letter-spacing:-.025em}.geo-cta-links>a:hover strong{color:#a8bfd9}
+@media(max-width:860px){.geo-product-card{gap:32px}.geo-product-card h3{font-size:clamp(28px,4vw,40px)}}
+@media(max-width:640px){.projects{padding-top:68px;padding-bottom:72px}.projects-head{margin-bottom:30px}.projects-head h2{font-size:clamp(40px,10vw,58px)}.geo-product-card,.geo-product-card--reverse{grid-template-columns:1fr;gap:22px;padding:26px 0}.geo-product-card__visual,.geo-product-card--reverse .geo-product-card__visual{grid-column:1;grid-row:1;aspect-ratio:1.3}.geo-product-card__content,.geo-product-card--reverse .geo-product-card__content{grid-column:1;grid-row:2}.geo-product-card__contribution{grid-template-columns:1fr;gap:8px}.geo-product-card h3{margin:16px 0 14px}.geo-cta{padding:68px var(--page) 72px}.geo-cta h2{font-size:clamp(44px,11vw,64px)}.geo-cta-links{grid-template-columns:1fr;margin-top:34px}.geo-cta-links>a,.geo-cta-links>a+a{padding:18px 0;border-left:0;border-bottom:1px solid rgba(255,255,255,.16)}}
   </style>
 </head>
 <body>
@@ -1147,134 +1177,12 @@
   <section class="hero"><div class="hero-inner"><div class="hero-top"><a class="tether-mark" href="https://tether.education/" target="_blank" rel="noopener noreferrer" aria-label="Visit TetherEd"><img src="/logos/tethered-logo.svg" alt="TetherEd"></a><div class="hero-meta"><span>Selected Work / 03</span><span>2024 – 2026</span><span>GovTech / EdTech</span></div></div><div class="hero-layout"><div class="hero-copy"><div class="hero-kicker">Education access / Partnerships / AI</div><h1>Building infrastructure<span>for better choices.</span></h1><p class="hero-description">I connected governments, education organizations and technology partners with the digital infrastructure behind school choice, admissions and enrollment—leading partnerships and market expansion across Latin America, the U.S. and Europe.</p><div class="hero-role"><strong>Head of Partnerships</strong><span>TetherEd · AI-enabled EdTech & GovTech SaaS</span><span>2024 – 2026 · Latin America · U.S. · Europe</span></div><div class="hero-slogan">Empowering Communities with Seamless Access to Education Options.</div></div><figure class="hero-media"><img src="/images/tether-team-event.jpg" alt="TetherEd and Nivel4 teams at an education event" onerror="this.onerror=null;this.src='/tether-team-event.jpg';"><figcaption>Education partnerships in action.</figcaption></figure></div></div></section>
 <section class="impact" id="impact"><div class="impact-head"><div><div class="section-label">Impact</div><h2>From opening doors to building reach.</h2></div><p>I connected institutional relationships, commercial execution and product signals to turn opportunities into adoption, measurable reach and systems that could scale.</p></div><div class="impact-grid"><article class="impact-card"><strong>600+</strong><span>Institutions across the TetherEd ecosystem</span></article><article class="impact-card"><strong>7</strong><span>Markets across Latin America, the U.S. and Europe</span></article><article class="impact-card"><strong>1M+</strong><span>School applications handled in 2024</span></article><article class="impact-card"><strong>14+</strong><span>Strategic partnerships built and activated</span></article></div><div class="tether-backing"><a href="https://avalanche.vc/" target="_blank" rel="noopener noreferrer" aria-label="Avalanche"><img src="/logos/avalanche-logo.png" alt="Avalanche"></a><p>TetherEd is backed by Avalanche, a private investment firm led by Katelyn Donnelly.</p></div></section><nav class="case-nav" aria-label="Case study sections"><a href="#impact">Impact</a><a href="#role">Role</a><a href="#product">Product & AI</a><a href="#projects">Projects</a><a href="#approach">Approach</a></nav>
 <section class="role" id="role"><div class="role-grid"><div class="section-label">Role</div><div class="role-main"><h2>Connecting market, product and execution.</h2><p>Tether Education is a U.S.-based AI-enabled EdTech and GovTech SaaS company building digital infrastructure for school choice, admissions and enrollment.</p><p>As Head of Partnerships, I led partnership strategy, business development and market expansion across Latin America, the U.S. and Europe, working across product, technology and education ecosystems.</p><div class="snapshot"><div class="snapshot-item"><div class="snapshot-label">Company</div><div class="snapshot-value">Tether Education</div></div><div class="snapshot-item"><div class="snapshot-label">Role</div><div class="snapshot-value">Head of Partnerships</div></div><div class="snapshot-item"><div class="snapshot-label">Period</div><div class="snapshot-value">2024 – 2026</div></div><div class="snapshot-item"><div class="snapshot-label">Category</div><div class="snapshot-value">GovTech / EdTech</div></div></div><div class="snapshot-focus"><span>Partnership strategy</span><span>Business development</span><span>Market expansion</span><span>Product adoption</span><span>LATAM · U.S. · Europe</span></div></div></div></section><section class="people-section" id="people"><div class="people-container"><div class="people"><div class="people-head"><div><div class="section-label">Key people</div><h3>Built close to leadership.</h3></div><p>I worked closely with Christopher Neilson, Founder & CEO, and Zack Tseng, Chief of Staff, connecting partnership strategy, go-to-market decisions and product execution.</p></div><div class="people-grid"><article class="person"><div class="person-photo"><img src="/images/christopher-neilson.jpg" alt="Christopher Neilson" loading="lazy"></div><h4><a href="https://www.linkedin.com/in/christopher-a-neilson/" target="_blank" rel="noopener noreferrer">Christopher Neilson</a></h4></article><article class="person"><div class="person-photo"><img src="/images/zack-tseng.jpg" alt="Zack Tseng" loading="lazy"></div><h4><a href="https://www.linkedin.com/in/zacharytseng/" target="_blank" rel="noopener noreferrer">Zack Tseng</a></h4></article></div></div></div></section>
-<section class="product" id="product">
-    <div class="product-head">
-      <div>
-        <div class="section-label">Product & AI</div>
-        <h2>Listen to the market.<span>Build better.</span></h2>
-      </div>
-      <p>I worked with Product and Engineering to translate customer, institution and family needs into product improvements, new digital solutions and AI-enabled initiatives that could scale across education systems.</p>
-    </div>
-
-    <div class="product-note">
-      <strong>Applied AI</strong>
-      <p>The work included AI-powered education initiatives developed with OpenAI and Anthropic, as well as specific projects with Columbia University and SLEP del Pino across 50+ public education institutions.</p>
-    </div>
-
-    <div class="product-grid">
-      <article class="product-item">
-        <div class="product-top"><div class="product-num">01</div><div class="product-icon"><svg viewBox="0 0 24 24"><path d="M5 18 19 6"/><path d="M11 6h8v8"/></svg></div></div>
-        <h3>Market signals</h3>
-        <div class="product-type">Discovery</div>
-        <p>Turn conversations with institutions and families into useful signals for product prioritization and evolution.</p>
-      </article>
-
-      <article class="product-item">
-        <div class="product-top"><div class="product-num">02</div><div class="product-icon"><svg viewBox="0 0 24 24"><path d="M5 7h14"/><path d="M5 12h9"/><path d="M5 17h12"/></svg></div></div>
-        <h3>Product & Engineering</h3>
-        <div class="product-type">Translation</div>
-        <p>Translate commercial and operational requirements into concrete problems technical teams could design, build and validate.</p>
-      </article>
-
-      <article class="product-item">
-        <div class="product-top"><div class="product-num">03</div><div class="product-icon"><svg viewBox="0 0 24 24"><path d="M12 3v6"/><path d="M12 15v6"/><path d="M3 12h6"/><path d="M15 12h6"/><circle cx="12" cy="12" r="3"/></svg></div></div>
-        <h3>Applied AI</h3>
-        <div class="product-type">Innovation</div>
-        <p>Built and deployed AI-powered education initiatives with OpenAI and Anthropic, including conversational assistants, guidance bots and digital tools for students, families and public education systems.</p>
-      </article>
-
-      <article class="product-item">
-        <div class="product-top"><div class="product-num">04</div><div class="product-icon"><svg viewBox="0 0 24 24"><path d="M5 18V9"/><path d="M12 18V5"/><path d="M19 18v-6"/></svg></div></div>
-        <h3>Measurement</h3>
-        <div class="product-type">Learning</div>
-        <p>Design operations and processes to learn from adoption, measure outcomes and iterate with evidence.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="projects" id="projects">
-    <div class="projects-head">
-      <div>
-        <div class="section-label">Selected projects</div>
-        <h2>Product, implementation and transformation at scale.</h2>
-      </div>
-      <p>A selection of initiatives where I connected product, institutions and execution, from education discovery tools to digital transformation and AI adoption in public education.</p>
-    </div>
-
-    <div class="project-list">
-      <article class="project">
-        <div class="project-num">01</div>
-        <div class="project-head-copy">
-          <div class="project-brand-row">
-            <span class="project-brand virtual-explorer"><img src="/logos/virtual-school-explorer-logo.svg" alt="Virtual School Explorer" loading="lazy"></span>
-          </div>
-          <div class="project-type">Product · AI-powered discovery</div>
-          <h3>Virtual School Explorer</h3>
-        </div>
-        <div class="project-body">
-          <p>Education discovery platform with map search, personalized filters, enriched profiles, availability, admission estimates and an AI assistant that helps families explore and compare options.</p>
-          <div class="project-meta"><span>Map search</span><span>Admission probability</span><span>Real-time availability</span><span>AI assistant</span></div>
-          <p class="project-contribution"><strong>My contribution</strong>I connected institution and family needs with product and adoption opportunities, bringing market signals into partnership and development decisions.</p>
-          <a class="project-link" href="/tethered/virtual-school-explorer">View case study <svg viewBox="0 0 16 16" class="case-arrow" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></a>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="project-num">02</div>
-        <div class="project-head-copy">
-          <div class="project-brand-row">
-            <span class="project-brand slep"><img src="/logos/slep-delpino-logo.png" alt="SLEP del Pino" loading="lazy"></span>
-            <span class="project-brand"><img src="/logos/rancagua-cormun-logo.png" alt="CORMUN Rancagua" loading="lazy"></span>
-          </div>
-          <div class="project-type">Public education · Chile · 2024</div>
-          <h3>Digital Transformation of Public Education</h3>
-        </div>
-        <div class="project-body">
-          <p>I led strategic and implementation initiatives with SLEP del Pino and CORMUN Rancagua to digitize admissions processes and expand access to digital application infrastructure.</p>
-          <div class="project-meta"><span>100+ public schools</span><span>35,000+ students</span><span>2 public systems</span></div>
-          <p class="project-contribution"><strong>My contribution</strong>I coordinated public stakeholders, school leadership and internal product teams, translating institutional and operational requirements into scalable implementation strategies.</p>
-          <a class="project-link" href="/tethered/digital-transformation-public-education">View case study <svg viewBox="0 0 16 16" class="case-arrow" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></a>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="project-num">03</div>
-        <div class="project-head-copy">
-          <div class="project-brand-row">
-            <span class="project-brand"><img src="/logos/openai-logo.png" alt="OpenAI" loading="lazy"></span>
-            <span class="project-brand"><img src="/logos/columbia-university-1-logo.png" onerror="this.onerror=null;this.src='/logos/columbia-university-logo.png';" alt="Columbia University"></span>
-            <span class="project-brand slep"><img src="/logos/slep-delpino-logo.png" alt="SLEP del Pino" loading="lazy"></span>
-          </div>
-          <div class="project-type">AI · Public education · 2025</div>
-          <h3>AI-powered Education Transformation</h3>
-        </div>
-        <div class="project-body">
-          <p>An international initiative developed with Columbia University, OpenAI, Tether Education and SLEP del Pino to accelerate responsible and equitable AI adoption in Chilean public schools.</p>
-          <div class="project-meta"><span>50+ institutions</span><span>OpenAI</span><span>Columbia University</span><span>AI adoption at scale</span></div>
-          <p class="project-contribution"><strong>My contribution</strong>I led implementation across participating schools, coordinating execution, stakeholders and the connection between research, institutional needs and AI-enabled solutions.</p>
-          <a class="project-link" href="/tethered/ai-powered-education-transformation">View case study <svg viewBox="0 0 16 16" class="case-arrow" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></a>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="project-num">04</div>
-        <div class="project-head-copy">
-          <div class="project-brand-row">
-            <span class="project-brand"><img src="/logos/tether-studio-logo.png" alt="Tether Studio" loading="lazy"></span>
-          </div>
-          <div class="project-type">AI product · School operations</div>
-          <h3>Tether Studio</h3>
-        </div>
-        <div class="project-body">
-          <p>AI-powered school photography platform that centralizes portraits, events, yearbooks, consent, family portal and school administration in one digital flow.</p>
-          <div class="project-meta"><span>−82% operating hours</span><span>6 weeks to operate</span><span>1 platform · 5 stages</span><span>100% auditable consent</span></div>
-          <p class="project-contribution"><strong>My contribution</strong>I worked on product building and positioning, connecting school operational needs with a simpler digital experience for teams and families.</p>
-          <a class="project-link" href="/tethered/tether-studio">View case study <svg viewBox="0 0 16 16" class="case-arrow" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></a>
-        </div>
-      </article>
-    </div>
-  </section>
-
+<section class="product" id="product"><div class="product-head"><div><div class="section-label">Education infrastructure</div><h2>Better choices need<span>better systems.</span></h2></div><p>School choice is an information problem as much as an admissions process. TetherEd connects discovery, applications and enrollment in a digital journey used by institutions and families across multiple markets.</p></div><div class="product-note"><strong>My role</strong><p>I connected institutional needs, partnerships and product execution—working with Product and Engineering to bring solutions from market conversations into real education environments.</p></div></section>
+<section class="projects" id="projects"><div class="projects-head"><div><div class="section-label">Selected projects</div><h2>From school discovery to systems-wide change.</h2></div><p>Four initiatives across product, public education and applied AI—built around the decisions families and institutions make every day.</p></div><div class="project-list">
+<article class="geo-product-card"><div class="geo-product-card__visual"><img src="/images/tether-edtech-scale.jpg" alt="TetherEd education technology and school choice ecosystem" loading="lazy" decoding="async"></div><div class="geo-product-card__content"><div class="geo-product-card__meta"><span>01 / 04</span><span>Product · School choice</span></div><h3>Virtual School Explorer</h3><p>A guided way for families to discover, compare and understand school options, with map search, availability, admission estimates and an AI assistant.</p><div class="project-meta"><span>20K+ families</span><span>School discovery</span><span>AI guidance</span></div><div class="geo-product-card__contribution"><span>My contribution</span><p>I connected institutional needs and family feedback with product opportunities, partnerships and adoption.</p></div><a class="project-link" href="/tethered/virtual-school-explorer.html">View case <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></a></div></article>
+<article class="geo-product-card geo-product-card--reverse"><div class="geo-product-card__visual"><img src="/images/tether-slep-del-pino.jpg" alt="Public education implementation with SLEP del Pino" loading="lazy" decoding="async"></div><div class="geo-product-card__content"><div class="geo-product-card__meta"><span>02 / 04</span><span>Public education · Chile</span></div><h3>Digital Transformation of Public Education</h3><p>Admissions and enrollment processes brought online with public education institutions, giving schools and families clearer access to a complex process.</p><div class="project-meta"><span>100+ public schools</span><span>35K+ students</span><span>2 public systems</span></div><div class="geo-product-card__contribution"><span>My contribution</span><p>I coordinated public stakeholders, school leaders and product teams to move institutional requirements into scalable implementation.</p></div><a class="project-link" href="/tethered/digital-transformation-public-education.html">View case <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></a></div></article>
+<article class="geo-product-card"><div class="geo-product-card__visual"><img src="/images/ai-education-school-implementation.jpg" alt="AI implementation in public education" loading="lazy" decoding="async"></div><div class="geo-product-card__content"><div class="geo-product-card__meta"><span>03 / 04</span><span>Applied AI · Public education</span></div><h3>AI-powered Education Transformation</h3><p>An initiative with Columbia University, OpenAI, Tether Education and SLEP del Pino to support responsible AI adoption in Chilean public schools.</p><div class="project-meta"><span>50+ institutions</span><span>OpenAI</span><span>Columbia University</span></div><div class="geo-product-card__contribution"><span>My contribution</span><p>I led implementation across participating schools, connecting research, institutional needs and AI-enabled solutions.</p></div><a class="project-link" href="/tethered/ai-powered-education-transformation.html">View case <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></a></div></article>
+<article class="geo-product-card geo-product-card--reverse"><div class="geo-product-card__visual tether-studio-visual"><img src="/logos/tether-studio-logo.png" alt="Tether Studio" loading="lazy" decoding="async"><span>School photography operations, in one connected workflow.</span></div><div class="geo-product-card__content"><div class="geo-product-card__meta"><span>04 / 04</span><span>Product · AI operations</span></div><h3>Tether Studio</h3><p>A school photography platform that brings portraits, events, yearbooks, consent and family access into one digital workflow.</p><div class="project-meta"><span>−82% operational hours</span><span>6 weeks to operate</span><span>Auditable consent</span></div><div class="geo-product-card__contribution"><span>My contribution</span><p>I worked on product development and positioning, translating school operations into a simpler experience for teams and families.</p></div><a class="project-link" href="/tethered/tether-studio.html">View case <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></a></div></article></div></section>
   <section class="operating" id="approach">
     <div class="operating-head">
       <div>
@@ -1294,8 +1202,8 @@
     </div>
   </section>
 
-  <section class="tether-cta"><div class="tether-cta-inner"><div class="section-label">TetherEd</div><h2>Keep exploring.</h2><p>Learn more about Tether Education, explore more of my work, or get in touch.</p><div class="tether-cta-links"><a href="https://tether.education/" target="_blank" rel="noopener noreferrer"><span>The company</span><strong>Visit Tether Education <svg viewBox="0 0 16 16" class="case-arrow" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></strong></a><a href="/#work"><span>Selected work</span><strong>Explore my work <svg viewBox="0 0 16 16" class="case-arrow" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></strong></a><a href="https://calendly.com/felipe-lowsignal/30min" target="_blank" rel="noopener noreferrer"><span>Let’s talk</span><strong>Book a conversation <svg viewBox="0 0 16 16" class="case-arrow" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></strong></a></div></div></section>
-<section class="project-nav">
+  <section class="geo-cta"><div class="geo-cta-inner"><div class="section-label">Tether Education</div><h2>Keep exploring.</h2><p>Learn more about Tether Education, explore more of my work, or get in touch.</p><div class="geo-cta-links"><a href="https://tether.education/" target="_blank" rel="noopener noreferrer"><span>The company</span><strong>Visit Tether Education <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></strong></a><a href="/#work"><span>Selected work</span><strong>Explore my work <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></strong></a><a href="https://calendly.com/felipe-lowsignal/30min" target="_blank" rel="noopener noreferrer"><span>Let’s talk</span><strong>Book a conversation <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></strong></a></div></div></section>
+  <section class="project-nav">
     <div class="project-nav-inner">
       <a href="/lowsignal">
         <div class="project-nav-label">Previous project</div>
