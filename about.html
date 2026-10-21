@@ -658,6 +658,12 @@
 .hero-grid>div{max-width:1080px}
 .hero{padding-left:var(--page);padding-right:var(--page)}
 @media(max-width:640px){:root{--page:20px}}
+
+/* Keep the field feature compact while preserving its photo. */
+.field-card{height:480px;min-height:0}
+.field-photo,.field-photo img{height:480px;min-height:0}
+@media(max-width:1050px){.field-card{height:auto;min-height:0}.field-copy{min-height:380px}.field-photo,.field-photo img{height:380px;min-height:0}}
+@media(max-width:640px){.field-copy{min-height:0}.field-photo,.field-photo img{height:280px;min-height:0}}
 </style>
 </head>
 <body>
