@@ -344,100 +344,69 @@
 
     /* PEOPLE */
     .people{
-      margin-top:72px;
-      padding-top:56px;
+      margin-top:76px;
+      padding-top:54px;
       border-top:1px solid var(--line);
     }
     .people-head{
-      margin-bottom:32px;
       display:flex;
       justify-content:space-between;
-      gap:40px;
       align-items:end;
+      gap:40px;
+      margin-bottom:28px;
     }
     .people-head h3{
       margin:12px 0 0;
       font-family:Manrope,sans-serif;
       font-size:38px;
-      letter-spacing:-.045em;
       font-weight:500;
+      letter-spacing:-.045em;
     }
     .people-head p{
       margin:0;
-      max-width:560px;
+      max-width:580px;
       color:var(--muted);
       font-size:14px;
       line-height:1.7;
     }
     .people-grid{
       display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:22px;
-    }
-    .person{
-      padding:26px;
-      border-radius:22px;
-      border:1px solid var(--line);
-      background:#fff;
-    }
-    .person-top{
-      display:flex;
-      align-items:center;
+      grid-template-columns:repeat(3,minmax(0,1fr));
       gap:16px;
     }
+    .person{
+      min-width:0;
+      padding:22px;
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:20px;
+      background:#0b1117;
+      color:#fff;
+    }
     .person-photo{
-      width:66px;
-      height:66px;
+      width:62px;
+      height:62px;
+      border-radius:50%;
       overflow:hidden;
-      border-radius:50%;
-      background:#edf2f6;
-      flex:0 0 auto;
+      background:#111923;
     }
-    .person-photo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
-    .person-kicker{
-      margin-bottom:5px;
-      color:#7a8da4;
-      font-size:9px;
-      font-weight:700;
-      letter-spacing:.09em;
-      text-transform:uppercase;
-    }
+    .person-photo img{width:100%;height:100%;object-fit:cover}
     .person h4{
-      margin:0;
-      font-family:Manrope,sans-serif;
-      font-size:22px;
-      letter-spacing:-.04em;
-      font-weight:500;
-    }
-    .person-role{
-      margin-top:6px;
-      color:#6c7886;
-      font-size:11px;
-      line-height:1.45;
-    }
-    .person-context{
       margin:22px 0 0;
-      color:#5a6776;
-      font-size:13px;
-      line-height:1.7;
+      font-family:Manrope,sans-serif;
+      font-size:20px;
+      font-weight:500;
+      letter-spacing:-.035em;
     }
-    .person-link{
-      margin-top:20px;
-      width:38px;
-      height:38px;
-      display:grid;
-      place-items:center;
-      border:1px solid #d8dee5;
-      border-radius:50%;
-      color:#111820;
-      transition:.2s ease;
+    .person h4 a{
+      color:inherit;
+      text-decoration:none;
     }
-    .person-link:hover{background:#0b1117;color:#fff;border-color:#0b1117}
-    .person-link svg{width:16px;height:16px;fill:currentColor}
+    .person h4 a:hover{color:#a8bfd9}
+    .person h4 a:focus-visible{
+      outline:2px solid #8ec4ff;
+      outline-offset:4px;
+      border-radius:2px;
+    }
 
     /* PRODUCT SYSTEM */
     .product{
@@ -1215,58 +1184,17 @@
     }
 
   
-    /* GeoVictoria people cards: same photo + name pattern as LowSignal. */
-    .people-grid{
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:16px;
-    }
-    .person{
-      min-width:0;
-      padding:22px;
-      border:1px solid var(--line);
-      border-radius:20px;
-      background:#f8fafc;
-      transition:border-color .2s ease,transform .2s ease,background .2s ease;
-    }
-    .person:hover{
-      transform:translateY(-3px);
-      border-color:#c8d8e8;
-      background:#fff;
-    }
-    .person-photo{
-      width:62px;
-      height:62px;
-      overflow:hidden;
-      border-radius:50%;
-      background:#edf2f6;
-    }
-    .person-photo img{width:100%;height:100%;object-fit:cover}
-    .person h4{
-      margin:22px 0 0;
-      font-family:Manrope,sans-serif;
-      font-size:20px;
-      font-weight:500;
-      letter-spacing:-.035em;
-    }
-    .person h4 a{
-      color:inherit;
-      text-decoration:none;
-      transition:color .2s ease;
-    }
-    .person h4 a:hover{color:var(--blue)}
-    .person h4 a:focus-visible{
-      outline:2px solid var(--blue);
-      outline-offset:4px;
-      border-radius:2px;
-    }
+    /* Keep the LowSignal card treatment responsive on GeoVictoria. */
     @media(max-width:860px){
       .people-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .people-head{gap:28px}
     }
     @media(max-width:560px){
       .people-grid{grid-template-columns:1fr}
+      .people-head{margin-bottom:24px}
+      .people-head h3{font-size:32px}
     }
-
-  </style>
+</style>
 </head>
 <body>
 
@@ -1367,9 +1295,9 @@
           <div class="people-head">
             <div>
               <div class="section-label">Personas clave</div>
-              <h3>Construido de forma transversal.</h3>
+              <h3>Las personas detrás del trabajo.</h3>
             </div>
-            <p>Tres relaciones de trabajo que muestran cómo opero dentro de GeoVictoria: cerca de la estrategia de la compañía, el producto y la salida al mercado.</p>
+            <p>Los buenos productos se construyen entre áreas. Estos son los líderes con quienes trabajé en los equipos de compañía, producto y comercial de GeoVictoria.</p>
           </div>
 
           <div class="people-grid">
