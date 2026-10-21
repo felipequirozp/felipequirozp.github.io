@@ -1256,7 +1256,9 @@
 
 .low-cta{padding:clamp(76px,9vw,128px) var(--page);background:var(--dark);color:#fff}
 .low-cta-inner{width:min(1200px,100%);margin:0 auto}
-.low-cta .section-label{color:#8ec4ff}
+.low-cta .section-label{color:#8ec4ff;text-transform:none;letter-spacing:0}
+.low-cta-links .cta-arrow{display:inline-block;width:15px;height:15px;margin-left:6px;vertical-align:-2px;fill:none;stroke:#8ec4ff;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s ease}
+.low-cta-links>a:hover .cta-arrow{transform:translate(2px,-2px)}
 .low-cta h2{margin:18px 0 14px;max-width:900px;font-family:Manrope,sans-serif;font-size:clamp(52px,6.5vw,92px);font-weight:500;line-height:1.01;letter-spacing:-.065em}
 .low-cta-inner>p{margin:0;max-width:640px;color:#aeb8c3;font-size:15px;line-height:1.7}
 .low-cta-links{margin-top:52px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.16)}
@@ -1551,18 +1553,18 @@
 
   <section class="low-cta">
     <div class="low-cta-inner">
-      <div class="section-label">LOWSIGNAL</div>
+      <div class="section-label">lowsignal</div>
       <h2>Sigue explorando.</h2>
       <p>Conoce lo que hacemos, mira nuestros proyectos y conversemos sobre lo que viene.</p>
       <div class="low-cta-links">
         <a href="https://lowsignal.cl/" target="_blank" rel="noopener noreferrer">
-          <span>La compañía</span><strong>Visita lowsignal.cl <span aria-hidden="true">↗</span></strong>
+          <span>La compañía</span><strong>Visita lowsignal.cl <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></strong>
         </a>
         <a href="https://lowsignal.cl/casos" target="_blank" rel="noopener noreferrer">
-          <span>Trabajo real</span><strong>Explora los casos <span aria-hidden="true">↗</span></strong>
+          <span>Trabajo real</span><strong>Explora los casos <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></strong>
         </a>
         <a href="https://calendly.com/felipe-lowsignal/30min" target="_blank" rel="noopener noreferrer">
-          <span>Hablemos</span><strong>Agenda una conversación <span aria-hidden="true">↗</span></strong>
+          <span>Hablemos</span><strong>Agenda una conversación <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></strong>
         </a>
       </div>
     </div>
