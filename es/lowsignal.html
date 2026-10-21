@@ -1156,6 +1156,173 @@
  .principle-item{padding-top:18px}
 }
 </style>
+<style id="lowsignal-visual-refresh">
+:root{
+  --page:8vw;--max:1360px;--blue:#6b55e8;--dark:#10162f;--dark-2:#191f3b;
+  --soft:#f2efff;--soft-2:#e8e2ff;--line:#e3e0ec;--ink:#151a2e;--muted:#606a7e;
+}
+body{color:var(--ink)}
+.section-label{color:#6b55e8}
+.hero{padding:48px var(--page) 0;background:var(--dark);color:#fff;overflow:hidden}
+.hero-top{margin-bottom:30px}
+.low-mark{min-height:58px;min-width:190px;padding:10px 18px;border-radius:8px;background:#fff;border-color:rgba(255,255,255,.2)}
+.low-mark img{height:25px;max-width:170px}
+.hero-meta{gap:8px}
+.hero-meta span{border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#d9dced}
+.hero-kicker,.hero .section-label{color:#a9f2e3}
+.hero-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:5vw;align-items:stretch}
+.hero-copy{align-self:center;padding:18px 0 50px}
+.hero h1{font-size:clamp(56px,6.5vw,92px);line-height:.98;letter-spacing:-.075em;color:#fff}
+.hero h1 span{color:#a9f2e3}
+.hero-description{max-width:620px;color:#c9cde0;font-size:16px;line-height:1.75}
+.hero-role{color:#d9dced}
+.hero-role strong{color:#fff}
+.hero-site{color:#a9f2e3;border-color:rgba(169,242,227,.45)}
+.hero-media{min-height:440px;align-self:stretch;position:relative;display:flex;align-items:stretch;margin:0}
+.hero-media img{width:100%;height:100%;min-height:440px;max-height:530px;object-fit:cover;object-position:center 35%;border-radius:8px 8px 0 0}
+.hero-media figcaption{position:absolute;left:16px;bottom:16px;padding:10px 13px;border:1px solid rgba(255,255,255,.16);border-radius:5px;background:rgba(16,22,47,.86);color:#fff;font-size:11px;backdrop-filter:blur(10px)}
+.impact{padding:42px var(--page) 50px;background:#fff}
+.impact-head{width:min(var(--max),100%);margin:0 auto 26px;align-items:end;gap:5vw}
+.impact-head h2{font-size:clamp(32px,3.6vw,48px);line-height:1.04;letter-spacing:-.055em}
+.impact-head p{max-width:470px;font-size:14px;line-height:1.7}
+.impact-grid{width:min(var(--max),100%);margin:auto;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.impact-card{min-height:116px;padding:20px 23px;background:#fff;border:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px}
+.impact-card strong{font-size:38px;color:#6b55e8}
+.impact-card span{font-size:11px;line-height:1.45}
+.company{padding:78px var(--page) 84px;background:#fff}
+.company-grid{width:min(var(--max),100%);grid-template-columns:.34fr 1fr;gap:6vw}
+.company-main h2{font-size:clamp(38px,4.5vw,62px);line-height:1.02}
+.company-main>p{max-width:900px;font-size:15px;line-height:1.78}
+.operating{padding:84px var(--page) 92px;background:var(--dark);color:#fff}
+.operating-inner{width:min(var(--max),100%)}
+.operating .section-label{color:#a9f2e3}
+.operating h2{font-size:clamp(42px,4.8vw,64px)}
+.operating h2 span{color:#a9f2e3}
+.operating-head{gap:6vw}
+.operating-head p{color:#c9cde0;line-height:1.75}
+.work-list{margin-top:36px;gap:0;border-color:rgba(255,255,255,.2)}
+.work-item{min-height:92px;padding:18px 20px;border-color:rgba(255,255,255,.2)}
+.work-num{color:#a9f2e3}
+.work-item strong{font-size:14px;line-height:1.45}
+.people{margin:64px calc(var(--page) * -1) 0;padding:52px var(--page) 58px;border:0;background:var(--soft);color:var(--ink)}
+.people .section-label{color:#6b55e8}
+.people-head{width:min(var(--max),100%);margin:0 auto 30px;gap:5vw}
+.people-head h3{font-size:clamp(30px,3.6vw,44px);letter-spacing:-.05em}
+.people-head p{color:var(--muted);line-height:1.7}
+.people-grid{width:min(var(--max),100%);margin:auto;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.person{padding:14px;background:#fff;border:1px solid #e5e1f0;border-radius:7px}
+.person-photo{border-radius:5px;overflow:hidden;background:#e6e1f3}
+.person-photo img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.person h4{margin:14px 0 5px;font-size:15px}
+.person-role{font-size:10px;color:#6b55e8}
+.person p{font-size:11px;line-height:1.55;color:var(--muted)}
+.icon-link{background:#f2efff}
+.solutions{padding:82px var(--page) 88px;background:#fff}
+.solutions-head,.system-head,.cases-head{width:min(var(--max),100%);margin:0 auto 32px;gap:5vw;align-items:end}
+.solutions-head h2,.system-head h2,.cases-head h2{font-size:clamp(38px,4.4vw,58px);line-height:1.02;letter-spacing:-.06em}
+.solutions-head p,.system-head p,.cases-head p{font-size:14px;line-height:1.7}
+.solution-grid{width:min(var(--max),100%);margin:auto;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.solution-card{padding:22px;background:#f7f5ff;border:1px solid #e7e2f5;border-radius:7px;min-height:210px}
+.solution-num{color:#6b55e8}
+.solution-card h3{font-size:20px}
+.solution-card p{font-size:12px;line-height:1.65}
+.system{padding:82px var(--page) 88px;background:var(--soft)}
+.system-steps{width:min(var(--max),100%);margin:auto;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.system-step{padding:24px;background:#fff;border:1px solid #e5e1f0;border-radius:7px;min-height:155px}
+.system-step small{color:#6b55e8}
+.system-step strong{font-size:20px}
+.system-step span{font-size:12px;line-height:1.6}
+.field{padding:0 var(--page) 84px;background:var(--soft)}
+.field-card{width:min(var(--max),100%);margin:auto;grid-template-columns:1fr 1fr;background:var(--dark);border-radius:8px;overflow:hidden}
+.field-copy{min-height:400px;padding:54px 4vw;color:#fff}
+.field-copy .section-label{color:#a9f2e3}
+.field-copy h2{font-size:clamp(38px,4.5vw,58px)}
+.field-copy h2 span{color:#a9f2e3}
+.field-copy p{color:#c9cde0;font-size:14px;line-height:1.75}
+.field-meta span{color:#d9dced;border-color:rgba(255,255,255,.22)}
+.field-photo{height:auto;min-height:400px}
+.field-photo img{width:100%;height:100%;min-height:400px;object-fit:cover}
+.testimonial{padding:72px var(--page);background:#e8e2ff}
+.testimonial-inner{width:min(1000px,100%)}
+.testimonial .section-label{color:#6b55e8}
+.testimonial blockquote{font-size:clamp(26px,3.2vw,42px);line-height:1.2;letter-spacing:-.045em;color:#171632}
+.testimonial cite{color:#5f5876}
+.cases{padding:82px var(--page) 90px;background:#f2efff}
+.cases-head{margin-bottom:30px}
+.case-list{width:min(var(--max),100%);margin:0 auto;border:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.case-row{position:relative;min-width:0;min-height:100%;padding:0;display:flex;flex-direction:column;align-items:stretch;gap:0;overflow:hidden;background:#fff;border:1px solid #e4e0ef;border-radius:8px;transition:transform .22s ease,box-shadow .22s ease}
+.case-row:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(27,23,67,.12)}
+.case-row>img{display:block;width:100%;height:220px;object-fit:cover;background:#e5e0ef}
+.case-num{position:absolute;top:15px;left:15px;z-index:1;width:34px;height:34px;display:grid;place-items:center;border:0;border-radius:50%;background:#fff;color:#6b55e8;font-size:10px}
+.case-main{padding:19px 20px 0}
+.case-main small{font-size:9px;line-height:1.45;color:#6b55e8;letter-spacing:.08em}
+.case-main h3{margin:12px 0 9px;font:600 21px/1.16 Manrope,sans-serif;letter-spacing:-.04em;color:#151a2e}
+.case-copy{padding:0 20px;margin:0;color:#606a7e;font-size:12px;line-height:1.65}
+.case-link{margin-top:auto;padding:18px 20px 20px;color:#6b55e8;font-size:11px}
+.principle{padding:82px var(--page);background:#10162f}
+.principle-inner{width:min(var(--max),100%)}
+.principle h2{font-size:clamp(38px,4.6vw,60px)}
+.principle h2 span{color:#a9f2e3}
+.principle-grid{gap:14px;margin-top:34px}
+.principle-item{padding:24px;background:#191f3b;border:1px solid rgba(255,255,255,.16);border-radius:7px}
+.principle-item small{color:#a9f2e3}
+.principle-item strong{font-size:19px}
+.project-nav{padding:34px var(--page);background:#fff}
+.project-nav-inner{width:min(var(--max),100%)}
+.project-nav a{padding:16px 20px;border-radius:6px}
+@media(max-width:1100px){
+ .people-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .impact-card{padding-inline:16px}
+}
+@media(max-width:900px){
+ :root{--page:6vw}
+ .hero-layout{grid-template-columns:1fr .9fr;gap:24px}
+ .hero-media,.hero-media img{min-height:370px}
+ .impact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .people-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .case-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .solution-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:700px){
+ :root{--page:20px}
+ .hero{padding-top:28px}
+ .hero-top{align-items:flex-start;flex-direction:column;margin-bottom:24px}
+ .hero-meta{justify-content:flex-start}
+ .hero-layout{grid-template-columns:1fr;gap:0}
+ .hero-copy{padding:34px 0 30px}
+ .hero h1{font-size:clamp(48px,12vw,68px)}
+ .hero-description{font-size:14px}
+ .hero-media,.hero-media img{min-height:0;height:280px;max-height:none}
+ .hero-media img{border-radius:6px 6px 0 0}
+ .impact,.company,.operating,.solutions,.system,.testimonial,.cases,.principle{padding-top:62px;padding-bottom:68px}
+ .impact-head,.solutions-head,.system-head,.cases-head,.people-head{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+ .impact-head h2,.company-main h2,.operating h2,.solutions-head h2,.system-head h2,.cases-head h2,.principle h2{font-size:38px}
+ .impact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .impact-card{min-height:94px;padding:14px 12px;gap:9px}
+ .impact-card strong{font-size:30px}
+ .impact-card span{font-size:10px}
+ .company-grid{grid-template-columns:1fr;gap:16px}
+ .work-list{grid-template-columns:1fr}
+ .work-item{min-height:76px;padding:15px 10px}
+ .people{margin-top:48px;padding:38px 20px 44px}
+ .people-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .person{padding:10px}
+ .person p{font-size:10px}
+ .solution-grid,.system-steps{grid-template-columns:1fr}
+ .solution-card{min-height:0}
+ .field{padding:0 20px 62px}
+ .field-card{grid-template-columns:1fr}
+ .field-copy{min-height:0;padding:38px 24px}
+ .field-copy h2{font-size:38px}
+ .field-photo,.field-photo img{height:260px;min-height:260px}
+ .testimonial{padding-left:20px;padding-right:20px}
+ .case-list{grid-template-columns:1fr;gap:14px}
+ .case-row>img{height:220px}
+ .case-main h3{font-size:20px}
+ .project-nav-inner{grid-template-columns:1fr}
+ .project-nav a:last-child{text-align:left;border-left:0;border-top:1px solid var(--line);padding-left:20px}
+}
+</style>
 </head>
 <body>
 
@@ -1400,33 +1567,19 @@
 
     <div class="case-list">
       <a class="case-row" href="https://lowsignal.cl/casos/gets" target="_blank" rel="noopener noreferrer">
-        <div class="case-num">01</div>
-        <div class="case-main">
-          <small>GETS Educación · Sistema de Growth · Contenido · Performance · Web</small>
-          <h3>Fortaleciendo el crecimiento digital de GETS Educación.</h3>
-        </div>
-        <p class="case-copy">Contenido, campañas y ejecución digital continua para fortalecer consistencia, presencia y resultados.</p>
-        <span class="case-link">Ver caso ↗</span>
+        <img src="https://lowsignal.cl/assets/gets-ig.jpg" alt="Contenido y campañas digitales para GETS Educación" loading="lazy">
+        <div class="case-num">01</div><div class="case-main"><small>GETS Educación · Growth · Contenido · Performance</small><h3>Fortaleciendo el crecimiento digital de GETS Educación.</h3></div>
+        <p class="case-copy">Contenido, campañas y ejecución digital continua para fortalecer consistencia, presencia y resultados.</p><span class="case-link">Ver caso ↗</span>
       </a>
-
       <a class="case-row" href="https://lowsignal.cl/casos/fcct" target="_blank" rel="noopener noreferrer">
-        <div class="case-num">02</div>
-        <div class="case-main">
-          <small>Fundación Crecer con Todos · Experiencia Digital · Plataforma Web</small>
-          <h3>Una plataforma diseñada para amplificar su impacto.</h3>
-        </div>
-        <p class="case-copy">Rediseñamos la experiencia digital para facilitar el acceso a recursos educativos y comunicar el impacto con mayor claridad.</p>
-        <span class="case-link">Ver caso ↗</span>
+        <img src="https://lowsignal.cl/assets/crecer-ninos.png" alt="Experiencia educativa digital de Fundación Crecer con Todos" loading="lazy">
+        <div class="case-num">02</div><div class="case-main"><small>Fundación Crecer con Todos · Experiencia digital</small><h3>Una plataforma diseñada para amplificar su impacto.</h3></div>
+        <p class="case-copy">Rediseñamos la experiencia digital para facilitar el acceso a recursos educativos y comunicar el impacto con mayor claridad.</p><span class="case-link">Ver caso ↗</span>
       </a>
-
       <a class="case-row" href="https://lowsignal.cl/casos/dulce-reino" target="_blank" rel="noopener noreferrer">
-        <div class="case-num">03</div>
-        <div class="case-main">
-          <small>Dulce Reino · Marca · Contenido · Estrategia Digital</small>
-          <h3>Construyendo una marca que gana en cada detalle.</h3>
-        </div>
-        <p class="case-copy">Una presencia digital coherente que combina contenido, identidad y estrategia para fortalecer la marca y sostener el crecimiento en el tiempo.</p>
-        <span class="case-link">Ver caso ↗</span>
+        <img src="https://lowsignal.cl/assets/dulce-mesa.jpg" alt="Contenido visual y marca para Dulce Reino" loading="lazy">
+        <div class="case-num">03</div><div class="case-main"><small>Dulce Reino · Marca · Contenido · Estrategia digital</small><h3>Construyendo una marca que gana en cada detalle.</h3></div>
+        <p class="case-copy">Una presencia digital coherente que combina contenido, identidad y estrategia para fortalecer la marca y sostener el crecimiento en el tiempo.</p><span class="case-link">Ver caso ↗</span>
       </a>
     </div>
   </section>
