@@ -1505,6 +1505,42 @@
       .people .people-grid{grid-template-columns:minmax(0,1fr);gap:10px}
       .people .person{width:fit-content;max-width:100%}
     }
+  
+    /* Match the reference: generous portrait, name, and even gaps between content-fit pills */
+    .people .people-grid{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:flex-start;
+      gap:12px;
+      max-width:1000px;
+    }
+    .people .person{
+      width:max-content;
+      max-width:100%;
+      min-height:110px;
+      padding:10px 22px 10px 10px;
+      flex:0 0 auto;
+      gap:18px;
+    }
+    .people .person-photo{
+      width:84px;
+      height:84px;
+      flex-basis:84px;
+    }
+    .people .person h4{font-size:24px}
+    @media(max-width:640px){
+      .people .people-grid{max-width:100%;gap:10px}
+      .people .person{
+        width:max-content;
+        max-width:100%;
+        min-height:100px;
+        padding:9px 18px 9px 9px;
+        gap:14px;
+      }
+      .people .person-photo{width:78px;height:78px;flex-basis:78px}
+      .people .person h4{font-size:21px}
+    }
   </style>
 </head>
 <body>
