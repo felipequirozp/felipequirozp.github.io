@@ -1206,7 +1206,7 @@
 @media(max-width:860px){.case-list{grid-template-columns:1fr}.case-row:first-child{grid-template-columns:minmax(0,1fr) minmax(0,.85fr)}}
 @media(max-width:640px){.people-grid{grid-template-columns:1fr}.case-list{grid-template-columns:1fr;gap:34px}.case-row:first-child{grid-column:auto;grid-template-columns:1fr;grid-template-areas:"image" "num" "main" "copy" "link";row-gap:12px;padding-bottom:28px}.case-row:first-child>img{height:auto;aspect-ratio:1.35}.case-row:nth-child(n+2)>img{aspect-ratio:1.5}.case-main h3,.case-row:nth-child(n+2) .case-main h3{font-size:23px}.case-row:first-child .case-link{margin-top:0}.solution-card{padding:22px 10px}.system-step:not(:last-child){border-right:0}.system-step{min-height:145px}.system-step strong{margin-top:24px}}
 
-.case-row:last-child{grid-column:3/span 2}
+.case-row:last-child{grid-column:1/-1;width:calc(50% - 15px);justify-self:center}
 @media(max-width:860px){.case-row:last-child{grid-column:auto;width:100%;justify-self:stretch}}
 </style>
 </head>
