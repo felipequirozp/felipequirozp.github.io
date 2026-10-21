@@ -1556,7 +1556,13 @@
       /* Align the visible logo artwork with the content margin. */
     .tether-mark img{transform:translateX(-7%)}
       .geo-product-card__visual.tether-studio-visual{display:grid;grid-template-rows:minmax(0,1fr) auto;aspect-ratio:.9;overflow:hidden;padding:0;border:1px solid #dce4eb;border-radius:28px;background:#fff}.geo-product-card__visual.tether-studio-visual img{display:block;width:100%;height:100%;max-height:none;padding:0;object-fit:cover;object-position:center top;border-radius:22px 22px 0 0}.geo-product-card__visual.tether-studio-visual span{display:block;align-self:end;margin:0;padding:18px 24px 20px;border-top:1px solid #e2e7ec;background:#fff;color:#738091;font-family:Inter,sans-serif;font-size:clamp(13px,1vw,16px);line-height:1.5;text-align:left}
-  </style>
+  
+    /* Match the open photo and simple caption used on the lowsignal page. */
+    .hero-media{margin:0;min-width:0;overflow:visible;border:0;border-radius:0;background:transparent}
+    .hero-media img{display:block;width:100%;height:clamp(360px,42vw,540px);object-fit:cover;object-position:center 42%;border-radius:3px}
+    .hero-media figcaption{margin:9px 0 0;padding:0;border:0;background:transparent;color:#747d89;font-size:10px;line-height:1.5}
+    @media(max-width:640px){.hero-media img{height:300px}}
+</style>
 </head>
 <body>
 
