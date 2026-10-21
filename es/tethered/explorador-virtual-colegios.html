@@ -101,10 +101,9 @@
     .hero h1 span{display:block;color:var(--blue-soft)}
     .hero-bottom{
       margin-top:52px;padding-top:28px;border-top:1px solid var(--line);
-      display:grid;grid-template-columns:minmax(0,1.08fr) minmax(280px,.48fr);
-      gap:clamp(48px,8vw,120px);
+      display:grid;grid-template-columns:minmax(0,1fr);
     }
-    .hero-description{margin:0;max-width:850px;color:var(--muted);font-size:17px;line-height:1.76}
+    .hero-description{margin:0;max-width:1050px;color:var(--muted);font-size:17px;line-height:1.76}
     .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
     .hero-btn{
       display:inline-flex;align-items:center;justify-content:center;
@@ -113,11 +112,6 @@
       border:1px solid #d8dee5;background:#fff;
     }
     .hero-btn.primary{background:#0b1117;color:#fff;border-color:#0b1117}
-    .hero-role strong{
-      display:block;font-family:Manrope,sans-serif;font-size:22px;font-weight:500;letter-spacing:-.035em;
-    }
-    .hero-role span{display:block;margin-top:7px;color:#74808d;font-size:12px;line-height:1.5}
-
     .impact{padding:112px var(--page) 122px;background:var(--soft)}
     .impact-head{
       width:min(var(--max),100%);margin:0 auto 54px;
@@ -414,7 +408,7 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-top">
-        <a class="explorer-mark" href="/tethereducation" aria-label="Volver a TetherEducation">
+        <a class="explorer-mark" href="/es/tethereducation" aria-label="Volver a TetherEd">
           <img src="/logos/virtual-school-explorer-logo.svg" alt="Virtual School Explorer">
         </a>
 
@@ -436,16 +430,11 @@
           </p>
 
           <div class="hero-actions">
-            <a class="hero-btn primary" href="https://explorador.com/en" target="_blank" rel="noopener noreferrer">Visitar sitio ↗</a>
+            <a class="hero-btn primary" href="https://explorador.com/" target="_blank" rel="noopener noreferrer">Visitar sitio ↗</a>
             <a class="hero-btn" href="#video">Ver el Explorer en acción ↓</a>
           </div>
         </div>
 
-        <div class="hero-role">
-          <strong>TetherEducation</strong>
-          <span>Head of Partnerships</span>
-          <span>Discovery · Orientación · Adopción</span>
-        </div>
       </div>
     </div>
   </section>
