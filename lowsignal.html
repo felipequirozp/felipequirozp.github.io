@@ -1208,6 +1208,25 @@
 @media(max-width:860px){.case-list{grid-template-columns:1fr}.case-row:first-child{grid-template-columns:minmax(0,1fr) minmax(0,.85fr)}}
 @media(max-width:640px){.people-grid{grid-template-columns:1fr}.case-list{grid-template-columns:1fr;gap:34px}.case-row:first-child{grid-column:auto;grid-template-columns:1fr;grid-template-areas:"image" "num" "main" "copy" "link";row-gap:12px;padding-bottom:28px}.case-row:first-child>img{height:auto;aspect-ratio:1.35}.case-row:nth-child(n+2)>img{aspect-ratio:1.5}.case-main h3,.case-row:nth-child(n+2) .case-main h3{font-size:23px}.case-row:first-child .case-link{margin-top:0}.solution-card{padding:22px 10px}.system-step:not(:last-child){border-right:0}.system-step{min-height:145px}.system-step strong{margin-top:24px}}
 
+
+.low-cta{padding:clamp(76px,9vw,128px) var(--page);background:var(--dark);color:#fff}
+.low-cta-inner{width:min(1200px,100%);margin:0 auto}
+.low-cta .section-label{color:#8ec4ff}
+.low-cta h2{margin:18px 0 14px;max-width:900px;font-family:Manrope,sans-serif;font-size:clamp(52px,6.5vw,92px);font-weight:500;line-height:1.01;letter-spacing:-.065em}
+.low-cta-inner>p{margin:0;max-width:640px;color:#aeb8c3;font-size:15px;line-height:1.7}
+.low-cta-links{margin-top:52px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.16)}
+.low-cta-links>a{min-width:0;padding:22px 22px 0 0;display:flex;flex-direction:column;gap:13px;color:#fff}
+.low-cta-links>a+a{padding-left:24px;border-left:1px solid rgba(255,255,255,.16)}
+.low-cta-links>a>span{color:#91a1b2;font-size:10px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+.low-cta-links strong{font-family:Manrope,sans-serif;font-size:clamp(18px,2vw,24px);font-weight:500;letter-spacing:-.025em}
+.low-cta-links strong span{margin-left:6px;color:#8ec4ff;font-family:Inter,sans-serif}
+.low-cta-links>a:hover strong{color:#a8bfd9}
+@media(max-width:640px){
+ .low-cta{padding:68px var(--page) 72px}
+ .low-cta h2{font-size:clamp(44px,11vw,64px)}
+ .low-cta-links{grid-template-columns:1fr;margin-top:34px}
+ .low-cta-links>a,.low-cta-links>a+a{padding:18px 0;border-left:0;border-bottom:1px solid rgba(255,255,255,.16)}
+}
 </style>
 </head>
 <body>
@@ -1484,27 +1503,6 @@
     </div>
   </section>
 
-  <section class="principle">
-    <div class="principle-inner">
-      <div class="section-label">Working Principles</div>
-      <h2>System first.<span>Then, scale.</span></h2>
-
-      <div class="principle-grid">
-        <article class="principle-item">
-          <small>01 / Operating Principle</small>
-          <strong>Build for clarity.</strong>
-          <p>A system should make ownership, decisions and execution easier to see.</p>
-        </article>
-
-        <article class="principle-item">
-          <small>02 / Growth Principle</small>
-          <strong>Less noise. More growth.</strong>
-          <p>Focus on the few things that create leverage, learning and compounding value.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <section class="project-nav">
     <div class="project-nav-inner">
       <a href="/geovictoria">
@@ -1515,6 +1513,25 @@
         <div class="project-nav-label">Next project</div>
         <strong>TetherEd</strong>
       </a>
+    </div>
+  </section>
+
+  <section class="low-cta">
+    <div class="low-cta-inner">
+      <div class="section-label">LOWSIGNAL</div>
+      <h2>Keep exploring.</h2>
+      <p>See what we build, explore our work and talk about what comes next.</p>
+      <div class="low-cta-links">
+        <a href="https://lowsignal.cl/" target="_blank" rel="noopener noreferrer">
+          <span>The company</span><strong>Visit lowsignal.cl <span aria-hidden="true">↗</span></strong>
+        </a>
+        <a href="https://lowsignal.cl/casos" target="_blank" rel="noopener noreferrer">
+          <span>Selected work</span><strong>Explore our cases <span aria-hidden="true">↗</span></strong>
+        </a>
+        <a href="https://calendly.com/felipe-lowsignal/30min" target="_blank" rel="noopener noreferrer">
+          <span>Let’s talk</span><strong>Book a conversation <span aria-hidden="true">↗</span></strong>
+        </a>
+      </div>
     </div>
   </section>
 
