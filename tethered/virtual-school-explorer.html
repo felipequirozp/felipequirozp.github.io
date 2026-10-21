@@ -383,6 +383,144 @@
       .footer-grid{grid-template-columns:1fr}
       .footer-bottom{flex-direction:column}
     }
+  
+
+    /* Match the current Tether case-study system. */
+    :root{--page:8vw;--max:1360px;--ink:#151a2c;--muted:#535d6c;--line:#dfe3e9;--soft:#f5f6f8;--blue:#2845db}
+    .hero{padding:58px var(--page) 54px;background:#fff}
+    .hero-inner{width:min(var(--max),100%);margin:0 auto}
+    .hero-top{margin-bottom:44px;align-items:center}
+    .explorer-mark{min-height:52px;padding:0;border:0;border-radius:0;background:transparent}
+    .explorer-mark img{height:38px;max-width:220px;object-fit:contain}
+    .hero-meta{gap:8px}
+    .hero-meta span{min-height:28px;padding:0 10px;border-radius:999px;background:#f7f8fa;font-size:10px}
+    .hero-layout{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(340px,.9fr);align-items:center;gap:clamp(42px,6vw,88px)}
+    .hero-copy{min-width:0}
+    .hero-kicker{margin-bottom:20px;font-size:10px;letter-spacing:.11em;text-transform:uppercase}
+    .hero h1{max-width:650px;font-family:Manrope,sans-serif;font-size:clamp(50px,5.7vw,78px);font-weight:500;letter-spacing:-.045em;line-height:1.04}
+    .hero h1 span{display:block;color:#273253}
+    .hero-description{margin:22px 0 0;max-width:620px;font-size:15px;line-height:1.78}
+    .hero-actions{gap:10px;margin-top:22px}
+    .hero-btn{min-height:42px;padding:0 15px;border-radius:999px;font-size:9px}
+    .hero-btn .cta-arrow{width:13px;height:13px;margin-left:5px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+    .hero-role{margin-top:24px;padding-top:15px;border-top:1px solid var(--line)}
+    .hero-role strong{display:block;font-family:Inter,system-ui,sans-serif;font-size:13px;font-weight:600;letter-spacing:0}
+    .hero-role span{display:inline-block;margin:6px 12px 0 0;color:#74808d;font-size:10px;line-height:1.5}
+    .hero-media{margin:0;min-width:0;aspect-ratio:16/10;overflow:hidden;background:#10151c;border-radius:3px}
+    .hero-media video{display:block;width:100%;height:100%;object-fit:contain}
+    .impact{display:flex;flex-direction:column;padding:0 var(--page) 76px;background:#fff}
+    .impact-grid{order:-1;width:min(var(--max),100%);margin:0 auto;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);gap:0}
+    .impact-card{min-height:0;padding:8px 20px;border:0;border-right:1px solid var(--line);border-radius:0;background:transparent}
+    .impact-card:first-child{padding-left:0}.impact-card:last-child{border-right:0}
+    .impact-card strong{font-family:Manrope,sans-serif;font-size:clamp(30px,3.8vw,48px);font-weight:500;letter-spacing:-.06em}
+    .impact-card span{margin-top:5px;max-width:190px;font-size:10px;line-height:1.5}
+    .impact-head{width:min(var(--max),100%);margin:56px auto 0;align-items:start}
+    .section-label{color:var(--blue);font-size:9px;letter-spacing:.12em}
+    .impact-head h2,.role-main h2,.product-head h2,.school h2,.partnerships h2,.learning h2{font-family:Manrope,sans-serif;font-size:clamp(38px,3.8vw,52px);font-weight:500;letter-spacing:-.05em;line-height:1.04}
+    .impact-head p,.role-main>p,.product-head>p,.school-head p,.partnerships-head p,.learning-item p{font-size:14px;line-height:1.8}
+    .case-nav{position:sticky;top:76px;z-index:900;justify-content:flex-start;gap:30px;padding:14px var(--page);background:rgba(255,255,255,.96);border-block:1px solid var(--line);backdrop-filter:blur(14px)}
+    .case-nav a{color:var(--blue);font-size:10px;font-weight:600;white-space:nowrap}
+    .case-nav a:hover{text-decoration:underline;text-underline-offset:4px}
+    #impact,#role,#product,#school,#partnerships,#learning{scroll-margin-top:145px}
+    .role,.school,.partnerships,.learning{padding:84px var(--page) 92px}
+    .role-grid,.school-head,.partnerships-head,.learning-inner{width:min(var(--max),100%);margin-left:auto;margin-right:auto}
+    .role-grid{grid-template-columns:minmax(130px,.28fr) minmax(0,1.25fr);gap:clamp(40px,7vw,96px)}
+    .role-main h2{max-width:700px}
+    .role-main>p{max-width:740px}
+    .snapshot{margin-top:30px}
+    .snapshot-item{padding:18px 14px}
+    .snapshot-item:first-child{padding-left:0}
+    .snapshot-focus{gap:0}
+    .snapshot-focus span{padding:3px 11px 3px 0;border:0;border-radius:0;background:none;font-size:10px}
+    .snapshot-focus span+span:before{content:"·";margin-right:11px;color:#9aa2ac}
+    .product{padding:78px var(--page);background:#f5f6f8;color:var(--ink)}
+    .product-head,.school-head,.partnerships-head{width:min(var(--max),100%);margin:0 auto 30px;align-items:start}
+    .product-head h2,.school h2,.partnerships h2{max-width:720px}
+    .product-head h2 span,.school h2 span,.partnerships h2 span{color:#687287}
+    .product-head>p,.product-note p{color:#586272}
+    .product-note{width:min(var(--max),100%);margin:0 auto 0;padding:18px 0 0;border:0;border-top:1px solid var(--line);border-radius:0;background:transparent}
+    .product-note strong{color:var(--blue)}
+    .product-grid{width:min(var(--max),100%);margin:30px auto 0;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .product-item{min-height:190px;padding:24px 20px;border:0;border-right:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none}
+    .product-item:first-child{padding-left:0}.product-item:last-child{border-right:0}
+    .product-item h3{font-family:Manrope,sans-serif;font-size:22px;font-weight:500;letter-spacing:-.035em}
+    .product-item p{font-size:12px;line-height:1.7;color:#586272}
+    .product-num,.product-type{color:var(--blue)}
+    .school{background:#fff}
+    .profile-grid{width:min(var(--max),100%);margin:0 auto}
+    .profile-item{min-height:190px;padding:24px 24px 28px 0}
+    .profile-item+.profile-item{padding-left:24px}
+    .profile-item strong{margin-top:18px;font-size:22px}
+    .profile-item p{font-size:12px}
+    .partnerships{background:#f5f6f8}
+    .partnerships-head{margin-bottom:30px}
+    .work-list{width:min(var(--max),100%);margin:0 auto;border-top:1px solid var(--line)}
+    .work-item{min-height:108px;padding:22px 24px 22px 0;border-bottom:1px solid var(--line);background:transparent}
+    .work-item:nth-child(odd),.work-item:nth-child(even){padding-left:0;padding-right:24px;border-right:0}
+    .work-item strong{font-family:Manrope,sans-serif;font-size:16px;line-height:1.45;letter-spacing:-.025em}
+    .work-num{color:var(--blue);font-size:12px}
+    .learning{background:#fff}
+    .learning-inner{text-align:left}
+    .learning h2{max-width:760px;margin:14px 0 0}
+    .learning h2 span{display:block;color:#687287}
+    .learning-grid{max-width:100%;margin:34px 0 0}
+    .learning-item{padding:24px 30px;min-height:160px}
+    .learning-item:first-child{padding-left:0}
+    .learning-item strong{font-size:22px}
+    .project-nav{padding:56px var(--page);background:#f5f6f8}
+    .footer{padding-top:64px}
+    .footer-grid{width:min(var(--max),100%)}
+    @media(max-width:860px){
+      .hero-layout{grid-template-columns:minmax(0,1fr) minmax(300px,.9fr);gap:30px}
+      .hero h1{font-size:clamp(46px,6vw,68px)}
+      .impact-head,.school-head,.partnerships-head{flex-direction:row;align-items:start}
+      .work-item{min-height:96px}
+    }
+    @media(max-width:640px){
+      :root{--page:20px}
+      .hero{padding-top:38px;padding-bottom:38px}
+      .hero-top{margin-bottom:30px;align-items:flex-start}
+      .explorer-mark img{height:34px}
+      .hero-meta{gap:6px}
+      .hero-meta span{min-height:26px;padding:0 8px;font-size:8px}
+      .hero-layout{grid-template-columns:1fr;gap:24px}
+      .hero-media{order:-1;aspect-ratio:16/10}
+      .hero h1{font-size:clamp(44px,12vw,60px)}
+      .hero-description{margin-top:16px;font-size:14px}
+      .hero-role span{display:block;margin-right:0}
+      .impact{padding-bottom:56px}
+      .impact-grid{grid-template-columns:1fr 1fr;padding:10px 0}
+      .impact-card{padding:14px 10px;border-right:0;border-bottom:1px solid var(--line)}
+      .impact-card:nth-child(odd){padding-left:0;border-right:1px solid var(--line)}
+      .impact-card:nth-child(even){padding-right:0}
+      .impact-card:nth-last-child(-n+2){border-bottom:0}
+      .impact-card strong{font-size:36px}
+      .impact-card span{max-width:150px}
+      .impact-head{margin-top:40px;flex-direction:column}
+      .case-nav{top:68px;gap:22px;overflow-x:auto;justify-content:flex-start}
+      .role,.school,.partnerships,.learning,.product{padding-top:62px;padding-bottom:66px}
+      .role-grid,.product-head,.school-head,.partnerships-head{grid-template-columns:1fr;gap:18px}
+      .snapshot{grid-template-columns:1fr 1fr}
+      .snapshot-item{padding:14px 10px}
+      .snapshot-item:nth-child(2){border-right:0}
+      .snapshot-focus{gap:2px}
+      .product-grid{grid-template-columns:1fr 1fr}
+      .product-item{min-height:160px;padding:18px 12px}
+      .product-item:nth-child(odd){padding-left:0}
+      .product-item:nth-child(even){border-right:0}
+      .product-item:nth-last-child(-n+2){border-bottom:0}
+      .profile-grid{grid-template-columns:1fr}
+      .profile-item,.profile-item+.profile-item{min-height:0;padding:20px 0;border-left:0;border-bottom:1px solid var(--line)}
+      .work-list{grid-template-columns:1fr}
+      .work-item,.work-item:nth-child(odd),.work-item:nth-child(even){min-height:0;padding:18px 0;border-right:0}
+      .learning-inner{text-align:left}
+      .learning-grid{grid-template-columns:1fr}
+      .learning-item,.learning-item:first-child{padding:20px 0;border-right:0;border-bottom:1px solid var(--line)}
+      .project-nav{padding-top:42px;padding-bottom:42px}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:28px}
+      .footer-bottom{flex-direction:column}
+    }
+
   </style>
 </head>
 
@@ -411,35 +549,35 @@
         <a class="explorer-mark" href="/tethereducation" aria-label="Back to TetherEd">
           <img src="/logos/virtual-school-explorer-logo.svg" alt="Virtual School Explorer">
         </a>
-
         <div class="hero-meta">
-          <span>Case study / 01</span>
-          <span>2024</span>
-          <span>EdTech · AI · Discovery</span>
+          <span>Case study / 01</span><span>2024</span><span>EdTech · AI · Discovery</span>
         </div>
       </div>
-
-      <div class="hero-kicker">Discovery / AI / Partnerships</div>
-
-      <h1>Virtual School<span>Explorer.</span></h1>
-
-      <div class="hero-bottom">
-        <div>
-          <p class="hero-description">
-            An AI-powered education discovery platform helping families search, compare and better understand their options through maps, personalized filters, digital school profiles and guidance tools.
-          </p>
-
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <div class="hero-kicker">Discovery / AI / Partnerships</div>
+          <h1>Virtual School<span>Explorer.</span></h1>
+          <p class="hero-description">An AI-powered education discovery platform helping families search, compare and better understand their options through maps, personalized filters, digital school profiles and guidance tools.</p>
           <div class="hero-actions">
-            <a class="hero-btn primary" href="https://explorador.com/en" target="_blank" rel="noopener noreferrer">Visit site ↗</a>
-            <a class="hero-btn" href="#video">See the Explorer in action ↓</a>
+            <a class="hero-btn primary" href="https://explorador.com/en" target="_blank" rel="noopener noreferrer">Visit site <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7"/></svg></a>
+            <a class="hero-btn" href="#product">Explore the platform <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7"/></svg></a>
+          </div>
+          <div class="hero-role">
+            <strong>Head of Partnerships</strong>
+            <span>TetherEd · AI-enabled EdTech &amp; GovTech</span>
+            <span>Latin America · U.S. · Europe</span>
           </div>
         </div>
-
+        <figure class="hero-media" id="video" aria-label="Virtual School Explorer product demo">
+          <video autoplay loop muted playsinline preload="metadata">
+            <source src="/videos/virtual-school-explorer.mp4" type="video/mp4">
+          </video>
+        </figure>
       </div>
     </div>
   </section>
 
-  <section class="impact">
+  <section class="impact" id="impact">
     <div class="impact-head">
       <div>
         <div class="section-label">01 / Impact</div>
@@ -456,7 +594,11 @@
     </div>
   </section>
 
-  <section class="role">
+  <nav class="case-nav" aria-label="Case study navigation">
+    <a href="#impact">Impact</a><a href="#role">My role</a><a href="#product">Product</a><a href="#school">School experience</a><a href="#partnerships">Partnerships</a><a href="#learning">Learning</a>
+  </nav>
+
+  <section class="role" id="role">
     <div class="role-grid">
       <div class="section-label">02 / My role</div>
 
@@ -497,7 +639,7 @@
     </div>
   </section>
 
-  <section class="product">
+  <section class="product" id="product">
     <div class="product-head">
       <div>
         <div class="section-label">03 / Product &amp; AI</div>
@@ -542,7 +684,7 @@
     </div>
   </section>
 
-  <section class="school">
+  <section class="school" id="school">
     <div class="school-head">
       <div>
         <div class="section-label">04 / School experience</div>
@@ -573,7 +715,7 @@
     </div>
   </section>
 
-  <section class="partnerships">
+  <section class="partnerships" id="partnerships">
     <div class="partnerships-head">
       <div>
         <div class="section-label">05 / Partnerships</div>
@@ -592,31 +734,9 @@
     </div>
   </section>
 
-  <section class="demo" id="video">
-    <div class="demo-inner">
-      <div class="demo-copy">
-        <div class="section-label">06 / The Explorer in action</div>
-        <h2>Search, compare and decide<span>in one experience.</span></h2>
-        <p>A look at the product and how we aimed to simplify the process of discovering, comparing and understanding educational options.</p>
-
-        <div class="demo-meta">
-          <span>Map search</span>
-          <span>AI assistant</span>
-          <span>Personalized guidance</span>
-        </div>
-      </div>
-
-      <div class="demo-media">
-        <video autoplay loop muted playsinline preload="auto">
-          <source src="/videos/virtual-school-explorer.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-  </section>
-
-  <section class="learning">
+  <section class="learning" id="learning">
     <div class="learning-inner">
-      <div class="section-label">07 / Learning</div>
+      <div class="section-label">06 / Learning</div>
 
       <h2>A strong solution needs<span>a clear path to adoption.</span></h2>
 
@@ -676,7 +796,8 @@
 
     <div class="footer-col">
       <strong>Contact</strong>
-      <a href="mailto:felipe@lowsignal.cl">felipe@lowsignal.cl</a>
+      <a href="mailto:felipe@lowsignal.cl">Email</a>
+      <a href="https://calendly.com/felipe-lowsignal/30min" target="_blank" rel="noopener noreferrer">Calendly</a>
     </div>
   </div>
 
