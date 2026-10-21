@@ -1157,6 +1157,23 @@
     .work-item:nth-child(odd),.work-item:nth-child(even){padding-left:0;padding-right:24px;border-right:0}
     .work-item strong{font-size:14px;line-height:1.55}
     .work-num{color:var(--blue);font-size:12px;font-weight:600;letter-spacing:.05em}
+    .operating-head>div .section-label{font-size:10px}
+    .operating-head p{font-size:16px;line-height:1.75}
+    .work-item{grid-template-columns:48px minmax(0,1fr);gap:12px;min-height:126px;padding:26px 36px 26px 0;align-items:start}
+    .work-item:nth-child(odd){border-right:1px solid var(--line)}
+    .work-item:nth-child(even){padding-left:36px;padding-right:0}
+    .work-item strong{font-size:18px;line-height:1.45;letter-spacing:-.025em}
+    .work-num{font-size:13px}
+    @media(max-width:860px){
+      .operating-head p{font-size:15px}
+      .work-item strong{font-size:16px}
+      .work-item{min-height:116px;padding-top:22px;padding-bottom:22px}
+    }
+    @media(max-width:640px){
+      .operating-head p{font-size:15px}
+      .work-item,.work-item:nth-child(odd),.work-item:nth-child(even){min-height:0;padding:19px 0;border-right:0}
+      .work-item strong{font-size:16px;line-height:1.5}
+    }
     @media(max-width:860px){
       .hero-layout{grid-template-columns:1fr 0.9fr;gap:36px}
       .hero h1{font-size:clamp(48px,6vw,68px)}
@@ -1419,10 +1436,10 @@
   <section class="operating" id="approach">
     <div class="operating-head">
       <div>
-        <div class="section-label">Operating system</div>
+        <div class="section-label">How I work</div>
         <h2>From problem to adoption.</h2>
       </div>
-      <p>I treat product as a cycle: understand the operation, reduce uncertainty, coordinate cross-functional execution, test with customers and turn learning into a solution that can scale from pilot through launch and adoption.</p>
+      <p>I turn complex operating challenges into products: starting with customer discovery, testing ideas in real environments and carrying what works through launch and adoption.</p>
     </div>
 
     <div class="work-list">
@@ -1431,7 +1448,7 @@
       <div class="work-item"><div class="work-num">03</div><strong>MVPs, prototypes and AI experiments</strong></div>
       <div class="work-item"><div class="work-num">04</div><strong>Pilots in real operating contexts</strong></div>
       <div class="work-item"><div class="work-num">05</div><strong>Feedback, metrics and continuous learning</strong></div>
-      <div class="work-item"><div class="work-num">06</div><strong>Cross-functional execution across Engineering, Design, Sales, Customer Success, Operations and Support</strong></div>
+      <div class="work-item"><div class="work-num">06</div><strong>Cross-functional execution across product, engineering, design, sales, customer success and operations</strong></div>
     </div>
   </section>
 
