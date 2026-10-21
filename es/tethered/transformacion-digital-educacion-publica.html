@@ -524,7 +524,8 @@
     .work-item strong{font-family:Manrope,sans-serif;font-size:15px;line-height:1.45;letter-spacing:-.02em}
     .work-num{color:var(--blue);font-size:11px}
     .field{background:#f5f6f8;color:var(--ink)}
-    .field-inner{grid-template-columns:minmax(0,1fr) minmax(340px,.92fr);gap:clamp(36px,6vw,84px);align-items:center}
+    .field-inner{grid-template-columns:minmax(0,1fr) minmax(0,.92fr);gap:clamp(36px,6vw,84px);align-items:center;min-width:0;border-radius:0;overflow:visible;background:transparent;box-shadow:none}
+    .field-inner>*{min-width:0}
     .field-copy{padding:0}
     .field h2{margin:14px 0 24px;max-width:640px}
     .field-copy>p{margin:0;max-width:610px}
