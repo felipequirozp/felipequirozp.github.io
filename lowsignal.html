@@ -1191,6 +1191,21 @@
  .impact,.company,.operating,.solutions,.system,.testimonial,.cases,.principle{padding-top:68px;padding-bottom:72px}
  .field{padding-bottom:68px}
 }
+
+/* Editorial rhythm: larger work imagery, fewer repeated card frames. */
+.people-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 34px}.person{padding:24px 0;background:transparent;border:0;border-top:1px solid var(--line);border-radius:0}.person-photo{width:78px;height:78px;margin-bottom:18px}.person h4{margin:0}.person p{margin-top:12px}
+.solution-grid{gap:0;border-top:1px solid var(--line)}.solution-card{min-height:0;padding:26px 22px;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0}.solution-icon{background:transparent;border-radius:0;color:var(--blue)}.solution-card h3{margin-top:32px;font-size:25px}
+.system-steps{gap:0;border-top:1px solid var(--line)}.system-step{min-height:180px;padding:24px;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0}.system-step:not(:last-child){border-right:1px solid var(--line)}.system-step strong{margin-top:36px}
+.principle-grid{gap:34px}.principle-item{padding:22px 0;background:transparent;border:0;border-top:1px solid rgba(255,255,255,.2);border-radius:0}
+.case-list{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:42px 30px;border:0}.case-row{display:flex;flex-direction:column;align-items:stretch;gap:0;min-width:0;padding:0;border:0}.case-row:hover{padding:0;background:transparent;transform:translateY(-2px)}
+.case-row:first-child{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);grid-template-areas:"image num" "image main" "image copy" "image link";column-gap:clamp(28px,5vw,70px);row-gap:12px;align-items:start;padding:0 0 38px;border-bottom:1px solid var(--line)}
+.case-row:first-child>img{grid-area:image;width:100%;height:420px;aspect-ratio:auto;object-fit:cover;border-radius:0}.case-row:first-child .case-num{grid-area:num;padding:0}.case-row:first-child .case-main{grid-area:main}.case-row:first-child .case-copy{grid-area:copy;margin:0}.case-row:first-child .case-link{grid-area:link;justify-self:start;align-self:start}
+.case-row:nth-child(n+2) .case-num{display:none}.case-row:nth-child(n+2)>img{width:100%;height:auto;aspect-ratio:1.45;object-fit:cover;border-radius:0}.case-row:nth-child(n+2) .case-main{margin-top:17px}.case-main h3{font-size:clamp(24px,2.5vw,34px)}.case-row:nth-child(n+2) .case-main h3{font-size:clamp(21px,2.2vw,28px)}
+.case-link{align-self:flex-start;margin-top:14px;padding:0;border:0;border-radius:0;color:var(--blue);font-size:10px}.case-row:hover .case-link{background:transparent;color:var(--blue);border:0}.field-card{border-radius:8px}
+@media(max-width:1000px){.people-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.case-row:first-child{grid-template-columns:minmax(0,1fr) minmax(0,.85fr);column-gap:28px}.case-row:first-child>img{height:350px}}
+@media(max-width:860px){.case-list{grid-template-columns:1fr}.case-row:first-child{grid-template-columns:minmax(0,1fr) minmax(0,.85fr)}}
+@media(max-width:640px){.people-grid{grid-template-columns:1fr}.case-list{grid-template-columns:1fr;gap:34px}.case-row:first-child{grid-column:auto;grid-template-columns:1fr;grid-template-areas:"image" "num" "main" "copy" "link";row-gap:12px;padding-bottom:28px}.case-row:first-child>img{height:auto;aspect-ratio:1.35}.case-row:nth-child(n+2)>img{aspect-ratio:1.5}.case-main h3,.case-row:nth-child(n+2) .case-main h3{font-size:23px}.case-row:first-child .case-link{margin-top:0}.solution-card{padding:22px 10px}.system-step:not(:last-child){border-right:0}.system-step{min-height:145px}.system-step strong{margin-top:24px}}
+
 </style>
 </head>
 <body>
@@ -1264,6 +1279,22 @@
       </div>
     </div>
   </section>
+
+<section class="field">
+    <div class="field-card">
+      <div class="field-copy">
+        <div class="section-label">Work in Context</div>
+        <h2>Growth starts<span>with the real problem.</span></h2>
+        <p>Client work starts by understanding how teams operate, where time is lost and what needs to be connected. From there, strategy becomes a system teams can actually use, measure and improve.</p>
+        <div class="field-meta"><span>Clients</span><span>Growth Systems</span><span>Santiago</span></div>
+      </div>
+
+      <div class="field-photo">
+        <img src="/images/lowsignal-client-work.jpg" alt="lowsignal working session with clients" loading="lazy">
+      </div>
+    </div>
+  </section>
+
 
   <section class="operating" id="role">
     <div class="operating-inner">
@@ -1402,20 +1433,7 @@
     </div>
   </section>
 
-  <section class="field">
-    <div class="field-card">
-      <div class="field-copy">
-        <div class="section-label">Work in Context</div>
-        <h2>Growth starts<span>with the real problem.</span></h2>
-        <p>Client work starts by understanding how teams operate, where time is lost and what needs to be connected. From there, strategy becomes a system teams can actually use, measure and improve.</p>
-        <div class="field-meta"><span>Clients</span><span>Growth Systems</span><span>Santiago</span></div>
-      </div>
-
-      <div class="field-photo">
-        <img src="/images/lowsignal-client-work.jpg" alt="lowsignal working session with clients" loading="lazy">
-      </div>
-    </div>
-  </section>
+  
 
   <section class="testimonial">
     <div class="testimonial-inner">
