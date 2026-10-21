@@ -1300,6 +1300,13 @@
 @media(max-width:900px){.solutions .solution-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:46px 34px}}
 @media(max-width:640px){.solutions .solution-grid{grid-template-columns:1fr;gap:24px}.solutions .solution-card{padding:16px 0 4px}.solutions .solution-top{margin-bottom:20px}.solutions .solution-card h3{font-size:25px}.solutions .solution-card p{max-width:46ch}}
 </style>
+<style id="selected-case-logos">
+.case-story{position:relative}
+.case-story__logo{position:absolute;top:70px;left:20px;z-index:2;width:168px;height:60px;padding:10px 18px;display:grid;place-items:center;background:rgba(6,15,27,.88);border:1px solid rgba(255,255,255,.18);border-radius:3px;backdrop-filter:blur(8px)}
+.case-story__logo img{display:block;width:100%;height:100%;max-height:38px;object-fit:contain}
+.case-story--reverse .case-story__logo{left:auto;right:20px}
+@media(max-width:640px){.case-story__logo{top:44px;left:16px;width:146px;height:52px;padding:8px 14px}.case-story--reverse .case-story__logo{left:auto;right:16px}}
+</style>
 </head>
 <body>
 
@@ -1557,6 +1564,7 @@
     <div class="case-stories">
       <a class="case-story" href="https://lowsignal.cl/casos/rech" target="_blank" rel="noopener noreferrer">
         <img src="https://lowsignal.cl/assets/comunidad-rech.jpg" alt="Comunidad de la Red Educacional Camilo Henríquez" loading="lazy">
+        <span class="case-story__logo" aria-hidden="true"><img src="https://lowsignal.cl/assets/rech-logo-full-white-trim.png" alt=""></span>
         <div class="case-story__content">
           <div class="case-story__meta"><span>01</span><span>RECH · EDUCACIÓN · WEB · CONTENIDO</span></div>
           <h3>Una red conectada por una identidad común.</h3>
@@ -1566,6 +1574,7 @@
 
       <a class="case-story case-story--reverse" href="https://lowsignal.cl/casos/hub" target="_blank" rel="noopener noreferrer">
         <img src="https://lowsignal.cl/assets/hub-bg.jpg" alt="Espacios de hUB, hotel y cowork" loading="lazy">
+        <span class="case-story__logo" aria-hidden="true"><img src="https://lowsignal.cl/assets/hub-logo-white-new-trim.png" alt=""></span>
         <div class="case-story__content">
           <div class="case-story__meta"><span>02</span><span>hUB · HOSPITALITY · SOCIAL MEDIA · PAID MEDIA</span></div>
           <h3>La experiencia de hUB, también en digital.</h3>
@@ -1575,6 +1584,7 @@
 
       <a class="case-story" href="https://lowsignal.cl/casos/rikdom" target="_blank" rel="noopener noreferrer">
         <img src="https://lowsignal.cl/assets/galpon-merk.jpg" alt="Espacio de trabajo y proyectos de Rikdom Chile" loading="lazy">
+        <span class="case-story__logo" aria-hidden="true"><img src="https://lowsignal.cl/assets/rikdom.png" alt=""></span>
         <div class="case-story__content">
           <div class="case-story__meta"><span>03</span><span>RIKDOM · B2B · DESARROLLO WEB</span></div>
           <h3>Una web que ordena todo lo que mueve Rikdom.</h3>
