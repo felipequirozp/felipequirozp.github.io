@@ -1407,6 +1407,23 @@
  .case-story--reverse .case-story__logo{left:14px;right:auto}
 }
 </style>
+<style id="approach-diagram-styles">
+.system-steps{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;width:min(var(--max),100%);margin:0 auto;border:0!important}
+.system-step{position:relative;min-height:0;padding:0;border:0!important;border-radius:0;background:transparent!important}
+.system-step:not(:last-child)::after{content:"";position:absolute;z-index:0;top:20px;left:20px;width:calc(100% + 22px);height:1px;background:linear-gradient(90deg,#aebbf1,#d9dee8)}
+.system-step__node{position:relative;z-index:1;width:40px;height:40px;display:grid;place-items:center;border:1px solid #cbd4ed;border-radius:50%;background:#fff;color:var(--blue)}
+.system-step small{color:inherit;font-size:11px;letter-spacing:.04em}
+.system-step strong{display:block;margin-top:22px;font-family:Manrope,sans-serif;font-size:27px;font-weight:500;letter-spacing:-.045em}
+.system-step span{display:block;max-width:330px;margin-top:9px;color:#6f7a87;font-size:14px;line-height:1.6}
+@media(max-width:640px){
+ .system-steps{grid-template-columns:1fr;gap:25px;border:0!important}
+ .system-step{min-height:0;padding:0 0 0 58px}
+ .system-step:not(:last-child)::after{top:20px;left:20px;width:1px;height:calc(100% + 25px);background:linear-gradient(180deg,#aebbf1,#d9dee8)}
+ .system-step__node{position:absolute;top:0;left:0}
+ .system-step strong{margin-top:2px;font-size:23px}
+ .system-step span{margin-top:6px;font-size:13px}
+}
+</style>
 </head>
 <body>
 
@@ -1651,9 +1668,9 @@
     </div>
 
     <div class="system-steps">
-      <article class="system-step"><small>01</small><strong>Entender</strong><span>Encontrar la fricción y definir cómo se ve el progreso.</span></article>
-      <article class="system-step"><small>02</small><strong>Construir</strong><span>Conectar las capacidades adecuadas y probarlas en el trabajo real.</span></article>
-      <article class="system-step"><small>03</small><strong>Escalar</strong><span>Fortalecer lo que funciona y hacerlo fácil de repetir.</span></article>
+      <article class="system-step"><div class="system-step__node"><small>01</small></div><strong>Entender</strong><span>Encontrar la fricción y definir cómo se ve el progreso.</span></article>
+      <article class="system-step"><div class="system-step__node"><small>02</small></div><strong>Construir</strong><span>Conectar las capacidades adecuadas y probarlas en el trabajo real.</span></article>
+      <article class="system-step"><div class="system-step__node"><small>03</small></div><strong>Escalar</strong><span>Fortalecer lo que funciona y hacerlo fácil de repetir.</span></article>
     </div>
   </section>
 
