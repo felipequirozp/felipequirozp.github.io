@@ -1214,6 +1214,58 @@
       .work-item:nth-child(odd),.work-item:nth-child(even){padding-right:0}
     }
 
+  
+    /* GeoVictoria people cards: same photo + name pattern as LowSignal. */
+    .people-grid{
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:16px;
+    }
+    .person{
+      min-width:0;
+      padding:22px;
+      border:1px solid var(--line);
+      border-radius:20px;
+      background:#f8fafc;
+      transition:border-color .2s ease,transform .2s ease,background .2s ease;
+    }
+    .person:hover{
+      transform:translateY(-3px);
+      border-color:#c8d8e8;
+      background:#fff;
+    }
+    .person-photo{
+      width:62px;
+      height:62px;
+      overflow:hidden;
+      border-radius:50%;
+      background:#edf2f6;
+    }
+    .person-photo img{width:100%;height:100%;object-fit:cover}
+    .person h4{
+      margin:22px 0 0;
+      font-family:Manrope,sans-serif;
+      font-size:20px;
+      font-weight:500;
+      letter-spacing:-.035em;
+    }
+    .person h4 a{
+      color:inherit;
+      text-decoration:none;
+      transition:color .2s ease;
+    }
+    .person h4 a:hover{color:var(--blue)}
+    .person h4 a:focus-visible{
+      outline:2px solid var(--blue);
+      outline-offset:4px;
+      border-radius:2px;
+    }
+    @media(max-width:860px){
+      .people-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media(max-width:560px){
+      .people-grid{grid-template-columns:1fr}
+    }
+
   </style>
 </head>
 <body>
@@ -1322,43 +1374,20 @@
 
           <div class="people-grid">
             <article class="person">
-              <div class="person-top">
-                <div class="person-photo"><img src="/images/francisca-astudillo.jpg" alt="Francisca Astudillo"></div>
-                <div>
-                  <div class="person-kicker">Company leadership</div>
-                  <h4>Francisca Astudillo</h4>
-                  <div class="person-role">CEO · GeoVictoria</div>
-                </div>
-              </div>
-              <p class="person-context">Executive leadership connecting company strategy, market growth and GeoVictoria's evolution.</p>
-              <a class="person-link" href="https://www.linkedin.com/in/francisca-astudillo-bessi-200b2432/" target="_blank" rel="noopener noreferrer" aria-label="Francisca Astudillo on LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg></a>
+              <div class="person-photo"><img src="/images/francisca-astudillo.jpg" alt="Francisca Astudillo" loading="lazy"></div>
+              <h4><a href="https://www.linkedin.com/in/francisca-astudillo-bessi-200b2432/" target="_blank" rel="noopener noreferrer">Francisca Astudillo</a></h4>
             </article>
 
             <article class="person">
-              <div class="person-top">
-                <div class="person-photo"><img src="/images/nicolas-garcias.jpg" alt="Nicolás Garcías"></div>
-                <div>
-                  <div class="person-kicker">Product leadership</div>
-                  <h4>Nicolás Garcías</h4>
-                  <div class="person-role">Chief Product Officer · GeoVictoria</div>
-                </div>
-              </div>
-              <p class="person-context">Product leadership across strategy, priorities and the evolution of GeoVictoria's product portfolio.</p>
-              <a class="person-link" href="https://www.linkedin.com/in/ngarcias/" target="_blank" rel="noopener noreferrer" aria-label="Nicolás Garcías on LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg></a>
+              <div class="person-photo"><img src="/images/nicolas-garcias.jpg" alt="Nicolás Garcías" loading="lazy"></div>
+              <h4><a href="https://www.linkedin.com/in/ngarcias/" target="_blank" rel="noopener noreferrer">Nicolás Garcías</a></h4>
             </article>
 
             <article class="person">
-              <div class="person-top">
-                <div class="person-photo"><img src="/images/rodrigo-lewit.jpg" alt="Rodrigo Lewit"></div>
-                <div>
-                  <div class="person-kicker">Commercial leadership</div>
-                  <h4>Rodrigo Lewit</h4>
-                  <div class="person-role">Co-Founder & Chief Commercial Officer · GeoVictoria</div>
-                </div>
-              </div>
-              <p class="person-context">Co-founder and commercial leader focused on growth, go-to-market and customer and market relationships.</p>
-              <a class="person-link" href="https://www.linkedin.com/in/rodrigo-lewit-rozenfeld-05190118/" target="_blank" rel="noopener noreferrer" aria-label="Rodrigo Lewit on LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg></a>
+              <div class="person-photo"><img src="/images/rodrigo-lewit.jpg" alt="Rodrigo Lewit" loading="lazy"></div>
+              <h4><a href="https://www.linkedin.com/in/rodrigo-lewit-rozenfeld-05190118/" target="_blank" rel="noopener noreferrer">Rodrigo Lewit</a></h4>
             </article>
+
           </div>
         </div>
       </div>
