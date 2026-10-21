@@ -1184,15 +1184,142 @@
     }
 
   
-    /* Keep the LowSignal card treatment responsive on GeoVictoria. */
+    /* GeoVictoria people and product sections follow the Low case-study rhythm. */
+    .people-section{
+      padding:0 var(--page) 84px;
+      background:#fff;
+    }
+    .people-container{width:min(var(--max),100%);margin:0 auto}
+    .people{margin:0;padding-top:54px;border-top:1px solid var(--line)}
+    .people-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:40px;
+      margin-bottom:28px;
+    }
+    .people-head h3{
+      margin:12px 0 0;
+      font-family:Manrope,sans-serif;
+      font-size:38px;
+      font-weight:500;
+      letter-spacing:-.045em;
+    }
+    .people-head p{margin:0;max-width:580px;color:#64707e;font-size:14px;line-height:1.7}
+    .people-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .person{
+      min-width:0;
+      padding:22px;
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:20px;
+      background:#0b1117;
+      color:#fff;
+    }
+    .person-photo{width:62px;height:62px;border-radius:50%;overflow:hidden;background:#111923}
+    .person-photo img{width:100%;height:100%;object-fit:cover}
+    .person h4{margin:22px 0 0;font-family:Manrope,sans-serif;font-size:20px;font-weight:500;letter-spacing:-.035em}
+    .person h4 a{color:inherit;text-decoration:none}
+    .person h4 a:hover{color:#a8bfd9}
+    .person h4 a:focus-visible{outline:2px solid #8ec4ff;outline-offset:4px;border-radius:2px}
+
+    .projects{padding:112px var(--page) 122px;background:#fff}
+    .projects-head{
+      width:min(var(--max),100%);margin:0 auto 46px;
+      display:flex;justify-content:space-between;align-items:end;gap:50px;
+    }
+    .projects-head h2{
+      margin:14px 0 0;max-width:860px;font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);line-height:1.02;letter-spacing:-.055em;font-weight:500;
+    }
+    .projects-head p{margin:0;max-width:520px;color:var(--muted);font-size:15px;line-height:1.7}
+    .project-list{width:min(var(--max),100%);margin:0 auto;border-top:1px solid var(--line)}
+    .geo-product-card{
+      display:grid;
+      grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+      gap:clamp(34px,6vw,88px);
+      align-items:center;
+      padding:48px 0;
+      border-bottom:1px solid var(--line);
+    }
+    .geo-product-card--reverse .geo-product-card__visual{grid-column:2;grid-row:1}
+    .geo-product-card--reverse .geo-product-card__content{grid-column:1;grid-row:1}
+    .geo-product-card__visual{
+      min-width:0;overflow:hidden;aspect-ratio:1.45;
+      display:grid;place-items:center;border-radius:20px;
+      background:linear-gradient(135deg,#f6f9fc,#eaf5fb);
+    }
+    .geo-product-card__visual img{
+      display:block;width:100%;height:100%;padding:18px;
+      object-fit:contain;
+    }
+    .geo-product-card__content{min-width:0;display:flex;flex-direction:column;align-items:flex-start}
+    .geo-product-card__meta{
+      display:flex;flex-wrap:wrap;align-items:center;gap:14px;
+      color:#748397;font-size:10px;font-weight:700;letter-spacing:.1em;line-height:1.5;text-transform:uppercase;
+    }
+    .geo-product-card__meta span:first-child{color:var(--blue)}
+    .geo-product-card h3{
+      margin:22px 0 18px;font-family:Manrope,sans-serif;
+      font-size:clamp(32px,3.5vw,52px);font-weight:500;line-height:1.08;letter-spacing:-.055em;
+    }
+    .geo-product-card__content>p{margin:0;color:#64707e;font-size:14px;line-height:1.75}
+    .geo-product-card .project-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+    .geo-product-card .project-meta span{
+      padding:7px 10px;border:1px solid #dce2e9;border-radius:999px;
+      color:#526172;font-size:9px;font-weight:600;
+    }
+    .geo-product-card__contribution{
+      display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;
+      width:100%;margin-top:24px;padding-top:18px;border-top:1px solid var(--line);
+    }
+    .geo-product-card__contribution span{
+      color:#728198;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    }
+    .geo-product-card__contribution p{margin:0;color:#64707e;font-size:12px;line-height:1.7}
+
+    .geo-cta{padding:clamp(76px,9vw,128px) var(--page);background:var(--dark);color:#fff}
+    .geo-cta-inner{width:min(var(--max),100%);margin:0 auto}
+    .geo-cta .section-label{color:#8ec4ff;text-transform:none;letter-spacing:0}
+    .geo-cta-links .cta-arrow{
+      display:inline-block;width:15px;height:15px;margin-left:6px;vertical-align:-2px;
+      fill:none;stroke:#8ec4ff;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s ease;
+    }
+    .geo-cta-links>a:hover .cta-arrow{transform:translate(2px,-2px)}
+    .geo-cta h2{
+      margin:18px 0 14px;max-width:900px;font-family:Manrope,sans-serif;
+      font-size:clamp(52px,6.5vw,92px);font-weight:500;line-height:1.01;letter-spacing:-.065em;
+    }
+    .geo-cta-inner>p{margin:0;max-width:640px;color:#aeb8c3;font-size:15px;line-height:1.7}
+    .geo-cta-links{margin-top:52px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.16)}
+    .geo-cta-links>a{min-width:0;padding:22px 22px 0 0;display:flex;flex-direction:column;gap:13px;color:#fff}
+    .geo-cta-links>a+a{padding-left:24px;border-left:1px solid rgba(255,255,255,.16)}
+    .geo-cta-links>a>span{color:#91a1b2;font-size:10px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+    .geo-cta-links strong{font-family:Manrope,sans-serif;font-size:clamp(18px,2vw,24px);font-weight:500;letter-spacing:-.025em}
+    .geo-cta-links>a:hover strong{color:#a8bfd9}
     @media(max-width:860px){
       .people-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .people-head{gap:28px}
+      .people-head,.projects-head{flex-direction:column;align-items:flex-start;gap:22px}
+      .geo-product-card{gap:32px}
+      .geo-product-card h3{font-size:clamp(28px,4vw,40px)}
     }
-    @media(max-width:560px){
-      .people-grid{grid-template-columns:1fr}
+    @media(max-width:640px){
+      .people-section{padding-bottom:68px}
       .people-head{margin-bottom:24px}
       .people-head h3{font-size:32px}
+      .people-grid{grid-template-columns:1fr}
+      .projects{padding-top:68px;padding-bottom:72px}
+      .projects-head{margin-bottom:30px}
+      .projects-head h2{font-size:clamp(40px,10vw,58px)}
+      .geo-product-card,.geo-product-card--reverse{grid-template-columns:1fr;gap:22px;padding:26px 0}
+      .geo-product-card__visual,.geo-product-card--reverse .geo-product-card__visual{grid-column:1;grid-row:1;aspect-ratio:1.3}
+      .geo-product-card__content,.geo-product-card--reverse .geo-product-card__content{grid-column:1;grid-row:2}
+      .geo-product-card__visual img{padding:12px}
+      .geo-product-card__contribution{grid-template-columns:1fr;gap:8px}
+      .geo-product-card h3{margin:16px 0 14px}
+      .geo-cta{padding:68px var(--page) 72px}
+      .geo-cta h2{font-size:clamp(44px,11vw,64px)}
+      .geo-cta-links{grid-template-columns:1fr;margin-top:34px}
+      .geo-cta-links>a,.geo-cta-links>a+a{padding:18px 0;border-left:0;border-bottom:1px solid rgba(255,255,255,.16)}
     }
 </style>
 </head>
@@ -1291,13 +1418,20 @@
           <span>Adopción</span>
         </div>
 
-        <div class="people">
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="people-section" id="people">
+    <div class="people-container">
+      <div class="people">
           <div class="people-head">
             <div>
               <div class="section-label">Personas clave</div>
               <h3>Las personas detrás del trabajo.</h3>
             </div>
-            <p>Los buenos productos se construyen entre áreas. Estos son los líderes con quienes trabajé en los equipos de compañía, producto y comercial de GeoVictoria.</p>
+            <p>Trabajé de cerca con líderes de compañía, producto y área comercial para llevar estas soluciones desde la oportunidad hasta la operación.</p>
           </div>
 
           <div class="people-grid">
@@ -1318,7 +1452,6 @@
 
           </div>
         </div>
-      </div>
     </div>
   </section>
 
@@ -1339,52 +1472,44 @@
 
   </section>
 
+  
   <section class="projects" id="products">
     <div class="projects-head">
       <div>
-        <div class="section-label">Productos seleccionados</div>
-        <h2>Tres productos. Un sistema operativo.</h2>
+        <div class="section-label">Productos que lidero</div>
+        <h2>Tres productos. Una operación conectada.</h2>
       </div>
-      <p>Planificar, optimizar y habilitar flexibilidad son problemas distintos, pero están conectados por la misma operación. Mi trabajo es diseñarlos como partes de un sistema coherente.</p>
+      <p>La planificación, la optimización y los cambios de turno resuelven problemas distintos. Juntos, permiten gestionar mejor cómo se organiza el trabajo.</p>
     </div>
-
     <div class="project-list">
-      <article class="project">
-        <div class="project-num">01</div>
-        <div>
-          <div class="project-type">Planificación · Gestión de fuerza laboral</div>
+      <article class="geo-product-card">
+        <div class="geo-product-card__visual"><img src="/images/geo-smart-scheduler.webp" alt="Planificador de turnos con reglas y alertas de inconsistencias" loading="lazy" decoding="async"></div>
+        <div class="geo-product-card__content">
+          <div class="geo-product-card__meta"><span>01 / 03</span><span>Planificación · Workforce Management</span></div>
           <h3>Planificador Inteligente</h3>
-        </div>
-        <div class="project-body">
           <p>Planificación de dotación y turnos para operaciones complejas, conectando cobertura, reglas, ausencias y necesidades de personal.</p>
           <div class="project-meta"><span>Dotación</span><span>Cobertura</span><span>Reglas</span><span>Ausencias</span></div>
-          <p class="project-contribution"><strong>Mi contribución</strong>Defino oportunidades y requerimientos, priorizo reglas operacionales y coordino la validación con clientes y equipos internos antes de escalar.</p>
+          <div class="geo-product-card__contribution"><span>Mi contribución</span><p>Defino prioridades y reglas operacionales, y coordino su validación con clientes y equipos internos antes de escalar.</p></div>
         </div>
       </article>
-
-      <article class="project">
-        <div class="project-num">02</div>
-        <div>
-          <div class="project-type">Optimización · IA aplicada</div>
+      <article class="geo-product-card geo-product-card--reverse">
+        <div class="geo-product-card__visual"><img src="/images/geo-shift-optimizer.webp" alt="Vista semanal de turnos con disponibilidad y asignaciones" loading="lazy" decoding="async"></div>
+        <div class="geo-product-card__content">
+          <div class="geo-product-card__meta"><span>02 / 03</span><span>Optimización · IA aplicada</span></div>
           <h3>Optimizador de Turnos</h3>
-        </div>
-        <div class="project-body">
-          <p>Un MVP diseñado para combinar demanda, disponibilidad y restricciones operacionales, apoyando decisiones de dotación más eficientes.</p>
+          <p>Un MVP que combina demanda, disponibilidad y restricciones operacionales para apoyar mejores decisiones de dotación.</p>
           <div class="project-meta"><span>Demanda</span><span>Disponibilidad</span><span>Restricciones</span><span>IA</span></div>
-          <p class="project-contribution"><strong>Mi contribución</strong>Estoy evolucionando Optimizador de Turnos desde un MVP hacia un producto comercial listo para producción, usando pilotos empresariales para validar reglas de negocio, usabilidad, ajuste operacional y dónde la optimización genera valor medible.</p>
+          <div class="geo-product-card__contribution"><span>Mi contribución</span><p>Lidero su evolución desde MVP hacia un producto comercial, validando reglas, experiencia y valor en pilotos con empresas.</p></div>
         </div>
       </article>
-
-      <article class="project">
-        <div class="project-num">03</div>
-        <div>
-          <div class="project-type">Workflow · Flexibilidad operacional</div>
+      <article class="geo-product-card">
+        <div class="geo-product-card__visual"><img src="/images/geo-shift-change-workflow.webp" alt="Vista móvil de turnos y solicitudes de cambio de turno" loading="lazy" decoding="async"></div>
+        <div class="geo-product-card__content">
+          <div class="geo-product-card__meta"><span>03 / 03</span><span>Workflow · Flexibilidad operacional</span></div>
           <h3>Flujo de Cambio de Turno</h3>
-        </div>
-        <div class="project-body">
-          <p>Un workflow para cambios de turno, intercambios y reemplazos con reglas configurables, aprobaciones y validaciones operacionales.</p>
+          <p>Un flujo para cambios, intercambios y reemplazos de turno, con reglas configurables, aprobaciones y validaciones operacionales.</p>
           <div class="project-meta"><span>Aprobaciones</span><span>Validaciones</span><span>Reglas de descanso</span><span>Flexibilidad</span></div>
-          <p class="project-contribution"><strong>Mi contribución</strong>Construí Flujo de Cambio de Turno de 0→1, llevando el producto desde el problema del cliente y el descubrimiento hasta reglas, requerimientos, validación y ejecución de pilotos.</p>
+          <div class="geo-product-card__contribution"><span>Mi contribución</span><p>Construí el producto de 0→1, desde el problema del cliente y el descubrimiento hasta reglas, validación y ejecución de pilotos.</p></div>
         </div>
       </article>
     </div>
@@ -1406,6 +1531,26 @@
       <div class="work-item"><div class="work-num">04</div><strong>Pilotos en contextos operacionales reales</strong></div>
       <div class="work-item"><div class="work-num">05</div><strong>Feedback, métricas y aprendizaje continuo</strong></div>
       <div class="work-item"><div class="work-num">06</div><strong>Ejecución transversal entre producto, ingeniería, diseño, ventas, customer success y operaciones</strong></div>
+    </div>
+  </section>
+
+  
+  <section class="geo-cta">
+    <div class="geo-cta-inner">
+      <div class="section-label">GeoVictoria</div>
+      <h2>Sigamos explorando.</h2>
+      <p>Conoce más de GeoVictoria, revisa otros proyectos o conversemos.</p>
+      <div class="geo-cta-links">
+        <a href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer">
+          <span>La compañía</span><strong>Visitar GeoVictoria <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></strong>
+        </a>
+        <a href="/es/#work">
+          <span>Otros proyectos</span><strong>Explorar mi trabajo <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></strong>
+        </a>
+        <a href="https://calendly.com/felipe-lowsignal/30min" target="_blank" rel="noopener noreferrer">
+          <span>Hablemos</span><strong>Agendar conversación <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></strong>
+        </a>
+      </div>
     </div>
   </section>
 
