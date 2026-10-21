@@ -362,34 +362,10 @@
       .footer-bottom{flex-direction:column}
     }
   </style>
-<style id="studio-photo-refresh">
-:root{--page:8vw;--max:1360px}
-.hero{padding:48px var(--page) 54px;background:#fff}
-.hero-inner{width:min(var(--max),100%);margin:0 auto}
-.hero-top{margin-bottom:38px}
-.hero-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,.94fr);align-items:center;gap:clamp(38px,6vw,84px)}
-.hero-copy{min-width:0}
-.hero-kicker{margin-bottom:18px;font-size:10px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
-.hero h1{max-width:700px;margin:0;font-size:clamp(44px,4.3vw,58px);line-height:1.04;letter-spacing:-.055em}
-.hero h1 span{display:block;color:#687287}
-.hero-bottom{display:block;margin-top:22px;padding-top:0;border-top:0}
-.hero-description{max-width:620px;font-size:15px;line-height:1.78}
-.hero-actions{margin-top:22px}
-.hero-role{margin-top:24px;padding-top:15px;border-top:1px solid var(--line)}
-.hero-role strong{font-size:13px;font-weight:600}
-.hero-role span{display:inline-block;margin:6px 12px 0 0;color:#74808d;font-size:10px;line-height:1.5}
-.hero-media{margin:0;min-width:0;overflow:hidden;border-radius:3px;background:#f1f3f6}
-.hero-media img{display:block;width:100%;height:clamp(280px,34vw,460px);object-fit:cover;object-position:center 42%}
-.hero-media figcaption{margin:0;padding:10px 0 0;color:#747d89;font-size:10px;line-height:1.5}
-@media(max-width:900px){.hero-layout{grid-template-columns:1fr}.hero-media img{height:clamp(300px,56vw,520px)}}
-@media(max-width:640px){
- :root{--page:6vw}
- .hero{padding:34px var(--page) 40px}
- .hero-top{align-items:flex-start;flex-direction:column;margin-bottom:28px;gap:17px}
- .hero h1{font-size:clamp(42px,11vw,58px)}
- .hero-description{font-size:14px}
- .hero-media img{height:clamp(260px,78vw,380px)}
-}
+<style id="studio-field-photo">
+.studio-field-photo{width:min(var(--max),100%);margin:54px auto 0;overflow:hidden;border-radius:3px;background:#f1f3f6}
+.studio-field-photo img{display:block;width:100%;height:clamp(300px,42vw,620px);object-fit:cover;object-position:center 42%}
+@media(max-width:640px){.studio-field-photo{margin-top:30px}.studio-field-photo img{height:clamp(260px,72vw,380px)}}
 </style>
 </head>
 
@@ -426,32 +402,31 @@
         </div>
       </div>
 
-      <div class="hero-layout">
-        <div class="hero-copy">
-          <div class="hero-kicker">Product / AI / Operations</div>
-          <h1>Tether<span>Studio.</span></h1>
-          <div class="hero-bottom">
-            <div>
-              <p class="hero-description">
-                An AI-enabled school photography platform that centralizes portraits, events, yearbooks, consent, family access and school administration in one digital workflow.
-              </p>
-              <div class="hero-actions">
-                <a class="hero-btn primary" href="https://tetherstudio.ai/" target="_blank" rel="noopener noreferrer">Visit site ↗</a>
-                <a class="hero-btn" href="#workflow">See the workflow ↓</a>
-              </div>
-            </div>
-            <div class="hero-role">
-              <strong>Tether Studio</strong>
-              <span>Product building &amp; positioning</span>
-              <span>School teams · Families · AI-enabled workflow</span>
-            </div>
+      <div class="hero-kicker">Product / AI / Operations</div>
+
+      <h1>Tether<span>Studio.</span></h1>
+
+      <div class="hero-bottom">
+        <div>
+          <p class="hero-description">
+            An AI-enabled school photography platform that centralizes portraits, events, yearbooks, consent, family access and school administration in one digital workflow.
+          </p>
+
+          <div class="hero-actions">
+            <a class="hero-btn primary" href="https://tetherstudio.ai/" target="_blank" rel="noopener noreferrer">Visit site ↗</a>
+            <a class="hero-btn" href="#workflow">See the workflow ↓</a>
           </div>
         </div>
-        <figure class="hero-media">
-          <img src="/images/building-in-the-field.jpg" alt="Tether Studio in the field during a school photography session">
-          <figcaption>Tether Studio in the field.</figcaption>
-        </figure>
+
+        <div class="hero-role">
+          <strong>Tether Studio</strong>
+          <span>Product building &amp; positioning</span>
+          <span>School teams · Families · AI-enabled workflow</span>
+        </div>
       </div>
+      <figure class="studio-field-photo">
+        <img src="/images/building-in-the-field.jpg" alt="Tether Studio in the field during a school photography session">
+      </figure>
     </div>
   </section>
 
