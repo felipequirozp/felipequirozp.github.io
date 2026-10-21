@@ -719,6 +719,9 @@
 .now-close-row>a:hover span{transform:translate(3px,-3px)}
 @media(max-width:900px){.now-hero-grid{grid-template-columns:1fr;gap:28px}.now-intro{max-width:700px}.now-section-head{grid-template-columns:1fr;gap:18px}.now-row{grid-template-columns:36px minmax(180px,.72fr) 1fr;gap:18px}}
 @media(max-width:640px){:root{--page:20px}.now-hero{padding:54px var(--page) 66px}.now-meta{font-size:9px}.now-hero-grid{gap:22px;padding-top:32px}.now-hero h1{font-size:clamp(52px,13vw,76px)}.now-intro p{font-size:16px}.now-focus,.now-ecosystem{padding:62px var(--page) 70px}.now-section-head{gap:14px;margin-bottom:26px}.now-section-head h2{font-size:38px}.now-section-head>p{font-size:14px}.now-row{grid-template-columns:28px minmax(0,1fr);gap:9px 14px;padding:20px 0}.now-row>p{grid-column:2;margin-top:1px;font-size:13px}.now-area a,.now-area strong{font-size:21px}.now-area>span{font-size:11px}.now-photo-grid{grid-template-columns:1fr;gap:24px}.now-photo-grid img{height:250px;border-radius:12px}.now-photo-grid figcaption{font-size:10px}.now-close{padding:62px var(--page) 70px}.now-close-row{display:block;margin-top:18px}.now-close h2{font-size:clamp(40px,10.4vw,54px)}.now-close-row>a{margin-top:26px}}
+
+/* Keep the full heads visible in the ecosystem group photo. */
+.now-photo-grid figure:nth-child(2) img{object-position:center top}
 </style>
 </head>
 <body>
