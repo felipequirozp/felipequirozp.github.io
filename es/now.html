@@ -698,7 +698,7 @@
 .now-list{border-top:1px solid #d5dde5}
 .now-row{display:grid;grid-template-columns:48px minmax(220px,.65fr) minmax(0,1fr);gap:24px;align-items:start;padding:26px 0;border-bottom:1px solid #d5dde5}
 .now-num{padding-top:4px;color:var(--muted-2);font-size:11px;letter-spacing:.08em}
-.now-area a,.now-area strong{display:block;width:max-content;color:var(--ink);font-family:Manrope,sans-serif;font-size:24px;line-height:1.1;font-weight:500;letter-spacing:-.04em}
+.now-area a,.now-area strong{display:block;width:max-content;color:var(--ink);font-family:Manrope,sans-serif;font-size:24px;line-height:1.1;font-weight:500;letter-spacing:-.04em}.now-area a{display:inline-flex;align-items:center;gap:8px}.now-area a .external-arrow{width:18px;height:18px;flex:none;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .now-area a:hover{color:var(--blue)}
 .now-area>span{display:block;margin-top:8px;color:var(--muted);font-size:12px;line-height:1.5}
 .now-row>p{max-width:680px;margin:2px 0 0;color:var(--muted);font-size:14px;line-height:1.75}
@@ -715,7 +715,7 @@
 .now-close h2{margin:0;font-family:Manrope,sans-serif;font-size:clamp(46px,6vw,82px);line-height:1;letter-spacing:-.065em;font-weight:500}
 .now-close h2 span{color:#a8bfd9}
 .now-close-row>a{display:inline-flex;align-items:center;gap:14px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.5);font-size:13px}
-.now-close-row>a span{font-size:18px;transition:transform .2s ease}
+.now-close-row>a span{display:inline-flex;transition:transform .2s ease}.now-close-row>a span svg{width:18px;height:18px;display:block;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .now-close-row>a:hover span{transform:translate(3px,-3px)}
 @media(max-width:900px){.now-hero-grid{grid-template-columns:1fr;gap:28px}.now-intro{max-width:700px}.now-section-head{grid-template-columns:1fr;gap:18px}.now-row{grid-template-columns:36px minmax(180px,.72fr) 1fr;gap:18px}}
 @media(max-width:640px){:root{--page:20px}.now-hero{padding:54px var(--page) 66px}.now-meta{font-size:9px}.now-hero-grid{gap:22px;padding-top:32px}.now-hero h1{font-size:clamp(52px,13vw,76px)}.now-intro p{font-size:16px}.now-focus,.now-ecosystem{padding:62px var(--page) 70px}.now-section-head{gap:14px;margin-bottom:26px}.now-section-head h2{font-size:38px}.now-section-head>p{font-size:14px}.now-row{grid-template-columns:28px minmax(0,1fr);gap:9px 14px;padding:20px 0}.now-row>p{grid-column:2;margin-top:1px;font-size:13px}.now-area a,.now-area strong{font-size:21px}.now-area>span{font-size:11px}.now-photo-grid{grid-template-columns:1fr;gap:24px}.now-photo-grid img{height:250px;border-radius:12px}.now-photo-grid figcaption{font-size:10px}.now-close{padding:62px var(--page) 70px}.now-close-row{display:block;margin-top:18px}.now-close h2{font-size:clamp(40px,10.4vw,54px)}.now-close-row>a{margin-top:26px}}
@@ -766,12 +766,12 @@
       <div class="now-list">
         <article class="now-row">
           <span class="now-num">01</span>
-          <div class="now-area"><a href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer">GeoVictoria ↗</a><span>Product Manager · Workforce Management</span></div>
+          <div class="now-area"><a href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer">GeoVictoria <svg class="external-arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6 14 14 6M7 6h7v7"/></svg></a><span>Product Manager · Workforce Management</span></div>
           <p>Desarrollar productos para planificación, optimización y gestión de turnos en operaciones empresariales complejas.</p>
         </article>
         <article class="now-row">
           <span class="now-num">02</span>
-          <div class="now-area"><a href="https://lowsignal.cl/" target="_blank" rel="noopener noreferrer">lowsignal ↗</a><span>Co-Founder &amp; COO · Growth Systems</span></div>
+          <div class="now-area"><a href="https://lowsignal.cl/" target="_blank" rel="noopener noreferrer">lowsignal <svg class="external-arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6 14 14 6M7 6h7v7"/></svg></a><span>Co-Founder &amp; COO · Growth Systems</span></div>
           <p>Construir los sistemas comerciales, operativos y de entrega que nos permitan crecer con foco en educación, B2B y B2C.</p>
         </article>
         <article class="now-row">
@@ -797,7 +797,7 @@
   </section>
 
   <section class="now-close">
-    <div class="now-wrap"><div class="section-label">Seguimos construyendo</div><div class="now-close-row"><h2>Menos ruido.<br><span>Más cosas que funcionan.</span></h2><a href="https://calendly.com/felipe-lowsignal/30min" target="_blank" rel="noopener noreferrer">Hablemos <span>↗</span></a></div></div>
+    <div class="now-wrap"><div class="section-label">Seguimos construyendo</div><div class="now-close-row"><h2>Menos ruido.<br><span>Más cosas que funcionan.</span></h2><a href="https://calendly.com/felipe-lowsignal/30min" target="_blank" rel="noopener noreferrer">Hablemos <span><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6 14 14 6M7 6h7v7"/></svg></span></a></div></div>
   </section>
 </main>
 
