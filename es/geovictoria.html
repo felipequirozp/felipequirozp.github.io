@@ -1032,7 +1032,19 @@
       .footer-grid{grid-template-columns:1fr}
       .footer-bottom{flex-direction:column}
     }
-  </style>
+  
+    /* Match the Home grid and keep GeoVictoria's mark clean on white. */
+    :root{--page:8vw;--max:1520px}
+    .geo-mark{min-width:0;min-height:52px;padding:0;justify-content:flex-start;border:0;border-radius:0;background:transparent}
+    .geo-mark img{height:38px;max-width:220px}
+    .hero-description a,.hero-role strong a,.role-main p a,.snapshot-value a{color:inherit;text-decoration:underline;text-decoration-color:#bcc7d2;text-underline-offset:3px;transition:color .2s ease,text-decoration-color .2s ease}
+    .hero-description a:hover,.hero-role strong a:hover,.role-main p a:hover,.snapshot-value a:hover{color:var(--blue);text-decoration-color:var(--blue)}
+    @media(max-width:640px){
+      :root{--page:20px}
+      .geo-mark{min-width:0;min-height:46px}
+      .geo-mark img{height:34px}
+    }
+</style>
 </head>
 <body>
 
@@ -1059,7 +1071,7 @@
     <div class="hero-inner">
       <div class="hero-top">
         <a class="geo-mark" href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit GeoVictoria">
-          <img src="/logos/geovictoria-logo.png" alt="GeoVictoria">
+          <img src="/logos/logo-geovictoria.png" alt="GeoVictoria">
         </a>
 
         <div class="hero-meta">
@@ -1073,10 +1085,10 @@
       <h1>Sistemas de producto<span>para operaciones reales.</span></h1>
 
       <div class="hero-bottom">
-        <p class="hero-description">Lidero la estrategia y evolución de tres productos de gestión de fuerza laboral en GeoVictoria: Planificador Inteligente, Optimizador de Turnos y Flujo de Cambio de Turno, dentro de una plataforma B2B SaaS que atiende a más de 10.000 clientes en más de 20 países.</p>
+        <p class="hero-description">Lidero la estrategia y evolución de tres productos de gestión de fuerza laboral en <a href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer">GeoVictoria</a>: Planificador Inteligente, Optimizador de Turnos y Flujo de Cambio de Turno, dentro de una plataforma B2B SaaS que atiende a más de 10.000 clientes en más de 40 países.</p>
 
         <div class="hero-role">
-          <strong>GeoVictoria</strong>
+          <strong><a href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer">GeoVictoria</a></strong>
           <span>Product Manager · Gestión de fuerza laboral</span>
           <span>B2B SaaS · Producto · Operaciones</span>
           <a class="hero-site" href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer">geovictoria.com ↗</a>
@@ -1098,7 +1110,7 @@
       <article class="impact-card"><strong>3</strong><span>Productos de gestión de fuerza laboral bajo mi responsabilidad</span></article>
       <article class="impact-card"><strong>100+</strong><span>Pilotos y validaciones con clientes</span></article>
       <article class="impact-card"><strong>10K+</strong><span>Clientes dentro del ecosistema GeoVictoria</span></article>
-      <article class="impact-card"><strong>20+</strong><span>Países donde opera la empresa</span></article>
+      <article class="impact-card"><strong>40+</strong><span>Países donde opera la empresa</span></article>
     </div>
   </section>
 
@@ -1108,11 +1120,11 @@
 
       <div class="role-main">
         <h2>Conectando cliente, producto y ejecución.</h2>
-        <p>GeoVictoria es una plataforma B2B SaaS de gestión de fuerza laboral, diseñada para operaciones con necesidades complejas de dotación, planificación y asistencia.</p>
+        <p><a href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer">GeoVictoria</a> es una plataforma B2B SaaS de gestión de fuerza laboral, diseñada para operaciones con necesidades complejas de dotación, planificación y asistencia.</p>
         <p>Como Product Manager, lidero la estrategia de producto, la hoja de ruta y la priorización de Planificador Inteligente, Optimizador de Turnos y Flujo de Cambio de Turno, equilibrando necesidades de clientes, impacto de negocio y factibilidad técnica desde el descubrimiento hasta el piloto, lanzamiento y adopción.</p>
 
         <div class="snapshot">
-          <div class="snapshot-item"><div class="snapshot-label">Empresa</div><div class="snapshot-value">GeoVictoria</div></div>
+          <div class="snapshot-item"><div class="snapshot-label">Empresa</div><div class="snapshot-value"><a href="https://www.geovictoria.com/" target="_blank" rel="noopener noreferrer">GeoVictoria</a></div></div>
           <div class="snapshot-item"><div class="snapshot-label">Rol</div><div class="snapshot-value">Product Manager</div></div>
           <div class="snapshot-item"><div class="snapshot-label">Período</div><div class="snapshot-value">2026 – Presente</div></div>
           <div class="snapshot-item"><div class="snapshot-label">Categoría</div><div class="snapshot-value">Gestión de fuerza laboral</div></div>
