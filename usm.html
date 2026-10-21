@@ -16,7 +16,7 @@
   <meta property="og:title" content="USM | Felipe Quiroz">
   <meta property="og:description" content="Systems inside higher education.">
   <meta property="og:url" content="https://felipequirozp.cl/usm">
-  <meta property="og:image" content="https://felipequirozp.cl/images/usm-ai-future-students-2024.jpg">
+  <meta property="og:image" content="https://felipequirozp.cl/images/usm-admissions-community.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,11 +119,11 @@
     .hero-top{
       display:flex;
       justify-content:space-between;
-      align-items:center;
       gap:30px;
+      align-items:center;
       margin-bottom:68px;
     }
-    .usm-mark{
+    .geo-mark{
       min-width:240px;
       min-height:72px;
       padding:12px 22px;
@@ -134,12 +134,11 @@
       background:#0d1724;
       border:1px solid #142235;
     }
-    .usm-mark img{
+    .geo-mark img{
       width:auto;
-      height:34px;
+      height:31px;
       max-width:210px;
       object-fit:contain;
-      filter:brightness(0) invert(1);
     }
     .hero-meta{
       display:flex;
@@ -167,16 +166,15 @@
     }
     .hero h1{
       margin:0;
-      max-width:1180px;
+      max-width:1220px;
       font-family:Manrope,sans-serif;
       font-size:clamp(72px,7.6vw,124px);
-      line-height:1.01;
+      line-height:.93;
       letter-spacing:-.072em;
       font-weight:500;
     }
     .hero h1 span{
       display:block;
-      margin-top:.02em;
       color:#a8b4c3;
     }
     .hero-bottom{
@@ -189,7 +187,7 @@
     }
     .hero-description{
       margin:0;
-      max-width:800px;
+      max-width:780px;
       color:var(--muted);
       font-size:17px;
       line-height:1.76;
@@ -236,13 +234,13 @@
       max-width:880px;
       font-family:Manrope,sans-serif;
       font-size:clamp(48px,5vw,76px);
-      line-height:1.05;
+      line-height:1.02;
       letter-spacing:-.055em;
       font-weight:500;
     }
     .impact-head p{
       margin:0;
-      max-width:520px;
+      max-width:500px;
       color:var(--muted);
       font-size:15px;
       line-height:1.7;
@@ -298,10 +296,6 @@
       letter-spacing:-.06em;
       font-weight:500;
     }
-    .role-main h2 span{
-      display:block;
-      color:#8fa0b5;
-    }
     .role-main>p{
       margin:0 0 20px;
       max-width:900px;
@@ -351,99 +345,71 @@
 
     /* PEOPLE */
     .people{
-      margin-top:72px;
-      padding-top:56px;
+      margin-top:76px;
+      padding-top:54px;
       border-top:1px solid var(--line);
     }
     .people-head{
-      margin-bottom:32px;
       display:flex;
       justify-content:space-between;
-      gap:40px;
       align-items:end;
+      gap:40px;
+      margin-bottom:28px;
     }
     .people-head h3{
       margin:12px 0 0;
       font-family:Manrope,sans-serif;
       font-size:38px;
-      letter-spacing:-.045em;
       font-weight:500;
+      letter-spacing:-.045em;
     }
     .people-head p{
       margin:0;
-      max-width:560px;
+      max-width:580px;
       color:var(--muted);
       font-size:14px;
       line-height:1.7;
     }
     .people-grid{
       display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:22px;
-    }
-    .person{
-      padding:26px;
-      border-radius:22px;
-      border:1px solid var(--line);
-      background:#fff;
-    }
-    .person-top{
-      display:flex;
-      align-items:center;
+      grid-template-columns:repeat(3,minmax(0,1fr));
       gap:16px;
     }
+    .person{
+      min-width:0;
+      padding:22px;
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:20px;
+      background:#0b1117;
+      color:#fff;
+    }
     .person-photo{
-      width:66px;height:66px;
+      width:62px;
+      height:62px;
       border-radius:50%;
       overflow:hidden;
-      background:#edf2f6;
-      flex:0 0 auto;
+      background:#111923;
     }
-    .person-photo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
-    .person-kicker{
-      margin-bottom:5px;
-      color:#7a8da4;
-      font-size:9px;
-      font-weight:700;
-      letter-spacing:.09em;
-      text-transform:uppercase;
-    }
+    .person-photo img{width:100%;height:100%;object-fit:cover}
     .person h4{
-      margin:0;
-      font-family:Manrope,sans-serif;
-      font-size:22px;
-      letter-spacing:-.04em;
-      font-weight:500;
-    }
-    .person-role{
-      margin-top:6px;
-      color:#6c7886;
-      font-size:11px;
-      line-height:1.45;
-    }
-    .person-context{
       margin:22px 0 0;
-      color:#5a6776;
-      font-size:13px;
-      line-height:1.7;
+      font-family:Manrope,sans-serif;
+      font-size:20px;
+      font-weight:500;
+      letter-spacing:-.035em;
     }
-    .person-link{
-      margin-top:20px;
-      width:38px;height:38px;
-      display:grid;place-items:center;
-      border:1px solid #d8dee5;
-      border-radius:50%;
-      color:#111820;
-      transition:.2s ease;
+    .person h4 a{
+      color:inherit;
+      text-decoration:none;
     }
-    .person-link:hover{background:#0b1117;color:#fff;border-color:#0b1117}
-    .person-link svg{width:16px;height:16px;fill:currentColor}
+    .person h4 a:hover{color:#a8bfd9}
+    .person h4 a:focus-visible{
+      outline:2px solid #8ec4ff;
+      outline-offset:4px;
+      border-radius:2px;
+    }
 
-    /* ADMISSIONS */
+    /* PRODUCT SYSTEM */
     .product{
       padding:114px var(--page) 122px;
       background:var(--dark);
@@ -454,11 +420,15 @@
       margin:0 auto 42px;
       display:grid;
       grid-template-columns:minmax(0,1fr) minmax(360px,.52fr);
-      gap:clamp(64px,8vw,120px);
       align-items:end;
+      gap:clamp(64px,8vw,120px);
     }
-    .product .section-label{color:#8ec4ff}
-    .product h2{
+    .product-head>div,
+    .product-head>p{
+      min-width:0;
+    }
+    .product-head .section-label{color:#8ec4ff}
+    .product-head h2{
       margin:14px 0 0;
       max-width:860px;
       font-family:Manrope,sans-serif;
@@ -466,20 +436,58 @@
       line-height:1.03;
       letter-spacing:-.058em;
       font-weight:500;
+      overflow-wrap:normal;
+      word-break:normal;
     }
-    .product h2 span{display:block;color:#a8bfd9}
+    .product-head h2 span{
+      display:block;
+      color:#a8bfd9;
+    }
+    .product-head h2 .heading-line,
+    .field-copy h2 .heading-line{
+      display:block;
+    }
+    .product-head h2 .heading-line{
+      white-space:normal;
+    }
+    .field-copy h2 .heading-line{
+      white-space:normal;
+    }
     .product-head p{
       margin:0;
       max-width:520px;
-      color:#9aa4b0;
+      color:#99a4b0;
       font-size:15px;
       line-height:1.72;
+    }
+    .product-note{
+      width:min(var(--max),100%);
+      margin:0 auto 28px;
+      padding:18px 20px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:16px;
+      display:grid;
+      grid-template-columns:150px 1fr;
+      gap:28px;
+      background:rgba(255,255,255,.025);
+    }
+    .product-note strong{
+      color:#8ec4ff;
+      font-size:10px;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .product-note p{
+      margin:0;
+      color:#aeb7c2;
+      font-size:13px;
+      line-height:1.68;
     }
     .product-grid{
       width:min(var(--max),100%);
       margin:0 auto;
       display:grid;
-      grid-template-columns:repeat(3,1fr);
+      grid-template-columns:repeat(4,1fr);
       gap:18px;
     }
     .product-item{
@@ -508,8 +516,7 @@
     }
     .product-icon svg{
       width:19px;height:19px;
-      stroke:currentColor;
-      fill:none;
+      stroke:currentColor;fill:none;
       stroke-width:1.8;
       stroke-linecap:round;
       stroke-linejoin:round;
@@ -535,7 +542,7 @@
       line-height:1.7;
     }
 
-    /* PROJECTS */
+    /* PRODUCTS */
     .projects{
       padding:112px var(--page) 122px;
       background:#fff;
@@ -550,17 +557,16 @@
     }
     .projects-head h2{
       margin:14px 0 0;
-      max-width:900px;
+      max-width:880px;
       font-family:Manrope,sans-serif;
       font-size:clamp(48px,5vw,76px);
       line-height:1.02;
       letter-spacing:-.055em;
       font-weight:500;
     }
-    .projects-head h2 span{display:block;color:#8fa0b5}
     .projects-head p{
       margin:0;
-      max-width:540px;
+      max-width:520px;
       color:var(--muted);
       font-size:15px;
       line-height:1.7;
@@ -572,7 +578,7 @@
     }
     .project{
       display:grid;
-      grid-template-columns:48px minmax(280px,.72fr) minmax(0,1fr);
+      grid-template-columns:48px minmax(260px,.7fr) minmax(0,1fr);
       gap:26px 38px;
       padding:32px 0;
       border-bottom:1px solid var(--line);
@@ -639,39 +645,43 @@
     .field{
       padding:0 var(--page) 112px;
       background:var(--soft);
+      color:#fff;
     }
     .field-card{
       width:min(var(--max),100%);
       margin:0 auto;
+      min-height:620px;
       display:grid;
-      grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
-      align-items:stretch;
+      grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
       overflow:hidden;
       border-radius:28px;
       background:var(--dark);
-      color:#fff;
     }
     .field-copy{
       min-width:0;
-      min-height:470px;
-      padding:60px 54px;
+      padding:72px 58px;
       display:flex;
       flex-direction:column;
       justify-content:center;
+      overflow:hidden;
     }
     .field-copy .section-label{color:#8ec4ff}
     .field-copy h2{
       margin:18px 0 24px;
-      max-width:620px;
+      width:100%;
+      max-width:600px;
       font-family:Manrope,sans-serif;
       font-size:clamp(44px,4.2vw,66px);
-      line-height:1.04;
+      line-height:1.03;
       letter-spacing:-.058em;
       font-weight:500;
+      overflow-wrap:normal;
+      word-break:normal;
     }
-    .field-copy h2 span{
-      display:block;
-      color:#a8bfd9;
+    .field-copy h2 span{display:block;color:#a8bfd9}
+    .field-copy h2 .field-accent-inline{
+      display:inline !important;
+      color:#a8bfd9 !important;
     }
     .field-copy p{
       margin:0;
@@ -698,15 +708,15 @@
     }
     .field-photo{
       min-width:0;
-      height:470px;
+      min-height:620px;
       overflow:hidden;
-      background:#0c1623;
     }
     .field-photo img{
       width:100%;
       height:100%;
+      min-height:620px;
       object-fit:cover;
-      object-position:24% center;
+      object-position:center 45%;
     }
 
     /* OPERATING */
@@ -731,10 +741,9 @@
       letter-spacing:-.055em;
       font-weight:500;
     }
-    .operating-head h2 span{display:block;color:#8fa0b5}
     .operating-head p{
       margin:0;
-      max-width:560px;
+      max-width:540px;
       color:var(--muted);
       font-size:15px;
       line-height:1.72;
@@ -793,7 +802,10 @@
       letter-spacing:-.063em;
       font-weight:500;
     }
-    .principle h2 span{display:block;color:#a8bfd9}
+    .principle h2 span{
+      display:block;
+      color:#a8bfd9;
+    }
     .principle-grid{
       max-width:920px;
       margin:54px auto 0;
@@ -930,15 +942,17 @@
 
     @media(max-width:1100px){
       .impact-grid{grid-template-columns:1fr 1fr}
-      .product-grid{grid-template-columns:1fr}
+      .product-grid{grid-template-columns:1fr 1fr}
+      .people-grid{grid-template-columns:1fr}
       .footer-grid{grid-template-columns:1fr 1fr}
     }
 
-    @media(max-width:980px){
+    @media(max-width:1080px){
       .product-head{grid-template-columns:1fr;gap:28px}
+      .product-head h2{max-width:860px}
       .field-card{grid-template-columns:1fr}
-      .field-copy{min-height:auto;padding:52px 42px}
-      .field-photo{height:360px}
+      .field-photo{min-height:440px}
+      .field-photo img{min-height:440px}
     }
 
     @media(max-width:860px){
@@ -946,12 +960,12 @@
       .hero-bottom,.role-grid{grid-template-columns:1fr}
       .impact-head,.projects-head,.operating-head,.people-head{flex-direction:column;align-items:flex-start}
       .snapshot{grid-template-columns:1fr 1fr}
-      .people-grid{grid-template-columns:1fr}
       .project{grid-template-columns:40px 1fr}
       .project-body{grid-column:2}
       .work-list{grid-template-columns:1fr}
       .work-item:nth-child(odd){padding-right:0;border-right:0}
       .work-item:nth-child(even){padding-left:0}
+      .field-photo,.field-photo img{min-height:450px}
     }
 
     @media(max-width:640px){
@@ -963,342 +977,531 @@
       .hero{padding-top:58px;padding-bottom:80px}
       .hero-top{align-items:flex-start;flex-direction:column;margin-bottom:48px}
       .hero-meta{justify-content:flex-start}
-      .usm-mark{min-width:210px;min-height:64px}
-      .usm-mark img{height:30px}
+      .geo-mark{min-width:210px;min-height:64px}
+      .geo-mark img{height:27px}
       .hero h1{font-size:clamp(56px,15vw,78px)}
       .hero-description{font-size:15px}
-
       .impact,.role,.product,.projects,.operating,.principle{padding-top:82px;padding-bottom:88px}
-      .impact-grid,.snapshot,.principle-grid{grid-template-columns:1fr}
+      .impact-grid,.product-grid,.snapshot,.principle-grid{grid-template-columns:1fr}
       .impact-card{min-height:210px}
-      .role-main h2,.impact-head h2,.product h2,.projects-head h2,.operating-head h2,.principle h2{font-size:42px}
+      .role-main h2,.impact-head h2,.product-head h2,.projects-head h2,.operating-head h2,.principle h2{font-size:42px}
       .snapshot-item{border-right:0;border-bottom:1px solid var(--line)}
       .snapshot-item:last-child{border-bottom:0}
-
       .person{padding:22px}
       .project{grid-template-columns:30px 1fr;gap:16px}
       .project h3{font-size:27px}
-
       .field{padding:0 var(--page) 82px}
       .field-card{border-radius:20px}
-      .field-copy{padding:42px 26px}
+      .field-copy{padding:52px 26px}
       .field-copy h2{font-size:42px}
-      .field-photo{height:280px}
-
+      .product-head h2 .heading-line,
+      .field-copy h2 .heading-line{white-space:normal}
+      .field-photo,.field-photo img{min-height:330px}
       .project-nav-inner{grid-template-columns:1fr}
       .project-nav a:last-child{text-align:left;border-left:0;border-top:1px solid var(--line);padding-left:0}
-
       .footer-grid{grid-template-columns:1fr}
       .footer-bottom{flex-direction:column}
     }
-  </style>
+  
+    /* Match the Home grid and keep GeoVictoria's mark clean on white. */
+    :root{--page:8vw;--max:1520px}
+    .geo-mark{min-width:0;min-height:52px;padding:0;justify-content:flex-start;border:0;border-radius:0;background:transparent}
+    .geo-mark img{height:38px;max-width:220px}
+    .hero-description a,.hero-role strong a,.role-main p a,.snapshot-value a{color:inherit;text-decoration:underline;text-decoration-color:#bcc7d2;text-underline-offset:3px;transition:color .2s ease,text-decoration-color .2s ease}
+    .hero-description a:hover,.hero-role strong a:hover,.role-main p a:hover,.snapshot-value a:hover{color:var(--blue);text-decoration-color:var(--blue)}
+    @media(max-width:640px){
+      :root{--page:20px}
+      .geo-mark{min-width:0;min-height:46px}
+      .geo-mark img{height:34px}
+    }
+
+    /* Focused case-study refresh: tighter hierarchy, less repetition. */
+    .hero{padding-top:68px;padding-bottom:82px}
+    .hero-top{margin-bottom:48px}
+    .hero h1{font-size:clamp(64px,6.6vw,104px);max-width:1120px}
+    .hero-bottom{margin-top:42px}
+    .impact,.role,.projects,.operating{padding-top:84px;padding-bottom:92px}
+    .impact-head{margin-bottom:36px}
+    .impact-head h2,.role-main h2,.projects-head h2,.operating-head h2{font-size:clamp(40px,4.2vw,62px)}
+    .impact-card{min-height:174px;padding:24px;border-radius:18px}
+    .impact-card strong{font-size:clamp(48px,4vw,64px)}
+    .impact-card span{margin-top:18px}
+    .role-main h2{margin-bottom:22px}
+    .people{margin-top:56px;padding-top:42px}
+    .people-head h3{font-size:32px}
+    .product{padding-top:82px;padding-bottom:82px}
+    .product-head{margin-bottom:30px}
+    .product-head h2{font-size:clamp(40px,4.2vw,62px)}
+    .product-note{margin-bottom:0}
+    .project-list{max-width:var(--max)}
+    .project{padding:34px 0}
+    .project h3{font-size:clamp(24px,2.5vw,34px)}
+    .field{padding-bottom:84px}
+    .field-copy h2{font-size:clamp(40px,4.2vw,62px)}
+    .operating-head{margin-bottom:32px}
+    .work-item{min-height:108px}
+    @media(max-width:640px){
+      .hero{padding-top:46px;padding-bottom:64px}
+      .hero-top{margin-bottom:38px}
+      .hero h1{font-size:clamp(52px,13vw,68px)}
+      .impact,.role,.product,.projects,.operating{padding-top:64px;padding-bottom:68px}
+      .impact-card{min-height:138px;padding:20px}
+      .impact-card strong{font-size:54px}
+      .impact-card span{margin-top:12px}
+      .product-note{grid-template-columns:1fr;gap:10px}
+      .project{padding:26px 0}
+      .work-item{min-height:auto;padding-top:20px;padding-bottom:20px}
+    }
+\n  
+    /* Editorial case-study direction inspired by the reference layout. */
+    :root{--ink:#151a2c;--muted:#535d6c;--line:#dfe3e9;--soft:#f5f6f8;--blue:#2845db;--max:1360px}
+    .hero{padding:58px var(--page) 58px}
+    .hero-inner{width:min(var(--max),100%)}
+    .hero-top{margin-bottom:44px;align-items:center}
+    .hero-meta span{min-height:28px;padding:0 10px;border-radius:999px;font-size:10px}
+    .hero-layout{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(360px,.9fr);align-items:center;gap:clamp(48px,7vw,100px)}
+    .hero-copy{min-width:0}
+    .hero-kicker{margin-bottom:22px;font-size:10px;letter-spacing:.11em;text-transform:uppercase}
+    .hero h1,.impact-head h2,.role-main h2,.people-head h3,.product-head h2,.projects-head h2,.project h3,.operating-head h2{
+      font-family:Manrope,sans-serif;font-weight:500;letter-spacing:-.05em;line-height:1.04
+    }
+    .hero h1{max-width:660px;font-size:clamp(54px,6vw,82px);letter-spacing:-.04em;line-height:1.04}
+    .hero h1 span{color:#273253}
+    .hero-description{margin-top:24px;max-width:620px;font-size:15px;line-height:1.78}
+    .hero-role{margin-top:26px;padding-top:16px;border-top:1px solid var(--line)}
+    .hero-role strong{font-family:Inter,system-ui,sans-serif;font-size:14px;font-weight:600;letter-spacing:0}
+    .hero-role span{display:inline-block;margin:7px 12px 0 0;font-size:11px}
+    .hero-media{margin:0;min-width:0}
+    .hero-media img{width:100%;height:clamp(360px,42vw,540px);object-fit:cover;object-position:center 42%;border-radius:3px}
+    .hero-media figcaption{margin-top:9px;color:#747d89;font-size:10px;line-height:1.5}
+    .impact{display:flex;flex-direction:column;padding:0 var(--page) 78px;background:#fff}
+    .impact-grid{order:-1;padding:24px 0 22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);gap:0}
+    .impact-card{min-height:0;padding:8px 20px;border:0;border-right:1px solid var(--line);border-radius:0;background:transparent}
+    .impact-card:first-child{padding-left:0}
+    .impact-card:last-child{border-right:0}
+    .impact-card strong{font-family:Manrope,sans-serif;font-size:clamp(34px,4vw,50px);font-weight:500;letter-spacing:-.06em}
+    .impact-card span{margin-top:5px;max-width:190px;font-size:10px;line-height:1.5}
+    .impact-head{margin:64px auto 0;align-items:start}
+    .impact-head .section-label,.section-label{color:var(--blue);font-size:9px;letter-spacing:.12em}
+    .impact-head h2,.role-main h2,.projects-head h2,.operating-head h2{font-size:clamp(38px,3.6vw,50px)}
+    .impact-head p,.projects-head p,.operating-head p{font-size:14px;line-height:1.8}
+    .case-nav{position:sticky;top:76px;z-index:900;padding:14px var(--page);display:flex;gap:30px;background:rgba(255,255,255,.96);border-top:1px solid var(--line);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+    .case-nav a{color:var(--blue);font-size:10px;font-weight:600}
+    .case-nav a:hover{text-decoration:underline;text-underline-offset:4px}
+    #impact,#role,#products,#approach{scroll-margin-top:150px}
+    .role,.projects,.operating{padding-top:88px;padding-bottom:92px}
+    .role-grid{grid-template-columns:minmax(130px,.28fr) minmax(0,1.25fr);gap:clamp(40px,7vw,96px)}
+    .role-main h2{max-width:700px;font-size:clamp(38px,4.2vw,58px)}
+    .role-main>p{max-width:740px;font-size:14px;line-height:1.8}
+    .snapshot{margin-top:32px}
+    .snapshot-item{padding:18px 14px}
+    .snapshot-item:first-child{padding-left:0}
+    .snapshot-focus{gap:0}
+    .snapshot-focus span{padding:3px 11px 3px 0;border:0;border-radius:0;background:none;font-size:10px}
+    .snapshot-focus span+span:before{content:"·";margin-right:11px;color:#9aa2ac}
+    .people{margin-top:52px;padding-top:42px}
+    .people-grid{gap:28px}
+    .person{padding:0;border:0;border-radius:0;background:transparent}
+    .person-photo{width:48px;height:48px}
+    .person-context{font-size:12px}
+    .product{padding:82px var(--page);background:#f5f6f8;color:var(--ink)}
+    .product-head{margin-bottom:28px}
+    .product-head .section-label{color:var(--blue)}
+    .product-head h2{font-size:clamp(38px,4.2vw,58px)}
+    .product-head h2 span{color:#687287}
+    .product-head p,.product-note p{color:#586272}
+    .product-note{border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;padding:18px 0 0}
+    .product-note strong{color:var(--blue)}
+    .projects-head{align-items:start}
+    .project{grid-template-columns:40px minmax(220px,.7fr) minmax(0,1fr);padding:30px 0}
+    .project:hover{padding-left:0;padding-right:0;background:transparent}
+    .project-num,.project-type{color:var(--blue)}
+    .project h3{font-size:clamp(25px,2.8vw,36px)}
+    .project-meta{margin:13px 0 20px;gap:5px 12px}
+    .project-meta span{padding:0;border:0;border-radius:0;background:transparent;font-size:9px}
+    .project-meta span+span:before{content:"·";margin-right:12px;color:#9aa2ac}
+    .project-contribution strong{color:var(--blue)}
+    .operating-head{align-items:start}
+    .work-list{gap:0;border-top:1px solid var(--line)}
+    .work-item{min-height:120px;padding:24px 20px 24px 0;border-bottom:1px solid var(--line);background:transparent}
+    .work-item:nth-child(odd),.work-item:nth-child(even){padding-left:0;padding-right:24px;border-right:0}
+    .work-item strong{font-size:14px;line-height:1.55}
+    .work-num{color:var(--blue);font-size:12px;font-weight:600;letter-spacing:.05em}
+    .operating-head>div .section-label{font-size:10px}
+    .operating-head p{font-size:16px;line-height:1.75}
+    .work-item{grid-template-columns:48px minmax(0,1fr);gap:12px;min-height:126px;padding:26px 36px 26px 0;align-items:start}
+    .work-item:nth-child(odd){border-right:1px solid var(--line)}
+    .work-item:nth-child(even){padding-left:36px;padding-right:0}
+    .work-item strong{font-size:18px;line-height:1.45;letter-spacing:-.025em}
+    .work-num{font-size:13px}
+    @media(max-width:860px){
+      .operating-head p{font-size:15px}
+      .work-item strong{font-size:16px}
+      .work-item{min-height:116px;padding-top:22px;padding-bottom:22px}
+    }
+    @media(max-width:640px){
+      .operating-head p{font-size:15px}
+      .work-item,.work-item:nth-child(odd),.work-item:nth-child(even){min-height:0;padding:19px 0;border-right:0}
+      .work-item strong{font-size:16px;line-height:1.5}
+    }
+    @media(max-width:860px){
+      .hero-layout{grid-template-columns:1fr 0.9fr;gap:36px}
+      .hero h1{font-size:clamp(48px,6vw,68px)}
+      .case-nav{gap:22px}
+      .impact-head,.projects-head,.operating-head{flex-direction:row;align-items:start}
+      .work-list{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:640px){
+      .hero{padding-top:38px;padding-bottom:38px}
+      .hero-top{margin-bottom:34px}
+      .hero-layout{grid-template-columns:1fr;gap:26px}
+      .hero h1{font-size:clamp(48px,13vw,64px)}
+      .hero-media{order:-1}
+      .hero-media img{height:300px}
+      .hero-description{font-size:14px}
+      .impact{padding-bottom:58px}
+      .impact-grid{grid-template-columns:1fr 1fr;padding:12px 0;row-gap:0}
+      .impact-card{padding:14px 10px;border-right:0;border-bottom:1px solid var(--line)}
+      .impact-card:nth-child(odd){padding-left:0;border-right:1px solid var(--line)}
+      .impact-card:nth-child(even){padding-right:0}
+      .impact-card:nth-last-child(-n+2){border-bottom:0}
+      .impact-card strong{font-size:38px}
+      .impact-card span{max-width:160px}
+      .impact-head{margin-top:42px;flex-direction:column}
+      .case-nav{top:68px;gap:0;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+      .case-nav a{font-size:9px}
+      .role,.projects,.operating{padding-top:64px;padding-bottom:68px}
+      .role-grid{grid-template-columns:1fr;gap:20px}
+      .snapshot{grid-template-columns:1fr 1fr}
+      .snapshot-item:nth-child(2){border-right:0}
+      .snapshot-focus{gap:4px}
+      .product{padding-top:64px;padding-bottom:64px}
+      .product-head{gap:18px}
+      .product-note{grid-template-columns:1fr;gap:8px}
+      .project{grid-template-columns:28px 1fr;gap:14px;padding:24px 0}
+      .project-body{grid-column:2}
+      .work-list{grid-template-columns:1fr}
+      .work-item:nth-child(odd),.work-item:nth-child(even){padding-right:0}
+    }
+
+  
+    /* GeoVictoria people and product sections follow the Low case-study rhythm. */
+    .people-section{
+      padding:0 var(--page) 84px;
+      background:#fff;
+    }
+    .people-container{width:min(var(--max),100%);margin:0 auto}
+    .people{margin:0;padding-top:54px;border-top:1px solid var(--line)}
+    .people-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:40px;
+      margin-bottom:28px;
+    }
+    .people-head h3{
+      margin:12px 0 0;
+      font-family:Manrope,sans-serif;
+      font-size:38px;
+      font-weight:500;
+      letter-spacing:-.045em;
+    }
+    .people-head p{margin:0;max-width:580px;color:#64707e;font-size:14px;line-height:1.7}
+    .people-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .person{
+      min-width:0;
+      padding:22px;
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:20px;
+      background:#0b1117;
+      color:#fff;
+    }
+    .person-photo{width:62px;height:62px;border-radius:50%;overflow:hidden;background:#111923}
+    .person-photo img{width:100%;height:100%;object-fit:cover}
+    .person h4{margin:22px 0 0;font-family:Manrope,sans-serif;font-size:20px;font-weight:500;letter-spacing:-.035em}
+    .person h4 a{color:inherit;text-decoration:none}
+    .person h4 a:hover{color:#a8bfd9}
+    .person h4 a:focus-visible{outline:2px solid #8ec4ff;outline-offset:4px;border-radius:2px}
+
+    .projects{padding:112px var(--page) 122px;background:#fff}
+    .projects-head{
+      width:min(var(--max),100%);margin:0 auto 46px;
+      display:flex;justify-content:space-between;align-items:end;gap:50px;
+    }
+    .projects-head h2{
+      margin:14px 0 0;max-width:860px;font-family:Manrope,sans-serif;
+      font-size:clamp(48px,5vw,76px);line-height:1.02;letter-spacing:-.055em;font-weight:500;
+    }
+    .projects-head p{margin:0;max-width:520px;color:var(--muted);font-size:15px;line-height:1.7}
+    .project-list{width:min(var(--max),100%);margin:0 auto;border-top:1px solid var(--line)}
+    .geo-product-card{
+      display:grid;
+      grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+      gap:clamp(34px,6vw,88px);
+      align-items:center;
+      padding:48px 0;
+      border-bottom:1px solid var(--line);
+    }
+    .geo-product-card--reverse .geo-product-card__visual{grid-column:2;grid-row:1}
+    .geo-product-card--reverse .geo-product-card__content{grid-column:1;grid-row:1}
+    .geo-product-card__visual{
+      min-width:0;overflow:hidden;aspect-ratio:1.45;
+      display:grid;place-items:center;border-radius:20px;
+      background:linear-gradient(135deg,#f6f9fc,#eaf5fb);
+    }
+    .geo-product-card__visual img{
+      display:block;width:100%;height:100%;padding:18px;
+      object-fit:contain;
+    }
+    .geo-product-card__content{min-width:0;display:flex;flex-direction:column;align-items:flex-start}
+    .geo-product-card__meta{
+      display:flex;flex-wrap:wrap;align-items:center;gap:14px;
+      color:#748397;font-size:10px;font-weight:700;letter-spacing:.1em;line-height:1.5;text-transform:uppercase;
+    }
+    .geo-product-card__meta span:first-child{color:var(--blue)}
+    .geo-product-card h3{
+      margin:22px 0 18px;font-family:Manrope,sans-serif;
+      font-size:clamp(32px,3.5vw,52px);font-weight:500;line-height:1.08;letter-spacing:-.055em;
+    }
+    .geo-product-card__content>p{margin:0;color:#64707e;font-size:14px;line-height:1.75}
+    .geo-product-card .project-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+    .geo-product-card .project-meta span{
+      padding:7px 10px;border:1px solid #dce2e9;border-radius:999px;
+      color:#526172;font-size:9px;font-weight:600;
+    }
+    .geo-product-card__contribution{
+      display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;
+      width:100%;margin-top:24px;padding-top:18px;border-top:1px solid var(--line);
+    }
+    .geo-product-card__contribution span{
+      color:#728198;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    }
+    .geo-product-card__contribution p{margin:0;color:#64707e;font-size:12px;line-height:1.7}
+
+    .geo-cta{padding:clamp(76px,9vw,128px) var(--page);background:var(--dark);color:#fff}
+    .geo-cta-inner{width:min(var(--max),100%);margin:0 auto}
+    .geo-cta .section-label{color:#8ec4ff;text-transform:none;letter-spacing:0}
+    .geo-cta-links .cta-arrow{
+      display:inline-block;width:15px;height:15px;margin-left:6px;vertical-align:-2px;
+      fill:none;stroke:#8ec4ff;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s ease;
+    }
+    .geo-cta-links>a:hover .cta-arrow{transform:translate(2px,-2px)}
+    .geo-cta h2{
+      margin:18px 0 14px;max-width:900px;font-family:Manrope,sans-serif;
+      font-size:clamp(52px,6.5vw,92px);font-weight:500;line-height:1.01;letter-spacing:-.065em;
+    }
+    .geo-cta-inner>p{margin:0;max-width:640px;color:#aeb8c3;font-size:15px;line-height:1.7}
+    .geo-cta-links{margin-top:52px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.16)}
+    .geo-cta-links>a{min-width:0;padding:22px 22px 0 0;display:flex;flex-direction:column;gap:13px;color:#fff}
+    .geo-cta-links>a+a{padding-left:24px;border-left:1px solid rgba(255,255,255,.16)}
+    .geo-cta-links>a>span{color:#91a1b2;font-size:10px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+    .geo-cta-links strong{font-family:Manrope,sans-serif;font-size:clamp(18px,2vw,24px);font-weight:500;letter-spacing:-.025em}
+    .geo-cta-links>a:hover strong{color:#a8bfd9}
+    @media(max-width:860px){
+      .people-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .people-head,.projects-head{flex-direction:column;align-items:flex-start;gap:22px}
+      .geo-product-card{gap:32px}
+      .geo-product-card h3{font-size:clamp(28px,4vw,40px)}
+    }
+    @media(max-width:640px){
+      .people-section{padding-bottom:68px}
+      .people-head{margin-bottom:24px}
+      .people-head h3{font-size:32px}
+      .people-grid{grid-template-columns:1fr}
+      .projects{padding-top:68px;padding-bottom:72px}
+      .projects-head{margin-bottom:30px}
+      .projects-head h2{font-size:clamp(40px,10vw,58px)}
+      .geo-product-card,.geo-product-card--reverse{grid-template-columns:1fr;gap:22px;padding:26px 0}
+      .geo-product-card__visual,.geo-product-card--reverse .geo-product-card__visual{grid-column:1;grid-row:1;aspect-ratio:1.3}
+      .geo-product-card__content,.geo-product-card--reverse .geo-product-card__content{grid-column:1;grid-row:2}
+      .geo-product-card__visual img{padding:12px}
+      .geo-product-card__contribution{grid-template-columns:1fr;gap:8px}
+      .geo-product-card h3{margin:16px 0 14px}
+      .geo-cta{padding:68px var(--page) 72px}
+      .geo-cta h2{font-size:clamp(44px,11vw,64px)}
+      .geo-cta-links{grid-template-columns:1fr;margin-top:34px}
+      .geo-cta-links>a,.geo-cta-links>a+a{padding:18px 0;border-left:0;border-bottom:1px solid rgba(255,255,255,.16)}
+    }
+
+    /* Geo team cards follow the compact LowSignal photo-and-name pills. */
+    .people-section .people-grid{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:flex-start;
+      gap:10px;
+      max-width:870px;
+    }
+    .people-section .person{
+      width:max-content;
+      max-width:100%;
+      min-height:90px;
+      padding:8px 18px 8px 8px;
+      display:flex;
+      align-items:center;
+      gap:14px;
+      flex:0 0 auto;
+      border:1px solid #d9dde3;
+      border-radius:999px;
+      background:#f7f8fa;
+      color:var(--ink);
+      transition:border-color .2s ease,background .2s ease,transform .2s ease;
+    }
+    .people-section .person:hover{
+      border-color:#b8c6d7;
+      background:#fff;
+      transform:translateY(-2px);
+    }
+    .people-section .person-photo{
+      width:68px;
+      height:68px;
+      margin:0;
+      flex:0 0 68px;
+      border-radius:50%;
+      overflow:hidden;
+      background:#e7ebef;
+    }
+    .people-section .person-photo img{display:block;width:100%;height:100%;object-fit:cover}
+    .people-section .person h4{
+      margin:0;
+      min-width:0;
+      color:var(--ink);
+      font-size:19px;
+      line-height:1.25;
+      letter-spacing:-.035em;
+    }
+    .people-section .person h4 a{color:var(--ink);text-decoration:none}
+    .people-section .person h4 a:hover{color:var(--blue);text-decoration:underline}
+    .people-section .person h4 a:focus-visible{outline:2px solid var(--blue);outline-offset:4px;border-radius:2px}
+    @media(max-width:640px){
+      .people-section .people-grid{max-width:100%;gap:10px}
+      .people-section .person{min-height:88px;padding:9px 18px 9px 9px;gap:14px}
+      .people-section .person-photo{width:68px;height:68px;flex-basis:68px}
+      .people-section .person h4{font-size:17px}
+    }
+  
+    /* Scroll reveal, matching the LowSignal case study. */
+    .scroll-reveal{
+      opacity:0;
+      transform:translate3d(0,14px,0);
+      transition:opacity .65s cubic-bezier(.2,.7,.2,1),transform .65s cubic-bezier(.2,.7,.2,1);
+      transition-delay:var(--reveal-delay,0ms);
+    }
+    .scroll-reveal.is-visible{opacity:1;transform:translate3d(0,0,0)}
+    @media(prefers-reduced-motion:reduce){
+      .scroll-reveal,.scroll-reveal.is-visible{opacity:1;transform:none;transition:none}
+    }
+  
+
+/* USM wordmark: keep the original full-colour mark on the page background. */
+.usm-mark{min-width:0;min-height:0;padding:0;justify-content:flex-start;border:0;border-radius:0;background:transparent}
+.usm-mark img{width:auto;height:38px;max-width:220px;object-fit:contain;filter:none}
+@media(max-width:640px){.usm-mark{min-height:42px;padding:0 6px}.usm-mark img{height:30px}}
+</style>
 </head>
 <body>
-
-<header class="nav">
-  <a class="brand" href="/">Felipe Quiroz</a>
-
-  <nav class="nav-center" aria-label="Primary">
-    <a href="/#work" class="active">Work</a>
-    <a href="/about">About</a>
-    <a href="/now">Now</a>
-    <a href="/blog">Blog</a>
-  </nav>
-
-  <div class="nav-right">
-    <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a class="lang" href="/es/usm" aria-label="Switch language">ES</a>
-  </div>
-</header>
-
+<header class="nav"><a class="brand" href="/">Felipe Quiroz</a><nav class="nav-center" aria-label="Main navigation"><a href="/#work" class="active">Work</a><a href="/about">About</a><a href="/now">Now</a><a href="/blog">Blog</a></nav><div class="nav-right"><a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a><a class="lang" href="/es/usm" aria-label="Cambiar a español">ES</a></div></header>
 <main>
-
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-top">
-        <a class="usm-mark" href="https://usm.cl/" target="_blank" rel="noopener noreferrer" aria-label="Visit USM">
-          <img src="/logos/logo-usm.png" onerror="this.onerror=null;this.src='/logo-usm.png';" alt="Universidad Técnica Federico Santa María">
-        </a>
-
-        <div class="hero-meta">
-          <span>Selected Work / 04</span>
-          <span>2023 – 2025</span>
-          <span>Higher Education</span>
-        </div>
-      </div>
-
-      <div class="hero-kicker">Admissions / Operations / Growth</div>
-      <h1>Systems inside<span>higher education.</span></h1>
-
-      <div class="hero-bottom">
-        <p class="hero-description">Across two roles at USM, I led admissions growth and academic operations, coordinating teams, CRM, partnerships, events, reporting and course execution across Campus Casa Central Valparaíso and Campus Vitacura.</p>
-
-        <div class="hero-role">
-          <strong>USM</strong>
-          <span>Admissions Promotion Coordinator · Assistant Coordinator</span>
-          <span>Universidad Técnica Federico Santa María · Chile</span>
-          <a class="hero-site" href="https://usm.cl/" target="_blank" rel="noopener noreferrer">usm.cl ↗</a>
-        </div>
-      </div>
+<section class="hero"><div class="hero-inner">
+  <div class="hero-top">
+    <a class="geo-mark usm-mark" href="https://usm.cl/" target="_blank" rel="noopener noreferrer" aria-label="Visit Universidad Técnica Federico Santa María"><img src="/images/logo-usm.svg" alt="Universidad Técnica Federico Santa María"></a>
+    <div class="hero-meta"><span>Selected Work / 04</span><span>2023 – 2025</span><span>Higher Education</span></div>
+  </div>
+  <div class="hero-layout">
+    <div class="hero-copy">
+      <div class="hero-kicker">Admissions / Academic operations / Growth</div>
+      <h1>Growth &amp; operations<span>in higher education.</span></h1>
+      <p class="hero-description">Across two roles at USM, I worked across admissions growth and academic operations, coordinating teams, CRM, partnerships, events and course delivery between Casa Central Valparaíso and Vitacura.</p>
+      <div class="hero-role"><strong>Admissions Promotion Coordinator · Assistant Coordinator</strong><span><a href="https://usm.cl/" target="_blank" rel="noopener noreferrer">Universidad Técnica Federico Santa María</a> · Business School</span><span>Chile · 2023–2025</span></div>
     </div>
-  </section>
-
-  <section class="impact">
-    <div class="impact-head">
-      <div>
-        <div class="section-label">Impact</div>
-        <h2>From acquisition to consistent operations.</h2>
-      </div>
-      <p>I connected acquisition, follow-up, stakeholder coordination and academic operations to turn different needs into clear, repeatable processes.</p>
-    </div>
-
-    <div class="impact-grid">
-      <article class="impact-card"><strong>1,000+</strong><span>Prospective students reached</span></article>
-      <article class="impact-card"><strong>400+</strong><span>Students in operation</span></article>
-      <article class="impact-card"><strong>12+</strong><span>Sections coordinated</span></article>
-      <article class="impact-card"><strong>50+</strong><span>Team members coordinated across admissions initiatives</span></article>
-    </div>
-  </section>
-
-  <section class="role">
-    <div class="role-grid">
-      <div class="section-label">Role</div>
-
-      <div class="role-main">
-        <h2>Two roles.<span>One operating mindset.</span></h2>
-        <p>I worked across admissions promotion and academic operations. In both roles, I was responsible for turning goals into clear processes, coordinating teams and stakeholders, and using data and reporting to make execution more consistent at scale.</p>
-
-        <div class="snapshot">
-          <div class="snapshot-item"><div class="snapshot-label">Company</div><div class="snapshot-value">USM</div></div>
-          <div class="snapshot-item"><div class="snapshot-label">Period</div><div class="snapshot-value">2023 – 2025</div></div>
-          <div class="snapshot-item"><div class="snapshot-label">Context</div><div class="snapshot-value">Higher Education</div></div>
-          <div class="snapshot-item"><div class="snapshot-label">Focus</div><div class="snapshot-value">Admissions · Operations</div></div>
-        </div>
-
-        <div class="snapshot-focus">
-          <span>CRM</span>
-          <span>Marketing</span>
-          <span>Partnerships</span>
-          <span>Operations</span>
-          <span>Reporting</span>
-        </div>
-
-        <div class="people">
-          <div class="people-head">
-            <div>
-              <div class="section-label">Key people</div>
-              <h3>Built through coordination.</h3>
-            </div>
-            <p>Two working relationships that help explain how I operated across admissions, academic coordination and execution.</p>
-          </div>
-
-          <div class="people-grid">
-            <article class="person">
-              <div class="person-top">
-                <div class="person-photo"><img src="/images/karen-radonich.jpg" onerror="this.onerror=null;this.src='/karen-radonich.jpg';" alt="Karen Radonich"></div>
-                <div>
-                  <div class="person-kicker">Leadership · Admissions</div>
-                  <h4>Karen Radonich</h4>
-                  <div class="person-role">Director General of Admissions</div>
-                </div>
-              </div>
-              <p class="person-context">I worked directly with Karen on admissions strategy, recruitment and execution across the applicant funnel.</p>
-              <a class="person-link" href="https://cl.linkedin.com/in/karen-radonich-36114a2b0" target="_blank" rel="noopener noreferrer" aria-label="Karen Radonich on LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg></a>
-            </article>
-
-            <article class="person">
-              <div class="person-top">
-                <div class="person-photo"><img src="/images/javier-robledo.jpg" onerror="this.onerror=null;this.src='/javier-robledo.jpg';" alt="Javier Robledo"></div>
-                <div>
-                  <div class="person-kicker">Leadership · Programming</div>
-                  <h4>Javier Robledo</h4>
-                  <div class="person-role">Programming Coordinator</div>
-                </div>
-              </div>
-              <p class="person-context">I worked directly with Javier on course operations, coordination, reporting and execution across multiple sections.</p>
-              <a class="person-link" href="https://www.linkedin.com/in/javierrobledo/" target="_blank" rel="noopener noreferrer" aria-label="Javier Robledo on LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.2 8.4H3.3V18h2.9V8.4Zm.2-3A1.7 1.7 0 1 0 3 5.4a1.7 1.7 0 0 0 3.4 0ZM17.8 8.2c-1.6 0-2.7.9-3.2 1.7h-.1V8.4h-2.8V18h2.9v-4.8c0-1.3.2-2.5 1.8-2.5 1.6 0 1.6 1.5 1.6 2.6V18h2.9v-5.3c0-2.6-.6-4.5-3.1-4.5Z"/></svg></a>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="product">
-    <div class="product-head">
-      <div>
-        <div class="section-label">Admissions</div>
-        <h2>From attracting interest.<span>To building follow-up.</span></h2>
-      </div>
-      <p>Admissions was not only marketing. I led a 50+ person outreach team across events, school engagement and recruitment initiatives, combining CRM, partnerships, campaigns and follow-up to strengthen acquisition and applicant conversion.</p>
-    </div>
-
-    <div class="product-grid">
-      <article class="product-item">
-        <div class="product-top"><div class="product-num">01</div><div class="product-icon"><svg viewBox="0 0 24 24"><path d="M5 18 19 6"/><path d="M11 6h8v8"/></svg></div></div>
-        <h3>Acquisition</h3>
-        <div class="product-type">Demand</div>
-        <p>Campaigns, school visits, webinars and events to generate and capture interest.</p>
-      </article>
-
-      <article class="product-item">
-        <div class="product-top"><div class="product-num">02</div><div class="product-icon"><svg viewBox="0 0 24 24"><path d="M5 7h14"/><path d="M5 12h9"/><path d="M5 17h12"/></svg></div></div>
-        <h3>CRM</h3>
-        <div class="product-type">Follow-up</div>
-        <p>Processes and tools to make applicant progress visible and organize follow-up.</p>
-      </article>
-
-      <article class="product-item">
-        <div class="product-top"><div class="product-num">03</div><div class="product-icon"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3 20c.6-4 2.4-6 5-6s4.4 2 5 6"/><path d="M11 20c.6-4 2.4-6 5-6s4.4 2 5 6"/></svg></div></div>
-        <h3>Partnerships</h3>
-        <div class="product-type">Reach</div>
-        <p>Relationships with schools, student organizations and internal teams to extend coverage.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="projects">
-    <div class="projects-head">
-      <div>
-        <div class="section-label">Selected work</div>
-        <h2>Two workstreams.<span>One execution system.</span></h2>
-      </div>
-      <p>Admissions and academic operations look different, but both depend on coordination, visibility and clear processes.</p>
-    </div>
-
-    <div class="project-list">
-      <article class="project">
-        <div class="project-num">01</div>
-        <div>
-          <div class="project-type">Growth · Admissions</div>
-          <h3>Acquisition and follow-up system</h3>
-        </div>
-        <div class="project-body">
-          <p>A multi-channel acquisition and follow-up system combining marketing, CRM, partnerships, events, school engagement and lead management to strengthen positioning, qualified demand and applicant conversion.</p>
-          <div class="project-meta"><span>Marketing</span><span>CRM</span><span>Partnerships</span><span>Events</span></div>
-          <p class="project-contribution"><strong>My contribution</strong>I led multi-channel recruitment initiatives and a 50+ person outreach team, connecting campaigns, events, school relationships and CRM processes to improve follow-up, pipeline visibility and applicant engagement.</p>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="project-num">02</div>
-        <div>
-          <div class="project-type">Operations · Higher education</div>
-          <h3>Academic operations at scale</h3>
-        </div>
-        <div class="project-body">
-          <p>Academic and operational coordination of Programming & Data Processing for Management across 12+ sections, 400+ students and two campuses, supporting course delivery in Excel, VBA, data processing, automation and applied programming while maintaining consistent standards.</p>
-          <div class="project-meta"><span>12+ sections</span><span>400+ students</span><span>Excel · VBA</span><span>Reporting</span></div>
-          <p class="project-contribution"><strong>My contribution</strong>I coordinated instructors, teaching assistants, workflows, communication and assessment processes, while building tracking and reporting systems to monitor student progress, identify academic risks and improve consistency across sections.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="field">
-    <div class="field-card">
-      <div class="field-copy">
-        <div class="section-label">Work in context</div>
-        <h2>Execution is built<span>close to people.</span></h2>
-        <p>Fairs, activities, team coordination and institutional spaces were part of the work. That is where real student and operational needs became decisions and improvements.</p>
-        <div class="field-meta"><span>USM</span><span>Admissions</span><span>Santiago</span></div>
-      </div>
-
-      <div class="field-photo">
-        <img src="/images/usm-ai-future-students-2024.jpg" alt="USM admissions and future students">
-      </div>
-    </div>
-  </section>
-
-  <section class="operating">
-    <div class="operating-head">
-      <div>
-        <div class="section-label">Operating system</div>
-        <h2>From need<span>to execution.</span></h2>
-      </div>
-      <p>Looking back, USM was an early stage where several ideas that still shape my work were already present: understand context, organize signals, coordinate actors and turn learning into repeatable processes.</p>
-    </div>
-
-    <div class="work-list">
-      <div class="work-item"><div class="work-num">01</div><strong>Understand the context and need</strong></div>
-      <div class="work-item"><div class="work-num">02</div><strong>Design campaigns, processes and tools</strong></div>
-      <div class="work-item"><div class="work-num">03</div><strong>Lead teams, define ownership and standardize execution across sections and campuses</strong></div>
-      <div class="work-item"><div class="work-num">04</div><strong>Build tracking and reporting systems to identify risks and support data-driven decisions</strong></div>
-      <div class="work-item"><div class="work-num">05</div><strong>Adjust processes from learning</strong></div>
-      <div class="work-item"><div class="work-num">06</div><strong>Build consistency before scaling</strong></div>
-    </div>
-  </section>
-
-  <section class="principle">
-    <div class="principle-inner">
-      <div class="section-label">Working principles</div>
-      <h2>Two principles.<span>One way of operating.</span></h2>
-
-      <div class="principle-grid">
-        <article class="principle-item">
-          <small>01 / Growth</small>
-          <strong>Make the funnel visible.</strong>
-          <p>Connect acquisition, follow-up and conversion.</p>
-        </article>
-
-        <article class="principle-item">
-          <small>02 / Operations</small>
-          <strong>Make complexity repeatable.</strong>
-          <p>Clear processes, coordination and continuous improvement.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="project-nav">
-    <div class="project-nav-inner">
-      <a href="/tethereducation">
-        <div class="project-nav-label">Previous project</div>
-        <strong>TetherEd</strong>
-      </a>
-      <a href="/geovictoria">
-        <div class="project-nav-label">Next project</div>
-        <strong>GeoVictoria</strong>
-      </a>
-    </div>
-  </section>
-
+    <figure class="hero-media"><img src="/images/usm-admissions-community.jpg" alt="USM admissions community and prospective students" loading="eager" fetchpriority="high" decoding="async"><figcaption>Admissions outreach at USM.</figcaption></figure>
+  </div>
+</div></section>
+<section class="impact" id="impact"><div class="impact-head"><div><div class="section-label">Impact</div><h2>From acquisition to consistent operations.</h2></div><p>I connected acquisition, follow-up, stakeholder coordination and academic operations to turn different needs into clear, repeatable processes.</p></div>
+  <div class="impact-grid">
+    <article class="impact-card"><strong>1,000+</strong><span>Prospective students reached</span></article>
+    <article class="impact-card"><strong>400+</strong><span>Students supported through course operations</span></article>
+    <article class="impact-card"><strong>12+</strong><span>Course sections coordinated</span></article>
+    <article class="impact-card"><strong>50+</strong><span>Team members coordinated across admissions initiatives</span></article>
+  </div>
+</section>
+<section class="role" id="role"><div class="role-grid"><div class="section-label">Role</div><div class="role-main">
+  <h2>Two roles.<span>One operating mindset.</span></h2>
+  <p>I worked across admissions promotion and academic operations. In both roles, I turned goals into clear processes, coordinated teams and stakeholders, and used data and reporting to make execution more consistent.</p>
+  <div class="snapshot">
+    <div class="snapshot-item"><div class="snapshot-label">Institution</div><div class="snapshot-value">USM</div></div>
+    <div class="snapshot-item"><div class="snapshot-label">Area</div><div class="snapshot-value">Business School</div></div>
+    <div class="snapshot-item"><div class="snapshot-label">Period</div><div class="snapshot-value">2023 – 2025</div></div>
+    <div class="snapshot-item"><div class="snapshot-label">Focus</div><div class="snapshot-value">Admissions · Operations</div></div>
+  </div>
+  <div class="snapshot-focus"><span>CRM</span><span>Marketing</span><span>Partnerships</span><span>Operations</span><span>Reporting</span></div>
+</div></div></section>
+<section class="people-section" id="people"><div class="people-container"><div class="people">
+  <div class="people-head"><div><div class="section-label">Key people</div><h3>The people behind the work.</h3></div><p>Admissions strategy and academic delivery took shape through close coordination with leaders across both areas.</p></div>
+  <div class="people-grid">
+    <article class="person"><div class="person-photo"><img src="/images/karen-radonich.jpg" alt="Karen Radonich" loading="lazy"></div><h4><a href="https://cl.linkedin.com/in/karen-radonich-36114a2b0" target="_blank" rel="noopener noreferrer">Karen Radonich</a></h4></article>
+    <article class="person"><div class="person-photo"><img src="/images/javier-robledo.jpg" alt="Javier Robledo" loading="lazy"></div><h4><a href="https://www.linkedin.com/in/javierrobledo/" target="_blank" rel="noopener noreferrer">Javier Robledo</a></h4></article>
+  </div>
+</div></div></section>
+<section class="product" id="admissions"><div class="product-head"><div><div class="section-label">Admissions</div><h2><span class="heading-line">From attracting interest.</span><span class="heading-line">To building follow-up.</span></h2></div><p>Admissions went beyond marketing. I led a 50+ person outreach team across events, school engagement and recruitment initiatives, connecting campaigns, partnerships and CRM follow-up to strengthen applicant engagement.</p></div></section>
+<section class="projects" id="work"><div class="projects-head"><div><div class="section-label">Selected work</div><h2>Two workstreams.<br>One execution system.</h2></div><p>Admissions and academic operations look different, but both depend on coordination, visibility and clear processes.</p></div>
+  <div class="project-list">
+    <article class="geo-product-card"><div class="geo-product-card__visual"><img src="/images/usm-admissions-team-san.jpg" alt="USM admissions team coordinating student outreach" loading="lazy" decoding="async"></div><div class="geo-product-card__content">
+      <div class="geo-product-card__meta"><span>01 / 02</span><span>Growth · Admissions</span></div><h3>Acquisition and follow-up</h3>
+      <p>A multi-channel system connecting campaigns, CRM, partnerships, events, school engagement and lead management to strengthen qualified demand and applicant conversion.</p>
+      <div class="project-meta"><span>Marketing</span><span>CRM</span><span>Partnerships</span><span>Events</span></div>
+      <div class="geo-product-card__contribution"><span>My contribution</span><p>I led recruitment initiatives and a 50+ person outreach team, bringing campaigns, events, school relationships and CRM processes together to improve follow-up, pipeline visibility and applicant engagement.</p></div>
+    </div></article>
+    <article class="geo-product-card geo-product-card--reverse"><div class="geo-product-card__visual"><img src="/images/usm-ai-future-students-2024.jpg" alt="Future students learning about USM" loading="lazy" decoding="async"></div><div class="geo-product-card__content">
+      <div class="geo-product-card__meta"><span>02 / 02</span><span>Operations · Higher education</span></div><h3>Academic operations at scale</h3>
+      <p>Course operations for Programming &amp; Data Processing for Management across 12+ sections, 400+ students and two campuses, supporting Excel, VBA, data processing and applied programming.</p>
+      <div class="project-meta"><span>12+ sections</span><span>400+ students</span><span>Two campuses</span><span>Reporting</span></div>
+      <div class="geo-product-card__contribution"><span>My contribution</span><p>I coordinated instructors, teaching assistants, workflows, communications and assessments, using tracking and reporting to support progress, surface risks and keep delivery consistent across sections.</p></div>
+    </div></article>
+  </div>
+</section>
+<section class="operating" id="approach"><div class="operating-head"><div><div class="section-label">How I work</div><h2>From need to execution.</h2></div><p>USM brought together the operating habits that still guide my work: understand the context, organize the signals, coordinate the people and make the process repeatable.</p></div>
+  <div class="work-list">
+    <div class="work-item"><div class="work-num">01</div><strong>Understand the context and the need</strong></div>
+    <div class="work-item"><div class="work-num">02</div><strong>Design the campaigns, processes and tools</strong></div>
+    <div class="work-item"><div class="work-num">03</div><strong>Coordinate teams across sections and campuses</strong></div>
+    <div class="work-item"><div class="work-num">04</div><strong>Make progress, risks and decisions visible</strong></div>
+    <div class="work-item"><div class="work-num">05</div><strong>Adjust the process as the team learns</strong></div>
+    <div class="work-item"><div class="work-num">06</div><strong>Build consistency before scaling</strong></div>
+  </div>
+</section>
+<section class="geo-cta"><div class="geo-cta-inner"><div class="section-label">USM · Business School</div><h2>Keep exploring.</h2><p>Learn more about USM, explore my work, or get in touch.</p><div class="geo-cta-links">
+  <a href="https://usm.cl/" target="_blank" rel="noopener noreferrer"><span>The institution</span><strong>Visit USM <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></strong></a>
+  <a href="/#work"><span>Selected work</span><strong>Explore my work <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></strong></a>
+  <a href="https://calendly.com/felipe-lowsignal/30min" target="_blank" rel="noopener noreferrer"><span>Let’s talk</span><strong>Book a conversation <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M5 4h7v7"/></svg></strong></a>
+</div></div></section>
+<section class="project-nav"><div class="project-nav-inner">
+  <a href="/tethered/tether-studio"><div class="project-nav-label">Previous project</div><strong>Tether Studio</strong></a>
+  <a href="/geovictoria"><div class="project-nav-label">Next project</div><strong>GeoVictoria</strong></a>
+</div></section>
 </main>
-
-<footer class="footer">
-  <div class="footer-grid">
-    <div>
-      <div class="footer-brand">Felipe Quiroz</div>
-      <div class="footer-copy">Product, Growth & Operations. Building products, growth systems and companies across technology and business.</div>
-    </div>
-
-    <div class="footer-col">
-      <strong>Explore</strong>
-      <a href="/#work">Work</a>
-      <a href="/about">About</a>
-      <a href="/now">Now</a>
-      <a href="/blog">Blog</a>
-    </div>
-
-    <div class="footer-col">
-      <strong>Social</strong>
-      <a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a>
-    </div>
-
-    <div class="footer-col">
-      <strong>Contact</strong>
-      <a href="mailto:felipe@lowsignal.cl">felipe@lowsignal.cl</a>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <div>© 2026 Felipe Quiroz</div>
-    <div>Santiago / CL</div>
-  </div>
-</footer>
-
-</body>
-</html>
+<footer class="footer"><div class="footer-grid">
+    <div><div class="footer-brand">Felipe Quiroz</div><div class="footer-copy">Product, Growth &amp; Operations. Building products, growth systems and companies across technology and business.</div></div>
+    <div class="footer-col"><strong>Explore</strong><a href="/#work">Work</a><a href="/about">About</a><a href="/now">Now</a><a href="/blog">Blog</a></div>
+    <div class="footer-col"><strong>Social</strong><a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a></div>
+    <div class="footer-col"><strong>Contact</strong><a href="mailto:felipe@lowsignal.cl">Email</a><a href="https://calendly.com/felipe-lowsignal/30min" target="_blank" rel="noopener noreferrer">Calendly</a></div>
+  </div><div class="footer-bottom"><div>© 2026 Felipe Quiroz</div><div>Santiago / CL</div></div></footer>
+<script>
+(()=>{
+  if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const targets=new Set();
+  const add=(selector)=>document.querySelectorAll(selector).forEach(el=>targets.add(el));
+  add('.hero-top,.hero-layout,.impact-head,.role-grid,.people-head,.product-head,.product-note,.projects-head,.operating-head,.geo-cta-inner,.project-nav-inner,.footer-grid,.footer-bottom');
+  ['.impact-grid','.people-grid','.product-grid','.project-list','.work-list','.snapshot','.snapshot-focus','.geo-cta-links'].forEach(selector=>{
+    document.querySelectorAll(selector).forEach(group=>group.querySelectorAll(':scope > *').forEach((el,index)=>{
+      el.style.setProperty('--reveal-delay',Math.min(index,4)*65+'ms');
+      targets.add(el);
+    }));
+  });
+  const observer=new IntersectionObserver((entries,observer)=>entries.forEach(entry=>{
+    if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}
+  }),{threshold:.12,rootMargin:'0px 0px -36px 0px'});
+  targets.forEach(el=>{el.classList.add('scroll-reveal');observer.observe(el)});
+})();
+</script>
+</body></html>
