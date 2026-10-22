@@ -113,24 +113,11 @@
       isolation:isolate;
       padding:92px var(--page) 112px;
       color:#fff;
-      background:#080d14;
-    }
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      z-index:1;
-      background:linear-gradient(90deg,rgba(4,10,18,.76) 0%,rgba(4,10,18,.53) 48%,rgba(4,10,18,.24) 100%);
-      pointer-events:none;
-    }
-    .hero-background{
-      position:absolute;
-      inset:0;
-      z-index:0;
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      object-position:center 48%;
+      background-color:#080d14;
+      background-image:linear-gradient(90deg,rgba(4,10,18,.62) 0%,rgba(4,10,18,.42) 48%,rgba(4,10,18,.18) 100%),url('/images/edificios.jpg?v=20261022');
+      background-size:cover,cover;
+      background-position:center,center 54%;
+      background-repeat:no-repeat,no-repeat;
     }
     .hero-grid{
       position:relative;
@@ -716,7 +703,6 @@
 <main>
 
   <section class="hero">
-    <img class="hero-background" src="/images/edificios.jpg?v=20261022" alt="" aria-hidden="true">
     <div class="hero-grid">
       <div>
         <div class="hero-kicker">Santiago, Chile</div>
