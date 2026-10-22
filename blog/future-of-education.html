@@ -34,7 +34,7 @@
       --soft:#f3f6f9;
       --blue:#1467d8;
       --dark:#05070a;
-      --page:clamp(22px,4vw,64px);
+      --page:8vw;
       --max:1520px;
       --article:780px;
     }
@@ -442,7 +442,8 @@
       .footer-grid{grid-template-columns:1fr}
       .footer-bottom{flex-direction:column}
     }
-  </style>
+  @media(max-width:640px){:root{--page:20px}}
+</style>
 </head>
 
 <body>
@@ -678,7 +679,8 @@
 
     <div class="footer-col">
       <strong>Contact</strong>
-      <a href="mailto:felipe@lowsignal.cl">felipe@lowsignal.cl</a>
+      <a href="mailto:felipe@lowsignal.cl">Email</a>
+      <a href="https://calendly.com/felipe-lowsignal/30min" target="_blank" rel="noopener noreferrer">Calendly</a>
     </div>
   </div>
 
