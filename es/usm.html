@@ -1399,6 +1399,14 @@
 .usm-mark{min-width:0;min-height:0;padding:0;justify-content:flex-start;border:0;border-radius:0;background:transparent}
 .usm-mark img{width:auto;height:38px;max-width:220px;object-fit:contain;filter:none}
 @media(max-width:640px){.usm-mark{min-height:42px;padding:0 6px}.usm-mark img{height:30px}}
+
+/* Sticky in-page navigation, matching the other project sections. */
+.case-nav{position:sticky;top:76px;z-index:900;padding:14px var(--page);display:flex;gap:30px;background:rgba(255,255,255,.96);border-top:1px solid var(--line);border-bottom:1px solid var(--line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.case-nav a{color:var(--blue);font-size:10px;font-weight:600}
+.case-nav a:hover{text-decoration:underline;text-underline-offset:4px}
+#impact,#role,#people,#admissions,#work,#approach{scroll-margin-top:150px}
+@media(max-width:860px){.case-nav{gap:22px}}
+@media(max-width:640px){.case-nav{top:68px;gap:0;justify-content:space-between;padding-top:12px;padding-bottom:12px}.case-nav a{font-size:9px}}
 </style>
 </head>
 <body>
@@ -1427,6 +1435,7 @@
     <article class="impact-card"><strong>50+</strong><span>Personas coordinadas en iniciativas de admisión</span></article>
   </div>
 </section>
+<nav class="case-nav" aria-label="Secciones del caso"><a href="#impact">Impacto</a><a href="#role">Rol</a><a href="#people">Equipo</a><a href="#admissions">Admisión</a><a href="#work">Operación</a><a href="#approach">Enfoque</a></nav>
 <section class="role" id="role"><div class="role-grid"><div class="section-label">Mi rol</div><div class="role-main">
   <h2>Dos roles. <span>Una misma forma de operar.</span></h2>
   <p>Trabajé entre promoción de admisión y operaciones académicas. En ambos roles, convertí objetivos en procesos claros, coordiné equipos y stakeholders y usé datos y reportes para hacer más consistente la ejecución.</p>
