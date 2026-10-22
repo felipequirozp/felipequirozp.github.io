@@ -109,8 +109,14 @@
 
     /* HERO */
     .hero{
+      position:relative;
+      isolation:isolate;
       padding:92px var(--page) 112px;
-      background:#fff;
+      color:#fff;
+      background-image:linear-gradient(90deg,rgba(4,10,18,.88) 0%,rgba(4,10,18,.66) 48%,rgba(4,10,18,.24) 100%),url('/images/edificios.jpg');
+      background-size:cover;
+      background-position:center 48%;
+      background-repeat:no-repeat;
     }
     .hero-grid{
       width:min(var(--max),100%);
@@ -135,7 +141,7 @@
     }
     .hero-kicker{
       margin-bottom:24px;
-      color:var(--blue);
+      color:#8bbcff;
       font-size:12px;
       font-weight:600;
     }
@@ -154,12 +160,12 @@
       line-height:1.08;
       letter-spacing:-.045em;
       font-weight:400;
-      color:#24303b;
+      color:#fff;
     }
     .hero-desc{
       max-width:760px;
       margin:28px 0 0;
-      color:var(--muted);
+      color:rgba(255,255,255,.84);
       font-size:18px;
       line-height:1.72;
     }
@@ -189,7 +195,7 @@
     }
     .hero-social-label{
       margin-bottom:10px;
-      color:#7a8796;
+      color:rgba(255,255,255,.72);
       font-size:10px;
       font-weight:600;
       letter-spacing:.08em;
