@@ -38,6 +38,16 @@
     @media(max-width:760px){.nav-center{display:none}.hero-grid,.section-grid,.login-story{grid-template-columns:1fr}.hero-media{order:-1}.showcase-head{flex-direction:column;align-items:flex-start}.build-grid{grid-template-columns:1fr}.build-item+.build-item,.build-item:nth-child(3){padding-left:0;border-left:0;border-top:1px solid rgba(255,255,255,.16)}.build-item{padding:24px 0}.feature-grid{grid-template-columns:1fr}.feature,.feature:nth-child(even){padding:22px 0;border-left:0}.footer-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:640px){:root{--page:20px}.nav{min-height:68px}.brand{font-size:20px!important}.nav-right{gap:14px}.nav-right a:not(.lang):nth-child(2){display:none}.hero{padding-top:38px;padding-bottom:58px}.hero-top{align-items:flex-start;flex-direction:column;margin-bottom:28px}.hero-meta{justify-content:flex-start}.hero h1{font-size:clamp(50px,13vw,68px)}.hero-description{font-size:14px}.section,.showcase,.principle{padding-top:66px;padding-bottom:70px}.section h2,.showcase h2,.principle h2{font-size:clamp(36px,9vw,48px)}.showcase-head{margin-bottom:30px}.login-story{margin-top:40px;padding-top:34px}.project-nav{padding:48px var(--page)}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column}}
   </style>
+
+<style id="low-workspace-scroll-reveal">
+  .reveal-on-scroll{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.65,.3,1),transform .7s cubic-bezier(.2,.65,.3,1)}
+  .reveal-on-scroll.is-visible{opacity:1;transform:none}
+  .reveal-on-scroll[data-delay="1"]{transition-delay:.08s}
+  .reveal-on-scroll[data-delay="2"]{transition-delay:.16s}
+  .reveal-on-scroll[data-delay="3"]{transition-delay:.24s}
+  @media(prefers-reduced-motion:reduce){.reveal-on-scroll{opacity:1!important;transform:none!important;transition:none!important}}
+</style>
+
 </head>
 <body>
 <header class="nav">
@@ -76,5 +86,28 @@
   <section class="project-nav"><div class="project-nav-inner"><a href="/lowsignal"><div><div class="project-nav-label">Back to company case study</div><strong>lowsignal</strong></div><span>→</span></a></div></section>
 </main>
 <footer class="footer"><div class="footer-grid"><div><div class="footer-brand">Felipe Quiroz</div><div class="footer-copy">Product, Growth &amp; Operations. Building products, growth systems and companies across technology and business.</div></div><div class="footer-col"><strong>Explore</strong><a href="/#work">Work</a><a href="/about">About</a><a href="/now">Now</a><a href="/blog">Blog</a></div><div class="footer-col"><strong>Social</strong><a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a></div><div class="footer-col"><strong>Contact</strong><a href="mailto:felipe@lowsignal.cl">Email</a><a href="https://calendly.com/felipe-lowsignal/30min" target="_blank" rel="noopener noreferrer">Calendly</a></div></div><div class="footer-bottom"><div>© 2026 Felipe Quiroz</div><div>Santiago / CL</div></div></footer>
+
+<script id="low-workspace-scroll-reveal-script">
+(()=>{
+  if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const selectors=['.section-grid','.feature-grid','.build-grid','.showcase-head','.product-shot','.login-story','.principle','.project-nav-inner','.footer-grid'];
+  const targets=[];
+  selectors.forEach(sel=>document.querySelectorAll(sel).forEach(el=>targets.push(el)));
+  targets.forEach((el,i)=>{
+    el.classList.add('reveal-on-scroll');
+    if(i%4) el.dataset.delay=String(i%4);
+  });
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  targets.forEach(el=>io.observe(el));
+})();
+</script>
+
 </body>
 </html>
