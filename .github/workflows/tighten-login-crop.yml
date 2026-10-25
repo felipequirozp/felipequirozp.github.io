@@ -14,8 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Reorder lowsignal people
-        run: python .github/scripts/reorder_lowsignal_people.py
+      - name: Reposition home navigation
+        run: python .github/scripts/reposition-home-nav.py
       - name: Commit changes
         run: |
           if git diff --quiet; then
@@ -24,6 +24,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add lowsignal.html es/lowsignal.html
-          git commit -m "Update lowsignal people order"
+          git add index.html es/index.html
+          git commit -m "Reposition home navigation"
           git push
