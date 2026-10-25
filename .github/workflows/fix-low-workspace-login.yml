@@ -1,0 +1,30 @@
+name: Fix Low Workspace login visual
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-low-workspace-login.yml'
+      - '.github/scripts/fix_low_workspace_login_visual.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fix login screenshot treatment
+        run: python .github/scripts/fix_low_workspace_login_visual.py
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add lowsignal/low-workspace.html es/lowsignal/low-workspace.html
+          git commit -m "Polish Low Workspace login screenshot"
+          git push
