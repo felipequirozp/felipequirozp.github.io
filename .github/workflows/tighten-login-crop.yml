@@ -14,8 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Round Low Workspace preview
-        run: python .github/scripts/round_low_workspace_preview.py
+      - name: Fix Low Workspace mobile preview
+        run: python .github/scripts/fix_low_workspace_mobile_preview.py
       - name: Commit changes
         run: |
           if git diff --quiet; then
@@ -25,5 +25,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add lowsignal.html es/lowsignal.html
-          git commit -m "Round Low Workspace preview"
+          git commit -m "Fix Low Workspace mobile preview"
           git push
