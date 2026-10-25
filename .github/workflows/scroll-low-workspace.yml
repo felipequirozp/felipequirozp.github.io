@@ -1,0 +1,29 @@
+name: Add Low Workspace scroll reveal
+
+on:
+  push:
+    paths:
+      - '.github/workflows/scroll-low-workspace.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply scroll reveal
+        run: python .github/scripts/scroll_low_workspace.py
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add lowsignal/low-workspace.html es/lowsignal/low-workspace.html
+          git commit -m "Add scroll reveal to Low Workspace"
+          git push
