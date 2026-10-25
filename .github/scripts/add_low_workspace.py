@@ -1,4 +1,5 @@
 from pathlib import Path
+import re
 
 CSS = r'''
 <style id="low-workspace-feature">
@@ -55,13 +56,19 @@ ES = r'''
 def patch(path: str, block: str):
     p = Path(path)
     text = p.read_text(encoding="utf-8")
-    if 'id="low-workspace-feature"' not in text:
-        text = text.replace("</head>", CSS + "\n</head>", 1)
-    if 'class="low-workspace-feature"' not in text:
-        marker = '  <section class="testimonial">'
-        if marker not in text:
-            raise RuntimeError(f"testimonial marker not found in {path}")
-        text = text.replace(marker, block + marker, 1)
+
+    # Normalize any previous runs so the feature exists exactly once.
+    text = re.sub(r'\n?<style id="low-workspace-feature">.*?</style>\n?', '\n', text, flags=re.S)
+    text = re.sub(r'\n?  <section class="low-workspace-feature" id="low-workspace">.*?  </section>\n?', '\n', text, flags=re.S)
+
+    if "</head>" not in text:
+        raise RuntimeError(f"head marker not found in {path}")
+    text = text.replace("</head>", CSS + "\n</head>", 1)
+
+    marker = '  <section class="testimonial">'
+    if marker not in text:
+        raise RuntimeError(f"testimonial marker not found in {path}")
+    text = text.replace(marker, block + marker, 1)
     p.write_text(text, encoding="utf-8")
 
 patch("lowsignal.html", EN)
