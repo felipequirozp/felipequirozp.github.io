@@ -1,0 +1,30 @@
+name: Brighten Low Workspace label
+
+on:
+  push:
+    paths:
+      - '.github/scripts/brighten-low-workspace-label.py'
+      - '.github/workflows/brighten-low-workspace-label.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Brighten dark-section label
+        run: python .github/scripts/brighten-low-workspace-label.py
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add lowsignal/low-workspace.html es/lowsignal/low-workspace.html
+          git commit -m "Improve Low Workspace dark label contrast"
+          git push
