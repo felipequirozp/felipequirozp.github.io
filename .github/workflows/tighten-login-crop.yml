@@ -1,4 +1,4 @@
-name: Tighten Low Workspace login crop
+name: Apply portfolio patches
 
 on:
   push:
@@ -14,8 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Apply tighter login crop
-        run: python .github/scripts/tighten_login_crop.py
+      - name: Reorder lowsignal people
+        run: python .github/scripts/reorder_lowsignal_people.py
       - name: Commit changes
         run: |
           if git diff --quiet; then
@@ -24,6 +24,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add lowsignal/low-workspace.html es/lowsignal/low-workspace.html
-          git commit -m "Tighten Low Workspace login crop"
+          git add lowsignal.html es/lowsignal.html
+          git commit -m "Update lowsignal people order"
           git push
