@@ -1,0 +1,31 @@
+name: Move Low Workspace route
+
+on:
+  push:
+    paths:
+      - '.github/workflows/move-low-workspace-route.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Move Low Workspace route
+        run: python .github/scripts/move_low_workspace_route.py
+      - name: Commit route migration
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add low-workspace.html es/low-workspace.html lowsignal/low-workspace.html es/lowsignal/low-workspace.html lowsignal.html es/lowsignal.html
+          git commit -m "Move Low Workspace under lowsignal route"
+          git push
