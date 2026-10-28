@@ -1,5 +1,6 @@
 from pathlib import Path
 
+# Regenerate Projects styling: pure white canvas + live Explorer preview.
 for path in [Path('projects.html'), Path('es/projects.html')]:
     s = path.read_text(encoding='utf-8')
 
