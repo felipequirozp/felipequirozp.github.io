@@ -1,0 +1,33 @@
+name: Add Initiatives navigation
+
+on:
+  push:
+    paths:
+      - '.github/scripts/add_initiatives_nav.py'
+      - '.github/workflows/add-initiatives-nav.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-nav:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Update navigation
+        run: python .github/scripts/add_initiatives_nav.py
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add '*.html' 'es/*.html' 'blog/*.html' 'es/blog/*.html' 'lowsignal/*.html' 'es/lowsignal/*.html' 'tethered/*.html' 'es/tethered/*.html' 'geovictoria/*.html' 'es/geovictoria/*.html' 2>/dev/null || true
+          git commit -m "Add Initiatives to site navigation"
+          git push
