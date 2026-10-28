@@ -1,0 +1,30 @@
+name: Build Projects section v2
+
+on:
+  push:
+    paths:
+      - '.github/scripts/build_projects_section_v2.py'
+      - '.github/workflows/build-projects-section-v2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build redesigned Projects section
+        run: python .github/scripts/build_projects_section_v2.py
+      - name: Commit generated pages
+        run: |
+          if git diff --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add projects.html es/projects.html geovictoria/shift-optimizer.html geovictoria/shift-change-workflow.html es/geovictoria/shift-optimizer.html es/geovictoria/shift-change-workflow.html
+          git commit -m "Redesign Projects with existing portfolio visuals"
+          git push
