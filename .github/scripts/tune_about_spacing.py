@@ -1,5 +1,6 @@
 from pathlib import Path
 
+# one-off spacing tune
 for rel in ['about.html','es/about.html']:
     p=Path(rel)
     s=p.read_text(encoding='utf-8')
