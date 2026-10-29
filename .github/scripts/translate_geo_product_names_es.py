@@ -31,3 +31,5 @@ for rel in ['.github/scripts/build_projects_section_v2.py', '.github/scripts/syn
 print(f'Updated {len(changed)} Spanish HTML files')
 for item in changed:
     print(item)
+
+# trigger
