@@ -4,7 +4,7 @@ import re
 paths = [Path('people.html'), Path('es/people.html')]
 
 css = r'''
-<style id="people-card-polish-v6">
+<style id="people-card-polish-v7">
 .people-all .people-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:34px 16px}
 .person{position:relative;min-width:0}
 .person-copy{padding-top:12px!important}
@@ -14,7 +14,7 @@ css = r'''
 .card-link{position:absolute;inset:0;z-index:4;border-radius:14px}
 .portrait-inner{position:relative;aspect-ratio:4/4.75!important;overflow:hidden;border-radius:14px!important;background:linear-gradient(145deg,#d8e2ea 0%,#edf3f7 58%,#d5e0e8 100%)!important}
 .portrait img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;filter:grayscale(100%) contrast(.96) brightness(1.02)!important;transform-origin:center 35%;will-change:transform}
-/* Tuned individually. Zack is the visual reference and remains unchanged. */
+/* Individual tuning only — no global portrait scaling. */
 .person:nth-child(1) .portrait img{transform:scale(1.14) translateY(-4%)} /* Christopher */
 .person:nth-child(2) .portrait img{transform:scale(1.08) translateY(-2%)} /* Zack */
 .person:nth-child(3) .portrait img{transform:scale(1.40) translateY(-10%)} /* Nicolas */
@@ -38,7 +38,7 @@ css = r'''
 for path in paths:
     text = path.read_text(encoding='utf-8')
 
-    # Repair any malformed linked cards produced by the previous pass.
+    # Repair legacy malformed wrappers, preserving their LinkedIn URL.
     text = re.sub(
         r'<a class="person" href="([^"]+)"[^>]*>(.*?)</article>',
         lambda m: f'<article class="person" data-link="{m.group(1)}">{m.group(2)}</article>',
@@ -53,15 +53,19 @@ for path in paths:
         data_match = re.search(r'data-link="([^"]+)"', block)
         if data_match:
             href = data_match.group(1)
-        if not href:
-            inner_link = re.search(r'<h3><a href="([^"]+)"[^>]*>(.*?)</a></h3>', block, flags=re.S)
-            if inner_link:
-                href = inner_link.group(1)
-                block = re.sub(r'<h3><a href="[^"]+"[^>]*>(.*?)</a></h3>', r'<h3>\1</h3>', block, count=1, flags=re.S)
-        if not href:
-            old_link = re.search(r'<a class="profile-link" href="([^"]+)"', block)
-            if old_link:
-                href = old_link.group(1)
+
+        inner_link = re.search(r'<h3><a href="([^"]+)"[^>]*>(.*?)</a></h3>', block, flags=re.S)
+        if inner_link:
+            href = href or inner_link.group(1)
+            block = re.sub(r'<h3><a href="[^"]+"[^>]*>(.*?)</a></h3>', r'<h3>\1</h3>', block, count=1, flags=re.S)
+
+        old_card_link = re.search(r'<a class="card-link" href="([^"]+)"', block)
+        if old_card_link:
+            href = href or old_card_link.group(1)
+
+        old_profile_link = re.search(r'<a class="profile-link" href="([^"]+)"', block)
+        if old_profile_link:
+            href = href or old_profile_link.group(1)
 
         block = re.sub(r'\sdata-link="[^"]+"', '', block)
         block = re.sub(r'<a class="card-link".*?</a>', '', block, flags=re.S)
@@ -70,11 +74,14 @@ for path in paths:
         block = re.sub(r'<div class="role">.*?</div>', '', block, flags=re.S)
         block = re.sub(r'<a class="profile-link".*?</a>', '', block, flags=re.S)
 
+        # Normalize opening tag so cards with data attributes are handled too.
+        block = re.sub(r'^<article class="person"[^>]*>', '<article class="person">', block)
         if href:
-            block = block.replace('<article class="person">', f'<article class="person"><a class="card-link" href="{href}" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a>', 1)
+            overlay = f'<a class="card-link" href="{href}" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a>'
+            block = block.replace('<article class="person">', '<article class="person">' + overlay, 1)
         return block
 
-    text = re.sub(r'<article class="person">.*?</article>', normalize_person, text, flags=re.S)
-    text = re.sub(r'<style id="people-card-polish-v[3456]">.*?</style>\s*', '', text, flags=re.S)
+    text = re.sub(r'<article class="person"[^>]*>.*?</article>', normalize_person, text, flags=re.S)
+    text = re.sub(r'<style id="people-card-polish-v[34567]">.*?</style>\s*', '', text, flags=re.S)
     text = text.replace('</head>', css + '</head>')
     path.write_text(text, encoding='utf-8')
