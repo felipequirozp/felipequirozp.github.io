@@ -1,0 +1,32 @@
+name: Unify site footer v2
+
+on:
+  push:
+    paths:
+      - '.github/scripts/unify_footers_v2.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-footers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Apply footer v2
+        run: python .github/scripts/unify_footers_v2.py
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No footer changes needed"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add '*.html' '**/*.html'
+          git commit -m "Unify footer across site"
+          git push
