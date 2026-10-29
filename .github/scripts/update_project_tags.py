@@ -1,5 +1,6 @@
 from pathlib import Path
 
+# Keep Projects business-model tags aligned across EN and ES.
 for rel in ['projects.html','es/projects.html']:
     p=Path(rel)
     s=p.read_text(encoding='utf-8')
