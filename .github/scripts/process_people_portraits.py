@@ -54,7 +54,7 @@ CANVAS = (720, 840)
 TOP = (242, 246, 248)
 BOTTOM = (226, 234, 239)
 FLAT = (241, 241, 241)
-FLAT_SLUGS = {'damian-aldunate', 'nicolas-munoz', 'leidy-gomez', 'karen-radonich'}
+FLAT_SLUGS = {'damian-aldunate', 'nicolas-munoz', 'leidy-gomez', 'karen-radonich', 'valentina-wagenreld'}
 Y_OFFSETS = {
     'damian-aldunate': 115,
     'nicolas-munoz': 45,
