@@ -1,5 +1,6 @@
 from pathlib import Path
 
+# Applies spacing polish to both Shift Optimizer locales.
 for rel in ['geovictoria/shift-optimizer.html','es/geovictoria/shift-optimizer.html']:
     p = Path(rel)
     s = p.read_text(encoding='utf-8')
