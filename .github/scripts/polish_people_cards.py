@@ -20,7 +20,7 @@ ORDER = [
 ]
 
 css = r'''
-<style id="people-card-polish-v29">
+<style id="people-card-polish-v30">
 .people-all .people-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:34px 16px}
 .person{position:relative;min-width:0}
 .person-copy{padding-top:12px!important}
@@ -31,7 +31,6 @@ css = r'''
 .portrait-inner{position:relative;aspect-ratio:4/4.5!important;overflow:hidden;border-radius:14px!important;background:#f1f1f1!important}
 .portrait img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;filter:grayscale(100%) contrast(.96) brightness(1.02)!important;transform-origin:center 35%;will-change:transform;mix-blend-mode:normal!important}
 .person:nth-child(3) .portrait-inner::after,.person:nth-child(4) .portrait-inner::after,.person:nth-child(6) .portrait-inner::after{content:"";position:absolute;z-index:2;left:0;right:0;top:0;height:14px;background:#f1f1f1;pointer-events:none}
-.person:nth-child(15) .portrait-inner::after{content:"";position:absolute;z-index:2;left:0;right:0;top:0;height:34px;background:#f1f1f1;pointer-events:none}
 .person:nth-child(1) .portrait img{transform:scale(1.14) translateY(-4%)}
 .person:nth-child(2) .portrait img{transform:scale(1.08) translateY(-2%)}
 .person:nth-child(3) .portrait img{transform:scale(1.27) translateY(8%)}
@@ -141,8 +140,8 @@ for path in paths:
         return block
 
     text = re.sub(r'<article class="person"[^>]*>.*?</article>', normalize_person, text, flags=re.S)
-    for slug in ['damian-aldunate','nicolas-munoz','leidy-gomez','karen-radonich']:
-        text = re.sub(rf'/images/people/{slug}\.webp(?:\?v=[^\"]+)?', f'/images/people/{slug}.webp?v=20261029-1715', text)
+    for slug in ['damian-aldunate','nicolas-munoz','leidy-gomez','karen-radonich','valentina-wagenreld']:
+        text = re.sub(rf'/images/people/{slug}\.webp(?:\?v=[^\"]+)?', f'/images/people/{slug}.webp?v=20261029-1730', text)
     text = re.sub(r'<style id="people-card-polish-v\d+">.*?</style>\s*', '', text, flags=re.S)
     text = re.sub(r'<script id="people-scroll-reveal">.*?</script>\s*', '', text, flags=re.S)
     text = text.replace('</head>', css + '</head>')
