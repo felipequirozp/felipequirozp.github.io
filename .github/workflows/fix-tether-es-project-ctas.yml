@@ -1,0 +1,24 @@
+name: Fix Tether ES project CTAs
+on:
+  push:
+    paths:
+      - '.github/scripts/fix_tether_es_project_ctas.py'
+      - '.github/workflows/fix-tether-es-project-ctas.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python .github/scripts/fix_tether_es_project_ctas.py
+      - run: |
+          if git diff --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add es/tethereducation.html
+          git commit -m "Fix Tether ES project CTAs"
+          git push
