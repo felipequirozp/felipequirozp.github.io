@@ -1,5 +1,6 @@
 from pathlib import Path
 
+# Keep the Blog hero title in a single color across EN and ES.
 for path in [Path('blog.html'), Path('es/blog.html')]:
     text = path.read_text(encoding='utf-8')
     old = '.hero h1 span{display:block;color:#9aa6b2}'
