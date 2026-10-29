@@ -1,0 +1,30 @@
+name: Process People portraits
+
+on:
+  push:
+    paths:
+      - '.github/workflows/process-people-portraits.yml'
+      - '.github/scripts/process_people_portraits.py'
+
+permissions:
+  contents: write
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install portrait processing dependencies
+        run: pip install "rembg[cpu]" pillow requests
+      - name: Remove backgrounds and build neutral portraits
+        run: python .github/scripts/process_people_portraits.py
+      - name: Commit processed People portraits
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add images/people people.html es/people.html .github/scripts/unify_people_grid.py
+          git diff --cached --quiet || git commit -m "Process People portraits with neutral backgrounds"
+          git push
