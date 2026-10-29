@@ -85,3 +85,5 @@ for path in FILES:
     text = text.replace('</body>', JS + '</body>')
     path.write_text(text, encoding='utf-8')
     print('updated', path)
+
+# Trigger-safe: all remaining article pages are kept idempotent by the versioned style block above.
