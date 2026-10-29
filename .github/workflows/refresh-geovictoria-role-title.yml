@@ -1,0 +1,32 @@
+name: Refresh GeoVictoria role and title
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/scripts/refresh_geovictoria_role_title.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python .github/scripts/refresh_geovictoria_role_title.py
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add geovictoria.html es/geovictoria.html
+          git commit -m "Refresh GeoVictoria title and role section"
+          git push
