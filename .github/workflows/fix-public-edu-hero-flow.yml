@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - '.github/scripts/fix_public_edu_hero_flow.py'
+      - '.github/scripts/unify_tethereducation_headline.py'
       - '.github/workflows/fix-public-edu-hero-flow.yml'
 
 permissions:
@@ -19,10 +20,11 @@ jobs:
         with:
           python-version: '3.x'
       - run: python .github/scripts/fix_public_edu_hero_flow.py
+      - run: python .github/scripts/unify_tethereducation_headline.py
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tethered/digital-transformation-public-education.html es/tethered/transformacion-digital-educacion-publica.html
-          git diff --cached --quiet || git commit -m "Improve public education hero title flow"
+          git add tethered/digital-transformation-public-education.html es/tethered/transformacion-digital-educacion-publica.html tethereducation.html es/tethereducation.html
+          git diff --cached --quiet || git commit -m "Unify education hero headlines"
           git push
