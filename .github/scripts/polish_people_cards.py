@@ -6,10 +6,12 @@ paths = [Path('people.html'), Path('es/people.html')]
 LINKS_BY_NAME = {
     'Zack Tseng': 'https://www.linkedin.com/in/zacharytseng/',
     'Nicolás Muñoz': 'https://www.linkedin.com/in/nicolas-munoz-pavez/',
+    'Leidy Gómez': 'https://co.linkedin.com/in/leidy-gomez',
+    'Valentina Wagenreld': 'https://www.linkedin.com/in/valentina-wagenreld-62042a138/',
 }
 
 css = r'''
-<style id="people-card-polish-v15">
+<style id="people-card-polish-v16">
 .people-all .people-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:34px 16px}
 .person{position:relative;min-width:0}
 .person-copy{padding-top:12px!important}
@@ -33,6 +35,8 @@ css = r'''
 .person:nth-child(11) .portrait img{transform:scale(1.22) translateY(-6%)} /* Juan */
 .person:nth-child(12) .portrait img{transform:scale(1.05) translateY(0%)} /* Karen */
 .person:nth-child(13) .portrait img{transform:scale(1.16) translateY(-3%)} /* Javier */
+.person:nth-child(14) .portrait img{transform:scale(1) translateY(0)} /* Leidy */
+.person:nth-child(15) .portrait img{transform:scale(1) translateY(0)} /* Valentina */
 @media(max-width:1320px){.people-all .people-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media(max-width:1100px){.people-all .people-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:900px){.people-all .people-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
