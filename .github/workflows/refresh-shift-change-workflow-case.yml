@@ -1,0 +1,27 @@
+name: Refresh Shift Change Workflow case
+
+on:
+  push:
+    paths:
+      - '.github/scripts/refresh_shift_change_workflow_case.py'
+      - '.github/workflows/refresh-shift-change-workflow-case.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python .github/scripts/refresh_shift_change_workflow_case.py
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add geovictoria/shift-change-workflow.html es/geovictoria/shift-change-workflow.html
+          git diff --cached --quiet || git commit -m "Refresh Shift Change Workflow case study"
+          git push
