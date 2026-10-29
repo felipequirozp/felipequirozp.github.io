@@ -8,7 +8,7 @@ def card(name, image, role, context, company, linkedin=None, loading=False):
     if linkedin:
         link = f'<a class="profile-link" href="{linkedin}" target="_blank" rel="noopener noreferrer" aria-label="{name} on LinkedIn">{LINKEDIN_ICON}<span>LinkedIn</span></a>'
     lazy = ' loading="lazy"' if loading else ''
-    return f'''<article class="person"><div class="portrait"><img src="{image}" alt="{name}"{lazy}></div><div class="person-copy"><div class="company-tag">{company}</div><h3>{name}</h3><div class="role">{role}</div><div class="context">{context}</div>{link}</div></article>'''
+    return f'''<article class="person"><div class="portrait"><div class="portrait-inner"><img src="{image}" alt="{name}"{lazy}></div></div><div class="person-copy"><div class="company-tag">{company}</div><h3>{name}</h3><div class="role">{role}</div><div class="context">{context}</div>{link}</div></article>'''
 
 people_en = [
     card('Christopher Neilson','/images/christopher-neilson.jpg','Founder & CEO · Tether Education<br>Professor of Economics & Global Affairs at Yale','Worked together across company strategy, partnerships and market expansion.','Tether Education','https://www.linkedin.com/in/christopher-a-neilson/'),
@@ -47,14 +47,18 @@ sections = {
     Path('es/people.html'): '<section class="people-all"><div class="shell"><div class="people-head"><div class="kicker">Tether · lowsignal · GeoVictoria · USM</div><h2>Construido con personas de distintas compañías, productos e instituciones.</h2></div><div class="people-grid">' + ''.join(people_es) + '</div></div></section>',
 }
 
-css = '''\n<style id="people-unified-v2">\n.people-all{padding:82px var(--page);background:linear-gradient(180deg,#fff 0%,#f5f8fa 100%);border-bottom:1px solid var(--line)}\n.people-head{margin-bottom:34px}.people-head h2{margin:12px 0 0;max-width:840px;font-family:Manrope,sans-serif;font-size:clamp(32px,3.3vw,46px);line-height:1.06;letter-spacing:-.045em;font-weight:500}\n.people-all .people-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 18px}\n.company-tag{margin-bottom:10px;color:var(--blue);font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}\n.profile-link{margin-top:14px;display:inline-flex;align-items:center;gap:7px;color:#52606d;font-size:10px;font-weight:700;transition:color .18s,transform .18s}.profile-link svg{width:14px;height:14px;flex:0 0 auto}.profile-link:hover{color:var(--blue);transform:translateY(-1px)}\n.person{transition:transform .2s}.person:hover{transform:translateY(-2px)}\n@media(max-width:1000px){.people-all .people-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}\n@media(max-width:700px){.people-all{padding:62px var(--page)}.people-all .people-grid{grid-template-columns:1fr;gap:32px}.people-head{margin-bottom:28px}}\n</style>\n'''
+css = '''\n<style id="people-unified-v2">\n.people-all{padding:82px var(--page);background:linear-gradient(180deg,#fff 0%,#f5f8fa 100%);border-bottom:1px solid var(--line)}\n.people-head{margin-bottom:34px}.people-head h2{margin:12px 0 0;max-width:840px;font-family:Manrope,sans-serif;font-size:clamp(32px,3.3vw,46px);line-height:1.06;letter-spacing:-.045em;font-weight:500}\n.people-all .people-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:30px 22px}\n.company-tag{margin-bottom:10px;color:var(--blue);font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}\n.portrait{aspect-ratio:auto!important;min-height:0!important;height:auto!important;padding:18px;border-radius:16px!important;background:linear-gradient(145deg,#e7edf2,#f2f5f7)!important;border:1px solid #dbe3e9!important;overflow:hidden}\n.portrait-inner{width:100%;aspect-ratio:4/4.65;overflow:hidden;border-radius:12px;background:#dce5eb}\n.portrait img{width:100%;height:100%;object-fit:cover;object-position:center 18%;filter:grayscale(100%) saturate(.45) contrast(.93) brightness(1.05)!important;mix-blend-mode:multiply}\n.person-copy{padding-top:14px}.person h3{font-size:20px}.context{max-width:30ch}.profile-link{margin-top:14px;display:inline-flex;align-items:center;gap:7px;color:#52606d;font-size:10px;font-weight:700;transition:color .18s,transform .18s}.profile-link svg{width:14px;height:14px;flex:0 0 auto}.profile-link:hover{color:var(--blue);transform:translateY(-1px)}\n.person{transition:transform .2s}.person:hover{transform:translateY(-2px)}\n@media(max-width:1180px){.people-all .people-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}\n@media(max-width:900px){.people-all .people-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}\n@media(max-width:700px){.people-all{padding:62px var(--page)}.people-all .people-grid{grid-template-columns:1fr 1fr;gap:28px 14px}.people-head{margin-bottom:28px}.portrait{padding:10px}.person h3{font-size:18px}.role{font-size:10px}.context{font-size:9px}}\n@media(max-width:480px){.people-all .people-grid{grid-template-columns:1fr}.portrait{padding:14px}.portrait-inner{aspect-ratio:4/4.5}}\n</style>\n'''
 
-pattern = re.compile(r'<section class="org(?: soft)?">.*?(?=<section class="closing">)', re.S)
+pattern_grouped = re.compile(r'<section class="org(?: soft)?">.*?(?=<section class="closing">)', re.S)
+pattern_unified = re.compile(r'<section class="people-all">.*?(?=<section class="closing">)', re.S)
 for path, section in sections.items():
     text = path.read_text(encoding='utf-8')
-    updated, n = pattern.subn(section, text, count=1)
+    if '<section class="people-all">' in text:
+        updated, n = pattern_unified.subn(section, text, count=1)
+    else:
+        updated, n = pattern_grouped.subn(section, text, count=1)
     if n != 1:
-        raise RuntimeError(f'Could not replace grouped People sections in {path}')
+        raise RuntimeError(f'Could not replace People section in {path}')
     updated = re.sub(r'<style id="people-unified-v2">.*?</style>\s*', '', updated, flags=re.S)
     updated = updated.replace('</head>', css + '</head>')
     path.write_text(updated, encoding='utf-8')
