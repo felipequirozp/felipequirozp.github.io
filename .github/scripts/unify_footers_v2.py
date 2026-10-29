@@ -47,6 +47,32 @@ for path in ROOT.rglob('*.html'):
         path.write_text(text, encoding='utf-8')
         changed.append(str(path))
 
+# Keep the first three Tether project pills focused on business model.
+project_updates = {
+    Path('projects.html'): [
+        ('<div class="impact"><span>LATAM · U.S. · Europe</span><span>EdTech</span></div>', '<div class="impact"><span>B2G</span><span>B2C</span><span>B2B</span></div>'),
+        ('<div class="impact"><span>78 institutions</span><span>35k+ students</span></div>', '<div class="impact"><span>B2G</span><span>B2B</span><span>B2C</span></div>'),
+        ('<div class="impact"><span>50+ public schools</span><span>Responsible AI</span></div>', '<div class="impact"><span>B2G</span><span>B2B</span><span>B2C</span></div>'),
+    ],
+    Path('es/projects.html'): [
+        ('<div class="impact"><span>LATAM · U.S. · Europa</span><span>EdTech</span></div>', '<div class="impact"><span>B2G</span><span>B2C</span><span>B2B</span></div>'),
+        ('<div class="impact"><span>78 establecimientos</span><span>35k+ estudiantes</span></div>', '<div class="impact"><span>B2G</span><span>B2B</span><span>B2C</span></div>'),
+        ('<div class="impact"><span>50+ escuelas públicas</span><span>IA responsable</span></div>', '<div class="impact"><span>B2G</span><span>B2B</span><span>B2C</span></div>'),
+    ],
+}
+
+for path, replacements in project_updates.items():
+    if not path.exists():
+        continue
+    text = path.read_text(encoding='utf-8')
+    original = text
+    for old, new in replacements:
+        text = text.replace(old, new, 1)
+    if text != original:
+        path.write_text(text, encoding='utf-8')
+        if str(path) not in changed:
+            changed.append(str(path))
+
 print(f'Updated {len(changed)} HTML files')
 for item in changed:
     print(item)
