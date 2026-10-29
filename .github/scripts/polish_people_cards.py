@@ -4,29 +4,29 @@ import re
 paths = [Path('people.html'), Path('es/people.html')]
 
 css = r'''
-<style id="people-card-polish-v4">
+<style id="people-card-polish-v5">
 .people-all .people-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:34px 16px}
 .person-copy{padding-top:12px!important}
 .company-tag,.context,.profile-link,.role{display:none!important}
 .person h3{margin:0!important;font-size:18px!important;line-height:1.08!important;letter-spacing:-.035em!important;font-weight:500!important}
-.person h3 a{color:inherit;text-decoration:none}
-.person h3 a:hover{color:var(--blue)}
+a.person{display:block;color:inherit;text-decoration:none;cursor:pointer}
+a.person h3{transition:color .18s ease}a.person:hover h3{color:var(--blue)}
 .portrait-inner{position:relative;aspect-ratio:4/4.75!important;overflow:hidden;border-radius:14px!important;background:linear-gradient(145deg,#d8e2ea 0%,#edf3f7 58%,#d5e0e8 100%)!important}
 .portrait img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;filter:grayscale(100%) contrast(.96) brightness(1.02)!important;transform-origin:center 35%;will-change:transform}
-/* Tuned one-by-one against Zack as the visual reference. */
-.person:nth-child(1) .portrait img{transform:scale(.98) translateY(4%)} /* Christopher: pull back */
-.person:nth-child(2) .portrait img{transform:scale(1.08) translateY(-2%)} /* Zack: reference */
-.person:nth-child(3) .portrait img{transform:scale(1.28) translateY(-8%)} /* Nicolas: closer */
-.person:nth-child(4) .portrait img{transform:scale(1.12) translateY(-2%)} /* Damian: closer */
-.person:nth-child(5) .portrait img{transform:scale(1.02) translateY(3%)} /* Matias: pull back */
-.person:nth-child(6) .portrait img{transform:scale(1.06) translateY(1%)} /* Lia */
-.person:nth-child(7) .portrait img{transform:scale(1.12) translateY(-2%)} /* Martin */
-.person:nth-child(8) .portrait img{transform:scale(1.18) translateY(-4%)} /* Jorge */
-.person:nth-child(9) .portrait img{transform:scale(1.06) translateY(-1%)} /* Francisca */
-.person:nth-child(10) .portrait img{transform:scale(1.18) translateY(-4%)} /* Rodrigo */
-.person:nth-child(11) .portrait img{transform:scale(1.14) translateY(-3%)} /* Juan */
-.person:nth-child(12) .portrait img{transform:scale(.98) translateY(4%)} /* Karen: pull back */
-.person:nth-child(13) .portrait img{transform:scale(1.10) translateY(-1%)} /* Javier */
+/* Each portrait is tuned independently. Zack is the untouched reference. */
+.person:nth-child(1) .portrait img{transform:scale(1.14) translateY(-4%)} /* Christopher */
+.person:nth-child(2) .portrait img{transform:scale(1.08) translateY(-2%)} /* Zack */
+.person:nth-child(3) .portrait img{transform:scale(1.40) translateY(-10%)} /* Nicolas */
+.person:nth-child(4) .portrait img{transform:scale(1.20) translateY(-5%)} /* Damian */
+.person:nth-child(5) .portrait img{transform:scale(1.06) translateY(0%)} /* Matias */
+.person:nth-child(6) .portrait img{transform:scale(1.11) translateY(-2%)} /* Lia */
+.person:nth-child(7) .portrait img{transform:scale(1.24) translateY(-6%)} /* Martin */
+.person:nth-child(8) .portrait img{transform:scale(1.30) translateY(-7%)} /* Jorge */
+.person:nth-child(9) .portrait img{transform:scale(1.12) translateY(-3%)} /* Francisca */
+.person:nth-child(10) .portrait img{transform:scale(1.24) translateY(-6%)} /* Rodrigo */
+.person:nth-child(11) .portrait img{transform:scale(1.22) translateY(-6%)} /* Juan */
+.person:nth-child(12) .portrait img{transform:scale(1.05) translateY(0%)} /* Karen */
+.person:nth-child(13) .portrait img{transform:scale(1.16) translateY(-3%)} /* Javier */
 @media(max-width:1320px){.people-all .people-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media(max-width:1100px){.people-all .people-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:900px){.people-all .people-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
@@ -39,17 +39,29 @@ for path in paths:
 
     def simplify_person(match):
         block = match.group(0)
-        href_match = re.search(r'<a class="profile-link" href="([^"]+)"', block)
-        if href_match and '<h3><a ' not in block:
-            href = href_match.group(1)
-            block = re.sub(r'<h3>(.*?)</h3>', rf'<h3><a href="{href}" target="_blank" rel="noopener noreferrer">\1</a></h3>', block, count=1, flags=re.S)
+        # Recover LinkedIn from either an existing full-card link or the linked name.
+        href_match = re.search(r'<a class="person"[^>]*href="([^"]+)"', block)
+        if not href_match:
+            href_match = re.search(r'<h3><a href="([^"]+)"', block)
+        if not href_match:
+            href_match = re.search(r'<a class="profile-link" href="([^"]+)"', block)
+        href = href_match.group(1) if href_match else None
+
+        # Normalize article/link wrapper to a plain article first.
+        block = re.sub(r'^<a class="person"[^>]*>', '<article class="person">', block)
+        block = re.sub(r'</a>$', '</article>', block)
+        block = re.sub(r'<h3><a [^>]+>(.*?)</a></h3>', r'<h3>\1</h3>', block, flags=re.S)
         block = re.sub(r'<div class="company-tag">.*?</div>', '', block, flags=re.S)
         block = re.sub(r'<div class="context">.*?</div>', '', block, flags=re.S)
         block = re.sub(r'<div class="role">.*?</div>', '', block, flags=re.S)
         block = re.sub(r'<a class="profile-link".*?</a>', '', block, flags=re.S)
+
+        if href:
+            inner = re.sub(r'^<article class="person">|</article>$', '', block)
+            block = f'<a class="person" href="{href}" target="_blank" rel="noopener noreferrer">{inner}</a>'
         return block
 
-    text = re.sub(r'<article class="person">.*?</article>', simplify_person, text, flags=re.S)
-    text = re.sub(r'<style id="people-card-polish-v[34]">.*?</style>\s*', '', text, flags=re.S)
+    text = re.sub(r'<(?:article|a) class="person".*?</(?:article|a)>', simplify_person, text, flags=re.S)
+    text = re.sub(r'<style id="people-card-polish-v[345]">.*?</style>\s*', '', text, flags=re.S)
     text = text.replace('</head>', css + '</head>')
     path.write_text(text, encoding='utf-8')
