@@ -1,16 +1,25 @@
 from pathlib import Path
 
-paths = [
-    Path('tethered/digital-transformation-public-education.html'),
-    Path('es/tethered/transformacion-digital-educacion-publica.html'),
-]
+files = {
+    Path('tethered/digital-transformation-public-education.html'): (
+        'Digitizing public education operations through one connected system.'
+    ),
+    Path('es/tethered/transformacion-digital-educacion-publica.html'): (
+        'Digitalizando la operación de la educación pública a través de un sistema conectado.'
+    ),
+}
 
-old = '.hero h1{margin:32px 0 0;max-width:1280px;font-family:Manrope,sans-serif;font-size:clamp(44px,4.7vw,66px);line-height:1.01;letter-spacing:-.056em;font-weight:500}.hero h1 span{display:inline;color:#98a4af}'
-new = '.hero h1{margin:34px 0 0;max-width:980px;font-family:Manrope,sans-serif;font-size:clamp(42px,4.25vw,62px);line-height:1.04;letter-spacing:-.052em;font-weight:500}.hero h1 span{display:block;margin-top:10px;color:#98a4af}'
+old_css = '.hero h1{margin:34px 0 0;max-width:980px;font-family:Manrope,sans-serif;font-size:clamp(42px,4.25vw,62px);line-height:1.04;letter-spacing:-.052em;font-weight:500}.hero h1 span{display:block;margin-top:10px;color:#98a4af}'
+new_css = '.hero h1{margin:34px 0 0;max-width:980px;font-family:Manrope,sans-serif;font-size:clamp(42px,4.25vw,62px);line-height:1.04;letter-spacing:-.052em;font-weight:500}'
 
-for path in paths:
+for path, headline in files.items():
     s = path.read_text(encoding='utf-8')
-    if old not in s:
-        raise SystemExit(f'Expected hero CSS not found in {path}')
-    s = s.replace(old, new, 1)
+    if old_css in s:
+        s = s.replace(old_css, new_css, 1)
+
+    start = s.find('<h1>')
+    end = s.find('</h1>', start)
+    if start == -1 or end == -1:
+        raise SystemExit(f'Hero h1 not found in {path}')
+    s = s[:start] + f'<h1>{headline}</h1>' + s[end + len('</h1>'):]
     path.write_text(s, encoding='utf-8')
