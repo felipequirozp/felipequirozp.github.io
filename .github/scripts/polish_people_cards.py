@@ -29,7 +29,7 @@ ORDER = [
 ]
 
 css = r'''
-<style id="people-card-polish-v19">
+<style id="people-card-polish-v20">
 .people-all .people-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:34px 16px}
 .person{position:relative;min-width:0}
 .person-copy{padding-top:12px!important}
@@ -39,13 +39,15 @@ css = r'''
 .card-link{position:absolute;inset:0;z-index:4;border-radius:14px}
 .portrait-inner{position:relative;aspect-ratio:4/4.5!important;overflow:hidden;border-radius:14px!important;background:#f1f1f1!important}
 .portrait img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;filter:grayscale(100%) contrast(.96) brightness(1.02)!important;transform-origin:center 35%;will-change:transform;mix-blend-mode:normal!important}
+/* Hide the thin baked-in background seam on Nico, Leidy and Karen. */
+.person:nth-child(3) .portrait-inner::after,.person:nth-child(4) .portrait-inner::after,.person:nth-child(6) .portrait-inner::after{content:"";position:absolute;z-index:2;left:0;right:0;top:0;height:14px;background:#f1f1f1;pointer-events:none}
 /* Individual tuning follows the reordered cards. */
 .person:nth-child(1) .portrait img{transform:scale(1.14) translateY(-4%)} /* Christopher */
 .person:nth-child(2) .portrait img{transform:scale(1.08) translateY(-2%)} /* Zack */
-.person:nth-child(3) .portrait img{transform:scale(1.28) translateY(8%)} /* Nicolas */
-.person:nth-child(4) .portrait img{transform:scale(1.12) translateY(6%)} /* Leidy — visibly lower */
-.person:nth-child(5) .portrait img{transform:scale(1.24) translateY(5%)} /* Rodrigo — visibly lower */
-.person:nth-child(6) .portrait img{transform:scale(1.12) translateY(6%)} /* Karen — visibly lower */
+.person:nth-child(3) .portrait img{transform:scale(1.27) translateY(11%)} /* Nicolas — lower, seam hidden */
+.person:nth-child(4) .portrait img{transform:scale(1.11) translateY(12%)} /* Leidy — lower */
+.person:nth-child(5) .portrait img{transform:scale(1.24) translateY(5%)} /* Rodrigo */
+.person:nth-child(6) .portrait img{transform:scale(1.11) translateY(12%)} /* Karen — lower */
 .person:nth-child(7) .portrait img{transform:scale(1.10) translateY(0)} /* Damian */
 .person:nth-child(8) .portrait img{transform:scale(1.06) translateY(0%)} /* Matias */
 .person:nth-child(9) .portrait img{transform:scale(1.11) translateY(-2%)} /* Lia */
@@ -128,7 +130,8 @@ for path in paths:
         return block
 
     text = re.sub(r'<article class="person"[^>]*>.*?</article>', normalize_person, text, flags=re.S)
-    text = re.sub(r'/images/people/damian-aldunate\.webp(?:\?v=[^\"]+)?', '/images/people/damian-aldunate.webp?v=20261029-1412', text)
+    for slug in ['damian-aldunate','nicolas-munoz','leidy-gomez','karen-radonich']:
+        text = re.sub(rf'/images/people/{slug}\.webp(?:\?v=[^\"]+)?', f'/images/people/{slug}.webp?v=20261029-1715', text)
     text = re.sub(r'<style id="people-card-polish-v\d+">.*?</style>\s*', '', text, flags=re.S)
     text = text.replace('</head>', css + '</head>')
     path.write_text(text, encoding='utf-8')
