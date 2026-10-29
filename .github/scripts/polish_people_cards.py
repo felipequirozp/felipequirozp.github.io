@@ -4,7 +4,7 @@ import re
 paths = [Path('people.html'), Path('es/people.html')]
 
 css = r'''
-<style id="people-card-polish-v8">
+<style id="people-card-polish-v9">
 .people-all .people-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:34px 16px}
 .person{position:relative;min-width:0}
 .person-copy{padding-top:12px!important}
@@ -17,8 +17,8 @@ css = r'''
 /* Individual tuning only — no global portrait scaling. */
 .person:nth-child(1) .portrait img{transform:scale(1.14) translateY(-4%)} /* Christopher */
 .person:nth-child(2) .portrait img{transform:scale(1.08) translateY(-2%)} /* Zack */
-.person:nth-child(3) .portrait img{transform:scale(1.28) translateY(-5%)} /* Nicolas */
-.person:nth-child(4) .portrait img{transform:scale(1.12) translateY(-2%)} /* Damian */
+.person:nth-child(3) .portrait img{transform:scale(1.30) translateY(5%)} /* Nicolas */
+.person:nth-child(4) .portrait img{transform:scale(1.13) translateY(7%)} /* Damian */
 .person:nth-child(5) .portrait img{transform:scale(1.06) translateY(0%)} /* Matias */
 .person:nth-child(6) .portrait img{transform:scale(1.11) translateY(-2%)} /* Lia */
 .person:nth-child(7) .portrait img{transform:scale(1.24) translateY(-6%)} /* Martin */
@@ -80,6 +80,6 @@ for path in paths:
         return block
 
     text = re.sub(r'<article class="person"[^>]*>.*?</article>', normalize_person, text, flags=re.S)
-    text = re.sub(r'<style id="people-card-polish-v[345678]">.*?</style>\s*', '', text, flags=re.S)
+    text = re.sub(r'<style id="people-card-polish-v[3456789]">.*?</style>\s*', '', text, flags=re.S)
     text = text.replace('</head>', css + '</head>')
     path.write_text(text, encoding='utf-8')
