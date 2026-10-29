@@ -20,7 +20,7 @@ ORDER = [
 ]
 
 css = r'''
-<style id="people-card-polish-v25">
+<style id="people-card-polish-v26">
 .people-all .people-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:34px 16px}
 .person{position:relative;min-width:0}
 .person-copy{padding-top:12px!important}
@@ -45,7 +45,7 @@ css = r'''
 .person:nth-child(12) .portrait img{transform:scale(1.12) translateY(-3%)}
 .person:nth-child(13) .portrait img{transform:scale(1.22) translateY(2%)}
 .person:nth-child(14) .portrait img{transform:scale(1.16) translateY(4%)}
-.person:nth-child(15) .portrait img{transform:scale(1.16) translateY(3%)}
+.person:nth-child(15) .portrait img{transform:scale(1.16) translateY(6%)}
 
 /* Scroll reveal */
 .js-reveal{opacity:0;transform:translateY(24px);transition:opacity .65s cubic-bezier(.2,.7,.2,1),transform .65s cubic-bezier(.2,.7,.2,1);transition-delay:var(--reveal-delay,0ms)}
