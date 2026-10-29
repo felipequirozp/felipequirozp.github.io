@@ -7,6 +7,9 @@ LINKS_BY_NAME = {
     'Zack Tseng': 'https://www.linkedin.com/in/zacharytseng/',
     'Nicolás Muñoz': 'https://www.linkedin.com/in/nicolas-munoz-pavez/',
     'Leidy Gómez': 'https://co.linkedin.com/in/leidy-gomez',
+    'Karen Radonich': 'https://www.linkedin.com/in/karen-radonich-36114a2b0/',
+    'Juan Yuz': 'https://www.linkedin.com/in/juan-i-yuz/',
+    'Javier Robledo': 'https://www.linkedin.com/in/javierrobledo/',
     'Valentina Wagenreld': 'https://www.linkedin.com/in/valentina-wagenreld-62042a138/',
 }
 
@@ -29,7 +32,7 @@ ORDER = [
 ]
 
 css = r'''
-<style id="people-card-polish-v21">
+<style id="people-card-polish-v22">
 .people-all .people-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:34px 16px}
 .person{position:relative;min-width:0}
 .person-copy{padding-top:12px!important}
@@ -44,19 +47,19 @@ css = r'''
 /* Individual tuning follows the reordered cards. */
 .person:nth-child(1) .portrait img{transform:scale(1.14) translateY(-4%)} /* Christopher */
 .person:nth-child(2) .portrait img{transform:scale(1.08) translateY(-2%)} /* Zack */
-.person:nth-child(3) .portrait img{transform:scale(1.27) translateY(8%)} /* Nicolas — slightly higher */
-.person:nth-child(4) .portrait img{transform:scale(1.11) translateY(12%)} /* Leidy — lower */
+.person:nth-child(3) .portrait img{transform:scale(1.27) translateY(8%)} /* Nicolas */
+.person:nth-child(4) .portrait img{transform:scale(1.11) translateY(12%)} /* Leidy */
 .person:nth-child(5) .portrait img{transform:scale(1.24) translateY(5%)} /* Rodrigo */
-.person:nth-child(6) .portrait img{transform:scale(1.11) translateY(9%)} /* Karen — slightly higher */
+.person:nth-child(6) .portrait img{transform:scale(1.11) translateY(9%)} /* Karen */
 .person:nth-child(7) .portrait img{transform:scale(1.10) translateY(0)} /* Damian */
 .person:nth-child(8) .portrait img{transform:scale(1.06) translateY(0%)} /* Matias */
 .person:nth-child(9) .portrait img{transform:scale(1.11) translateY(-2%)} /* Lia */
 .person:nth-child(10) .portrait img{transform:scale(1.24) translateY(-6%)} /* Martin */
 .person:nth-child(11) .portrait img{transform:scale(1.30) translateY(-7%)} /* Jorge */
 .person:nth-child(12) .portrait img{transform:scale(1.12) translateY(-3%)} /* Francisca */
-.person:nth-child(13) .portrait img{transform:scale(1.22) translateY(-6%)} /* Juan */
-.person:nth-child(14) .portrait img{transform:scale(1.16) translateY(-3%)} /* Javier */
-.person:nth-child(15) .portrait img{transform:scale(1) translateY(0)} /* Valentina */
+.person:nth-child(13) .portrait img{transform:scale(1.22) translateY(2%)} /* Juan — lower */
+.person:nth-child(14) .portrait img{transform:scale(1.16) translateY(4%)} /* Javier — lower */
+.person:nth-child(15) .portrait img{transform:scale(1.08) translateY(6%)} /* Valentina — lower */
 @media(max-width:1320px){.people-all .people-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media(max-width:1100px){.people-all .people-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:900px){.people-all .people-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
