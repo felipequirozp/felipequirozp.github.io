@@ -1,0 +1,28 @@
+name: Fix public education hero flow
+
+on:
+  push:
+    paths:
+      - '.github/scripts/fix_public_edu_hero_flow.py'
+      - '.github/workflows/fix-public-edu-hero-flow.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python .github/scripts/fix_public_edu_hero_flow.py
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tethered/digital-transformation-public-education.html es/tethered/transformacion-digital-educacion-publica.html
+          git diff --cached --quiet || git commit -m "Improve public education hero title flow"
+          git push
