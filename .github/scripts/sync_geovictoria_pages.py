@@ -1,6 +1,7 @@
 from pathlib import Path
 
 # Keep GeoVictoria EN/ES on the same redesigned structure.
+# Triggered to align both languages with the current redesign.
 en = Path('geovictoria.html')
 s = en.read_text(encoding='utf-8')
 
