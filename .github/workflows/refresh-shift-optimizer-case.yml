@@ -8,6 +8,7 @@ on:
       - '.github/scripts/update_lowsignal_title.py'
       - '.github/scripts/refresh_low_workspace_case.py'
       - '.github/scripts/fix_tether_home_logo.py'
+      - '.github/scripts/refine_home_cadence.py'
 
 permissions:
   contents: write
@@ -24,10 +25,11 @@ jobs:
       - run: python .github/scripts/update_lowsignal_title.py
       - run: python .github/scripts/refresh_low_workspace_case.py
       - run: python .github/scripts/fix_tether_home_logo.py
+      - run: python .github/scripts/refine_home_cadence.py
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add geovictoria/shift-optimizer.html es/geovictoria/shift-optimizer.html geovictoria/shift-change-workflow.html es/geovictoria/shift-change-workflow.html lowsignal.html es/lowsignal.html lowsignal/low-workspace.html es/lowsignal/low-workspace.html index.html es/index.html
-          git diff --cached --quiet || git commit -m "Align portfolio case heroes"
+          git diff --cached --quiet || git commit -m "Refine portfolio home cadence"
           git push
