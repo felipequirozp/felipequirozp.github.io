@@ -1,5 +1,6 @@
 from pathlib import Path
 
+# Applies hover polish to lowsignal EN/ES.
 paths = [Path('lowsignal.html'), Path('es/lowsignal.html')]
 
 for p in paths:
@@ -15,7 +16,6 @@ for p in paths:
         '.closing a{min-height:40px;display:inline-flex;align-items:center;padding:0 14px;border-radius:999px;background:#fff;color:#0b1117;font-size:10px;font-weight:700;border:1px solid #fff;transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease}.closing a.secondary{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.24)}.closing a:hover,.closing a.secondary:hover{background:var(--blue);color:#fff;border-color:var(--blue);transform:translateY(-2px)}'
     )
 
-    # The Low Workspace CTA is intentionally a text-link, but should still react on hover.
     marker = '.workspace-media img{width:100%;border-radius:12px;box-shadow:0 20px 44px rgba(11,17,23,.10)}'
     if '.workspace-grid a:hover' not in s:
         s = s.replace(
