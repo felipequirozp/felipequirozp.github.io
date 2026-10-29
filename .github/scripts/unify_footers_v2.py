@@ -17,11 +17,11 @@ STYLE = '''<style id="site-footer-v2">
 @media(max-width:700px){.footer{padding-top:46px!important}.footer-grid{grid-template-columns:1fr!important;gap:28px!important}.footer-bottom{margin-top:34px!important;flex-direction:column!important;gap:10px!important}}
 </style>'''
 
-EN_EYEBROW = 'Product · Growth · Operations · Company building'
-ES_EYEBROW = 'Producto · Growth · Operaciones · Company building'
+EN_FOOTER = '''<footer class="footer"><div class="footer-grid"><div><div class="footer-eyebrow">Product · Growth · Operations · Company building</div><div class="footer-brand">Felipe Quiroz</div><div class="footer-copy">Building products, growth systems and companies across technology and business.</div></div><div class="footer-col"><strong>Explore</strong><a href="/#work">Work</a><a href="/about">About</a><a href="/projects">Projects</a><a href="/initiatives">Initiatives</a><a href="/blog">Blog</a></div><div class="footer-col"><strong>Social</strong><a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a></div><div class="footer-col"><strong>Contact</strong><a href="mailto:felipe@lowsignal.cl">Email</a><a href="https://calendly.com/felipe-lowsignal/30min" target="_blank" rel="noopener noreferrer">Calendly</a></div></div><div class="footer-bottom"><div>© 2026 Felipe Quiroz</div><div>Santiago, Chile</div></div></footer>'''
+
+ES_FOOTER = '''<footer class="footer"><div class="footer-grid"><div><div class="footer-eyebrow">Producto · Growth · Operaciones · Company building</div><div class="footer-brand">Felipe Quiroz</div><div class="footer-copy">Construyendo productos, sistemas de crecimiento y compañías entre tecnología y negocio.</div></div><div class="footer-col"><strong>Explorar</strong><a href="/es/#work">Trabajo</a><a href="/es/about">Sobre mí</a><a href="/es/projects">Proyectos</a><a href="/es/initiatives">Iniciativas</a><a href="/es/blog">Blog</a></div><div class="footer-col"><strong>Social</strong><a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a></div><div class="footer-col"><strong>Contacto</strong><a href="mailto:felipe@lowsignal.cl">Email</a><a href="https://calendly.com/felipe-lowsignal/30min" target="_blank" rel="noopener noreferrer">Calendly</a></div></div><div class="footer-bottom"><div>© 2026 Felipe Quiroz</div><div>Santiago, Chile</div></div></footer>'''
 
 changed = []
-style_pattern = re.compile(r'<style id="site-footer-v2">.*?</style>', re.S)
 
 for path in ROOT.rglob('*.html'):
     if '.git' in path.parts:
@@ -31,21 +31,15 @@ for path in ROOT.rglob('*.html'):
         continue
 
     original = text
-    is_es = (path.parts and path.parts[0] == 'es') or 'lang="es"' in text.lower()
-    eyebrow = ES_EYEBROW if is_es else EN_EYEBROW
+    is_es = ((path.parts and path.parts[0] == 'es') or 'lang="es"' in text.lower())
+    footer = ES_FOOTER if is_es else EN_FOOTER
 
     if 'id="site-footer-v2"' in text:
-        text = style_pattern.sub(STYLE, text, count=1)
+        text = re.sub(r'<style id="site-footer-v2">.*?</style>', STYLE, text, count=1, flags=re.S)
     else:
         text = text.replace('</head>', STYLE + '</head>', 1)
 
-    if 'footer-eyebrow' not in text:
-        pattern = r'(<div\s+class=["\']footer-brand["\']>\s*Felipe Quiroz\s*</div>)'
-        repl = f'<div class="footer-eyebrow">{eyebrow}</div>\\1'
-        text = re.sub(pattern, repl, text, count=1, flags=re.I)
-
-    text = text.replace('Santiago / CL', 'Santiago, Chile')
-    text = text.replace('SANTIAGO / CL', 'SANTIAGO, CHILE')
+    text = re.sub(r'<footer\s+class=["\']footer["\'][^>]*>.*?</footer>', footer, text, count=1, flags=re.S | re.I)
 
     if text != original:
         path.write_text(text, encoding='utf-8')
