@@ -9,12 +9,10 @@ CSS = r'''
 body{background:#fff}
 .hero{padding:74px var(--page) 58px!important;background:radial-gradient(circle at 82% 18%,rgba(20,103,216,.10),transparent 28%),linear-gradient(180deg,#f4f7f9 0%,#eef3f7 100%)!important;border-bottom:1px solid #dce4eb!important}
 .hero-inner{width:min(var(--article-max),100%)!important;margin:0 auto!important}
-.hero-top{margin-bottom:28px!important;align-items:center!important}
+.hero-top{margin-bottom:28px!important;align-items:center!important;justify-content:flex-start!important}
 .chips{gap:8px!important}
 .chip{min-height:auto!important;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;color:var(--blue)!important;font-size:10px!important;font-weight:700!important;letter-spacing:.12em!important;text-transform:uppercase!important}
 .chip+.chip:before{content:'·';margin:0 8px;color:#8a98a6}
-.back{font-size:10px!important;font-weight:600!important;color:#6f7d89!important;transition:color .18s ease,transform .18s ease}
-.back:hover{color:var(--blue)!important;transform:translateX(-2px)}
 .hero h1{margin:0!important;max-width:880px!important;font-size:clamp(42px,4.4vw,64px)!important;line-height:1.02!important;letter-spacing:-.052em!important;font-weight:500!important}
 .hero h1 span{display:block!important;color:inherit!important}
 .deck{margin:20px 0 0!important;max-width:690px!important;color:#3f4c58!important;font-family:Manrope,sans-serif!important;font-size:clamp(17px,1.55vw,23px)!important;line-height:1.48!important;letter-spacing:-.02em!important}
@@ -47,7 +45,7 @@ blockquote{margin:46px 0!important;padding:24px 26px!important;border:1px solid 
 .stack-reveal.is-visible{opacity:1;transform:none}
 @media(max-width:980px){.article-grid{grid-template-columns:1fr!important;gap:28px!important}.article-aside{position:static!important;max-width:560px}.next-inner{align-items:flex-start!important;flex-direction:column!important}.next-link{text-align:left!important}.next-link h2{margin-left:0!important}}
 @media(max-width:700px){.hero{padding-top:50px!important;padding-bottom:44px!important}.hero-top{margin-bottom:24px!important;align-items:flex-start!important;flex-direction:column!important}.hero h1{font-size:clamp(42px,11vw,58px)!important}.deck{font-size:17px!important}.hero-media{width:calc(100% - 40px)!important;margin-top:20px!important;border-radius:16px!important}.caption{width:auto!important;margin:10px 20px 0!important}.article{padding-top:58px!important;padding-bottom:72px!important}.body h2{margin-top:54px!important}.next-inner{padding:38px 0!important}.next-link h2{font-size:30px!important}}
-@media(prefers-reduced-motion:reduce){.stack-reveal{opacity:1!important;transform:none!important;transition:none!important}.next-link h2,.back{transition:none!important}}
+@media(prefers-reduced-motion:reduce){.stack-reveal{opacity:1!important;transform:none!important;transition:none!important}.next-link h2{transition:none!important}}
 </style>
 '''
 
@@ -66,6 +64,7 @@ JS = r'''
 
 for path in FILES:
     text = path.read_text(encoding='utf-8')
+    text = re.sub(r'<a class="back" href="[^"]+">.*?</a>\s*', '', text, flags=re.S)
     text = re.sub(r'<style id="stack-article-refresh-v\d+">.*?</style>\s*', '', text, flags=re.S)
     text = re.sub(r'<script id="stack-article-reveal">.*?</script>\s*', '', text, flags=re.S)
     text = text.replace('</head>', CSS + '</head>')
