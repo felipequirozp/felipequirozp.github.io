@@ -1,10 +1,11 @@
-name: Refresh Shift Optimizer case
+name: Refresh portfolio cases
 
 on:
   push:
     paths:
       - '.github/workflows/refresh-shift-optimizer-case.yml'
       - '.github/scripts/add_geovictoria_logo_to_product_cases.py'
+      - '.github/scripts/update_lowsignal_title.py'
 
 permissions:
   contents: write
@@ -18,10 +19,11 @@ jobs:
         with:
           python-version: '3.x'
       - run: python .github/scripts/add_geovictoria_logo_to_product_cases.py
+      - run: python .github/scripts/update_lowsignal_title.py
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add geovictoria/shift-optimizer.html es/geovictoria/shift-optimizer.html geovictoria/shift-change-workflow.html es/geovictoria/shift-change-workflow.html
-          git diff --cached --quiet || git commit -m "Add GeoVictoria logo to product case heroes"
+          git add geovictoria/shift-optimizer.html es/geovictoria/shift-optimizer.html geovictoria/shift-change-workflow.html es/geovictoria/shift-change-workflow.html lowsignal.html es/lowsignal.html
+          git diff --cached --quiet || git commit -m "Align portfolio case heroes"
           git push
