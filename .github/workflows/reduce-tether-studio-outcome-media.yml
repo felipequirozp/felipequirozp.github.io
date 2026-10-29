@@ -1,0 +1,28 @@
+name: Reduce Tether Studio outcome media
+
+on:
+  push:
+    paths:
+      - '.github/scripts/reduce_tether_studio_outcome_media.py'
+      - '.github/workflows/reduce-tether-studio-outcome-media.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python .github/scripts/reduce_tether_studio_outcome_media.py
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tethered/tether-studio.html es/tethered/tether-studio.html
+          git diff --cached --quiet || git commit -m "Reduce Tether Studio outcome image height"
+          git push
