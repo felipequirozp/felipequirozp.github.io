@@ -3,8 +3,13 @@ import re
 
 paths = [Path('people.html'), Path('es/people.html')]
 
+LINKS_BY_NAME = {
+    'Zack Tseng': 'https://www.linkedin.com/in/zacharytseng/',
+    'Nicolás Muñoz': 'https://www.linkedin.com/in/nicolas-munoz-pavez/',
+}
+
 css = r'''
-<style id="people-card-polish-v12">
+<style id="people-card-polish-v13">
 .people-all .people-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:34px 16px}
 .person{position:relative;min-width:0}
 .person-copy{padding-top:12px!important}
@@ -13,6 +18,7 @@ css = r'''
 .person:has(.card-link):hover h3{color:var(--blue)}
 .card-link{position:absolute;inset:0;z-index:4;border-radius:14px}
 .portrait-inner{position:relative;aspect-ratio:4/4.5!important;overflow:hidden;border-radius:14px!important;background:#f1f1f1!important}
+.person:nth-child(4) .portrait-inner{background:rgb(242,246,248)!important}
 .portrait img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;filter:grayscale(100%) contrast(.96) brightness(1.02)!important;transform-origin:center 35%;will-change:transform;mix-blend-mode:normal!important}
 /* Individual tuning only — no global portrait scaling. */
 .person:nth-child(1) .portrait img{transform:scale(1.14) translateY(-4%)} /* Christopher */
@@ -65,6 +71,11 @@ for path in paths:
         old_profile_link = re.search(r'<a class="profile-link" href="([^"]+)"', block)
         if old_profile_link:
             href = href or old_profile_link.group(1)
+
+        name_match = re.search(r'<h3>(.*?)</h3>', block, flags=re.S)
+        if name_match:
+            name = re.sub(r'<[^>]+>', '', name_match.group(1)).strip()
+            href = href or LINKS_BY_NAME.get(name)
 
         block = re.sub(r'\sdata-link="[^"]+"', '', block)
         block = re.sub(r'<a class="card-link".*?</a>', '', block, flags=re.S)
