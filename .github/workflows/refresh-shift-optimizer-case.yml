@@ -4,7 +4,6 @@ on:
   push:
     paths:
       - '.github/workflows/refresh-shift-optimizer-case.yml'
-      - '.github/scripts/refresh_shift_optimizer_case.py'
       - '.github/scripts/add_geovictoria_logo_to_product_cases.py'
 
 permissions:
@@ -18,7 +17,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-      - run: python .github/scripts/refresh_shift_optimizer_case.py
       - run: python .github/scripts/add_geovictoria_logo_to_product_cases.py
       - name: Commit changes
         run: |
