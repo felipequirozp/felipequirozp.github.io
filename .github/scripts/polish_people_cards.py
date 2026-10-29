@@ -4,16 +4,17 @@ import re
 paths = [Path('people.html'), Path('es/people.html')]
 
 css = r'''
-<style id="people-card-polish-v5">
+<style id="people-card-polish-v6">
 .people-all .people-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:34px 16px}
+.person{position:relative;min-width:0}
 .person-copy{padding-top:12px!important}
 .company-tag,.context,.profile-link,.role{display:none!important}
-.person h3{margin:0!important;font-size:18px!important;line-height:1.08!important;letter-spacing:-.035em!important;font-weight:500!important}
-a.person{display:block;color:inherit;text-decoration:none;cursor:pointer}
-a.person h3{transition:color .18s ease}a.person:hover h3{color:var(--blue)}
+.person h3{margin:0!important;font-size:18px!important;line-height:1.08!important;letter-spacing:-.035em!important;font-weight:500!important;transition:color .18s ease}
+.person:has(.card-link):hover h3{color:var(--blue)}
+.card-link{position:absolute;inset:0;z-index:4;border-radius:14px}
 .portrait-inner{position:relative;aspect-ratio:4/4.75!important;overflow:hidden;border-radius:14px!important;background:linear-gradient(145deg,#d8e2ea 0%,#edf3f7 58%,#d5e0e8 100%)!important}
 .portrait img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;filter:grayscale(100%) contrast(.96) brightness(1.02)!important;transform-origin:center 35%;will-change:transform}
-/* Each portrait is tuned independently. Zack is the untouched reference. */
+/* Tuned individually. Zack is the visual reference and remains unchanged. */
 .person:nth-child(1) .portrait img{transform:scale(1.14) translateY(-4%)} /* Christopher */
 .person:nth-child(2) .portrait img{transform:scale(1.08) translateY(-2%)} /* Zack */
 .person:nth-child(3) .portrait img{transform:scale(1.40) translateY(-10%)} /* Nicolas */
@@ -37,31 +38,43 @@ a.person h3{transition:color .18s ease}a.person:hover h3{color:var(--blue)}
 for path in paths:
     text = path.read_text(encoding='utf-8')
 
-    def simplify_person(match):
-        block = match.group(0)
-        # Recover LinkedIn from either an existing full-card link or the linked name.
-        href_match = re.search(r'<a class="person"[^>]*href="([^"]+)"', block)
-        if not href_match:
-            href_match = re.search(r'<h3><a href="([^"]+)"', block)
-        if not href_match:
-            href_match = re.search(r'<a class="profile-link" href="([^"]+)"', block)
-        href = href_match.group(1) if href_match else None
+    # Repair any malformed linked cards produced by the previous pass.
+    text = re.sub(
+        r'<a class="person" href="([^"]+)"[^>]*>(.*?)</article>',
+        lambda m: f'<article class="person" data-link="{m.group(1)}">{m.group(2)}</article>',
+        text,
+        flags=re.S,
+    )
 
-        # Normalize article/link wrapper to a plain article first.
-        block = re.sub(r'^<a class="person"[^>]*>', '<article class="person">', block)
-        block = re.sub(r'</a>$', '</article>', block)
-        block = re.sub(r'<h3><a [^>]+>(.*?)</a></h3>', r'<h3>\1</h3>', block, flags=re.S)
+    def normalize_person(match):
+        block = match.group(0)
+        href = None
+
+        data_match = re.search(r'data-link="([^"]+)"', block)
+        if data_match:
+            href = data_match.group(1)
+        if not href:
+            inner_link = re.search(r'<h3><a href="([^"]+)"[^>]*>(.*?)</a></h3>', block, flags=re.S)
+            if inner_link:
+                href = inner_link.group(1)
+                block = re.sub(r'<h3><a href="[^"]+"[^>]*>(.*?)</a></h3>', r'<h3>\1</h3>', block, count=1, flags=re.S)
+        if not href:
+            old_link = re.search(r'<a class="profile-link" href="([^"]+)"', block)
+            if old_link:
+                href = old_link.group(1)
+
+        block = re.sub(r'\sdata-link="[^"]+"', '', block)
+        block = re.sub(r'<a class="card-link".*?</a>', '', block, flags=re.S)
         block = re.sub(r'<div class="company-tag">.*?</div>', '', block, flags=re.S)
         block = re.sub(r'<div class="context">.*?</div>', '', block, flags=re.S)
         block = re.sub(r'<div class="role">.*?</div>', '', block, flags=re.S)
         block = re.sub(r'<a class="profile-link".*?</a>', '', block, flags=re.S)
 
         if href:
-            inner = re.sub(r'^<article class="person">|</article>$', '', block)
-            block = f'<a class="person" href="{href}" target="_blank" rel="noopener noreferrer">{inner}</a>'
+            block = block.replace('<article class="person">', f'<article class="person"><a class="card-link" href="{href}" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a>', 1)
         return block
 
-    text = re.sub(r'<(?:article|a) class="person".*?</(?:article|a)>', simplify_person, text, flags=re.S)
-    text = re.sub(r'<style id="people-card-polish-v[345]">.*?</style>\s*', '', text, flags=re.S)
+    text = re.sub(r'<article class="person">.*?</article>', normalize_person, text, flags=re.S)
+    text = re.sub(r'<style id="people-card-polish-v[3456]">.*?</style>\s*', '', text, flags=re.S)
     text = text.replace('</head>', css + '</head>')
     path.write_text(text, encoding='utf-8')
