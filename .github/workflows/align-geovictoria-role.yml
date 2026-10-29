@@ -1,0 +1,24 @@
+name: Align GeoVictoria role section
+on:
+  push:
+    paths:
+      - '.github/workflows/align-geovictoria-role.yml'
+      - '.github/scripts/align_geovictoria_role.py'
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python .github/scripts/align_geovictoria_role.py
+      - name: Commit changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add geovictoria.html es/geovictoria.html
+          git diff --cached --quiet || git commit -m 'Align GeoVictoria role section with LowSignal and Tether'
+          git push
