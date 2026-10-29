@@ -1,0 +1,36 @@
+name: Refresh remaining blog articles
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/scripts/refresh_remaining_blog_articles.py'
+      - '.github/workflows/refresh-remaining-blog-articles.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Refresh remaining blog articles
+        run: python .github/scripts/refresh_remaining_blog_articles.py
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo 'No changes'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add blog/*.html es/blog/*.html
+          git commit -m 'Refresh remaining blog article layouts'
+          git pull --rebase origin main
+          git push
