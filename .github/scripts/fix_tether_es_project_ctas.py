@@ -11,3 +11,4 @@ new2 = '<a class="program" href="/es/tethered/tether-studio"><small>Ecosistema d
 
 s = s.replace(old1, new1).replace(old2, new2)
 p.write_text(s, encoding='utf-8')
+# trigger
