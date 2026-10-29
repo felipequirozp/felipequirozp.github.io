@@ -54,6 +54,13 @@ CANVAS = (720, 840)
 TOP = (242, 246, 248)
 BOTTOM = (226, 234, 239)
 FLAT = (241, 241, 241)
+FLAT_SLUGS = {'damian-aldunate', 'nicolas-munoz', 'leidy-gomez', 'karen-radonich'}
+Y_OFFSETS = {
+    'damian-aldunate': 115,
+    'nicolas-munoz': 45,
+    'leidy-gomez': 70,
+    'karen-radonich': 75,
+}
 
 def load_image(source: str) -> Image.Image:
     if source.startswith('http'):
@@ -94,17 +101,14 @@ def process_one(slug: str, source: str, session):
     new_size = (max(1, round(subject.width * scale)), max(1, round(subject.height * scale)))
     subject = subject.resize(new_size, Image.Resampling.LANCZOS)
 
-    if slug == 'damian-aldunate':
+    if slug in FLAT_SLUGS:
         bg = Image.new('RGBA', CANVAS, FLAT + (255,))
     else:
         bg = gradient_bg(CANVAS)
 
     x = (CANVAS[0] - subject.width) // 2
     y = CANVAS[1] - subject.height - 22
-    if slug == 'damian-aldunate':
-        # Keep Damian visibly lower in the bitmap itself, while preserving a
-        # single flat background across the full image so no top band appears.
-        y += 115
+    y += Y_OFFSETS.get(slug, 0)
     if y < 16:
         y = 16
     bg.alpha_composite(subject, (x, y))
