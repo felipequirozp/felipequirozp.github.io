@@ -9,6 +9,10 @@ s = en.read_text(encoding='utf-8')
 s = s.replace('July — September 2026', 'July 2026 — Present')
 s = s.replace('As Product Manager, I worked across scheduling and shift operations, taking products from discovery and validation into pilots, production and commercial use.', 'As Product Manager, I work across scheduling and shift operations, taking products from discovery and validation into pilots, production and commercial use.')
 s = s.replace('I worked across product discovery, roadmap definition, prioritization, validation, enterprise pilots, adoption and commercial feedback.', 'I work across product discovery, roadmap definition, prioritization, validation, enterprise pilots, adoption and commercial feedback.')
+
+# Let the GeoVictoria mark sit directly on the hero instead of inside a dark capsule.
+s = s.replace('.geo-logo{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border-radius:14px;background:#0d1724}.geo-logo img{height:26px;width:auto}', '.geo-logo{display:inline-flex;align-items:center;justify-content:flex-start;padding:0;background:transparent}.geo-logo img{height:38px;width:auto;max-width:260px;object-fit:contain;object-position:left center}')
+
 en.write_text(s, encoding='utf-8')
 
 es = s
