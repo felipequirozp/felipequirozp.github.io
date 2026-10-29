@@ -1,0 +1,21 @@
+from pathlib import Path
+
+ARROW='<span class="arrow-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M6 4H12V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>'
+
+for path in [Path('index.html'), Path('es/index.html')]:
+    s=path.read_text()
+    s=s.replace(' ↗', ARROW)
+    s=s.replace('.company.tether img{max-height:34px;max-width:170px}', '.company.tether img{max-height:42px;max-width:205px}')
+    s=s.replace('.project small{display:block;margin-top:28px;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}', '.project small{display:block;margin-top:28px;font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:none;color:var(--blue)}')
+    s=s.replace('.pill{min-height:42px;display:inline-flex;align-items:center;padding:0 15px;border:1px solid #ccd6df;border-radius:999px;background:#fff;font-size:10px;font-weight:700}', '.pill{min-height:42px;display:inline-flex;align-items:center;padding:0 15px;border:1px solid #ccd6df;border-radius:999px;background:#fff;font-size:10px;font-weight:700;transition:background .18s,color .18s,border-color .18s,transform .18s}')
+    s=s.replace('.pill:hover{background:#0b1117;color:#fff;border-color:#0b1117}', '.pill:hover{background:#0b1117;color:#fff;border-color:#0b1117;transform:translateY(-1px)}')
+    s=s.replace('.company{min-height:120px;padding:24px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--line)}', '.company{min-height:120px;padding:24px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--line);transition:background .18s,transform .18s}.company:hover{background:#f6f8fa;transform:translateY(-1px)}')
+    s=s.replace('.work-row{display:grid;grid-template-columns:.34fr 1fr;gap:72px;padding:34px 0;border-bottom:1px solid var(--line);transition:.18s}', '.work-row{display:grid;grid-template-columns:.34fr 1fr;gap:72px;padding:34px 0;border-bottom:1px solid var(--line);transition:padding .18s,background .18s}')
+    s=s.replace('.work-row:hover{padding-left:8px}', '.work-row:hover{padding-left:8px;background:linear-gradient(90deg,rgba(20,103,216,.035),transparent 55%)}')
+    s=s.replace('.work-link{display:inline-flex;margin-top:16px;font-size:10px;font-weight:700}', '.work-link{display:inline-flex;align-items:center;margin-top:16px;font-size:10px;font-weight:700}.work-row:hover .work-link{color:var(--blue)}')
+    s=s.replace('.project span{display:inline-flex;margin-top:26px;font-size:10px;font-weight:700}', '.project span{display:inline-flex;align-items:center;margin-top:26px;font-size:10px;font-weight:700}')
+    s=s.replace('.idea-links .ideas-link{min-height:122px;padding:22px 18px;display:flex;flex-direction:column;justify-content:space-between;border:0;font-family:Manrope,sans-serif;font-size:18px;letter-spacing:-.025em}', '.idea-links .ideas-link{min-height:122px;padding:22px 18px;display:flex;flex-direction:column;justify-content:space-between;border:0;font-family:Manrope,sans-serif;font-size:18px;letter-spacing:-.025em;transition:background .18s,color .18s}')
+    s=s.replace('.closing a{min-height:40px;display:inline-flex;align-items:center;padding:0 14px;border-radius:999px;background:#fff;color:#0b1117;font-size:10px;font-weight:700;border:1px solid #fff}', '.closing a{min-height:40px;display:inline-flex;align-items:center;padding:0 14px;border-radius:999px;background:#fff;color:#0b1117;font-size:10px;font-weight:700;border:1px solid #fff;transition:transform .18s,background .18s,color .18s}.closing a:hover{transform:translateY(-1px);background:#dfe8f2}')
+    s=s.replace('.closing a.secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.24)}', '.closing a.secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.24)}.closing a.secondary:hover{background:rgba(255,255,255,.08)}')
+    s=s.replace('.footer{padding:58px var(--page) 28px', '.arrow-icon{display:inline-flex;width:14px;height:14px;margin-left:6px;vertical-align:-2px;flex:0 0 auto}.arrow-icon svg{width:100%;height:100%}.footer{padding:58px var(--page) 28px')
+    path.write_text(s)
