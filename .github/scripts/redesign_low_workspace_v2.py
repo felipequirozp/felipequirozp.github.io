@@ -54,3 +54,5 @@ for rel in ['lowsignal/low-workspace.html','es/lowsignal/low-workspace.html']:
     s=s.replace('Internal platform · Live build · 2026','Internal product · In development · 2026')
     s=s.replace('Plataforma interna · En construcción · 2026','Producto interno · En desarrollo · 2026')
     p.write_text(s,encoding='utf-8')
+
+# Triggered after workflow creation.
