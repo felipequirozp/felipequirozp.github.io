@@ -1,5 +1,6 @@
 from pathlib import Path
 from io import BytesIO
+import re
 import requests
 from PIL import Image, ImageFilter
 from rembg import remove, new_session
@@ -22,6 +23,8 @@ SOURCES = {
     'juan-yuz': 'images/yuz-rector.png',
     'karen-radonich': 'images/karen-radonich.jpg',
     'javier-robledo': 'images/javier-robledo.jpg',
+    'leidy-gomez': 'images/leidy.png',
+    'valentina-wagenreld': 'images/valentina-w.jpg',
 }
 
 OLD_TO_NEW = {
@@ -38,7 +41,14 @@ OLD_TO_NEW = {
     '/images/yuz-rector.png': '/images/people/juan-yuz.webp',
     '/images/karen-radonich.jpg': '/images/people/karen-radonich.webp',
     '/images/javier-robledo.jpg': '/images/people/javier-robledo.webp',
+    '/images/leidy.png': '/images/people/leidy-gomez.webp',
+    '/images/valentina-w.jpg': '/images/people/valentina-wagenreld.webp',
 }
+
+NEW_PEOPLE = [
+    ('Leidy Gómez', '/images/people/leidy-gomez.webp', 'https://co.linkedin.com/in/leidy-gomez'),
+    ('Valentina Wagenreld', '/images/people/valentina-wagenreld.webp', 'https://www.linkedin.com/in/valentina-wagenreld-62042a138/'),
+]
 
 CANVAS = (720, 840)
 TOP = (242, 246, 248)
@@ -103,6 +113,28 @@ def process_one(slug: str, source: str, session):
     print(f'processed {slug} -> {out}')
 
 
+def person_card(name: str, image: str, linkedin: str) -> str:
+    return (
+        f'<article class="person"><a class="card-link" href="{linkedin}" target="_blank" '
+        f'rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a>'
+        f'<div class="portrait"><div class="portrait-inner"><img src="{image}" alt="{name}" loading="lazy"></div></div>'
+        f'<div class="person-copy"><h3>{name}</h3></div></article>'
+    )
+
+
+def add_new_people():
+    for path in [Path('people.html'), Path('es/people.html')]:
+        text = path.read_text(encoding='utf-8')
+        additions = ''.join(person_card(name, image, linkedin) for name, image, linkedin in NEW_PEOPLE if name not in text)
+        if not additions:
+            continue
+        match = re.search(r'(<div class="people-grid">.*?)(</div></div></section>\s*<section class="closing">)', text, flags=re.S)
+        if not match:
+            raise RuntimeError(f'Could not find People grid insertion point in {path}')
+        text = text[:match.start()] + match.group(1) + additions + match.group(2) + text[match.end():]
+        path.write_text(text, encoding='utf-8')
+
+
 def patch_references():
     for path in [Path('people.html'), Path('es/people.html'), Path('.github/scripts/unify_people_grid.py')]:
         text = path.read_text(encoding='utf-8')
@@ -118,3 +150,4 @@ if __name__ == '__main__':
     for slug, source in SOURCES.items():
         process_one(slug, source, session)
     patch_references()
+    add_new_people()
