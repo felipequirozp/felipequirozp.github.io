@@ -9,7 +9,6 @@ for rel in ['projects.html','es/projects.html']:
     s=s.replace('<div class="impact"><span>B2G</span><span>B2B</span><span>B2C</span></div>', '<div class="impact"><span>78 institutions</span><span>35k+ students</span><span>B2G</span><span>B2B</span><span>B2C</span></div>', 1)
     s=s.replace('<div class="impact"><span>B2G</span><span>B2B</span><span>B2C</span></div>', '<div class="impact"><span>50+ public schools</span><span>Responsible AI</span><span>B2G</span><span>B2B</span><span>B2C</span></div>', 1)
 
-    # Spanish equivalents.
     if rel.startswith('es/'):
         s=s.replace('LATAM · U.S. · Europe', 'LATAM · U.S. · Europa')
         s=s.replace('78 institutions', '78 establecimientos')
@@ -29,4 +28,14 @@ for rel in ['projects.html','es/projects.html']:
         s=s.replace('Enterprise pilots', 'Pilotos enterprise')
         s=s.replace('5 markets', '5 mercados')
 
+    p.write_text(s, encoding='utf-8')
+
+# Keep the GeoVictoria role period shown as ongoing in the case study.
+for rel in ['geovictoria.html','es/geovictoria.html']:
+    p=Path(rel)
+    if not p.exists():
+        continue
+    s=p.read_text(encoding='utf-8')
+    s=s.replace('July — September 2026', 'July 2026 — Present')
+    s=s.replace('Julio — Septiembre 2026', 'Julio 2026 — Presente')
     p.write_text(s, encoding='utf-8')
