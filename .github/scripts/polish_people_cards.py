@@ -23,7 +23,7 @@ css = r'''
 .person:nth-child(1) .portrait img{transform:scale(1.14) translateY(-4%)} /* Christopher */
 .person:nth-child(2) .portrait img{transform:scale(1.08) translateY(-2%)} /* Zack */
 .person:nth-child(3) .portrait img{transform:scale(1.28) translateY(8%)} /* Nicolas */
-.person:nth-child(4) .portrait img{transform:scale(1.10) translateY(13%)} /* Damian */
+.person:nth-child(4) .portrait img{transform:scale(1.10) translateY(0)} /* Damian — vertical placement is baked into asset */
 .person:nth-child(5) .portrait img{transform:scale(1.06) translateY(0%)} /* Matias */
 .person:nth-child(6) .portrait img{transform:scale(1.11) translateY(-2%)} /* Lia */
 .person:nth-child(7) .portrait img{transform:scale(1.24) translateY(-6%)} /* Martin */
