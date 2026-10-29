@@ -66,3 +66,21 @@ es = es.replace('href="/geovictoria/shift-optimizer"','href="/es/geovictoria/shi
 es = es.replace('href="/geovictoria/shift-change-workflow"','href="/es/geovictoria/shift-change-workflow"')
 
 Path('es/geovictoria.html').write_text(es, encoding='utf-8')
+
+
+# ES GeoVictoria product-name normalization
+for _rel in [
+    'es/index.html',
+    'es/projects.html',
+    'es/geovictoria.html',
+    'es/geovictoria/shift-optimizer.html',
+    'es/geovictoria/shift-change-workflow.html',
+]:
+    _p = Path(_rel)
+    if not _p.exists():
+        continue
+    _s = _p.read_text(encoding='utf-8')
+    _s = _s.replace('Smart Scheduler', 'Planificador Inteligente')
+    _s = _s.replace('Shift Optimizer', 'Optimizador de Turnos')
+    _s = _s.replace('Shift Change Workflow', 'Flujo de Cambio de Turnos')
+    _p.write_text(_s, encoding='utf-8')

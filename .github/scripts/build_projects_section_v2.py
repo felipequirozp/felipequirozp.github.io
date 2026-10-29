@@ -39,3 +39,21 @@ def geo(kind,es=False):
 Path('projects.html').write_text(projects(False),encoding='utf-8'); Path('es/projects.html').write_text(projects(True),encoding='utf-8')
 Path('geovictoria/shift-optimizer.html').write_text(geo('optimizer',False),encoding='utf-8'); Path('geovictoria/shift-change-workflow.html').write_text(geo('workflow',False),encoding='utf-8')
 Path('es/geovictoria/shift-optimizer.html').write_text(geo('optimizer',True),encoding='utf-8'); Path('es/geovictoria/shift-change-workflow.html').write_text(geo('workflow',True),encoding='utf-8')
+
+
+# ES GeoVictoria product-name normalization
+for _rel in [
+    'es/index.html',
+    'es/projects.html',
+    'es/geovictoria.html',
+    'es/geovictoria/shift-optimizer.html',
+    'es/geovictoria/shift-change-workflow.html',
+]:
+    _p = Path(_rel)
+    if not _p.exists():
+        continue
+    _s = _p.read_text(encoding='utf-8')
+    _s = _s.replace('Smart Scheduler', 'Planificador Inteligente')
+    _s = _s.replace('Shift Optimizer', 'Optimizador de Turnos')
+    _s = _s.replace('Shift Change Workflow', 'Flujo de Cambio de Turnos')
+    _p.write_text(_s, encoding='utf-8')
