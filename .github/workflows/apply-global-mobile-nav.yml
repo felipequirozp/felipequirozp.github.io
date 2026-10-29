@@ -8,6 +8,7 @@ on:
       - '.github/scripts/add_home_mountain_background.py'
       - '.github/scripts/add_people_cta_projects.py'
       - '.github/scripts/add_juan_yuz_people.py'
+      - '.github/scripts/unify_people_grid.py'
       - 'mobile-nav.js'
 
 permissions:
@@ -25,10 +26,11 @@ jobs:
       - run: python .github/scripts/add_home_mountain_background.py
       - run: python .github/scripts/add_people_cta_projects.py
       - run: python .github/scripts/add_juan_yuz_people.py
+      - run: python .github/scripts/unify_people_grid.py
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- '*.html'
-          git diff --cached --quiet || git commit -m "Apply global mobile navigation, home background and People updates"
+          git diff --cached --quiet || git commit -m "Apply global navigation and unified People grid"
           git push
