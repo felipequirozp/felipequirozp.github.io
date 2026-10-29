@@ -1,0 +1,23 @@
+name: Tune Shift Optimizer spacing
+on:
+  push:
+    paths:
+      - '.github/scripts/tune_shift_optimizer_spacing.py'
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python .github/scripts/tune_shift_optimizer_spacing.py
+      - run: |
+          if git diff --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add geovictoria/shift-optimizer.html es/geovictoria/shift-optimizer.html
+          git commit -m "Tune Shift Optimizer spacing"
+          git push
