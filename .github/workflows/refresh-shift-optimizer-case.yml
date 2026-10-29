@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - '.github/workflows/refresh-shift-optimizer-case.yml'
+      - '.github/scripts/refresh_shift_optimizer_case.py'
 
 permissions:
   contents: write
