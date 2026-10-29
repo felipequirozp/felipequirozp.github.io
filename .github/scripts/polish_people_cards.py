@@ -9,7 +9,7 @@ LINKS_BY_NAME = {
 }
 
 css = r'''
-<style id="people-card-polish-v14">
+<style id="people-card-polish-v15">
 .people-all .people-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:34px 16px}
 .person{position:relative;min-width:0}
 .person-copy{padding-top:12px!important}
@@ -23,7 +23,7 @@ css = r'''
 .person:nth-child(1) .portrait img{transform:scale(1.14) translateY(-4%)} /* Christopher */
 .person:nth-child(2) .portrait img{transform:scale(1.08) translateY(-2%)} /* Zack */
 .person:nth-child(3) .portrait img{transform:scale(1.28) translateY(8%)} /* Nicolas */
-.person:nth-child(4) .portrait img{transform:scale(1.10) translateY(0)} /* Damian — vertical placement is baked into asset */
+.person:nth-child(4) .portrait img{transform:scale(1.10) translateY(0)} /* Damian — vertical placement baked into asset */
 .person:nth-child(5) .portrait img{transform:scale(1.06) translateY(0%)} /* Matias */
 .person:nth-child(6) .portrait img{transform:scale(1.11) translateY(-2%)} /* Lia */
 .person:nth-child(7) .portrait img{transform:scale(1.24) translateY(-6%)} /* Martin */
@@ -90,6 +90,7 @@ for path in paths:
         return block
 
     text = re.sub(r'<article class="person"[^>]*>.*?</article>', normalize_person, text, flags=re.S)
+    text = re.sub(r'/images/people/damian-aldunate\.webp(?:\?v=[^\"]+)?', '/images/people/damian-aldunate.webp?v=20261029-1412', text)
     text = re.sub(r'<style id="people-card-polish-v\d+">.*?</style>\s*', '', text, flags=re.S)
     text = text.replace('</head>', css + '</head>')
     path.write_text(text, encoding='utf-8')
