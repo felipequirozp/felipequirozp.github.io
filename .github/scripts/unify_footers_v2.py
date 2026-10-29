@@ -31,7 +31,9 @@ for path in ROOT.rglob('*.html'):
         continue
 
     original = text
-    is_es = ((path.parts and path.parts[0] == 'es') or 'lang="es"' in text.lower())
+    html_lang_match = re.search(r'<html\b[^>]*\blang=["\']([^"\']+)["\']', text, flags=re.I)
+    root_lang = html_lang_match.group(1).lower() if html_lang_match else ''
+    is_es = (path.parts and path.parts[0] == 'es') or root_lang.startswith('es')
     footer = ES_FOOTER if is_es else EN_FOOTER
 
     if 'id="site-footer-v2"' in text:
