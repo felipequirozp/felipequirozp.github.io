@@ -7,6 +7,7 @@ on:
       - '.github/scripts/apply_global_mobile_nav.py'
       - '.github/scripts/add_home_mountain_background.py'
       - '.github/scripts/add_people_cta_projects.py'
+      - '.github/scripts/add_juan_yuz_people.py'
       - 'mobile-nav.js'
 
 permissions:
@@ -23,10 +24,11 @@ jobs:
       - run: python .github/scripts/apply_global_mobile_nav.py
       - run: python .github/scripts/add_home_mountain_background.py
       - run: python .github/scripts/add_people_cta_projects.py
+      - run: python .github/scripts/add_juan_yuz_people.py
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- '*.html'
-          git diff --cached --quiet || git commit -m "Apply global mobile navigation, home background and People CTA"
+          git diff --cached --quiet || git commit -m "Apply global mobile navigation, home background and People updates"
           git push
