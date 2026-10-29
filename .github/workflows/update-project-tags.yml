@@ -1,0 +1,32 @@
+name: Update project tags
+
+on:
+  push:
+    paths:
+      - '.github/scripts/update_project_tags.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-tags:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Apply project tags
+        run: python .github/scripts/update_project_tags.py
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No tag changes needed"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add projects.html es/projects.html
+          git commit -m "Update project business model tags"
+          git push
