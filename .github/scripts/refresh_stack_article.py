@@ -69,3 +69,5 @@ for path in FILES:
     text = text.replace('</body>', JS + '</body>')
     path.write_text(text, encoding='utf-8')
     print(f'refreshed {path}')
+
+# Keep this script idempotent; the comment below is only here so workflow edits can retrigger safely.
