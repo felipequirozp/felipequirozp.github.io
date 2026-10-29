@@ -91,6 +91,10 @@ def process_one(slug: str, source: str, session):
 
     x = (CANVAS[0] - subject.width) // 2
     y = CANVAS[1] - subject.height - 22
+    if slug == 'damian-aldunate':
+        # Bake the lower framing into the bitmap itself so CSS never exposes
+        # a second background tone above the image.
+        y += 72
     if y < 16:
         y = 16
     bg.alpha_composite(subject, (x, y))
