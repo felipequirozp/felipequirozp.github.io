@@ -20,7 +20,7 @@ ORDER = [
 ]
 
 css = r'''
-<style id="people-card-polish-v26">
+<style id="people-card-polish-v27">
 .people-all .people-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:34px 16px}
 .person{position:relative;min-width:0}
 .person-copy{padding-top:12px!important}
@@ -30,7 +30,7 @@ css = r'''
 .card-link{position:absolute;inset:0;z-index:4;border-radius:14px}
 .portrait-inner{position:relative;aspect-ratio:4/4.5!important;overflow:hidden;border-radius:14px!important;background:#f1f1f1!important}
 .portrait img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;filter:grayscale(100%) contrast(.96) brightness(1.02)!important;transform-origin:center 35%;will-change:transform;mix-blend-mode:normal!important}
-.person:nth-child(3) .portrait-inner::after,.person:nth-child(4) .portrait-inner::after,.person:nth-child(6) .portrait-inner::after{content:"";position:absolute;z-index:2;left:0;right:0;top:0;height:14px;background:#f1f1f1;pointer-events:none}
+.person:nth-child(3) .portrait-inner::after,.person:nth-child(4) .portrait-inner::after,.person:nth-child(6) .portrait-inner::after,.person:nth-child(15) .portrait-inner::after{content:"";position:absolute;z-index:2;left:0;right:0;top:0;height:14px;background:#f1f1f1;pointer-events:none}
 .person:nth-child(1) .portrait img{transform:scale(1.14) translateY(-4%)}
 .person:nth-child(2) .portrait img{transform:scale(1.08) translateY(-2%)}
 .person:nth-child(3) .portrait img{transform:scale(1.27) translateY(8%)}
@@ -45,7 +45,7 @@ css = r'''
 .person:nth-child(12) .portrait img{transform:scale(1.12) translateY(-3%)}
 .person:nth-child(13) .portrait img{transform:scale(1.22) translateY(2%)}
 .person:nth-child(14) .portrait img{transform:scale(1.16) translateY(4%)}
-.person:nth-child(15) .portrait img{transform:scale(1.16) translateY(6%)}
+.person:nth-child(15) .portrait img{transform:scale(1.16) translateY(8%)}
 
 /* Scroll reveal */
 .js-reveal{opacity:0;transform:translateY(24px);transition:opacity .65s cubic-bezier(.2,.7,.2,1),transform .65s cubic-bezier(.2,.7,.2,1);transition-delay:var(--reveal-delay,0ms)}
