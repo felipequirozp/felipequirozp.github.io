@@ -43,6 +43,7 @@ OLD_TO_NEW = {
 CANVAS = (720, 840)
 TOP = (242, 246, 248)
 BOTTOM = (226, 234, 239)
+FLAT = (241, 241, 241)
 
 def load_image(source: str) -> Image.Image:
     if source.startswith('http'):
@@ -83,7 +84,11 @@ def process_one(slug: str, source: str, session):
     new_size = (max(1, round(subject.width * scale)), max(1, round(subject.height * scale)))
     subject = subject.resize(new_size, Image.Resampling.LANCZOS)
 
-    bg = gradient_bg(CANVAS)
+    if slug == 'damian-aldunate':
+        bg = Image.new('RGBA', CANVAS, FLAT + (255,))
+    else:
+        bg = gradient_bg(CANVAS)
+
     x = (CANVAS[0] - subject.width) // 2
     y = CANVAS[1] - subject.height - 22
     if y < 16:
