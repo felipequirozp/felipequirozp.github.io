@@ -20,7 +20,7 @@ ORDER = [
 ]
 
 css = r'''
-<style id="people-card-polish-v30">
+<style id="people-card-polish-v31">
 .people-all .people-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:34px 16px}
 .person{position:relative;min-width:0}
 .person-copy{padding-top:12px!important}
@@ -47,11 +47,11 @@ css = r'''
 .person:nth-child(14) .portrait img{transform:scale(1.16) translateY(4%)}
 .person:nth-child(15) .portrait img{transform:scale(1.16) translateY(8%)}
 
-/* Closing CTA hover */
+/* Closing CTA hover — match Projects */
 .closing a{transition:transform .2s ease,background-color .2s ease,color .2s ease,box-shadow .2s ease}
-.closing a:hover{transform:translateY(-2px);background:#f1f4f7;color:#0b1117;box-shadow:0 8px 22px rgba(0,0,0,.16)}
+.closing a:hover{transform:translateY(-2px);background:#1467d8;color:#fff;box-shadow:0 8px 22px rgba(20,103,216,.22)}
 .closing a:active{transform:translateY(0)}
-.closing a:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.closing a:focus-visible{outline:2px solid #1467d8;outline-offset:3px}
 
 /* Scroll reveal */
 .js-reveal{opacity:0;transform:translateY(24px);transition:opacity .65s cubic-bezier(.2,.7,.2,1),transform .65s cubic-bezier(.2,.7,.2,1);transition-delay:var(--reveal-delay,0ms)}
