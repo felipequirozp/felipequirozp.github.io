@@ -2,6 +2,7 @@ from pathlib import Path
 import re
 
 PATHS = [Path('people.html'), Path('es/people.html')]
+CACHE_STAMP = '20261030-asset-refresh-2'
 
 ORDER = [
     'Christopher Neilson','Zack Tseng','Nicolás Muñoz','Leidy Gómez','Rodrigo Lewit','Karen Radonich','Valentina Gran',
@@ -10,7 +11,7 @@ ORDER = [
 ]
 
 CSS = r'''
-<style id="people-face-polish-v9">
+<style id="people-face-polish-v10">
 .people-all .people-grid{grid-template-columns:repeat(7,minmax(0,1fr))!important;gap:34px 16px!important}
 .people-all .portrait{height:auto!important;min-height:0!important;padding:0!important;border:0!important;background:transparent!important;overflow:hidden!important}
 .people-all .portrait-inner{position:relative!important;aspect-ratio:4/4.5!important;background:#f1f1f1!important;overflow:hidden!important;border-radius:14px!important}
@@ -63,9 +64,19 @@ def reorder_grid(text):
     ordered = ''.join(by_name[n] for n in ORDER)
     return text[:m.start()] + m.group(1) + ordered + m.group(3) + text[m.end():]
 
+def bust_portrait_cache(text):
+    for slug in ['valentina-gran', 'tamara-munoz', 'ignacio-lepe', 'tomas-recart']:
+        text = re.sub(
+            rf'(/images/people/{slug}\.png)(?:\?v=[^"\']+)?',
+            rf'\1?v={CACHE_STAMP}',
+            text,
+        )
+    return text
+
 def patch(path):
     text = path.read_text(encoding='utf-8')
     text = reorder_grid(text)
+    text = bust_portrait_cache(text)
     legacy_ids = [r'people-card-polish-v\d+',r'people-face-polish-v\d+',r'people-alignment-fix-v\d+',r'people-grid-7-v\d+']
     for style_id in legacy_ids:
         text = re.sub(rf'<style id="{style_id}">.*?</style>\s*', '', text, flags=re.S)
