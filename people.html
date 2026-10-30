@@ -132,37 +132,42 @@
 @media(max-width:700px){.people-all .people-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:28px 12px!important}}
 </style>
 
-<style id="people-face-polish-v1">
-/* Final People grid: 7-up desktop, tuned card-by-card by person name. */
+
+<style id="people-face-polish-v2">
+/* Final People grid: 7-up desktop and consistent head-and-shoulders composition. */
 .people-all .people-grid{grid-template-columns:repeat(7,minmax(0,1fr))!important;gap:34px 16px!important}
 .people-all .portrait-inner{aspect-ratio:4/4.5!important;background:#f1f1f1!important;overflow:hidden!important;border-radius:14px!important}
-.people-all .portrait img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center bottom!important;transform-origin:center bottom!important;filter:grayscale(100%) contrast(.96) brightness(1.02)!important;mix-blend-mode:normal!important}
+.people-all .portrait img{
+  width:100%!important;height:100%!important;object-fit:cover!important;
+  object-position:center 38%!important;transform-origin:center center!important;
+  filter:grayscale(100%) contrast(.96) brightness(1.02)!important;mix-blend-mode:normal!important;
+}
 .people-all .person h3{font-size:16px!important;line-height:1.08!important}
 
-/* Row 1 */
-.people-all img[alt="Christopher Neilson"]{transform:scale(1.08) translateY(1%)!important}
-.people-all img[alt="Zack Tseng"]{transform:scale(1.04) translateY(0)!important}
-.people-all img[alt="Nicolás Muñoz"]{transform:scale(1.10) translateY(1%)!important}
-.people-all img[alt="Leidy Gómez"]{transform:scale(1.05) translateY(0)!important}
-.people-all img[alt="Rodrigo Lewit"]{transform:scale(1.08) translateY(1%)!important}
-.people-all img[alt="Karen Radonich"]{transform:scale(1.06) translateY(0)!important}
-.people-all img[alt="Valentina Gran"]{transform:scale(.97) translateY(0)!important}
+/* Row 1 — keep faces on the same visual eye line */
+.people-all img[alt="Christopher Neilson"]{transform:scale(1.13) translateY(1%)!important;object-position:center 34%!important}
+.people-all img[alt="Zack Tseng"]{transform:scale(1.10) translateY(1%)!important;object-position:center 36%!important}
+.people-all img[alt="Nicolás Muñoz"]{transform:scale(1.16) translateY(2%)!important;object-position:center 36%!important}
+.people-all img[alt="Leidy Gómez"]{transform:scale(1.10) translateY(1%)!important;object-position:center 35%!important}
+.people-all img[alt="Rodrigo Lewit"]{transform:scale(1.14) translateY(2%)!important;object-position:center 36%!important}
+.people-all img[alt="Karen Radonich"]{transform:scale(1.10) translateY(1%)!important;object-position:center 35%!important}
+.people-all img[alt="Valentina Gran"]{transform:scale(1.02) translateY(1%)!important;object-position:center 35%!important}
 
-/* Row 2 */
-.people-all img[alt="Tomás Recart"]{transform:scale(1.18) translateY(3%)!important}
-.people-all img[alt="Tamara Muñoz"]{transform:scale(.91) translateY(0)!important}
-.people-all img[alt="Ignacio Lepe"]{transform:scale(1.00) translateY(0)!important}
-.people-all img[alt="Valentina Wagenreld"]{transform:scale(1.10) translateY(2%)!important}
-.people-all img[alt="Francisca Astudillo"]{transform:scale(.96) translateY(0)!important}
-.people-all img[alt="Juan Yuz"]{transform:scale(1.14) translateY(3%)!important}
-.people-all img[alt="Javier Robledo"]{transform:scale(1.10) translateY(2%)!important}
+/* Row 2 — crop excess torso and equalize head size */
+.people-all img[alt="Tomás Recart"]{transform:scale(1.34) translateY(6%)!important;object-position:center 34%!important}
+.people-all img[alt="Tamara Muñoz"]{transform:scale(.88) translateY(-1%)!important;object-position:center 35%!important}
+.people-all img[alt="Ignacio Lepe"]{transform:scale(1.08) translateY(2%)!important;object-position:center 35%!important}
+.people-all img[alt="Valentina Wagenreld"]{transform:scale(1.28) translateY(6%)!important;object-position:center 35%!important}
+.people-all img[alt="Francisca Astudillo"]{transform:scale(1.02) translateY(1%)!important;object-position:center 35%!important}
+.people-all img[alt="Juan Yuz"]{transform:scale(1.31) translateY(6%)!important;object-position:center 34%!important}
+.people-all img[alt="Javier Robledo"]{transform:scale(1.27) translateY(5%)!important;object-position:center 35%!important}
 
-/* Row 3 */
-.people-all img[alt="Damián Aldunate"]{transform:scale(1.08) translateY(1%)!important}
-.people-all img[alt="Jorge Muñoz"]{transform:scale(1.14) translateY(3%)!important}
-.people-all img[alt="Matías Bussinger"]{transform:scale(1.09) translateY(2%)!important}
-.people-all img[alt="Lía Morice"]{transform:scale(1.08) translateY(2%)!important}
-.people-all img[alt="Martín Alvarado"]{transform:scale(1.12) translateY(3%)!important}
+/* Row 3 — same portrait depth, no floating/full-body feel */
+.people-all img[alt="Damián Aldunate"]{transform:scale(1.22) translateY(4%)!important;object-position:center 35%!important}
+.people-all img[alt="Jorge Muñoz"]{transform:scale(1.23) translateY(4%)!important;object-position:center 35%!important}
+.people-all img[alt="Matías Bussinger"]{transform:scale(1.13) translateY(2%)!important;object-position:center 35%!important}
+.people-all img[alt="Lía Morice"]{transform:scale(1.14) translateY(3%)!important;object-position:center 35%!important}
+.people-all img[alt="Martín Alvarado"]{transform:scale(1.20) translateY(4%)!important;object-position:center 35%!important}
 
 @media(max-width:1400px){.people-all .people-grid{grid-template-columns:repeat(6,minmax(0,1fr))!important}}
 @media(max-width:1180px){.people-all .people-grid{grid-template-columns:repeat(5,minmax(0,1fr))!important}}
