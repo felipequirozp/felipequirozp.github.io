@@ -1,0 +1,30 @@
+name: Fix partnerships navbar
+
+on:
+  push:
+    paths:
+      - '.github/scripts/fix_partnerships_navbar.py'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python .github/scripts/fix_partnerships_navbar.py
+      - name: Commit navbar fixes
+        run: |
+          if git diff --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add es/tethered/alianzas-estrategicas/index.html tethered/strategic-partnerships/index.html
+          git commit -m "Align partnerships navbar with project pages"
+          git push
