@@ -1,6 +1,7 @@
 from pathlib import Path
 import re
 import numpy as np
+import cv2
 from PIL import Image, ImageOps, ImageFilter
 from rembg import remove, new_session
 from scipy import ndimage as ndi
@@ -21,72 +22,100 @@ TARGET_HEIGHT = 735
 BG = (241, 241, 241, 255)
 Y_SHIFT = {'valentina-gran': 6, 'tomas-recart': 8, 'tamara-munoz': 10, 'ignacio-lepe': 8}
 
+FACE_ENVELOPE = {
+    'valentina-gran': (1.30, 2.15),
+    'tomas-recart': (1.45, 2.45),
+    'tamara-munoz': (1.20, 1.90),
+    'ignacio-lepe': (1.35, 2.25),
+}
 
-def central_seed(mask, iterations=12):
-    eroded = ndi.binary_erosion(mask, iterations=iterations)
-    labels, count = ndi.label(eroded)
-    if count == 0:
+
+def detect_main_face(img):
+    rgb = np.array(img.convert('RGB'))
+    gray = cv2.cvtColor(rgb, cv2.COLOR_RGB2GRAY)
+    cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+    faces = cascade.detectMultiScale(gray, scaleFactor=1.08, minNeighbors=5, minSize=(50, 50))
+    if len(faces) == 0:
         return None
-
-    h, w = mask.shape
-    best_label = 0
+    h, w = gray.shape
+    cx, cy = w / 2, h / 2
+    best = None
     best_score = -1
-    for lab in range(1, count + 1):
-        comp = labels == lab
-        area = int(comp.sum())
-        if area == 0:
-            continue
-        ys, xs = np.nonzero(comp)
-        cx = xs.mean() / w
-        cy = ys.mean() / h
-        # Strongly prefer a sizeable component around the face/torso center.
-        center = max(0.0, 1.0 - abs(cx - .5) * 2.8)
-        upper = max(0.0, 1.0 - abs(cy - .42) * 1.8)
-        score = area * (1.0 + center * 2.5 + upper * 1.2)
+    for x, y, fw, fh in faces:
+        fx, fy = x + fw/2, y + fh/2
+        dist = ((fx-cx)**2 + (fy-cy)**2) ** 0.5
+        center_bonus = max(0.1, 1 - dist / max(h, w))
+        score = fw * fh * center_bonus
         if score > best_score:
             best_score = score
-            best_label = lab
-    return labels == best_label if best_label else None
+            best = (x, y, fw, fh)
+    return best
 
 
-def refine_alpha(alpha_img, slug):
-    alpha = np.array(alpha_img)
-    original = alpha > 28
-
-    # Break thin bridges between the subject and stubborn background objects,
-    # then reconstruct only the region connected to the central person seed.
-    seed = central_seed(original, iterations=14)
-    if seed is None:
-        seed = central_seed(original, iterations=8)
-    if seed is not None:
-        mask = ndi.binary_propagation(seed, mask=original)
-    else:
-        mask = original
-
-    # Remove tiny islands and close pinholes without regrowing removed background.
-    labels, n = ndi.label(mask)
-    if n:
-        sizes = ndi.sum(mask, labels, index=range(1, n + 1))
-        keep = [i + 1 for i, s in enumerate(sizes) if s >= 900]
-        mask = np.isin(labels, keep)
-
-    mask = ndi.binary_fill_holes(mask)
-    mask = ndi.binary_closing(mask, structure=np.ones((5, 5)))
-
-    # Per-photo guard rails for the two images where rembg repeatedly kept
-    # obvious side-background people/shapes. These only trim outer zones.
+def face_guided_envelope(mask, face, slug):
+    if face is None:
+        return mask
     h, w = mask.shape
-    if slug == 'tamara-munoz':
-        mask[:, int(w * .86):] = False
-    elif slug == 'valentina-gran':
-        # remove the far-left circular backdrop while preserving hair/shoulder
-        yy, xx = np.ogrid[:h, :w]
-        forbidden = (xx < w * .13) & (yy > h * .22)
-        mask[forbidden] = False
+    x, y, fw, fh = face
+    cx = x + fw / 2
+    head_mult, body_mult = FACE_ENVELOPE.get(slug, (1.35, 2.2))
 
+    env = np.zeros_like(mask, dtype=bool)
+    top = max(0, int(y - 0.9 * fh))
+    shoulder_y = min(h - 1, int(y + 2.2 * fh))
+
+    for yy in range(top, h):
+        if yy <= shoulder_y:
+            t = (yy - top) / max(1, shoulder_y - top)
+            half = fw * (head_mult + (1.55 - head_mult) * t)
+        else:
+            t = (yy - shoulder_y) / max(1, h - shoulder_y)
+            half = fw * (1.55 + (body_mult - 1.55) * t)
+        left = max(0, int(cx - half))
+        right = min(w, int(cx + half))
+        env[yy, left:right] = True
+
+    # keep a generous ellipse around the head/upper hair so long hair is not clipped
+    Y, X = np.ogrid[:h, :w]
+    head_cy = y + 0.65 * fh
+    rx = fw * 1.55
+    ry = fh * 1.95
+    head_ellipse = ((X - cx) / max(rx,1))**2 + ((Y - head_cy) / max(ry,1))**2 <= 1
+    env |= head_ellipse
+    return mask & env
+
+
+def clean_mask(alpha_img, img, slug):
+    alpha = np.array(alpha_img)
+    mask = alpha > 28
+    face = detect_main_face(img)
+    mask = face_guided_envelope(mask, face, slug)
+
+    # break thin bridges between main subject and background objects
+    eroded = ndi.binary_erosion(mask, structure=np.ones((5,5)), iterations=1)
+    labeled, num = ndi.label(eroded)
+    if num > 0:
+        if face is not None:
+            x, y, fw, fh = face
+            seed_x = int(x + fw/2)
+            seed_y = int(y + fh*1.1)
+            seed_y = max(0, min(eroded.shape[0]-1, seed_y))
+            seed_x = max(0, min(eroded.shape[1]-1, seed_x))
+            chosen = labeled[seed_y, seed_x]
+        else:
+            chosen = 0
+        if chosen == 0:
+            areas = ndi.sum(eroded, labeled, index=range(1, num+1))
+            chosen = int(np.argmax(areas)) + 1
+        core = labeled == chosen
+        core = ndi.binary_dilation(core, structure=np.ones((5,5)), iterations=1)
+        mask &= core
+
+    mask = ndi.binary_closing(mask, structure=np.ones((5,5)))
+    mask = ndi.binary_fill_holes(mask)
+    mask = ndi.binary_opening(mask, structure=np.ones((3,3)))
     clean = (mask * 255).astype(np.uint8)
-    clean = Image.fromarray(clean, mode='L').filter(ImageFilter.GaussianBlur(1.35))
-    return clean
+    return Image.fromarray(clean, mode='L').filter(ImageFilter.GaussianBlur(0.9))
 
 
 def process(slug, src_path, session):
@@ -95,14 +124,14 @@ def process(slug, src_path, session):
         img,
         session=session,
         alpha_matting=True,
-        alpha_matting_foreground_threshold=245,
-        alpha_matting_background_threshold=8,
-        alpha_matting_erode_size=10,
+        alpha_matting_foreground_threshold=240,
+        alpha_matting_background_threshold=10,
+        alpha_matting_erode_size=6,
     ).convert('RGBA')
 
-    clean_alpha = refine_alpha(cut.getchannel('A'), slug)
-    cut.putalpha(clean_alpha)
-    bbox = clean_alpha.getbbox()
+    alpha = clean_mask(cut.getchannel('A'), img, slug)
+    cut.putalpha(alpha)
+    bbox = alpha.getbbox()
     if not bbox:
         raise RuntimeError(f'No foreground detected for {slug}')
 
@@ -112,10 +141,10 @@ def process(slug, src_path, session):
     subject = gray
 
     scale = TARGET_HEIGHT / subject.height
-    max_w = int(CANVAS[0] * .88)
+    max_w = int(CANVAS[0] * 0.88)
     if subject.width * scale > max_w:
         scale = max_w / subject.width
-    subject = subject.resize((max(1, round(subject.width * scale)), max(1, round(subject.height * scale))), Image.Resampling.LANCZOS)
+    subject = subject.resize((max(1, round(subject.width*scale)), max(1, round(subject.height*scale))), Image.Resampling.LANCZOS)
 
     canvas = Image.new('RGBA', CANVAS, BG)
     x = (CANVAS[0] - subject.width) // 2
@@ -130,7 +159,7 @@ def process(slug, src_path, session):
 def card(name, image, linkedin):
     return (
         f'<article class="person"><a class="card-link" href="{linkedin}" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a>'
-        f'<div class="portrait"><div class="portrait-inner"><img src="{image}?v=20261029-2315" alt="{name}" loading="lazy"></div></div>'
+        f'<div class="portrait"><div class="portrait-inner"><img src="{image}?v=20261029-2318" alt="{name}" loading="lazy"></div></div>'
         f'<div class="person-copy"><h3>{name}</h3></div></article>'
     )
 
