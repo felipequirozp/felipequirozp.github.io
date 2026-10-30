@@ -1,0 +1,30 @@
+name: Add digital skills project
+
+on:
+  push:
+    paths:
+      - '.github/scripts/add_digital_skills_project.py'
+      - '.github/workflows/add-digital-skills-project.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add project and case study pages
+        run: python .github/scripts/add_digital_skills_project.py
+      - name: Commit generated pages
+        run: |
+          if git diff --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add projects.html es/projects.html tethered/digital-skills-ai-survey/index.html es/tethered/habilidades-digitales-ia/index.html
+          git commit -m "Add digital skills and AI survey case study"
+          git push
