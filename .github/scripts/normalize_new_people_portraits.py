@@ -39,30 +39,37 @@ def hard_subject_window(shape, face, slug):
         return np.ones((h, w), dtype=bool)
     x, y, fw, fh = face
     cx = x + fw/2
-    top = max(0, int(y - 1.05*fh))
+    top = max(0, int(y - 1.0*fh))
     env = np.zeros((h, w), dtype=bool)
 
     for yy in range(top, h):
         t = min(1.0, max(0.0, (yy-top)/max(1, h-top)))
         if slug == 'valentina-gran':
-            # much tighter on the left to eliminate the black block completely
-            left_mult = 0.92 + 0.24*t
-            right_mult = 1.45 + 0.35*t
+            left_mult = 0.82 + 0.18*t
+            right_mult = 1.42 + 0.30*t
         elif slug == 'tamara-munoz':
-            # much tighter on the right to eliminate the secondary person/background
-            left_mult = 1.45 + 0.32*t
-            right_mult = 0.88 + 0.18*t
+            left_mult = 1.42 + 0.30*t
+            right_mult = 0.72 + 0.14*t
         else:
             left_mult = right_mult = 1.55 + 0.25*t
         l = max(0, int(cx - fw*left_mult))
         r = min(w, int(cx + fw*right_mult))
         env[yy, l:r] = True
 
-    # protect face + hair around the actual subject
     Y, X = np.ogrid[:h, :w]
-    rx = fw * (1.40 if slug in ('valentina-gran','tamara-munoz') else 1.55)
-    ry = fh * 1.75
-    head = ((X-cx)/rx)**2 + ((Y-(y+0.55*fh))/ry)**2 <= 1
+    if slug == 'valentina-gran':
+        rx_l, rx_r = 1.05, 1.35
+    elif slug == 'tamara-munoz':
+        rx_l, rx_r = 1.35, 1.00
+    else:
+        rx_l = rx_r = 1.55
+
+    head_y = y + .55*fh
+    head = np.zeros((h,w), dtype=bool)
+    left = X <= cx
+    right = ~left
+    head[left] = (((X[left]-cx)/(fw*rx_l))**2 + ((Y[left]-head_y)/(fh*1.72))**2 <= 1)
+    head[right] = (((X[right]-cx)/(fw*rx_r))**2 + ((Y[right]-head_y)/(fh*1.72))**2 <= 1)
     env |= head
     return env
 
@@ -85,13 +92,13 @@ def refine_with_grabcut(img, rembg_alpha, face, slug):
     gc = np.full((h,w), cv2.GC_BGD, np.uint8)
     gc[(alpha > 12) & env] = cv2.GC_PR_FGD
     Y, X = np.ogrid[:h, :w]
-    face_seed = ((X-cx)/(fw*.72))**2 + ((Y-cy)/(fh*.90))**2 <= 1
+    face_seed = ((X-cx)/(fw*.70))**2 + ((Y-cy)/(fh*.90))**2 <= 1
     gc[face_seed] = cv2.GC_FGD
 
-    torso_l = max(0, int(cx - fw*.64))
-    torso_r = min(w, int(cx + fw*.64))
+    torso_l = max(0, int(cx - fw*.60))
+    torso_r = min(w, int(cx + fw*.60))
     torso_t = min(h, int(y + fh*1.0))
-    torso_b = min(h, int(y + fh*4.5))
+    torso_b = min(h, int(y + fh*4.4))
     gc[torso_t:torso_b, torso_l:torso_r] = cv2.GC_FGD
     gc[~env] = cv2.GC_BGD
     gc[alpha < 3] = cv2.GC_BGD
@@ -106,16 +113,19 @@ def refine_with_grabcut(img, rembg_alpha, face, slug):
 
     mask &= env
 
-    # final hard trims for the two problematic photos
+    # Final explicit trims. These start near the face so the remaining attached
+    # background in the source photos is guaranteed to disappear.
     if slug == 'valentina-gran':
-        for yy in range(max(0, int(y + .10*fh)), h):
-            t = min(1.0, max(0.0, (yy-(y+.10*fh))/max(1, h-(y+.10*fh))))
-            keep_from = int(cx - fw*(.82 + .20*t))
+        y0 = max(0, int(y - .15*fh))
+        for yy in range(y0, h):
+            t = min(1.0, max(0.0, (yy-y0)/max(1, h-y0)))
+            keep_from = int(cx - fw*(.70 + .12*t))
             mask[yy, :max(0, keep_from)] = False
     elif slug == 'tamara-munoz':
-        for yy in range(max(0, int(y + .05*fh)), h):
-            t = min(1.0, max(0.0, (yy-(y+.05*fh))/max(1, h-(y+.05*fh))))
-            keep_to = int(cx + fw*(.78 + .16*t))
+        y0 = max(0, int(y - .10*fh))
+        for yy in range(y0, h):
+            t = min(1.0, max(0.0, (yy-y0)/max(1, h-y0)))
+            keep_to = int(cx + fw*(.62 + .10*t))
             mask[yy, min(w, keep_to):] = False
 
     labels, n = ndi.label(mask)
@@ -128,11 +138,10 @@ def refine_with_grabcut(img, rembg_alpha, face, slug):
     mask = ndi.binary_closing(mask, structure=np.ones((3,3)))
     mask = ndi.binary_fill_holes(mask)
     out = Image.fromarray((mask*255).astype(np.uint8), 'L')
-    return out.filter(ImageFilter.GaussianBlur(1.7))
+    return out.filter(ImageFilter.GaussianBlur(1.9))
 
 
 def smooth_ignacio(rembg_alpha):
-    # Preserve the model edge and only soften anti-aliasing; no erosion/dilation.
     a = rembg_alpha.filter(ImageFilter.GaussianBlur(1.55))
     arr = np.array(a, dtype=np.float32)
     arr[arr < 5] = 0
