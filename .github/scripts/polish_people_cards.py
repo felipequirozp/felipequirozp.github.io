@@ -10,12 +10,12 @@ ORDER = [
 ]
 
 FRESH_ASSETS = {
-    'Valentina Gran': '/images/vgran.png?v=20261030-0245',
-    'Tamara Muñoz': '/images/tamara.png?v=20261030-0245',
+    'Valentina Gran': '/images/vgran.png?v=20261030-0252',
+    'Tamara Muñoz': '/images/tamara.png?v=20261030-0252',
 }
 
 CSS = r'''
-<style id="people-face-polish-v10">
+<style id="people-face-polish-v11">
 .people-all .people-grid{grid-template-columns:repeat(7,minmax(0,1fr))!important;gap:34px 16px!important}
 .people-all .portrait{height:auto!important;min-height:0!important;padding:0!important;border:0!important;background:transparent!important;overflow:hidden!important}
 .people-all .portrait-inner{position:relative!important;aspect-ratio:4/4.5!important;background:#f1f1f1!important;overflow:hidden!important;border-radius:14px!important}
@@ -31,9 +31,9 @@ CSS = r'''
 .people-all img[alt="Leidy Gómez"]{transform:scale(1.13) translateY(2%)!important}
 .people-all img[alt="Rodrigo Lewit"]{transform:scale(1.15) translateY(2%)!important}
 .people-all img[alt="Karen Radonich"]{transform:scale(1.12) translateY(2%)!important}
-.people-all img[alt="Valentina Gran"]{transform:scale(1.10) translateY(2%)!important}
+.people-all img[alt="Valentina Gran"]{object-fit:contain!important;object-position:center bottom!important;transform:scale(.92) translateY(8%)!important}
 .people-all img[alt="Tomás Recart"]{transform:scale(1.46) translateY(12%)!important}
-.people-all img[alt="Tamara Muñoz"]{transform:scale(1.02) translateY(1%)!important}
+.people-all img[alt="Tamara Muñoz"]{object-fit:contain!important;object-position:center bottom!important;transform:scale(.88) translateY(9%)!important}
 .people-all img[alt="Ignacio Lepe"]{transform:scale(1.10) translateY(2%)!important}
 .people-all img[alt="Valentina Wagenreld"]{transform:scale(1.38) translateY(16%)!important}
 .people-all img[alt="Francisca Astudillo"]{transform:scale(1.06) translateY(2%)!important}
