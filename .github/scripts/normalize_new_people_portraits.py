@@ -65,11 +65,8 @@ def hard_subject_window(shape, face, slug):
         rx_l = rx_r = 1.55
 
     head_y = y + .55*fh
-    head = np.zeros((h,w), dtype=bool)
-    left = X <= cx
-    right = ~left
-    head[left] = (((X[left]-cx)/(fw*rx_l))**2 + ((Y[left]-head_y)/(fh*1.72))**2 <= 1)
-    head[right] = (((X[right]-cx)/(fw*rx_r))**2 + ((Y[right]-head_y)/(fh*1.72))**2 <= 1)
+    rx = np.where(X <= cx, fw*rx_l, fw*rx_r)
+    head = ((X-cx)/rx)**2 + ((Y-head_y)/(fh*1.72))**2 <= 1
     env |= head
     return env
 
@@ -113,8 +110,6 @@ def refine_with_grabcut(img, rembg_alpha, face, slug):
 
     mask &= env
 
-    # Final explicit trims. These start near the face so the remaining attached
-    # background in the source photos is guaranteed to disappear.
     if slug == 'valentina-gran':
         y0 = max(0, int(y - .15*fh))
         for yy in range(y0, h):
