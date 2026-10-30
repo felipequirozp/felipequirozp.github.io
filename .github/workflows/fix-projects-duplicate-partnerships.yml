@@ -1,0 +1,37 @@
+name: Fix projects duplicate partnerships
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-projects-duplicate-partnerships.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch Projects pages
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          for path in [Path('projects.html'), Path('es/projects.html')]:
+              s=path.read_text()
+              # Bust cached mobile-nav.js on Projects pages.
+              s=s.replace('src="/mobile-nav.js"', 'src="/mobile-nav.js?v=20261030-dedupe"')
+              # Remove any older versioned reference if this workflow is rerun.
+              s=s.replace('src="/mobile-nav.js?v=20261030-dedupe?v=20261030-dedupe"', 'src="/mobile-nav.js?v=20261030-dedupe"')
+              # Defensive dedupe: keep the first card for each strategic-partnerships route.
+              marker='<!-- partnerships-dedupe -->'
+              if marker not in s:
+                  script='''\n<!-- partnerships-dedupe -->\n<script>\n(()=>{const clean=()=>{const routes=['/tethered/strategic-partnerships/','/es/tethered/alianzas-estrategicas/'];routes.forEach(route=>{const cards=[...document.querySelectorAll(`.projects-grid a.card[href="${route}"]`)];cards.slice(1).forEach(card=>card.remove())})};document.addEventListener('DOMContentLoaded',()=>{clean();setTimeout(clean,0);setTimeout(clean,250);setTimeout(clean,1000)});window.addEventListener('load',clean)})();\n</script>\n'''
+                  s=s.replace('</body>', script+'</body>')
+              path.write_text(s)
+          PY
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add projects.html es/projects.html
+          git diff --cached --quiet || git commit -m "Prevent duplicate partnerships cards in Projects"
+          git push
