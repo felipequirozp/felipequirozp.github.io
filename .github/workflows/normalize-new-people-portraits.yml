@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install image dependencies
-        run: pip install pillow rembg onnxruntime numpy scipy
+        run: pip install pillow rembg onnxruntime numpy scipy opencv-python-headless
       - name: Process portraits
         run: python .github/scripts/normalize_new_people_portraits.py
       - name: Commit normalized portraits
