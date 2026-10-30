@@ -2,13 +2,17 @@ from pathlib import Path
 import re
 
 PATHS = [Path('people.html'), Path('es/people.html')]
-CACHE_STAMP = '20261030-asset-refresh-2'
 
 ORDER = [
     'Christopher Neilson','Zack Tseng','Nicolás Muñoz','Leidy Gómez','Rodrigo Lewit','Karen Radonich','Valentina Gran',
     'Tomás Recart','Tamara Muñoz','Ignacio Lepe','Valentina Wagenreld','Francisca Astudillo','Juan Yuz','Javier Robledo',
     'Damián Aldunate','Jorge Muñoz','Matías Bussinger','Lía Morice',
 ]
+
+FRESH_ASSETS = {
+    'Valentina Gran': '/images/vgran.png?v=20261030-0245',
+    'Tamara Muñoz': '/images/tamara.png?v=20261030-0245',
+}
 
 CSS = r'''
 <style id="people-face-polish-v10">
@@ -64,19 +68,18 @@ def reorder_grid(text):
     ordered = ''.join(by_name[n] for n in ORDER)
     return text[:m.start()] + m.group(1) + ordered + m.group(3) + text[m.end():]
 
-def bust_portrait_cache(text):
-    for slug in ['valentina-gran', 'tamara-munoz', 'ignacio-lepe', 'tomas-recart']:
-        text = re.sub(
-            rf'(/images/people/{slug}\.png)(?:\?v=[^"\']+)?',
-            rf'\1?v={CACHE_STAMP}',
-            text,
-        )
+def replace_card_asset(text, name, src):
+    pat = re.compile(r'(<article class="person"[^>]*>.*?<img\s+src=")([^"]+)("\s+alt="' + re.escape(name) + r'".*?</article>)', re.S)
+    text, n = pat.subn(r'\1' + src + r'\3', text, count=1)
+    if n != 1:
+        raise RuntimeError(f'Could not update asset for {name}')
     return text
 
 def patch(path):
     text = path.read_text(encoding='utf-8')
     text = reorder_grid(text)
-    text = bust_portrait_cache(text)
+    for name, src in FRESH_ASSETS.items():
+        text = replace_card_asset(text, name, src)
     legacy_ids = [r'people-card-polish-v\d+',r'people-face-polish-v\d+',r'people-alignment-fix-v\d+',r'people-grid-7-v\d+']
     for style_id in legacy_ids:
         text = re.sub(rf'<style id="{style_id}">.*?</style>\s*', '', text, flags=re.S)
