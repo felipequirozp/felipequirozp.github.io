@@ -1,0 +1,67 @@
+name: Normalize project case study heroes
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/normalize-project-case-heroes.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Normalize case study heroes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          common_css = '''
+          <style id="case-hero-standard-v1">
+          .hero{padding:62px var(--page) 72px!important;background:radial-gradient(circle at 82% 14%,rgba(20,103,216,.1),transparent 28%),linear-gradient(180deg,#f4f7f9 0%,#eef3f7 100%)!important;border-bottom:1px solid #dce4eb!important}
+          .hero-top{display:flex;align-items:center;justify-content:space-between;gap:28px}
+          .project-logo{display:inline-flex;align-items:center;justify-content:flex-start;margin:0!important}
+          .project-logo img{height:42px;width:auto;max-width:290px;object-fit:contain;object-position:left center}
+          .hero-meta{display:flex;gap:8px;flex-wrap:wrap}
+          .hero-meta span{padding:8px 10px;border:1px solid #d7e0e8;border-radius:999px;background:rgba(255,255,255,.72);font-size:9px;color:#5c6976;font-weight:600}
+          .hero h1{margin:34px 0 0!important;max-width:980px!important;font-family:Manrope,sans-serif!important;font-size:clamp(42px,4.25vw,62px)!important;line-height:1.04!important;letter-spacing:-.052em!important;font-weight:500!important}
+          .hero-bottom{margin-top:30px;display:grid;grid-template-columns:1fr .42fr;gap:70px;align-items:end}
+          .hero-copy{margin:0!important;max-width:820px!important;color:#4d5965!important;font-size:14px!important;line-height:1.82!important}
+          .role-box{padding-left:20px;border-left:1px solid #ccd6df}
+          .role-box strong{display:block;font-family:Manrope,sans-serif;font-size:20px;font-weight:500;white-space:nowrap}
+          .role-box span{display:block;margin-top:7px;color:#6e7b87;font-size:11px;line-height:1.6}
+          @media(max-width:1000px){.hero-bottom{grid-template-columns:1fr}}
+          @media(max-width:700px){.hero{padding-top:48px!important}.hero-top{align-items:flex-start;flex-direction:column;gap:22px}.project-logo img{height:34px;max-width:240px}.hero-meta{gap:6px}.hero-meta span{padding:7px 9px;font-size:8px}.hero h1{margin-top:26px!important;font-size:40px!important;line-height:1.02!important}.hero-bottom{margin-top:24px;gap:24px}.hero-copy{font-size:13px!important;line-height:1.72!important}.role-box{padding-left:0;padding-top:16px;border-left:0;border-top:1px solid #ccd6df}.role-box strong{white-space:normal;font-size:17px}.role-box span{font-size:10px}}
+          </style>'''
+
+          cases = {
+            'geovictoria/shift-optimizer.html': '''<section class="hero"><div class="shell"><div class="hero-top"><a class="project-logo" href="https://www.geovictoria.com" target="_blank" rel="noopener noreferrer" aria-label="GeoVictoria"><img src="/logos/logo-geovictoria.png" alt="GeoVictoria"></a><div class="hero-meta"><span>B2B SaaS</span><span>Workforce Management</span><span>Product</span></div></div><h1>Taking workforce optimization from MVP to production.</h1><div class="hero-bottom"><p class="hero-copy">An optimization product for complex workforce operations, combining demand, availability and operational constraints to support better staffing decisions.</p><div class="role-box"><strong>Product Manager</strong><span>GeoVictoria<br>July 2026 — Present</span></div></div></div></section>''',
+            'es/geovictoria/shift-optimizer.html': '''<section class="hero"><div class="shell"><div class="hero-top"><a class="project-logo" href="https://www.geovictoria.com" target="_blank" rel="noopener noreferrer" aria-label="GeoVictoria"><img src="/logos/logo-geovictoria.png" alt="GeoVictoria"></a><div class="hero-meta"><span>B2B SaaS</span><span>Workforce Management</span><span>Producto</span></div></div><h1>Llevando la optimización de turnos desde MVP a producción.</h1><div class="hero-bottom"><p class="hero-copy">Un producto de optimización para operaciones complejas de workforce, combinando demanda, disponibilidad y restricciones operativas para apoyar mejores decisiones de dotación.</p><div class="role-box"><strong>Product Manager</strong><span>GeoVictoria<br>Julio 2026 — Presente</span></div></div></div></section>''',
+            'geovictoria/shift-change-workflow.html': '''<section class="hero"><div class="shell"><div class="hero-top"><a class="project-logo" href="https://www.geovictoria.com" target="_blank" rel="noopener noreferrer" aria-label="GeoVictoria"><img src="/logos/logo-geovictoria.png" alt="GeoVictoria"></a><div class="hero-meta"><span>0 → 1</span><span>B2B SaaS</span><span>Workforce Management</span></div></div><h1>Building a controlled workflow for employee shift changes.</h1><div class="hero-bottom"><p class="hero-copy">A 0→1 workflow for employee shift changes, designed to give teams more flexibility without losing operational control, approval rules or scheduling consistency.</p><div class="role-box"><strong>Product Manager</strong><span>GeoVictoria<br>July 2026 — Present</span></div></div></div></section>''',
+            'es/geovictoria/shift-change-workflow.html': '''<section class="hero"><div class="shell"><div class="hero-top"><a class="project-logo" href="https://www.geovictoria.com" target="_blank" rel="noopener noreferrer" aria-label="GeoVictoria"><img src="/logos/logo-geovictoria.png" alt="GeoVictoria"></a><div class="hero-meta"><span>0 → 1</span><span>B2B SaaS</span><span>Workforce Management</span></div></div><h1>Construyendo un workflow controlado para cambios de turno.</h1><div class="hero-bottom"><p class="hero-copy">Un workflow 0→1 para cambios de turno entre colaboradores, diseñado para dar mayor flexibilidad sin perder control operacional, reglas de aprobación ni consistencia en la planificación.</p><div class="role-box"><strong>Product Manager</strong><span>GeoVictoria<br>Julio 2026 — Presente</span></div></div></div></section>''',
+            'lowsignal/low-workspace.html': '''<section class="hero"><div class="shell"><div class="hero-top"><a class="project-logo" href="https://lowsignal.cl" target="_blank" rel="noopener noreferrer" aria-label="lowsignal"><img src="/logos/lowsignal-logo.png" alt="lowsignal"></a><div class="hero-meta"><span>Internal product</span><span>Company building</span><span>2026</span></div></div><h1>Building the operating layer behind lowsignal.</h1><div class="hero-bottom"><p class="hero-copy">An internal product in development to unify clients, revenue, tasks, team operations and company data in one place.</p><div class="role-box"><strong>Co-Founder & COO</strong><span>lowsignal<br>2026 — Present</span></div></div></div></section>''',
+            'es/lowsignal/low-workspace.html': '''<section class="hero"><div class="shell"><div class="hero-top"><a class="project-logo" href="https://lowsignal.cl" target="_blank" rel="noopener noreferrer" aria-label="lowsignal"><img src="/logos/lowsignal-logo.png" alt="lowsignal"></a><div class="hero-meta"><span>Producto interno</span><span>Company building</span><span>2026</span></div></div><h1>Construyendo la capa operativa detrás de lowsignal.</h1><div class="hero-bottom"><p class="hero-copy">Un producto interno en desarrollo para unificar clientes, ingresos, tareas, operación del equipo y datos de la compañía en un solo lugar.</p><div class="role-box"><strong>Co-Founder & COO</strong><span>lowsignal<br>2026 — Presente</span></div></div></div></section>'''
+          }
+
+          for filename, hero in cases.items():
+              p = Path(filename)
+              text = p.read_text(encoding='utf-8')
+              text, n = re.subn(r'<section class="hero">.*?</section>\s*(?=<section class="context">)', hero + '\n', text, count=1, flags=re.S)
+              if n != 1:
+                  raise SystemExit(f'Could not replace hero in {filename}')
+              if 'case-hero-standard-v1' not in text:
+                  text = text.replace('</head>', common_css + '\n</head>')
+              p.write_text(text, encoding='utf-8')
+          PY
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add geovictoria/shift-optimizer.html geovictoria/shift-change-workflow.html es/geovictoria/shift-optimizer.html es/geovictoria/shift-change-workflow.html lowsignal/low-workspace.html es/lowsignal/low-workspace.html
+          git diff --cached --quiet || git commit -m "Unify project case study hero system"
+          git push
