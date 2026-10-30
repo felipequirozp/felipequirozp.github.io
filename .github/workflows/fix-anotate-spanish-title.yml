@@ -1,0 +1,33 @@
+name: Fix Anotate Spanish project title
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-anotate-spanish-title.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restore Spanish title only
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('es/projects.html')
+          s=p.read_text()
+          s=s.replace('alt="School Waitlist Registry · Tether Education"','alt="Anótate en la Lista · Tether Education"')
+          s=s.replace('<h3>School Waitlist Registry</h3>','<h3>Anótate en la Lista</h3>')
+          p.write_text(s)
+          PY
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add es/projects.html
+          git commit -m "Restore Anotate title in Spanish projects"
+          git push
