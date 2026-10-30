@@ -5,6 +5,7 @@ on:
     paths:
       - '.github/scripts/normalize_new_people_portraits.py'
       - '.github/workflows/normalize-new-people-portraits.yml'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -18,7 +19,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install image dependencies
-        run: pip install pillow rembg onnxruntime numpy scipy opencv-python-headless
+        run: pip install pillow rembg onnxruntime numpy scipy opencv-python-headless==4.10.0.84
       - name: Process portraits
         run: python .github/scripts/normalize_new_people_portraits.py
       - name: Commit normalized portraits
