@@ -1,0 +1,25 @@
+name: Reorder People grid
+
+on:
+  push:
+    paths:
+      - '.github/scripts/reorder_people_grid.py'
+      - '.github/workflows/reorder-people-grid.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reorder People and set 7-column desktop grid
+        run: python .github/scripts/reorder_people_grid.py
+      - name: Commit People layout
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add people.html es/people.html
+          git diff --cached --quiet || git commit -m "Reorder People grid and use seven columns"
+          git push
