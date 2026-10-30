@@ -1,0 +1,35 @@
+name: Fix partnerships mobile layout
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-partnerships-mobile.yml'
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch mobile CSS
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          paths = [
+              Path('es/tethered/alianzas-estrategicas/index.html'),
+              Path('tethered/strategic-partnerships/index.html'),
+          ]
+          old = '''@media(max-width:700px){:root{--page:20px;--nav-h:68px}.nav-center{display:none}.hero-top{align-items:flex-start;flex-direction:column}.hero h1{max-width:100%}.role{padding-left:0;padding-top:16px;border-left:0;border-top:1px solid #ccd6df}.role strong{white-space:normal}.stats-grid{grid-template-columns:1fr 1fr}.impact,.logos{grid-template-columns:1fr 1fr}.logo-cell{height:105px;padding:20px}.media{min-height:300px}.closing-inner{align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:10px}}'''
+          new = '''@media(max-width:700px){:root{--page:20px;--nav-h:68px}.nav{height:var(--nav-h)}.nav-center{display:none}.brand{font-size:19px!important}.nav-right{gap:10px}.lang{width:36px;height:36px}.hero{padding:38px var(--page) 46px}.hero-top{align-items:flex-start;flex-direction:column;gap:22px}.tether-logo{height:34px}.meta{gap:6px}.meta span{padding:7px 9px;font-size:8px}.hero h1{max-width:100%;margin-top:26px;font-size:40px;line-height:1.02;letter-spacing:-.05em}.hero-bottom{margin-top:24px;gap:24px}.hero-copy{font-size:13px;line-height:1.72}.role{padding-left:0;padding-top:16px;border-left:0;border-top:1px solid #ccd6df}.role strong{white-space:normal;font-size:17px}.role span{font-size:10px}.stats{padding:0 var(--page)}.stats-grid{grid-template-columns:1fr 1fr}.stat{padding:20px 14px}.stat:first-child{padding-left:0}.stat:nth-child(3){border-left:0;border-top:1px solid #cad6e0;padding-left:0}.stat:nth-child(4){border-top:1px solid #cad6e0}.stat strong{font-size:26px}.stat span{font-size:9px}.section{padding:58px var(--page)}.two{grid-template-columns:1fr;gap:24px}h2{margin:14px 0 20px;font-size:34px;line-height:1.08}.lead{font-size:20px;line-height:1.42}.section p{font-size:12.5px;line-height:1.75}.impact{grid-template-columns:1fr;gap:12px;margin-top:26px}.impact article{padding:21px;border-radius:16px}.impact h3{font-size:20px;margin-top:14px}.logos{grid-template-columns:1fr 1fr;margin-top:28px}.logo-cell{height:96px;padding:18px}.logo-cell img{max-width:105px;max-height:48px}.media-wrap{padding:0 var(--page) 58px}.media-grid{grid-template-columns:1fr;gap:14px}.media{min-height:0;aspect-ratio:4/3;border-radius:18px}.media img{object-fit:cover}.quote{padding:58px var(--page)}.quote blockquote{font-size:30px;line-height:1.18}.quote footer{margin-top:22px}.closing-inner{padding:42px 0;align-items:flex-start;flex-direction:column;gap:24px}.actions{width:100%}.actions a{justify-content:center;flex:1}.footer{padding:46px var(--page) 24px}.footer-grid{grid-template-columns:1fr;gap:28px}.footer-bottom{margin-top:32px;flex-direction:column;gap:10px}}'''
+          for path in paths:
+              text = path.read_text()
+              if old not in text:
+                  raise SystemExit(f'mobile block not found in {path}')
+              path.write_text(text.replace(old, new))
+          PY
+      - name: Commit changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add es/tethered/alianzas-estrategicas/index.html tethered/strategic-partnerships/index.html
+          git commit -m 'Fix partnerships mobile layout'
+          git push
