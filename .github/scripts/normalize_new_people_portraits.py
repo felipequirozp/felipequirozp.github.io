@@ -19,10 +19,10 @@ PEOPLE = {
 CANVAS = (720, 810)
 BG = (241, 241, 241, 255)
 TARGET_H = {
-    'valentina-gran': 690,
-    'tomas-recart': 690,
-    'tamara-munoz': 690,
-    'ignacio-lepe': 690,
+    'valentina-gran': 700,
+    'tomas-recart': 700,
+    'tamara-munoz': 700,
+    'ignacio-lepe': 700,
 }
 
 
@@ -30,7 +30,7 @@ def detect_face(img):
     rgb = np.array(img.convert('RGB'))
     gray = cv2.cvtColor(rgb, cv2.COLOR_RGB2GRAY)
     cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
-    faces = cascade.detectMultiScale(gray, scaleFactor=1.06, minNeighbors=5, minSize=(45, 45))
+    faces = cascade.detectMultiScale(gray, scaleFactor=1.05, minNeighbors=5, minSize=(45, 45))
     if len(faces) == 0:
         return None
     h, w = gray.shape
@@ -38,25 +38,22 @@ def detect_face(img):
     return max(faces, key=lambda f: f[2]*f[3] * max(.2, 1 - (((f[0]+f[2]/2-cx)**2 + (f[1]+f[3]/2-cy)**2) ** .5) / max(h,w)))
 
 
-def envelope(shape, face, slug):
+def base_envelope(shape, face, slug):
     h, w = shape
     if face is None:
         return np.ones((h, w), dtype=bool)
     x, y, fw, fh = face
     cx = x + fw/2
     env = np.zeros((h, w), dtype=bool)
-    top = max(0, int(y - 1.0*fh))
-    shoulder = min(h-1, int(y + 2.0*fh))
+    top = max(0, int(y - 1.05*fh))
 
-    # Asymmetric widths are deliberate: Valentina's artifact is on the left;
-    # Tamara's secondary person/background is on the right.
     if slug == 'valentina-gran':
-        left_top, right_top, left_bottom, right_bottom = 1.25, 1.55, 1.55, 2.05
+        left_top, right_top, left_bottom, right_bottom = 1.18, 1.42, 1.48, 1.82
     elif slug == 'tamara-munoz':
-        left_top, right_top, left_bottom, right_bottom = 1.55, 1.20, 2.00, 1.45
+        left_top, right_top, left_bottom, right_bottom = 1.45, 1.12, 1.82, 1.38
     else:
-        left_top = right_top = 1.55
-        left_bottom = right_bottom = 2.10
+        left_top = right_top = 1.48
+        left_bottom = right_bottom = 1.90
 
     for yy in range(top, h):
         t = min(1.0, max(0.0, (yy-top)/max(1, h-top)))
@@ -66,78 +63,103 @@ def envelope(shape, face, slug):
         r = min(w, int(cx+fw*rm))
         env[yy, l:r] = True
 
-    # generous head ellipse so hair is preserved
     Y, X = np.ogrid[:h, :w]
-    head = ((X-cx)/(fw*1.6))**2 + ((Y-(y+0.55*fh))/(fh*1.9))**2 <= 1
+    head = ((X-cx)/(fw*1.48))**2 + ((Y-(y+0.55*fh))/(fh*1.82))**2 <= 1
     env |= head
     return env
 
 
-def grabcut_refine(img, rembg_alpha, face, slug):
+def manual_background_cuts(mask, face, slug):
+    if face is None:
+        return mask
+    h, w = mask.shape
+    x, y, fw, fh = face
+    cx = x + fw/2
+
+    # These are deliberate manual exclusions for the two source photos whose
+    # background touches the subject. Prefer a clean portrait over retaining
+    # a stray background/person at the edge.
+    if slug == 'valentina-gran':
+        # Remove the dark block on the LEFT, while leaving face/hair untouched.
+        y0 = max(0, int(y + 0.05*fh))
+        for yy in range(y0, h):
+            t = min(1.0, max(0.0, (yy-y0)/max(1, h-y0)))
+            left_keep = int(cx - fw*(1.02 + .32*t))
+            mask[yy, :max(0, left_keep)] = False
+    elif slug == 'tamara-munoz':
+        # Remove the secondary person/background on the RIGHT.
+        y0 = max(0, int(y + 0.05*fh))
+        for yy in range(y0, h):
+            t = min(1.0, max(0.0, (yy-y0)/max(1, h-y0)))
+            right_keep = int(cx + fw*(1.00 + .28*t))
+            mask[yy, min(w, right_keep):] = False
+    return mask
+
+
+def refined_alpha(img, rembg_alpha, face, slug):
     rgb = np.array(img.convert('RGB'))
     h, w = rgb.shape[:2]
     alpha = np.array(rembg_alpha)
 
     if face is None:
-        # Safe fallback: preserve rembg edges, only smooth tiny speckles.
-        m = alpha > 18
+        m = alpha > 12
         m = ndi.binary_closing(m, structure=np.ones((3,3)))
-        return Image.fromarray((m*255).astype(np.uint8), 'L').filter(ImageFilter.GaussianBlur(1.25))
+        out = Image.fromarray((m*255).astype(np.uint8), 'L')
+        return out.filter(ImageFilter.GaussianBlur(1.5))
 
-    env = envelope((h,w), face, slug)
+    env = base_envelope((h,w), face, slug)
     x, y, fw, fh = face
     cx = int(x + fw/2)
     cy = int(y + fh/2)
 
     gc = np.full((h,w), cv2.GC_BGD, np.uint8)
-    # rembg foreground inside our person envelope is probable foreground
-    gc[(alpha > 18) & env] = cv2.GC_PR_FGD
-    # high-confidence face / central torso seeds
+    gc[(alpha > 12) & env] = cv2.GC_PR_FGD
+
     Y, X = np.ogrid[:h, :w]
-    face_seed = ((X-cx)/(fw*.72))**2 + ((Y-cy)/(fh*.90))**2 <= 1
+    face_seed = ((X-cx)/(fw*.74))**2 + ((Y-cy)/(fh*.92))**2 <= 1
     gc[face_seed] = cv2.GC_FGD
-    torso_l = max(0, int(cx - fw*.75))
-    torso_r = min(w, int(cx + fw*.75))
-    torso_t = min(h, int(y + fh*1.15))
-    torso_b = min(h, int(y + fh*4.6))
+
+    torso_l = max(0, int(cx - fw*.70))
+    torso_r = min(w, int(cx + fw*.70))
+    torso_t = min(h, int(y + fh*1.0))
+    torso_b = min(h, int(y + fh*4.5))
     gc[torso_t:torso_b, torso_l:torso_r] = cv2.GC_FGD
-    # anything outside the person envelope is definite background
     gc[~env] = cv2.GC_BGD
-    gc[alpha < 4] = cv2.GC_BGD
+    gc[alpha < 3] = cv2.GC_BGD
 
     bgd = np.zeros((1,65), np.float64)
     fgd = np.zeros((1,65), np.float64)
     try:
-        cv2.grabCut(rgb, gc, None, bgd, fgd, 6, cv2.GC_INIT_WITH_MASK)
+        cv2.grabCut(rgb, gc, None, bgd, fgd, 7, cv2.GC_INIT_WITH_MASK)
         mask = (gc == cv2.GC_FGD) | (gc == cv2.GC_PR_FGD)
     except cv2.error:
-        mask = (alpha > 18) & env
+        mask = (alpha > 12) & env
 
-    # Keep only components connected to the face seed after a very light opening.
-    # This removes the black side shape/person behind without creating jagged shoulders.
-    soft = ndi.binary_opening(mask, structure=np.ones((2,2)))
-    labels, n = ndi.label(soft)
+    mask &= env
+    mask = manual_background_cuts(mask, face, slug)
+    mask = ndi.binary_closing(mask, structure=np.ones((3,3)))
+    mask = ndi.binary_fill_holes(mask)
+
+    # Keep only the component that intersects the face seed.
+    labels, n = ndi.label(mask)
     ids = labels[face_seed]
     ids = ids[ids > 0]
     if len(ids):
         chosen = int(np.bincount(ids).argmax())
         mask = labels == chosen
-        mask = ndi.binary_dilation(mask, structure=np.ones((3,3)), iterations=1)
 
-    mask &= env
-    mask = ndi.binary_closing(mask, structure=np.ones((3,3)))
-    mask = ndi.binary_fill_holes(mask)
     out = Image.fromarray((mask*255).astype(np.uint8), 'L')
-    return out.filter(ImageFilter.GaussianBlur(1.35))
+    return out.filter(ImageFilter.GaussianBlur(1.6))
 
 
 def smooth_ignacio(rembg_alpha):
-    # Ignacio was already isolated; the old erosion/envelope caused the pixelated edge.
-    # Preserve the model's original alpha and only soften tiny noise.
-    a = rembg_alpha.filter(ImageFilter.GaussianBlur(1.15))
-    arr = np.array(a)
-    arr[arr < 8] = 0
-    return Image.fromarray(arr.astype(np.uint8), 'L')
+    # Keep the original segmentation edge; do not erode/dilate it.
+    # Two-stage blur removes the staircase/pixel look without eating shoulders.
+    a = rembg_alpha.filter(ImageFilter.GaussianBlur(1.35))
+    arr = np.array(a, dtype=np.float32)
+    arr[arr < 5] = 0
+    arr = np.clip(arr, 0, 255).astype(np.uint8)
+    return Image.fromarray(arr, 'L').filter(ImageFilter.GaussianBlur(.65))
 
 
 def process(slug, src, session):
@@ -146,16 +168,18 @@ def process(slug, src, session):
         img,
         session=session,
         alpha_matting=True,
-        alpha_matting_foreground_threshold=235,
-        alpha_matting_background_threshold=8,
-        alpha_matting_erode_size=3,
+        alpha_matting_foreground_threshold=230,
+        alpha_matting_background_threshold=5,
+        alpha_matting_erode_size=1,
     ).convert('RGBA')
 
     face = detect_face(img)
     if slug == 'ignacio-lepe':
         alpha = smooth_ignacio(raw.getchannel('A'))
+    elif slug in ('valentina-gran', 'tamara-munoz'):
+        alpha = refined_alpha(img, raw.getchannel('A'), face, slug)
     else:
-        alpha = grabcut_refine(img, raw.getchannel('A'), face, slug)
+        alpha = raw.getchannel('A').filter(ImageFilter.GaussianBlur(.8))
 
     raw.putalpha(alpha)
     bbox = alpha.getbbox()
@@ -169,7 +193,7 @@ def process(slug, src, session):
 
     target_h = TARGET_H[slug]
     scale = target_h / subject.height
-    max_w = int(CANVAS[0] * .86)
+    max_w = int(CANVAS[0] * .84)
     if subject.width * scale > max_w:
         scale = max_w / subject.width
     subject = subject.resize(
