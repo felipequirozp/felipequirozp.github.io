@@ -68,7 +68,8 @@
 
 
 
-<style id="people-face-polish-v12">
+
+<style id="people-face-polish-v13">
 .people-all .people-grid{grid-template-columns:repeat(7,minmax(0,1fr))!important;gap:34px 16px!important}
 .people-all .portrait{height:auto!important;min-height:0!important;padding:0!important;border:0!important;background:transparent!important;overflow:hidden!important}
 .people-all .portrait-inner{position:relative!important;aspect-ratio:4/4.5!important;background:#f1f1f1!important;overflow:hidden!important;border-radius:14px!important;transition:transform .28s cubic-bezier(.2,.7,.2,1),box-shadow .28s ease!important;will-change:transform}
@@ -94,7 +95,7 @@
 .people-all img[alt="Rodrigo Lewit"]{transform:scale(1.15) translateY(2%)!important}
 .people-all img[alt="Karen Radonich"]{transform:scale(1.12) translateY(2%)!important}
 .people-all img[alt="Valentina Gran"]{object-fit:contain!important;object-position:center bottom!important;transform:scale(.92) translateY(8%)!important}
-.people-all img[alt="Tomás Recart"]{transform:scale(1.46) translateY(12%)!important}
+.people-all img[alt="Tomás Recart"]{transform:scale(1.46) translateY(15%)!important}
 .people-all img[alt="Tamara Muñoz"]{object-fit:contain!important;object-position:center bottom!important;transform:scale(.88) translateY(9%)!important}
 .people-all img[alt="Ignacio Lepe"]{transform:scale(1.10) translateY(2%)!important}
 .people-all img[alt="Valentina Wagenreld"]{transform:scale(1.38) translateY(16%)!important}
@@ -105,7 +106,15 @@
 .people-all img[alt="Jorge Muñoz"]{transform:scale(1.28) translateY(1%)!important}
 .people-all img[alt="Matías Bussinger"]{transform:scale(1.20) translateY(0)!important}
 .people-all img[alt="Lía Morice"]{transform:scale(1.20) translateY(0)!important}
-@media(prefers-reduced-motion:reduce){.people-all .person{opacity:1!important;transform:none!important;transition:none!important}.people-all .portrait-inner,.people-all .person-copy{transition:none!important}}
+
+.closing a{transition:background-color .2s ease,color .2s ease,transform .2s ease,border-color .2s ease!important}
+.closing a:hover{background:#1467d8!important;color:#fff!important;border-color:#1467d8!important;transform:translateY(-2px)!important}
+.footer-col a{transition:color .18s ease,transform .18s ease!important}
+.footer-col a:hover{color:#1467d8!important;transform:translateX(3px)!important}
+.footer-brand,.footer-copy,.footer-eyebrow,.footer-bottom{transition:color .18s ease!important}
+.footer a:hover{color:#1467d8!important}
+
+@media(prefers-reduced-motion:reduce){.people-all .person{opacity:1!important;transform:none!important;transition:none!important}.people-all .portrait-inner,.people-all .person-copy,.closing a,.footer-col a{transition:none!important}}
 @media(max-width:1400px){.people-all .people-grid{grid-template-columns:repeat(6,minmax(0,1fr))!important}}
 @media(max-width:1180px){.people-all .people-grid{grid-template-columns:repeat(5,minmax(0,1fr))!important}}
 @media(max-width:1000px){.people-all .people-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
