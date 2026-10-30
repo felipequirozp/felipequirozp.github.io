@@ -1,0 +1,46 @@
+name: Fix waitlist card names
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-waitlist-card-names.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fix EN and ES card titles
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          en = Path('projects.html')
+          es = Path('es/projects.html')
+
+          en_text = en.read_text()
+          es_text = es.read_text()
+
+          en_text = en_text.replace('alt="Join the Waitlist · Tether Education"', 'alt="School Waitlist Registry · Tether Education"')
+          en_text = en_text.replace('<h3>Join the Waitlist</h3>', '<h3>School Waitlist Registry</h3>')
+
+          es_text = es_text.replace('alt="School Waitlist Registry · Tether Education"', 'alt="Anótate en la Lista · Tether Education"')
+          es_text = es_text.replace('<h3>School Waitlist Registry</h3>', '<h3>Anótate en la Lista</h3>')
+
+          en.write_text(en_text)
+          es.write_text(es_text)
+          PY
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add projects.html es/projects.html
+          git commit -m "Fix waitlist project card names by locale"
+          git push
