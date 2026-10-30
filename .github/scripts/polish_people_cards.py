@@ -10,15 +10,15 @@ ORDER = [
 ]
 
 CSS = r'''
-<style id="people-face-polish-v3">
-/* Single source of truth for People portrait composition. */
+<style id="people-face-polish-v4">
+/* One visual system: 7-up desktop, consistent head-and-shoulders distance. */
 .people-all .people-grid{grid-template-columns:repeat(7,minmax(0,1fr))!important;gap:34px 16px!important}
 .people-all .portrait{height:auto!important;min-height:0!important;padding:0!important;border:0!important;background:transparent!important;overflow:hidden!important}
 .people-all .portrait-inner{position:relative!important;aspect-ratio:4/4.5!important;background:#f1f1f1!important;overflow:hidden!important;border-radius:14px!important}
 .people-all .portrait-inner::after{display:none!important;content:none!important}
 .people-all .portrait img{
   width:100%!important;height:100%!important;object-fit:cover!important;
-  object-position:center 35%!important;transform-origin:center center!important;
+  object-position:center 36%!important;transform-origin:center center!important;
   filter:grayscale(100%) contrast(.96) brightness(1.02)!important;mix-blend-mode:normal!important;
 }
 .people-all .person{position:relative!important;min-width:0!important;transform:none!important}
@@ -27,30 +27,30 @@ CSS = r'''
 .company-tag,.context,.profile-link,.role{display:none!important}
 .card-link{position:absolute;inset:0;z-index:4;border-radius:14px}
 
-/* Row 1 — common head/shoulders depth */
-.people-all img[alt="Christopher Neilson"]{transform:scale(1.13) translateY(1%)!important}
-.people-all img[alt="Zack Tseng"]{transform:scale(1.10) translateY(1%)!important}
-.people-all img[alt="Nicolás Muñoz"]{transform:scale(1.16) translateY(2%)!important}
-.people-all img[alt="Leidy Gómez"]{transform:scale(1.10) translateY(1%)!important}
-.people-all img[alt="Rodrigo Lewit"]{transform:scale(1.14) translateY(2%)!important}
-.people-all img[alt="Karen Radonich"]{transform:scale(1.10) translateY(1%)!important}
-.people-all img[alt="Valentina Gran"]{transform:scale(1.04) translateY(1%)!important}
+/* Row 1 — similar face size and eye line */
+.people-all img[alt="Christopher Neilson"]{transform:scale(1.14) translateY(2%)!important}
+.people-all img[alt="Zack Tseng"]{transform:scale(1.13) translateY(2%)!important}
+.people-all img[alt="Nicolás Muñoz"]{transform:scale(1.17) translateY(2%)!important}
+.people-all img[alt="Leidy Gómez"]{transform:scale(1.13) translateY(2%)!important}
+.people-all img[alt="Rodrigo Lewit"]{transform:scale(1.15) translateY(2%)!important}
+.people-all img[alt="Karen Radonich"]{transform:scale(1.12) translateY(2%)!important}
+.people-all img[alt="Valentina Gran"]{transform:scale(1.10) translateY(2%)!important}
 
-/* Row 2 — equalize camera distance */
-.people-all img[alt="Tomás Recart"]{transform:scale(1.34) translateY(6%)!important}
-.people-all img[alt="Tamara Muñoz"]{transform:scale(.94) translateY(0)!important}
-.people-all img[alt="Ignacio Lepe"]{transform:scale(1.08) translateY(2%)!important}
-.people-all img[alt="Valentina Wagenreld"]{transform:scale(1.28) translateY(6%)!important}
-.people-all img[alt="Francisca Astudillo"]{transform:scale(1.02) translateY(1%)!important}
-.people-all img[alt="Juan Yuz"]{transform:scale(1.31) translateY(6%)!important}
-.people-all img[alt="Javier Robledo"]{transform:scale(1.27) translateY(5%)!important}
+/* Row 2 — bring distant portraits in, keep close portraits controlled */
+.people-all img[alt="Tomás Recart"]{transform:scale(1.46) translateY(8%)!important}
+.people-all img[alt="Tamara Muñoz"]{transform:scale(1.02) translateY(1%)!important}
+.people-all img[alt="Ignacio Lepe"]{transform:scale(1.10) translateY(2%)!important}
+.people-all img[alt="Valentina Wagenreld"]{transform:scale(1.38) translateY(11%)!important}
+.people-all img[alt="Francisca Astudillo"]{transform:scale(1.06) translateY(2%)!important}
+.people-all img[alt="Juan Yuz"]{transform:scale(1.38) translateY(8%)!important}
+.people-all img[alt="Javier Robledo"]{transform:scale(1.34) translateY(7%)!important}
 
-/* Row 3 — avoid full-body / distant portraits */
-.people-all img[alt="Damián Aldunate"]{transform:scale(1.22) translateY(4%)!important}
-.people-all img[alt="Jorge Muñoz"]{transform:scale(1.23) translateY(4%)!important}
-.people-all img[alt="Matías Bussinger"]{transform:scale(1.13) translateY(2%)!important}
-.people-all img[alt="Lía Morice"]{transform:scale(1.14) translateY(3%)!important}
-.people-all img[alt="Martín Alvarado"]{transform:scale(1.20) translateY(4%)!important}
+/* Row 3 — same portrait depth, no tiny/full-body cards */
+.people-all img[alt="Damián Aldunate"]{transform:scale(1.28) translateY(6%)!important}
+.people-all img[alt="Jorge Muñoz"]{transform:scale(1.28) translateY(6%)!important}
+.people-all img[alt="Matías Bussinger"]{transform:scale(1.20) translateY(4%)!important}
+.people-all img[alt="Lía Morice"]{transform:scale(1.20) translateY(4%)!important}
+.people-all img[alt="Martín Alvarado"]{transform:scale(1.28) translateY(6%)!important}
 
 @media(max-width:1400px){.people-all .people-grid{grid-template-columns:repeat(6,minmax(0,1fr))!important}}
 @media(max-width:1180px){.people-all .people-grid{grid-template-columns:repeat(5,minmax(0,1fr))!important}}
@@ -83,7 +83,6 @@ def patch(path):
     text = path.read_text(encoding='utf-8')
     text = reorder_grid(text)
 
-    # Remove every legacy portrait/grid override that can conflict by nth-child/position.
     legacy_ids = [
         r'people-card-polish-v\d+',
         r'people-face-polish-v\d+',
