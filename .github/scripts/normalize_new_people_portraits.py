@@ -30,110 +30,88 @@ def detect_face(img):
         return None
     h, w = gray.shape
     cx, cy = w / 2, h / 2
-    return max(faces, key=lambda f: f[2]*f[3] * max(.2, 1 - (((f[0]+f[2]/2-cx)**2 + (f[1]+f[3]/2-cy)**2) ** .5) / max(h,w)))
+    return max(
+        faces,
+        key=lambda f: f[2] * f[3] * max(.2, 1 - (((f[0] + f[2] / 2 - cx) ** 2 + (f[1] + f[3] / 2 - cy) ** 2) ** .5) / max(h, w)),
+    )
 
 
-def hard_subject_window(shape, face, slug):
-    h, w = shape
+def connected_to_face(mask, face):
     if face is None:
-        return np.ones((h, w), dtype=bool)
+        return mask
     x, y, fw, fh = face
-    cx = x + fw/2
-    top = max(0, int(y - 1.0*fh))
-    env = np.zeros((h, w), dtype=bool)
-
-    for yy in range(top, h):
-        t = min(1.0, max(0.0, (yy-top)/max(1, h-top)))
-        if slug == 'valentina-gran':
-            left_mult = 0.82 + 0.18*t
-            right_mult = 1.42 + 0.30*t
-        elif slug == 'tamara-munoz':
-            left_mult = 1.42 + 0.30*t
-            right_mult = 0.72 + 0.14*t
-        else:
-            left_mult = right_mult = 1.55 + 0.25*t
-        l = max(0, int(cx - fw*left_mult))
-        r = min(w, int(cx + fw*right_mult))
-        env[yy, l:r] = True
-
+    h, w = mask.shape
+    cx = int(x + fw / 2)
+    cy = int(y + fh / 2)
     Y, X = np.ogrid[:h, :w]
-    if slug == 'valentina-gran':
-        rx_l, rx_r = 1.05, 1.35
-    elif slug == 'tamara-munoz':
-        rx_l, rx_r = 1.35, 1.00
-    else:
-        rx_l = rx_r = 1.55
-
-    head_y = y + .55*fh
-    rx = np.where(X <= cx, fw*rx_l, fw*rx_r)
-    head = ((X-cx)/rx)**2 + ((Y-head_y)/(fh*1.72))**2 <= 1
-    env |= head
-    return env
-
-
-def refine_with_grabcut(img, rembg_alpha, face, slug):
-    rgb = np.array(img.convert('RGB'))
-    h, w = rgb.shape[:2]
-    alpha = np.array(rembg_alpha)
-    env = hard_subject_window((h, w), face, slug)
-
-    if face is None:
-        m = (alpha > 12) & env
-        m = ndi.binary_closing(m, structure=np.ones((3,3)))
-        return Image.fromarray((m*255).astype(np.uint8), 'L').filter(ImageFilter.GaussianBlur(1.5))
-
-    x, y, fw, fh = face
-    cx = int(x + fw/2)
-    cy = int(y + fh/2)
-
-    gc = np.full((h,w), cv2.GC_BGD, np.uint8)
-    gc[(alpha > 12) & env] = cv2.GC_PR_FGD
-    Y, X = np.ogrid[:h, :w]
-    face_seed = ((X-cx)/(fw*.70))**2 + ((Y-cy)/(fh*.90))**2 <= 1
-    gc[face_seed] = cv2.GC_FGD
-
-    torso_l = max(0, int(cx - fw*.60))
-    torso_r = min(w, int(cx + fw*.60))
-    torso_t = min(h, int(y + fh*1.0))
-    torso_b = min(h, int(y + fh*4.4))
-    gc[torso_t:torso_b, torso_l:torso_r] = cv2.GC_FGD
-    gc[~env] = cv2.GC_BGD
-    gc[alpha < 3] = cv2.GC_BGD
-
-    bgd = np.zeros((1,65), np.float64)
-    fgd = np.zeros((1,65), np.float64)
-    try:
-        cv2.grabCut(rgb, gc, None, bgd, fgd, 8, cv2.GC_INIT_WITH_MASK)
-        mask = (gc == cv2.GC_FGD) | (gc == cv2.GC_PR_FGD)
-    except cv2.error:
-        mask = (alpha > 12) & env
-
-    mask &= env
-
-    if slug == 'valentina-gran':
-        y0 = max(0, int(y - .15*fh))
-        for yy in range(y0, h):
-            t = min(1.0, max(0.0, (yy-y0)/max(1, h-y0)))
-            keep_from = int(cx - fw*(.70 + .12*t))
-            mask[yy, :max(0, keep_from)] = False
-    elif slug == 'tamara-munoz':
-        y0 = max(0, int(y - .10*fh))
-        for yy in range(y0, h):
-            t = min(1.0, max(0.0, (yy-y0)/max(1, h-y0)))
-            keep_to = int(cx + fw*(.62 + .10*t))
-            mask[yy, min(w, keep_to):] = False
-
-    labels, n = ndi.label(mask)
-    ids = labels[face_seed]
+    seed = ((X - cx) / max(1, fw * .78)) ** 2 + ((Y - cy) / max(1, fh * 1.00)) ** 2 <= 1
+    labels, _ = ndi.label(mask)
+    ids = labels[seed]
     ids = ids[ids > 0]
     if len(ids):
         chosen = int(np.bincount(ids).argmax())
-        mask = labels == chosen
+        return labels == chosen
+    return mask
 
-    mask = ndi.binary_closing(mask, structure=np.ones((3,3)))
+
+def deterministic_subject_mask(rembg_alpha, face, slug):
+    alpha = np.array(rembg_alpha)
+    base = alpha > 10
+    h, w = base.shape
+
+    if face is None:
+        base = ndi.binary_closing(base, structure=np.ones((3, 3)))
+        base = ndi.binary_fill_holes(base)
+        return Image.fromarray((base * 255).astype(np.uint8), 'L').filter(ImageFilter.GaussianBlur(1.25))
+
+    x, y, fw, fh = [float(v) for v in face]
+    cx = x + fw / 2
+    top = max(0, int(y - .55 * fh))
+    window = np.zeros((h, w), dtype=np.float32)
+
+    for yy in range(top, h):
+        t = min(1.0, max(0.0, (yy - top) / max(1, h - top)))
+        if slug == 'valentina-gran':
+            left_mult = .70 + .26 * t
+            right_mult = 1.42 + .26 * t
+        elif slug == 'tamara-munoz':
+            left_mult = 1.36 + .22 * t
+            right_mult = .66 + .20 * t
+        else:
+            left_mult = right_mult = 1.55 + .20 * t
+
+        l = max(0, int(cx - fw * left_mult))
+        r = min(w, int(cx + fw * right_mult))
+        if r > l:
+            window[yy, l:r] = 1.0
+
+    Y, X = np.ogrid[:h, :w]
+    head_y = y + .55 * fh
+    if slug == 'valentina-gran':
+        head = ((X - cx) / max(1, fw * 1.02)) ** 2 + ((Y - head_y) / max(1, fh * 1.70)) ** 2 <= 1
+        y0 = max(0, int(y - .05 * fh))
+        for yy in range(y0, h):
+            t = min(1.0, max(0.0, (yy - y0) / max(1, h - y0)))
+            cut = max(0, int(cx - fw * (.68 + .22 * t)))
+            head[yy, :cut] = False
+    elif slug == 'tamara-munoz':
+        head = ((X - cx) / max(1, fw * .98)) ** 2 + ((Y - head_y) / max(1, fh * 1.70)) ** 2 <= 1
+        y0 = max(0, int(y - .05 * fh))
+        for yy in range(y0, h):
+            t = min(1.0, max(0.0, (yy - y0) / max(1, h - y0)))
+            cut = min(w, int(cx + fw * (.62 + .18 * t)))
+            head[yy, cut:] = False
+    else:
+        head = ((X - cx) / max(1, fw * 1.55)) ** 2 + ((Y - head_y) / max(1, fh * 1.75)) ** 2 <= 1
+
+    window = np.maximum(window, head.astype(np.float32))
+    mask = base & (window > .5)
+    mask = connected_to_face(mask, face)
+    mask = ndi.binary_closing(mask, structure=np.ones((3, 3)))
     mask = ndi.binary_fill_holes(mask)
-    out = Image.fromarray((mask*255).astype(np.uint8), 'L')
-    return out.filter(ImageFilter.GaussianBlur(1.9))
+
+    out = Image.fromarray((mask * 255).astype(np.uint8), 'L')
+    return out.filter(ImageFilter.GaussianBlur(1.35))
 
 
 def smooth_ignacio(rembg_alpha):
@@ -158,7 +136,7 @@ def process(slug, src, session):
     if slug == 'ignacio-lepe':
         alpha = smooth_ignacio(raw.getchannel('A'))
     elif slug in ('valentina-gran', 'tamara-munoz'):
-        alpha = refine_with_grabcut(img, raw.getchannel('A'), face, slug)
+        alpha = deterministic_subject_mask(raw.getchannel('A'), face, slug)
     else:
         alpha = raw.getchannel('A').filter(ImageFilter.GaussianBlur(.8))
 
@@ -176,15 +154,16 @@ def process(slug, src, session):
     max_w = int(CANVAS[0] * .84)
     if subject.width * scale > max_w:
         scale = max_w / subject.width
+
     subject = subject.resize(
-        (max(1, round(subject.width*scale)), max(1, round(subject.height*scale))),
+        (max(1, round(subject.width * scale)), max(1, round(subject.height * scale))),
         Image.Resampling.LANCZOS,
     )
 
     canvas = Image.new('RGBA', CANVAS, BG)
-    x = (CANVAS[0] - subject.width)//2
+    x = (CANVAS[0] - subject.width) // 2
     y = CANVAS[1] - subject.height
-    canvas.alpha_composite(subject, (x,y))
+    canvas.alpha_composite(subject, (x, y))
     canvas.convert('RGB').save(OUT / f'{slug}.png', 'PNG', optimize=True)
     print('processed', slug)
 
