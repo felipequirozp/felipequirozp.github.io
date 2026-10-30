@@ -1,49 +1,20 @@
-name: Normalize new People portraits
+name: Preserve People portrait assets
 
 on:
-  push:
-    paths:
-      - '.github/scripts/normalize_new_people_portraits.py'
-      - '.github/workflows/normalize-new-people-portraits.yml'
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  apply:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - name: Install image dependencies
-        run: pip install pillow rembg onnxruntime numpy scipy opencv-python-headless==4.10.0.84
-      - name: Process portraits
-        run: python .github/scripts/normalize_new_people_portraits.py
-      - name: Bust browser cache for corrected portraits
+      - name: Validate curated People portraits
         run: |
-          python - <<'PY'
-          from pathlib import Path
-          import re
-          stamp = '20261030-0202'
-          for path in [Path('people.html'), Path('es/people.html')]:
-              text = path.read_text(encoding='utf-8')
-              for slug in ['valentina-gran', 'tamara-munoz', 'ignacio-lepe']:
-                  pat = rf'(/images/people/{slug}\.png)(?:\?v=[^"\']+)?'
-                  text = re.sub(pat, rf'\1?v={stamp}', text)
-              path.write_text(text, encoding='utf-8')
-          PY
-      - name: Commit normalized portraits
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add images/people/valentina-gran.png images/people/tomas-recart.png images/people/tamara-munoz.png images/people/ignacio-lepe.png people.html es/people.html
-          if ! git diff --cached --quiet; then
-            git commit -m "Normalize new People portraits"
-            git pull --rebase origin main
-            git push origin main
-          fi
+          test -f images/people/valentina-gran.png
+          test -f images/people/tamara-munoz.png
+          test -f images/people/ignacio-lepe.png
+          test -f images/people/tomas-recart.png
+          echo "People portrait assets are curated manually and will not be overwritten."
