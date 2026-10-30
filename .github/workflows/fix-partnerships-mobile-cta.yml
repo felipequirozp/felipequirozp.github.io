@@ -1,0 +1,36 @@
+name: Fix partnerships mobile CTA
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/fix-partnerships-mobile-cta.yml'
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Make partnership CTAs compact on mobile
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          files = [
+              Path('es/tethered/alianzas-estrategicas/index.html'),
+              Path('tethered/strategic-partnerships/index.html'),
+          ]
+          old = '.actions{width:100%}.actions a{justify-content:center;flex:1}'
+          new = '.actions{width:auto;display:flex;gap:8px;flex-wrap:wrap}.actions a{justify-content:center;flex:0 0 auto;width:auto;min-height:38px;padding:0 12px}'
+          for p in files:
+              text = p.read_text()
+              if old not in text:
+                  raise SystemExit(f'Expected mobile CTA CSS not found in {p}')
+              p.write_text(text.replace(old, new, 1))
+          PY
+      - name: Commit changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add es/tethered/alianzas-estrategicas/index.html tethered/strategic-partnerships/index.html
+          git diff --cached --quiet || git commit -m 'Make partnerships mobile CTAs compact'
+          git push
