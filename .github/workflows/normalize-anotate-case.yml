@@ -1,0 +1,32 @@
+name: Normalize Anotate case study
+
+on:
+  push:
+    paths:
+      - '.github/scripts/normalize_anotate_case.py'
+      - '.github/workflows/normalize-anotate-case.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Normalize case study
+        run: python .github/scripts/normalize_anotate_case.py
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tethered/anotate-en-la-lista/index.html es/tethered/anotate-en-la-lista/index.html projects.html
+          git commit -m "Align Anotate case navbar footer and English card title"
+          git push
