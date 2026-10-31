@@ -1,0 +1,44 @@
+name: Update Tether selected projects
+on:
+  push:
+    paths:
+      - '.github/workflows/update-tether-six-projects.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update Tether project grids
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          replacements = {
+            Path('tethereducation.html'): '''<section class="section soft"><div class="shell reveal"><div class="kicker">Selected projects</div><h2>Six closer looks at the work behind Tether Education.</h2><div class="programs"><a class="program" href="/tethered/digital-transformation-public-education"><small>Public education</small><h3>SLEP del Pino</h3><p>78 institutions, 35,000+ students, 200+ staff and 5,000+ digital enrollments.</p><span class="program-link">View project ↗</span></a><a class="program" href="/tethered/ai-powered-education-transformation/"><small>Applied AI</small><h3>AI-powered Education Transformation</h3><p>OpenAI and Anthropic partnerships supporting responsible AI adoption in 50+ public schools.</p><span class="program-link">View project ↗</span></a><a class="program" href="/tethered/virtual-school-explorer"><small>School choice</small><h3>Virtual School Explorer</h3><p>Digital school-discovery experiences across LATAM, the U.S. and Europe.</p><span class="program-link">View project ↗</span></a><a class="program" href="/tethered/tether-studio"><small>Product ecosystem</small><h3>Tether Studio</h3><p>AI-enabled product and experimentation work across the broader Tether platform.</p><span class="program-link">View project ↗</span></a><a class="program" href="/tethered/strategic-partnerships/"><small>Partnerships</small><h3>Strategic Partnerships</h3><p>An ecosystem of 15 strategic education partnerships built across four countries.</p><span class="program-link">View project ↗</span></a><a class="program" href="/tethered/anotate-en-la-lista/"><small>GovTech · Admissions</small><h3>School Waitlist Registry</h3><p>Chile's school regularization process moved from physical queues to a national digital registry.</p><span class="program-link">View project ↗</span></a></div></div></section>''',
+            Path('es/tethereducation.html'): '''<section class="section soft"><div class="shell reveal"><div class="kicker">Proyectos seleccionados</div><h2>Seis proyectos para mirar más de cerca el trabajo detrás de Tether Education.</h2><div class="programs"><a class="program" href="/es/tethered/transformacion-digital-educacion-publica"><small>Educación pública</small><h3>SLEP del Pino</h3><p>78 establecimientos, 35.000+ estudiantes, 200+ funcionarios y 5.000+ matrículas digitales.</p><span class="program-link">Ver proyecto ↗</span></a><a class="program" href="/es/tethered/transformacion-educativa-impulsada-por-ia/"><small>IA aplicada</small><h3>Transformación Educativa impulsada por IA</h3><p>Partnerships con OpenAI y Anthropic para apoyar adopción responsable de IA en 50+ escuelas públicas.</p><span class="program-link">Ver proyecto ↗</span></a><a class="program" href="/es/tethered/explorador-virtual-colegios"><small>Elección escolar</small><h3>Explorador Virtual de Colegios</h3><p>Experiencias digitales de descubrimiento escolar en LATAM, Estados Unidos y Europa.</p><span class="program-link">Ver proyecto ↗</span></a><a class="program" href="/es/tethered/tether-studio"><small>Ecosistema de producto</small><h3>Tether Studio</h3><p>Producto y experimentación habilitados por IA dentro del ecosistema más amplio de Tether.</p><span class="program-link">Ver proyecto ↗</span></a><a class="program" href="/es/tethered/alianzas-estrategicas/"><small>Partnerships</small><h3>Alianzas estratégicas</h3><p>Un ecosistema de 15 alianzas estratégicas en educación construido en cuatro países.</p><span class="program-link">Ver proyecto ↗</span></a><a class="program" href="/es/tethered/anotate-en-la-lista/"><small>GovTech · Admisión</small><h3>Anótate en la Lista</h3><p>La regularización escolar pasó de filas presenciales a un registro digital nacional.</p><span class="program-link">Ver proyecto ↗</span></a></div></div></section>'''
+          }
+
+          for path, replacement in replacements.items():
+              text = path.read_text()
+              pattern = r'<section class="section soft"><div class="shell reveal"><div class="kicker">(?:Selected programs|Programas seleccionados)</div>.*?</section>(?=<section class="section"><div class="shell field-grid reveal">)'
+              new, n = re.subn(pattern, replacement, text, count=1, flags=re.S)
+              if n != 1:
+                  raise SystemExit(f'Could not replace project section in {path}')
+              new = new.replace('.programs{margin-top:30px;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}', '.programs{margin-top:30px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}')
+              new = new.replace('@media(max-width:1000px){.hero-bottom,.two-col,.role-grid,.field-grid{grid-template-columns:1fr}.cards,.system-grid,.programs{grid-template-columns:1fr}', '@media(max-width:1000px){.hero-bottom,.two-col,.role-grid,.field-grid{grid-template-columns:1fr}.cards,.system-grid{grid-template-columns:1fr}.programs{grid-template-columns:repeat(2,1fr)}')
+              new = new.replace('@media(max-width:700px){:root{--page:20px;--nav-h:68px}', '@media(max-width:700px){:root{--page:20px;--nav-h:68px}')
+              # ensure one-column programs on mobile
+              new = new.replace('.closing-inner{align-items:flex-start;flex-direction:column}}</style>', '.closing-inner{align-items:flex-start;flex-direction:column}.programs{grid-template-columns:1fr}}</style>')
+              path.write_text(new)
+          PY
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tethereducation.html es/tethereducation.html
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Show six Tether Education projects"
+          git push
