@@ -26,7 +26,7 @@ for path, desired in CONFIG.items():
         missing = [href for href in desired if href not in found]
         raise SystemExit(f'Missing cards in {path}: {missing}')
 
-    # Remove the four target cards from their current positions.
+    # Remove the target cards from their current positions.
     for href in desired:
         s = s.replace(found[href], '', 1)
 
