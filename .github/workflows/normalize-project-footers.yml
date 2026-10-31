@@ -1,0 +1,106 @@
+name: Normalize project case study footers
+
+on:
+  push:
+    paths:
+      - '.github/workflows/normalize-project-footers.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Normalize footers from Projects pages
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+          from urllib.parse import urlparse
+
+          pairs = [
+              (Path('projects.html'), False),
+              (Path('es/projects.html'), True),
+          ]
+
+          def extract(source, pattern, label):
+              m = re.search(pattern, source, re.S)
+              if not m:
+                  raise SystemExit(f'Could not find {label}')
+              return m.group(0)
+
+          changed = []
+
+          for listing, is_es in pairs:
+              listing_text = listing.read_text(encoding='utf-8')
+              footer_css = extract(
+                  listing_text,
+                  r'<style id="site-footer-v2">.*?</style>',
+                  f'site-footer-v2 in {listing}'
+              )
+              footer_html = extract(
+                  listing_text,
+                  r'<footer class="footer">.*?</footer>',
+                  f'footer in {listing}'
+              )
+
+              hrefs = re.findall(r'<a class="card reveal"[^>]*href="([^"]+)"', listing_text, re.S)
+              seen = set()
+
+              for href in hrefs:
+                  if href.startswith(('http://','https://','#','mailto:')):
+                      continue
+                  path = urlparse(href).path
+                  if path in seen:
+                      continue
+                  seen.add(path)
+
+                  rel = path.lstrip('/')
+                  candidates = []
+                  if path.endswith('/'):
+                      candidates.append(Path(rel) / 'index.html')
+                  else:
+                      candidates.extend([Path(rel + '.html'), Path(rel) / 'index.html'])
+
+                  target = next((p for p in candidates if p.exists()), None)
+                  if not target or target == listing:
+                      continue
+
+                  text = target.read_text(encoding='utf-8')
+
+                  # Keep each project page's own content, but enforce the same footer visual system.
+                  if re.search(r'<style id="site-footer-v2">.*?</style>', text, re.S):
+                      text2 = re.sub(r'<style id="site-footer-v2">.*?</style>', footer_css, text, count=1, flags=re.S)
+                  else:
+                      text2 = text.replace('</head>', footer_css + '\n</head>', 1)
+
+                  if re.search(r'<footer class="footer">.*?</footer>', text2, re.S):
+                      text2 = re.sub(r'<footer class="footer">.*?</footer>', footer_html, text2, count=1, flags=re.S)
+                  else:
+                      raise SystemExit(f'Footer not found in {target}')
+
+                  if text2 != text:
+                      target.write_text(text2, encoding='utf-8')
+                      changed.append(str(target))
+
+          print('Updated project footers:')
+          for p in changed:
+              print(' -', p)
+
+      - name: Commit normalized project footers
+        run: |
+          if git diff --quiet; then
+            echo "No footer changes needed"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add '*.html' 'es/**/*.html' 'tethered/**/*.html' 'geovictoria/**/*.html' 'lowsignal/**/*.html' 'usm/**/*.html' 2>/dev/null || true
+          git add -u
+          git commit -m "Standardize project footers"
+          git push
