@@ -1,5 +1,6 @@
 from pathlib import Path
 
+# Adds Alfonso immediately after Ignacio Lepe on both People pages.
 FILES = [Path('people.html'), Path('es/people.html')]
 
 IGNACIO = '<article class="person"><a class="card-link" href="https://www.linkedin.com/in/ignacio-lepe-6026b4215/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/people/ignacio-lepe.png?v=20261030-0202" alt="Ignacio Lepe" loading="lazy"></div></div><div class="person-copy"><h3>Ignacio Lepe</h3></div></article>'
