@@ -46,6 +46,14 @@ jobs:
               if 'id="home-mobile-how-fix"' not in s:
                   s = s.replace('</head>', mobile_css + '</head>')
 
+              if es:
+                  title_css = '''<style id="spanish-hero-title-spacing">
+                  .hero h1{line-height:1.055!important}
+                  @media(max-width:700px){.hero h1{line-height:1.08!important}}
+                  </style>'''
+                  if 'id="spanish-hero-title-spacing"' not in s:
+                      s = s.replace('</head>', title_css + '</head>')
+
               p.write_text(s)
           PY
       - name: Commit source changes
@@ -57,5 +65,5 @@ jobs:
             echo "No source changes needed"
             exit 0
           fi
-          git commit -m "Polish Spanish hero and mobile how section"
+          git commit -m "Polish Spanish hero spacing and mobile how section"
           git push
