@@ -54,3 +54,4 @@ jobs:
             git commit -m "Apply final People portrait alignment and Jose Espinosa photo"
             git push
           fi
+          # trigger v2
