@@ -1,0 +1,64 @@
+name: People final fix v2
+
+on:
+  push:
+    paths:
+      - '.github/workflows/people-final-fix-v2.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch People HTML
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          pages = [Path('people.html'), Path('es/people.html')]
+          style = '''<style id="people-final-position-v3">
+.people-all img[alt="Pablo Hormazábal"]{object-position:center 36%!important;transform:translateY(11%)!important}
+.people-all img[alt="Gonzalo Zunino"],
+.people-all img[alt="María Ignacia Gana"],
+.people-all img[alt="José Manuel Parodi"],
+.people-all img[alt="Alejandra Mustakis"],
+.people-all img[alt="José Domingo Errázuriz"],
+.people-all img[alt="José Espinosa"]{transform:translateY(9%)!important}
+</style>'''
+
+          jorge = '<article class="person"><a class="card-link" href="https://www.linkedin.com/in/jorgemunozve" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/people/jorge-munoz.webp?v=20261101g" alt="Jorge Muñoz" loading="lazy"></div></div><div class="person-copy"><h3>Jorge Muñoz</h3></div></article>'
+          lia = '<article class="person"><a class="card-link" href="https://www.linkedin.com/in/l%C3%ADa-morice-b31521419" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/people/lia-morice.webp?v=20261101g" alt="Lía Morice" loading="lazy"></div></div><div class="person-copy"><h3>Lía Morice</h3></div></article>'
+
+          def remove_card(text, name):
+              pat = re.compile(r'<article class="person(?: is-visible)?">(?:(?!<article class="person).)*?<h3>'+re.escape(name)+r'</h3>(?:(?!<article class="person).)*?</article>', re.S)
+              return pat.sub('', text)
+
+          for page in pages:
+              text = page.read_text(encoding='utf-8')
+
+              for name in ['Damián Aldunate','Matías Bussinger','Jorge Muñoz','Lía Morice']:
+                  text = remove_card(text, name)
+
+              text = re.sub(r'<style id="people-final-position-v\d+">.*?</style>\s*', '', text, flags=re.S)
+              text = re.sub(r'<style id="people-final-alignment-v\d+">.*?</style>\s*', '', text, flags=re.S)
+              text = text.replace('</head>', style + '\n</head>', 1)
+
+              anchor = '</div></div></section><section class="closing">'
+              if anchor not in text:
+                  raise RuntimeError(f'People grid end not found in {page}')
+              text = text.replace(anchor, jorge + lia + anchor, 1)
+
+              text = re.sub(r'<script src="/mobile-nav\.js(?:\?v=[^"]*)?" defer></script>', '<script src="/mobile-nav.js?v=20261101g" defer></script>', text)
+              page.write_text(text, encoding='utf-8')
+          PY
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add people.html es/people.html
+          git commit -m "Finalize People portraits and restore Jorge and Lía"
+          git push
