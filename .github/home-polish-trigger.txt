@@ -1,1 +1,1 @@
-Trigger home hover and scroll polish v2.
+Trigger widen home headings v1.
