@@ -1,0 +1,56 @@
+name: Fix Tether context links once
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-tether-context-link-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Point Tether context CTAs to Felipe portfolio section
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          changed = []
+          for root, href in [('tethered', '/tethereducation'), ('es/tethered', '/es/tethereducation')]:
+              base = Path(root)
+              if not base.exists():
+                  continue
+              for p in base.rglob('*.html'):
+                  s = p.read_text(encoding='utf-8')
+                  old = s
+                  s = re.sub(
+                      r'<a([^>]*?)href="[^"]+"([^>]*?)>(\s*(?:Tether Education context|Contexto Tether Education)\s*(?:↗)?\s*)</a>',
+                      lambda m: f'<a{m.group(1)}href="{href}"{m.group(2)}>{m.group(3)}</a>',
+                      s,
+                      flags=re.I
+                  )
+                  if s != old:
+                      p.write_text(s, encoding='utf-8')
+                      changed.append(str(p))
+
+          print('Updated:')
+          for p in changed:
+              print(' -', p)
+          PY
+      - name: Commit source changes
+        run: |
+          git config user.name "Felipe Quiroz"
+          git config user.email "felipe@lowsignal.cl"
+          git add tethered es/tethered
+          if git diff --cached --quiet; then
+            echo "No Tether context links needed changes"
+            exit 0
+          fi
+          git commit -m "Fix Tether context links"
+          git push
