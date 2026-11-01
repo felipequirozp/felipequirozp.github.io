@@ -1,0 +1,64 @@
+name: Apply editorial ideas redesign once
+
+on:
+  push:
+    paths:
+      - '.github/workflows/redesign-home-ideas-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Redesign ideas section in EN and ES
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          css = '''<style id="home-ideas-editorial">
+          .ideas-strip{padding:72px var(--page)!important;background:#fff!important;border-top:1px solid var(--line)!important}
+          .ideas-editorial{display:grid!important;grid-template-columns:minmax(0,.78fr) minmax(520px,1.22fr)!important;gap:clamp(64px,8vw,140px)!important;align-items:start!important}
+          .ideas-intro{max-width:560px}
+          .ideas-intro h2{margin:14px 0 0!important;font-family:Manrope,sans-serif!important;font-size:clamp(32px,3.4vw,48px)!important;line-height:1.06!important;letter-spacing:-.045em!important;font-weight:500!important}
+          .ideas-intro p{margin:16px 0 0!important;max-width:500px!important;color:var(--muted)!important;font-size:12px!important;line-height:1.75!important}
+          .ideas-index{border-top:1px solid var(--line)!important}
+          .ideas-index a{display:grid!important;grid-template-columns:52px 1fr auto!important;gap:18px!important;align-items:center!important;padding:20px 0!important;border-bottom:1px solid var(--line)!important;transition:padding .2s ease,color .2s ease!important}
+          .ideas-index a:hover{padding-left:8px!important;color:var(--blue)!important}
+          .ideas-num{font-family:Manrope,sans-serif!important;font-size:12px!important;color:#9ba7b3!important}
+          .ideas-label{display:flex!important;align-items:baseline!important;gap:14px!important;min-width:0!important}
+          .ideas-label small{min-width:76px!important;color:var(--blue)!important;font-size:9px!important;font-weight:700!important;letter-spacing:.1em!important;text-transform:uppercase!important}
+          .ideas-label strong{font-family:Manrope,sans-serif!important;font-size:clamp(18px,1.65vw,24px)!important;line-height:1.2!important;letter-spacing:-.025em!important;font-weight:500!important;color:var(--ink)!important}
+          .ideas-arrow{font-size:18px!important;line-height:1!important;transition:transform .2s ease!important}
+          .ideas-index a:hover .ideas-arrow{transform:translate(3px,-3px)!important}
+          @media(max-width:900px){.ideas-editorial{grid-template-columns:1fr!important;gap:36px!important}.ideas-intro{max-width:650px!important}}
+          @media(max-width:700px){.ideas-strip{padding:58px 20px!important}.ideas-editorial{gap:30px!important}.ideas-intro h2{font-size:34px!important;line-height:1.08!important}.ideas-index a{grid-template-columns:36px 1fr auto!important;gap:12px!important;padding:18px 0!important}.ideas-label{display:block!important}.ideas-label small{display:block!important;min-width:0!important;margin-bottom:5px!important}.ideas-label strong{font-size:20px!important}}
+          </style>'''
+
+          blocks = {
+            'index.html': '''<section class="ideas-strip"><div class="shell ideas-editorial"><div class="ideas-intro"><div class="kicker">Ideas & notes</div><h2>Notes, ideas & things I’m exploring.</h2><p>Product, growth, company building, AI, education and the systems behind the work.</p></div><div class="ideas-index"><a href="/blog"><span class="ideas-num">01</span><span class="ideas-label"><small>Writing</small><strong>Read the blog</strong></span><span class="ideas-arrow">↗</span></a><a href="/initiatives"><span class="ideas-num">02</span><span class="ideas-label"><small>Building</small><strong>Explore initiatives</strong></span><span class="ideas-arrow">↗</span></a><a href="/about"><span class="ideas-num">03</span><span class="ideas-label"><small>Profile</small><strong>More about me</strong></span><span class="ideas-arrow">↗</span></a></div></div></section>''',
+            'es/index.html': '''<section class="ideas-strip"><div class="shell ideas-editorial"><div class="ideas-intro"><div class="kicker">Ideas & notas</div><h2>Ideas, notas y cosas que estoy explorando.</h2><p>Producto, growth, company building, IA, educación y los sistemas detrás del trabajo.</p></div><div class="ideas-index"><a href="/es/blog"><span class="ideas-num">01</span><span class="ideas-label"><small>Writing</small><strong>Leer el blog</strong></span><span class="ideas-arrow">↗</span></a><a href="/es/initiatives"><span class="ideas-num">02</span><span class="ideas-label"><small>Building</small><strong>Ver iniciativas</strong></span><span class="ideas-arrow">↗</span></a><a href="/es/about"><span class="ideas-num">03</span><span class="ideas-label"><small>Perfil</small><strong>Más sobre mí</strong></span><span class="ideas-arrow">↗</span></a></div></div></section>'''
+          }
+
+          for path, block in blocks.items():
+              p = Path(path)
+              s = p.read_text(encoding='utf-8')
+              s, n = re.subn(r'<section class="ideas-strip">.*?</section>(?=<section class="closing">)', block, s, count=1, flags=re.S)
+              if n != 1:
+                  raise SystemExit(f'Ideas section not found in {path}')
+              if 'id="home-ideas-editorial"' not in s:
+                  s = s.replace('</head>', css + '</head>')
+              p.write_text(s, encoding='utf-8')
+          PY
+      - name: Commit source changes
+        run: |
+          git config user.name "Felipe Quiroz"
+          git config user.email "felipe@lowsignal.cl"
+          git add index.html es/index.html
+          git commit -m "Redesign home ideas as editorial index" || exit 0
+          git push
