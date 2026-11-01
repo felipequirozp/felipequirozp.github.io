@@ -1,0 +1,66 @@
+name: Equalize home writing cards once
+
+on:
+  push:
+    paths:
+      - '.github/workflows/equal-home-writing-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Make latest writing cards equal in EN and ES
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          css = '''<style id="home-latest-writing-equal-v2">
+          .ideas-strip{padding:76px var(--page)!important;background:linear-gradient(180deg,#eef3f7 0%,#e7edf2 100%)!important;border-top:1px solid #dbe3e9!important}
+          .latest-head{display:flex!important;align-items:end!important;justify-content:space-between!important;gap:30px!important;margin-bottom:24px!important}
+          .latest-head h2{margin:14px 0 0!important;font-family:Manrope,sans-serif!important;font-size:clamp(34px,3.7vw,50px)!important;line-height:1.05!important;letter-spacing:-.045em!important;font-weight:500!important}
+          .latest-all{display:inline-flex!important;align-items:center!important;gap:8px!important;padding:11px 14px!important;border:1px solid #ccd6df!important;border-radius:999px!important;background:#fff!important;font-size:10px!important;font-weight:700!important;transition:.2s!important;white-space:nowrap!important}
+          .latest-all:hover{background:#0b1117!important;color:#fff!important;border-color:#0b1117!important;transform:translateY(-1px)!important}
+          .latest-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important}
+          .latest-card{overflow:hidden!important;border:1px solid #d7e0e7!important;border-radius:22px!important;background:#fff!important;transition:transform .22s ease,box-shadow .22s ease!important;display:flex!important;flex-direction:column!important;min-width:0!important}
+          .latest-card:hover{transform:translateY(-4px)!important;box-shadow:0 18px 40px rgba(27,49,70,.08)!important}
+          .latest-card-image{display:block!important;aspect-ratio:16/10!important;overflow:hidden!important;background:#e7ebef!important}
+          .latest-card-image img{width:100%!important;height:100%!important;object-fit:cover!important;transition:transform .3s ease!important}
+          .latest-card:hover img{transform:scale(1.018)!important}
+          .latest-card-copy{padding:20px 22px 24px!important;display:flex!important;flex:1!important;flex-direction:column!important}
+          .latest-meta{font-size:9px!important;font-weight:700!important;letter-spacing:.1em!important;text-transform:uppercase!important;color:#718399!important}
+          .latest-card h3{margin:10px 0 0!important;font-family:Manrope,sans-serif!important;font-size:clamp(22px,2vw,28px)!important;line-height:1.08!important;letter-spacing:-.038em!important;font-weight:500!important}
+          .latest-card p{margin:10px 0 0!important;color:var(--muted)!important;font-size:11px!important;line-height:1.68!important}
+          @media(max-width:1050px){.latest-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+          @media(max-width:700px){.ideas-strip{padding:58px 20px!important}.latest-head{align-items:flex-start!important;flex-direction:column!important}.latest-head h2{font-size:34px!important}.latest-grid{grid-template-columns:1fr!important}.latest-card h3{font-size:26px!important}.latest-card-copy{padding:18px 20px 22px!important}}
+          </style>'''
+
+          blocks = {
+            'index.html': '''<section class="ideas-strip"><div class="shell"><div class="latest-head"><div><div class="kicker">Latest writing</div><h2>Notes from what I’m building and learning.</h2></div><a class="latest-all" href="/blog">View all posts ↗</a></div><div class="latest-grid"><article class="latest-card"><a class="latest-card-image" href="/blog/my-everyday-stack"><img src="/images/apps5.jpg" alt="Five apps in Felipe Quiroz’s everyday stack" loading="lazy"></a><div class="latest-card-copy"><div class="latest-meta">Tools / Productivity · October 2026</div><h3><a href="/blog/my-everyday-stack">My everyday stack: five apps I use to build and grow</a></h3><p>Five tools I use to organize ideas, think through problems, turn concepts into prototypes and keep projects moving.</p></div></article><article class="latest-card"><a class="latest-card-image" href="/blog/scaling-technology-without-losing-speed"><img src="/images/tech-founders-ama-buk-2026.jpg" alt="Tech Founders AMA at Buk in Santiago" loading="lazy"></a><div class="latest-card-copy"><div class="latest-meta">Technology / Product</div><h3><a href="/blog/scaling-technology-without-losing-speed">Scaling technology without losing speed</a></h3><p>Reflections on scalability, technical debt, engineering leadership and AI changing development workflows.</p></div></article><article class="latest-card"><a class="latest-card-image" href="/blog/ai-native-core"><img src="/images/platanus-event.jpg" alt="AI Native Startups event" loading="lazy"></a><div class="latest-card-copy"><div class="latest-meta">AI / Product</div><h3><a href="/blog/ai-native-core">The next product leap is built with AI at the core</a></h3><p>What changes when AI moves from experiment to infrastructure at the center of the product.</p></div></article></div></div></section>''',
+            'es/index.html': '''<section class="ideas-strip"><div class="shell"><div class="latest-head"><div><div class="kicker">Últimos artículos</div><h2>Notas sobre lo que estoy construyendo y aprendiendo.</h2></div><a class="latest-all" href="/es/blog">Ver todos los artículos ↗</a></div><div class="latest-grid"><article class="latest-card"><a class="latest-card-image" href="/es/blog/mi-stack-diario"><img src="/images/apps5.jpg" alt="Cinco apps del stack diario de Felipe Quiroz" loading="lazy"></a><div class="latest-card-copy"><div class="latest-meta">Herramientas / Productividad · Octubre 2026</div><h3><a href="/es/blog/mi-stack-diario">Mi stack de todos los días: 5 apps para construir y crecer</a></h3><p>Cinco herramientas que uso para ordenar ideas, pensar problemas, crear prototipos y mantener los proyectos en movimiento.</p></div></article><article class="latest-card"><a class="latest-card-image" href="/es/blog/escalar-tecnologia-sin-perder-velocidad"><img src="/images/tech-founders-ama-buk-2026.jpg" alt="Tech Founders AMA en Buk, Santiago" loading="lazy"></a><div class="latest-card-copy"><div class="latest-meta">Tecnología / Producto</div><h3><a href="/es/blog/escalar-tecnologia-sin-perder-velocidad">Escalar tecnología sin perder velocidad</a></h3><p>Reflexiones sobre escalabilidad, deuda técnica, liderazgo de ingeniería y cómo la IA cambia los flujos de desarrollo.</p></div></article><article class="latest-card"><a class="latest-card-image" href="/es/blog/ai-native-core"><img src="/images/platanus-event.jpg" alt="Evento AI Native Startups" loading="lazy"></a><div class="latest-card-copy"><div class="latest-meta">IA / Producto</div><h3><a href="/es/blog/ai-native-core">El próximo salto de producto se construye con IA en el centro</a></h3><p>Qué cambia cuando la IA deja de ser un experimento y pasa a ser infraestructura en el centro del producto.</p></div></article></div></div></section>'''
+          }
+
+          for path, block in blocks.items():
+              p = Path(path)
+              s = p.read_text(encoding='utf-8')
+              s, n = re.subn(r'<section class="ideas-strip">.*?</section>(?=<section class="closing">)', block, s, count=1, flags=re.S)
+              if n != 1:
+                  raise SystemExit(f'Latest writing section not found in {path}')
+              if 'id="home-latest-writing-equal-v2"' not in s:
+                  s = s.replace('</head>', css + '</head>')
+              p.write_text(s, encoding='utf-8')
+          PY
+      - name: Commit source changes
+        run: |
+          git config user.name "Felipe Quiroz"
+          git config user.email "felipe@lowsignal.cl"
+          git add index.html es/index.html
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Equalize home writing cards"
+          git push
