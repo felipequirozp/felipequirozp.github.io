@@ -1,0 +1,23 @@
+name: People direct final
+on:
+  push:
+    paths:
+      - '.github/workflows/people-direct-final.yml'
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch People HTML
+        run: |
+          sed -i 's/José Domingo Errázuriz/Domingo Errázuriz/g' people.html es/people.html
+          sed -i 's#mobile-nav.js?v=20261101g#mobile-nav.js?v=20261101i#g' people.html es/people.html
+      - name: Commit
+        run: |
+          git config user.name "Felipe Quiroz"
+          git config user.email "felipe@lowsignal.cl"
+          git add people.html es/people.html
+          git commit -m "Apply final People fixes directly" || exit 0
+          git push
