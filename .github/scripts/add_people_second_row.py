@@ -1,48 +1,30 @@
 from pathlib import Path
 import re
 
-PEOPLE = [
-    ("Valentina Gran", "/images/vgran.png", "https://www.linkedin.com/in/valentina-gran-koch-0b945325/"),
-    ("Tomás Recart", "/images/tomas.png", "https://www.linkedin.com/in/tomas-recart-balze-a9957918a/"),
-    ("Tamara Muñoz", "/images/tamara.png", "https://www.linkedin.com/in/tamara-munoz-ojeda/"),
-    ("Ignacio Lepe", "/images/lepe.png", "https://www.linkedin.com/in/ignacio-lepe-6026b4215/"),
-]
+STYLE = '''<style id="people-final-visual-v7">
+.people-all img[alt="Alejandra Mustakis"]{object-fit:contain!important;object-position:center bottom!important;transform:scale(.95) translateY(4%)!important}
+.people-all img[alt="Domingo Errázuriz"]{object-fit:contain!important;object-position:center bottom!important;transform:scale(.95) translateY(4%)!important}
+.people-all img[alt="Javier Robledo"]{transform:scale(1.34) translateY(10%)!important}
+.people-all img[alt="Jorge Muñoz"]{object-fit:contain!important;object-position:center bottom!important;transform:scale(1.06) translateY(0)!important}
+.people-all img[alt="Lía Morice"]{object-fit:contain!important;object-position:center bottom!important;transform:scale(1.03) translateY(0)!important}
+</style>'''
 
-
-def card(name, image, linkedin):
-    return (
-        f'<article class="person"><a class="card-link" href="{linkedin}" target="_blank" '
-        f'rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a>'
-        f'<div class="portrait"><div class="portrait-inner"><img src="{image}" alt="{name}" loading="lazy" '
-        f'style="transform:none!important"></div></div>'
-        f'<div class="person-copy"><h3>{name}</h3></div></article>'
-    )
-
-
-def patch(path):
+for filename in ["people.html", "es/people.html"]:
+    path = Path(filename)
     text = path.read_text(encoding="utf-8")
-    match = re.search(r'(<div class="people-grid">)(.*?)(</div></div></section>\s*<section class="closing">)', text, re.S)
-    if not match:
-        raise RuntimeError(f"People grid not found in {path}")
-
-    blocks = re.findall(r'<article class="person"[^>]*>.*?</article>', match.group(2), re.S)
-    if len(blocks) < 6:
-        raise RuntimeError(f"Expected at least 6 people cards in {path}")
-
-    new_names = {name for name, _, _ in PEOPLE}
-    cleaned = []
-    for block in blocks:
-        m = re.search(r'<h3>(.*?)</h3>', block, re.S)
-        name = re.sub(r'<[^>]+>', '', m.group(1)).strip() if m else ''
-        if name not in new_names:
-            cleaned.append(block)
-
-    additions = [card(*person) for person in PEOPLE]
-    ordered = cleaned[:6] + additions + cleaned[6:]
-    replacement = match.group(1) + ''.join(ordered) + match.group(3)
-    text = text[:match.start()] + replacement + text[match.end():]
+    text = re.sub(r'<style id="people-final-visual-v\d+">.*?</style>\s*', '', text, flags=re.S)
+    text = text.replace('</head>', STYLE + '\n</head>', 1)
+    text = re.sub(r'<script src="/mobile-nav\.js(?:\?v=[^"]*)?" defer></script>', '<script src="/mobile-nav.js?v=20261101n" defer></script>', text)
     path.write_text(text, encoding="utf-8")
 
-
-for file in [Path("people.html"), Path("es/people.html")]:
-    patch(file)
+js = Path("mobile-nav.js")
+text = js.read_text(encoding="utf-8")
+text = text.replace("['José Espinosa','/images/jose-manual.png'", "['José Espinosa','/images/Jose-espinosa.png'")
+text = re.sub(
+    r"const tune=document\.createElement\('style'\);tune\.id='people-portrait-tuning-v\d+';tune\.textContent=`.*?`;document\.head\.appendChild\(tune\);",
+    "const tune=document.createElement('style');tune.id='people-portrait-tuning-v7';tune.textContent=`.people-all img[alt=\"Alejandra Mustakis\"]{object-fit:contain!important;object-position:center bottom!important;transform:scale(.95) translateY(4%)!important}.people-all img[alt=\"Domingo Errázuriz\"]{object-fit:contain!important;object-position:center bottom!important;transform:scale(.95) translateY(4%)!important}.people-all img[alt=\"Javier Robledo\"]{transform:scale(1.34) translateY(10%)!important}.people-all img[alt=\"Jorge Muñoz\"]{object-fit:contain!important;object-position:center bottom!important;transform:scale(1.06) translateY(0)!important}.people-all img[alt=\"Lía Morice\"]{object-fit:contain!important;object-position:center bottom!important;transform:scale(1.03) translateY(0)!important}`;document.head.appendChild(tune);",
+    text,
+    flags=re.S,
+)
+text = text.replace('20261101k', '20261101n').replace('20261101m', '20261101n')
+js.write_text(text, encoding="utf-8")
