@@ -1,24 +1,24 @@
-name: Apply taller home closing
+name: Refine selected work heading
 on:
   push:
     branches: [main]
 jobs:
   adjust:
-    if: github.event.head_commit.message == 'Apply taller home closing'
+    if: github.event.head_commit.message == 'Refine selected work heading'
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: Increase closing height in EN and ES homes
+      - name: Refine Selected Work heading in EN and ES homes
         run: |
           python - <<'PY'
           from pathlib import Path
           import re
-          style='<style id="home-closing-height-v3">\n.closing-inner{min-height:600px!important;padding:96px 0!important;align-items:end!important}\n@media(max-width:1000px){.closing-inner{min-height:520px!important;padding:82px 0!important}}\n@media(max-width:700px){.closing-inner{min-height:460px!important;padding:68px 0!important}}\n</style>'
+          style='<style id="home-selected-work-heading-v1">\n.section#work .section-head{grid-template-columns:1fr!important;gap:18px!important;align-items:start!important}\n.section#work .section-head>div{max-width:1040px!important}\n.section#work .section-head h2{max-width:1040px!important;font-size:clamp(44px,5vw,70px)!important;line-height:1.01!important;letter-spacing:-.05em!important}\n.section#work .section-head>p{max-width:760px!important;margin-top:4px!important}\n@media(max-width:700px){.section#work .section-head{gap:14px!important}.section#work .section-head h2{font-size:38px!important;line-height:1.03!important}.section#work .section-head>p{margin-top:2px!important}}\n</style>'
           for p in [Path('index.html'), Path('es/index.html')]:
               s=p.read_text(encoding='utf-8')
-              s=re.sub(r'<style id="home-closing-height-v\d+">.*?</style>\s*','',s,flags=re.S)
+              s=re.sub(r'<style id="home-selected-work-heading-v\d+">.*?</style>\s*','',s,flags=re.S)
               s=s.replace('</head>',style+'\n</head>',1)
               p.write_text(s,encoding='utf-8')
           PY
@@ -27,6 +27,6 @@ jobs:
           git config user.name "Felipe Quiroz"
           git config user.email "felipe@lowsignal.cl"
           git add index.html es/index.html
-          git diff --cached --quiet || git commit -m "Increase home closing section height"
+          git diff --cached --quiet || git commit -m "Refine selected work heading layout"
           git push
-# trigger v3
+# trigger selected work v1
