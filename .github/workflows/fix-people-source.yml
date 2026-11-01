@@ -1,0 +1,69 @@
+name: Fix People source
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rewrite People cards in source HTML
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          remove_names = ['Damián Aldunate','Jorge Muñoz','Matías Bussinger','Lía Morice']
+          people = [
+              ('Pablo Hormazábal','/images/pablo-h.png','https://cl.linkedin.com/in/pablohormazabaloyarzo'),
+              ('Gonzalo Zunino','/images/gonzalo.png','https://cl.linkedin.com/in/gonzalozuninop'),
+              ('María Ignacia Gana','/images/ignacia-trabun.png','https://cl.linkedin.com/in/maria-ignacia-gana-tocornal-a6a650117'),
+              ('José Manuel Parodi','/images/jose-manual.png','https://cl.linkedin.com/in/jos%C3%A9-manuel-parodi-cruzat-5b075a1ba'),
+              ('Alejandra Mustakis','/images/ale-mustakis.png','https://cl.linkedin.com/in/alejandramustakis'),
+              ('José Domingo Errázuriz','/images/domingo-e.png','https://www.linkedin.com/in/jose-domingo-errazuriz/'),
+              ('José Espinosa','/images/jose-manual.png','https://www.linkedin.com/in/joserespinosar/'),
+          ]
+
+          def card(name, img, href):
+              return f'<article class="person"><a class="card-link" href="{href}" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="{img}?v=20261101e" alt="{name}" loading="lazy"></div></div><div class="person-copy"><h3>{name}</h3></div></article>'
+
+          for file in [Path('people.html'), Path('es/people.html')]:
+              text = file.read_text(encoding='utf-8')
+
+              # Remove old cards and any previously injected source copies of the seven additions.
+              for name in remove_names + [p[0] for p in people]:
+                  pattern = re.compile(r'<article class="person(?: is-visible)?">(?:(?!<article class="person).)*?<h3>'+re.escape(name)+r'</h3>(?:(?!<article class="person).)*?</article>', re.S)
+                  text = pattern.sub('', text)
+
+              # Insert the definitive seven cards immediately after Francisca Astudillo.
+              fran = re.search(r'<article class="person(?: is-visible)?">(?:(?!<article class="person).)*?<h3>Francisca Astudillo</h3>(?:(?!<article class="person).)*?</article>', text, re.S)
+              if not fran:
+                  raise SystemExit(f'Francisca Astudillo card not found in {file}')
+              additions = ''.join(card(*p) for p in people)
+              text = text[:fran.end()] + additions + text[fran.end():]
+
+              # Remove stale image tuning rules for deleted people.
+              for name in remove_names:
+                  text = re.sub(r'\.people-all img\[alt="'+re.escape(name)+r'"\]\{[^\n]*\}\n?', '', text)
+
+              # Force browsers/CDN to request the current JS rather than an old cached copy.
+              text = re.sub(r'<script src="/mobile-nav\.js(?:\?v=[^"]*)?" defer></script>', '<script src="/mobile-nav.js?v=20261101e" defer></script>', text)
+              file.write_text(text, encoding='utf-8')
+          PY
+      - name: Commit source HTML fix
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add people.html es/people.html
+          if git diff --cached --quiet; then
+            echo "No changes needed"
+          else
+            git commit -m "Fix People cards directly in source HTML"
+            git push
+          fi
