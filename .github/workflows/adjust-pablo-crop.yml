@@ -1,0 +1,30 @@
+name: Adjust Pablo portrait
+on:
+  push:
+    branches: [main]
+jobs:
+  adjust:
+    if: github.event.head_commit.message == 'Adjust Pablo Hormazábal portrait crop'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Adjust Pablo crop in People pages
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          for p in [Path('people.html'), Path('es/people.html')]:
+              s=p.read_text()
+              rule='.people-all img[alt="Pablo Hormazábal"]{object-position:center 44%!important}'
+              if rule not in s:
+                  s=s.replace('.people-all img[alt="Francisca Astudillo"]{transform:scale(1.06) translateY(2%)!important}', '.people-all img[alt="Francisca Astudillo"]{transform:scale(1.06) translateY(2%)!important}\n'+rule)
+              p.write_text(s)
+          PY
+      - name: Commit
+        run: |
+          git config user.name "Felipe Quiroz"
+          git config user.email "felipe@lowsignal.cl"
+          git add people.html es/people.html
+          git diff --cached --quiet || git commit -m "Lower Pablo portrait framing"
+          git push
