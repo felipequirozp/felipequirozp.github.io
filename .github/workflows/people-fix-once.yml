@@ -1,4 +1,4 @@
-name: Home polish patch
+name: Widen home headings
 on:
   push:
     branches: [main]
@@ -6,26 +6,21 @@ permissions:
   contents: write
 jobs:
   patch:
-    if: github.event.head_commit.message == 'Polish home hover and scroll'
+    if: github.event.head_commit.message == 'Widen home headings'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Apply home hover and scroll polish
+      - name: Widen How I Work and Latest Writing headings
         run: |
           python3 - <<'PY'
           from pathlib import Path
           import re
-
-          style='<style id="home-scroll-polish-v1">\n.closing a:hover{background:#7db8ff!important;border-color:#7db8ff!important;color:#0b1117!important;transform:translateY(-2px)!important}\n.closing a.secondary:hover{background:#7db8ff!important;border-color:#7db8ff!important;color:#0b1117!important}\n.scroll-reveal-auto{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);transition-delay:var(--reveal-delay,0ms)}\n.scroll-reveal-auto.is-visible{opacity:1;transform:none}\n@media(prefers-reduced-motion:reduce){.scroll-reveal-auto{opacity:1!important;transform:none!important;transition:none!important}}\n</style>'
-          script='<script id="home-scroll-polish-script">(()=>{if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;const selectors=[".section#work .section-head",".work-row",".projects-head",".project",".how-head",".how .principle",".latest-head",".latest-card",".closing-inner"];const els=[];selectors.forEach(sel=>document.querySelectorAll(sel).forEach((el,i)=>{el.classList.add("scroll-reveal-auto");el.style.setProperty("--reveal-delay",Math.min(i,4)*70+"ms");els.push(el)}));const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("is-visible");io.unobserve(entry.target)}}),{threshold:.12,rootMargin:"0px 0px -40px"});els.forEach(el=>io.observe(el));})();</script>'
-
+          style='<style id="home-wide-headings-v1">\n@media(min-width:1001px){.how-head>div{max-width:none!important}.how-head h2{max-width:none!important;white-space:nowrap!important;font-size:clamp(44px,4.6vw,68px)!important}.latest-head>div{max-width:none!important}.latest-head h2{max-width:none!important;white-space:nowrap!important;font-size:clamp(40px,3.9vw,58px)!important}}\n@media(max-width:1000px){.how-head h2,.latest-head h2{white-space:normal!important}}\n</style>'
           for filename in ['index.html','es/index.html']:
               path=Path(filename)
               text=path.read_text(encoding='utf-8')
-              text=re.sub(r'<style id="home-scroll-polish-v\d+">.*?</style>\s*','',text,flags=re.S)
-              text=re.sub(r'<script id="home-scroll-polish-script">.*?</script>\s*','',text,flags=re.S)
+              text=re.sub(r'<style id="home-wide-headings-v\d+">.*?</style>\s*','',text,flags=re.S)
               text=text.replace('</head>',style+'\n</head>',1)
-              text=text.replace('</body>',script+'\n</body>',1)
               path.write_text(text,encoding='utf-8')
           PY
       - name: Commit changes
@@ -33,5 +28,5 @@ jobs:
           git config user.name "Felipe Quiroz"
           git config user.email "felipe@lowsignal.cl"
           git add index.html es/index.html
-          git diff --cached --quiet || git commit -m "Polish home CTA hover and scroll reveals"
+          git diff --cached --quiet || git commit -m "Widen home headings layout"
           git push
