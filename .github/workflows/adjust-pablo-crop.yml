@@ -1,24 +1,24 @@
-name: Refine selected work heading
+name: Refine projects and how headings
 on:
   push:
     branches: [main]
 jobs:
   adjust:
-    if: github.event.head_commit.message == 'Refine selected work heading'
+    if: github.event.head_commit.message == 'Refine projects and how headings'
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: Refine Selected Work heading in EN and ES homes
+      - name: Align Projects and How I Work headings in EN and ES homes
         run: |
           python - <<'PY'
           from pathlib import Path
           import re
-          style='<style id="home-selected-work-heading-v1">\n.section#work .section-head{grid-template-columns:1fr!important;gap:18px!important;align-items:start!important}\n.section#work .section-head>div{max-width:1040px!important}\n.section#work .section-head h2{max-width:1040px!important;font-size:clamp(44px,5vw,70px)!important;line-height:1.01!important;letter-spacing:-.05em!important}\n.section#work .section-head>p{max-width:760px!important;margin-top:4px!important}\n@media(max-width:700px){.section#work .section-head{gap:14px!important}.section#work .section-head h2{font-size:38px!important;line-height:1.03!important}.section#work .section-head>p{margin-top:2px!important}}\n</style>'
+          style='<style id="home-section-heading-v2">\n.projects-head,.how-head{grid-template-columns:1fr!important;gap:18px!important;align-items:start!important}\n.projects-head>div,.how-head>div{max-width:1040px!important}\n.projects-head h2,.how-head h2{max-width:1040px!important;font-size:clamp(44px,5vw,70px)!important;line-height:1.01!important;letter-spacing:-.05em!important}\n.projects-head>p,.how-head>p{max-width:760px!important;margin-top:4px!important}\n@media(max-width:700px){.projects-head,.how-head{gap:14px!important}.projects-head h2,.how-head h2{font-size:38px!important;line-height:1.03!important}.projects-head>p,.how-head>p{margin-top:2px!important}}\n</style>'
           for p in [Path('index.html'), Path('es/index.html')]:
               s=p.read_text(encoding='utf-8')
-              s=re.sub(r'<style id="home-selected-work-heading-v\d+">.*?</style>\s*','',s,flags=re.S)
+              s=re.sub(r'<style id="home-section-heading-v\d+">.*?</style>\s*','',s,flags=re.S)
               s=s.replace('</head>',style+'\n</head>',1)
               p.write_text(s,encoding='utf-8')
           PY
@@ -27,6 +27,5 @@ jobs:
           git config user.name "Felipe Quiroz"
           git config user.email "felipe@lowsignal.cl"
           git add index.html es/index.html
-          git diff --cached --quiet || git commit -m "Refine selected work heading layout"
+          git diff --cached --quiet || git commit -m "Refine projects and how headings layout"
           git push
-# trigger selected work v2
