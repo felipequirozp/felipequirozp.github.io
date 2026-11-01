@@ -1,0 +1,56 @@
+name: People final direct v6
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch People source files
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          style = '''<style id="people-final-visual-v6">
+          .people-all img[alt="Alejandra Mustakis"]{transform:translateY(10%)!important;object-position:center 36%!important}
+          .people-all img[alt="Domingo Errázuriz"]{transform:translateY(9%)!important;object-position:center 36%!important}
+          .people-all img[alt="Javier Robledo"]{transform:scale(1.34) translateY(10%)!important}
+          .people-all img[alt="Jorge Muñoz"]{transform:scale(1.35) translateY(11%)!important;object-position:center 38%!important}
+          .people-all img[alt="Lía Morice"]{transform:scale(1.30) translateY(12%)!important;object-position:center 38%!important}
+          </style>'''
+
+          for filename in ['people.html', 'es/people.html']:
+              path = Path(filename)
+              text = path.read_text(encoding='utf-8')
+              text = text.replace('/images/jose-manual.png?v=20261101g" alt="José Espinosa"', '/images/Jose-espinosa.png?v=20261101k" alt="José Espinosa"')
+              text = text.replace('/images/jose-manual.png?v=20261101i" alt="José Espinosa"', '/images/Jose-espinosa.png?v=20261101k" alt="José Espinosa"')
+              text = re.sub(r'<style id="people-final-visual-v\d+">.*?</style>\s*', '', text, flags=re.S)
+              text = text.replace('</head>', style + '\n</head>', 1)
+              text = re.sub(r'<script src="/mobile-nav\.js(?:\?v=[^"]*)?" defer></script>', '<script src="/mobile-nav.js?v=20261101k" defer></script>', text)
+              path.write_text(text, encoding='utf-8')
+
+          js = Path('mobile-nav.js')
+          text = js.read_text(encoding='utf-8')
+          text = text.replace("['José Espinosa','/images/jose-manual.png'", "['José Espinosa','/images/Jose-espinosa.png'")
+          text = re.sub(r"const tune=document\.createElement\('style'\);tune\.id='people-portrait-tuning-v\d+';tune\.textContent=`.*?`;document\.head\.appendChild\(tune\);", "const tune=document.createElement('style');tune.id='people-portrait-tuning-v6';tune.textContent=`.people-all img[alt=\"Alejandra Mustakis\"]{transform:translateY(10%)!important;object-position:center 36%!important}.people-all img[alt=\"Domingo Errázuriz\"]{transform:translateY(9%)!important;object-position:center 36%!important}.people-all img[alt=\"Javier Robledo\"]{transform:scale(1.34) translateY(10%)!important}.people-all img[alt=\"Jorge Muñoz\"]{transform:scale(1.35) translateY(11%)!important;object-position:center 38%!important}.people-all img[alt=\"Lía Morice\"]{transform:scale(1.30) translateY(12%)!important;object-position:center 38%!important}`;document.head.appendChild(tune);", text, flags=re.S)
+          js.write_text(text, encoding='utf-8')
+          PY
+      - name: Commit People changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add people.html es/people.html mobile-nav.js
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Apply final People portrait alignment and Jose Espinosa photo"
+            git push
+          fi
