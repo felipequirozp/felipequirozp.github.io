@@ -1,4 +1,4 @@
-name: Restore wrapped home headings
+name: Update initiatives role to CEO
 on:
   push:
     branches: [main]
@@ -6,25 +6,37 @@ permissions:
   contents: write
 jobs:
   patch:
-    if: github.event.head_commit.message == 'Restore wrapped home headings'
+    if: github.event.head_commit.message == 'Update initiatives role to CEO'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Restore previous heading wrapping
+      - name: Update initiatives EN and ES
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          import re
-          for filename in ['index.html','es/index.html']:
-              path=Path(filename)
-              text=path.read_text(encoding='utf-8')
-              text=re.sub(r'<style id="home-wide-headings-v\d+">.*?</style>\s*','',text,flags=re.S)
-              path.write_text(text,encoding='utf-8')
+
+          replacements = {
+              'initiatives.html': [
+                  ('Co-Founder &amp; COO', 'Co-Founder &amp; CEO'),
+                  ('I lead operations, commercial strategy, client delivery and the development of lowsignal’s operating model and brand.', 'I lead lowsignal’s overall strategy, growth and expansion, with responsibility across commercial, operations, product, brand and new business.'),
+              ],
+              'es/initiatives.html': [
+                  ('Co-Founder &amp; COO', 'Co-Founder &amp; CEO'),
+                  ('Lidero operaciones, estrategia comercial, delivery de clientes y el desarrollo del modelo operativo y la marca de lowsignal.', 'Lidero la estrategia general, crecimiento y expansión de lowsignal, con responsabilidad sobre comercial, operaciones, producto, marca y nuevos negocios.'),
+              ],
+          }
+
+          for filename, pairs in replacements.items():
+              path = Path(filename)
+              text = path.read_text(encoding='utf-8')
+              for old, new in pairs:
+                  text = text.replace(old, new)
+              path.write_text(text, encoding='utf-8')
           PY
       - name: Commit changes
         run: |
           git config user.name "Felipe Quiroz"
           git config user.email "felipe@lowsignal.cl"
-          git add index.html es/index.html
-          git diff --cached --quiet || git commit -m "Restore wrapped home headings layout"
+          git add initiatives.html es/initiatives.html
+          git diff --cached --quiet || git commit -m "Update initiatives role to CEO"
           git push
