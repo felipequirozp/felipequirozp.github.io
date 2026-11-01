@@ -1,4 +1,4 @@
-name: Widen home headings
+name: Restore wrapped home headings
 on:
   push:
     branches: [main]
@@ -6,21 +6,19 @@ permissions:
   contents: write
 jobs:
   patch:
-    if: github.event.head_commit.message == 'Widen home headings'
+    if: github.event.head_commit.message == 'Restore wrapped home headings'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Widen How I Work and Latest Writing headings
+      - name: Restore previous heading wrapping
         run: |
           python3 - <<'PY'
           from pathlib import Path
           import re
-          style='<style id="home-wide-headings-v1">\n@media(min-width:1001px){.how-head>div{max-width:none!important}.how-head h2{max-width:none!important;white-space:nowrap!important;font-size:clamp(44px,4.6vw,68px)!important}.latest-head>div{max-width:none!important}.latest-head h2{max-width:none!important;white-space:nowrap!important;font-size:clamp(40px,3.9vw,58px)!important}}\n@media(max-width:1000px){.how-head h2,.latest-head h2{white-space:normal!important}}\n</style>'
           for filename in ['index.html','es/index.html']:
               path=Path(filename)
               text=path.read_text(encoding='utf-8')
               text=re.sub(r'<style id="home-wide-headings-v\d+">.*?</style>\s*','',text,flags=re.S)
-              text=text.replace('</head>',style+'\n</head>',1)
               path.write_text(text,encoding='utf-8')
           PY
       - name: Commit changes
@@ -28,5 +26,5 @@ jobs:
           git config user.name "Felipe Quiroz"
           git config user.email "felipe@lowsignal.cl"
           git add index.html es/index.html
-          git diff --cached --quiet || git commit -m "Widen home headings layout"
+          git diff --cached --quiet || git commit -m "Restore wrapped home headings layout"
           git push
