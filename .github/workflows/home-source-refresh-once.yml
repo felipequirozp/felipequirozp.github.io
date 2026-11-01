@@ -19,72 +19,34 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
-          import re
 
-          def update(path, es=False):
+          for path, es in [('index.html', False), ('es/index.html', True)]:
               p = Path(path)
               s = p.read_text()
 
               if es:
+                  s = s.replace('Construyo productos, sistemas de growth y compañías.', 'Construyo compañías, productos y sistemas de crecimiento.')
                   s = s.replace('Construyo productos, sistemas de crecimiento y compañías.', 'Construyo compañías, productos y sistemas de crecimiento.')
-                  s = s.replace('Co-Founder & COO en lowsignal', 'Co-Founder & CEO en lowsignal')
-                  s = s.replace('Co-Founder & COO<br>2025 — Presente', 'Co-Founder & CEO<br>2025 — Presente')
-                  s = s.replace('Co-Founder & COO<br>2025 — Hoy', 'Co-Founder & CEO<br>2025 — Presente')
-                  s = s.replace('Product Manager<br>Julio 2026 — Presente', 'Product Manager<br>2026 — Presente')
-                  s = s.replace('Product Manager<br>2026 — Presente — Presente', 'Product Manager<br>2026 — Presente')
-                  s = s.replace('Product Manager<br>2026</div>', 'Product Manager<br>2026 — Presente</div>')
-              else:
-                  s = s.replace('I build products, growth systems and companies.', 'I build companies, products and growth systems.')
-                  s = s.replace('Co-Founder & COO at lowsignal', 'Co-Founder & CEO at lowsignal')
-                  s = s.replace('Co-Founder & COO<br>2025 — Present', 'Co-Founder & CEO<br>2025 — Present')
-                  s = s.replace('Product Manager<br>July 2026 — Present', 'Product Manager<br>2026 — Present')
-                  s = s.replace('Product Manager<br>2026 — Present — Present', 'Product Manager<br>2026 — Present')
-                  s = s.replace('Product Manager<br>2026</div>', 'Product Manager<br>2026 — Present</div>')
+                  s = s.replace('Producto · Growth · Operaciones · Company building', 'Company building · Producto · Growth · Tecnología')
+              s = s.replace('Product Manager<br>2026 — Present — Present', 'Product Manager<br>2026 — Present')
+              s = s.replace('Product Manager<br>2026 — Presente — Presente', 'Product Manager<br>2026 — Presente')
 
-              # Reorder Selected Work so GeoVictoria comes immediately after lowsignal.
-              m = re.search(r'(<div class="work-list reveal">)(.*?)(</div></div></section>)', s)
-              if m:
-                  body = m.group(2)
-                  cards = re.findall(r'<a class="work-row".*?</a>', body)
-                  if len(cards) >= 4:
-                      def key(card):
-                          if 'lowsignal' in card: return 0
-                          if 'geovictoria' in card: return 1
-                          if 'tethereducation' in card: return 2
-                          if '/usm' in card: return 3
-                          return 9
-                      ordered = sorted(cards, key=key)
-                      body2 = body
-                      for c in cards:
-                          body2 = body2.replace(c, '', 1)
-                      body2 = ''.join(ordered) + body2
-                      s = s[:m.start(2)] + body2 + s[m.end(2):]
-
-              footer_css = '''<style id="home-footer-unified">
-              .footer{padding:58px var(--page,8vw) 28px!important;background:#fff!important;border-top:1px solid var(--line,#e1e6eb)!important}
-              .footer-grid{width:min(var(--max,1520px),100%)!important;margin:0 auto!important;display:grid!important;grid-template-columns:1.15fr .7fr .7fr .7fr!important;gap:56px!important;align-items:start!important}
-              .footer-col a{transition:transform .18s ease,color .18s ease!important}
-              .footer-col a:hover{color:#0b1117!important;transform:translateX(3px)!important}
-              .footer-bottom{width:min(var(--max,1520px),100%)!important;margin:42px auto 0!important}
-              @media(max-width:1050px){.footer-grid{grid-template-columns:1fr 1fr!important}}
-              @media(max-width:700px){.footer-grid{grid-template-columns:1fr!important;gap:28px!important}.footer-bottom{margin-top:34px!important}}
+              mobile_css = '''<style id="home-mobile-how-fix">
+              @media(max-width:700px){
+                .how{padding:68px 20px!important}
+                .how-head{display:grid!important;grid-template-columns:1fr!important;gap:24px!important;align-items:start!important}
+                .how-head h2{font-size:clamp(34px,10vw,44px)!important;line-height:1.04!important;margin-top:12px!important}
+                .how-head p{font-size:12px!important;line-height:1.72!important;max-width:none!important}
+                .how .principles{display:block!important;margin-top:30px!important;border-top:1px solid rgba(255,255,255,.16)!important;border-bottom:0!important}
+                .how .principle,.how .principle+.principle{padding:22px 0!important;border-left:0!important;border-bottom:1px solid rgba(255,255,255,.16)!important}
+                .how .principle strong{font-size:18px!important;line-height:1.25!important}
+                .how .principle span{margin-top:8px!important;font-size:11px!important;line-height:1.65!important}
+              }
               </style>'''
-              if 'id="home-footer-unified"' not in s:
-                  s = s.replace('</head>', footer_css + '</head>')
-
-              hero_css = '''<style id="home-source-refresh">
-              .hero{padding-top:94px!important;padding-bottom:96px!important;background:radial-gradient(circle at 78% 12%,rgba(20,103,216,.16),transparent 30%),linear-gradient(180deg,#f5f8fb 0%,#eaf0f5 100%)!important}
-              .hero-grid{align-items:center!important}.hero h1{max-width:930px!important}.hero-copy{max-width:700px!important}.hero-photo{box-shadow:0 24px 54px rgba(20,39,58,.10)!important}
-              .companies{background:#f8fafc!important}.company{min-height:132px!important}.section#work{padding-top:104px!important;padding-bottom:104px!important}.work-row{padding-top:38px!important;padding-bottom:38px!important}.projects-section{padding-top:104px!important}
-              @media(max-width:700px){.hero{padding-top:54px!important;padding-bottom:64px!important}.company{min-height:94px!important}.section#work{padding-top:70px!important;padding-bottom:70px!important}.projects-section{padding-top:72px!important}}
-              </style>'''
-              if 'id="home-source-refresh"' not in s:
-                  s = s.replace('</head>', hero_css + '</head>')
+              if 'id="home-mobile-how-fix"' not in s:
+                  s = s.replace('</head>', mobile_css + '</head>')
 
               p.write_text(s)
-
-          update('index.html', False)
-          update('es/index.html', True)
           PY
       - name: Commit source changes
         run: |
@@ -95,5 +57,5 @@ jobs:
             echo "No source changes needed"
             exit 0
           fi
-          git commit -m "Normalize home roles and dates"
+          git commit -m "Polish Spanish hero and mobile how section"
           git push
