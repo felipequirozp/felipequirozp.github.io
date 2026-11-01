@@ -51,3 +51,4 @@ jobs:
           git add people.html es/people.html mobile-nav.js
           git commit -m "Align final People portraits" || exit 0
           git push
+# trigger v2
