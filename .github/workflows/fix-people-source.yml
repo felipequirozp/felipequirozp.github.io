@@ -19,7 +19,7 @@ jobs:
           from pathlib import Path
           import re
 
-          remove_names = ['Damián Aldunate','Jorge Muñoz','Matías Bussinger','Lía Morice']
+          remove_names = ['Damián Aldunate','Matías Bussinger']
           people = [
               ('Pablo Hormazábal','/images/pablo-h.png','https://cl.linkedin.com/in/pablohormazabaloyarzo'),
               ('Gonzalo Zunino','/images/gonzalo.png','https://cl.linkedin.com/in/gonzalozuninop'),
@@ -29,31 +29,56 @@ jobs:
               ('José Domingo Errázuriz','/images/domingo-e.png','https://www.linkedin.com/in/jose-domingo-errazuriz/'),
               ('José Espinosa','/images/jose-manual.png','https://www.linkedin.com/in/joserespinosar/'),
           ]
+          tail_people = [
+              ('Jorge Muñoz','/images/people/jorge-munoz.webp','https://www.linkedin.com/in/jorgemunozve'),
+              ('Lía Morice','/images/people/lia-morice.webp','https://www.linkedin.com/in/l%C3%ADa-morice-b31521419'),
+          ]
 
           def card(name, img, href):
-              return f'<article class="person"><a class="card-link" href="{href}" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="{img}?v=20261101e" alt="{name}" loading="lazy"></div></div><div class="person-copy"><h3>{name}</h3></div></article>'
+              return f'<article class="person"><a class="card-link" href="{href}" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="{img}?v=20261101f" alt="{name}" loading="lazy"></div></div><div class="person-copy"><h3>{name}</h3></div></article>'
+
+          alignment_style = '''<style id="people-final-alignment-v2">
+.people-all img[alt="Pablo Hormazábal"]{transform:translateY(9%)!important}
+.people-all img[alt="Gonzalo Zunino"],
+.people-all img[alt="María Ignacia Gana"],
+.people-all img[alt="José Manuel Parodi"],
+.people-all img[alt="Alejandra Mustakis"],
+.people-all img[alt="José Domingo Errázuriz"],
+.people-all img[alt="José Espinosa"]{transform:translateY(8%)!important}
+</style>'''
 
           for file in [Path('people.html'), Path('es/people.html')]:
               text = file.read_text(encoding='utf-8')
 
-              # Remove old cards and any previously injected source copies of the seven additions.
-              for name in remove_names + [p[0] for p in people]:
+              # Remove cards we manage so the resulting order is deterministic.
+              managed = remove_names + [p[0] for p in people] + [p[0] for p in tail_people]
+              for name in managed:
                   pattern = re.compile(r'<article class="person(?: is-visible)?">(?:(?!<article class="person).)*?<h3>'+re.escape(name)+r'</h3>(?:(?!<article class="person).)*?</article>', re.S)
                   text = pattern.sub('', text)
 
-              # Insert the definitive seven cards immediately after Francisca Astudillo.
+              # Insert the seven new cards immediately after Francisca Astudillo.
               fran = re.search(r'<article class="person(?: is-visible)?">(?:(?!<article class="person).)*?<h3>Francisca Astudillo</h3>(?:(?!<article class="person).)*?</article>', text, re.S)
               if not fran:
                   raise SystemExit(f'Francisca Astudillo card not found in {file}')
               additions = ''.join(card(*p) for p in people)
               text = text[:fran.end()] + additions + text[fran.end():]
 
-              # Remove stale image tuning rules for deleted people.
+              # Restore Jorge and Lía at the very end of the People grid.
+              grid_end = '</div></div></section><section class="closing">'
+              if grid_end not in text:
+                  raise SystemExit(f'People grid end not found in {file}')
+              text = text.replace(grid_end, ''.join(card(*p) for p in tail_people) + grid_end, 1)
+
+              # Remove stale image tuning rules for people that stay deleted.
               for name in remove_names:
                   text = re.sub(r'\.people-all img\[alt="'+re.escape(name)+r'"\]\{[^\n]*\}\n?', '', text)
 
-              # Force browsers/CDN to request the current JS rather than an old cached copy.
-              text = re.sub(r'<script src="/mobile-nav\.js(?:\?v=[^"]*)?" defer></script>', '<script src="/mobile-nav.js?v=20261101e" defer></script>', text)
+              # Keep a single final alignment override.
+              text = re.sub(r'<style id="people-final-alignment-v\d+">.*?</style>\s*', '', text, flags=re.S)
+              text = text.replace('</head>', alignment_style + '\n</head>', 1)
+
+              # Force browsers/CDN to request the current JS.
+              text = re.sub(r'<script src="/mobile-nav\.js(?:\?v=[^"]*)?" defer></script>', '<script src="/mobile-nav.js?v=20261101f" defer></script>', text)
               file.write_text(text, encoding='utf-8')
           PY
       - name: Commit source HTML fix
@@ -64,6 +89,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes needed"
           else
-            git commit -m "Fix People cards directly in source HTML"
+            git commit -m "Finalize People order and portrait alignment"
             git push
           fi
