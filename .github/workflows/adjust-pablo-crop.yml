@@ -15,13 +15,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           import re
-
-          style='''<style id="home-closing-height-v3">
-.closing-inner{min-height:600px!important;padding:96px 0!important;align-items:end!important}
-@media(max-width:1000px){.closing-inner{min-height:520px!important;padding:82px 0!important}}
-@media(max-width:700px){.closing-inner{min-height:460px!important;padding:68px 0!important}}
-</style>'''
-
+          style='<style id="home-closing-height-v3">\n.closing-inner{min-height:600px!important;padding:96px 0!important;align-items:end!important}\n@media(max-width:1000px){.closing-inner{min-height:520px!important;padding:82px 0!important}}\n@media(max-width:700px){.closing-inner{min-height:460px!important;padding:68px 0!important}}\n</style>'
           for p in [Path('index.html'), Path('es/index.html')]:
               s=p.read_text(encoding='utf-8')
               s=re.sub(r'<style id="home-closing-height-v\d+">.*?</style>\s*','',s,flags=re.S)
@@ -35,4 +29,4 @@ jobs:
           git add index.html es/index.html
           git diff --cached --quiet || git commit -m "Increase home closing section height"
           git push
-# trigger v2
+# trigger v3
