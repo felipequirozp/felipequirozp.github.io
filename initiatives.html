@@ -482,6 +482,33 @@ h1,h2,h3,h4{font-family:"DM Sans",Inter,sans-serif;letter-spacing:-.06em}
 }
 @media(max-width:640px){.system{padding:48px 0 52px}.system-icon{margin-bottom:14px}.system-card h3{font-size:16px}}
 
+
+/* Linear-style capability layout: centered section, left-aligned content */
+.system-grid{align-items:stretch}
+.system-card,.system-card+.system-card{align-items:flex-start;text-align:left;justify-content:center}
+.system-icon{margin:0 0 19px;justify-content:flex-start}
+.system-card h3{margin:0;max-width:350px;text-align:left}
+@media(max-width:960px){
+.system-card,.system-card+.system-card,.system-card:first-child,.system-card:last-child{align-items:flex-start;text-align:left}
+.system-icon{margin:0 0 15px}
+.system-card h3{margin:0;text-align:left}
+}
+/* Clear, restrained interaction feedback */
+.touch,.text-link,.footer-email,.locale,.hero-side a,.footer-nav a{transition:color .2s ease,background-color .2s ease, border-color .2s ease,transform .2s ease}
+.touch:hover{background:#edf1f7;color:#111318;transform:translateY(-1px)}
+.touch:active{transform:translateY(0)}
+.text-link:hover,.hero-side a:hover,.footer-email:hover{color:#a9c7ff}
+.hero-side a:hover{border-color:#a9c7ff}
+.locale:hover{color:#fff}
+.footer-nav a:hover{color:#f2f4f7;transform:translateX(2px)}
+a:focus-visible,button:focus-visible{outline:2px solid #6da2ff;outline-offset:5px}
+/* Scroll entrance: motion is subtle, progressive, and never blocks content without JS */
+@media(prefers-reduced-motion:no-preference){
+html.motion-ready .scroll-reveal{opacity:0;transform:translateY(16px);transition:opacity .64s ease,transform .64s cubic-bezier(.2,.7,.2,1)}
+html.motion-ready .scroll-reveal.is-visible{opacity:1;transform:none}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.scroll-reveal{opacity:1!important;transform:none!important;transition:none!important}}
+
 </style>
 </head>
 <body>
@@ -619,6 +646,24 @@ if (toggle && links) {
  window.addEventListener('resize',onScroll,{passive:true});
  recalc();
 })();
+
+/* Reveal narrative blocks as they enter the viewport; native page scroll stays untouched. */
+(() => {
+ const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const targets=document.querySelectorAll('.hero-copy,.hero-media,.founder-statement-inner,.system-card,.workspace-opening,.workspace-sticky,.workspace-close,.footer-main,.footer-nav');
+ if(reduce||!('IntersectionObserver' in window))return;
+ targets.forEach(el=>el.classList.add('scroll-reveal'));
+ document.documentElement.classList.add('motion-ready');
+ const observer=new IntersectionObserver(entries=>{
+   entries.forEach(entry=>{
+     if(!entry.isIntersecting)return;
+     entry.target.classList.add('is-visible');
+     observer.unobserve(entry.target);
+   });
+ },{rootMargin:'0px 0px -8% 0px',threshold:0.08});
+ targets.forEach(el=>observer.observe(el));
+})();
+
 </script>
 </body>
 </html>
