@@ -173,15 +173,147 @@ html,body{background:#07090d!important;color:#f3f5f9!important}
 @media(max-width:780px){.people-all .people-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}:root{--page:32px}.hero .shell,.people-all .shell{width:calc(100% - 64px)!important}.hero{padding-top:62px!important}.people-all{padding-bottom:72px!important}}
 @media(max-width:560px){:root{--page:18px}.hero .shell,.people-all .shell{width:calc(100% - 36px)!important}.hero h1{font-size:38px!important}.people-all .people-grid{gap:27px 12px!important}.people-all .person h3{font-size:14px!important}}
 </style>
+<style id="people-shared-navigation-footer-20261111">
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:30;
+  background:rgba(6,8,12,.86);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+.nav-inner{height:70px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:center;gap:14px;font-size:18px;font-weight:700;letter-spacing:-.04em}
+.brand-badge{
+  width:34px;height:34px;border-radius:10px;background:#fff;
+  display:grid;place-items:center;color:#111;overflow:hidden
+}
+.brand-badge svg{width:20px;height:20px}
+.nav-links{display:flex;align-items:center;gap:28px;margin-left:auto}
+.nav-links a{font-size:13px;color:#8f97a4;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-actions{
+  display:flex;align-items:center;gap:18px;
+  border-left:1px solid rgba(255,255,255,.08);
+  padding-left:22px;
+}
+.locale{font-size:12px;color:#9099a7;display:inline-flex;align-items:center;gap:6px}
+.touch{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:11px 18px;border-radius:999px;
+  background:#fff;color:#111318;font-size:12px;font-weight:600;
+}
+.arrow-icon{transition:transform .2s}
+.touch:hover .arrow-icon,.text-link:hover .arrow-icon,.locale:hover .arrow-icon{transform:translate(2px,-2px)}
+.mobile-toggle{display:none;background:none;border:0;color:#fff;padding:8px}
+
+
+/* footer from existing structure */
+.footer{background:#07090d;border-top:1px solid rgba(255,255,255,.07)}
+.footer-top{display:flex;justify-content:space-between;gap:50px;padding:76px 0}
+.footer-main{max-width:530px}
+.footer-main h2{font:600 clamp(33px,4.6vw,58px)/1.05 "DM Sans",sans-serif;letter-spacing:-.065em;margin:23px 0}
+.footer-main h2 span{color:#71a7ff}
+.footer-main p{color:#9a9ea7;font-size:13px;line-height:1.8;max-width:400px}
+.footer-email{display:inline-flex;align-items:center;gap:12px;color:white;font-size:13px;border-bottom:1px solid #5b88d0;padding-bottom:11px;margin-top:16px}
+.footer-email:hover{color:#9bc5ff}
+.footer-nav{display:grid;grid-template-columns:repeat(2,minmax(135px,1fr));gap:45px}
+.footer-nav strong{display:block;color:#f1f1f3;font-size:12px;font-weight:600;margin-bottom:21px}
+.footer-nav a{display:block;color:#8d929d;font-size:12px;margin:0 0 15px;transition:color .2s}.footer-nav a:hover{color:#fff}
+.footer-bottom{border-top:1px solid #161a21;padding:26px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;color:#7f858f;font-size:11px}
+.footer-bottom .blue-dot{display:inline-block;height:6px;width:6px;background:var(--blue);border-radius:50%;margin-right:7px}
+
+
+
+/* People: rebuilt shared layout, directly matching Initiatives */
+:root{--max:1392px;--blue:#2d74ff;--nav-h:70px}
+html,body,main,.hero,.people-all,.closing,.footer{background:#07090d!important;color:#f4f6fb!important}
+body{padding-top:0!important}
+.container{width:min(calc(100% - 176px),1392px);margin-inline:auto}
+.hero,.people-all,.closing{border-color:#22262e!important}
+.hero{background:#07090d!important}
+.people-all{background:#07090d!important}
+.people-all .people-grid{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:38px 20px!important}
+.people-all .portrait-inner{background:#35383e!important;border:1px solid #40444b!important;border-radius:9px!important}
+.people-all .person h3{color:#f2f3f6!important}
+.nav{position:sticky!important;top:0!important;left:auto!important;right:auto!important;height:auto!important;padding:0!important;display:block!important;background:rgba(7,9,13,.94)!important;border-bottom:1px solid rgba(255,255,255,.06)!important;z-index:9999!important}
+.nav-inner{height:70px!important;display:flex!important;align-items:center;justify-content:space-between;gap:22px}
+.nav .brand{display:flex!important;align-items:center!important;gap:14px!important;font-family:Inter,Arial,sans-serif!important;font-size:20px!important;line-height:1.2!important;letter-spacing:-.065em!important;font-weight:700!important;color:#f4f6fb!important;white-space:nowrap}
+.nav .nav-links{display:flex;align-items:center;gap:28px;margin-left:auto}
+.nav .nav-links a{font-size:13px!important;color:#8f97a4!important;font-weight:400!important}
+.nav .nav-links a.active,.nav .nav-links a:hover{color:#fff!important}
+.nav .nav-links a::after{display:none!important}
+.nav .nav-actions{display:flex!important;align-items:center;gap:18px;margin-left:0;border-left:1px solid rgba(255,255,255,.08);padding-left:22px}
+.nav .locale{font-size:12px!important;color:#9ba4b1!important;display:inline-flex;align-items:center;gap:6px}
+.nav .touch{display:inline-flex!important;align-items:center;gap:10px;padding:11px 18px;border-radius:999px;background:#fff!important;color:#111318!important;font-size:12px!important;font-weight:600!important;transition:background-color .2s,color .2s,transform .2s}
+.nav .touch:hover{background:#e1e7f2!important;transform:translateY(-1px)}
+.nav .arrow-icon{transition:transform .2s}
+.nav .touch:hover .arrow-icon,.nav .locale:hover .arrow-icon{transform:translate(2px,-2px)}
+.nav .mobile-toggle{display:none;background:transparent;border:0;padding:8px;color:#f4f6fb}
+.footer{padding:0!important;background:#07090d!important;border-top:1px solid #22262e!important}
+.footer .footer-top{padding:76px 0!important;display:flex;justify-content:space-between;gap:50px}
+.footer .footer-main{max-width:530px}
+.footer .footer-main h2{margin:23px 0!important;color:#fff!important}
+.footer .footer-main h2 span{color:#71a7ff}
+.footer .footer-main p{max-width:400px;color:#9a9ea7!important}
+.footer .footer-nav{display:grid;grid-template-columns:repeat(2,minmax(135px,1fr));gap:45px}
+.footer .footer-nav strong{color:#f1f1f3!important}
+.footer .footer-nav a{color:#8d929d!important;display:block;width:auto;margin:0 0 15px}
+.footer .footer-nav a:hover{color:#fff!important}
+.footer .footer-bottom{width:auto!important;margin:0!important;border-top:1px solid #20242d!important;padding:26px 0!important;color:#7f858f!important;text-transform:none!important;letter-spacing:normal!important;font-size:11px!important}
+@media(max-width:1180px){.people-all .people-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
+@media(max-width:960px){
+.container{width:calc(100% - 64px)}
+.nav .nav-links{display:none!important;position:absolute!important;left:0;right:0;top:69px;z-index:10001;background:#090b10;border-bottom:1px solid #272b33;padding:24px 32px;flex-direction:column;align-items:flex-start;gap:20px}
+.nav .nav-links.open{display:flex!important}
+.nav .mobile-toggle{display:block!important}
+.nav .locale{display:none}
+.people-all .people-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+@media(max-width:700px){
+.container{width:calc(100% - 36px)}
+.nav .nav-actions{border:0;padding:0;margin-left:auto}
+.nav .touch{padding:10px 14px}
+.people-all .people-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:28px 12px!important}
+.footer .footer-top{flex-direction:column;padding:55px 0!important;gap:44px}
+.footer .footer-bottom{align-items:flex-start;flex-direction:column;gap:10px}
+}
+@media(max-width:400px){.nav .brand{font-size:17px!important}}
+
+</style>
 </head>
 <body>
-<header class="nav"><a class="brand" href="/es/">Felipe Quiroz</a><div class="nav-right"><nav class="nav-center"><a href="/es/#work">Trabajo</a><a href="/es/about">Sobre mí</a><a class="active" href="/es/projects">Proyectos</a><a href="/es/initiatives">Iniciativas</a><a href="/es/blog">Blog</a></nav><a class="lang" href="/people">EN</a></div></header>
+<header class="nav">
+<div class="container nav-inner">
+<a class="brand" href="/es/">
+
+      Felipe Quiroz
+    </a>
+<button aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation" class="mobile-toggle" id="mobile-toggle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+<nav class="nav-links" id="nav-links">
+<a href="/es/">Inicio</a>
+<a href="/es/#work">Trabajo</a>
+<a href="/es/projects">Proyectos</a>
+<a href="/es/initiatives">Iniciativas</a>
+<a href="/es/blog">Blog</a>
+</nav>
+<div class="nav-actions">
+<a class="locale" href="/people" hreflang="en">EN <svg aria-hidden="true" class="arrow-icon" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="15"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+<a class="touch" href="mailto:felipe@lowsignal.cl">Hablemos <svg aria-hidden="true" class="arrow-icon" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="15"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+</div>
+</div>
+</header>
 <main>
 <section class="hero"><div class="shell"><div class="kicker">People · Detrás del trabajo</div><h1>Personas con las que he construido.</h1><p>Founders, operadores y líderes con quienes he tenido la oportunidad de trabajar de cerca entre startups, tecnología, educación y company building.</p></div></section>
 <section class="people-all"><div class="shell"><div class="people-head"><div class="kicker">Tether · lowsignal · GeoVictoria · USM</div><h2>Construido con personas de distintas compañías, productos e instituciones.</h2></div><div class="people-grid"><article class="person"><a class="card-link" href="https://www.linkedin.com/in/christopher-a-neilson/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/people/christopher-neilson.webp" alt="Christopher Neilson"></div></div><div class="person-copy"><h3>Christopher Neilson</h3></div></article><article class="person"><a class="card-link" href="https://www.linkedin.com/in/zacharytseng/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/people/zack-tseng.webp" alt="Zack Tseng"></div></div><div class="person-copy"><h3>Zack Tseng</h3></div></article><article class="person"><a class="card-link" href="https://www.linkedin.com/in/nicolas-munoz-pavez/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/people/nicolas-munoz.webp?v=20261029-1730" alt="Nicolás Muñoz" loading="lazy"></div></div><div class="person-copy"><h3>Nicolás Muñoz</h3></div></article><article class="person"><a class="card-link" href="https://co.linkedin.com/in/leidy-gomez" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/people/leidy-gomez.webp?v=20261029-1730" alt="Leidy Gómez" loading="lazy"></div></div><div class="person-copy"><h3>Leidy Gómez</h3></div></article><article class="person"><a class="card-link" href="https://www.linkedin.com/in/rodrigo-lewit-rozenfeld-05190118/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/people/rodrigo-lewit.webp" alt="Rodrigo Lewit"></div></div><div class="person-copy"><h3>Rodrigo Lewit</h3></div></article><article class="person"><a class="card-link" href="https://www.linkedin.com/in/karen-radonich-36114a2b0/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/people/karen-radonich.webp?v=20261029-1730" alt="Karen Radonich"></div></div><div class="person-copy"><h3>Karen Radonich</h3></div></article><article class="person"><a class="card-link" href="https://www.linkedin.com/in/valentina-gran-koch-0b945325/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/vgran.png?v=20261030-0252" alt="Valentina Gran" loading="lazy"></div></div><div class="person-copy"><h3>Valentina Gran</h3></div></article><article class="person"><a class="card-link" href="https://www.linkedin.com/in/tomas-recart-balze-a9957918a/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/people/tomas-recart.png?v=20261029-2315" alt="Tomás Recart" loading="lazy"></div></div><div class="person-copy"><h3>Tomás Recart</h3></div></article><article class="person"><a class="card-link" href="https://www.linkedin.com/in/tamara-munoz-ojeda/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/tamara.png?v=20261030-0252" alt="Tamara Muñoz" loading="lazy"></div></div><div class="person-copy"><h3>Tamara Muñoz</h3></div></article><article class="person"><a class="card-link" href="https://www.linkedin.com/in/ignacio-lepe-6026b4215/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/people/ignacio-lepe.png?v=20261030-0202" alt="Ignacio Lepe" loading="lazy"></div></div><div class="person-copy"><h3>Ignacio Lepe</h3></div></article><article class="person"><a class="card-link" href="https://www.linkedin.com/in/alfonso-irarrazaval/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/alfonso.png?v=20261031-2" alt="Alfonso Irarrázabal" loading="lazy"></div></div><div class="person-copy"><h3>Alfonso Irarrázabal</h3></div></article><article class="person"><a class="card-link" href="https://www.linkedin.com/in/valentina-wagenreld-62042a138/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/people/valentina-wagenreld.webp?v=20261029-1730" alt="Valentina Wagenreld" loading="lazy"></div></div><div class="person-copy"><h3>Valentina Wagenreld</h3></div></article><article class="person"><div class="portrait"><div class="portrait-inner"><img src="/images/people/francisca-astudillo.webp" alt="Francisca Astudillo"></div></div><div class="person-copy"><h3>Francisca Astudillo</h3></div></article><article class="person"><a class="card-link" href="https://cl.linkedin.com/in/pablohormazabaloyarzo" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/pablo-h.png?v=20261101g" alt="Pablo Hormazábal" loading="lazy"></div></div><div class="person-copy"><h3>Pablo Hormazábal</h3></div></article><article class="person"><a class="card-link" href="https://cl.linkedin.com/in/gonzalozuninop" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/gonzalo.png?v=20261101g" alt="Gonzalo Zunino" loading="lazy"></div></div><div class="person-copy"><h3>Gonzalo Zunino</h3></div></article><article class="person"><a class="card-link" href="https://cl.linkedin.com/in/maria-ignacia-gana-tocornal-a6a650117" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/ignacia-trabun.png?v=20261101g" alt="María Ignacia Gana" loading="lazy"></div></div><div class="person-copy"><h3>María Ignacia Gana</h3></div></article><article class="person"><a class="card-link" href="https://cl.linkedin.com/in/jos%C3%A9-manuel-parodi-cruzat-5b075a1ba" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/jose-manual.png?v=20261101g" alt="José Manuel Parodi" loading="lazy"></div></div><div class="person-copy"><h3>José Manuel Parodi</h3></div></article><article class="person"><a class="card-link" href="https://cl.linkedin.com/in/alejandramustakis" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/ale-mustakis.png?v=20261101g" alt="Alejandra Mustakis" loading="lazy"></div></div><div class="person-copy"><h3>Alejandra Mustakis</h3></div></article><article class="person"><a class="card-link" href="https://www.linkedin.com/in/jose-domingo-errazuriz/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/domingo-e.png?v=20261101g" alt="Domingo Errázuriz" loading="lazy"></div></div><div class="person-copy"><h3>Domingo Errázuriz</h3></div></article><article class="person"><a class="card-link" href="https://www.linkedin.com/in/joserespinosar/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/Jose-espinosa.png?v=20261101k" alt="José Espinosa" loading="lazy"></div></div><div class="person-copy"><h3>José Espinosa</h3></div></article><article class="person"><a class="card-link" href="https://www.linkedin.com/in/juan-i-yuz/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/people/juan-yuz.webp" alt="Juan Yuz"></div></div><div class="person-copy"><h3>Juan Yuz</h3></div></article><article class="person"><a class="card-link" href="https://www.linkedin.com/in/javierrobledo/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/people/javier-robledo.webp" alt="Javier Robledo"></div></div><div class="person-copy"><h3>Javier Robledo</h3></div></article><article class="person"><a class="card-link" href="https://www.linkedin.com/in/jorgemunozve" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/people/jorge-munoz.webp?v=20261101g" alt="Jorge Muñoz" loading="lazy"></div></div><div class="person-copy"><h3>Jorge Muñoz</h3></div></article><article class="person"><a class="card-link" href="https://www.linkedin.com/in/l%C3%ADa-morice-b31521419" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"></a><div class="portrait"><div class="portrait-inner"><img src="/images/people/lia-morice.webp?v=20261101g" alt="Lía Morice" loading="lazy"></div></div><div class="person-copy"><h3>Lía Morice</h3></div></article></div></div></section><section class="closing"><div class="shell closing-inner"><div><h2>El trabajo siempre es mejor con las personas correctas alrededor.</h2><p>Explora los proyectos, sistemas y compañías detrás de estas colaboraciones.</p></div><a href="/es/projects">Ver proyectos</a></div></section>
 </main>
-<footer class="footer"><div class="footer-grid"><div><div class="footer-eyebrow">Producto · Growth · Operaciones · Company building</div><div class="footer-brand">Felipe Quiroz</div><div class="footer-copy">Construyendo productos, sistemas de growth y compañías entre tecnología y negocio.</div></div><div class="footer-col"><strong>Explorar</strong><a href="/es/#work">Trabajo</a><a href="/es/about">Sobre mí</a><a href="/es/projects">Proyectos</a><a href="/es/initiatives">Iniciativas</a><a href="/es/blog">Blog</a></div><div class="footer-col"><strong>Social</strong><a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a></div><div class="footer-col"><strong>Contacto</strong><a href="mailto:felipe@lowsignal.cl">Email</a><a href="https://calendly.com/felipe-lowsignal/30min" target="_blank" rel="noopener noreferrer">Calendly</a></div></div><div class="footer-bottom"><div>© 2026 Felipe Quiroz</div><div>Santiago, Chile</div></div></footer>
-<script src="/mobile-nav.js?v=20261101o" defer></script>
+<footer class="footer"><div class="container"><div class="footer-top">
+<div class="footer-main"><div class="eyebrow"><span class="dot"></span>CONVERSEMOS</div><h2>Las buenas ideas comienzan<br/>con una <span>conversación.</span></h2>
+<p>Ideas, oportunidades, desafíos interesantes o simplemente una buena conversación sobre lo que viene.</p>
+<a class="footer-email" href="mailto:felipe@lowsignal.cl">felipe@lowsignal.cl <svg aria-hidden="true" class="arrow-icon" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="15"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div>
+<div class="footer-nav"><div><strong>Explorar</strong><a href="/es/#work">Trabajo</a><a href="https://felipequirozp.cl/about">About</a><a href="/es/projects">Proyectos</a><a href="https://felipequirozp.cl/initiatives">Iniciativas</a><a href="/es/blog">Blog</a></div>
+<div><strong>Conectar</strong><a href="https://www.linkedin.com/in/felipequirozp/">LinkedIn <svg aria-hidden="true" class="arrow-icon" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="15"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a href="https://github.com/felipequirozp">GitHub <svg aria-hidden="true" class="arrow-icon" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="15"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram <svg aria-hidden="true" class="arrow-icon" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="15"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div></div>
+</div><div class="footer-bottom"><span>© 2026 Felipe Quiroz.</span><span><span class="blue-dot"></span>Hecho en Santiago, Chile.</span></div></div></footer>
+
 
 
 
@@ -198,5 +330,8 @@ html,body{background:#07090d!important;color:#f3f5f9!important}
   const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');io.unobserve(entry.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
   items.forEach(el=>io.observe(el));
 })();
+</script>
+<script id="people-nav-toggle">
+(()=>{const button=document.getElementById('mobile-toggle'),links=document.getElementById('nav-links');if(button&&links){button.addEventListener('click',()=>{const open=links.classList.toggle('open');button.setAttribute('aria-expanded',String(open))});links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');button.setAttribute('aria-expanded','false')}));}})();
 </script>
 </body></html>
