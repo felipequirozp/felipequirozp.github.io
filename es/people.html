@@ -280,6 +280,12 @@ body{padding-top:0!important}
 @media(max-width:400px){.nav .brand{font-size:17px!important}}
 
 </style>
+<style id="people-portrait-matte-20261111">
+/* Integrate opaque white portrait backgrounds with a common neutral grey.
+   Multiply maps white pixels to the matte, without changing individual crop transforms. */
+.people-all .portrait-inner{background:#b7b9bd!important;border-color:#35383e!important;isolation:isolate}
+.people-all .portrait-inner img{mix-blend-mode:multiply!important;filter:grayscale(100%) contrast(1.01) brightness(1.04)!important}
+</style>
 </head>
 <body>
 <header class="nav">
