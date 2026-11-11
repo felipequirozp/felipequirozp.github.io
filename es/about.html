@@ -120,14 +120,9 @@
 .experience-logo img{display:block;max-width:100%;width:auto;height:auto;max-height:61px;object-fit:contain}
 .experience-low .experience-logo{background:#f2f4f7;border-color:#343b46}
 
-/* Exact deep lowsignal blue, rather than the prior light-blue CSS filter. */
-.experience-low .experience-logo img{filter:brightness(0) saturate(100%) invert(20%) sepia(83%) saturate(2290%) hue-rotate(213deg) brightness(86%) contrast(107%)}
-.experience-low .experience-logo .low-blue-logo{display:none}
-@supports ((-webkit-mask-image:url("https://felipequirozp.cl/logos/lowsignal-logo.png")) or (mask-image:url("https://felipequirozp.cl/logos/lowsignal-logo.png"))){
-.experience-low .experience-logo img{display:none!important}
-.experience-low .experience-logo .low-blue-logo{display:block;flex:1 1 auto;max-width:100%;height:61px;background:#1746A6;-webkit-mask:url("https://felipequirozp.cl/logos/lowsignal-logo.png") center/contain no-repeat;mask:url("https://felipequirozp.cl/logos/lowsignal-logo.png") center/contain no-repeat}
-}
-
+/* Match lowsignal logo rendering on the homepage; use the original image without color filters or masks. */
+.experience-low .experience-logo img{filter:none!important;display:block!important}
+.experience-low .experience-logo{background:#fff}
 .experience-usm .experience-logo img{max-height:75px}
 .logo-fallback{display:none;font:600 17px/1.2 'DM Sans',sans-serif;color:#1b2636;letter-spacing:-.04em;text-align:center}
 .experience-low .logo-fallback{color:#1564f5}
@@ -223,7 +218,7 @@
 </div>
 <div class="experience-list"><a aria-label="Explorar lowsignal: Co-Founder &amp; CEO" class="experience-row experience-low reveal" href="/es/lowsignal">
 <div class="experience-number"><span>01</span><span class="experience-dates">Desde 2025</span></div>
-<div class="experience-logo"><img alt="lowsignal logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://felipequirozp.cl/logos/lowsignal-logo.png"/><span class="low-blue-logo" aria-hidden="true"></span><span class="logo-fallback">lowsignal</span></div>
+<div class="experience-logo"><img alt="lowsignal logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://felipequirozp.cl/logos/lowsignal-logo.png"/><span class="logo-fallback">lowsignal</span></div>
 <div class="experience-copy"><div class="experience-category">EMPRENDIMIENTO</div><h3>Co-Founder &amp; CEO</h3><p>Conectando estrategia, crecimiento y ejecución en una sola empresa.</p><span class="experience-brand">lowsignal</span></div>
 <div aria-hidden="true" class="experience-link"><svg fill="none" height="20" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24" width="20"><path d="M7 17 17 7M8 7h9v9"></path></svg></div>
 </a><a aria-label="Explorar GeoVictoria: Product Manager" class="experience-row experience-geo reveal" href="/es/geovictoria">
