@@ -512,6 +512,19 @@ html.motion-ready .scroll-reveal.is-visible{opacity:1;transform:none}
 
 /* Match the first capability column's left divider to the other columns */
 @media(min-width:961px){.system-card:first-child{border-left:1px solid #e3e6eb;padding-left:38px}}
+
+/* Precise editorial alignment, 2026-11-11 */
+@media(min-width:961px){
+ .system-grid{border-left:1px solid #d9dde5!important}
+ .system-grid>.system-card:first-child{border-left:0!important;padding-left:38px!important}
+ .workspace-opening{grid-template-columns:minmax(0,1.16fr) minmax(0,.84fr)!important;column-gap:10%!important}
+ .workspace-opening>p{width:100%;max-width:345px!important;justify-self:end!important;margin-left:auto!important}
+}
+@media(max-width:960px){
+ .system-grid{border-left:0!important}
+ .workspace-opening>p{justify-self:start!important;margin-left:0!important}
+}
+
 </style>
 </head>
 <body>
