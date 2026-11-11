@@ -317,6 +317,18 @@ body{padding-top:0!important}
 
 </style>
 <style id="people-direct-gallery-20261111">.hero{border-bottom:0!important;padding-bottom:38px!important}.people-all{padding-top:20px!important}@media(max-width:700px){.hero{padding-bottom:30px!important}.people-all{padding-top:14px!important}}</style>
+<style id="people-hero-grid-alignment">
+/* Align People hero text and portrait grid at precisely the same container edge */
+.hero{padding-left:0!important;padding-right:0!important}
+.hero>.shell,.people-all>.shell{
+ width:min(calc(100% - 176px),1392px)!important;
+ max-width:1392px!important;
+ margin-left:auto!important;margin-right:auto!important;
+}
+@media(max-width:1100px){.hero>.shell,.people-all>.shell{width:calc(100% - 128px)!important}}
+@media(max-width:960px){.hero>.shell,.people-all>.shell{width:calc(100% - 64px)!important}}
+@media(max-width:700px){.hero>.shell,.people-all>.shell{width:calc(100% - 36px)!important}}
+</style>
 </head>
 <body>
 <header class="nav">
