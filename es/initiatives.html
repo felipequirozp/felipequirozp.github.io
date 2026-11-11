@@ -429,7 +429,7 @@ h1,h2,h3,h4{font-family:"DM Sans",Inter,sans-serif;letter-spacing:-.06em}
   .workspace-story{grid-template-columns:1fr;gap:0;display:flex;flex-direction:column-reverse}
   .workspace-sticky{position:relative;top:auto;width:100%;padding:24px 0 12px}
   .workspace-story-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-  .story-step{min-height:0;padding:19px 10px 25px 12px;opacity:1}
+  .story-step{min-height:0;padding:19px 10px 25px 12px;opacity:.58}.story-step.is-active{opacity:1}
   .story-step:before{top:17px;height:28px}
   .story-step h3{font-size:21px}
 }
@@ -464,6 +464,7 @@ h1,h2,h3,h4{font-family:"DM Sans",Inter,sans-serif;letter-spacing:-.06em}
 .founder-statement .founder-lead{font-size:20px}
 }
 
+@media (pointer:coarse){html,body{touch-action:pan-y}}
 </style>
 </head>
 <body>
@@ -591,7 +592,7 @@ if (toggle && links) {
  }
  let ticking=false;
  const recalc=()=>{
-  if(!desktop.matches){setActive(0);return;}
+  
   const aim=window.innerHeight*0.49;
   let nearest=0,dist=Infinity;
   steps.forEach((el,i)=>{
