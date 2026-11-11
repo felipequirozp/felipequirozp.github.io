@@ -510,19 +510,20 @@ html.motion-ready .scroll-reveal.is-visible{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.scroll-reveal{opacity:1!important;transform:none!important;transition:none!important}}
 
 
-/* Match the first capability column's left divider to the other columns */
-@media(min-width:961px){.system-card:first-child{border-left:1px solid #e3e6eb;padding-left:38px}}
 
-/* Precise editorial alignment, 2026-11-11 */
+/* FINAL: identical vertical dividers on all three capabilities */
 @media(min-width:961px){
- .system-grid{border-left:1px solid #d9dde5!important}
- .system-grid>.system-card:first-child{border-left:0!important;padding-left:38px!important}
- .workspace-opening{grid-template-columns:minmax(0,1.16fr) minmax(0,.84fr)!important;column-gap:10%!important}
- .workspace-opening>p{width:100%;max-width:345px!important;justify-self:end!important;margin-left:auto!important}
+.system-grid{border-left:0!important}
+.system-grid>.system-card{border-left:1px solid #ccd3de!important; padding-left:36px!important}
+.system-grid>.system-card:first-child{border-left:1px solid #ccd3de!important;padding-left:36px!important}
+.workspace-opening{display:flex!important;align-items:flex-end!important;justify-content:space-between!important;gap:48px!important}
+.workspace-opening>h2{flex:0 1 62%;min-width:0}
+.workspace-opening>p{flex:0 0 310px!important;width:310px!important;max-width:310px!important;margin:0 0 0 auto!important;justify-self:auto!important;transform:none!important}
 }
 @media(max-width:960px){
- .system-grid{border-left:0!important}
- .workspace-opening>p{justify-self:start!important;margin-left:0!important}
+.system-grid>.system-card{border-left:0!important}
+.workspace-opening{display:grid!important;grid-template-columns:1fr!important;gap:14px!important}
+.workspace-opening>h2,.workspace-opening>p{width:auto!important;max-width:100%!important;flex:none!important;margin:0!important}
 }
 
 </style>
