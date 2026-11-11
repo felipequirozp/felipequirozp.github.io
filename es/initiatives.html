@@ -400,9 +400,9 @@ h1,h2,h3,h4{font-family:"DM Sans",Inter,sans-serif;letter-spacing:-.06em}
 .workspace{padding:88px 0 80px;background:#07090d;}
 .workspace-kicker{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:25px}
 .workspace-kicker-right{font-size:11px;color:#68707d}
-.workspace-opening{display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:8%;padding:38px 0 46px}
+.workspace-opening{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:end;gap:8%;padding:38px 0 46px}
 .workspace-opening h2{font:500 clamp(36px,3.75vw,55px)/1.14 'DM Sans',sans-serif;letter-spacing:-.065em;margin:0}
-.workspace-opening p{max-width:420px;font-size:15px;line-height:1.8;color:#929ba8;margin:0}
+.workspace-opening p{max-width:420px;font-size:15px;line-height:1.8;color:#929ba8;margin:0;justify-self:end}
 .workspace-story{display:grid;grid-template-columns: minmax(260px,.73fr) minmax(0,1.27fr);gap:6%;border-top:1px solid #20252b;align-items:start}
 .workspace-story-steps{min-width:0}
 .story-step{min-height:330px;padding:95px 10px 60px 25px;border-left:1px solid #252a33;position:relative;opacity:.44;transition:opacity .4s ease,border-color .4s ease}
