@@ -465,6 +465,23 @@ h1,h2,h3,h4{font-family:"DM Sans",Inter,sans-serif;letter-spacing:-.06em}
 }
 
 @media (pointer:coarse){html,body{touch-action:pan-y}}
+
+/* Compact centered capability trio */
+.system{padding:72px 0 76px}
+.system-grid{border-top:0;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
+.system-card,.system-card+.system-card{min-height:174px;padding:24px 30px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.system-card:first-child{padding-left:0}
+.system-card:last-child{padding-right:0}
+.system-icon{margin:0 auto 22px;align-items:center;justify-content:center}
+.system-card h3{font-size:clamp(15px,1.18vw,17px);font-weight:500;line-height:1.5;max-width:335px;margin:0 auto}
+@media(max-width:960px){
+.system-grid{grid-template-columns:1fr}
+.system-card,.system-card+.system-card,.system-card:first-child,.system-card:last-child{min-height:0;padding:26px 14px;align-items:center;text-align:center}
+.system-card+.system-card{border-left:0;border-top:1px solid #e3e6eb}
+.system-card h3{max-width:430px}
+}
+@media(max-width:640px){.system{padding:48px 0 52px}.system-icon{margin-bottom:14px}.system-card h3{font-size:16px}}
+
 </style>
 </head>
 <body>
@@ -520,11 +537,6 @@ sistemas y productos.</h1>
 </div></div></section>
 <section class="system section">
 <div class="container">
-<div class="system-head">
-<span class="eyebrow">LOWSIGNAL · CÓMO CONSTRUIMOS</span>
-<h2>Una empresa.<br/>Un sistema conectado.</h2>
-<p>lowsignal conecta las dimensiones estratégicas, creativas, tecnológicas y operativas del crecimiento para que trabajen juntas, con más estructura y menos ruido.</p>
-</div>
 <div class="system-grid">
 <article class="system-card">
 <div class="system-icon"><svg viewbox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="7"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"></path></svg></div>
