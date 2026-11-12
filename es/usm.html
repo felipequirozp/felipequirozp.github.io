@@ -23,6 +23,19 @@
 @media(max-width:580px){.container{width:calc(100% - 36px)}.hero{padding-top:48px}.hero h1{font-size:43px}.hero-image img{height:280px}.metrics-row{grid-template-columns:repeat(2,minmax(0,1fr))}.metric{padding:23px 14px 25px 0}.metric:nth-child(3){border-left:0;padding-left:0}.metric:nth-child(n+3){border-top:1px solid #292e38}.overview,.academic{padding:66px 0}.pillars{grid-template-columns:1fr;gap:22px}.pillar{padding:6px 0 12px 21px}.overview-header>p{padding:0}.admission-sticky{height:270px;min-height:270px}.admission-image{height:246px}.admission-step{min-height:250px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js-motion .reveal{opacity:1!important;transform:none!important;transition:none!important}.admission-step,.admission-image img{transition:none!important}}
 
+
+/* Mobile QA: two admissions panels and their images fit within small viewports */
+@media(max-width:820px){
+.admission-layout{min-width:0}
+.admission-sticky{position:sticky;top:70px;min-height:0;height:clamp(210px,39svh,295px);padding:7px 0}
+.admission-image{height:calc(100% - 23px);width:100%;aspect-ratio:auto}
+.admission-sticky>div{height:100%;min-width:0}
+.admission-progress{margin-top:12px}
+.admission-step{min-height:clamp(235px,43svh,360px);padding:30px 0 42px}
+.admission-step h3{font-size:clamp(28px,7.8vw,40px)}
+.admission-image img{object-fit:cover;max-width:100%}
+}
+@media(max-width:390px){.admission-sticky{height:218px}.admission-step{min-height:240px}}
 </style><link rel="icon" type="image/png" href="/favicon.png"><style id="site-shared-nav-footer-20261111">
 /* Single site navigation and footer system — consistent with /blog */
 .site-nav{--sn-bg:rgba(7,9,13,.95);--sn-fg:#f6f7f9;--sn-sub:#929ba9;--sn-border:#292d36;--sn-cta-bg:#fff;--sn-cta-fg:#101115;position:sticky!important;top:0!important;left:auto!important;right:auto!important;z-index:9999!important;display:block!important;width:100%!important;height:auto!important;padding:0!important;margin:0!important;background:var(--sn-bg)!important;border-bottom:1px solid var(--sn-border)!important;backdrop-filter:blur(18px);box-shadow:none!important;color:var(--sn-fg)!important}
