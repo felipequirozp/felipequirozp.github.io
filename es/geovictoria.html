@@ -109,6 +109,19 @@ h1,h2,h3{font-family:"DM Sans",Inter,sans-serif;letter-spacing:-.054em;margin:0}
 
 /* Solid, consistent site navbar on GeoVictoria */
 .site-nav{--sn-bg:#07090d!important}
+
+/* Mobile QA: product screenshots remain visible without obscuring narrative */
+@media(max-width:820px){
+.journey-body{min-width:0;max-width:100%}
+.journey-visual{height:clamp(235px,40svh,325px);min-height:0;top:70px;padding:7px 0}
+.product-display{height:100%;min-height:0}
+.journey-story{min-width:0}
+.story{min-height:clamp(265px,49svh,420px);padding:36px 0 55px}
+.story h3{font-size:clamp(27px,7.5vw,37px)}
+.product-display-head{min-height:33px}
+.screen img{object-fit:contain;max-width:100%;max-height:100%}
+}
+@media(max-width:390px){.journey-visual{height:225px}.story{min-height:270px}.story p{font-size:13px}}
 </style><link rel="icon" type="image/png" href="/favicon.png"><style id="site-shared-nav-footer-20261111">
 /* Single site navigation and footer system — consistent with /blog */
 .site-nav{--sn-bg:rgba(7,9,13,.95);--sn-fg:#f6f7f9;--sn-sub:#929ba9;--sn-border:#292d36;--sn-cta-bg:#fff;--sn-cta-fg:#101115;position:sticky!important;top:0!important;left:auto!important;right:auto!important;z-index:9999!important;display:block!important;width:100%!important;height:auto!important;padding:0!important;margin:0!important;background:var(--sn-bg)!important;border-bottom:1px solid var(--sn-border)!important;backdrop-filter:blur(18px);box-shadow:none!important;color:var(--sn-fg)!important}
