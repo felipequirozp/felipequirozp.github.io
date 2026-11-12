@@ -1,61 +1,287 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Low Workspace | Felipe Quiroz</title>
-<meta name="description" content="Low Workspace case study by Felipe Quiroz — an internal product for lowsignal unifying clients, revenue, tasks and team operations.">
-<link rel="icon" href="/favicon.png"><link rel="canonical" href="https://felipequirozp.cl/lowsignal/low-workspace"><link rel="alternate" hreflang="en" href="https://felipequirozp.cl/lowsignal/low-workspace"><link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/lowsignal/low-workspace">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#0b1117;--muted:#64707d;--line:#e1e6eb;--blue:#1467d8;--page:8vw;--max:1520px;--nav-h:76px}*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{margin:0;padding-top:var(--nav-h);overflow-x:hidden;background:#fff;color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.shell{width:min(var(--max),100%);margin:auto}.nav{position:fixed;inset:0 0 auto 0;z-index:9999;height:var(--nav-h);padding:0 var(--page);display:flex;align-items:center;justify-content:space-between;gap:28px;background:rgba(255,255,255,.96);border-bottom:1px solid rgba(11,17,23,.08);backdrop-filter:blur(16px)}.brand{font-family:Manrope,sans-serif;font-size:22px!important;font-weight:600;letter-spacing:-.045em}.nav-center,.nav-right{display:flex;align-items:center;gap:28px}.nav a{font-size:11px;font-weight:500;color:#1a232d}.nav-center a,.nav-right a:not(.lang){position:relative}.nav-center a::after,.nav-right a:not(.lang)::after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:1px;background:#111820;transition:.2s}.nav-center a:hover::after,.nav-center a.active::after{width:100%}.lang{width:38px;height:38px;display:grid;place-items:center;border:1px solid #d7dde4;border-radius:50%;font-size:10px!important;transition:.2s}.lang:hover{background:#0b1117;color:#fff;border-color:#0b1117}.kicker{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
-.hero{padding:64px var(--page) 72px;background:radial-gradient(circle at 82% 16%,rgba(20,103,216,.11),transparent 28%),linear-gradient(180deg,#f4f7f9 0%,#eef3f7 100%);border-bottom:1px solid #dce4eb}.hero-grid{display:grid;grid-template-columns:1fr;align-items:start}.hero-grid>div:first-child{max-width:980px}.hero h1{margin:24px 0 0;max-width:960px;font-family:Manrope,sans-serif;font-size:clamp(44px,4.6vw,66px);line-height:1.03;letter-spacing:-.054em;font-weight:500}.hero p{margin:24px 0 0;max-width:760px;color:#4d5965;font-size:14px;line-height:1.82}
-.context{padding:0 var(--page);background:linear-gradient(180deg,#e4ebf1 0%,#dde6ee 100%);border-bottom:1px solid #d1dbe4}.context-grid{display:grid;grid-template-columns:repeat(4,1fr)}.context-item{padding:26px 24px}.context-item:first-child{padding-left:0}.context-item+.context-item{border-left:1px solid #cad6e0}.context-item strong{display:block;font-family:Manrope,sans-serif;font-size:22px;font-weight:500;letter-spacing:-.035em}.context-item span{display:block;margin-top:7px;color:#647482;font-size:10px;line-height:1.45}
-.section{padding:80px var(--page);background:#fff}.section.soft{background:linear-gradient(180deg,#e7edf2 0%,#edf2f6 100%);border-top:1px solid #d8e1e8;border-bottom:1px solid #d8e1e8}.two-col{display:grid;grid-template-columns:.38fr 1.12fr;gap:76px}.section h2{margin:18px 0 24px;max-width:820px;font-family:Manrope,sans-serif;font-size:clamp(34px,3.7vw,50px);line-height:1.06;letter-spacing:-.045em;font-weight:500}.section p{margin:0 0 20px;max-width:820px;color:var(--muted);font-size:13px;line-height:1.84}.module-grid{margin-top:32px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.module-card{padding:24px;border:1px solid #dbe2e8;border-radius:18px;background:#fff}.module-card span{font-size:9px;font-weight:700;color:var(--blue);letter-spacing:.1em}.module-card h3{margin:22px 0 0;font-family:Manrope,sans-serif;font-size:21px;font-weight:500;letter-spacing:-.035em}.module-card p{margin:11px 0 0;font-size:12px;line-height:1.72}.role-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.55fr);gap:64px}.role-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}.role-item{padding:20px;border:1px solid #dfe5ea;border-radius:16px}.role-item strong{display:block;font-size:11px}.role-item span{display:block;margin-top:8px;color:var(--muted);font-size:11px;line-height:1.6}.role-aside{padding:26px;border-left:1px solid #d7dfe6}.role-aside strong{display:block;font-family:Manrope,sans-serif;font-size:24px;font-weight:500;letter-spacing:-.035em}.role-aside span{display:block;margin-top:10px;color:#6d7985;font-size:11px;line-height:1.7}.showcase-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}.showcase-media{padding:24px;border-radius:20px;background:#dce6ee;border:1px solid #d1dce5}.showcase-media img{width:100%;border-radius:12px;box-shadow:0 18px 40px rgba(11,17,23,.08)}.chips{margin-top:22px;display:flex;gap:8px;flex-wrap:wrap}.chips span{padding:8px 10px;border:1px solid #dbe2e8;border-radius:999px;background:#fff;color:#5a6773;font-size:9px;font-weight:600}
-.entry-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}.entry-media{padding:24px;border-radius:20px;background:#dce6ee;border:1px solid #d1dce5}.entry-media img{width:100%;border-radius:12px}.closing{padding:0 var(--page);background:#0b1117;color:#fff}.closing-inner{padding:50px 0;display:flex;justify-content:space-between;align-items:center;gap:30px}.closing h2{margin:0;font-family:Manrope,sans-serif;font-size:clamp(28px,3vw,40px);font-weight:500;letter-spacing:-.04em}.closing p{margin:10px 0 0;color:#b8c1ca;font-size:12px}.closing-actions{display:flex;gap:10px;flex-wrap:wrap}.closing a{min-height:40px;display:inline-flex;align-items:center;padding:0 14px;border-radius:999px;background:#fff;color:#0b1117;font-size:10px;font-weight:700;transition:.2s}.closing a.secondary{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.24)}.closing a:hover{background:var(--blue);color:#fff;border-color:var(--blue);transform:translateY(-2px)}
-.footer{padding:58px var(--page) 28px;background:#fff;border-top:1px solid var(--line)}.footer-grid{width:min(var(--max),100%);margin:auto;display:grid;grid-template-columns:1.15fr repeat(3,.7fr);gap:56px}.footer-eyebrow{margin-bottom:12px;color:var(--blue);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.footer-brand{font-family:Manrope,sans-serif;font-size:28px;letter-spacing:-.045em;font-weight:600}.footer-copy{margin-top:12px;max-width:330px;color:#65717d;font-size:12px;line-height:1.65}.footer-col strong{display:block;margin-bottom:14px;font-size:11px}.footer-col a{display:block;width:max-content;max-width:100%;margin:10px 0;color:#66727e;font-size:12px;transition:.18s}.footer-col a:hover{color:#0b1117;transform:translateX(3px)}.footer-bottom{width:min(var(--max),100%);margin:42px auto 0;padding-top:20px;display:flex;justify-content:space-between;border-top:1px solid var(--line);color:#83909c;font-size:9px;letter-spacing:.06em;text-transform:uppercase}.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}.reveal.is-visible{opacity:1;transform:none}@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}@media(max-width:1000px){.hero-grid,.two-col,.role-grid,.showcase-grid,.entry-grid{grid-template-columns:1fr}.module-grid{grid-template-columns:1fr}.context-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}}@media(max-width:700px){:root{--page:20px;--nav-h:68px}.nav{height:var(--nav-h)}.nav-center{display:none}.hero{padding-top:46px}.hero-grid{gap:0}.context-item{padding:20px 14px}.context-item:first-child,.context-item:nth-child(3){padding-left:0}.context-item:nth-child(3){border-left:0;border-top:1px solid #cad6e0}.context-item:nth-child(4){border-top:1px solid #cad6e0}.two-col{gap:24px}.role-list{grid-template-columns:1fr}.role-aside{padding-left:0;border-left:0;border-top:1px solid #d7dfe6}.closing-inner{align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:1fr;gap:28px}.footer-bottom{margin-top:34px;flex-direction:column;gap:10px}}
-</style>
-<style id="case-hero-standard-v1">
-.hero{padding:62px var(--page) 72px!important;background:radial-gradient(circle at 82% 14%,rgba(20,103,216,.1),transparent 28%),linear-gradient(180deg,#f4f7f9 0%,#eef3f7 100%)!important;border-bottom:1px solid #dce4eb!important}
-.hero-top{display:flex;align-items:center;justify-content:space-between;gap:28px}
-.project-logo{display:inline-flex;align-items:center;justify-content:flex-start;margin:0!important}
-.project-logo img{height:42px;width:auto;max-width:290px;object-fit:contain;object-position:left center}
-.hero-meta{display:flex;gap:8px;flex-wrap:wrap}
-.hero-meta span{padding:8px 10px;border:1px solid #d7e0e8;border-radius:999px;background:rgba(255,255,255,.72);font-size:9px;color:#5c6976;font-weight:600}
-.hero h1{margin:34px 0 0!important;max-width:980px!important;font-family:Manrope,sans-serif!important;font-size:clamp(42px,4.25vw,62px)!important;line-height:1.04!important;letter-spacing:-.052em!important;font-weight:500!important}
-.hero-bottom{margin-top:30px;display:grid;grid-template-columns:1fr .42fr;gap:70px;align-items:end}
-.hero-copy{margin:0!important;max-width:820px!important;color:#4d5965!important;font-size:14px!important;line-height:1.82!important}
-.role-box{padding-left:20px;border-left:1px solid #ccd6df}
-.role-box strong{display:block;font-family:Manrope,sans-serif;font-size:20px;font-weight:500;white-space:nowrap}
-.role-box span{display:block;margin-top:7px;color:#6e7b87;font-size:11px;line-height:1.6}
-@media(max-width:1000px){.hero-bottom{grid-template-columns:1fr}}
-@media(max-width:700px){.hero{padding-top:48px!important}.hero-top{align-items:flex-start;flex-direction:column;gap:22px}.project-logo img{height:34px;max-width:240px}.hero-meta{gap:6px}.hero-meta span{padding:7px 9px;font-size:8px}.hero h1{margin-top:26px!important;font-size:40px!important;line-height:1.02!important}.hero-bottom{margin-top:24px;gap:24px}.hero-copy{font-size:13px!important;line-height:1.72!important}.role-box{padding-left:0;padding-top:16px;border-left:0;border-top:1px solid #ccd6df}.role-box strong{white-space:normal;font-size:17px}.role-box span{font-size:10px}}
-</style>
-<style id="site-footer-v2">
-.footer{padding:58px var(--page,8vw) 28px!important;background:#fff!important;border-top:1px solid var(--line,#e1e6eb)!important}
-.footer-grid{width:min(var(--max,1520px),100%)!important;margin:0 auto!important;display:grid!important;grid-template-columns:1.15fr .7fr .7fr .7fr!important;gap:56px!important;align-items:start!important}
-.footer-eyebrow{margin-bottom:12px!important;color:var(--blue,#1467d8)!important;font-size:9px!important;font-weight:700!important;letter-spacing:.12em!important;text-transform:uppercase!important}
-.footer-brand{font-family:Manrope,sans-serif!important;font-size:28px!important;letter-spacing:-.045em!important;font-weight:600!important}
-.footer-copy{margin-top:12px!important;max-width:330px!important;color:#65717d!important;font-size:12px!important;line-height:1.65!important}
-.footer-col strong{display:block!important;margin-bottom:14px!important;font-size:11px!important;font-weight:700!important}
-.footer-col a{display:block!important;width:max-content!important;max-width:100%!important;margin:10px 0!important;color:#66727e!important;font-size:12px!important;transition:transform .18s ease,color .18s ease!important}
-.footer-col a:hover{color:#0b1117!important;transform:translateX(3px)!important}
-.footer-bottom{width:min(var(--max,1520px),100%)!important;margin:42px auto 0!important;padding-top:20px!important;display:flex!important;justify-content:space-between!important;gap:20px!important;border-top:1px solid var(--line,#e1e6eb)!important;color:#83909c!important;font-size:9px!important;letter-spacing:.06em!important;text-transform:uppercase!important}
-@media(max-width:1050px){.footer-grid{grid-template-columns:1fr 1fr!important}}
-@media(max-width:700px){.footer{padding-top:46px!important}.footer-grid{grid-template-columns:1fr!important;gap:28px!important}.footer-bottom{margin-top:34px!important;flex-direction:column!important;gap:10px!important}}
-</style>
-</head>
-<body>
-<header class="nav"><a class="brand" href="/">Felipe Quiroz</a><div class="nav-right"><nav class="nav-center"><a href="/#work">Work</a><a href="/about">About</a><a class="active" href="/projects">Projects</a><a href="/initiatives">Initiatives</a><a href="/blog">Blog</a></nav><a class="lang" href="/es/lowsignal/low-workspace">ES</a></div></header>
-<main>
-<section class="hero"><div class="shell"><div class="hero-top"><a class="project-logo" href="https://lowsignal.cl" target="_blank" rel="noopener noreferrer" aria-label="lowsignal"><img src="/logos/lowsignal-logo.png" alt="lowsignal"></a><div class="hero-meta"><span>Internal product</span><span>Company building</span><span>2026</span></div></div><h1>Building the operating layer behind lowsignal.</h1><div class="hero-bottom"><p class="hero-copy">An internal product in development to unify clients, revenue, tasks, team operations and company data in one place.</p><div class="role-box"><strong>Co-Founder & COO</strong><span>lowsignal<br>2026 — Present</span></div></div></div></section>
-<section class="context"><div class="shell context-grid"><div class="context-item"><strong>Internal product</strong><span>Product type</span></div><div class="context-item"><strong>In development</strong><span>Current stage</span></div><div class="context-item"><strong>One workspace</strong><span>Operating model</span></div><div class="context-item"><strong>2026</strong><span>Build cycle</span></div></div></section>
-<section class="section"><div class="shell two-col reveal"><div><div class="kicker">Problem</div></div><div><h2>Growth creates operational fragmentation faster than expected.</h2><p>As lowsignal added more clients, services and people, information started living across spreadsheets, chats, documents and disconnected tools. That made visibility harder and created unnecessary context switching.</p><p>The product challenge became clear: create one internal layer that makes the operation easier to understand, coordinate and scale.</p></div></div></section>
-<section class="section soft"><div class="shell reveal"><div class="kicker">Product architecture</div><h2>Three operating layers inside one workspace.</h2><div class="module-grid"><article class="module-card"><span>01 / Business</span><h3>Clients & revenue.</h3><p>Commercial information, monthly revenue and account visibility in one operating view.</p></article><article class="module-card"><span>02 / Delivery</span><h3>Tasks & ownership.</h3><p>Work, priorities and accountability connected to the clients and teams responsible.</p></article><article class="module-card"><span>03 / Team</span><h3>People & operations.</h3><p>Internal data, salaries, notifications and the signals needed to run the company.</p></article></div></div></section>
-<section class="section"><div class="shell role-grid reveal"><div><div class="kicker">My role</div><h2>Designing the product around how we actually operate.</h2><p>I’m defining the product logic, operating requirements and iteration priorities based on the real workflows we use inside lowsignal.</p><div class="role-list"><div class="role-item"><strong>Product definition</strong><span>Translating operating pain points into product modules and workflows.</span></div><div class="role-item"><strong>Information architecture</strong><span>Deciding how clients, revenue, tasks and team data connect.</span></div><div class="role-item"><strong>Iteration</strong><span>Prioritizing improvements based on day-to-day company usage.</span></div><div class="role-item"><strong>Company building</strong><span>Using the product as infrastructure for a more scalable operation.</span></div></div></div><aside class="role-aside"><strong>Co-Founder & COO</strong><span>2026 — Present<br><br>Internal product · Company operations · Product design</span></aside></div></section>
-<section class="section soft"><div class="shell showcase-grid reveal"><div class="showcase-media"><img src="/images/panel-demo.png" alt="Low Workspace operating dashboard"></div><div><div class="kicker">Operating view</div><h2>A single place to understand what is happening.</h2><p>The dashboard is designed to reduce context switching and make the company legible at a glance: what is active, what is moving, what needs attention and where revenue is coming from.</p><div class="chips"><span>Clients</span><span>Revenue</span><span>Tasks</span><span>Team</span><span>Notifications</span><span>Operations</span></div></div></div></section>
-<section class="section"><div class="shell entry-grid reveal"><div><div class="kicker">Experience</div><h2>Simple entry, clear workspace.</h2><p>The product is intentionally lightweight. The goal is not to recreate every specialized tool, but to give the team one consistent operating layer where the most important information connects.</p><p>That principle also shapes the entry experience: minimal friction, clear context and fast access to the workspace.</p></div><div class="entry-media"><img src="/images/login-demo.png" alt="Low Workspace login"></div></div></section>
-<section class="closing"><div class="shell closing-inner"><div><h2>Built inside the company it supports.</h2><p>Explore the broader lowsignal case or return to the full project portfolio.</p></div><div class="closing-actions"><a href="/lowsignal">lowsignal ↗</a><a class="secondary" href="/projects">All projects ↗</a></div></div></section>
-</main>
-<footer class="footer"><div class="footer-grid"><div><div class="footer-eyebrow">Product · Growth · Operations · Company building</div><div class="footer-brand">Felipe Quiroz</div><div class="footer-copy">Building products, growth systems and companies across technology and business.</div></div><div class="footer-col"><strong>Explore</strong><a href="/#work">Work</a><a href="/about">About</a><a href="/projects">Projects</a><a href="/initiatives">Initiatives</a><a href="/blog">Blog</a></div><div class="footer-col"><strong>Social</strong><a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a></div><div class="footer-col"><strong>Contact</strong><a href="mailto:felipe@lowsignal.cl">Email</a><a href="https://calendly.com/felipe-lowsignal/30min" target="_blank" rel="noopener noreferrer">Calendly</a></div></div><div class="footer-bottom"><div>© 2026 Felipe Quiroz</div><div>Santiago, Chile</div></div></footer>
-<script>const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('is-visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));</script>
-<script src="/mobile-nav.js" defer></script></body></html>
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Low Workspace | Felipe Quiroz</title><meta content="Low Workspace internal product by lowsignal, designed to connect business, delivery and team operations." name="description"/><link href="https://felipequirozp.cl/favicon.png" rel="icon"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><style>
+:root{--bg:#07090c;--panel:#0d1016;--panel2:#11151b;--ink:#f4f5f7;--muted:#9097a3;--line:#242932;--blue:#86aaff;--max:1392px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:400 14px/1.75 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}img{display:block;max-width:100%}h1,h2,h3,p{margin:0}h1,h2,h3{font-family:"DM Sans",Inter,sans-serif;letter-spacing:-.055em}.container{width:min(calc(100% - 176px),var(--max));margin:auto}
+.nav{height:70px;position:sticky;top:0;z-index:50;background:rgba(7,9,12,.95);border-bottom:1px solid #20242c;backdrop-filter:blur(20px)}.nav-inner{height:100%;display:flex;align-items:center;gap:18px}.identity{font-size:20px;font-weight:700;letter-spacing:-.065em;white-space:nowrap}.nav-links{display:flex;gap:27px;margin-left:auto;align-items:center}.nav-links a{color:#9a9fa9;font-size:13px;transition:color .2s}.nav-links a.active,.nav-links a:hover{color:#f9f9fa}.nav-actions{display:flex;align-items:center;gap:19px;border-left:1px solid #30343b;padding-left:24px}.locale{color:#b4bac3;display:inline-flex;align-items:center;gap:6px;font-size:12px}.touch{border-radius:999px;background:#f5f5f5;color:#0c0d0f;padding:10px 17px;display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:600;transition:transform .2s}.touch:hover{transform:translateY(-2px)}.mobile-toggle{display:none;border:0;background:none;color:#fff;padding:7px}
+.eyebrow{display:flex;align-items:center;gap:10px;color:#8f98a8;font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase}.eyebrow .dot{width:6px;height:6px;background:#739fff;border-radius:50%;flex:none}.section-label{font-size:10px;letter-spacing:.13em;color:#a5afbe;font-weight:600;text-transform:uppercase}.inline-link{display:inline-flex;align-items:center;gap:10px;border-bottom:1px solid #718299;padding-bottom:7px;font-weight:600;font-size:12px;transition:color .2s}.inline-link:hover{color:#9abbff}.inline-link:hover svg{transform:translate(2px,-2px)}.inline-link svg{transition:transform .2s}
+.hero{padding-top:92px;overflow:hidden;border-bottom:1px solid var(--line)}.hero-top{display:grid;grid-template-columns:.98fr 1.02fr;gap:10%;align-items:end}.hero-copy h1{font:500 clamp(54px,5.5vw,82px)/1.055 "DM Sans",Inter,sans-serif;letter-spacing:-.075em;margin:24px 0 23px;max-width:710px}.hero-copy h1 span{color:#9299a4}.hero-copy p{color:#a0a9b5;font-size:15px;line-height:1.9;max-width:535px}.hero-aux{display:flex;gap:26px;align-items:flex-end;flex-direction:column;padding-bottom:9px}.hero-role{color:#87919f;font-size:11px}.hero-aux .inline-link{color:#edf1f7}.hero-stage{margin:92px auto 0;position:relative;height:clamp(410px,48vw,720px);border:1px solid #292d37;border-radius:16px 16px 0 0;border-bottom:0;overflow:hidden;background:radial-gradient(circle at 50% 36%,#202733 0%,#0d1015 48%,#07090c 82%)}.stage-ring{position:absolute;left:50%;top:50%;width:68%;aspect-ratio:1;border:1px solid #8b98ad1a;border-radius:50%;transform:translate(-50%,-55%)}.stage-ring.second{width:92%;transform:translate(-50%,-55%) rotate(20deg)}.stage-glow{position:absolute;top:0;left:12%;right:12%;height:46%;background:radial-gradient(ellipse,#8aa5db20,transparent 70%);pointer-events:none}.stage-screen{position:absolute;left:50%;top:17%;width:86%;height:85%;transform:translateX(-50%) perspective(1100px) rotateX(13deg);transform-origin:center top;border:1px solid #4a556a;border-radius:11px 11px 0 0;box-shadow:0 50px 115px #000a;background:#10151c;overflow:hidden}.window-bar{height:40px;display:flex;align-items:center;justify-content:space-between;padding:0 17px;background:#11161d;border-bottom:1px solid #2a303a;color:#a2abbb;font-size:10px;letter-spacing:.075em}.window-bar span:first-child{display:flex;align-items:center;gap:6px}.window-bar i{width:7px;height:7px;border:1px solid #5c6877;border-radius:50%;display:inline-block}.screen-canvas{height:calc(100% - 40px);background:#e5e8eb;overflow:hidden}.screen-canvas img{width:100%;height:auto;min-height:100%;object-fit:cover;object-position:center top;filter:brightness(.90)}.hero-stage:after{content:"";position:absolute;inset:auto 0 0;height:26%;background:linear-gradient(transparent,#07090c 93%);pointer-events:none}.hero-stage .stage-corner{position:absolute;bottom:22px;left:30px;z-index:2;color:#969fad;font:600 10px Inter,sans-serif;letter-spacing:.12em}.hero-stage .stage-number{left:auto;right:30px}
+.metric-bar{background:#0a0c11}.metrics{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}.metric{padding:32px 21px 33px 0}.metric+.metric{padding-left:26px;border-left:1px solid var(--line)}.metric strong{display:block;font:500 32px/1.15 "DM Sans",sans-serif;letter-spacing:-.05em}.metric span{display:block;font-size:11px;color:#949dab;margin-top:8px}
+.thesis{padding:132px 0 125px;border-bottom:1px solid var(--line)}.thesis-grid{display:grid;grid-template-columns:.83fr 1.17fr;gap:13%}.thesis h2{font:500 clamp(33px,3.8vw,54px)/1.12 "DM Sans",sans-serif;margin-top:17px}.thesis-lead{font-size:24px;line-height:1.58;color:#e9ebef;letter-spacing:-.03em;margin-bottom:28px}.thesis-grid .description{font-size:14px;line-height:1.95;color:#8f98a6}.thesis-grid .description+.description{margin-top:22px}
+.feature{border-bottom:1px solid var(--line);padding:125px 0}.feature-header{text-align:center;max-width:730px;margin:0 auto 75px}.feature-header h2{font:500 clamp(36px,4.3vw,62px)/1.13 "DM Sans",sans-serif;margin:19px auto 22px}.feature-header p{font-size:15px;color:#959eab;line-height:1.9;max-width:580px;margin:auto}.feature-art{position:relative;max-width:1100px;margin:auto;min-height:440px;display:flex;align-items:center;justify-content:center}.feature-screen{width:80%;position:relative;border:1px solid #39414c;border-radius:14px;overflow:hidden;background:#131822;box-shadow:0 28px 90px #0009}.feature-screen img{width:100%;filter:brightness(.86)}.feature-screen:after{content:"";position:absolute;inset:55% 0 0;background:linear-gradient(transparent,#090b0f);pointer-events:none}.feature-callout{position:absolute;max-width:205px;color:#a7b1bf;font:500 10px/1.55 Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;z-index:2}.feature-callout:after{content:"";position:absolute;top:10px;width:120px;border-top:1px solid #667285}.callout-a{left:0;top:38%}.callout-a:after{left:100%;margin-left:18px}.callout-b{right:0;bottom:27%;text-align:right}.callout-b:after{right:100%;margin-right:18px}.feature-foot{display:flex;justify-content:space-between;gap:32px;border-top:1px solid var(--line);padding-top:22px;margin-top:63px;font-size:11px;color:#8c96a6}
+.story-title{text-align:center;max-width:740px;margin:0 auto 74px}.story-title h2{font:500 clamp(35px,4.25vw,58px)/1.1 "DM Sans",sans-serif;margin:18px 0}.story-title p{color:#9ba4b2;font-size:14px;line-height:1.9;max-width:590px;margin:auto}.layer-grid{border-top:1px solid var(--line)}.layer{display:grid;grid-template-columns:1fr 1fr;min-height:490px;border-bottom:1px solid var(--line)}.layer:nth-child(even) .layer-copy{order:2;border-left:1px solid var(--line);border-right:0}.layer:nth-child(even) .layer-media{order:1}.layer-copy{display:flex;flex-direction:column;justify-content:space-between;padding:58px 65px 54px 0;border-right:1px solid var(--line)}.layer:nth-child(even) .layer-copy{padding:58px 0 54px 65px}.layer-index{font:600 10px Inter,sans-serif;letter-spacing:.13em;color:#8faeff}.layer-copy h3{font:500 clamp(29px,3vw,44px)/1.14 "DM Sans",sans-serif;margin:23px 0 18px;max-width:480px}.layer-copy p{color:#9ba3b1;font-size:14px;line-height:1.95;max-width:440px}.layer-meta{font-size:10px;color:#8893a2;letter-spacing:.07em;text-transform:uppercase}.layer-media{min-width:0;display:flex;justify-content:center;align-items:center;padding:48px 0 48px 65px;position:relative}.layer:nth-child(even) .layer-media{padding:48px 65px 48px 0}.layer-visual{width:100%;min-height:320px;background:#0d1219;border:1px solid #2b3442;border-radius:11px;position:relative;overflow:hidden;box-shadow:0 22px 60px #0005}.layer-visual .layer-ui{height:29px;border-bottom:1px solid #323b46;display:flex;align-items:center;gap:8px;padding:0 13px;color:#aab6c5;font-size:9px;letter-spacing:.06em}.layer-visual .layer-ui i{width:6px;height:6px;border:1px solid #56677a;border-radius:50%}.layer-visual .layer-image{width:100%;height:300px;overflow:hidden;position:relative}.layer-visual .layer-image img{width:100%;height:100%;object-fit:cover;object-position:center top}.layer-visual .layer-image.crop-business img{object-position:45% 8%;transform:scale(1.05)}.layer-visual .layer-image.crop-delivery img{object-position:15% 46%;transform:scale(1.25)}.layer-visual .layer-image.crop-team img{object-position:95% 12%;transform:scale(1.20)}.layer-visual .layer-image:after{content:"";position:absolute;inset:70% 0 0;background:linear-gradient(transparent,#0c1017cc)}.layer-visual .layer-badge{position:absolute;right:13px;bottom:14px;padding:6px 9px;border:1px solid #3c4657;border-radius:5px;background:#101720e8;color:#e4e9f2;font-size:10px}.layer-indicator{display:flex;gap:8px;margin-top:21px}.layer-indicator i{height:2px;flex:1;background:#303845;max-width:63px}.layer-indicator i.is-active{background:#dce4f3}
+.entry{padding:134px 0;border-bottom:1px solid var(--line)}.entry-grid{display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:11%}.entry-copy h2{font:500 clamp(35px,3.8vw,55px)/1.15 "DM Sans",sans-serif;margin:20px 0 22px}.entry-copy p{color:#959eaa;font-size:14px;line-height:1.9}.entry-photo{border:1px solid #323947;background:#10151b;border-radius:13px;overflow:hidden;box-shadow:0 30px 80px #0007}.entry-photo img{width:100%;display:block}.entry-small{margin-top:16px;color:#838d9b;font-size:10px;letter-spacing:.06em}.role{padding:115px 0;border-bottom:1px solid var(--line)}.role-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:12%}.role h2{font:500 clamp(32px,3.45vw,50px)/1.13 "DM Sans",sans-serif;margin-top:20px}.role-text{font-size:16px;line-height:1.9;color:#c6ced8}.role-lines{margin-top:31px;border-top:1px solid var(--line)}.role-line{padding:18px 0;border-bottom:1px solid var(--line);display:flex;gap:28px;justify-content:space-between;color:#99a4b2;font-size:12px}.role-line span:first-child{color:#f2f4f8;font-weight:600}.more{padding:85px 0 100px}.more-inner{display:flex;gap:30px;align-items:center;justify-content:space-between}.more h2{font:500 29px/1.2 "DM Sans",sans-serif}.more p{color:#929caa;font-size:12px;margin-top:9px}.more-links{display:flex;gap:24px}
+.footer{background:#07090d;color:#f6f7fb;border-top:1px solid #262a31}.footer-top{padding:76px 0;display:flex;justify-content:space-between;gap:45px}.footer-main{max-width:740px;flex:1 1 670px;min-width:0}.footer-eyebrow{font:600 11px/1.5 Inter,sans-serif;color:#8c97a7;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:9px}.footer-eyebrow .dot{height:7px;width:7px;display:inline-block;border-radius:50%;background:#2d74ff}.footer h2{font:600 clamp(33px,3.65vw,52px)/1.08 "DM Sans",sans-serif;letter-spacing:-.062em;margin:22px 0}.footer h2 span{color:#71a7ff}.footer-main p{font-size:13px;line-height:1.8;color:#9a9eab;max-width:420px}.footer-email{display:inline-flex;gap:12px;align-items:center;margin-top:17px;padding-bottom:10px;border-bottom:1px solid #5b88d0;font-size:13px}.footer-nav{display:grid;grid-template-columns:repeat(2,minmax(135px,1fr));gap:36px;flex:0 0 auto}.footer-nav strong{font-size:12px;display:block;margin-bottom:21px}.footer-nav a{display:block;font-size:12px;color:#9097a3;margin-bottom:15px;transition:color .2s}.footer-nav a:hover{color:white}.footer-bottom{border-top:1px solid #252a32;display:flex;justify-content:space-between;padding:25px 0;color:#848c98;font-size:11px}.footer-bottom .dot{display:inline-block;width:6px;height:6px;background:#2d74ff;border-radius:50%;margin-right:7px}
+@media(max-width:1120px){.container{width:calc(100% - 120px)}.nav-links{gap:17px}.hero-stage{margin-top:65px}.stage-screen{width:91%}.feature-callout:after{width:60px}.layer-copy{padding-right:35px}.layer:nth-child(even) .layer-copy{padding-left:35px}.layer-media{padding-left:35px}.layer:nth-child(even) .layer-media{padding-right:35px}}
+@media(max-width:900px){.container{width:calc(100% - 64px)}.mobile-toggle{display:block;margin-left:0}.nav-links{display:none;position:absolute;top:69px;left:0;right:0;background:#090b0e;border-bottom:1px solid var(--line);padding:25px 32px;flex-direction:column;align-items:flex-start;gap:19px}.nav-links.open{display:flex}.nav-actions{margin-left:auto}.hero-top,.thesis-grid,.entry-grid,.role-grid{grid-template-columns:1fr;gap:32px}.hero-aux{align-items:flex-start;padding:0}.hero-stage{height:480px}.feature-art{min-height:340px}.feature-screen{width:85%}.feature-callout{display:none}.layer{grid-template-columns:1fr;min-height:0}.layer-copy,.layer:nth-child(even) .layer-copy{order:1;border-right:0;border-left:0;padding:38px 0 28px;gap:22px}.layer-media,.layer:nth-child(even) .layer-media{order:2;padding:10px 0 42px}.layer-visual{max-width:630px}.more-inner{align-items:flex-start;flex-direction:column}.footer-top{flex-direction:column}.footer-main{flex:auto}}
+@media(max-width:600px){.container{width:calc(100% - 36px)}.nav-actions{border:0;padding:0}.locale{display:none}.touch{padding:9px 12px}.identity{font-size:18px}.hero{padding-top:58px}.hero-copy h1{font-size:clamp(43px,11vw,60px)}.hero-copy p{font-size:13px}.hero-stage{margin-top:43px;height:340px;border-radius:9px 9px 0 0}.stage-screen{width:114%;height:95%;top:21%;border-radius:6px}.window-bar{height:28px;padding:0 9px;font-size:8px}.screen-canvas{height:calc(100% - 28px)}.hero-stage .stage-corner{left:12px;bottom:14px;font-size:8px}.hero-stage .stage-number{left:auto;right:12px}.metrics{grid-template-columns:repeat(2,1fr)}.metric{padding:23px 10px}.metric+.metric{padding-left:13px}.metric:nth-child(3){border-left:0;border-top:1px solid var(--line)}.metric:nth-child(4){border-top:1px solid var(--line)}.metric strong{font-size:28px}.thesis,.feature,.entry,.role{padding:78px 0}.feature-header{margin-bottom:39px}.feature-header h2{font-size:39px}.feature-art{min-height:180px}.feature-screen{width:100%}.feature-foot{margin-top:32px;flex-direction:column;gap:9px}.story-title{margin-bottom:37px}.story-title h2{font-size:38px}.layer-copy h3{font-size:34px}.layer-visual{min-height:200px}.layer-visual .layer-image{height:215px}.entry-copy h2{font-size:39px}.role-line{flex-direction:column;gap:5px}.more{padding:60px 0 76px}.more-links{flex-wrap:wrap}.footer-top{padding:56px 0}.footer-nav{gap:20px}.footer h2{font-size:36px}.footer-bottom{flex-direction:column;gap:10px}}
+@media(prefers-reduced-motion:no-preference){.reveal{opacity:0;transform:translateY(18px);transition:opacity .75s,transform .75s cubic-bezier(.16,1,.3,1)}.reveal.visible{opacity:1;transform:none}}
+
+/* V2 cleanup: no fake perspective, only one dashboard capture and one login capture. */
+.hero{padding-bottom:0}
+.hero-showcase{margin-top:72px;background:#0d1016;border:1px solid #2b303b;border-bottom:0;border-radius:12px 12px 0 0;overflow:hidden;position:relative}
+.hero-showcase-label,.hero-showcase-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:17px 23px;color:#929ba8;font:600 10px/1.6 Inter,sans-serif;letter-spacing:.09em}
+.hero-showcase-label{border-bottom:1px solid #2a303b}
+.hero-showcase-label i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#7ea5f7;margin-right:8px;vertical-align:middle}
+.hero-image{background:#eff2f5;padding:18px 18px 0;max-height:590px;overflow:hidden;position:relative}
+.hero-image img{display:block;width:100%;height:auto;object-fit:contain;border-radius:5px 5px 0 0;box-shadow:0 3px 28px #121d2a22}
+.hero-showcase-foot{border-top:1px solid #292f39;background:#0d1016}
+/* Narrative now lets the product image stand on its own. */
+.architecture{padding-top:122px}
+.layer{min-height:430px}
+.layer-media{display:flex;align-items:center;justify-content:center;padding:35px;background:#090c12}
+.concept-visual{border:1px solid #282f3d;background:#10151e;border-radius:9px;min-height:330px;width:100%;padding:22px 23px;display:flex;flex-direction:column;justify-content:space-between;color:#eef0f7;overflow:hidden}
+.concept-top,.concept-bottom{font:600 10px/1.6 Inter,sans-serif;letter-spacing:.1em;color:#8492a8}
+.concept-bottom{color:#6f7d8f;letter-spacing:.04em;font-weight:400}
+.concept-business{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:29px}
+.concept-pill{display:flex;align-items:center;justify-content:center;min-height:51px;border:1px solid #364155;border-radius:5px;color:#cfd7e3;background:#151c28;text-align:center;font-size:11px;padding:5px}
+.concept-connect{display:flex;align-items:center;justify-content:center;height:30px;gap:8px}
+.concept-connect span{width:1px;height:27px;background:#50607a}.concept-connect i{height:6px;width:6px;background:#7da2e8;border-radius:50%}
+.concept-center{border:1px solid #607799;border-radius:6px;padding:17px;text-align:center;background:#1b2738}
+.concept-center b{display:block;font:500 18px/1.2 'DM Sans',sans-serif}.concept-center small{display:block;color:#9faec3;margin-top:5px}
+.delivery-sequence{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin:35px 0}
+.delivery-sequence>div{min-height:135px;padding:20px 13px;border-top:1px solid #40506a;border-bottom:1px solid #40506a;position:relative}
+.delivery-sequence>div+div{border-left:1px solid #344259}
+.delivery-sequence small{display:block;font-size:9px;letter-spacing:.08em;color:#8ca8d3}
+.delivery-sequence b{display:block;font:500 18px 'DM Sans',sans-serif;margin:12px 0 6px}
+.delivery-sequence span{font-size:10px;color:#95a0b0;line-height:1.5}
+.team-network{height:245px;position:relative;margin:14px auto 0;max-width:460px}
+.team-network svg{position:absolute;inset:0;width:100%;height:100%;z-index:0;stroke:#61718b;fill:none;stroke-width:1.3}
+.team-node,.team-hub{z-index:1;position:absolute;display:flex;justify-content:center;align-items:center;text-align:center;background:#151e2b;border:1px solid #44536b;color:#d9e3ef;border-radius:999px}
+.team-node{width:103px;height:48px;font-size:11px}.team-hub{width:104px;height:82px;font-size:14px;line-height:1.28;left:50%;top:53%;transform:translate(-50%,-50%);border-color:#7294ca;background:#22324b}
+.team-left{left:3%;top:34%}.team-right{right:3%;top:34%}.team-bottom{left:50%;bottom:1%;transform:translateX(-50%)}
+.entry-photo{box-shadow:none}
+@media(max-width:900px){.hero-showcase{margin-top:48px}.architecture{padding-top:82px}.layer-media{padding:25px}.hero-image{padding:12px 12px 0}}
+@media(max-width:600px){.hero-showcase-label,.hero-showcase-foot{padding:12px;font-size:8px}.hero-showcase-foot span:last-child{display:none}.hero-showcase-label span:last-child{font-size:8px}.hero-image{max-height:none;padding:7px 7px 0}.layer-media{padding:16px}.concept-visual{min-height:285px;padding:15px}.concept-business{gap:5px}.concept-pill{font-size:9px;min-height:46px}.delivery-sequence>div{padding:15px 8px}.delivery-sequence b{font-size:15px}.delivery-sequence span{font-size:9px}.team-network{height:215px}.team-node{width:81px;font-size:9px}.team-left{left:0}.team-right{right:0}}
+
+
+/* V3 / text-only scroll timeline: no illustrative product UIs */
+.architecture-timeline{
+  background:#080a0e;color:#f4f6fa;
+  border-top:1px solid #23272f;border-bottom:1px solid #23272f;
+  padding:0;
+}
+.architecture-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:10%;align-items:stretch;
+}
+.architecture-intro{position:relative;min-width:0}
+.architecture-sticky{
+  position:sticky;top:115px;
+  padding:130px 0 110px;
+  max-width:560px;
+}
+.architecture-sticky .section-label{color:#7ba4e7}
+.architecture-sticky h2{
+  font:500 clamp(38px,4.1vw,62px)/1.1 "DM Sans",Inter,sans-serif;
+  letter-spacing:-.06em;margin:23px 0 24px;
+}
+.architecture-sticky h2 span{color:#9ba4b2}
+.architecture-sticky>p{
+  font-size:14px;color:#929ba8;line-height:1.95;
+  max-width:430px;
+}
+.architecture-status{display:flex;align-items:center;gap:11px;margin-top:52px;
+  color:#8e9aad;font-size:11px;letter-spacing:.12em;font-weight:600}
+.architecture-status-dot{height:6px;width:6px;border-radius:50%;background:#7ba4e7;box-shadow:0 0 0 4px #7ba4e718}
+.timeline-rail{
+  position:relative;margin:95px 0 75px;
+  padding-left:80px;
+}
+.timeline-track{
+  position:absolute;top:42px;bottom:105px;left:21px;
+  width:1px;background:#353a44;overflow:hidden;
+}
+.timeline-progress{
+  width:100%;height:0%;background:#c7d2e1;
+  transition:height .12s linear;
+}
+.timeline-step{
+  position:relative;
+  min-height:380px;
+  display:flex;align-items:center;
+  border-bottom:1px solid #252a32;
+  color:#737d8d;transition:color .45s;
+  padding:65px 0 76px;
+}
+.timeline-step:first-of-type{padding-top:35px}
+.timeline-step:last-of-type{border-bottom:0}
+.timeline-step-content{
+  opacity:.42;transform:translateY(10px);
+  transition:opacity .55s,transform .55s;
+}
+.timeline-step.is-current .timeline-step-content,
+.timeline-step.is-passed .timeline-step-content{opacity:1;transform:none}
+.timeline-step.is-current .timeline-index,
+.timeline-step.is-passed .timeline-index{color:#9bbbfa}
+.timeline-node{
+  position:absolute;z-index:2;left:-64px;top:50%;
+  transform:translate(-50%,-50%);
+  height:11px;width:11px;border:1px solid #454d5a;
+  border-radius:50%;background:#080a0e;
+  transition:background .35s,border-color .35s,box-shadow .35s;
+}
+.timeline-step.is-current .timeline-node,.timeline-step.is-passed .timeline-node{
+  background:#d4e0f1;border-color:#d4e0f1;
+  box-shadow:0 0 0 6px rgba(196,211,231,.07);
+}
+.timeline-index{
+  display:block;font-weight:600;font-size:11px;
+  letter-spacing:.12em;margin-bottom:25px;
+  color:#778394;transition:color .45s;
+}
+.timeline-step h3{
+  color:#f4f6fa;font:500 clamp(30px,3vw,44px)/1.15 "DM Sans",Inter,sans-serif;
+  letter-spacing:-.052em;max-width:450px;
+}
+.timeline-step p{
+  max-width:440px;margin:20px 0 0;font-size:15px;
+  line-height:1.92;color:#9ca4b0;
+}
+.timeline-foot{
+  display:block;border-top:1px solid #333a46;
+  padding-top:17px;margin-top:40px;
+  font-size:10px;letter-spacing:.12em;color:#86909f;
+}
+.timeline-end{height:68px;padding-top:26px;font-size:10px;letter-spacing:.12em;color:#697382}
+@media(max-width:900px){
+  .architecture-layout{grid-template-columns:1fr;gap:15px}
+  .architecture-sticky{position:relative;top:auto;padding:85px 0 0}
+  .architecture-status{display:none}
+  .timeline-rail{margin:45px 0 60px;padding-left:65px}
+  .timeline-track{left:16px;bottom:80px}
+  .timeline-node{left:-49px}
+  .timeline-step{min-height:270px;padding:55px 0}
+  .timeline-step:first-of-type{padding-top:30px}
+}
+@media(max-width:600px){
+  .architecture-sticky{padding-top:69px}
+  .architecture-sticky h2{font-size:clamp(36px,9vw,49px)}
+  .timeline-rail{padding-left:43px;margin-top:32px}
+  .timeline-track{left:9px}
+  .timeline-node{left:-34px;height:9px;width:9px}
+  .timeline-step{min-height:265px;padding:52px 0}
+  .timeline-step p{font-size:13px}
+  .timeline-step h3{font-size:30px}
+  .timeline-foot{font-size:9px}
+}
+@media(prefers-reduced-motion:reduce){
+  .timeline-step-content{opacity:1!important;transform:none!important}
+  .timeline-progress{transition:none!important}
+}
+
+
+/* V4: one divider between chapters; timeline dots aligned precisely to the vertical track. */
+.timeline-foot{border-top:0!important;padding-top:0!important;margin-top:31px!important}
+.timeline-step{border-bottom:1px solid #252a32}
+.timeline-step:last-of-type{border-bottom:0}
+/* One coordinate system for both the track and node centers. */
+.timeline-rail{--rail-pad:80px;--rail-axis:21px;padding-left:var(--rail-pad)}
+.timeline-track{left:var(--rail-axis)}
+.timeline-node{left:calc(var(--rail-axis) - var(--rail-pad))}
+@media(max-width:900px){
+  .timeline-rail{--rail-pad:65px;--rail-axis:16px}
+}
+@media(max-width:600px){
+  .timeline-rail{--rail-pad:43px;--rail-axis:9px}
+}
+/* One continuous headline with natural wrapping */ .hero-top{grid-template-columns:minmax(0,1fr) 245px;gap:7%}.hero-copy h1{max-width:1010px;font-size:clamp(48px,5.45vw,86px);line-height:1.075;text-wrap:balance}@media(max-width:920px){.hero-top{grid-template-columns:1fr;gap:25px}.hero-copy h1{max-width:100%;font-size:clamp(43px,7.2vw,68px)}}@media(max-width:600px){.hero-copy h1{font-size:clamp(38px,10vw,54px)}}</style></head><body><header class="nav"><div class="container nav-inner"><a aria-label="Felipe Quiroz home" class="identity" href="/">Felipe Quiroz</a><nav aria-label="Primary navigation" class="nav-links" id="nav-links"><a href="/#work">Work</a><a href="/about">About</a><a aria-current="page" class="active" href="/projects">Projects</a><a href="/initiatives">Initiatives</a><a href="/blog">Blog</a></nav><div class="nav-actions"><a class="locale" href="/es/lowsignal/low-workspace" hreflang="es">ES <svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="15"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="touch" href="mailto:felipe@lowsignal.cl">Let's talk <svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="15"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div><button aria-controls="nav-links" aria-expanded="false" aria-label="Open navigation" class="mobile-toggle" id="mobile-toggle"><svg fill="none" height="22" stroke="currentColor" stroke-width="1.7" viewbox="0 0 24 24" width="22"><path d="M3 7h18M3 12h18M3 17h18"></path></svg></button></div></header><main>
+<section class="hero"><div class="container"><div class="hero-top"><div class="hero-copy reveal"><div class="eyebrow"><span class="dot"></span>LOW WORKSPACE / IN DEVELOPMENT</div><h1>One workspace for everything behind the work.</h1><p>An internal operating product built around the way lowsignal actually works. Bring business, delivery and team context into one connected place.</p></div><div class="hero-aux reveal"><div class="hero-role">2026 · INTERNAL PRODUCT · COMPANY OPERATIONS</div><a class="inline-link" href="#product">Explore the product <svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="15"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div></div><div aria-label="Low Workspace product preview" class="hero-showcase reveal">
+<div class="hero-showcase-label"><span><i></i> LOW WORKSPACE / PRODUCT PREVIEW</span><span>IN DEVELOPMENT · 2026</span></div>
+<div class="hero-image"><img alt="Actual Low Workspace dashboard screen" loading="eager" src="https://felipequirozp.cl/images/panel-demo.png"/></div>
+<div class="hero-showcase-foot"><span>BUILT INSIDE LOWSIGNAL</span><span>ONE CONNECTED OPERATING LAYER</span></div>
+</div></div></section>
+<section class="metric-bar"><div class="container metrics"><div class="metric"><strong>01</strong><span>workspace</span></div><div class="metric"><strong>03</strong><span>connected layers</span></div><div class="metric"><strong>2026</strong><span>build cycle</span></div><div class="metric"><strong>In progress</strong><span>product stage</span></div></div></section>
+<section class="thesis"><div class="container thesis-grid reveal"><div><span class="section-label">THE PROBLEM</span><h2>The cost of tools that don't talk to each other.</h2></div><div><p class="thesis-lead">When everything lives somewhere different, the business becomes harder to see.</p><p class="description">As lowsignal grew, clients, revenue, projects and team information became scattered across spreadsheets, conversations and disconnected platforms.</p><p class="description">Low Workspace is our response. Not another layer of complexity, but one place to understand what matters and keep the operation moving.</p></div></div></section>
+<section aria-labelledby="architecture-title" class="architecture architecture-timeline" id="architecture">
+<div class="container architecture-layout">
+<div class="architecture-intro">
+<div class="architecture-sticky">
+<span class="section-label">PRODUCT ARCHITECTURE / 01—03</span>
+<h2 id="architecture-title">Three layers.<br/><span>One connected operation.</span></h2>
+<p>Low Workspace connects business visibility, the work being delivered and the people behind it. Three parts of the same company, finally speaking the same language.</p>
+<div aria-hidden="true" class="architecture-status">
+<span class="architecture-status-dot"></span>
+<span id="architecture-current">01 / BUSINESS</span>
+</div>
+</div>
+</div>
+<div aria-label="Three operating layers" class="timeline-rail">
+<div aria-hidden="true" class="timeline-track">
+<div class="timeline-progress" id="timeline-progress"></div>
+</div>
+<article aria-labelledby="step-business" class="timeline-step is-current" data-timeline-step="0">
+<span aria-hidden="true" class="timeline-node"></span>
+<div class="timeline-step-content">
+<span class="timeline-index">01 / BUSINESS</span>
+<h3 id="step-business">See the whole business.</h3>
+<p>Connect clients, commercial activity and revenue in one shared view so decisions start with a clearer picture of how the company is doing.</p>
+<span class="timeline-foot">CLIENTS / COMMERCIAL / REVENUE</span>
+</div>
+</article>
+<article aria-labelledby="step-delivery" class="timeline-step" data-timeline-step="1">
+<span aria-hidden="true" class="timeline-node"></span>
+<div class="timeline-step-content">
+<span class="timeline-index">02 / DELIVERY</span>
+<h3 id="step-delivery">Keep execution moving.</h3>
+<p>Bring projects, tasks, priorities and ownership together, with enough context for everyone to know what matters and what needs to happen next.</p>
+<span class="timeline-foot">PROJECTS / TASKS / PRIORITIES</span>
+</div>
+</article>
+<article aria-labelledby="step-team" class="timeline-step" data-timeline-step="2">
+<span aria-hidden="true" class="timeline-node"></span>
+<div class="timeline-step-content">
+<span class="timeline-index">03 / TEAM</span>
+<h3 id="step-team">Give everyone context.</h3>
+<p>Make responsibilities, people and day-to-day operations easier to follow without scattering critical information across disconnected tools.</p>
+<span class="timeline-foot">PEOPLE / OWNERSHIP / OPERATIONS</span>
+</div>
+</article>
+<div aria-hidden="true" class="timeline-end"><span>ONE WORKSPACE. ONE OPERATING SYSTEM.</span></div>
+</div>
+</div>
+</section>
+<section class="entry"><div class="container entry-grid"><div class="entry-copy reveal"><span class="section-label">PRODUCT EXPERIENCE</span><h2>Simple entry.<br/>Clear context.</h2><p>The product is meant to be lightweight. The goal is not to rebuild every specialized tool but to create a clear starting point that connects the most important company information.</p><p class="entry-small">LOGIN EXPERIENCE / PRODUCT PREVIEW</p></div><div class="entry-photo reveal"><img alt="Existing Low Workspace login experience" loading="lazy" src="https://felipequirozp.cl/images/login-demo.png"/></div></div></section>
+<section class="role"><div class="container role-grid reveal"><div><span class="section-label">MY ROLE / COMPANY BUILDING</span><h2>Building the product from the operation outward.</h2></div><div><p class="role-text">As Co-Founder &amp; CEO of lowsignal, I help define Low Workspace around the real constraints of running the company: what information matters, how work connects and what makes execution simpler for our team.</p><div class="role-lines"><div class="role-line"><span>Product definition</span><span>Needs, modules and priorities</span></div><div class="role-line"><span>Information architecture</span><span>Connections across company data</span></div><div class="role-line"><span>Iteration</span><span>Feedback from real workflows</span></div></div></div></div></section>
+</main><footer class="footer"><div class="container"><div class="footer-top"><div class="footer-main"><div class="footer-eyebrow"><span class="dot"></span>LET'S CONNECT</div><h2>Good things start<br/>with a <span>conversation.</span></h2><p>Ideas, opportunities, interesting problems, or just a good conversation about building what's next.</p><a class="footer-email" href="mailto:felipe@lowsignal.cl">felipe@lowsignal.cl <svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="15"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div><div class="footer-nav"><div><strong>Explore</strong><a href="/#work">Work</a><a href="/about">About</a><a href="/projects">Projects</a><a href="/initiatives">Initiatives</a><a href="/blog">Blog</a></div><div><strong>Connect</strong><a href="https://www.linkedin.com/in/felipequirozp/" rel="noopener noreferrer" target="_blank">LinkedIn <svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="15"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a href="https://github.com/felipequirozp" rel="noopener noreferrer" target="_blank">GitHub <svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="15"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a href="https://www.instagram.com/felipe_quirozp/" rel="noopener noreferrer" target="_blank">Instagram <svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="15"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div></div></div><div class="footer-bottom"><span>© 2026 Felipe Quiroz.</span><span><span class="dot"></span>Built in Santiago, Chile.</span></div></div></footer><script>
+const toggle=document.getElementById('mobile-toggle');const menu=document.getElementById('nav-links');
+toggle?.addEventListener('click',()=>{const open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});
+menu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');toggle.setAttribute('aria-expanded','false')}));
+const targets=[...document.querySelectorAll('.reveal')];if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){targets.forEach(x=>x.classList.add('visible'))}else{const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');io.unobserve(entry.target)}}),{threshold:.06});targets.forEach(x=>io.observe(x))}
+
+
+// Scroll-linked, text-only architecture timeline.
+(() => {
+  const section=document.querySelector('.architecture-timeline');
+  const steps=[...document.querySelectorAll('[data-timeline-step]')];
+  const progress=document.getElementById('timeline-progress');
+  const currentLabel=document.getElementById('architecture-current');
+  const track=document.querySelector('.timeline-track');
+  if (!section || !steps.length || !progress || !track) return;
+  const labels=['01 / BUSINESS','02 / DELIVERY','03 / TEAM'];
+  const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+  let ticking=false;
+  const update=()=>{
+    ticking=false;
+    const pivot=Math.min(innerHeight*.50,450);
+    let active=0;
+    steps.forEach((step,i)=>{
+      if(step.getBoundingClientRect().top <= pivot) active=i;
+    });
+    const top=track.getBoundingClientRect().top;
+    const bottom=track.getBoundingClientRect().bottom;
+    const pct=reduceMotion.matches?100:Math.max(0,Math.min(100,(pivot-top)/(bottom-top)*100));
+    progress.style.height=pct+'%';
+    steps.forEach((step,i)=>{
+      step.classList.toggle('is-current',i===active);
+      step.classList.toggle('is-passed',i<active);
+    });
+    if(currentLabel) currentLabel.textContent=labels[active];
+  };
+  const request=()=>{if(!ticking){ticking=true;requestAnimationFrame(update)}};
+  addEventListener('scroll',request,{passive:true});
+  addEventListener('resize',request,{passive:true});
+  request();
+})();
+</script></body></html>
