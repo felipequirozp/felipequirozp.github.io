@@ -296,6 +296,61 @@ h1,h2,h3,p{margin:0}h1,h2,h3{font-family:"DM Sans",Inter,sans-serif;letter-spaci
 .fm-grid{grid-template-columns:1fr;gap:37px}.founder-manifesto{padding:78px 0 85px}
 }
 @media(prefers-reduced-motion:reduce){.nv-scene,.nv-story,.nv-progress-track i{transition:none!important}.nv-edu .edu-school i,.nv-b2b .b2b-step,.nv-b2c .b2c-orbit{animation:none!important}.nv-b2b .b2b-step{transform:none;opacity:1}.nv-edu .edu-school i{transform:scaleX(1);opacity:1}}
+
+/* Mobile QA 2026-11-12: make scroll visuals readable at narrow widths */
+@media(max-width:760px){
+  .new-verticals .nv-grid,.new-verticals .nv-stories,.new-verticals .nv-story,
+  .scrolly-product .product-story,.scrolly-product .product-sticky{min-width:0;max-width:100%}
+  .nv-visual-column{height:clamp(240px,43svh,326px);min-height:0;top:70px;padding:8px 0 7px}
+  .nv-stage{height:100%;min-height:0;border-radius:8px}
+  .nv-stage-bar{height:39px;padding:0 12px;font-size:9px}
+  .nv-scene{inset:39px 0 0;padding:12px 13px 11px}
+  .nv-story{min-height:clamp(270px,55svh,475px);padding:43px 0 57px}
+  .nv-story h3{font-size:clamp(28px,8vw,36px);line-height:1.16;overflow-wrap:break-word}
+  .nv-story p{font-size:13px;line-height:1.75}
+  .nv-context{line-height:1.8;overflow-wrap:anywhere}
+  .nv-progress{position:relative;bottom:auto;padding:12px 0 20px}
+  .edu-search{gap:6px;padding:9px 10px;font-size:10px;min-width:0}
+  .edu-search-tag{padding:4px 6px;font-size:9px}
+  .edu-schools{gap:5px}
+  .edu-school{min-height:80px;padding:8px 6px}
+  .edu-school .edu-school-icon{height:22px;width:22px;margin-bottom:5px}
+  .edu-school svg{width:22px;height:22px}
+  .edu-school strong{font-size:10px}
+  .b2b-top{padding:10px 12px;font-size:10px}
+  .b2b-steps{padding:5px 12px}
+  .b2b-step{padding:9px 0;gap:9px}
+  .b2b-icon{width:26px;height:26px;flex-shrink:0}
+  .b2b-step strong{font-size:11px}
+  .b2b-step small{font-size:9px}
+  .b2c-stage{height:175px}
+  .b2c-orbit{height:165px;width:165px}
+  .b2c-orbit.orbit-two{height:118px;width:118px}
+  .b2c-center strong{font-size:24px}
+  .b2c-node{padding:5px 7px}
+  .b2c-node strong{font-size:9px}
+  .nv-art-foot{padding-top:4px;font-size:9px;line-height:1.35}
+  .product-sticky{top:78px}
+  .product-ui-heading{padding:9px 11px;gap:5px;flex-wrap:wrap;font-size:9px}
+  .product-chapter{min-height:clamp(220px,38svh,360px);padding:30px 0}
+  .workspace-end{gap:14px}
+  .fm-title h2{overflow-wrap:break-word}
+}
+@media(max-width:390px){
+  .nv-visual-column{height:240px}
+  .nv-scene-eyebrow{font-size:8px;letter-spacing:.06em}
+  .nv-story h3{font-size:29px}
+  .edu-school{min-height:75px}
+  .edu-school small,.b2b-step small{display:none}
+  .b2c-stage{height:148px}
+  .b2c-orbit{height:145px;width:145px}
+  .b2c-orbit.orbit-two{height:100px;width:100px}
+  .b2c-node{padding:3px 5px}
+}
+@media(max-height:650px) and (max-width:760px){
+  .nv-visual-column{height:230px}
+  .nv-story{min-height:290px}
+}
 </style><link rel="canonical" href="https://felipequirozp.cl/lowsignal"/><link rel="alternate" hreflang="en" href="https://felipequirozp.cl/lowsignal"/><link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/lowsignal"/><meta name="description" content="lowsignal is a growth company co-founded by Felipe Quiroz. Explore its growth systems, company building and Low Workspace."/><style id="lowsignal-solid-dark-nav">.site-nav{--sn-bg:#07090d!important}</style><link rel="icon" type="image/png" href="/favicon.png"><style id="site-shared-nav-footer-20261111">
 /* Single site navigation and footer system — consistent with /blog */
 .site-nav{--sn-bg:rgba(7,9,13,.95);--sn-fg:#f6f7f9;--sn-sub:#929ba9;--sn-border:#292d36;--sn-cta-bg:#fff;--sn-cta-fg:#101115;position:sticky!important;top:0!important;left:auto!important;right:auto!important;z-index:9999!important;display:block!important;width:100%!important;height:auto!important;padding:0!important;margin:0!important;background:var(--sn-bg)!important;border-bottom:1px solid var(--sn-border)!important;backdrop-filter:blur(18px);box-shadow:none!important;color:var(--sn-fg)!important}
