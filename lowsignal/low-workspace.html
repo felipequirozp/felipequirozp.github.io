@@ -202,6 +202,39 @@
 .nav .touch:hover{background:#edf1f7!important;border-color:#edf1f7!important;transform:translateY(-1px)!important}
 .nav .touch svg{width:15px!important;height:15px!important;flex-shrink:0!important}
 @media(max-width:700px){.nav .touch{padding:9px 12px!important}}
+
+/* Shared white three-pillar My Role ending */
+.role-light{background:#fff!important;color:#151920!important;border-top:1px solid #e5e9ef;padding:104px 0 112px}
+.role-light-head{display:grid;grid-template-columns:1.45fr .75fr;gap:10%;align-items:end;margin-bottom:65px}
+.role-light-eyebrow{display:flex;align-items:center;gap:11px;font:600 10px/1.5 Inter,sans-serif;letter-spacing:.13em;color:#788393}
+.role-light-eyebrow i{width:7px;height:7px;background:#8792a0;border-radius:50%;display:block}
+.role-light h2{margin:28px 0 0;max-width:860px}
+.role-light-head>p{color:#747f8d;font:400 14px/1.9 Inter,sans-serif;max-width:470px}
+.role-principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.role-principle{border-left:1px solid #d7dde5;min-height:245px;padding:27px 33px 15px 38px;display:flex;flex-direction:column;align-items:flex-start}
+.role-principle svg{color:#8793a2;flex:0 0 auto;margin-bottom:38px}
+.role-principle h3{font:500 clamp(19px,1.6vw,24px)/1.28 "DM Sans",Inter,sans-serif;letter-spacing:-.038em;color:#171b22;margin:0 0 15px}
+.role-principle p{font:400 13px/1.85 Inter,sans-serif;color:#788393;max-width:370px}
+.role-light + .footer{border-top:none}
+@media(max-width:900px){
+  .role-light-head{grid-template-columns:1fr;gap:20px}
+  .role-principle{padding:25px 20px;min-height:250px}
+  .role-principle h3{font-size:20px}
+}
+@media(max-width:600px){
+  .role-light{padding:74px 0 82px}
+  .role-light-head{margin-bottom:43px}
+  .role-light h2{font-size:clamp(33px,8.4vw,43px);margin-top:21px}
+  .role-principles{grid-template-columns:1fr}
+  .role-principle{min-height:0;padding:26px 0 30px 24px;border-left:1px solid #d7dde5;border-bottom:1px solid #edf0f3}
+  .role-principle svg{margin-bottom:23px}
+  .role-principle h3{font-size:21px}
+}
+
+.role.role-light{background:#fff!important;color:#151920!important}
+.role.role-light h2{font:500 clamp(35px,3.5vw,52px)/1.16 "DM Sans",Inter,sans-serif;letter-spacing:-.052em;margin:28px 0 0;max-width:860px;color:#151920}
+.role.role-light .role-light-head>p{color:#747f8d}
+@media(max-width:600px){.role.role-light h2{font-size:clamp(33px,8.4vw,43px);margin-top:21px}}
 </style><link rel="icon" type="image/png" href="/favicon.png"><style id="site-shared-nav-footer-20261111">
 /* Single site navigation and footer system — consistent with /blog */
 .site-nav{--sn-bg:rgba(7,9,13,.95);--sn-fg:#f6f7f9;--sn-sub:#929ba9;--sn-border:#292d36;--sn-cta-bg:#fff;--sn-cta-fg:#101115;position:sticky!important;top:0!important;left:auto!important;right:auto!important;z-index:9999!important;display:block!important;width:100%!important;height:auto!important;padding:0!important;margin:0!important;background:var(--sn-bg)!important;border-bottom:1px solid var(--sn-border)!important;backdrop-filter:blur(18px);box-shadow:none!important;color:var(--sn-fg)!important}
@@ -329,7 +362,7 @@
 </div>
 </section>
 <section class="entry"><div class="container entry-grid"><div class="entry-copy reveal"><span class="section-label">PRODUCT EXPERIENCE</span><h2>Simple entry.<br/>Clear context.</h2><p>The product is meant to be lightweight. The goal is not to rebuild every specialized tool but to create a clear starting point that connects the most important company information.</p><p class="entry-small">LOGIN EXPERIENCE / PRODUCT PREVIEW</p></div><div class="entry-photo reveal"><img alt="Existing Low Workspace login experience" loading="lazy" src="https://felipequirozp.cl/images/login-demo.png"/></div></div></section>
-<section class="role"><div class="container role-grid reveal"><div><span class="section-label">MY ROLE / COMPANY BUILDING</span><h2>Building the product from the operation outward.</h2></div><div><p class="role-text">As Co-Founder &amp; CEO of lowsignal, I help define Low Workspace around the real constraints of running the company: what information matters, how work connects and what makes execution simpler for our team.</p><div class="role-lines"><div class="role-line"><span>Product definition</span><span>Needs, modules and priorities</span></div><div class="role-line"><span>Information architecture</span><span>Connections across company data</span></div><div class="role-line"><span>Iteration</span><span>Feedback from real workflows</span></div></div></div></div></section>
+<section aria-labelledby="role-heading" class="role role-light"><div class="container"><div class="role-light-head reveal"><div><span class="role-light-eyebrow"><i></i>MY ROLE / CO-FOUNDER & CEO</span><h2 id="role-heading">Building the product from the operation outward.</h2></div><p>As Co-Founder &amp; CEO of lowsignal, I help shape Low Workspace around the real needs of running the company, connecting product strategy, information architecture and day-to-day execution.</p></div><div class="role-principles"><article class="role-principle reveal"><svg aria-hidden="true" fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.65" viewBox="0 0 24 24" width="26"><circle cx="8" cy="8" r="3"></circle><circle cx="17" cy="9" r="2.5"></circle><path d="M2.7 20v-2.1a5.3 5.3 0 0 1 10.6 0V20M14.4 14.1a4.5 4.5 0 0 1 6.9 3.8V20"></path></svg><h3>Define what matters.</h3><p>Identify operational needs, establish product priorities and shape the modules the team actually needs.</p></article><article class="role-principle reveal"><svg aria-hidden="true" fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.65" viewBox="0 0 24 24" width="26"><path d="m12 3 9 5-9 5-9-5 9-5ZM3 12l9 5 9-5M3 16l9 5 9-5"></path></svg><h3>Connect the moving parts.</h3><p>Design how client, revenue, project and team information fits into one coherent workspace.</p></article><article class="role-principle reveal"><svg aria-hidden="true" fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.65" viewBox="0 0 24 24" width="26"><rect height="14" rx="2" width="18" x="3" y="7"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"></path></svg><h3>Build, learn and improve.</h3><p>Use real workflows and team feedback to refine the product as the company grows.</p></article></div></div></section>
 </main><footer class="footer site-footer"><div class="container"><div class="footer-top"><div class="footer-main"><div class="eyebrow"><span class="dot"></span>LET'S CONNECT</div><h2>Good things start<br>with a <span>conversation.</span></h2><p>Ideas, opportunities, interesting problems, or just a good conversation about building what's next.</p><a class="footer-email" href="mailto:felipe@lowsignal.cl">felipe@lowsignal.cl <svg class="arrow-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div><div class="footer-nav"><div><strong>Explore</strong><a href="/#work">Work</a><a href="/about">About</a><a href="/projects">Projects</a><a href="/initiatives">Initiatives</a><a href="/blog">Blog</a></div><div><strong>Connect</strong><a href="https://www.linkedin.com/in/felipequirozp/" target="_blank" rel="noopener noreferrer">LinkedIn <svg class="arrow-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub <svg class="arrow-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram <svg class="arrow-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div></div></div><div class="footer-bottom"><span>© 2026 Felipe Quiroz.</span><span><span class="blue-dot"></span>Built in Santiago, Chile.</span></div></div></footer><script>
 const toggle=document.getElementById('mobile-toggle');const menu=document.getElementById('nav-links');
 toggle?.addEventListener('click',()=>{const open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});
