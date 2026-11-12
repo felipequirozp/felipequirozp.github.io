@@ -280,6 +280,21 @@ html,body{background:#080a0e;color:#f3f4f7}
 .site-nav .touch{display:none!important}
 .site-nav .nav-actions{gap:9px!important}
 }
+
+/* Mobile usability audit: prevent menu clipping on short phones */
+@media(max-width:960px){
+.site-nav .nav-links.open{max-height:calc(100dvh - 70px)!important;max-height:calc(100svh - 70px)!important;overflow-y:auto!important;overscroll-behavior:contain!important;-webkit-overflow-scrolling:touch!important;padding-bottom:max(26px,env(safe-area-inset-bottom))!important}
+.site-nav .nav-links a{max-width:100%;overflow-wrap:anywhere}
+.site-footer .footer-top,.site-footer .footer-main,.site-footer .footer-nav{min-width:0!important;max-width:100%!important}
+.site-footer .footer-email{overflow-wrap:anywhere}
+}
+@media(max-width:380px){
+.site-nav .identity{font-size:16px!important}
+.site-nav .nav-inner{gap:6px!important}
+.site-nav .nav-actions{gap:4px!important}
+.site-nav .locale{font-size:11px!important}
+.site-nav .mobile-toggle{padding:6px!important}
+}
 </style></head><body><header class="nav site-nav"><div class="container nav-inner"><a href="/" class="identity brand" aria-label="Felipe Quiroz">Felipe Quiroz</a><nav class="nav-links" id="nav-links" aria-label="Primary navigation"><a href="/#work">Work</a><a href="/about">About</a><a href="/projects" class="active" aria-current="page">Projects</a><a href="/initiatives">Initiatives</a><a href="/blog">Blog</a><a class="mobile-language-link" href="/es/projects" hreflang="es">Switch to Spanish</a><a class="mobile-contact-link" href="mailto:felipe@lowsignal.cl">Let's talk</a></nav><div class="nav-actions"><a class="locale" href="/es/projects" hreflang="es">ES <svg class="arrow-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a class="touch" href="mailto:felipe@lowsignal.cl">Let's talk <svg class="arrow-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div><button id="mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-controls="nav-links" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button></div></header>
 <main><section class="hero hero-v5" id="top"><div class="container"><div class="opening-top"><span class="eyebrow"><span class="dot"></span> SELECTED PROJECTS / 2024–2026</span></div>
 <div class="v6-hero-grid"><div class="v6-copy"><div class="v6-mini-label">A selection of things I've helped build.</div><h1>Ideas, built<br/>into <em>reality.</em></h1><p>From early concepts to products in production. A collection of the systems, platforms and experiences I've helped bring to life.</p><a class="people-link" href="/people">People I’ve built with <svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="15"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div>
