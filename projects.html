@@ -203,6 +203,15 @@ html,body{background:#080a0e;color:#f3f4f7}
 .card-heading h3{font-size:clamp(18px,1.6vw,22px)}
 @media(max-width:1100px){.projects-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.projects-grid{grid-template-columns:1fr}}
+
+/* V11 — row-aligned project card descriptions, dividers and outcomes */
+.projects-grid{align-items:stretch}
+.projects-grid .project-card{display:flex;flex-direction:column;height:100%;min-width:0}
+.projects-grid .project-card[hidden]{display:none!important}
+.projects-grid .project-card .picture{flex:none;width:100%}
+.projects-grid .project-card .card-meta,.projects-grid .project-card .card-heading{flex-shrink:0}
+.projects-grid .project-card>p{flex:0 0 auto;margin-bottom:17px;min-height:0}
+.projects-grid .project-card .card-outcome{margin-top:auto;flex-shrink:0}
 </style><link rel="canonical" href="/projects"/><link rel="alternate" hreflang="en" href="/projects"/><link rel="alternate" hreflang="es" href="/es/projects"/><style id="site-shared-nav-footer-20261111">
 /* Single site navigation and footer system — consistent with /blog */
 .site-nav{--sn-bg:rgba(7,9,13,.95);--sn-fg:#f6f7f9;--sn-sub:#929ba9;--sn-border:#292d36;--sn-cta-bg:#fff;--sn-cta-fg:#101115;position:sticky!important;top:0!important;left:auto!important;right:auto!important;z-index:9999!important;display:block!important;width:100%!important;height:auto!important;padding:0!important;margin:0!important;background:var(--sn-bg)!important;border-bottom:1px solid var(--sn-border)!important;backdrop-filter:blur(18px);box-shadow:none!important;color:var(--sn-fg)!important}
