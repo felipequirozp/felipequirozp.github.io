@@ -1,55 +1,310 @@
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Optimizador de Turnos | Felipe Quiroz</title>
-<meta name="description" content="Caso Optimizador de Turnos de Felipe Quiroz — producto B2B SaaS entre planificación de workforce, optimización, pilotos enterprise y validación de producto.">
-<link rel="icon" href="/favicon.png"><link rel="canonical" href="https://felipequirozp.cl/es/geovictoria/shift-optimizer"><link rel="alternate" hreflang="en" href="https://felipequirozp.cl/geovictoria/shift-optimizer"><link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/geovictoria/shift-optimizer">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#0b1117;--muted:#64707d;--line:#e1e6eb;--blue:#1467d8;--page:8vw;--max:1520px;--nav-h:76px}*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{margin:0;padding-top:var(--nav-h);overflow-x:hidden;background:#fff;color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.shell{width:min(var(--max),100%);margin:auto}.nav{position:fixed;inset:0 0 auto 0;z-index:9999;height:var(--nav-h);padding:0 var(--page);display:flex;align-items:center;justify-content:space-between;gap:28px;background:rgba(255,255,255,.96);border-bottom:1px solid rgba(11,17,23,.08);backdrop-filter:blur(16px)}.brand{font-family:Manrope,sans-serif;font-size:22px!important;font-weight:600;letter-spacing:-.045em}.nav-center,.nav-right{display:flex;align-items:center;gap:28px}.nav a{font-size:11px;font-weight:500;color:#1a232d}.nav-center a,.nav-right a:not(.lang){position:relative}.nav-center a::after,.nav-right a:not(.lang)::after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:1px;background:#111820;transition:.2s}.nav-center a:hover::after,.nav-center a.active::after{width:100%}.lang{width:38px;height:38px;display:grid;place-items:center;border:1px solid #d7dde4;border-radius:50%;font-size:10px!important;transition:.2s}.lang:hover{background:#0b1117;color:#fff;border-color:#0b1117}.kicker{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}.hero-logo{display:inline-flex;align-items:center;justify-content:flex-start;margin-bottom:28px}.hero-logo img{height:38px;width:auto;max-width:260px;object-fit:contain;object-position:left center}.hero{padding:64px var(--page) 72px;background:radial-gradient(circle at 82% 16%,rgba(20,103,216,.11),transparent 28%),linear-gradient(180deg,#f4f7f9 0%,#eef3f7 100%);border-bottom:1px solid #dce4eb}.hero-grid{display:grid;grid-template-columns:1fr;align-items:start}.hero-grid>div:first-child{max-width:980px}.hero h1{margin:24px 0 0;max-width:960px;font-family:Manrope,sans-serif;font-size:clamp(44px,4.6vw,66px);line-height:1.03;letter-spacing:-.054em;font-weight:500}.hero p{margin:24px 0 0;max-width:760px;color:#4d5965;font-size:14px;line-height:1.82}.context{padding:0 var(--page);background:linear-gradient(180deg,#e4ebf1 0%,#dde6ee 100%);border-bottom:1px solid #d1dbe4}.context-grid{display:grid;grid-template-columns:repeat(4,1fr)}.context-item{padding:26px 24px}.context-item:first-child{padding-left:0}.context-item+.context-item{border-left:1px solid #cad6e0}.context-item strong{display:block;font-family:Manrope,sans-serif;font-size:22px;font-weight:500;letter-spacing:-.035em}.context-item span{display:block;margin-top:7px;color:#647482;font-size:10px;line-height:1.45}.section{padding:80px var(--page);background:#fff}.section.soft{background:linear-gradient(180deg,#e7edf2 0%,#edf2f6 100%);border-top:1px solid #d8e1e8;border-bottom:1px solid #d8e1e8}.two-col{display:grid;grid-template-columns:.38fr 1.12fr;gap:76px}.section h2{margin:18px 0 24px;max-width:820px;font-family:Manrope,sans-serif;font-size:clamp(34px,3.7vw,50px);line-height:1.06;letter-spacing:-.045em;font-weight:500}.section p{margin:0 0 20px;max-width:820px;color:var(--muted);font-size:13px;line-height:1.84}.logic-grid{margin-top:32px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.logic-card{padding:24px;border:1px solid #dbe2e8;border-radius:18px;background:#fff}.logic-card span{font-size:9px;font-weight:700;color:var(--blue);letter-spacing:.1em}.logic-card h3{margin:22px 0 0;font-family:Manrope,sans-serif;font-size:21px;font-weight:500;letter-spacing:-.035em}.logic-card p{margin:11px 0 0;font-size:12px;line-height:1.72}.role-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.55fr);gap:64px}.role-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}.role-item{padding:20px;border:1px solid #dfe5ea;border-radius:16px}.role-item strong{display:block;font-size:11px}.role-item span{display:block;margin-top:8px;color:var(--muted);font-size:11px;line-height:1.6}.role-aside{padding:26px;border-left:1px solid #d7dfe6}.role-aside strong{display:block;font-family:Manrope,sans-serif;font-size:24px;font-weight:500;letter-spacing:-.035em}.role-aside span{display:block;margin-top:10px;color:#6d7985;font-size:11px;line-height:1.7}.validation-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}.validation-media{padding:20px;border-radius:20px;background:#dce6ee;border:1px solid #d1dce5}.validation-media img{width:100%;max-height:460px;object-fit:contain;border-radius:12px;box-shadow:0 16px 36px rgba(20,40,60,.08)}.chips{margin-top:22px;display:flex;gap:8px;flex-wrap:wrap}.chips span{padding:8px 10px;border:1px solid #dbe2e8;border-radius:999px;background:#fff;color:#5a6773;font-size:9px;font-weight:600}.closing{padding:0 var(--page);background:#0b1117;color:#fff}.closing-inner{padding:50px 0;display:flex;justify-content:space-between;align-items:center;gap:30px}.closing h2{margin:0;font-family:Manrope,sans-serif;font-size:clamp(28px,3vw,40px);font-weight:500;letter-spacing:-.04em}.closing p{margin:10px 0 0;color:#b8c1ca;font-size:12px}.closing-actions{display:flex;gap:10px;flex-wrap:wrap}.closing a{min-height:40px;display:inline-flex;align-items:center;padding:0 14px;border-radius:999px;background:#fff;color:#0b1117;font-size:10px;font-weight:700;transition:.2s}.closing a.secondary{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.24)}.closing a:hover{background:var(--blue);color:#fff;border-color:var(--blue);transform:translateY(-2px)}.footer{padding:58px var(--page) 28px;background:#fff;border-top:1px solid var(--line)}.footer-grid{width:min(var(--max),100%);margin:auto;display:grid;grid-template-columns:1.15fr repeat(3,.7fr);gap:56px}.footer-eyebrow{margin-bottom:12px;color:var(--blue);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.footer-brand{font-family:Manrope,sans-serif;font-size:28px;letter-spacing:-.045em;font-weight:600}.footer-copy{margin-top:12px;max-width:330px;color:#65717d;font-size:12px;line-height:1.65}.footer-col strong{display:block;margin-bottom:14px;font-size:11px}.footer-col a{display:block;width:max-content;max-width:100%;margin:10px 0;color:#66727e;font-size:12px;transition:.18s}.footer-col a:hover{color:#0b1117;transform:translateX(3px)}.footer-bottom{width:min(var(--max),100%);margin:42px auto 0;padding-top:20px;display:flex;justify-content:space-between;border-top:1px solid var(--line);color:#83909c;font-size:9px;letter-spacing:.06em;text-transform:uppercase}.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}.reveal.is-visible{opacity:1;transform:none}@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}@media(max-width:1000px){.hero-grid,.two-col,.role-grid,.validation-grid{grid-template-columns:1fr}.logic-grid{grid-template-columns:1fr}.context-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}}@media(max-width:700px){:root{--page:20px;--nav-h:68px}.nav{height:var(--nav-h)}.nav-center{display:none}.hero{padding-top:46px}.hero-grid{gap:0}.validation-media{padding:12px}.context-item{padding:20px 14px}.context-item:first-child,.context-item:nth-child(3){padding-left:0}.context-item:nth-child(3){border-left:0;border-top:1px solid #cad6e0}.context-item:nth-child(4){border-top:1px solid #cad6e0}.two-col{gap:24px}.role-list{grid-template-columns:1fr}.role-aside{padding-left:0;border-left:0;border-top:1px solid #d7dfe6}.closing-inner{align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:1fr;gap:28px}.footer-bottom{margin-top:34px;flex-direction:column;gap:10px}}
-</style>
-<style id="case-hero-standard-v1">
-.hero{padding:62px var(--page) 72px!important;background:radial-gradient(circle at 82% 14%,rgba(20,103,216,.1),transparent 28%),linear-gradient(180deg,#f4f7f9 0%,#eef3f7 100%)!important;border-bottom:1px solid #dce4eb!important}
-.hero-top{display:flex;align-items:center;justify-content:space-between;gap:28px}
-.project-logo{display:inline-flex;align-items:center;justify-content:flex-start;margin:0!important}
-.project-logo img{height:42px;width:auto;max-width:290px;object-fit:contain;object-position:left center}
-.hero-meta{display:flex;gap:8px;flex-wrap:wrap}
-.hero-meta span{padding:8px 10px;border:1px solid #d7e0e8;border-radius:999px;background:rgba(255,255,255,.72);font-size:9px;color:#5c6976;font-weight:600}
-.hero h1{margin:34px 0 0!important;max-width:980px!important;font-family:Manrope,sans-serif!important;font-size:clamp(42px,4.25vw,62px)!important;line-height:1.04!important;letter-spacing:-.052em!important;font-weight:500!important}
-.hero-bottom{margin-top:30px;display:grid;grid-template-columns:1fr .42fr;gap:70px;align-items:end}
-.hero-copy{margin:0!important;max-width:820px!important;color:#4d5965!important;font-size:14px!important;line-height:1.82!important}
-.role-box{padding-left:20px;border-left:1px solid #ccd6df}
-.role-box strong{display:block;font-family:Manrope,sans-serif;font-size:20px;font-weight:500;white-space:nowrap}
-.role-box span{display:block;margin-top:7px;color:#6e7b87;font-size:11px;line-height:1.6}
-@media(max-width:1000px){.hero-bottom{grid-template-columns:1fr}}
-@media(max-width:700px){.hero{padding-top:48px!important}.hero-top{align-items:flex-start;flex-direction:column;gap:22px}.project-logo img{height:34px;max-width:240px}.hero-meta{gap:6px}.hero-meta span{padding:7px 9px;font-size:8px}.hero h1{margin-top:26px!important;font-size:40px!important;line-height:1.02!important}.hero-bottom{margin-top:24px;gap:24px}.hero-copy{font-size:13px!important;line-height:1.72!important}.role-box{padding-left:0;padding-top:16px;border-left:0;border-top:1px solid #ccd6df}.role-box strong{white-space:normal;font-size:17px}.role-box span{font-size:10px}}
-</style>
-<style id="site-footer-v2">
-.footer{padding:58px var(--page,8vw) 28px!important;background:#fff!important;border-top:1px solid var(--line,#e1e6eb)!important}
-.footer-grid{width:min(var(--max,1520px),100%)!important;margin:0 auto!important;display:grid!important;grid-template-columns:1.15fr .7fr .7fr .7fr!important;gap:56px!important;align-items:start!important}
-.footer-eyebrow{margin-bottom:12px!important;color:var(--blue,#1467d8)!important;font-size:9px!important;font-weight:700!important;letter-spacing:.12em!important;text-transform:uppercase!important}
-.footer-brand{font-family:Manrope,sans-serif!important;font-size:28px!important;letter-spacing:-.045em!important;font-weight:600!important}
-.footer-copy{margin-top:12px!important;max-width:330px!important;color:#65717d!important;font-size:12px!important;line-height:1.65!important}
-.footer-col strong{display:block!important;margin-bottom:14px!important;font-size:11px!important;font-weight:700!important}
-.footer-col a{display:block!important;width:max-content!important;max-width:100%!important;margin:10px 0!important;color:#66727e!important;font-size:12px!important;transition:transform .18s ease,color .18s ease!important}
-.footer-col a:hover{color:#0b1117!important;transform:translateX(3px)!important}
-.footer-bottom{width:min(var(--max,1520px),100%)!important;margin:42px auto 0!important;padding-top:20px!important;display:flex!important;justify-content:space-between!important;gap:20px!important;border-top:1px solid var(--line,#e1e6eb)!important;color:#83909c!important;font-size:9px!important;letter-spacing:.06em!important;text-transform:uppercase!important}
-@media(max-width:1050px){.footer-grid{grid-template-columns:1fr 1fr!important}}
-@media(max-width:700px){.footer{padding-top:46px!important}.footer-grid{grid-template-columns:1fr!important;gap:28px!important}.footer-bottom{margin-top:34px!important;flex-direction:column!important;gap:10px!important}}
-</style>
-</head>
-<body>
-<header class="nav"><a class="brand" href="/es/">Felipe Quiroz</a><div class="nav-right"><nav class="nav-center"><a href="/es/#work">Trabajo</a><a href="/es/about">Sobre mí</a><a class="active" href="/es/projects">Proyectos</a><a href="/es/initiatives">Iniciativas</a><a href="/es/blog">Blog</a></nav><a class="lang" href="/geovictoria/shift-optimizer">EN</a></div></header>
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Shift Optimizer | Felipe Quiroz</title><meta content="How Shift Optimizer moved from MVP to production at GeoVictoria, connecting workforce demand, employee availability and planning constraints." name="description"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><style>
+:root{--bg:#080a0e;--bg2:#0c0f15;--text:#f3f4f7;--muted:#939baa;--line:#252b35;--blue:#83aafa;--width:1392px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:400 14px/1.75 Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased}h1,h2,h3,p{margin:0}h1,h2,h3{font-family:"DM Sans",Inter,sans-serif;letter-spacing:-.052em;font-weight:500}img,video{display:block;max-width:100%}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.container{width:min(calc(100% - 176px),var(--width));margin-inline:auto}
+.nav{height:70px;position:sticky;top:0;z-index:60;background:rgba(7,9,13,.95);backdrop-filter:blur(18px);border-bottom:1px solid #242932}.nav-inner{height:70px;display:flex;align-items:center;gap:18px}.identity{font:700 20px/1 DM Sans,sans-serif;letter-spacing:-.06em;margin-right:auto}.nav-links{display:flex;align-items:center;gap:27px}.nav-links a{font-size:12px;color:#9ca3b0;transition:color .2s}.nav-links a:hover,.nav-links .active{color:#fff}.nav-actions{display:flex;align-items:center;gap:18px;border-left:1px solid #323843;padding-left:24px;margin-left:5px}.locale{display:inline-flex;align-items:center;gap:8px;color:#b9c0cd;font-size:12px}.touch{display:inline-flex;align-items:center;gap:8px;margin:0;padding:10px 17px;border:1px solid #fff;border-radius:999px;background:#fff;color:#111318;font:600 12px/1.4 Inter,sans-serif;white-space:nowrap;transition:background .2s,transform .2s}.touch:hover{background:#edf1f7;transform:translateY(-1px)}.mobile-toggle{display:none;background:none;border:none;color:white;padding:9px}
+.eyebrow{display:flex;align-items:center;gap:10px;color:#9da9ba;font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase}.eyebrow .dot{width:7px;height:7px;background:#80a8ff;border-radius:50%;flex-shrink:0}.section-label{font-size:10px;color:var(--blue);font-weight:600;letter-spacing:.14em;text-transform:uppercase}.inline-link{display:inline-flex;gap:11px;align-items:center;border-bottom:1px solid #627da9;padding-bottom:8px;font-size:12px;font-weight:600}.inline-link svg{transition:transform .2s}.inline-link:hover svg{transform:translate(2px,-2px)}
+.hero{padding:85px 0 0;overflow:hidden}.hero-header{border-bottom:1px solid var(--line);padding-bottom:72px}.brandline{display:flex;align-items:center;justify-content:space-between;gap:26px}.brandmark{background:#f4f6f9;border-radius:7px;padding:13px 18px;display:flex;align-items:center;justify-content:center;min-width:185px;min-height:62px}.brandmark img{width:100%;max-width:195px;max-height:49px;object-fit:contain}.brand-meta{color:#838d9d;font-size:10px;letter-spacing:.1em}.hero h1{font:500 clamp(49px,5.75vw,85px)/1.075 DM Sans,sans-serif;letter-spacing:-.07em;max-width:1240px;text-wrap:balance;margin:52px 0 25px}.hero-lead{max-width:930px;color:#a5adba;font-size:clamp(15px,1.42vw,19px);line-height:1.77}.hero-action{margin-top:32px}.hero-video{margin:48px 0 0;border:1px solid #303743;background:#10151d;border-radius:9px 9px 0 0;overflow:hidden}.video-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;color:#919cae;font-size:10px;letter-spacing:.105em;padding:16px 20px;background:#0f131b;border-bottom:1px solid #2a313e}.video-heading i{width:6px;height:6px;border-radius:50%;background:#8cb4ff;display:inline-block;margin-right:8px}.hero-video video{display:block;width:100%;aspect-ratio:16/8.7;object-fit:contain;background:#11151e}.video-footer{display:flex;justify-content:space-between;gap:20px;padding:13px 20px;color:#818c9b;font-size:10px;letter-spacing:.075em;border-top:1px solid #29313c}
+.metrics{background:#0b0e13;border-bottom:1px solid #242a34}.metrics-grid{display:grid;grid-template-columns:repeat(4,1fr)}.metric{padding:30px 20px 32px 0}.metric+.metric{border-left:1px solid #2a303a;padding-left:28px}.metric strong{display:block;font:500 35px/1.18 DM Sans,sans-serif;letter-spacing:-.055em}.metric span{display:block;color:#8d98a8;font-size:11px;margin-top:7px}
+.story{padding:118px 0 115px}.story-grid,.role-grid{display:grid;grid-template-columns:1fr 1fr;gap:12%}.story h2,.role h2,.timeline-intro h2,.product h2{font-size:clamp(35px,3.9vw,59px);line-height:1.12;margin:22px 0 0}.story-copy .lead{font-size:22px;line-height:1.56;color:#e5e8ed;font-family:DM Sans,sans-serif;letter-spacing:-.025em}.story-copy p:not(.lead){font-size:14px;line-height:1.95;color:#929ca9;margin-top:23px}
+.timeline{background:#0b0d12;border-block:1px solid var(--line)}.timeline-layout{display:grid;grid-template-columns:1fr 1fr;gap:10%}.timeline-intro{min-width:0}.timeline-intro-inner{position:sticky;top:120px;padding:130px 0 100px}.timeline-intro h2 span{color:#9ca4b0}.timeline-intro p{color:#939eae;font-size:14px;line-height:1.9;max-width:440px;margin-top:24px}.current{margin-top:55px;display:flex;align-items:center;gap:10px;color:#92a1b9;font-size:11px;letter-spacing:.1em}.current i{width:6px;height:6px;background:#8daef3;border-radius:50%}
+.timeline-list{--rail-pad:74px;--rail-axis:20px;position:relative;padding-left:var(--rail-pad);margin:75px 0 55px}.track{position:absolute;top:34px;bottom:88px;left:var(--rail-axis);width:1px;background:#3a4049;overflow:hidden}.track-fill{height:0%;width:100%;background:#d2deed;transition:height .1s linear}.step{position:relative;min-height:370px;display:flex;align-items:center;border-bottom:1px solid #292e36;padding:65px 0}.step:last-of-type{border-bottom:0}.node{position:absolute;left:calc(var(--rail-axis) - var(--rail-pad));top:50%;transform:translate(-50%,-50%);width:11px;height:11px;border-radius:50%;background:#0b0d12;border:1px solid #4c5460;transition:background .25s,box-shadow .25s}.step.active .node,.step.passed .node{background:#e0e8f2;border-color:#e0e8f2;box-shadow:0 0 0 5px #c6d6e615}.step-body{opacity:.42;transform:translateY(8px);transition:opacity .4s,transform .4s}.step.active .step-body,.step.passed .step-body{opacity:1;transform:none}.step .num{color:#8daef4;font-size:11px;font-weight:600;letter-spacing:.1em}.step h3{font-size:clamp(29px,2.9vw,44px);line-height:1.16;margin:22px 0}.step p{font-size:14px;line-height:1.95;color:#a1a9b6}.timeline-end{padding:20px 0 24px;color:#727e8e;font-size:10px;letter-spacing:.11em}
+.product{padding:120px 0}.product-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:12%;align-items:start}.product h2{max-width:560px}.product-copy p{color:#9ba5b4;font-size:15px;line-height:1.96;margin-top:25px}.product-lines{margin-top:38px;border-top:1px solid #303743}.product-line{display:grid;grid-template-columns:135px 1fr;gap:25px;border-bottom:1px solid #303743;padding:22px 0;color:#c1c7d1;font-size:13px}.product-line span:last-child{color:#8792a1}
+.role{padding:115px 0 120px;background:#0b0e13;border-top:1px solid var(--line)}.role-copy p{font-size:15px;line-height:1.95;color:#9ba5b4}.role-list{border-top:1px solid #2f3640;margin-top:30px}.role-item{border-bottom:1px solid #2f3640;padding:22px 0;display:grid;grid-template-columns:135px 1fr;gap:22px;font-size:13px}.role-item span:last-child{color:#929dab}
+.next{padding:45px 0;border-top:1px solid #29303a}.next-inner{display:flex;align-items:center;justify-content:space-between;gap:25px}.next span{color:#8993a2;font-size:12px}
+.footer{background:#07090d;color:#f6f7fb;border-top:1px solid #262a31}.footer-top{padding:76px 0;display:flex;justify-content:space-between;gap:45px}.footer-main{max-width:740px;flex:1 1 670px;min-width:0}.footer-eyebrow{font:600 11px/1.5 Inter,sans-serif;color:#8c97a7;letter-spacing:.12em;display:flex;align-items:center;gap:9px}.footer-eyebrow .dot{height:7px;width:7px;background:#2d74ff;border-radius:50%}.footer h2{font:600 clamp(33px,3.65vw,52px)/1.08 DM Sans,sans-serif;letter-spacing:-.062em;margin:22px 0}.footer h2 span{color:#71a7ff}.footer-main p{font-size:13px;line-height:1.8;color:#9a9eab;max-width:420px}.footer-email{display:inline-flex;gap:12px;align-items:center;margin-top:17px;padding-bottom:10px;border-bottom:1px solid #5b88d0;font-size:13px}.footer-nav{display:grid;grid-template-columns:repeat(2,minmax(135px,1fr));gap:36px;flex:0 0 auto}.footer-nav strong{font-size:12px;display:block;margin-bottom:21px}.footer-nav a{display:block;font-size:12px;color:#9097a3;margin-bottom:15px}.footer-bottom{border-top:1px solid #252a32;display:flex;justify-content:space-between;padding:25px 0;color:#848c98;font-size:11px}.footer-bottom .dot{width:6px;height:6px;background:#2d74ff;display:inline-block;border-radius:50%;margin-right:7px}
+@media(max-width:1100px){.container{width:calc(100% - 110px)}.nav-links{gap:16px}}
+@media(max-width:900px){.container{width:calc(100% - 60px)}.mobile-toggle{display:block}.nav-links{display:none;position:absolute;top:69px;left:0;right:0;flex-direction:column;align-items:flex-start;background:#0b0e13;border-bottom:1px solid var(--line);padding:26px 30px;gap:20px}.nav-links.open{display:flex}.nav-actions{margin-left:auto}.story-grid,.timeline-layout,.product-grid,.role-grid{grid-template-columns:1fr;gap:38px}.timeline-intro-inner{position:relative;top:auto;padding:76px 0 0}.timeline-list{--rail-pad:64px;--rail-axis:16px;margin:24px 0 50px}.step{min-height:275px}.current{display:none}.hero h1{font-size:clamp(44px,7.7vw,68px)}.brandline{flex-wrap:wrap}.product{padding:85px 0}}
+@media(max-width:600px){.container{width:calc(100% - 36px)}.identity{font-size:18px}.nav-actions{border:0;padding:0}.locale{display:none}.touch{padding:9px 12px}.hero{padding-top:55px}.hero h1{font-size:clamp(40px,10.1vw,56px);margin-top:36px}.hero-lead{font-size:14px}.hero-header{padding-bottom:46px}.brand-meta{font-size:9px}.brandmark{min-width:147px;min-height:52px;max-width:170px;padding:10px 13px}.hero-video{margin-top:30px}.video-heading,.video-footer{font-size:9px;padding:12px}.metrics-grid{grid-template-columns:repeat(2,1fr)}.metric{padding:23px 12px 25px 0}.metric+.metric{padding-left:14px}.metric:nth-child(3){padding-left:0;border-left:0;border-top:1px solid #2b3039}.metric:nth-child(4){border-top:1px solid #2b3039}.metric strong{font-size:29px}.story,.role{padding:75px 0}.story h2,.role h2,.timeline-intro h2,.product h2{font-size:clamp(35px,9vw,49px)}.timeline-list{--rail-pad:44px;--rail-axis:9px;margin:16px 0 45px}.step{min-height:260px;padding:50px 0}.step h3{font-size:30px}.step p{font-size:13px}.product{padding:75px 0}.product-line,.role-item{grid-template-columns:1fr;gap:6px}.footer-top{flex-direction:column;padding:65px 0}.footer-nav{gap:26px}.footer-bottom{flex-direction:column;gap:10px}.next-inner{align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:no-preference){.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.step-body{opacity:1;transform:none}.track-fill{transition:none}}
+
+/* V2: quiet, single-tone editorial canvas. */
+:root{--bg:#080a0e;--bg2:#080a0e}
+body,.hero,.metrics,.story,.timeline,.product,.role,.footer{background:#080a0e!important}
+.hero{padding-top:105px}
+.hero h1{font-size:clamp(48px,5.15vw,76px);max-width:1130px;margin:0 0 29px;line-height:1.1;letter-spacing:-.065em}
+.hero-header{padding-bottom:62px}
+.hero-lead{max-width:900px}
+.hero-video{margin-top:40px}
+.metrics{border-top:0}
+.role{border-top:1px solid var(--line)}
+.footer{border-top:1px solid var(--line)}
+@media(max-width:900px){.hero{padding-top:76px}.hero h1{font-size:clamp(42px,6.3vw,62px)}}
+@media(max-width:600px){.hero{padding-top:65px}.hero h1{font-size:clamp(38px,10.2vw,52px);margin-bottom:24px}.hero-header{padding-bottom:45px}.hero-video{margin-top:30px}}
+
+
+/* Public Education case: unified color system and restrained typography */
+.hero,.metrics,.story,.timeline,.institutions,.field-proof,.role{background:#080a0e!important}
+.hero{padding-top:98px}
+.public-hero-header{padding-bottom:82px}
+.hero h1{max-width:1200px;font-size:clamp(48px,5.35vw,76px);margin:28px 0 25px}
+.hero-lead{max-width:850px}
+.hero .eyebrow{color:#9ea7b6}
+.metrics{border-top:1px solid #2a303a}
+.timeline{scroll-margin-top:70px}
+.timeline .step{min-height:330px}
+.institutions{padding:112px 0 105px;border-block:1px solid #252b35}
+.institutions-head{display:grid;grid-template-columns:1fr .8fr;gap:12%;align-items:end;margin-bottom:55px}
+.institutions-head .section-label{grid-column:1/-1}
+.institutions-head h2{font:500 clamp(35px,3.9vw,58px)/1.15 "DM Sans",Inter,sans-serif;letter-spacing:-.056em}
+.institutions-head p{color:#9aa4b3;font-size:14px;line-height:1.9}
+.institution-list{border-top:1px solid #343a44}
+.institution-row{display:grid;grid-template-columns:200px 1fr auto;gap:40px;align-items:center;border-bottom:1px solid #343a44;min-height:206px;padding:34px 0}
+.institution-identity{display:flex;align-items:center;justify-content:flex-start}
+.institution-identity img{max-width:170px;max-height:95px;object-fit:contain;background:#f5f6f8;border-radius:8px;padding:15px}
+.institution-text h3{font-size:26px;letter-spacing:-.04em}
+.institution-text p{color:#9da6b3;font-size:13px;line-height:1.9;margin-top:9px;max-width:580px}
+.institution-tag{font:600 10px/1.5 Inter,sans-serif;color:#9db4da;letter-spacing:.09em;white-space:nowrap}
+.field-proof{padding:118px 0;border-bottom:1px solid #252b35}
+.field-proof-grid{display:grid;grid-template-columns:1.07fr .93fr;gap:10%;align-items:center}
+.field-image{border-radius:8px;overflow:hidden;background:#161c23}
+.field-image img{width:100%;height:auto;aspect-ratio:1.2;object-fit:cover}
+.field-text h2{font:500 clamp(35px,3.7vw,53px)/1.15 "DM Sans",Inter,sans-serif;letter-spacing:-.055em;margin:24px 0}
+.field-text p{font-size:14px;line-height:1.95;color:#9ea7b5}
+.proof-stat{display:flex;align-items:baseline;gap:18px;border-top:1px solid #353c48;margin-top:34px;padding-top:29px}
+.proof-stat strong{font:500 clamp(31px,3.6vw,49px)/1 "DM Sans",Inter,sans-serif;letter-spacing:-.055em}
+.proof-stat span{color:#8d99a9;font-size:12px}
+@media(max-width:900px){
+ .institutions-head,.field-proof-grid{grid-template-columns:1fr;gap:28px}
+ .institution-row{grid-template-columns:150px 1fr;gap:22px}
+ .institution-tag{grid-column:2}
+ .hero{padding-top:70px}
+}
+@media(max-width:600px){
+ .hero{padding-top:56px}.public-hero-header{padding-bottom:55px}
+ .hero h1{font-size:clamp(41px,10vw,54px)}
+ .institutions,.field-proof{padding:75px 0}
+ .institutions-head{margin-bottom:34px}
+ .institution-row{grid-template-columns:1fr;gap:17px;padding:28px 0}
+ .institution-tag{grid-column:1}
+ .institution-identity img{max-width:160px}
+ .field-image img{aspect-ratio:1.1}
+ .proof-stat{flex-wrap:wrap;gap:9px}
+}
+
+
+/* V2: editorial hierarchy harmonized with Virtual School Explorer V2. */
+.story h2,.timeline-intro h2,.institutions-head h2,.field-text h2,.role-light h2{
+  font-family:"DM Sans",Inter,sans-serif;
+  font-size:clamp(35px,3.5vw,52px);
+  font-weight:500;line-height:1.16;letter-spacing:-.052em;
+}
+.story h2,.timeline-intro h2{margin-top:22px}
+.story-copy .lead{font-size:clamp(18px,1.45vw,21px)}
+.story-copy p:not(.lead),.timeline-intro p,.field-text p,.institutions-head p{font-size:14px}
+.institution-text h3{font-size:24px}
+.step h3{font-size:clamp(28px,2.5vw,38px)}
+.role-light{background:#fff!important;color:#151920!important;border-top:1px solid #e5e9ef;padding:104px 0 112px}
+.role-light-head{display:grid;grid-template-columns:1.45fr .75fr;gap:10%;align-items:end;margin-bottom:65px}
+.role-light-eyebrow{display:flex;align-items:center;gap:11px;font:600 10px/1.5 Inter,sans-serif;letter-spacing:.13em;color:#788393}
+.role-light-eyebrow i{width:7px;height:7px;background:#8792a0;border-radius:50%;display:block}
+.role-light h2{margin:28px 0 0;max-width:860px}
+.role-light-head>p{color:#747f8d;font:400 14px/1.9 Inter,sans-serif;max-width:470px}
+.role-principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.role-principle{border-left:1px solid #d7dde5;min-height:245px;padding:27px 33px 15px 38px;display:flex;flex-direction:column;align-items:flex-start}
+.role-principle svg{color:#8793a2;flex:0 0 auto;margin-bottom:38px}
+.role-principle h3{font:500 clamp(19px,1.6vw,24px)/1.28 "DM Sans",Inter,sans-serif;letter-spacing:-.038em;color:#171b22;margin:0 0 15px}
+.role-principle p{font:400 13px/1.85 Inter,sans-serif;color:#788393;max-width:370px}
+.role-light + .footer{border-top:none}
+@media(max-width:900px){
+  .role-light-head{grid-template-columns:1fr;gap:20px}
+  .role-principle{padding:25px 20px;min-height:250px}
+  .role-principle h3{font-size:20px}
+}
+@media(max-width:600px){
+  .role-light{padding:74px 0 82px}
+  .role-light-head{margin-bottom:43px}
+  .role-light h2{font-size:clamp(33px,8.4vw,43px);margin-top:21px}
+  .role-principles{grid-template-columns:1fr}
+  .role-principle{min-height:0;padding:26px 0 30px 24px;border-left:1px solid #d7dde5;border-bottom:1px solid #edf0f3}
+  .role-principle svg{margin-bottom:23px}
+  .role-principle h3{font-size:21px}
+}
+
+
+/* AI education case: exactly the same desktop type scale and width as the approved public education V2. */
+.hero,.metrics,.story,.timeline,.institutions,.field-proof{background:#080a0e!important}
+.collab-index{font:600 11px/1.6 Inter,sans-serif;letter-spacing:.105em;color:#93a9d1}
+.institution-row{grid-template-columns:200px 1fr auto;min-height:165px}
+.institution-text h3{font-size:24px}
+.step{min-height:330px}
+.hero h1{max-width:1130px;font-size:clamp(48px,5.35vw,76px)}
+.hero-lead{max-width:860px}
+.role-light h2{font-size:clamp(35px,3.5vw,52px)}
+@media(max-width:900px){.institution-row{grid-template-columns:155px 1fr}.institution-tag{grid-column:2}}
+@media(max-width:600px){.institution-row{grid-template-columns:1fr;min-height:0}.institution-tag{grid-column:1}.hero h1{font-size:clamp(41px,10vw,54px)}}
+
+
+/* Strategic Partnerships: same design system as AI Transformation and Public Education. */
+.hero,.metrics,.story,.timeline,.ecosystem,.field-proof{background:#080a0e!important}
+.hero h1{font-size:clamp(48px,5.35vw,76px);max-width:1100px}
+.hero-lead{max-width:850px}
+.ecosystem{padding:112px 0 105px;border-top:1px solid #252b35;border-bottom:1px solid #252b35;scroll-margin-top:70px}
+.ecosystem-heading{display:grid;grid-template-columns:1.2fr .8fr;gap:13%;align-items:end;margin-bottom:55px}
+.ecosystem-heading h2{font:500 clamp(35px,3.5vw,52px)/1.16 "DM Sans",Inter,sans-serif;letter-spacing:-.052em;margin:24px 0 0}
+.ecosystem-heading h2 span{color:#99a3b0}
+.ecosystem-heading p{color:#9da6b4;font-size:14px;line-height:1.92;max-width:430px}
+.ecosystem-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid #2d333d;border-left:1px solid #2d333d}
+.ecosystem-logo{height:138px;min-width:0;display:flex;align-items:center;justify-content:center;padding:22px;background:#0c0f14;border-right:1px solid #2d333d;border-bottom:1px solid #2d333d;transition:background .2s}
+.ecosystem-logo:hover{background:#151a23}
+.ecosystem-logo img{max-height:62px;max-width:100%;height:auto;width:auto;object-fit:contain;filter:grayscale(1) invert(1) brightness(1.18) contrast(1.04);opacity:.96;transition:filter .25s,transform .25s,opacity .25s}
+.ecosystem-logo:hover img{filter:none;opacity:1;transform:scale(1.035)}
+.ecosystem-bottom{display:flex;justify-content:space-between;gap:20px;padding-top:23px;font:600 10px/1.6 Inter,sans-serif;color:#828d9e;letter-spacing:.11em}
+.field-proof{padding:112px 0 116px;border-bottom:1px solid #252b35}
+.field-proof-head{display:grid;grid-template-columns:1.15fr .75fr;gap:12%;align-items:end;margin-bottom:46px}
+.field-proof-head h2{font:500 clamp(35px,3.5vw,52px)/1.16 "DM Sans",Inter,sans-serif;letter-spacing:-.052em;margin-top:24px;max-width:800px}
+.field-proof-head p{font-size:14px;color:#99a5b5;line-height:1.92}
+.partnership-photos{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.partnership-photo{margin:0;min-width:0}
+.partnership-photo img{height:auto;aspect-ratio:1.34;width:100%;object-fit:cover;border-radius:7px;background:#171c24}
+.partnership-photo figcaption{color:#8894a4;font-size:11px;letter-spacing:.02em;padding:14px 0}
+.field-quote{border-top:1px solid #313743;padding:35px 0 0;margin:45px 0 0;max-width:960px;color:#d8dce4;font:400 clamp(20px,2.15vw,29px)/1.5 "DM Sans",Inter,sans-serif;letter-spacing:-.03em}
+.field-quote span{display:block;color:#9da6b4;font:400 12px/1.7 Inter,sans-serif;letter-spacing:0;margin-top:22px}
+.timeline .step{min-height:330px}
+@media(max-width:900px){.ecosystem-heading,.field-proof-head{grid-template-columns:1fr;gap:23px}.ecosystem-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.partnership-photos{gap:14px}}
+@media(max-width:600px){.ecosystem,.field-proof{padding:76px 0}.ecosystem-heading{margin-bottom:30px}.ecosystem-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ecosystem-logo{height:118px;padding:17px}.ecosystem-logo img{max-height:55px}.ecosystem-bottom{flex-wrap:wrap}.partnership-photos{grid-template-columns:1fr;gap:24px}.field-quote{margin-top:34px;padding-top:28px}.hero h1{font-size:clamp(41px,10vw,54px)}}
+
+/* Tether Studio / editorial case study with approved shared visual scale */
+.hero,.metrics,.story,.timeline,.studio-image-section,.studio-outcome{background:#080a0e!important}
+.hero h1{font-size:clamp(48px,5.35vw,76px);max-width:1150px}
+.hero-lead{max-width:900px}
+.timeline .step{min-height:305px}
+.studio-image-section{padding:110px 0 95px;border-top:1px solid #252b35;border-bottom:1px solid #252b35}
+.studio-image-head{display:grid;grid-template-columns:1.15fr .85fr;gap:12%;align-items:end;margin-bottom:43px}
+.studio-image-head h2,.studio-outcome h2{font:500 clamp(35px,3.5vw,52px)/1.16 "DM Sans",Inter,sans-serif;letter-spacing:-.052em;margin-top:23px;max-width:790px}
+.studio-image-head p,.studio-outcome-copy p{font-size:14px;color:#a3aab6;line-height:1.94}
+.studio-image{margin:0;border:1px solid #2b313b;border-radius:8px;overflow:hidden;background:#12171d}
+.studio-image img{width:100%;height:auto;max-height:620px;object-fit:cover;object-position:center}
+.studio-image figcaption{padding:15px 20px;border-top:1px solid #2b313b;color:#8895a5;font-size:10px;letter-spacing:.12em}
+.studio-outcome{padding:110px 0 115px;border-bottom:1px solid #252b35}
+.studio-outcome-grid{display:grid;grid-template-columns:1fr 1fr;gap:12%}
+.studio-outcome-stats{display:grid;grid-template-columns:1fr 1fr;margin:40px 0}
+.studio-outcome-stats>div+div{border-left:1px solid #313744;padding-left:33px}
+.studio-outcome-stats strong{display:block;font:500 clamp(36px,3.8vw,56px)/1 "DM Sans",Inter,sans-serif;letter-spacing:-.06em}
+.studio-outcome-stats span{display:block;color:#8995a3;font-size:12px;margin-top:13px}
+@media(max-width:900px){.studio-image-head,.studio-outcome-grid{grid-template-columns:1fr;gap:26px}}
+@media(max-width:600px){.hero h1{font-size:clamp(41px,10vw,54px)}.studio-image-section,.studio-outcome{padding:76px 0}.studio-image img{max-height:430px}.studio-outcome-stats{margin:32px 0}.studio-outcome-stats>div+div{padding-left:22px}}
+
+
+/* Shift Change Workflow — match the approved Tether case-study scale exactly. */
+.hero,.metrics,.story,.guardrails,.timeline,.studio-image-section{background:#080a0e!important}
+.hero h1{font-size:clamp(48px,5.35vw,76px);max-width:1140px}
+.hero-lead{max-width:880px}
+.guardrails{padding:108px 0 116px;border-top:1px solid #252b35;border-bottom:1px solid #252b35}
+.guardrails-head{display:grid;grid-template-columns:1.1fr .9fr;gap:12%;align-items:end;margin-bottom:54px}
+.guardrails-head h2{font:500 clamp(35px,3.5vw,52px)/1.14 "DM Sans",Inter,sans-serif;letter-spacing:-.052em;margin-top:24px}
+.guardrails-head h2 span{color:#9ca5b2}
+.guardrails-head p{font-size:14px;color:#9da7b5;line-height:1.95;max-width:520px}
+.guardrails-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid #303743;border-bottom:1px solid #303743}
+.guardrail{padding:28px 28px 35px 0;min-height:290px}
+.guardrail+.guardrail{border-left:1px solid #303743;padding-left:28px}
+.guardrail-no{display:block;color:#91a9d5;font:600 10px/1.5 Inter,sans-serif;letter-spacing:.12em}
+.guardrail strong{display:block;font:500 clamp(33px,3.6vw,54px)/1.1 "DM Sans",Inter,sans-serif;letter-spacing:-.06em;margin-top:26px}
+.guardrail h3{font:500 18px/1.35 "DM Sans",Inter,sans-serif;letter-spacing:-.03em;margin-top:16px}
+.guardrail p{color:#919ba9;font-size:12px;line-height:1.85;margin-top:13px;max-width:270px}
+.timeline .step{min-height:325px}
+.geo-workflow-photo img{width:100%;height:auto;max-height:690px;object-fit:contain;object-position:center;background:#10151d}
+.markets{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-top:30px;padding-top:25px;border-top:1px solid #323945}
+.markets p{color:#c4cbd6;font-size:13px}
+.markets p i{display:inline-block;width:4px;height:4px;margin:0 14px 3px;background:#677587;border-radius:50%}
+@media(max-width:900px){.guardrails-head{grid-template-columns:1fr;gap:22px}.guardrails-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.guardrail:nth-child(3){border-left:0;padding-left:0;border-top:1px solid #303743}.guardrail:nth-child(4){border-top:1px solid #303743}.markets{flex-direction:column;align-items:flex-start}}
+@media(max-width:600px){.hero h1{font-size:clamp(41px,10vw,54px)}.guardrails{padding:76px 0}.guardrails-grid{grid-template-columns:1fr}.guardrail,.guardrail+.guardrail,.guardrail:nth-child(3){min-height:0;padding:24px 0 30px;border-left:0;border-top:1px solid #303743}.guardrail:first-child{border-top:0}.guardrail strong{margin-top:15px;font-size:42px}.guardrail h3{margin-top:11px}.markets p{line-height:2.1}.markets p i{margin:0 6px 3px}}
+
+
+/* Shift Optimizer: aligned with the last published GeoVictoria editorial system */
+.hero,.metrics,.story,.optimizer-inputs,.timeline,.studio-image-section,.optimizer-outcome{background:#080a0e!important}
+.hero h1{max-width:1180px;font-size:clamp(48px,5.35vw,76px)}.hero-lead{max-width:850px}
+.optimizer-inputs{padding:105px 0 113px;border-block:1px solid #252b35}
+.optimizer-inputs-head{display:grid;grid-template-columns:1.1fr .9fr;gap:12%;align-items:end;margin-bottom:55px}
+.optimizer-inputs-head h2,.optimizer-outcome h2{font:500 clamp(35px,3.5vw,52px)/1.16 "DM Sans",Inter,sans-serif;letter-spacing:-.052em;margin-top:24px}
+.optimizer-inputs-head h2 span,.optimizer-outcome h2 span{color:#98a2b1}
+.optimizer-inputs-head p,.optimizer-outcome p{font-size:14px;line-height:1.95;color:#9ca6b4}
+.optimizer-inputs-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #303641}
+.optimizer-input{border-left:1px solid #303641;padding:29px 32px 13px 34px;min-height:246px}
+.optimizer-input:first-child{border-left:none;padding-left:0}
+.input-index{font-size:11px;letter-spacing:.095em;color:#8daae0;font-weight:600}
+.optimizer-input h3{font:500 clamp(20px,1.8vw,26px)/1.28 "DM Sans",Inter,sans-serif;letter-spacing:-.04em;margin:49px 0 17px}
+.optimizer-input p{font-size:13px;color:#98a3b2;line-height:1.83;max-width:360px}
+.optimizer-product{border-top:1px solid #252b35}
+.optimizer-shot{border:1px solid #2e3440;border-radius:9px;overflow:hidden;margin:0;background:#121720}
+.optimizer-shot-frame{min-height:360px;max-height:720px;display:flex;align-items:center;justify-content:center;padding:23px;background:#f5f6f8}
+.optimizer-shot img{display:block;max-width:100%;width:auto;height:auto;max-height:675px;object-fit:contain}
+.optimizer-shot figcaption{display:flex;justify-content:space-between;gap:16px;padding:16px 20px;border-top:1px solid #303641;font:600 10px/1.6 Inter,sans-serif;letter-spacing:.1em;color:#8e9bab}
+.optimizer-outcome{padding:110px 0 117px;border-top:1px solid #252b35;border-bottom:1px solid #252b35}
+.optimizer-outcome-grid{display:grid;grid-template-columns:.94fr 1.06fr;gap:13%}
+.optimizer-outcome-grid p{margin-bottom:18px}
+.outcome-stats{display:grid;grid-template-columns:1fr 1fr;margin-top:51px}
+.outcome-stats>div{padding-right:22px}.outcome-stats>div+div{padding-left:30px;border-left:1px solid #303641}
+.outcome-stats strong{display:block;font:500 clamp(26px,3.2vw,42px)/1.18 "DM Sans",Inter,sans-serif;letter-spacing:-.05em}
+.outcome-stats span{display:block;margin-top:10px;color:#919cab;font-size:12px}
+.timeline .step{min-height:330px}
+@media(max-width:900px){.optimizer-inputs-head,.optimizer-outcome-grid{grid-template-columns:1fr;gap:25px}.optimizer-input{padding:25px 20px}.optimizer-input h3{margin-top:36px}.optimizer-shot-frame{min-height:250px}}
+@media(max-width:600px){.hero h1{font-size:clamp(41px,10vw,54px)}.optimizer-inputs,.optimizer-outcome{padding:75px 0}.optimizer-inputs-grid{grid-template-columns:1fr}.optimizer-input{min-height:auto;padding:28px 0 30px!important;border-left:0;border-bottom:1px solid #303641}.optimizer-input h3{margin-top:24px}.optimizer-shot-frame{padding:9px;min-height:180px}.optimizer-shot figcaption{flex-wrap:wrap}.outcome-stats{margin-top:30px}.outcome-stats strong{font-size:26px}}
+</style><link rel="canonical" href="https://felipequirozp.cl/es/geovictoria/shift-optimizer"/><link rel="alternate" hreflang="en" href="https://felipequirozp.cl/geovictoria/shift-optimizer"/><link rel="alternate" hreflang="es" href="https://felipequirozp.cl/es/geovictoria/shift-optimizer"/></head><body><header class="nav"><div class="container nav-inner"><a class="identity" href="/es/">Felipe Quiroz</a><nav class="nav-links" id="nav-links"><a href="/es/#work">Trabajo</a><a href="/es/about">Sobre mí</a><a aria-current="page" class="active" href="/es/projects">Proyectos</a><a href="/es/initiatives">Iniciativas</a><a href="/es/blog">Blog</a></nav><div class="nav-actions"><a class="locale" href="/geovictoria/shift-optimizer" hreflang="en">EN <svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="15"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a class="touch" href="mailto:felipe@lowsignal.cl">Hablemos <svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="15"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div><button aria-controls="nav-links" aria-expanded="false" aria-label="Open navigation" class="mobile-toggle" id="mobile-toggle"><svg fill="none" height="22" stroke="currentColor" stroke-width="1.7" viewbox="0 0 24 24" width="22"><path d="M3 7h18M3 12h18M3 17h18"></path></svg></button></div></header>
 <main>
-<section class="hero"><div class="shell"><div class="hero-top"><a class="project-logo" href="https://www.geovictoria.com" target="_blank" rel="noopener noreferrer" aria-label="GeoVictoria"><img src="/logos/logo-geovictoria.png" alt="GeoVictoria"></a><div class="hero-meta"><span>B2B SaaS</span><span>Workforce Management</span><span>Producto</span></div></div><h1>Llevando la optimización de turnos desde MVP a producción.</h1><div class="hero-bottom"><p class="hero-copy">Un producto de optimización para operaciones complejas de workforce, combinando demanda, disponibilidad y restricciones operativas para apoyar mejores decisiones de dotación.</p><div class="role-box"><strong>Product Manager</strong><span>GeoVictoria<br>Julio 2026 — Presente</span></div></div></div></section>
-<section class="context"><div class="shell context-grid"><div class="context-item"><strong>B2B SaaS</strong><span>Modelo de negocio</span></div><div class="context-item"><strong>MVP → Producción</strong><span>Etapa de producto</span></div><div class="context-item"><strong>Pilotos enterprise</strong><span>Modelo de validación</span></div><div class="context-item"><strong>LATAM</strong><span>Contexto operacional</span></div></div></section>
-<section class="section"><div class="shell two-col reveal"><div><div class="kicker">Problema</div></div><div><h2>Planificar turnos es un problema de restricciones, no de calendario.</h2><p>Los equipos operativos deben equilibrar al mismo tiempo demanda, disponibilidad de colaboradores, reglas laborales, requerimientos de cobertura y excepciones del mundo real. Un planificador que ignore cualquiera de esas capas rápidamente genera conflictos, correcciones manuales o brechas de dotación.</p><p>El desafío de producto era convertir esa complejidad en una experiencia de apoyo a decisiones que fuera entendible para planificadores y suficientemente robusta para operaciones enterprise.</p></div></div></section>
-<section class="section soft"><div class="shell reveal"><div class="kicker">Lógica de producto</div><h2>Tres inputs estructuran el modelo de optimización.</h2><div class="logic-grid"><article class="logic-card"><span>01 / Demanda</span><h3>Lo que necesita la operación.</h3><p>Cobertura y requerimientos de dotación por día, turno y contexto operativo.</p></article><article class="logic-card"><span>02 / Disponibilidad</span><h3>Quién realmente puede trabajar.</h3><p>Disponibilidad de colaboradores, ausencias y restricciones prácticas sobre asignaciones.</p></article><article class="logic-card"><span>03 / Restricciones</span><h3>Lo que no se puede romper.</h3><p>Reglas operativas, requerimientos de descanso y otras condiciones que hacen válido un turno.</p></article></div></div></section>
-<section class="section"><div class="shell role-grid reveal"><div><div class="kicker">Mi rol</div><h2>Conectando decisiones de producto con la realidad operacional.</h2><p>Trabajo entre discovery, definición de reglas, priorización, validación de usabilidad y coordinación con ingeniería para llevar Optimizador de Turnos desde MVP hacia producción y un uso comercial más amplio.</p><div class="role-list"><div class="role-item"><strong>Discovery</strong><span>Entender workflows de clientes, dolores y restricciones de planificación.</span></div><div class="role-item"><strong>Definición de reglas</strong><span>Traducir condiciones operativas en lógica de producto y validaciones.</span></div><div class="role-item"><strong>Priorización</strong><span>Equilibrar valor para clientes, impacto de negocio y factibilidad técnica.</span></div><div class="role-item"><strong>Validación</strong><span>Probar usabilidad y valor del producto mediante pilotos enterprise reales.</span></div></div></div><aside class="role-aside"><strong>Product Manager</strong><span>Julio 2026 — Presente<br><br>Planificador Inteligente · Optimizador de Turnos · Flujo de Cambio de Turnos</span></aside></div></section>
-<section class="section soft"><div class="shell validation-grid reveal"><div class="validation-media"><img src="/images/geo-shift-optimizer.webp" alt="Validación de producto de Optimizador de Turnos"></div><div><div class="kicker">Validación</div><h2>Los pilotos enterprise son parte del loop de producto.</h2><p>El producto se valida con equipos operativos reales, usando pilotos para probar reglas, usabilidad y si el optimizador efectivamente apoya mejores decisiones de planificación en la práctica.</p><p>Ese feedback alimenta la transición desde MVP hacia un producto listo para producción y ayuda a conectar decisiones de producto con valor comercial.</p><div class="chips"><span>Pilotos enterprise</span><span>Validación con clientes</span><span>Reglas operativas</span><span>Usabilidad</span><span>Valor comercial</span></div></div></div></section>
-<section class="closing"><div class="shell closing-inner"><div><h2>Parte de un sistema más amplio de productos de workforce.</h2><p>Explora el caso de GeoVictoria o vuelve al portafolio completo de proyectos.</p></div><div class="closing-actions"><a href="/es/geovictoria">GeoVictoria ↗</a><a class="secondary" href="/es/projects">Todos los proyectos ↗</a></div></div></section>
+<section class="hero"><div class="container"><div class="hero-header public-hero-header">
+<div class="eyebrow reveal"><span class="dot"></span>GEOVICTORIA / SAAS B2B / PRODUCTO</div>
+<h1 class="reveal">Llevando la optimización de turnos desde MVP a producción.</h1>
+<p class="hero-lead reveal">Shift Optimizer ayuda a los equipos de planificación a equilibrar demanda de personal, disponibilidad de colaboradores y reglas operativas. El desafío fue convertir un MVP prometedor en una herramienta confiable para operaciones empresariales reales.</p>
+<div class="hero-action reveal"><a class="inline-link" href="#journey">Explorar la evolución del producto <svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="15"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div>
+</div></div></section>
+<section class="metrics"><div class="container metrics-grid">
+<div class="metric"><strong>MVP → Prod.</strong><span>evolución del producto</span></div>
+<div class="metric"><strong>3</strong><span>variables de planificación</span></div>
+<div class="metric"><strong>B2B SaaS</strong><span>gestión de personal</span></div>
+<div class="metric"><strong>LATAM</strong><span>validación empresarial</span></div>
+</div></section>
+<section class="story"><div class="container story-grid">
+<div class="reveal"><span class="section-label">EL PROBLEMA</span><h2>Planificar turnos es un ejercicio de equilibrio, no solo un calendario.</h2></div>
+<div class="story-copy reveal"><p class="lead">Una buena planificación debe funcionar para el negocio, los colaboradores y las reglas que los conectan.</p>
+<p>Los equipos operativos equilibran demanda y cobertura, disponibilidad, requisitos laborales y excepciones reales. Optimizar una variable sin considerar las demás puede crear nuevos problemas.</p>
+<p>El desafío consistió en transformar esa complejidad en un producto de apoyo a decisiones que los planificadores pudieran entender, probar y utilizar en producción.</p></div>
+</div></section>
+<section class="optimizer-inputs"><div class="container">
+<div class="optimizer-inputs-head reveal"><div><span class="section-label">LÓGICA DEL PRODUCTO / TRES VARIABLES</span><h2>Tres variables.<br/><span>Una planificación viable.</span></h2></div><p>La optimización solo es útil cuando el producto considera lo que necesita la operación, quién puede trabajar y las condiciones que hacen válida cada asignación.</p></div>
+<div class="optimizer-inputs-grid">
+<article class="optimizer-input reveal"><span class="input-index">01 / DEMANDA</span><h3>Lo que necesita el negocio.</h3><p>Requerimientos de cobertura y dotación según la operación, el día y el turno.</p></article>
+<article class="optimizer-input reveal"><span class="input-index">02 / DISPONIBILIDAD</span><h3>Quién puede trabajar realmente.</h3><p>Disponibilidad de colaboradores, ausencias y condiciones reales para asignar turnos.</p></article>
+<article class="optimizer-input reveal"><span class="input-index">03 / RESTRICCIONES</span><h3>Lo que debe respetar la planificación.</h3><p>Descansos, reglas operativas y otras condiciones que mantienen viable una planificación.</p></article>
+</div></div></section>
+<section class="timeline" id="journey"><div class="container timeline-layout">
+<div class="timeline-intro"><div class="timeline-intro-inner reveal"><span class="section-label">EVOLUCIÓN DEL PRODUCTO / 01 A 04</span>
+<h2>From early promise to <span>real operations.</span></h2>
+<p>Convertir un optimizador en un producto de producción requirió algo más que desarrollar un algoritmo: conectar necesidades de usuarios, reglas, validación y ejecución.</p>
+<div aria-hidden="true" class="current"><i></i><span id="current-label">01 / DESCUBRIMIENTO</span></div></div></div>
+<div aria-label="Product development journey" class="timeline-list"><div aria-hidden="true" class="track"><div class="track-fill" id="track-fill"></div></div>
+<article class="step active" data-step="0"><span aria-hidden="true" class="node"></span><div class="step-body"><span class="num">01 / DESCUBRIMIENTO</span><h3>Entender la operación.</h3><p>Trabajar con los clientes para entender dónde falla la planificación manual y qué debería resolver una recomendación útil.</p></div></article>
+<article class="step" data-step="1"><span aria-hidden="true" class="node"></span><div class="step-body"><span class="num">02 / REGLAS</span><h3>Convertir restricciones en lógica.</h3><p>Incorporar requisitos y excepciones operativas en la forma en que el producto evalúa y sugiere asignaciones.</p></div></article>
+<article class="step" data-step="2"><span aria-hidden="true" class="node"></span><div class="step-body"><span class="num">03 / PILOTOS</span><h3>Validar con equipos reales.</h3><p>Usar pilotos empresariales para probar usabilidad, decisiones de planificación y aspectos del modelo que necesitan ajustes.</p></div></article>
+<article class="step" data-step="3"><span aria-hidden="true" class="node"></span><div class="step-body"><span class="num">04 / PRODUCCIÓN</span><h3>Convertirlo en una solución operativa.</h3><p>Priorizar los cambios necesarios para superar el MVP y ofrecer una experiencia de planificación más confiable y consistente.</p></div></article>
+<div class="timeline-end">DESCUBRIMIENTO / REGLAS / PILOTOS / PRODUCCIÓN</div></div></div></section>
+<section class="studio-image-section optimizer-product"><div class="container">
+<div class="studio-image-head reveal"><div><span class="section-label">EL PRODUCTO REAL</span><h2>Probado frente a la complejidad de la planificación real.</h2></div><p>El optimizador se perfeccionó mediante pilotos con equipos operativos. Sus comentarios ayudaron a tomar decisiones sobre usabilidad, gestión de reglas y preparación para producción.</p></div>
+<figure class="optimizer-shot reveal"><div class="optimizer-shot-frame"><img alt="Actual GeoVictoria Shift Optimizer product interface" loading="lazy" src="https://felipequirozp.cl/images/geo-shift-optimizer.webp"/></div><figcaption><span>GEOVICTORIA / OPTIMIZADOR DE TURNOS</span><span>CAPTURA REAL DEL PRODUCTO</span></figcaption></figure>
+</div></section>
+<section class="optimizer-outcome"><div class="container optimizer-outcome-grid">
+<div class="reveal"><span class="section-label">DEL MVP A PRODUCCIÓN</span><h2>No solo una mejor optimización.<br/><span>Mejores decisiones.</span></h2></div>
+<div class="reveal"><p>El propósito no era reemplazar a quien planifica los turnos, sino ofrecerle un mejor punto de partida considerando demanda, disponibilidad y condiciones operativas.</p><p>Llegar a producción implicó equilibrar la capacidad del algoritmo con la claridad y confiabilidad necesarias para que los equipos adoptaran la herramienta.</p><div class="outcome-stats"><div><strong>MVP</strong><span>punto de partida</span></div><div><strong>Production</strong><span>destino operativo</span></div></div></div>
+</div></section>
+<section aria-labelledby="role-heading" class="role role-light"><div class="container"><div class="role-light-head reveal"><div>
+<span class="role-light-eyebrow"><i></i>MI ROL / PRODUCT MANAGER</span><h2 id="role-heading">Conectando decisiones de producto con la realidad operativa.</h2></div>
+<p>En GeoVictoria contribuí a llevar Shift Optimizer del MVP a producción, trabajando en discovery, definición de reglas, priorización y pilotos empresariales junto a equipos de producto, ingeniería y atención a clientes.</p></div>
+<div class="role-principles">
+<article class="role-principle reveal"><svg aria-hidden="true" fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.65" viewbox="0 0 24 24" width="26"><circle cx="8" cy="8" r="3"></circle><circle cx="17" cy="9" r="2.5"></circle><path d="M2.7 20v-2.1a5.3 5.3 0 0 1 10.6 0V20M14.4 14.1a4.5 4.5 0 0 1 6.9 3.8V20"></path></svg><h3>Comprender cómo trabajan los clientes.</h3><p>Entender cómo planifican, qué restricciones importan y dónde la experiencia actual genera dificultades.</p></article>
+<article class="role-principle reveal"><svg aria-hidden="true" fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.65" viewbox="0 0 24 24" width="26"><path d="m12 3 9 5-9 5-9-5 9-5ZM3 12l9 5 9-5M3 16l9 5 9-5"></path></svg><h3>Convertir la complejidad en producto.</h3><p>Conectar necesidades del negocio y reglas operativas con prioridades, procesos y decisiones de ingeniería.</p></article>
+<article class="role-principle reveal"><svg aria-hidden="true" fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.65" viewbox="0 0 24 24" width="26"><rect height="14" rx="2" width="18" x="3" y="7"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"></path></svg><h3>Validar antes de escalar.</h3><p>Coordinar aprendizajes de pilotos empresariales para mejorar usabilidad, preparación del producto y despliegue.</p></article>
+</div></div></section>
 </main>
-<footer class="footer"><div class="footer-grid"><div><div class="footer-eyebrow">Producto · Growth · Operaciones · Company building</div><div class="footer-brand">Felipe Quiroz</div><div class="footer-copy">Construyendo productos, sistemas de crecimiento y compañías entre tecnología y negocio.</div></div><div class="footer-col"><strong>Explorar</strong><a href="/es/#work">Trabajo</a><a href="/es/about">Sobre mí</a><a href="/es/projects">Proyectos</a><a href="/es/initiatives">Iniciativas</a><a href="/es/blog">Blog</a></div><div class="footer-col"><strong>Social</strong><a href="https://www.linkedin.com/in/felipequirozp" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/felipequirozp" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.instagram.com/felipe_quirozp/" target="_blank" rel="noopener noreferrer">Instagram</a></div><div class="footer-col"><strong>Contacto</strong><a href="mailto:felipe@lowsignal.cl">Email</a><a href="https://calendly.com/felipe-lowsignal/30min" target="_blank" rel="noopener noreferrer">Calendly</a></div></div><div class="footer-bottom"><div>© 2026 Felipe Quiroz</div><div>Santiago, Chile</div></div></footer>
-<script>const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.1,rootMargin:'0px 0px -30px'});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));</script>
-<script src="/mobile-nav.js" defer></script></body></html>
+<footer class="footer"><div class="container"><div class="footer-top"><div class="footer-main"><div class="footer-eyebrow"><span class="dot"></span>CONVERSEMOS</div><h2>Las buenas ideas empiezan<br/>con una <span>conversación.</span></h2><p>Ideas, oportunidades, problemas interesantes o una buena conversación sobre lo que viene.</p><a class="footer-email" href="mailto:felipe@lowsignal.cl">felipe@lowsignal.cl <svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="15"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div><div class="footer-nav"><div><strong>Explorar</strong><a href="/es/#work">Trabajo</a><a href="/es/about">Sobre mí</a><a href="/es/projects">Proyectos</a><a href="/es/initiatives">Iniciativas</a><a href="/es/blog">Blog</a></div><div><strong>Conectar</strong><a href="https://www.linkedin.com/in/felipequirozp/" rel="noopener noreferrer" target="_blank">LinkedIn <svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="15"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a href="https://github.com/felipequirozp" rel="noopener noreferrer" target="_blank">GitHub <svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="15"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><a href="https://www.instagram.com/felipe_quirozp/" rel="noopener noreferrer" target="_blank">Instagram <svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="15"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div></div></div><div class="footer-bottom"><span>© 2026 Felipe Quiroz.</span><span><span class="dot"></span>Hecho en Santiago, Chile.</span></div></div></footer>
+<script>
+const navBtn=document.getElementById('mobile-toggle'),navMenu=document.getElementById('nav-links');
+navBtn?.addEventListener('click',()=>{const open=navMenu.classList.toggle('open');navBtn.setAttribute('aria-expanded',String(open))});
+navMenu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navMenu.classList.remove('open');navBtn.setAttribute('aria-expanded','false')}));
+const visible=[...document.querySelectorAll('.reveal')];
+if('IntersectionObserver'in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+const io=new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}},{threshold:.06});visible.forEach(el=>io.observe(el));
+}else visible.forEach(el=>el.classList.add('visible'));
+(()=>{const steps=[...document.querySelectorAll('.step')],track=document.querySelector('.track'),fill=document.getElementById('track-fill'),label=document.getElementById('current-label');if(!track||!fill)return;let scheduled=false;const labels=['01 / DESCUBRIMIENTO','02 / REGLAS','03 / PILOTOS','04 / PRODUCCIÓN'];function update(){scheduled=false;const pivot=Math.min(innerHeight*.5,450);let active=0;steps.forEach((s,i)=>{if(s.getBoundingClientRect().top<=pivot)active=i});steps.forEach((s,i)=>{s.classList.toggle('active',i===active);s.classList.toggle('passed',i<active)});const rect=track.getBoundingClientRect();fill.style.height=Math.max(0,Math.min(100,(pivot-rect.top)/rect.height*100))+'%';label.textContent=labels[active]}function schedule(){if(!scheduled){scheduled=true;requestAnimationFrame(update)}}addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule,{passive:true});schedule()})();
+</script></body></html>
