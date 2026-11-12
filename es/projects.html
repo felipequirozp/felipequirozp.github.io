@@ -211,6 +211,10 @@ html,body{background:#080a0e;color:#f3f4f7}
 .projects-grid .project-card .card-meta,.projects-grid .project-card .card-heading{flex-shrink:0}
 .projects-grid .project-card>p{flex:0 0 auto;margin-bottom:17px;min-height:0}
 .projects-grid .project-card .card-outcome{margin-top:auto;flex-shrink:0}
+
+/* Scroll-triggered entrances, consistent with Initiatives. No animation when reduced motion is preferred. */
+@media(prefers-reduced-motion:no-preference){html.projects-motion .project-reveal{opacity:0;transform:translateY(16px);transition:opacity .64s ease,transform .64s cubic-bezier(.2,.7,.2,1)}html.projects-motion .project-reveal.is-visible{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.project-reveal{opacity:1!important;transform:none!important;transition:none!important}}
 </style><link rel="canonical" href="/projects"/><link rel="alternate" hreflang="en" href="/projects"/><link rel="alternate" hreflang="es" href="/es/projects"/><link rel="icon" type="image/png" href="/favicon.png"><style id="site-shared-nav-footer-20261111">
 /* Single site navigation and footer system — consistent with /blog */
 .site-nav{--sn-bg:rgba(7,9,13,.95);--sn-fg:#f6f7f9;--sn-sub:#929ba9;--sn-border:#292d36;--sn-cta-bg:#fff;--sn-cta-fg:#101115;position:sticky!important;top:0!important;left:auto!important;right:auto!important;z-index:9999!important;display:block!important;width:100%!important;height:auto!important;padding:0!important;margin:0!important;background:var(--sn-bg)!important;border-bottom:1px solid var(--sn-border)!important;backdrop-filter:blur(18px);box-shadow:none!important;color:var(--sn-fg)!important}
@@ -303,4 +307,14 @@ html,body{background:#080a0e;color:#f3f4f7}
 <script>const b=document.getElementById('mobile-toggle'),n=document.getElementById('nav-links');b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',String(o))});const buttons=[...document.querySelectorAll('.filter')],cards=[...document.querySelectorAll('.project-card')];buttons.forEach(btn=>btn.addEventListener('click',()=>{const filter=btn.dataset.filter;let shown=0;buttons.forEach(x=>{const on=x===btn;x.classList.toggle('active',on);x.setAttribute('aria-pressed',String(on))});cards.forEach(x=>{const visible=filter==='all'||x.dataset.cat.split(' ').includes(filter);x.hidden=!visible;if(visible)shown++});document.getElementById('count').textContent=String(shown);document.getElementById('empty').style.display=shown?'none':'block';}));
 // Interactive editorial code mockup. Never changes actual product content.
 
+
+/* Reveal content while scrolling; preserve native touch scrolling and project filtering. */
+(()=>{
+ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;
+ const targets=document.querySelectorAll('.opening-top,.v6-copy,.projects-grid .project-card,.footer-main,.footer-nav');
+ targets.forEach(el=>el.classList.add('project-reveal'));
+ document.documentElement.classList.add('projects-motion');
+ const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(!entry.isIntersecting)return;entry.target.classList.add('is-visible');observer.unobserve(entry.target);});},{rootMargin:'0px 0px -8% 0px',threshold:0.08});
+ targets.forEach(el=>observer.observe(el));
+})();
 </script></body></html>
