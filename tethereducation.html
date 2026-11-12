@@ -174,7 +174,6 @@ body,main,.hero,.section,.section.soft{background:#07090d!important}
 .site-footer .footer-bottom{flex-direction:column!important;align-items:flex-start!important;gap:10px!important}
 }
 
-/* Exact same solid navigation tone as the portfolio's GeoVictoria page */
 .site-nav{--sn-bg:#07090d!important}
 </style>
 <style id="tether-page-polish">
@@ -262,6 +261,30 @@ body,main,.hero,.section,.section.soft{background:#07090d!important}
 .hero-new-actions a,.tether-work .work-action,.site-nav .locale,.site-nav .touch{gap:9px}
 .hero-new-actions a .arrow-icon,.tether-work .work-action .arrow-icon,.site-nav .arrow-icon{display:inline-block;flex:none;width:15px;height:15px;vertical-align:middle;transition:transform .2s ease}
 .hero-new-actions a:hover .arrow-icon,.tether-work .work-action:hover .arrow-icon,.site-nav a:hover .arrow-icon{transform:translate(2px,-2px)}
+
+/* Tether: match GeoVictoria navigation and pale scrollytelling section */
+.site-nav{--sn-bg:#07090d!important}
+.tether-work{background:#f6f7f9!important;color:#111317!important;border-color:#e0e5eb!important}
+.tether-work .work-head .kicker{color:#2d74ff!important}
+.tether-work .work-head h2{color:#111317!important}
+.tether-work .work-head p{color:#788391!important}
+.tether-work .work-step{opacity:.45}
+.tether-work .work-step.is-active{opacity:1}
+.tether-work .work-step .work-label{color:#2d74ff!important}
+.tether-work .work-step h3{color:#111317!important}
+.tether-work .work-step p{color:#6f7a89!important}
+.tether-work .work-step .work-action{color:#1961dd!important;border-bottom-color:#8ba9d1!important}
+.tether-work .work-step .work-action:hover{color:#0e4eae!important}
+.tether-work .work-screen,.tether-work .work-image{background:transparent!important}
+.tether-work .work-image{pointer-events:none!important;touch-action:pan-y}
+.tether-work .work-image img{padding:0!important;filter:none!important}
+.tether-work .work-quicknav{border-color:#dbe1e9!important}
+.tether-work .work-quicknav button{color:#778392!important}
+.tether-work .work-quicknav button.is-active,.tether-work .work-quicknav button:hover{color:#165dc9!important}
+@media(max-width:960px){
+ .tether-work .work-sticky{background:#f6f7f9!important}
+ .tether-work .work-image{touch-action:pan-y}
+}
 </style></head><body><header class="nav site-nav"><div class="container nav-inner"><a href="/" class="identity brand" aria-label="Felipe Quiroz">Felipe Quiroz</a><nav class="nav-links" id="nav-links" aria-label="Primary navigation"><a href="/#work" class="active" aria-current="page">Work</a><a href="/about">About</a><a href="/projects">Projects</a><a href="/initiatives">Initiatives</a><a href="/blog">Blog</a></nav><div class="nav-actions"><a class="locale" href="/es/tethereducation" hreflang="es">ES <svg class="arrow-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a class="touch" href="mailto:felipe@lowsignal.cl">Let's talk <svg class="arrow-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div><button id="mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-controls="nav-links" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button></div></header><main><section class="hero"><div class="shell"><div class="hero-layout-new">
  <div class="hero-intro reveal"><div class="hero-eyebrow">PARTNERSHIPS · EDTECH &amp; GOVTECH</div><h1>Building digital infrastructure <span>for education.</span></h1><p class="hero-copy">At Tether Education, I led partnerships, business development and international expansion, connecting institutions, technology and product teams to transform school admissions and enrollment.</p><div class="hero-new-actions"><a href="#selected-work">Explore the projects <svg class="arrow-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><span>Head of Partnerships · 2024 — Jun 2026</span></div></div>
  <div class="hero-artwork reveal"><div class="hero-artwork-top"><span><i class="tiny-dot"></i> TETHER EDUCATION / PRODUCT ECOSYSTEM</span><span>01 / 06</span></div><div class="hero-artwork-image"><img src="/images/explorador-grafica.png" alt="Virtual School Explorer product interface"></div><div class="hero-artwork-foot"><span>Virtual School Explorer</span><span>EdTech · Product</span></div></div>
@@ -275,7 +298,7 @@ body,main,.hero,.section,.section.soft{background:#07090d!important}
 
  const workSteps=[...document.querySelectorAll('[data-tether-step]')],workImages=[...document.querySelectorAll('[data-tether-image]')],workJumps=[...document.querySelectorAll('[data-tether-jump]')],workCount=document.getElementById('tether-work-count'),workName=document.getElementById('tether-work-name'),workBars=[...document.querySelectorAll('.work-bars i')];
  let workQueued=false;
- function updateWork(){workQueued=false;if(!workSteps.length)return;const pivot=innerHeight*.52;let current=0,best=Infinity;workSteps.forEach((step,i)=>{const box=step.getBoundingClientRect(),distance=Math.abs(box.top+box.height*.5-pivot);if(distance<best){best=distance;current=i}});workSteps.forEach((node,i)=>node.classList.toggle('is-active',i===current));workImages.forEach((node,i)=>node.classList.toggle('is-active',i===current));workJumps.forEach((node,i)=>{node.classList.toggle('is-active',i===current);node.setAttribute('aria-current',i===current?'step':'false')});workBars.forEach((node,i)=>node.classList.toggle('is-active',i===current));if(workCount)workCount.textContent=String(current+1).padStart(2,'0')+' / 06';if(workName)workName.textContent=workSteps[current].querySelector('h3')?.textContent||'';}
+ function updateWork(){workQueued=false;if(!workSteps.length)return;const pivot=innerHeight*.54;let current=0,best=Infinity;workSteps.forEach((step,i)=>{const box=step.getBoundingClientRect(),distance=Math.abs(box.top+box.height*.5-pivot);if(distance<best){best=distance;current=i}});workSteps.forEach((node,i)=>node.classList.toggle('is-active',i===current));workImages.forEach((node,i)=>node.classList.toggle('is-active',i===current));workJumps.forEach((node,i)=>{node.classList.toggle('is-active',i===current);node.setAttribute('aria-current',i===current?'step':'false')});workBars.forEach((node,i)=>node.classList.toggle('is-active',i===current));if(workCount)workCount.textContent=String(current+1).padStart(2,'0')+' / 06';if(workName)workName.textContent=workSteps[current].querySelector('h3')?.textContent||'';}
  function scheduleWork(){if(!workQueued){workQueued=true;requestAnimationFrame(updateWork)}}
  addEventListener('scroll',scheduleWork,{passive:true});addEventListener('resize',scheduleWork,{passive:true});
  workJumps.forEach((button,i)=>button.addEventListener('click',()=>workSteps[i].scrollIntoView({behavior:reduced?'auto':'smooth',block:'center'})));
