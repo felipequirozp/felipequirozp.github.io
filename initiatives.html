@@ -502,15 +502,6 @@ h1,h2,h3,h4{font-family:"DM Sans",Inter,sans-serif;letter-spacing:-.06em}
 .locale:hover{color:#fff}
 .footer-nav a:hover{color:#f2f4f7;transform:translateX(2px)}
 a:focus-visible,button:focus-visible{outline:2px solid #6da2ff;outline-offset:5px}
-/* Scroll entrance: motion is subtle, progressive, and never blocks content without JS */
-@media(prefers-reduced-motion:no-preference){
-html.motion-ready .scroll-reveal{opacity:0;transform:translateY(16px);transition:opacity .64s ease,transform .64s cubic-bezier(.2,.7,.2,1)}
-html.motion-ready .scroll-reveal.is-visible{opacity:1;transform:none}
-}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.scroll-reveal{opacity:1!important;transform:none!important;transition:none!important}}
-
-
-
 /* FINAL: identical vertical dividers on all three capabilities */
 @media(min-width:961px){
 .system-grid{border-left:0!important}
@@ -528,40 +519,10 @@ html.motion-ready .scroll-reveal.is-visible{opacity:1;transform:none}
 
 
 
-/* Hero: explicit staged load animation independent of the scroll observer. */
-@media (prefers-reduced-motion: no-preference){
- @keyframes initiativeHeroEnter{
-  from{opacity:0;transform:translate3d(0,38px,0)}
-  to{opacity:1;transform:translate3d(0,0,0)}
- }
- .hero .hero-copy>.eyebrow,.hero .hero-copy>h1,.hero .hero-copy>p,.hero .hero-copy>.hero-side,.hero .hero-media{
-  opacity:0;
-  animation:initiativeHeroEnter .95s cubic-bezier(.22,1,.36,1) both;
- }
- .hero .hero-copy>.eyebrow{animation-delay:.12s}
- .hero .hero-copy>h1{animation-delay:.27s}
- .hero .hero-copy>p{animation-delay:.48s}
- .hero .hero-copy>.hero-side{animation-delay:.66s}
- .hero .hero-media{animation-delay:.8s}
- .hero .hero-media img{transform:scale(1.055) translate3d(0,var(--hero-scroll-shift,0px),0);will-change:transform}
-}
-@media (prefers-reduced-motion: reduce){
- .hero .hero-copy>* , .hero .hero-media{animation:none!important;opacity:1!important;transform:none!important}
- .hero .hero-media img{transform:none!important}
-}
-
-
-/* Visible scroll response in the hero, separate from one-time entrance. */
-@media (prefers-reduced-motion: no-preference){
- .hero .hero-copy{translate:0 var(--hero-copy-scroll,0px);opacity:var(--hero-copy-alpha,1);will-change:translate,opacity}
- .hero .hero-media{overflow:hidden}
- .hero .hero-media img{translate:0 var(--hero-image-scroll,0px);scale:1.10;will-change:translate}
-}
-
-/* Initiatives: clear but restrained scroll entrance, respecting motion settings. */
-@media (prefers-reduced-motion: no-preference){
- html.motion-ready .scroll-reveal{opacity:0;transform:translate3d(0,28px,0);transition:opacity .78s cubic-bezier(.22,1,.36,1),transform .78s cubic-bezier(.22,1,.36,1);transition-delay:var(--reveal-delay,0ms)}
- html.motion-ready .scroll-reveal.is-visible{opacity:1;transform:translate3d(0,0,0)}
+/* Reveal motion matched to /about: 18px, 750ms, no parallax. */
+@media(prefers-reduced-motion:no-preference){
+ .initiative-reveal{opacity:0;transform:translateY(18px);transition:opacity .75s,transform .75s cubic-bezier(.16,1,.3,1)}
+ .initiative-reveal.visible{opacity:1;transform:none}
 }
 </style>
 <link rel="icon" type="image/png" href="/favicon.png"><style id="site-shared-nav-footer-20261111">
@@ -760,54 +721,24 @@ if (toggle && links) {
  recalc();
 })();
 
-/* Progressive entrances across Initiatives; do not override native scrolling. */
+/* Same entrance behavior as About, including reduced-motion fallback. */
 (() => {
- const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- if(reduce || !('IntersectionObserver' in window))return;
  const selectors=[
-  /* Hero has its own load sequence below. */
-  '.founder-statement-title','.founder-statement .founder-lead','.founder-statement .founder-description','.founder-statement .founder-link',
+  '.hero-copy','.hero-media',
+  '.founder-statement-title','.founder-statement-copy',
   '.system-head','.system-card',
-  '.workspace-kicker','.workspace-opening','.workspace-sticky','.workspace-close',
-  '.footer-main','.footer-nav'
+  '.workspace-kicker','.workspace-opening','.workspace-sticky','.workspace-close'
  ];
- const targets=[...new Set(selectors.flatMap(selector=>[...document.querySelectorAll(selector)]))];
- targets.forEach(el=>{
-  el.classList.add('scroll-reveal');
-  if(el.matches('.system-card'))el.style.setProperty('--reveal-delay',`${[...el.parentElement.children].indexOf(el)*110}ms`);
- });
- const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-   if(!entry.isIntersecting)return;
-   entry.target.classList.add('is-visible');
-   observer.unobserve(entry.target);
-  });
- },{rootMargin:'0px 0px -4% 0px',threshold:0.06});
- targets.forEach(el=>observer.observe(el));
- requestAnimationFrame(()=>document.documentElement.classList.add('motion-ready'));
-})();
-
-/* Scroll-linked hero movement: progresses with the wheel/touch, not just on load. */
-(() => {
- if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
- const hero=document.querySelector('.hero.section');
- const copy=hero?.querySelector('.hero-copy');
- const photo=hero?.querySelector('.hero-media img');
- if(!hero||!copy||!photo)return;
- let scheduled=false;
- function render(){
-  scheduled=false;
-  const rect=hero.getBoundingClientRect();
-  if(rect.bottom<0||rect.top>window.innerHeight)return;
-  const progress=Math.max(0,Math.min(1,-rect.top/Math.max(1,rect.height)));
-  copy.style.setProperty('--hero-copy-scroll',(-progress*90).toFixed(1)+'px');
-  copy.style.setProperty('--hero-copy-alpha',(1-progress*.40).toFixed(3));
-  photo.style.setProperty('--hero-image-scroll',(progress*110).toFixed(1)+'px');
+ const items=[...new Set(selectors.flatMap(sel=>[...document.querySelectorAll(sel)]))];
+ items.forEach(el=>el.classList.add('initiative-reveal'));
+ if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){
+  items.forEach(el=>el.classList.add('visible'));
+ }else{
+  const io=new IntersectionObserver(entries=>entries.forEach(entry=>{
+   if(entry.isIntersecting){entry.target.classList.add('visible');io.unobserve(entry.target)}
+  }),{threshold:.07});
+  items.forEach(el=>io.observe(el));
  }
- function schedule(){if(!scheduled){scheduled=true;requestAnimationFrame(render)}}
- window.addEventListener('scroll',schedule,{passive:true});
- window.addEventListener('resize',schedule,{passive:true});
- render();
 })();
 </script>
 </body>
