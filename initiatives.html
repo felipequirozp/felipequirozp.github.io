@@ -550,6 +550,14 @@ html.motion-ready .scroll-reveal.is-visible{opacity:1;transform:none}
  .hero .hero-media img{transform:none!important}
 }
 
+
+/* Visible scroll response in the hero, separate from one-time entrance. */
+@media (prefers-reduced-motion: no-preference){
+ .hero .hero-copy{translate:0 var(--hero-copy-scroll,0px);opacity:var(--hero-copy-alpha,1);will-change:translate,opacity}
+ .hero .hero-media{overflow:hidden}
+ .hero .hero-media img{translate:0 var(--hero-image-scroll,0px);scale:1.10;will-change:translate}
+}
+
 /* Initiatives: clear but restrained scroll entrance, respecting motion settings. */
 @media (prefers-reduced-motion: no-preference){
  html.motion-ready .scroll-reveal{opacity:0;transform:translate3d(0,28px,0);transition:opacity .78s cubic-bezier(.22,1,.36,1),transform .78s cubic-bezier(.22,1,.36,1);transition-delay:var(--reveal-delay,0ms)}
@@ -779,26 +787,28 @@ if (toggle && links) {
  requestAnimationFrame(()=>document.documentElement.classList.add('motion-ready'));
 })();
 
-/* Gentle photo movement while scrolling the hero; no scroll locking. */
+/* Scroll-linked hero movement: progresses with the wheel/touch, not just on load. */
 (() => {
  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
- const hero=document.querySelector('.hero');
- const img=hero?.querySelector('.hero-media img');
- if(!hero||!img)return;
- let queued=false;
- function update(){
-  queued=false;
-  const bounds=hero.getBoundingClientRect();
-  if(bounds.bottom<0||bounds.top>innerHeight)return;
-  const shift=Math.max(-24,Math.min(24,-window.scrollY*.045));
-  img.style.setProperty('--hero-scroll-shift',shift.toFixed(1)+'px');
+ const hero=document.querySelector('.hero.section');
+ const copy=hero?.querySelector('.hero-copy');
+ const photo=hero?.querySelector('.hero-media img');
+ if(!hero||!copy||!photo)return;
+ let scheduled=false;
+ function render(){
+  scheduled=false;
+  const rect=hero.getBoundingClientRect();
+  if(rect.bottom<0||rect.top>window.innerHeight)return;
+  const progress=Math.max(0,Math.min(1,-rect.top/Math.max(1,rect.height)));
+  copy.style.setProperty('--hero-copy-scroll',(-progress*90).toFixed(1)+'px');
+  copy.style.setProperty('--hero-copy-alpha',(1-progress*.40).toFixed(3));
+  photo.style.setProperty('--hero-image-scroll',(progress*110).toFixed(1)+'px');
  }
- function queue(){if(queued)return;queued=true;requestAnimationFrame(update)}
- window.addEventListener('scroll',queue,{passive:true});
- window.addEventListener('resize',queue,{passive:true});
- update();
+ function schedule(){if(!scheduled){scheduled=true;requestAnimationFrame(render)}}
+ window.addEventListener('scroll',schedule,{passive:true});
+ window.addEventListener('resize',schedule,{passive:true});
+ render();
 })();
-
 </script>
 </body>
 </html>
