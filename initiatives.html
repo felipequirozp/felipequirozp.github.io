@@ -527,6 +527,29 @@ html.motion-ready .scroll-reveal.is-visible{opacity:1;transform:none}
 }
 
 
+
+/* Hero: explicit staged load animation independent of the scroll observer. */
+@media (prefers-reduced-motion: no-preference){
+ @keyframes initiativeHeroEnter{
+  from{opacity:0;transform:translate3d(0,38px,0)}
+  to{opacity:1;transform:translate3d(0,0,0)}
+ }
+ .hero .hero-copy>.eyebrow,.hero .hero-copy>h1,.hero .hero-copy>p,.hero .hero-copy>.hero-side,.hero .hero-media{
+  opacity:0;
+  animation:initiativeHeroEnter .95s cubic-bezier(.22,1,.36,1) both;
+ }
+ .hero .hero-copy>.eyebrow{animation-delay:.12s}
+ .hero .hero-copy>h1{animation-delay:.27s}
+ .hero .hero-copy>p{animation-delay:.48s}
+ .hero .hero-copy>.hero-side{animation-delay:.66s}
+ .hero .hero-media{animation-delay:.8s}
+ .hero .hero-media img{transform:scale(1.055) translate3d(0,var(--hero-scroll-shift,0px),0);will-change:transform}
+}
+@media (prefers-reduced-motion: reduce){
+ .hero .hero-copy>* , .hero .hero-media{animation:none!important;opacity:1!important;transform:none!important}
+ .hero .hero-media img{transform:none!important}
+}
+
 /* Initiatives: clear but restrained scroll entrance, respecting motion settings. */
 @media (prefers-reduced-motion: no-preference){
  html.motion-ready .scroll-reveal{opacity:0;transform:translate3d(0,28px,0);transition:opacity .78s cubic-bezier(.22,1,.36,1),transform .78s cubic-bezier(.22,1,.36,1);transition-delay:var(--reveal-delay,0ms)}
@@ -734,7 +757,7 @@ if (toggle && links) {
  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
  if(reduce || !('IntersectionObserver' in window))return;
  const selectors=[
-  '.hero-copy','.hero-media',
+  /* Hero has its own load sequence below. */
   '.founder-statement-title','.founder-statement .founder-lead','.founder-statement .founder-description','.founder-statement .founder-link',
   '.system-head','.system-card',
   '.workspace-kicker','.workspace-opening','.workspace-sticky','.workspace-close',
@@ -755,6 +778,27 @@ if (toggle && links) {
  targets.forEach(el=>observer.observe(el));
  requestAnimationFrame(()=>document.documentElement.classList.add('motion-ready'));
 })();
+
+/* Gentle photo movement while scrolling the hero; no scroll locking. */
+(() => {
+ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ const hero=document.querySelector('.hero');
+ const img=hero?.querySelector('.hero-media img');
+ if(!hero||!img)return;
+ let queued=false;
+ function update(){
+  queued=false;
+  const bounds=hero.getBoundingClientRect();
+  if(bounds.bottom<0||bounds.top>innerHeight)return;
+  const shift=Math.max(-24,Math.min(24,-window.scrollY*.045));
+  img.style.setProperty('--hero-scroll-shift',shift.toFixed(1)+'px');
+ }
+ function queue(){if(queued)return;queued=true;requestAnimationFrame(update)}
+ window.addEventListener('scroll',queue,{passive:true});
+ window.addEventListener('resize',queue,{passive:true});
+ update();
+})();
+
 </script>
 </body>
 </html>
